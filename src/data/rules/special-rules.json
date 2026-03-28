@@ -1,0 +1,503 @@
+{
+  "version": "2023",
+  "rules": [
+    {
+      "id": "blessings_of_the_lady",
+      "name": "Blessings of the Lady",
+      "source": "army",
+      "description": "Prior to battle the Bretonnia army may kneel and pray. If it does so the opposing player counts as winning the roll-off, but all models with this rule gain: a 6+ Ward save against any wounds suffered; a 5+ Ward save against wounds from attacks with Strength 5 or higher. Lost immediately if the model flees or (for characters) refuses a challenge. Falling Back in Good Order does not count as fleeing."
+    },
+    {
+      "id": "finest_warhorses",
+      "name": "Finest Warhorses",
+      "source": "army",
+      "description": "When a unit with this rule makes a Charge, Flee or Pursuit roll, it may re-roll any dice that roll a natural 1, before discarding any dice required to be discarded."
+    },
+    {
+      "id": "lance_formation",
+      "name": "Lance Formation",
+      "source": "army",
+      "description": "A unit with this rule may adopt a Lance formation. A Lance is a triangular formation: one model in the front rank, two in the second, three in the third, and so on. The unit may not turn or redress ranks, but may wheel, move backwards, move sideways and reform normally. In combat only the model at the front makes base contact. Rank Bonus +1 per rank. Combat Result +1. Blunted if charged in the flank."
+    },
+    {
+      "id": "peasantry",
+      "name": "Peasantry",
+      "source": "army",
+      "description": "If a unit with this rule is within 6\" of a friendly model that has the Knight's Vow, the Questing Vow or the Grail Vow, and that model is not fleeing, the unit may use that model's Leadership characteristic instead of its own. A standard carried by a unit with this rule cannot be counted as a trophy of war. A character with this rule can only join a unit that also has this rule."
+    },
+    {
+      "id": "levies",
+      "name": "Levies",
+      "source": "army",
+      "description": "Peasant levy rule. Refer to the Warhammer: The Old World rulebook for full details."
+    },
+    {
+      "id": "peasants_duty",
+      "name": "Peasant's Duty",
+      "source": "army",
+      "description": "This character and any unit they have joined may choose to Give Ground rather than Fall Back in Good Order, and does not have to make a Panic test when a friendly unit of Levies Breaks and flees from combat whilst within 6\" of it. Additionally, unless this character is fleeing, any friendly unit that is within their Command range and has the Levies special rule may re-roll a failed Panic test."
+    },
+    {
+      "id": "rallying_cry",
+      "name": "Rallying Cry",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "knights_vow",
+      "name": "The Knight's Vow",
+      "source": "army",
+      "description": "A model with this Chivalrous Vow does not have to make a Panic test when a friendly unit with the Peasantry rule is destroyed whilst within 6\", or when it is fled through by a friendly unit with the Peasantry rule. A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule."
+    },
+    {
+      "id": "questing_vow",
+      "name": "The Questing Vow",
+      "source": "army",
+      "description": "A model with this Chivalrous Vow has the Stubborn rule and can re-roll any failed Fear, Panic or Terror test. It does not have to make a Panic test from Peasantry units being destroyed or fled through within 6\". It cannot be equipped with a lance. A unit with this Vow cannot be joined by a character with the Knight's Vow or Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule."
+    },
+    {
+      "id": "grail_vow",
+      "name": "The Grail Vow",
+      "source": "army",
+      "description": "A model with this Chivalrous Vow has the Immune to Psychology, Magical Attacks and Stubborn rules. Models with this Vow always benefit from the Blessings of the Lady without praying at the start of the game. A model with this Vow cannot refuse a challenge. A unit with this Vow can only be joined by a character with the Grail Vow or a Handmaiden of the Lady. A character with this Vow cannot join a unit with the Peasantry rule."
+    },
+    {
+      "id": "aura_of_the_lady",
+      "name": "Aura of the Lady",
+      "source": "army",
+      "description": "Any unit this character has joined gains the Magical Attacks special rule."
+    },
+    {
+      "id": "shield_of_the_lady",
+      "name": "Shield of the Lady",
+      "source": "army",
+      "description": "If this character has joined a unit with Unit Strength 10 or more that has a Chivalrous Vow, they may voluntarily retire to the rear of the unit. If they do so, they can no longer attack or be attacked, but continue to confer Leadership and special rule benefits, and may cast spells as if within the fighting rank."
+    },
+    {
+      "id": "lore_of_the_lady",
+      "name": "Lore of the Lady",
+      "source": "army",
+      "description": "A Wizard with this rule may discard one randomly generated spell and instead select the signature spell of their chosen Lore of Magic, or one of the Lore of the Lady spells (The Lady's Gift or The Lady's Wrath)."
+    },
+    {
+      "id": "living_saints",
+      "name": "Living Saints",
+      "source": "army",
+      "description": "Every model in a unit of Grail Knights can issue and accept challenges in the same manner as a character."
+    },
+    {
+      "id": "grail_reliquae",
+      "name": "Grail Reliquae",
+      "source": "army",
+      "description": "The Grail Reliquae is placed in the centre of the front rank. It counts as both a standard bearer and a musician. Casualties are removed normally but the Reliquae cannot lose Wounds while any Battle Pilgrims remain. Once all Battle Pilgrims are gone the Reliquae itself can lose Wounds. Whilst within 12\" of a friendly model with the Grail Vow that is not fleeing, the unit gains the Immune to Psychology and Unbreakable rules."
+    },
+    {
+      "id": "retinue_of_the_saints",
+      "name": "Retinue of the Saints",
+      "source": "army",
+      "description": "Your army may include up to one Grail Reliquae for every character or unit with the Grail Vow it includes."
+    },
+    {
+      "id": "dispersed_formation",
+      "name": "Dispersed Formation",
+      "source": "army",
+      "description": "Whilst in Skirmish formation, every model in a unit of Pegasus Knights must be within 2\" of another model belonging to the same unit, rather than the usual 1\"."
+    },
+    {
+      "id": "beguiling_aura",
+      "name": "Beguiling Aura",
+      "source": "army",
+      "description": "Enemy models must make a Leadership test before making any rolls To Hit against this model during the Combat phase. If this test is failed, only rolls of a natural 6 will hit."
+    },
+    {
+      "id": "immovable_object",
+      "name": "Immovable Object",
+      "source": "army",
+      "description": "Once a field trebuchet has been placed on the battlefield during deployment, it cannot be moved by its crew during the Remaining Moves sub-phase. It may still pivot freely and make a follow-up move."
+    },
+    {
+      "id": "aura_of_the_fay",
+      "name": "Aura of the Fay",
+      "source": "army",
+      "description": "When the Green Knight loses his last Wound, he is removed but not slain. During any Start of Turn sub-phase in which he is not on the battlefield, the controlling player may attempt to awaken him by rolling a D6: on 1-2 he slumbers until next turn, on 3+ he awakens. He awakens automatically by round five. Each time he is slain he suffers -1 to awakening rolls and -1 to his Wounds characteristic (minimum 1). The enemy can only win Victory Points for the Green Knight if he is not on the battlefield at game end."
+    },
+    {
+      "id": "blessed_knight",
+      "name": "Blessed Knight",
+      "source": "army",
+      "description": "The Green Knight has a 5+ Ward save against any wounds suffered."
+    },
+    {
+      "id": "guardian_of_the_sacred_sites",
+      "name": "Guardian of the Sacred Sites",
+      "source": "army",
+      "description": "The Green Knight is not placed during deployment. During Start of Turn sub-phases in which he is not on the battlefield, his controlling player may attempt to awaken him (see Aura of the Fay). When he awakens, he may be placed completely within any natural terrain feature on the battlefield. During Remaining Moves, if he is completely within a natural terrain feature and not in combat, he may teleport to any other natural terrain feature on the battlefield instead of moving normally."
+    },
+    {
+      "id": "the_wyrm_slayer",
+      "name": "The Wyrm Slayer",
+      "source": "army",
+      "description": "Should Sir Cecil Gastonne kill an enemy model whose troop type is monstrous infantry, monstrous cavalry, monstrous creature or behemoth during any Combat phase, he gains the Terror special rule for the remainder of the game."
+    },
+    {
+      "id": "the_exiles_vow",
+      "name": "The Exile's Vow",
+      "source": "army",
+      "description": "Sir Cecil Gastonne's personal Chivalrous Vow. Refer to the Arcane Journal: Kingdom of Bretonnia for full details."
+    },
+    {
+      "id": "arcane_backlash",
+      "name": "Arcane Backlash",
+      "source": "army",
+      "description": "Lady Élisse may apply a +1 modifier to any of her Dispel rolls. In addition, should she roll any natural double when making a Dispel roll (not including a natural double 1), the spell is unbound and the casting Wizard immediately loses a single Wound."
+    },
+    {
+      "id": "untutored_arcanist",
+      "name": "Untutored Arcanist",
+      "source": "army",
+      "description": "When required to roll on the Miscast table, a Wizard with this rule must roll an extra D6 and discard the highest result."
+    },
+    {
+      "id": "crusading_knights",
+      "name": "Crusading Knights",
+      "source": "army",
+      "description": "In an Errantry Crusade army, the following characters and units gain the Crusader's Zeal special rule. Any of these characters or units that have the Knight's Vow may replace it with the Crusader's Vow for free."
+    },
+    {
+      "id": "crusaders_zeal",
+      "name": "Crusader's Zeal",
+      "source": "army",
+      "description": "A unit with this rule increases its maximum possible charge range by 1\" and, when it makes a Charge roll, may apply a +1 modifier to the result. The unit also gains the Impetuous special rule."
+    },
+    {
+      "id": "crusaders_vow",
+      "name": "The Crusader's Vow",
+      "source": "army",
+      "description": "A Chivalrous Vow. A model with this Vow has the Veteran special rule and does not have to make a Panic test when a friendly unit with the Peasantry rule is destroyed within 6\" or fled through. A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule."
+    },
+    {
+      "id": "earn_your_spurs",
+      "name": "Earn Your Spurs",
+      "source": "army",
+      "description": "Any enemy standard captured by a unit of Knights Errant is worth 100 Victory Points as a trophy of war. In addition, whilst within 6\" of a friendly model with the Grail Vow or any Lord of Bretonnia, a unit of Knights Errant may re-roll any rolls To Hit of a natural 1."
+    },
+    {
+      "id": "magic_resistance_1",
+      "name": "Magic Resistance (-1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "magic_resistance_2",
+      "name": "Magic Resistance (-2)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "close_order",
+      "name": "Close Order",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "open_order",
+      "name": "Open Order",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "horde",
+      "name": "Horde",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "shieldwall",
+      "name": "Shieldwall",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "warband",
+      "name": "Warband",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "skirmishers",
+      "name": "Skirmishers",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "fast_cavalry",
+      "name": "Fast Cavalry",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "impetuous",
+      "name": "Impetuous",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "furious_charge",
+      "name": "Furious Charge",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "first_charge",
+      "name": "First Charge",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "counter_charge",
+      "name": "Counter Charge",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "swiftstride",
+      "name": "Swiftstride",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "reserve_move",
+      "name": "Reserve Move",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "fire_and_flee",
+      "name": "Fire & Flee",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "feigned_flight",
+      "name": "Feigned Flight",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "vanguard",
+      "name": "Vanguard",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "scouts",
+      "name": "Scouts",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "move_through_cover",
+      "name": "Move through Cover",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "fly_10",
+      "name": "Fly (10)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "fly_9",
+      "name": "Fly (9)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "large_target",
+      "name": "Large Target",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "stomp_attacks_d3",
+      "name": "Stomp Attacks (D3)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "stomp_attacks_2",
+      "name": "Stomp Attacks (2)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "stomp_attacks_1",
+      "name": "Stomp Attacks (1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "terror",
+      "name": "Terror",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "armour_bane_1",
+      "name": "Armour Bane (1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "armour_bane_2",
+      "name": "Armour Bane (2)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "armoured_hide_1",
+      "name": "Armoured Hide (1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "magical_attacks",
+      "name": "Magical Attacks",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "immune_to_psychology",
+      "name": "Immune to Psychology",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "stubborn",
+      "name": "Stubborn",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "hatred_all_enemies",
+      "name": "Hatred (All Enemies)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "multiple_wounds_2",
+      "name": "Multiple Wounds (2)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "bombardment",
+      "name": "Bombardment",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "cannon_fire",
+      "name": "Cannon Fire",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "cumbersome",
+      "name": "Cumbersome",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "move_or_shoot",
+      "name": "Move or Shoot",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "killing_blow",
+      "name": "Killing Blow",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "monster_slayer",
+      "name": "Monster Slayer",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "unbreakable",
+      "name": "Unbreakable",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "unstable",
+      "name": "Unstable",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "ethereal",
+      "name": "Ethereal",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "loner",
+      "name": "Loner",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "extra_attacks_d6",
+      "name": "Extra Attacks (D6)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "fight_in_extra_rank",
+      "name": "Fight in Extra Rank",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "veteran",
+      "name": "Veteran",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "ambushers",
+      "name": "Ambushers",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "volley_fire",
+      "name": "Volley Fire",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "multiple_shots_d3",
+      "name": "Multiple Shots (D3)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "motley_crew",
+      "name": "Motley Crew",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "multiple_wounds_d3_plus_1",
+      "name": "Multiple Wounds (D3+1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    }
+  ]
+}

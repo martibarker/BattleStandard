@@ -1,0 +1,1564 @@
+{
+  "id": "kingdom-of-bretonnia",
+  "name": "Kingdom of Bretonnia",
+  "sources": [
+    "Warhammer: The Old World — Forces of Fantasy (2023)",
+    "Arcane Journal: Kingdom of Bretonnia (2023)"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army",
+      "name": "Grand Army of Bretonnia",
+      "source": "forces_of_fantasy",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Duke; 0-1 Baron or Prophetess per 1,000 points; Paladins, Damsels and Sergeants-at-Arms as desired"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "1+ Knights of the Realm on Foot and/or Mounted Knights of the Realm; 1+ Men-at-Arms and/or Peasant Bowmen; 0-1 Knights Errant per unit of Knights of the Realm on Foot or Mounted Knights of the Realm taken"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Squires, Questing Knights, Pegasus Knights and Mounted Yeomen; 0-2 units of Battle Pilgrims per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Grail Knights; 0-1 Field Trebuchet per 1,000 points"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20
+        },
+        {
+          "category": "allies",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Any Kingdom of Bretonnia Army of Infamy list; or one of: Dwarfen Mountain Holds (Suspicious), Empire of Man, High Elf Realms, Wood Elf Realms (Suspicious)"
+        }
+      ]
+    },
+    {
+      "id": "errantry_crusade",
+      "name": "Kingdom of Bretonnia — Errantry Crusade",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Duke; 0-1 Baron or Prophetess per 1,000 points; 1+ Paladins; Damsels and Sergeants-at-Arms"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 33,
+          "notes": "1+ Knights Errant per 1,000 points; 0-1 Battle Pilgrims as Core; Knights of the Realm on Foot, Squires and Mounted Knights of the Realm"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Men-at-Arms, Peasant Bowmen, Battle Pilgrims, Questing Knights and Pegasus Knights"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 33,
+          "notes": "Grail Knights and Mounted Yeomen; 0-1 Field Trebuchet"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Empire Knights and Inner Circle Knights only"
+        }
+      ]
+    },
+    {
+      "id": "bretonnian_exiles",
+      "name": "Kingdom of Bretonnia — Bretonnian Exiles",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Refer to Arcane Journal: Kingdom of Bretonnia"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "duke",
+      "name": "Duke",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 175,
+      "profiles": [
+        {
+          "name": "Duke",
+          "profile": { "M": 4, "WS": 7, "BS": 3, "S": 5, "T": 4, "W": 4, "I": 5, "A": 5, "Ld": 9 }
+        }
+      ],
+      "equipment": ["Hand weapon", "Heavy armour"],
+      "options": [
+        { "description": "Morning star", "cost": 3, "scope": "per_model" },
+        { "description": "Great weapon", "cost": 4, "scope": "per_model" },
+        { "description": "Lance (if appropriately mounted)", "cost": 4, "scope": "per_model" },
+        { "description": "Shield", "cost": 2, "scope": "per_model" },
+        { "description": "Mount (see Character Mounts)", "cost": 0, "scope": "per_model", "condition": "See mount entries for costs" },
+        { "description": "Knightly Virtue (one only)", "cost": 0, "scope": "per_model", "condition": "See Knightly Virtues list" },
+        { "description": "Magic items", "cost": 0, "scope": "per_model", "max_points": 100 }
+      ],
+      "special_rules": ["blessings_of_the_lady", "rallying_cry", "grail_vow"],
+      "notes": ["A single Paladin in the army may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"]
+    },
+    {
+      "id": "baron",
+      "name": "Baron",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 100,
+      "profiles": [
+        {
+          "name": "Baron",
+          "profile": { "M": 4, "WS": 6, "BS": 3, "S": 4, "T": 4, "W": 3, "I": 5, "A": 4, "Ld": 9 }
+        }
+      ],
+      "equipment": ["Hand weapon", "Heavy armour"],
+      "options": [
+        { "description": "Morning star", "cost": 3, "scope": "per_model" },
+        { "description": "Great weapon", "cost": 4, "scope": "per_model" },
+        { "description": "Lance (if appropriately mounted)", "cost": 4, "scope": "per_model" },
+        { "description": "Shield", "cost": 2, "scope": "per_model" },
+        { "description": "Mount (see Character Mounts)", "cost": 0, "scope": "per_model", "condition": "See mount entries for costs" },
+        { "description": "Replace Knight's Vow with the Questing Vow", "cost": 15, "scope": "per_model" },
+        { "description": "Replace Knight's Vow with the Grail Vow", "cost": 20, "scope": "per_model" },
+        { "description": "Knightly Virtue (one only)", "cost": 0, "scope": "per_model", "condition": "See Knightly Virtues list" },
+        { "description": "Magic items", "cost": 0, "scope": "per_model", "max_points": 75 }
+      ],
+      "special_rules": ["blessings_of_the_lady", "rallying_cry", "knights_vow"]
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 60,
+      "profiles": [
+        {
+          "name": "Paladin",
+          "profile": { "M": 4, "WS": 6, "BS": 3, "S": 4, "T": 4, "W": 2, "I": 4, "A": 3, "Ld": 8 }
+        }
+      ],
+      "equipment": ["Hand weapon", "Heavy armour"],
+      "options": [
+        { "description": "Morning star", "cost": 3, "scope": "per_model" },
+        { "description": "Great weapon", "cost": 4, "scope": "per_model" },
+        { "description": "Lance (if appropriately mounted)", "cost": 4, "scope": "per_model" },
+        { "description": "Shield", "cost": 2, "scope": "per_model" },
+        { "description": "Mount (see Character Mounts)", "cost": 0, "scope": "per_model", "condition": "See mount entries for costs" },
+        { "description": "Replace Knight's Vow with the Questing Vow", "cost": 15, "scope": "per_model" },
+        { "description": "Replace Knight's Vow with the Grail Vow", "cost": 20, "scope": "per_model" },
+        { "description": "Knightly Virtue (one only)", "cost": 0, "scope": "per_model", "condition": "See Knightly Virtues list" },
+        { "description": "Magic items", "cost": 0, "scope": "per_model", "max_points": 50 }
+      ],
+      "special_rules": ["blessings_of_the_lady", "rallying_cry", "knights_vow"],
+      "notes": ["A single Paladin may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"]
+    },
+    {
+      "id": "prophetess",
+      "name": "Prophetess",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 135,
+      "profiles": [
+        {
+          "name": "Prophetess",
+          "profile": { "M": 4, "WS": 4, "BS": 3, "S": 3, "T": 3, "W": 3, "I": 3, "A": 2, "Ld": 8 }
+        }
+      ],
+      "equipment": ["Hand weapon"],
+      "options": [
+        { "description": "Mount (see Character Mounts)", "cost": 0, "scope": "per_model", "condition": "See mount entries for costs" },
+        { "description": "Upgrade to Level 4 Wizard", "cost": 30, "scope": "per_model" },
+        { "description": "Magic items", "cost": 0, "scope": "per_model", "max_points": 100 }
+      ],
+      "special_rules": ["aura_of_the_lady", "blessings_of_the_lady", "lore_of_the_lady", "magical_attacks", "magic_resistance_2", "shield_of_the_lady"],
+      "magic": {
+        "wizard_level": 3,
+        "lores": ["Battle Magic", "Elementalism", "Illusion"]
+      }
+    },
+    {
+      "id": "damsel",
+      "name": "Damsel",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 60,
+      "profiles": [
+        {
+          "name": "Damsel",
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 2, "I": 3, "A": 1, "Ld": 7 }
+        }
+      ],
+      "equipment": ["Hand weapon"],
+      "options": [
+        { "description": "Mount (see Character Mounts)", "cost": 0, "scope": "per_model", "condition": "See mount entries for costs" },
+        { "description": "Upgrade to Level 2 Wizard", "cost": 30, "scope": "per_model" },
+        { "description": "Magic items", "cost": 0, "scope": "per_model", "max_points": 50 }
+      ],
+      "special_rules": ["aura_of_the_lady", "blessings_of_the_lady", "lore_of_the_lady", "magical_attacks", "magic_resistance_2", "shield_of_the_lady"],
+      "magic": {
+        "wizard_level": 1,
+        "lores": ["Battle Magic", "Elementalism", "Illusion"]
+      }
+    },
+    {
+      "id": "sergeant_at_arms",
+      "name": "Sergeant-at-Arms",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 45,
+      "profiles": [
+        {
+          "name": "Sergeant-at-Arms",
+          "profile": { "M": 4, "WS": 4, "BS": 2, "S": 4, "T": 3, "W": 2, "I": 4, "A": 2, "Ld": 7 }
+        }
+      ],
+      "equipment": ["Hand weapon", "Light armour"],
+      "options": [
+        { "description": "Halberd", "cost": 2, "scope": "per_model" },
+        { "description": "Additional hand weapon", "cost": 2, "scope": "per_model" },
+        { "description": "Cavalry spear (if appropriately mounted)", "cost": 2, "scope": "per_model" },
+        { "description": "Shield", "cost": 2, "scope": "per_model" },
+        { "description": "Warhorse", "cost": 12, "scope": "per_model" },
+        { "description": "Magic items", "cost": 0, "scope": "per_model", "max_points": 25 }
+      ],
+      "special_rules": ["levies", "peasants_duty", "peasantry", "warband"]
+    },
+    {
+      "id": "bretonnian_warhorse",
+      "name": "Bretonnian Warhorse",
+      "category": "mount",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "1",
+      "points": 16,
+      "profiles": [
+        {
+          "name": "Bretonnian Warhorse",
+          "profile": { "M": 8, "WS": 3, "BS": "-", "S": 3, "T": "-", "W": "-", "I": 3, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": ["Iron-shod hooves (counts as a hand weapon)", "Barding"],
+      "special_rules": ["counter_charge", "finest_warhorses", "first_charge", "swiftstride"],
+      "notes": ["Available to Duke, Baron and Paladin"]
+    },
+    {
+      "id": "warhorse",
+      "name": "Warhorse",
+      "category": "mount",
+      "source": "forces_of_fantasy",
+      "troop_type": "Light cavalry",
+      "base_size": "25 x 50 mm",
+      "unit_size": "1",
+      "points": 12,
+      "profiles": [
+        {
+          "name": "Warhorse",
+          "profile": { "M": 8, "WS": 3, "BS": "-", "S": 3, "T": "-", "W": "-", "I": 3, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": ["Iron-shod hooves (counts as a hand weapon)"],
+      "special_rules": ["fast_cavalry", "swiftstride"],
+      "notes": ["Available to Prophetess (+12 pts) and Sergeant-at-Arms (+12 pts)"]
+    },
+    {
+      "id": "barded_pegasus",
+      "name": "Barded Pegasus",
+      "category": "mount",
+      "source": "forces_of_fantasy",
+      "troop_type": "Monstrous cavalry",
+      "base_size": "40 x 60 mm",
+      "unit_size": "1",
+      "points": 30,
+      "profiles": [
+        {
+          "name": "Barded Pegasus",
+          "profile": { "M": 7, "WS": 3, "BS": "-", "S": 4, "T": "(+1)", "W": 4, "I": 2, "A": "-", "Ld": "-" },
+          "mount_grants": "+1 Wound to rider"
+        }
+      ],
+      "equipment": ["Iron-shod hooves (counts as a hand weapon)", "Barding"],
+      "special_rules": ["counter_charge", "first_charge", "fly_10", "swiftstride"],
+      "notes": ["Available to Duke, Baron and Paladin"]
+    },
+    {
+      "id": "royal_pegasus",
+      "name": "Royal Pegasus",
+      "category": "mount",
+      "source": "forces_of_fantasy",
+      "troop_type": "Monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 60,
+      "profiles": [
+        {
+          "name": "Royal Pegasus",
+          "profile": { "M": 8, "WS": 4, "BS": "-", "S": 5, "T": "(+1)", "W": "(+1)", "I": 5, "A": 3, "Ld": "-" },
+          "mount_grants": "+1 Toughness and +1 Wound to rider"
+        }
+      ],
+      "equipment": ["Iron-shod hooves (counts as a hand weapon)", "Barding"],
+      "special_rules": ["armour_bane_1", "counter_charge", "first_charge", "fly_10", "stomp_attacks_2", "swiftstride"],
+      "notes": ["Armour Bane (1) applies to Royal Pegasus only, not the rider", "Available to Duke, Baron and Paladin"]
+    },
+    {
+      "id": "unicorn",
+      "name": "Unicorn",
+      "category": "mount",
+      "source": "forces_of_fantasy",
+      "troop_type": "Monstrous cavalry",
+      "base_size": "40 x 60 mm",
+      "unit_size": "1",
+      "points": 35,
+      "profiles": [
+        {
+          "name": "Unicorn",
+          "profile": { "M": 10, "WS": 4, "BS": "-", "S": 4, "T": "-", "W": "(+1)", "I": 5, "A": 2, "Ld": "-" },
+          "mount_grants": "+1 Wound to rider"
+        }
+      ],
+      "equipment": ["Hooves and horn (counts as a hand weapon)"],
+      "special_rules": ["armour_bane_1", "armoured_hide_1", "beguiling_aura", "counter_charge", "magical_attacks", "stomp_attacks_1", "swiftstride"],
+      "notes": ["Armour Bane (1) applies to Unicorn only, not the rider", "Available to Prophetess only"]
+    },
+    {
+      "id": "hippogryph",
+      "name": "Hippogryph",
+      "category": "mount",
+      "source": "forces_of_fantasy",
+      "troop_type": "Monstrous creature",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 120,
+      "profiles": [
+        {
+          "name": "Hippogryph",
+          "profile": { "M": 7, "WS": 5, "BS": "-", "S": 5, "T": "(+1)", "W": "(+3)", "I": 5, "A": 4, "Ld": "-" },
+          "mount_grants": "+1 Toughness and +3 Wounds to rider"
+        }
+      ],
+      "equipment": ["Wicked claws (see weapon profiles)", "Serrated maw (see weapon profiles)", "Griffonic pelt (counts as heavy armour)"],
+      "options": [
+        { "description": "Barding", "cost": 15, "scope": "per_model" }
+      ],
+      "special_rules": ["close_order", "counter_charge", "fly_9", "large_target", "stomp_attacks_d3", "swiftstride", "terror"],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        },
+        {
+          "name": "Serrated maw",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": ["armour_bane_2", "multiple_wounds_2"],
+          "notes": "In combat, this model must make one of its attacks each turn with this weapon"
+        }
+      ],
+      "notes": ["Available to Duke and Baron only", "A character mount only — its points are added to those of its rider"]
+    },
+    {
+      "id": "knights_of_the_realm_on_foot",
+      "name": "Knights of the Realm on Foot",
+      "category": "infantry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Knight of the Realm",
+          "profile": { "M": 4, "WS": 4, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 8 }
+        },
+        {
+          "name": "First Knight",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": { "M": 4, "WS": 4, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 8 }
+        }
+      ],
+      "equipment": ["Hand weapons", "Heavy armour", "Shields"],
+      "options": [
+        { "description": "Take great weapons (entire unit)", "cost": 2, "scope": "per_model" },
+        { "description": "Replace shields with great weapons (entire unit)", "cost": 1, "scope": "per_model", "replaces": "Shields" },
+        { "description": "First Knight may purchase magic items", "cost": 0, "scope": "per_unit", "max_points": 25 }
+      ],
+      "command": [
+        { "role": "champion", "name": "First Knight", "cost_per_unit": 6 },
+        { "role": "standard_bearer", "cost_per_unit": 6 },
+        { "role": "musician", "cost_per_unit": 6 }
+      ],
+      "magic_standard": 25,
+      "special_rules": ["blessings_of_the_lady", "close_order", "furious_charge", "knights_vow"]
+    },
+    {
+      "id": "squires",
+      "name": "Squires",
+      "category": "infantry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 7,
+      "profiles": [
+        {
+          "name": "Squire",
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 }
+        },
+        {
+          "name": "Esquire",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": 4, "WS": 3, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 7 }
+        }
+      ],
+      "equipment": ["Hand weapons", "Longbows"],
+      "options": [
+        { "description": "Fire & Flee special rule (entire unit)", "cost": 1, "scope": "per_model" },
+        { "description": "Scouts special rule (entire unit)", "cost": 1, "scope": "per_model" }
+      ],
+      "command": [
+        { "role": "champion", "name": "Esquire", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 5 },
+        { "role": "musician", "cost_per_unit": 5 }
+      ],
+      "special_rules": ["move_through_cover", "open_order", "peasantry", "skirmishers", "vanguard"]
+    },
+    {
+      "id": "men_at_arms",
+      "name": "Men-at-Arms",
+      "category": "infantry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 4,
+      "profiles": [
+        {
+          "name": "Man-at-Arms",
+          "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 5 }
+        },
+        {
+          "name": "Yeoman",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": 4, "WS": 2, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 6 }
+        },
+        {
+          "name": "Grail Monk",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 2, "A": 2, "Ld": 6 }
+        }
+      ],
+      "equipment": ["Hand weapons", "Polearms (see weapon profiles)", "Light armour", "Shields"],
+      "options": [
+        { "description": "Grail Monk may be equipped with Blessed Triptych (unit gains Stubborn)", "cost": 25, "scope": "per_unit", "condition": "Champion Grail Monk only" }
+      ],
+      "command": [
+        { "role": "champion", "name": "Yeoman", "cost_per_unit": 7 },
+        { "role": "champion", "name": "Grail Monk", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 5 },
+        { "role": "musician", "cost_per_unit": 5 }
+      ],
+      "special_rules": ["close_order", "horde", "levies", "peasantry", "shieldwall", "warband"],
+      "weapon_profiles": [
+        {
+          "name": "Polearm (single-handed)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": ["fight_in_extra_rank"]
+        },
+        {
+          "name": "Polearm (double-handed)",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": [],
+          "notes": "Requires Two Hands. A polearm has two profiles. You must choose which the unit will use at the start of the first round of a combat. A model wielding a polearm cannot make a supporting attack during a turn in which it charged."
+        }
+      ],
+      "notes": ["A Grail Monk is a command group model that follows the rules for a champion — a unit containing both a Yeoman and a Grail Monk has two champions"]
+    },
+    {
+      "id": "peasant_bowmen",
+      "name": "Peasant Bowmen",
+      "category": "infantry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 5,
+      "profiles": [
+        {
+          "name": "Peasant Bowman",
+          "profile": { "M": 4, "WS": 2, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 }
+        },
+        {
+          "name": "Villein",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": 4, "WS": 2, "BS": 4, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 }
+        }
+      ],
+      "equipment": ["Hand weapons", "Longbows"],
+      "options": [
+        { "description": "Light armour (entire unit)", "cost": 1, "scope": "per_model" },
+        { "description": "Defensive stakes (unit gains defensive stakes when deployed)", "cost": 10, "scope": "per_unit" },
+        { "description": "Burning braziers (unit's longbows gain Flaming Attacks)", "cost": 20, "scope": "per_unit" },
+        { "description": "Replace Close Order with Skirmishers (entire unit)", "cost": 0, "scope": "per_unit", "replaces": "Close Order" }
+      ],
+      "command": [
+        { "role": "champion", "name": "Villein", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 5 },
+        { "role": "musician", "cost_per_unit": 5 }
+      ],
+      "special_rules": ["close_order", "levies", "peasantry"]
+    },
+    {
+      "id": "battle_pilgrims",
+      "name": "Battle Pilgrims & Grail Reliquae",
+      "category": "infantry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5-30",
+      "points": 8,
+      "profiles": [
+        {
+          "name": "Battle Pilgrim",
+          "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 8 }
+        },
+        {
+          "name": "Grail Reliquae",
+          "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 6, "I": 3, "A": 6, "Ld": 8 }
+        }
+      ],
+      "equipment": ["Hand weapons", "Light armour", "Shields"],
+      "options": [
+        { "description": "Include a Grail Reliquae (counts as standard bearer and musician; grants Immune to Psychology and Unbreakable when within 12\" of a Grail Vow model)", "cost": 65, "scope": "per_unit" }
+      ],
+      "special_rules": ["close_order", "hatred_all_enemies", "levies", "peasantry", "stubborn"],
+      "notes": [
+        "Battle Pilgrims: Close Order, Hatred (All Enemies), Levies, Peasantry, Stubborn",
+        "Grail Reliquae additionally has: Blessings of the Lady, Grail Reliquae (special rule), Retinue of the Saints",
+        "Base size of Grail Reliquae: 50 x 75 mm",
+        "Your army may include one Grail Reliquae per character or unit with the Grail Vow"
+      ]
+    },
+    {
+      "id": "knights_errant",
+      "name": "Knights Errant",
+      "category": "cavalry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 19,
+      "profiles": [
+        {
+          "name": "Knight Errant",
+          "profile": { "M": "-", "WS": 3, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 7 }
+        },
+        {
+          "name": "Gallant",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": { "M": "-", "WS": 3, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 7 }
+        },
+        {
+          "name": "Bretonnian Warhorse",
+          "is_mount": true,
+          "profile": { "M": 8, "WS": 3, "BS": "-", "S": 3, "T": "-", "W": "-", "I": 3, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "Knights Errant: Hand weapons, lances, heavy armour and shields",
+        "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
+      ],
+      "command": [
+        { "role": "champion", "name": "Gallant", "cost_per_unit": 6 },
+        { "role": "standard_bearer", "cost_per_unit": 6 },
+        { "role": "musician", "cost_per_unit": 6 }
+      ],
+      "magic_standard": 25,
+      "special_rules": ["blessings_of_the_lady", "close_order", "finest_warhorses", "first_charge", "impetuous", "lance_formation", "swiftstride", "knights_vow"]
+    },
+    {
+      "id": "mounted_knights_of_the_realm",
+      "name": "Mounted Knights of the Realm",
+      "category": "cavalry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 24,
+      "profiles": [
+        {
+          "name": "Knight of the Realm",
+          "profile": { "M": "-", "WS": 4, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 8 }
+        },
+        {
+          "name": "First Knight",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": "-", "WS": 4, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 8 }
+        },
+        {
+          "name": "Bretonnian Warhorse",
+          "is_mount": true,
+          "profile": { "M": 8, "WS": 3, "BS": "-", "S": 3, "T": "-", "W": "-", "I": 3, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "Knights of the Realm: Hand weapons, lances, heavy armour and shields",
+        "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
+      ],
+      "options": [
+        { "description": "First Knight may purchase magic items", "cost": 0, "scope": "per_unit", "max_points": 25 }
+      ],
+      "command": [
+        { "role": "champion", "name": "First Knight", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 7 },
+        { "role": "musician", "cost_per_unit": 7 }
+      ],
+      "magic_standard": 25,
+      "special_rules": ["blessings_of_the_lady", "close_order", "counter_charge", "finest_warhorses", "first_charge", "lance_formation", "swiftstride", "knights_vow"]
+    },
+    {
+      "id": "questing_knights",
+      "name": "Questing Knights",
+      "category": "cavalry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 26,
+      "profiles": [
+        {
+          "name": "Questing Knight",
+          "profile": { "M": "-", "WS": 5, "BS": 2, "S": 4, "T": 3, "W": 1, "I": 4, "A": 1, "Ld": 8 }
+        },
+        {
+          "name": "Paragon",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": "-", "WS": 5, "BS": 2, "S": 4, "T": 3, "W": 1, "I": 4, "A": 2, "Ld": 8 }
+        },
+        {
+          "name": "Bretonnian Warhorse",
+          "is_mount": true,
+          "profile": { "M": 8, "WS": 3, "BS": "-", "S": 3, "T": "-", "W": "-", "I": 3, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "Questing Knights: Hand weapons, great weapons, heavy armour and shields",
+        "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
+      ],
+      "options": [
+        { "description": "Paragon may take a single Knightly Virtue", "cost": 0, "scope": "per_unit", "condition": "Paragon only; see Knightly Virtues list" },
+        { "description": "Paragon may purchase magic items", "cost": 0, "scope": "per_unit", "max_points": 25 }
+      ],
+      "command": [
+        { "role": "champion", "name": "Paragon", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 7 },
+        { "role": "musician", "cost_per_unit": 7 }
+      ],
+      "magic_standard": 100,
+      "special_rules": ["blessings_of_the_lady", "close_order", "finest_warhorses", "first_charge", "lance_formation", "swiftstride", "questing_vow"]
+    },
+    {
+      "id": "grail_knights",
+      "name": "Grail Knights",
+      "category": "cavalry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "3+",
+      "points": 38,
+      "profiles": [
+        {
+          "name": "Grail Knight",
+          "profile": { "M": "-", "WS": 6, "BS": 2, "S": 4, "T": 4, "W": 1, "I": 5, "A": 2, "Ld": 9 }
+        },
+        {
+          "name": "Grail Guardian",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": "-", "WS": 6, "BS": 2, "S": 4, "T": 4, "W": 1, "I": 5, "A": 3, "Ld": 9 }
+        },
+        {
+          "name": "Bretonnian Warhorse",
+          "is_mount": true,
+          "profile": { "M": 8, "WS": 3, "BS": "-", "S": 3, "T": "-", "W": "-", "I": 3, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "Grail Knights: Hand weapons, lances, heavy armour and shields",
+        "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
+      ],
+      "options": [
+        { "description": "Grail Guardian may take a single Knightly Virtue", "cost": 0, "scope": "per_unit", "condition": "Grail Guardian only; see Knightly Virtues list" },
+        { "description": "Grail Guardian may purchase magic items", "cost": 0, "scope": "per_unit", "max_points": 50 }
+      ],
+      "command": [
+        { "role": "champion", "name": "Grail Guardian", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 7 },
+        { "role": "musician", "cost_per_unit": 7 }
+      ],
+      "magic_standard": 100,
+      "special_rules": ["blessings_of_the_lady", "close_order", "counter_charge", "finest_warhorses", "first_charge", "lance_formation", "living_saints", "swiftstride", "grail_vow"]
+    },
+    {
+      "id": "pegasus_knights",
+      "name": "Pegasus Knights",
+      "category": "cavalry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Monstrous cavalry",
+      "base_size": "40 x 60 mm",
+      "unit_size": "3+",
+      "points": 55,
+      "profiles": [
+        {
+          "name": "Pegasus Knight",
+          "profile": { "M": "-", "WS": 4, "BS": 2, "S": 4, "T": 4, "W": 2, "I": 3, "A": 1, "Ld": 8 }
+        },
+        {
+          "name": "First Knight",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": "-", "WS": 4, "BS": 2, "S": 4, "T": 4, "W": 2, "I": 3, "A": 2, "Ld": 8 }
+        },
+        {
+          "name": "Barded Pegasus",
+          "is_mount": true,
+          "profile": { "M": 7, "WS": 3, "BS": "-", "S": 4, "T": "-", "W": "-", "I": 4, "A": 2, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "Pegasus Knights: Hand weapons, lances, heavy armour and shields",
+        "Barded Pegasus: Iron-shod hooves (counts as a hand weapon) and barding"
+      ],
+      "command": [
+        { "role": "champion", "name": "First Knight", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 7 },
+        { "role": "musician", "cost_per_unit": 7 }
+      ],
+      "magic_standard": 50,
+      "special_rules": ["blessings_of_the_lady", "counter_charge", "dispersed_formation", "first_charge", "fly_10", "furious_charge", "lance_formation", "skirmishers", "swiftstride", "knights_vow"],
+      "notes": ["Furious Charge applies to Pegasus Knights and First Knight models only"]
+    },
+    {
+      "id": "mounted_yeomen",
+      "name": "Mounted Yeomen",
+      "category": "cavalry",
+      "source": "forces_of_fantasy",
+      "troop_type": "Light cavalry",
+      "base_size": "25 x 50 mm",
+      "unit_size": "5+",
+      "points": 13,
+      "profiles": [
+        {
+          "name": "Mounted Yeoman",
+          "profile": { "M": "-", "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 }
+        },
+        {
+          "name": "Warden",
+          "is_champion": true,
+          "champion_cost": 5,
+          "profile": { "M": "-", "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 6 }
+        },
+        {
+          "name": "Warhorse",
+          "is_mount": true,
+          "profile": { "M": 8, "WS": 3, "BS": "-", "S": 3, "T": "-", "W": "-", "I": 3, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "Mounted Yeoman: Hand weapons, cavalry spears and shortbows",
+        "Warhorse: Iron-shod hooves (counts as a hand weapon)"
+      ],
+      "options": [
+        { "description": "Light armour (entire unit)", "cost": 2, "scope": "per_model" },
+        { "description": "Shields (entire unit)", "cost": 1, "scope": "per_model" },
+        { "description": "Feigned Flight special rule (entire unit)", "cost": 2, "scope": "per_model" }
+      ],
+      "command": [
+        { "role": "champion", "name": "Warden", "cost_per_unit": 5 },
+        { "role": "standard_bearer", "cost_per_unit": 5 },
+        { "role": "musician", "cost_per_unit": 5 }
+      ],
+      "special_rules": ["fast_cavalry", "fire_and_flee", "levies", "open_order", "peasantry", "reserve_move", "skirmishers", "swiftstride"]
+    },
+    {
+      "id": "field_trebuchet",
+      "name": "Field Trebuchet",
+      "category": "war_machine",
+      "source": "forces_of_fantasy",
+      "troop_type": "War machine",
+      "base_size": "60 x 100 mm (machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 100,
+      "profiles": [
+        {
+          "name": "Field Trebuchet",
+          "profile": { "M": "-", "WS": "-", "BS": "-", "S": "-", "T": 7, "W": 3, "I": "-", "A": "-", "Ld": "-" }
+        },
+        {
+          "name": "Peasant crew",
+          "profile": { "M": 4, "WS": 2, "BS": 2, "S": 3, "T": 3, "W": 4, "I": 3, "A": 4, "Ld": 6 }
+        }
+      ],
+      "equipment": ["Field trebuchet (see weapon profile)", "Hand weapons (crew)"],
+      "special_rules": ["levies", "peasantry", "skirmishers"],
+      "weapon_profiles": [
+        {
+          "name": "Field Trebuchet",
+          "range": "12-72\"",
+          "S": "5(10)",
+          "AP": "-1(-4)",
+          "special_rules": ["bombardment", "cumbersome", "immovable_object", "move_or_shoot", "multiple_wounds_d3_plus_1"],
+          "notes": "Shoots like a stone thrower using the Bombardment special rule with a 3\" blast template. Multiple Wounds (D3+1) applies only to a single model whose base lies beneath the central hole of the blast template."
+        }
+      ]
+    },
+    {
+      "id": "green_knight",
+      "name": "The Green Knight",
+      "category": "character",
+      "source": "arcane_journal",
+      "is_named_character": true,
+      "troop_type": "Heavy cavalry (named character)",
+      "base_size": "30 x 60 mm",
+      "unit_size": "1",
+      "points": 275,
+      "profiles": [
+        {
+          "name": "The Green Knight",
+          "profile": { "M": "-", "WS": 7, "BS": 3, "S": 4, "T": 4, "W": 6, "I": 4, "A": 9, "Ld": 9 }
+        },
+        {
+          "name": "The Shadow Steed",
+          "is_mount": true,
+          "profile": { "M": 8, "WS": 4, "BS": "-", "S": 4, "T": "-", "W": "-", "I": 4, "A": 1, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "The Green Knight: The Dolorous Blade (see weapon profiles), heavy armour and shield",
+        "The Shadow Steed: Iron-shod hooves (counts as a hand weapon) and barding"
+      ],
+      "special_rules": ["aura_of_the_fay", "blessed_knight", "ethereal", "guardian_of_the_sacred_sites", "immune_to_psychology", "loner", "move_through_cover", "rallying_cry", "terror", "unbreakable", "unstable"],
+      "weapon_profiles": [
+        {
+          "name": "The Dolorous Blade — Rapid strikes",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": ["extra_attacks_d6", "magical_attacks"]
+        },
+        {
+          "name": "The Dolorous Blade — Deadly blows",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-1",
+          "special_rules": ["armour_bane_1", "magical_attacks", "multiple_wounds_2"],
+          "notes": "The Dolorous Blade has two profiles. You must choose which the wielder will use at the start of each round of combat."
+        }
+      ],
+      "notes": [
+        "May be included in any Kingdom of Bretonnia army using any army composition list",
+        "Must be fielded as presented — no additional options",
+        "Not placed during deployment; uses Aura of the Fay and Guardian of the Sacred Sites rules to enter play"
+      ]
+    },
+    {
+      "id": "sir_cecil_gastonne",
+      "name": "Sir Cecil Gastonne, The Wyrm Slayer",
+      "category": "character",
+      "source": "arcane_journal",
+      "is_named_character": true,
+      "troop_type": "Regular infantry (named character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 165,
+      "profiles": [
+        {
+          "name": "Sir Cecil Gastonne",
+          "profile": { "M": 4, "WS": 7, "BS": 3, "S": 4, "T": 4, "W": 3, "I": 5, "A": 4, "Ld": 9 }
+        }
+      ],
+      "equipment": ["Sorrow's End (see weapon profiles)", "Dragonhide Cloak", "Heavy armour", "Shield"],
+      "special_rules": ["blessings_of_the_lady", "rallying_cry", "the_wyrm_slayer", "the_exiles_vow"],
+      "weapon_profiles": [
+        {
+          "name": "Sorrow's End",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": ["magical_attacks", "monster_slayer", "multiple_wounds_2"]
+        }
+      ],
+      "notes": [
+        "Sir Cecil Gastonne is a Baron",
+        "Dragonhide Cloak: AP of non-magical weapons attacking Sir Cecil reduced by 2; immune to Killing Blow and Multiple Wounds (X) — any such wound becomes a single wound; 3+ Ward save against wounds from Flaming Attacks",
+        "May be included in any Kingdom of Bretonnia army using any army composition list that includes Baron option",
+        "Must be fielded as presented"
+      ]
+    },
+    {
+      "id": "lady_elisse_duchaard",
+      "name": "Lady Élisse Duchaard",
+      "category": "character",
+      "source": "arcane_journal",
+      "is_named_character": true,
+      "troop_type": "Monstrous cavalry (named character)",
+      "base_size": "40 x 60 mm",
+      "unit_size": "1",
+      "points": 225,
+      "profiles": [
+        {
+          "name": "Lady Élisse Duchaard",
+          "profile": { "M": "-", "WS": 4, "BS": 3, "S": 3, "T": 4, "W": 5, "I": 3, "A": 2, "Ld": 8 }
+        },
+        {
+          "name": "Ariandir",
+          "is_mount": true,
+          "profile": { "M": 10, "WS": 4, "BS": "-", "S": 4, "T": "-", "W": "-", "I": 5, "A": 2, "Ld": "-" }
+        }
+      ],
+      "equipment": [
+        "Lady Élisse Duchaard: Hand weapon, Chalice of Brionne, The Staff of the Elements",
+        "Ariandir: Hooves and horn (counts as a hand weapon)"
+      ],
+      "special_rules": ["arcane_backlash", "armour_bane_2", "armoured_hide_1", "aura_of_the_lady", "beguiling_aura", "blessings_of_the_lady", "counter_charge", "lore_of_the_lady", "magical_attacks", "magic_resistance_2", "shield_of_the_lady", "stomp_attacks_1", "swiftstride"],
+      "magic": {
+        "wizard_level": 3,
+        "lores": ["Elementalism"]
+      },
+      "notes": [
+        "Lady Élisse Duchaard is a Prophetess",
+        "Armour Bane (2) applies to Ariandir only",
+        "Chalice of Brionne: enemy characters within Command range suffer -2 Ld for special rule or magic item Leadership tests",
+        "The Staff of the Elements: may discard two randomly generated spells (instead of one) and select two signature spells from Lore of Elementalism and/or Lore of the Lady",
+        "Arcane Backlash: +1 to Dispel rolls; rolling a natural double (not double 1) unbinds the spell and the casting Wizard loses 1 Wound",
+        "May be included in any Kingdom of Bretonnia army using any army composition list that includes Prophetess option",
+        "Must be fielded as presented"
+      ]
+    },
+    {
+      "id": "outcast_wizards",
+      "name": "Outcast Wizards",
+      "category": "character",
+      "source": "arcane_journal",
+      "availability": ["bretonnian_exiles"],
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 45,
+      "profiles": [
+        {
+          "name": "Outcast Wizard",
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 2, "I": 3, "A": 1, "Ld": 7 }
+        }
+      ],
+      "equipment": ["Hand weapon"],
+      "options": [
+        { "description": "Warhorse", "cost": 12, "scope": "per_model" },
+        { "description": "Upgrade to Level 2 Wizard", "cost": 30, "scope": "per_model" },
+        { "description": "Upgrade to Level 3 Wizard", "cost": 60, "scope": "per_model" },
+        { "description": "Magic items", "cost": 0, "scope": "per_model", "max_points": 75 }
+      ],
+      "special_rules": ["magical_attacks", "magic_resistance_1", "untutored_arcanist"],
+      "magic": {
+        "wizard_level": 1,
+        "lores": ["Battle Magic", "Daemonology", "Dark Magic", "Elementalism", "Illusion", "Necromancy"]
+      }
+    },
+    {
+      "id": "yeomen_guard",
+      "name": "Yeomen Guard",
+      "category": "infantry",
+      "source": "arcane_journal",
+      "availability": ["bretonnian_exiles"],
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 5,
+      "profiles": [
+        {
+          "name": "Yeoman Guard",
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 }
+        },
+        {
+          "name": "Warden",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 6 }
+        },
+        {
+          "name": "Grail Monk",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": 4, "WS": 3, "BS": 2, "S": 3, "T": 3, "W": 1, "I": 2, "A": 2, "Ld": 6 }
+        }
+      ],
+      "equipment": ["Hand weapons", "Light armour", "Shields"],
+      "options": [
+        { "description": "Halberds (entire unit)", "cost": 0, "scope": "per_unit" },
+        { "description": "Polearms (entire unit; see weapon profiles)", "cost": 1, "scope": "per_model" },
+        { "description": "Thrusting spears (entire unit)", "cost": 0, "scope": "per_unit" },
+        { "description": "Grail Monk may be equipped with Blessed Triptych (unit gains Stubborn)", "cost": 25, "scope": "per_unit", "condition": "Grail Monk champion only" }
+      ],
+      "command": [
+        { "role": "champion", "name": "Warden", "cost_per_unit": 6 },
+        { "role": "champion", "name": "Grail Monk", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 6 },
+        { "role": "musician", "cost_per_unit": 6 }
+      ],
+      "magic_standard": 25,
+      "special_rules": ["close_order", "horde", "peasantry", "shieldwall", "veteran", "warband"],
+      "weapon_profiles": [
+        {
+          "name": "Polearm (single-handed)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": ["fight_in_extra_rank"]
+        },
+        {
+          "name": "Polearm (double-handed)",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": [],
+          "notes": "Requires Two Hands"
+        }
+      ]
+    },
+    {
+      "id": "border_princes_brigands",
+      "name": "Border Princes Brigands",
+      "category": "infantry",
+      "source": "arcane_journal",
+      "availability": ["bretonnian_exiles"],
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 4,
+      "profiles": [
+        {
+          "name": "Brigand",
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 1, "Ld": 6 }
+        },
+        {
+          "name": "Desperado",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 1, "I": 3, "A": 2, "Ld": 7 }
+        }
+      ],
+      "equipment": ["Hand weapons", "Light armour"],
+      "options": [
+        { "description": "Additional hand weapon (per model)", "cost": 2, "scope": "per_model" },
+        { "description": "Shield (per model)", "cost": 1, "scope": "per_model" },
+        { "description": "Pistol (per model)", "cost": 2, "scope": "per_model" },
+        { "description": "Blunderbuss (per model; see weapon profiles)", "cost": 4, "scope": "per_model" },
+        { "description": "Crossbow (per model)", "cost": 3, "scope": "per_model" },
+        { "description": "Replace Open Order with Close Order (0-1 unit per 1,000 pts)", "cost": 0, "scope": "per_unit", "replaces": "Open Order" },
+        { "description": "Replace Open Order with Skirmishers (0-1 unit per 1,000 pts)", "cost": 0, "scope": "per_unit", "replaces": "Open Order" },
+        { "description": "Ambushers (Skirmisher units only)", "cost": 2, "scope": "per_model" },
+        { "description": "Scouts (Skirmisher units only)", "cost": 1, "scope": "per_model" },
+        { "description": "Desperado may purchase magic items", "cost": 0, "scope": "per_unit", "max_points": 50 }
+      ],
+      "command": [
+        { "role": "champion", "name": "Desperado", "cost_per_unit": 7 },
+        { "role": "standard_bearer", "cost_per_unit": 5 },
+        { "role": "musician", "cost_per_unit": 5 }
+      ],
+      "special_rules": ["horde", "impetuous", "levies", "motley_crew", "open_order", "warband"],
+      "weapon_profiles": [
+        {
+          "name": "Blunderbuss",
+          "range": "12\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": ["multiple_shots_d3", "volley_fire"],
+          "notes": "A model armed with a blunderbuss suffers no negative modifiers for firing at long range, for using the Multiple Shots (D3) special rule, or whilst making a Stand & Shoot charge reaction."
+        }
+      ]
+    },
+    {
+      "id": "border_princes_bombard",
+      "name": "Border Princes Bombard",
+      "category": "war_machine",
+      "source": "arcane_journal",
+      "availability": ["bretonnian_exiles"],
+      "troop_type": "War machine",
+      "base_size": "50 x 50 mm (machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 100,
+      "profiles": [
+        {
+          "name": "Bombard",
+          "profile": { "M": "-", "WS": "-", "BS": "-", "S": "-", "T": 7, "W": 3, "I": "-", "A": "-", "Ld": "-" }
+        },
+        {
+          "name": "Crew",
+          "profile": { "M": 4, "WS": 3, "BS": 3, "S": 3, "T": 3, "W": 3, "I": 3, "A": 3, "Ld": 7 }
+        }
+      ],
+      "equipment": ["Bombard (see weapon profile)", "Hand weapons and light armour (crew)"],
+      "special_rules": ["levies", "skirmishers"],
+      "weapon_profiles": [
+        {
+          "name": "Bombard",
+          "range": "48\"",
+          "S": "8",
+          "AP": "-3",
+          "special_rules": ["armour_bane_2", "cannon_fire", "cumbersome", "move_or_shoot", "multiple_wounds_d3_plus_1"],
+          "notes": "Shoots like a cannon using the Cannon Fire special rule. Uses the Bombard Misfire table: 1=Destroyed; 2-3=Malfunction (crew loses 1 Wound, fails to shoot); 4-5=Pffft (fails to shoot); 6=Boom! (shoots as if Artillery dice rolled 2, cannot shoot next round)."
+        }
+      ]
+    }
+  ],
+  "knightly_virtues": [
+    {
+      "id": "virtue_of_knightly_temper",
+      "name": "Virtue of Knightly Temper",
+      "points": 70,
+      "description": "During a turn in which it charged, a model with this Virtue gains the Extra Attacks (+D3) and Hatred (all enemies) special rules."
+    },
+    {
+      "id": "virtue_of_heroism",
+      "name": "Virtue of Heroism",
+      "points": 60,
+      "description": "Unless using a magic weapon, a model with this Virtue gains the Killing Blow and Monster Slayer special rules."
+    },
+    {
+      "id": "virtue_of_stoicism",
+      "name": "Virtue of Stoicism",
+      "points": 55,
+      "description": "A model with this Virtue (and its unit) may re-roll the 2D6 when making a Break test."
+    },
+    {
+      "id": "virtue_of_the_penitent",
+      "name": "Virtue of the Penitent",
+      "points": 50,
+      "restrictions": "Duke, Baron or Paladin only",
+      "description": "A character with this Virtue gains the Unbreakable special rule. However, this character cannot join a friendly unit."
+    },
+    {
+      "id": "virtue_of_the_ideal",
+      "name": "Virtue of the Ideal",
+      "points": 45,
+      "restrictions": "Duke, Baron or Paladin only",
+      "description": "A character with this Virtue has a +1 modifier to its Weapon Skill, Initiative, Attacks and Leadership characteristics. However, this character cannot be your army's General or join a friendly unit."
+    },
+    {
+      "id": "virtue_of_the_impetuous_knight",
+      "name": "Virtue of the Impetuous Knight",
+      "points": 40,
+      "description": "A model with this Virtue gains the Impetuous special rule. In addition, this model (and its unit) increases its maximum possible charge range by 5\". Finally, when this model (and its unit) makes a Charge roll, you may apply a +D3 modifier to the result."
+    },
+    {
+      "id": "virtue_of_audacity",
+      "name": "Virtue of Audacity",
+      "points": 35,
+      "description": "A model with this Virtue may re-roll any failed rolls To Hit made against an enemy model with a higher Weapon Skill characteristic than it."
+    },
+    {
+      "id": "virtue_of_purity",
+      "name": "Virtue of Purity",
+      "points": 30,
+      "description": "A model with this Virtue always benefits from the Blessings of the Lady special rule and always has a 5+ Ward save, even if this model's army did not pray at the start of the game."
+    },
+    {
+      "id": "virtue_of_duty",
+      "name": "Virtue of Duty",
+      "points": 25,
+      "restrictions": "Duke, Baron or Paladin only",
+      "description": "Unless the character has been removed from play as a casualty, when calculating its combat result, this character may claim a bonus of +1 combat result point. This character cannot be your army's General or join a friendly unit."
+    },
+    {
+      "id": "virtue_of_the_joust",
+      "name": "Virtue of the Joust",
+      "points": 20,
+      "description": "A model with this Virtue may re-roll any failed rolls To Wound made when using a lance."
+    },
+    {
+      "id": "virtue_of_confidence",
+      "name": "Virtue of Confidence",
+      "points": 15,
+      "description": "A model with this Virtue must always issue and accept challenges (if possible). During a challenge, this model may re-roll any failed rolls To Hit."
+    },
+    {
+      "id": "virtue_of_noble_disdain",
+      "name": "Virtue of Noble Disdain",
+      "points": 10,
+      "description": "A model with this Virtue may re-roll any failed rolls To Hit made during the first round of combat when engaged with an enemy equipped with any missile weapons."
+    },
+    {
+      "id": "virtue_of_discipline",
+      "name": "Virtue of Discipline",
+      "points": 5,
+      "description": "A model with this Virtue (and its unit) can march whilst within 8\" of an enemy unit without first having to make a Leadership test."
+    },
+    {
+      "id": "virtue_of_empathy",
+      "name": "Virtue of Empathy",
+      "points": 5,
+      "restrictions": "Duke, Baron or Paladin only",
+      "description": "A character with this Virtue can join a unit with the Peasantry special rule."
+    }
+  ],
+  "magic_items": [
+    {
+      "id": "sword_of_the_quest",
+      "name": "Sword of the Quest",
+      "category": "magic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 70,
+      "description": "This large hand-and-a-half sword has been passed down from knight to knight, aiding generations of heroes on their noble quests.",
+      "weapon_profile": {
+        "name": "Sword of the Quest",
+        "range": "Combat",
+        "S": "S+1 / S+2",
+        "AP": "-1 / -2",
+        "special_rules": ["magical_attacks"],
+        "notes": "Two profiles: Single-handed (S+1, AP-1, Magical Attacks, Strike First) or Double-handed (S+2, AP-2, Magical Attacks, Multiple Wounds (2), Requires Two Hands, Strike Last). Choose at start of each round of combat."
+      }
+    },
+    {
+      "id": "sword_of_heroes",
+      "name": "Sword of Heroes",
+      "category": "magic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 60,
+      "description": "This mighty blade has powerful enchantments against evil bound into it. When making a roll To Wound for a hit caused with this sword, a roll of 5+ is always a success, regardless of the target's Toughness.",
+      "weapon_profile": {
+        "name": "Sword of Heroes",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": ["magical_attacks", "monster_slayer"]
+      }
+    },
+    {
+      "id": "heartwood_lance",
+      "name": "Heartwood Lance",
+      "category": "magic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 50,
+      "restrictions": "Models whose troop type is 'cavalry' or 'monster' only",
+      "description": "This unbreakable lance is crafted from the heart of the Major Oak, the largest tree in Bretonnia. Can only be used in a turn in which the wielder charged; otherwise use hand weapon.",
+      "weapon_profile": {
+        "name": "Heartwood Lance",
+        "range": "Combat",
+        "S": "S+3",
+        "AP": "-3",
+        "special_rules": ["magical_attacks"]
+      }
+    },
+    {
+      "id": "morning_star_of_fracasse",
+      "name": "Morning Star of Fracasse",
+      "category": "magic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 40,
+      "description": "Any magic weapon carried by an enemy model that suffers one or more unsaved wounds from the Morning Star of Fracasse is destroyed and cannot be used for the remainder of the game.",
+      "weapon_profile": {
+        "name": "Morning Star of Fracasse",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": ["magical_attacks"]
+      }
+    },
+    {
+      "id": "gilded_cuirass",
+      "name": "Gilded Cuirass",
+      "category": "magic_armour",
+      "source": "forces_of_fantasy",
+      "points": 60,
+      "description": "Inscribed with the words of the Grail Vow. A suit of heavy armour. In addition, its wearer has the Regeneration (5+) special rule."
+    },
+    {
+      "id": "gromril_great_helm",
+      "name": "Gromril Great Helm",
+      "category": "magic_armour",
+      "source": "forces_of_fantasy",
+      "points": 40,
+      "description": "May be worn with other armour. Improves the wearer's armour value by 1 (to a maximum of 2+). In addition, the wearer may re-roll any roll of a natural 1 made when making an Armour Save roll."
+    },
+    {
+      "id": "mantle_of_the_damsel_elena",
+      "name": "Mantle of the Damsel Elena",
+      "category": "talisman",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "The bearer is immune to the Poisoned Attacks special rule. If the bearer is wounded by an attack with this special rule, the attacker must roll To Wound as normal."
+    },
+    {
+      "id": "siriennes_locket",
+      "name": "Sirienne's Locket",
+      "category": "talisman",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only",
+      "description": "The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound."
+    },
+    {
+      "id": "falcon_horn_of_fredemund",
+      "name": "Falcon-horn of Fredemund",
+      "category": "enchanted_item",
+      "source": "forces_of_fantasy",
+      "points": 40,
+      "description": "During the Command sub-phase of their turn, if not engaged in combat, this character may make a Leadership test (using their own unmodified Leadership). If passed, until your next Start of Turn sub-phase, enemy units cannot use the Fly (X) special rule."
+    },
+    {
+      "id": "antlers_of_the_great_hunt",
+      "name": "Antlers of the Great Hunt",
+      "category": "enchanted_item",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "If the wearer of the Antlers of the Great Hunt is mounted on a Barded Warhorse or a Warhorse, they and any unit they join gains the Move through Cover special rule."
+    },
+    {
+      "id": "gauntlet_of_the_duel",
+      "name": "Gauntlet of the Duel",
+      "category": "enchanted_item",
+      "source": "forces_of_fantasy",
+      "points": 5,
+      "extremely_common": true,
+      "description": "Challenges issued by the bearer of a Gauntlet of the Duel cannot be refused. During a challenge, this model may re-roll any failed rolls To Hit."
+    },
+    {
+      "id": "silver_mirror",
+      "name": "Silver Mirror",
+      "category": "arcane_item",
+      "source": "forces_of_fantasy",
+      "points": 35,
+      "description": "Single use. When making a Wizardly dispel, the bearer may use the Silver Mirror. Roll an extra D6 and discard the lowest result. If a 1 is rolled on any two of the dice, the bearer is outclassed, the dispel attempt fails, and the casting Wizard suffers a Strength 4 hit with AP -2."
+    },
+    {
+      "id": "sacrament_of_the_lady",
+      "name": "Sacrament of the Lady",
+      "category": "arcane_item",
+      "source": "forces_of_fantasy",
+      "points": 30,
+      "extremely_common": true,
+      "description": "Before making a Casting roll, the bearer may apply a +2 modifier to that Casting roll. Note that this modifier does not negate a roll of a natural double 1."
+    },
+    {
+      "id": "prayer_icon_of_quenelles",
+      "name": "Prayer Icon of Quenelles",
+      "category": "arcane_item",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "The bearer of the Prayer Icon of Quenelles increases their Dispel range by 3\". Additionally, when attempting to dispel a Hex spell, the bearer gains a +1 modifier to their Dispel roll."
+    },
+    {
+      "id": "valorous_standard",
+      "name": "Valorous Standard",
+      "category": "magic_standard",
+      "source": "forces_of_fantasy",
+      "points": 60,
+      "description": "A unit carrying the Valorous Standard rolls 3D6 when making a Break test and discards the highest result."
+    },
+    {
+      "id": "conquerors_tapestry",
+      "name": "Conqueror's Tapestry",
+      "category": "magic_standard",
+      "source": "forces_of_fantasy",
+      "points": 40,
+      "description": "Any enemy standard captured by a unit carrying the Conqueror's Tapestry is worth 100 Victory Points as a trophy of war."
+    },
+    {
+      "id": "errantry_banner",
+      "name": "Errantry Banner",
+      "category": "magic_standard",
+      "source": "forces_of_fantasy",
+      "points": 30,
+      "description": "All models in a unit carrying the Errantry Banner have a +1 modifier to their Strength characteristic during a turn in which they charge. However, the unit also gains the Impetuous special rule."
+    },
+    {
+      "id": "banner_of_chalons",
+      "name": "Banner of Châlons",
+      "category": "magic_standard",
+      "source": "forces_of_fantasy",
+      "points": 20,
+      "description": "Enemy units cannot declare a Stand & Shoot charge reaction against a unit carrying the Banner of Châlons."
+    },
+    {
+      "id": "crusaders_lance",
+      "name": "Crusader's Lance",
+      "category": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 60,
+      "restrictions": "Models in an Errantry Crusade Army of Infamy whose troop type is 'cavalry' or 'monster' only",
+      "description": "The Crusader's Lance can only be used during a turn in which the wielder charged. In subsequent turns (or if the wielder did not charge), the model must use its hand weapon instead.",
+      "weapon_profile": {
+        "name": "Crusader's Lance",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": ["armour_bane_2", "furious_charge", "hatred_all_enemies", "magical_attacks"]
+      }
+    },
+    {
+      "id": "frontier_axe",
+      "name": "Frontier Axe",
+      "category": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 30,
+      "restrictions": "Models in a Bretonnian Exiles Army of Infamy only",
+      "description": "This enchanted axe severs limbs and sunders armour in a single swing.",
+      "weapon_profile": {
+        "name": "Frontier Axe",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-3",
+        "special_rules": ["magical_attacks", "multiple_wounds_2"],
+        "notes": "Requires Two Hands"
+      }
+    },
+    {
+      "id": "sword_of_the_stout_hearted",
+      "name": "Sword of the Stout Hearted",
+      "category": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 25,
+      "description": "Imbued with the courage of Gilles le Breton himself, this sword fills the wielder with the fortitude to face down any enemy.",
+      "weapon_profile": {
+        "name": "Sword of the Stout Hearted",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-1",
+        "special_rules": ["armour_bane_1", "immune_to_psychology", "magical_attacks"],
+        "notes": "Requires Two Hands"
+      }
+    },
+    {
+      "id": "foebreaker",
+      "name": "Foebreaker",
+      "category": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 20,
+      "description": "Any enemy model that suffers one or more unsaved wounds from the Foebreaker must immediately make a Toughness test. If failed, the wounded model suffers a -1 modifier to its Weapon Skill and Attacks characteristics (to a minimum of 1) until the end of the next Combat phase.",
+      "weapon_profile": {
+        "name": "Foebreaker",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-",
+        "special_rules": ["magical_attacks"]
+      }
+    }
+  ],
+  "lore_of_the_lady": [
+    {
+      "id": "ladys_gift",
+      "name": "The Lady's Gift",
+      "type": "Enchantment",
+      "casting_value": "7+/10+",
+      "range": "12\"",
+      "effect": "Remains in Play. Cast on 7+: target friendly unit gains Regeneration (6+). Cast on 10+: target gains Regeneration (5+). This spell may target a friendly unit engaged in combat.",
+      "remains_in_play": true,
+      "is_signature": true
+    },
+    {
+      "id": "ladys_wrath",
+      "name": "The Lady's Wrath",
+      "type": "Enchantment",
+      "casting_value": "9+",
+      "range": "Self",
+      "effect": "Remains in Play. Whilst this spell is in play, the caster, their mount and any unit they have joined gain a +1 modifier to their Strength characteristic (to a maximum of 10), and improve the Armour Piercing characteristic of their weapons by 1.",
+      "remains_in_play": true,
+      "is_signature": true
+    },
+    {
+      "id": "burning_gaze",
+      "name": "Burning Gaze",
+      "type": "Magic Missile",
+      "casting_value": "10+",
+      "range": "5D6\"",
+      "effect": "Draw a straight line, 5D6\" in length, from the caster's base edge. Any enemy model whose base falls under this line suffers a single Strength 4 hit with no armour save permitted (Ward and Regeneration saves may be attempted as normal).",
+      "remains_in_play": false
+    }
+  ],
+  "chivalrous_vows": [
+    {
+      "id": "knights_vow",
+      "name": "The Knight's Vow",
+      "description": "A model with this Chivalrous Vow does not have to make a Panic test when a friendly unit with the Peasantry rule is destroyed whilst within 6\" of it, or when it is fled through by a friendly unit with the Peasantry rule.",
+      "restrictions": "A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule."
+    },
+    {
+      "id": "questing_vow",
+      "name": "The Questing Vow",
+      "description": "A model with this Chivalrous Vow has the Stubborn special rule and can re-roll any failed Fear, Panic or Terror test. It does not have to make a Panic test when a Peasantry unit is destroyed within 6\" or fled through. A model with this Vow cannot be equipped with a lance (magical or mundane).",
+      "restrictions": "A unit with this Vow cannot be joined by a character with the Knight's Vow or the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule."
+    },
+    {
+      "id": "grail_vow",
+      "name": "The Grail Vow",
+      "description": "A model with this Chivalrous Vow has the Immune to Psychology, Magical Attacks and Stubborn special rules. Models with this Vow always benefit from the Blessings of the Lady and do not have to pray at the start of the game. A model with this Vow cannot refuse a challenge.",
+      "restrictions": "A unit with this Vow can only be joined by a character with the Grail Vow or a Handmaiden of the Lady. A character with this Vow cannot join a unit with the Peasantry rule."
+    },
+    {
+      "id": "crusaders_vow",
+      "name": "The Crusader's Vow",
+      "description": "A Chivalrous Vow available in Errantry Crusade armies (replaces Knight's Vow at no cost). A model with this Vow has the Veteran special rule and does not have to make a Panic test when a friendly Peasantry unit is destroyed within 6\" or fled through.",
+      "restrictions": "A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule. Available in Errantry Crusade armies only."
+    }
+  ]
+}
