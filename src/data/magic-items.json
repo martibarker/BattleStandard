@@ -5,6 +5,14 @@
       "name": "Berserker Blade",
       "points": 20,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-",
+        "special_rules": ["extra_attacks", "impetuous", "magical_attacks"],
+        "notes": "The wielder of the Berserker Blade is Impetuous."
+      },
       "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
     },
     {
@@ -12,6 +20,13 @@
       "name": "Biting Blade",
       "points": 15,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-2",
+        "special_rules": ["armour_bane_1", "magical_attacks"]
+      },
       "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
     },
     {
@@ -19,6 +34,13 @@
       "name": "Burning Blade*",
       "points": 5,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-",
+        "special_rules": ["flaming_attacks", "magical_attacks"]
+      },
       "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
     },
     {
@@ -26,6 +48,14 @@
       "name": "Cackling Blade",
       "points": 65,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-1",
+        "special_rules": ["extra_attacks_d6", "magical_attacks"],
+        "notes": "If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
+      },
       "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
     },
     {
@@ -33,13 +63,28 @@
       "name": "Dragon Slaying Sword",
       "points": 50,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-",
+        "special_rules": ["monster_slayer", "magical_attacks"]
+      },
       "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
     },
     {
       "id": "dragonblade",
       "name": "Dragonblade",
-      "points": null,
+      "points": 30,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S+2",
+        "armor_piercing": "-2",
+        "special_rules": ["armour_bane_1", "magical_attacks"],
+        "notes": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy."
+      },
       "description": "RangeStrengthArmour PiercingSpecial RulesCombatS+2-2Armour Bane (1)Magical AttacksNotes: Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.\nNotes: Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy."
     },
     {
@@ -47,6 +92,13 @@
       "name": "Duellist's Blades",
       "points": 55,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-1",
+        "special_rules": ["extra_attacks_2", "requires_two_hands", "magical_attacks"]
+      },
       "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
     },
     {
@@ -54,6 +106,13 @@
       "name": "Giant Blade",
       "points": 30,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-",
+        "special_rules": ["armour_bane_2", "multiple_wounds_2", "magical_attacks"]
+      },
       "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
       "restrictions": "Giant Blade(Magic Weapon)30 pointsA broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.RangeStrengthArmour Pierc"
     },
@@ -62,6 +121,13 @@
       "name": "Headsman's Axe",
       "points": 45,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Axe",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-1",
+        "special_rules": ["killing_blow", "requires_two_hands", "magical_attacks"]
+      },
       "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
     },
     {
@@ -69,6 +135,13 @@
       "name": "Hell-forged Axe",
       "points": 30,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Axe",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-1",
+        "special_rules": ["armour_bane_3", "flaming_attacks", "magical_attacks"]
+      },
       "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
     },
     {
@@ -76,6 +149,14 @@
       "name": "Meteor Hammer",
       "points": 50,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Hammer",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-3",
+        "special_rules": ["requires_two_hands", "magical_attacks"],
+        "notes": "When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
+      },
       "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
     },
     {
@@ -83,7 +164,14 @@
       "name": "Ogre Blade",
       "points": 75,
       "category": "magic_weapon",
-      "description": "Magic weapons grant the wielder extra abilities, new special rules or an improved profile, the better to slay enemies. Unless otherwise stated, the following rules apply to all magic weapons:\nA magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.\nA character that wields a magic weapon cannot set it aside to use a mundane equivalent. For example, a character cannot set aside a magic combat weapon to use a mundane great weapon instead.",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-",
+        "special_rules": ["magical_attacks"]
+      },
+      "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Magical Attacks",
       "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
     },
     {
@@ -91,6 +179,13 @@
       "name": "Spelleater Axe",
       "points": 35,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Axe",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-1",
+        "special_rules": ["magic_resistance_2", "magical_attacks"]
+      },
       "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
     },
     {
@@ -98,6 +193,13 @@
       "name": "Sword of Battle",
       "points": 60,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-1",
+        "special_rules": ["armour_bane_1", "extra_attacks", "magical_attacks"]
+      },
       "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
     },
     {
@@ -105,6 +207,13 @@
       "name": "Sword of Might*",
       "points": 20,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S+1",
+        "armor_piercing": "-1",
+        "special_rules": ["magical_attacks"]
+      },
       "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
     },
     {
@@ -112,6 +221,13 @@
       "name": "Sword of Sorrow",
       "points": 30,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-",
+        "special_rules": ["magical_attacks"]
+      },
       "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
       "restrictions": "Sword of Sorrow(Magic Weapon)30 pointsThough it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.RangeSt"
     },
@@ -120,6 +236,14 @@
       "name": "Sword of Striking*",
       "points": 15,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-",
+        "special_rules": ["magical_attacks"],
+        "notes": "During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit."
+      },
       "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
     },
     {
@@ -127,6 +251,13 @@
       "name": "Sword of Swiftness",
       "points": 25,
       "category": "magic_weapon",
+      "weapon_profile": {
+        "weapon_type": "Sword",
+        "range": "Combat",
+        "strength": "S",
+        "armor_piercing": "-",
+        "special_rules": ["strike_first", "magical_attacks"]
+      },
       "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
     },
     {
