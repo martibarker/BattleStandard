@@ -3580,7 +3580,7 @@
     {
       "id": "enkhils_kanopi",
       "name": "Enkhil's Kanopi",
-      "source": "ravening_hordes",
+      "source": "arcane_journal",
       "type": "arcane_item",
       "points": 30,
       "description": "Single use. During the Command sub-phase, if not engaged in combat, the bearer may attempt to unleash its contents by making a Leadership test (using their own, unmodified Leadership). If passed, all 'Remains in Play' spells currently in play are dispelled, including spells cast by friendly Wizards."
