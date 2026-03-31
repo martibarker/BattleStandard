@@ -1027,6 +1027,24 @@ function EntryOptionsPanel({
                               </table>
                             </div>
                           )}
+                          {item.armour_profile && (
+                            <div className="mt-0.5 overflow-x-auto">
+                              <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
+                                <thead>
+                                  <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                                    <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Armour</th>
+                                    <th className="text-left pb-0.5 font-medium">Special</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{item.armour_profile.armour_value}</td>
+                                    <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{item.armour_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          )}
                           {item.description && (
                             <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
                               {item.description.split('.')[0]}...

@@ -8,10 +8,14 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-",
-        "special_rules": ["extra_attacks", "impetuous", "magical_attacks"],
-        "notes": "The wielder of the Berserker Blade is Impetuous."
+        "special_rules": [
+          "extra_attacks",
+          "impetuous",
+          "magical_attacks"
+        ],
+        "notes": "The wielder of the Berserker Blade is Impetuous.",
+        "S": "S+1",
+        "AP": "-"
       },
       "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
     },
@@ -23,9 +27,12 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-2",
-        "special_rules": ["armour_bane_1", "magical_attacks"]
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ],
+        "S": "S",
+        "AP": "-2"
       },
       "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
     },
@@ -37,9 +44,12 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-",
-        "special_rules": ["flaming_attacks", "magical_attacks"]
+        "special_rules": [
+          "flaming_attacks",
+          "magical_attacks"
+        ],
+        "S": "S",
+        "AP": "-"
       },
       "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
     },
@@ -51,10 +61,13 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-1",
-        "special_rules": ["extra_attacks_d6", "magical_attacks"],
-        "notes": "If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
+        "special_rules": [
+          "extra_attacks_d6",
+          "magical_attacks"
+        ],
+        "notes": "If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound.",
+        "S": "S+1",
+        "AP": "-1"
       },
       "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
     },
@@ -66,9 +79,12 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-",
-        "special_rules": ["monster_slayer", "magical_attacks"]
+        "special_rules": [
+          "monster_slayer",
+          "magical_attacks"
+        ],
+        "S": "S",
+        "AP": "-"
       },
       "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
     },
@@ -80,10 +96,13 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S+2",
-        "armor_piercing": "-2",
-        "special_rules": ["armour_bane_1", "magical_attacks"],
-        "notes": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy."
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ],
+        "notes": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
+        "S": "S+2",
+        "AP": "-2"
       },
       "description": "RangeStrengthArmour PiercingSpecial RulesCombatS+2-2Armour Bane (1)Magical AttacksNotes: Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.\nNotes: Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy."
     },
@@ -95,9 +114,13 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-1",
-        "special_rules": ["extra_attacks_2", "requires_two_hands", "magical_attacks"]
+        "special_rules": [
+          "extra_attacks_2",
+          "requires_two_hands",
+          "magical_attacks"
+        ],
+        "S": "S",
+        "AP": "-1"
       },
       "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
     },
@@ -109,9 +132,13 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-",
-        "special_rules": ["armour_bane_2", "multiple_wounds_2", "magical_attacks"]
+        "special_rules": [
+          "armour_bane_2",
+          "multiple_wounds_2",
+          "magical_attacks"
+        ],
+        "S": "S+1",
+        "AP": "-"
       },
       "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
       "restrictions": "Giant Blade(Magic Weapon)30 pointsA broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.RangeStrengthArmour Pierc"
@@ -124,9 +151,13 @@
       "weapon_profile": {
         "weapon_type": "Axe",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-1",
-        "special_rules": ["killing_blow", "requires_two_hands", "magical_attacks"]
+        "special_rules": [
+          "killing_blow",
+          "requires_two_hands",
+          "magical_attacks"
+        ],
+        "S": "S+1",
+        "AP": "-1"
       },
       "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
     },
@@ -138,9 +169,13 @@
       "weapon_profile": {
         "weapon_type": "Axe",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-1",
-        "special_rules": ["armour_bane_3", "flaming_attacks", "magical_attacks"]
+        "special_rules": [
+          "armour_bane_3",
+          "flaming_attacks",
+          "magical_attacks"
+        ],
+        "S": "S+1",
+        "AP": "-1"
       },
       "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
     },
@@ -152,10 +187,13 @@
       "weapon_profile": {
         "weapon_type": "Hammer",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-3",
-        "special_rules": ["requires_two_hands", "magical_attacks"],
-        "notes": "When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
+        "special_rules": [
+          "requires_two_hands",
+          "magical_attacks"
+        ],
+        "notes": "When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness.",
+        "S": "S",
+        "AP": "-3"
       },
       "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
     },
@@ -167,9 +205,11 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-",
-        "special_rules": ["magical_attacks"]
+        "special_rules": [
+          "magical_attacks"
+        ],
+        "S": "S+1",
+        "AP": "-"
       },
       "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Magical Attacks",
       "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
@@ -182,9 +222,12 @@
       "weapon_profile": {
         "weapon_type": "Axe",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-1",
-        "special_rules": ["magic_resistance_2", "magical_attacks"]
+        "special_rules": [
+          "magic_resistance_2",
+          "magical_attacks"
+        ],
+        "S": "S",
+        "AP": "-1"
       },
       "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
     },
@@ -196,9 +239,13 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-1",
-        "special_rules": ["armour_bane_1", "extra_attacks", "magical_attacks"]
+        "special_rules": [
+          "armour_bane_1",
+          "extra_attacks",
+          "magical_attacks"
+        ],
+        "S": "S+1",
+        "AP": "-1"
       },
       "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
     },
@@ -210,9 +257,11 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S+1",
-        "armor_piercing": "-1",
-        "special_rules": ["magical_attacks"]
+        "special_rules": [
+          "magical_attacks"
+        ],
+        "S": "S+1",
+        "AP": "-1"
       },
       "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
     },
@@ -224,9 +273,11 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-",
-        "special_rules": ["magical_attacks"]
+        "special_rules": [
+          "magical_attacks"
+        ],
+        "S": "S",
+        "AP": "-"
       },
       "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
       "restrictions": "Sword of Sorrow(Magic Weapon)30 pointsThough it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.RangeSt"
@@ -239,10 +290,12 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-",
-        "special_rules": ["magical_attacks"],
-        "notes": "During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit."
+        "special_rules": [
+          "magical_attacks"
+        ],
+        "notes": "During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.",
+        "S": "S",
+        "AP": "-"
       },
       "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
     },
@@ -254,9 +307,12 @@
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
-        "strength": "S",
-        "armor_piercing": "-",
-        "special_rules": ["strike_first", "magical_attacks"]
+        "special_rules": [
+          "strike_first",
+          "magical_attacks"
+        ],
+        "S": "S",
+        "AP": "-"
       },
       "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
     },
@@ -267,7 +323,9 @@
       "category": "magic_armour",
       "armour_profile": {
         "armour_value": "5+",
-        "special_rules": ["ward_save_4_plus"],
+        "special_rules": [
+          "ward_save_4_plus"
+        ],
         "notes": "Ward save against any wounds suffered"
       },
       "description": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can only carry one shield, and a mount can only wear a single suit of barding. Therefore, magic armour replaces any mundane equivalent the model is, or may be, equipped with.",
@@ -280,7 +338,9 @@
       "category": "magic_armour",
       "armour_profile": {
         "armour_value": "5+",
-        "special_rules": ["unmodifiable_armour"],
+        "special_rules": [
+          "unmodifiable_armour"
+        ],
         "notes": "Armour value cannot be improved or reduced"
       },
       "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
@@ -293,7 +353,9 @@
       "category": "magic_armour",
       "armour_profile": {
         "armour_value": "3+",
-        "special_rules": ["unimprovable_armour"],
+        "special_rules": [
+          "unimprovable_armour"
+        ],
         "notes": "Armour value cannot be improved in any way"
       },
       "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
@@ -307,7 +369,9 @@
       "armour_profile": {
         "type": "helm",
         "armour_value": "+1",
-        "special_rules": ["to_hit_penalty_1"],
+        "special_rules": [
+          "to_hit_penalty_1"
+        ],
         "notes": "Infantry/Cavalry only. Improves wearer's armour by 1 (max 2+). Enemy models attacking the wearer suffer -1 modifier to To Hit rolls."
       },
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
@@ -321,7 +385,9 @@
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
-        "special_rules": ["ward_save_5_plus_once_per_game"],
+        "special_rules": [
+          "ward_save_5_plus_once_per_game"
+        ],
         "notes": "Once per game, provides 5+ Ward save against a single wound. Becomes mundane after use."
       },
       "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
@@ -334,7 +400,9 @@
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
-        "special_rules": ["ward_save_6_plus_non_magical"],
+        "special_rules": [
+          "ward_save_6_plus_non_magical"
+        ],
         "notes": "6+ Ward save against wounds from non-magical attacks"
       },
       "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
@@ -346,7 +414,9 @@
       "category": "magic_armour",
       "armour_profile": {
         "armour_value": "6+",
-        "special_rules": ["to_hit_reroll"],
+        "special_rules": [
+          "to_hit_reroll"
+        ],
         "notes": "Once per turn, force opponent to re-roll a single To Hit roll against wearer"
       },
       "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
@@ -359,7 +429,9 @@
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
-        "special_rules": ["two_hands_compatible"],
+        "special_rules": [
+          "two_hands_compatible"
+        ],
         "notes": "Infantry only. May be used alongside weapons that Require Two Hands in combat."
       },
       "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
@@ -373,7 +445,9 @@
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
-        "special_rules": ["ward_save_5_plus_shooting"],
+        "special_rules": [
+          "ward_save_5_plus_shooting"
+        ],
         "notes": "5+ Ward save against wounds suffered during the Shooting phase"
       },
       "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
@@ -386,7 +460,9 @@
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
-        "special_rules": ["ward_save_5_plus_magic"],
+        "special_rules": [
+          "ward_save_5_plus_magic"
+        ],
         "notes": "5+ Ward save against wounds from Magic Missile, Magical Vortex, or Assailment spells"
       },
       "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
@@ -398,7 +474,10 @@
       "category": "magic_armour",
       "armour_profile": {
         "armour_value": "5+",
-        "special_rules": ["move_through_cover", "scouts"],
+        "special_rules": [
+          "move_through_cover",
+          "scouts"
+        ],
         "notes": "Infantry only. Heavy armour."
       },
       "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",

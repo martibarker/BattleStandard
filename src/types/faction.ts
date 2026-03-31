@@ -42,6 +42,15 @@ export interface WeaponProfile {
   notes?: string;
 }
 
+/** An armour or shield with its own profile (magic armour, shields, etc.) */
+export interface ArmourProfile {
+  armour_value: string;
+  /** e.g. 'shield', 'helm' */
+  type?: string;
+  special_rules: string[];
+  notes?: string;
+}
+
 export interface MagicDetails {
   wizard_level: number;
   lores: string[];
@@ -142,6 +151,7 @@ export interface MagicItem {
   restrictions?: string;
   description: string;
   weapon_profile?: WeaponProfile;
+  armour_profile?: ArmourProfile;
 }
 
 export interface KnightlyVirtue {
