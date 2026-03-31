@@ -1,0 +1,149 @@
+{
+  "weapons": [
+    {
+      "name": "Brace of Pistols",
+      "range": "12\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Multiple Shots (2)",
+        "Quick Shot",
+        "Extra Attacks (+1)",
+        "Requires Two Hands"
+      ]
+    },
+    {
+      "name": "Crossbow",
+      "range": "30\"",
+      "strength": "4",
+      "ap": "—",
+      "special_rules": [
+        "Armour Bane (2)",
+        "Ponderous"
+      ]
+    },
+    {
+      "name": "Flail",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Requires Two Hands"
+      ]
+    },
+    {
+      "name": "Great Cannon",
+      "range": "48\"",
+      "strength": "8",
+      "ap": "-2",
+      "special_rules": [
+        "Armour Bane (2)"
+      ]
+    },
+    {
+      "name": "Great Weapon",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Requires Two Hands",
+        "Strike Last"
+      ]
+    },
+    {
+      "name": "Halberd",
+      "range": "Combat",
+      "strength": "S+1",
+      "ap": "-1(-2)",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Requires Two Hands"
+      ]
+    },
+    {
+      "name": "Handgun",
+      "range": "24\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Ponderous"
+      ]
+    },
+    {
+      "name": "Lance",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": [
+        "Armour Bane (1)"
+      ]
+    },
+    {
+      "name": "Morning Star",
+      "range": "Combat",
+      "strength": "S+1",
+      "ap": "-1",
+      "special_rules": [
+        "Armour Bane (1)"
+      ]
+    },
+    {
+      "name": "Mortar",
+      "range": "12-48\"",
+      "strength": "2(6)",
+      "ap": "-2(-3)",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Bombardment",
+        "Cumbersome",
+        "Move or Shoot",
+        "Multiple Wounds (D3)"
+      ]
+    },
+    {
+      "name": "Pistol",
+      "range": "12\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Quick Shot"
+      ]
+    },
+    {
+      "name": "Repeater Handgun",
+      "range": "24\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Multiple Shots (3)",
+        "Ponderous"
+      ]
+    },
+    {
+      "name": "Repeater Pistol",
+      "range": "12\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Multiple Shots (3)",
+        "Quick Shot"
+      ]
+    },
+    {
+      "name": "Spear",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "—",
+      "special_rules": [
+        "Fight In Extra Rank"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3813 @@
+{
+  "id": "wood-elf-realms",
+  "name": "Wood Elf Realms",
+  "sources": [
+    "forces_of_fantasy",
+    "arcane_journal"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army",
+      "name": "Grand Army",
+      "source": "forces_of_fantasy",
+      "description": "The default Grand Army composition list for the Wood Elf Realms.",
+      "special_rules": [
+        "woodland_ambush"
+      ],
+      "categories": [
+        {
+          "name": "Characters",
+          "max_percent": 50,
+          "rules": [
+            {
+              "description": "0-1 Glade Lord or Spellweaver per 1,000 points",
+              "unit_ids": [
+                "glade-lord",
+                "spellweaver"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "0-1 Treeman Ancient per 1,000 points",
+              "unit_ids": [
+                "treeman-ancient"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "Glade Captains, Spellsingers, Shadowdancers, Waystalkers and Branchwraiths are available as characters"
+            }
+          ]
+        },
+        {
+          "name": "Core",
+          "min_percent": 25,
+          "rules": [
+            {
+              "description": "1+ unit of Glade Guard",
+              "unit_ids": [
+                "glade-guard"
+              ],
+              "min_count": 1
+            },
+            {
+              "description": "Eternal Guard, Dryads and Glade Riders",
+              "unit_ids": [
+                "eternal-guard",
+                "dryads",
+                "glade-riders"
+              ]
+            },
+            {
+              "description": "0-1 unit of Deepwood Scouts may be taken as a Core choice per 1,000 points",
+              "unit_ids": [
+                "deepwood-scouts"
+              ],
+              "max_per_1000_pts": 1
+            }
+          ]
+        },
+        {
+          "name": "Special",
+          "max_percent": 50,
+          "rules": [
+            {
+              "description": "Deepwood Scouts, Wildwood Rangers, Wardancers, Sisters of the Thorn, Wild Riders and Warhawk Riders",
+              "unit_ids": [
+                "deepwood-scouts",
+                "wildwood-rangers",
+                "wardancers",
+                "sisters-of-the-thorn",
+                "wild-riders",
+                "warhawk-riders"
+              ]
+            },
+            {
+              "description": "0-2 units of Tree Kin per 1,000 points",
+              "unit_ids": [
+                "tree-kin"
+              ],
+              "max_per_1000_pts": 2
+            }
+          ]
+        },
+        {
+          "name": "Rare",
+          "max_percent": 25,
+          "rules": [
+            {
+              "description": "Treemen",
+              "unit_ids": [
+                "treeman"
+              ]
+            },
+            {
+              "description": "0-1 unit of Waywatchers per Waystalker taken",
+              "unit_ids": [
+                "waywatchers"
+              ]
+            },
+            {
+              "description": "0-3 Great Eagles per 1,000 points",
+              "unit_ids": [
+                "great-eagles"
+              ],
+              "max_per_1000_pts": 3
+            },
+            {
+              "description": "Any number of Wood Elf Beast Packs",
+              "unit_ids": [
+                "wood-elf-beast-pack"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mercenaries",
+          "max_percent": 20
+        },
+        {
+          "name": "Allies",
+          "max_percent": 25,
+          "rules": [
+            {
+              "description": "A single allied contingent drawn from any Wood Elf Realms Army of Infamy composition list, or one of: Empire of Man (Uneasy), Kingdom of Bretonnia, High Elf Realms"
+            }
+          ]
+        }
+      ],
+      "battle_standard_bearer": {
+        "description": "A single Glade Captain in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single Magic Banner with no points limit.",
+        "unit_ids": [
+          "glade-captain"
+        ],
+        "cost": 25
+      }
+    },
+    {
+      "id": "orions_wild_hunt",
+      "name": "Orion's Wild Hunt",
+      "source": "arcane_journal",
+      "description": "Army of Infamy. Uses the Wood Elf Realms army list from Forces of Fantasy.",
+      "special_rules": [
+        "woodland_ambush",
+        "chieftains_of_the_hunter_king",
+        "the_spirit_of_kurnous",
+        "worthy_of_kurnous"
+      ],
+      "categories": [
+        {
+          "name": "Characters",
+          "max_percent": 50,
+          "rules": [
+            {
+              "description": "0-1 Glade Lord per 1,000 points",
+              "unit_ids": [
+                "glade-lord"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "0-1 Shadowdancer, Spellsinger or Waystalker per 1,000 points",
+              "unit_ids": [
+                "shadowdancer",
+                "spellsinger",
+                "waystalker"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "Glade Captains",
+              "unit_ids": [
+                "glade-captain"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Core",
+          "min_percent": 25,
+          "rules": [
+            {
+              "description": "0-1 unit of Wild Riders per 1,000 points",
+              "unit_ids": [
+                "wild-riders"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "Glade Riders",
+              "unit_ids": [
+                "glade-riders"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Special",
+          "max_percent": 50,
+          "rules": [
+            {
+              "description": "0-1 unit of Sisters of the Thorn per 1,000 points",
+              "unit_ids": [
+                "sisters-of-the-thorn"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "Wardancers, Warhawk Riders, Wild Riders and Wood Elf Beast Packs",
+              "unit_ids": [
+                "wardancers",
+                "warhawk-riders",
+                "wild-riders",
+                "wood-elf-beast-pack"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rare",
+          "max_percent": 25,
+          "rules": [
+            {
+              "description": "0-1 unit of Waywatchers per Waystalker taken",
+              "unit_ids": [
+                "waywatchers"
+              ]
+            },
+            {
+              "description": "0-3 Great Eagles per 1,000 points",
+              "unit_ids": [
+                "great-eagles"
+              ],
+              "max_per_1000_pts": 3
+            },
+            {
+              "description": "Deepwood Scouts and Wildwood Rangers",
+              "unit_ids": [
+                "deepwood-scouts",
+                "wildwood-rangers"
+              ]
+            }
+          ]
+        }
+      ],
+      "battle_standard_bearer": {
+        "description": "A single Glade Captain in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single Magic Banner with no points limit.",
+        "unit_ids": [
+          "glade-captain"
+        ],
+        "cost": 25
+      }
+    },
+    {
+      "id": "host_of_talsyn",
+      "name": "Host of Talsyn",
+      "source": "arcane_journal",
+      "description": "Army of Infamy. Uses the Wood Elf Realms army list from Forces of Fantasy.",
+      "special_rules": [
+        "woodland_ambush",
+        "ancient_enemies",
+        "in_tune_with_nature",
+        "protectors_of_the_ancient_wood",
+        "the_awakened_wood"
+      ],
+      "categories": [
+        {
+          "name": "Characters",
+          "max_percent": 50,
+          "rules": [
+            {
+              "description": "0-1 Glade Lord or Spellweaver per 1,000 points",
+              "unit_ids": [
+                "glade-lord",
+                "spellweaver"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "0-1 Treeman Ancient per 1,000 points",
+              "unit_ids": [
+                "treeman-ancient"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "0-1 Warden of Talsyn per 1,000 points",
+              "unit_ids": [
+                "warden-of-talsyn"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "0-1 Shadowdancer per unit of Wardancers taken",
+              "unit_ids": [
+                "shadowdancer"
+              ]
+            },
+            {
+              "description": "Glade Captains, Spellsingers and Branchwraiths",
+              "unit_ids": [
+                "glade-captain",
+                "spellsinger",
+                "branchwraith"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Core",
+          "min_percent": 25,
+          "rules": [
+            {
+              "description": "1+ unit of Eternal Guard",
+              "unit_ids": [
+                "eternal-guard"
+              ],
+              "min_count": 1
+            },
+            {
+              "description": "Dryads",
+              "unit_ids": [
+                "dryads"
+              ]
+            },
+            {
+              "description": "0-1 unit of Glade Guard per 1,000 points",
+              "unit_ids": [
+                "glade-guard"
+              ],
+              "max_per_1000_pts": 1
+            },
+            {
+              "description": "0-1 unit of Deepwood Scouts may be taken as a Core choice",
+              "unit_ids": [
+                "deepwood-scouts"
+              ],
+              "max_per_1000_pts": 1
+            }
+          ]
+        },
+        {
+          "name": "Special",
+          "max_percent": 50,
+          "rules": [
+            {
+              "description": "Deepwood Scouts, Guardians of Talsyn, Wildwood Rangers and Sisters of the Thorn",
+              "unit_ids": [
+                "deepwood-scouts",
+                "guardians-of-talsyn",
+                "wildwood-rangers",
+                "sisters-of-the-thorn"
+              ]
+            },
+            {
+              "description": "0-2 units of Tree Kin per 1,000 points",
+              "unit_ids": [
+                "tree-kin"
+              ],
+              "max_per_1000_pts": 2
+            }
+          ]
+        },
+        {
+          "name": "Rare",
+          "max_percent": 33,
+          "rules": [
+            {
+              "description": "Treemen and Wardancers",
+              "unit_ids": [
+                "treeman",
+                "wardancers"
+              ]
+            },
+            {
+              "description": "0-3 Great Eagles per 1,000 points",
+              "unit_ids": [
+                "great-eagles"
+              ],
+              "max_per_1000_pts": 3
+            }
+          ]
+        }
+      ],
+      "battle_standard_bearer": {
+        "description": "A single Glade Captain or Warden of Talsyn in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single Magic Banner with no points limit.",
+        "unit_ids": [
+          "glade-captain",
+          "warden-of-talsyn"
+        ],
+        "cost": 25
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "glade-lord",
+      "name": "Glade Lord",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 135,
+      "stats": {
+        "M": "5",
+        "WS": "7",
+        "BS": "7",
+        "S": "4",
+        "T": "3",
+        "W": "3",
+        "I": "6",
+        "A": "4",
+        "Ld": "10"
+      },
+      "equipment": [
+        "hand weapon",
+        "asrai_longbow",
+        "light armour"
+      ],
+      "special_rules": [
+        "arrow_of_kurnous",
+        "evasive",
+        "fire_and_flee",
+        "ignores_cover",
+        "move_through_cover",
+        "rallying_cry",
+        "strike_first"
+      ],
+      "notes": [
+        "The Arrow of Kurnous special rule does not apply to this model's mount (should it have one)."
+      ],
+      "options": [
+        {
+          "description": "May take one of the following:",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cavalry spear (if appropriately mounted)",
+              "cost": 2,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May take a shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 3,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May be mounted",
+          "cost": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of",
+          "max_points": 100,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "glade-captain",
+      "name": "Glade Captain",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 70,
+      "stats": {
+        "M": "5",
+        "WS": "6",
+        "BS": "6",
+        "S": "4",
+        "T": "3",
+        "W": "2",
+        "I": "5",
+        "A": "3",
+        "Ld": "9"
+      },
+      "equipment": [
+        "hand weapon",
+        "asrai_longbow",
+        "light armour"
+      ],
+      "special_rules": [
+        "arrow_of_kurnous",
+        "evasive",
+        "fire_and_flee",
+        "ignores_cover",
+        "move_through_cover",
+        "rallying_cry",
+        "strike_first"
+      ],
+      "notes": [
+        "The Arrow of Kurnous special rule does not apply to this model's mount (should it have one)."
+      ],
+      "options": [
+        {
+          "description": "May take one of the following:",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cavalry spear (if appropriately mounted)",
+              "cost": 2,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May take a shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 3,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May be mounted",
+          "cost": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "spellweaver",
+      "name": "Spellweaver",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 155,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "3",
+        "I": "4",
+        "A": "2",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "high_magic",
+          "illusion"
+        ]
+      },
+      "special_rules": [
+        "elven_reflexes",
+        "lore_of_athel_loren",
+        "magical_attacks",
+        "move_through_cover"
+      ],
+      "notes": [
+        "A Spellweaver is a Level 3 Wizard. Every Wood Elf Mage knows spells from one of the listed Lores of Magic."
+      ],
+      "options": [
+        {
+          "description": "May have the Talismanic Tattoos special rule",
+          "cost": 15,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May be mounted",
+          "cost": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May be a Level 4 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of (as Level 4)",
+          "max_points": 100,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of (as Level 3)",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "spellsinger",
+      "name": "Spellsinger",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 80,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "high_magic",
+          "illusion"
+        ]
+      },
+      "special_rules": [
+        "elven_reflexes",
+        "lore_of_athel_loren",
+        "magical_attacks",
+        "move_through_cover"
+      ],
+      "notes": [
+        "A Spellsinger is a Level 1 Wizard. Every Wood Elf Mage knows spells from one of the listed Lores of Magic."
+      ],
+      "options": [
+        {
+          "description": "May have the Talismanic Tattoos special rule",
+          "cost": 15,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May be mounted",
+          "cost": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May be a Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of (as Level 2)",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of (as Level 1)",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "shadowdancer",
+      "name": "Shadowdancer",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 85,
+      "stats": {
+        "M": "5",
+        "WS": "8",
+        "BS": "6",
+        "S": "4",
+        "T": "3",
+        "W": "2",
+        "I": "7",
+        "A": "3",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 0,
+        "lores": [
+          "battle_magic",
+          "illusion"
+        ],
+        "notes": "A Shadowdancer may be a Wizard (see below). A Shadowdancer that is a Wizard knows spells from Battle Magic or Illusion."
+      },
+      "special_rules": [
+        "evasive",
+        "furious_charge",
+        "immune_to_psychology",
+        "loner",
+        "move_through_cover",
+        "strike_first",
+        "talismanic_tattoos",
+        "troubadour_of_loec"
+      ],
+      "notes": [
+        "A Shadowdancer that joins a unit of Wardancers is considered to have the Dances of Loec special rule for as long as they remain with the unit.",
+        "Spear of Loec: R Combat, S S+1, AP -1, Special Rules: Armour Bane (2), Killing Blow.",
+        "Trickster's Blades: R Combat, S S, AP -, Special Rules: Extra Attacks (+D3), Requires Two Hands."
+      ],
+      "options": [
+        {
+          "description": "May take one of the following:",
+          "choices": [
+            {
+              "description": "Spear of Loec",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Trickster's Blades",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May be a Level 1 Wizard",
+          "cost": 35,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "waystalker",
+      "name": "Waystalker",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 85,
+      "stats": {
+        "M": "5",
+        "WS": "6",
+        "BS": "7",
+        "S": "4",
+        "T": "3",
+        "W": "2",
+        "I": "5",
+        "A": "2",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon",
+        "asrai_longbow"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "evasive",
+        "feigned_flight",
+        "fire_and_flee",
+        "hawk_eyed_archer",
+        "ignores_cover",
+        "move_through_cover",
+        "scouts"
+      ],
+      "options": [
+        {
+          "description": "May take an additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 3,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May take light armour",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May have the Ambushers special rule",
+          "cost": 10,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "treeman-ancient",
+      "name": "Treeman Ancient",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "behemoth (character)",
+      "base_size": "50 x 50 mm (min), 50 x 75 mm (max)",
+      "unit_size": "1",
+      "points": 265,
+      "stats": {
+        "M": "5",
+        "WS": "5",
+        "BS": "5",
+        "S": "5",
+        "T": "6",
+        "W": "6",
+        "I": "2",
+        "A": "3",
+        "Ld": "10"
+      },
+      "equipment": [
+        "oaken_fists",
+        "strangleroots",
+        "arboreal_armour"
+      ],
+      "magic": {
+        "wizard_level": 2,
+        "lores": [
+          "battle_magic",
+          "elementalism"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "flammable",
+        "immune_to_psychology",
+        "large_target",
+        "lore_of_athel_loren",
+        "magical_attacks",
+        "move_through_cover",
+        "regeneration_5plus",
+        "stamp_attacks_d3",
+        "stubborn",
+        "terror",
+        "timmm_berr",
+        "tree_spirit",
+        "tree_whack"
+      ],
+      "notes": [
+        "Oaken fists: R Combat, S S, AP -2.",
+        "Strangleroots: R 12\", S S, AP -1, Special Rules: Multiple Shots (D6+1).",
+        "A Treeman Ancient is a Level 2 Wizard."
+      ],
+      "options": [
+        {
+          "description": "May be a Level 3 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May be a Level 4 Wizard",
+          "cost": 60,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 100,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "branchwraith",
+      "name": "Branchwraith",
+      "source": "forces_of_fantasy",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "30 x 30 mm",
+      "unit_size": "1",
+      "points": 80,
+      "stats": {
+        "M": "5",
+        "WS": "6",
+        "BS": "6",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "I": "6",
+        "A": "2",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon",
+        "sapwood_flesh"
+      ],
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "illusion"
+        ]
+      },
+      "special_rules": [
+        "fear",
+        "flammable",
+        "immune_to_psychology",
+        "lore_of_athel_loren",
+        "magical_attacks",
+        "move_through_cover",
+        "regeneration_6plus",
+        "tree_spirit"
+      ],
+      "notes": [
+        "Sapwood flesh counts as light armour."
+      ],
+      "options": [
+        {
+          "description": "May take one of the following:",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May be a Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "warden-of-talsyn",
+      "name": "Warden of Talsyn",
+      "source": "arcane_journal",
+      "category": "character",
+      "troop_type": "regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 125,
+      "stats": {
+        "M": "5",
+        "WS": "7",
+        "BS": "4",
+        "S": "4",
+        "T": "3",
+        "W": "3",
+        "I": "6",
+        "A": "4",
+        "Ld": "9"
+      },
+      "equipment": [
+        "hand weapon",
+        "asrai_spear",
+        "light armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "courage_beyond_compare",
+        "drilled",
+        "elven_reflexes",
+        "immune_to_psychology",
+        "move_through_cover",
+        "parry",
+        "strike_first",
+        "stubborn"
+      ],
+      "notes": [
+        "If this character joins a unit of Guardians of Talsyn, that unit gains the Immune to Psychology special rule. Should this character leave the unit for any reason, the unit loses this special rule.",
+        "When fighting with a hand weapon and shield, or Asrai spear and shield, this unit improves its armour value by 1.",
+        "Spear of Talsyn: R Combat, S S, AP -1, Special Rules: Armour Bane (1), Magical Attacks.",
+        "A Warden of Talsyn is a Glade Lord. He may be included in any Wood Elf Realms army made using any army composition list."
+      ],
+      "is_named_character": false,
+      "options": [
+        {
+          "description": "May replace Asrai spear with one of the following:",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May take a shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May purchase magic items up to a total of",
+          "max_points": 75,
+          "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orion-king-in-the-woods",
+      "name": "Orion, the King in the Woods",
+      "source": "arcane_journal",
+      "category": "character",
+      "troop_type": "monstrous infantry (named character)",
+      "base_size": "50 x 50 mm (Orion), 25 x 50 mm (Hounds of Orion)",
+      "unit_size": "3*",
+      "points": 455,
+      "is_named_character": true,
+      "stats": {
+        "M": "9",
+        "WS": "8",
+        "BS": "6",
+        "S": "5",
+        "T": "5",
+        "W": "5",
+        "I": "8",
+        "A": "5",
+        "Ld": "10"
+      },
+      "equipment": [
+        "cloak_of_isha",
+        "hawks_talon",
+        "horn_of_the_wild_hunt",
+        "spear_of_kurnous"
+      ],
+      "special_rules": [
+        "fear",
+        "frenzy",
+        "immune_to_psychology",
+        "move_through_cover",
+        "magic_resistance_2",
+        "open_order",
+        "stomp_attacks_d3_plus2",
+        "strikes_first",
+        "terror",
+        "unbreakable"
+      ],
+      "notes": [
+        "Orion and his Hounds form a single unit which Orion cannot leave. Should this unit be reduced to a single model, it remains in an Open Order formation.",
+        "Hound of Orion stats: M9, WS4, BS0, S4, T4, W1, I4, A1, Ld6. Special Rules: Fear, Frenzy, Immune to Psychology, Magical Attacks, Move through Cover, Open Order*, Spectral Hounds, Unbreakable.",
+        "Hounds of Orion can only be wounded by Magical attacks.",
+        "Cloak of Isha: grants a 5+ Ward save. During each Start of Turn sub-phase, roll a D6; on a 5+, Orion recovers a single Wound.",
+        "Horn of the Wild Hunt: Once per game, during the Command sub-phase of his turn, Orion may sound the Horn. Until the end of this turn, friendly units in Orion's Command range gain the Frenzy special rule.",
+        "Hawk's Talon: R 30\", S S, AP -1, Special Rules: Magical Attacks, Multiple Shots (D3+1).",
+        "Spear of Kurnous (Ranged): R 18\", S S+1, AP -2, Special Rules: Magical Attacks, Multiple Wounds (D3). Shoots like a bolt thrower using the 'Through & Through' rule.",
+        "Spear of Kurnous (Combat): R Combat, S S+1, AP -2, Special Rules: Magical Attacks, Multiple Wounds (D3).",
+        "Orion may be included in any Wood Elf Realms army made using any army composition list. He must be fielded as presented."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "araloth-lord-of-talsyn",
+      "name": "Araloth, Lord of Talsyn",
+      "source": "arcane_journal",
+      "category": "character",
+      "troop_type": "regular infantry (named character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 170,
+      "is_named_character": true,
+      "stats": {
+        "M": "5",
+        "WS": "8",
+        "BS": "7",
+        "S": "4",
+        "T": "3",
+        "W": "3",
+        "I": "8",
+        "A": "4",
+        "Ld": "10"
+      },
+      "equipment": [
+        "heavy armour",
+        "shield",
+        "spear_of_talsyn"
+      ],
+      "special_rules": [
+        "boldest_of_the_bold",
+        "evasive",
+        "favour_of_the_goddess",
+        "move_through_cover",
+        "rallying_cry",
+        "skaryn_the_eye_thief",
+        "strike_first",
+        "stubborn"
+      ],
+      "notes": [
+        "Araloth is a Glade Lord. He may be included in any Wood Elf Realms army made using any army composition list.",
+        "Boldest of the Bold: Araloth ignores all negative modifiers to his Leadership characteristic.",
+        "Favour of the Goddess: Araloth has a 5+ Ward save against any wounds suffered.",
+        "Skaryn the Eye Thief: During the Command sub-phase, Araloth may attempt to dispatch Skaryn (roll D6; on 1-2 nothing happens, on 3+ Skaryn strikes). Nominate a single enemy model within 18\" — suffers a single Strength 4 hit with AP -1. If an unsaved wound is caused, the target's WS and Initiative are reduced by D3 for the remainder of the game.",
+        "Spear of Talsyn: R Combat, S S, AP -1, Special Rules: Armour Bane (1), Magical Attacks."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elven-steed",
+      "name": "Elven Steed",
+      "source": "forces_of_fantasy",
+      "category": "mount",
+      "troop_type": "light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "1",
+      "points": 14,
+      "stats": {
+        "M": "9",
+        "WS": "3",
+        "BS": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "I": "4",
+        "A": "1",
+        "Ld": "-"
+      },
+      "equipment": [
+        "hooves"
+      ],
+      "special_rules": [
+        "fast_cavalry",
+        "swiftstride"
+      ],
+      "notes": [
+        "Hooves counts as a hand weapon.",
+        "Available to: Glade Lord, Glade Captain, Spellweaver, Spellsinger."
+      ]
+    },
+    {
+      "id": "great-stag",
+      "name": "Great Stag",
+      "source": "forces_of_fantasy",
+      "category": "mount",
+      "troop_type": "monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 50,
+      "stats": {
+        "M": "8",
+        "WS": "4",
+        "BS": "-",
+        "S": "5 (+1)",
+        "T": "5 (+1)",
+        "W": "4",
+        "I": "2",
+        "A": "-",
+        "Ld": "-"
+      },
+      "equipment": [
+        "mighty_antlers"
+      ],
+      "special_rules": [
+        "armoured_hide_2",
+        "crown_of_antlers",
+        "fear",
+        "first_charge",
+        "impact_hits_1",
+        "move_through_cover",
+        "stomp_attacks_1",
+        "swiftstride"
+      ],
+      "notes": [
+        "A character mounted on a Great Stag has +1 Toughness and +1 Wound.",
+        "Crown of Antlers: Impact Hits caused by a model with this special rule have the Armour Bane (1) special rule and an Armour Piercing characteristic of -1.",
+        "Mighty antlers: R Combat, S S, AP -1, Special Rules: Armour Bane (1).",
+        "Available to: Glade Lord, Glade Captain."
+      ]
+    },
+    {
+      "id": "unicorn",
+      "name": "Unicorn",
+      "source": "forces_of_fantasy",
+      "category": "mount",
+      "troop_type": "monstrous cavalry",
+      "base_size": "40 x 60 mm",
+      "unit_size": "1",
+      "points": 35,
+      "stats": {
+        "M": "10",
+        "WS": "4",
+        "BS": "-",
+        "S": "4",
+        "T": "4 (+1)",
+        "W": "2",
+        "I": "5",
+        "A": "2",
+        "Ld": "-"
+      },
+      "equipment": [
+        "hooves_and_horn"
+      ],
+      "special_rules": [
+        "armour_bane_2",
+        "armoured_hide_2",
+        "beguiling_aura",
+        "counter_charge",
+        "magical_attacks",
+        "stomp_attacks_1",
+        "swiftstride",
+        "unicorn_only"
+      ],
+      "notes": [
+        "A character mounted on a Unicorn has +1 Wound.",
+        "Beguiling Aura: Enemy models must make a Leadership test before making any rolls To Hit against this model during the Combat phase. If this test is failed, only rolls of a natural 6 will hit.",
+        "Available to: Spellweaver, Spellsinger."
+      ]
+    },
+    {
+      "id": "warhawk-mount",
+      "name": "Warhawk (mount)",
+      "source": "forces_of_fantasy",
+      "category": "mount",
+      "troop_type": "monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 30,
+      "stats": {
+        "M": "2",
+        "WS": "3",
+        "BS": "-",
+        "S": "4 (+1)",
+        "T": "4",
+        "W": "2",
+        "I": "4",
+        "A": "2",
+        "Ld": "-"
+      },
+      "equipment": [
+        "wicked_claws"
+      ],
+      "special_rules": [
+        "evasive",
+        "fear",
+        "feigned_flight",
+        "fly_10",
+        "swiftstride"
+      ],
+      "notes": [
+        "A character mounted on a Warhawk has +1 Toughness.",
+        "Wicked claws: R Combat, S S, AP -2.",
+        "Available to: Glade Lord, Glade Captain, Spellweaver, Spellsinger."
+      ]
+    },
+    {
+      "id": "forest-dragon",
+      "name": "Forest Dragon",
+      "source": "forces_of_fantasy",
+      "category": "mount",
+      "troop_type": "behemoth",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 275,
+      "stats": {
+        "M": "6",
+        "WS": "6",
+        "BS": "-",
+        "S": "7 (+3)",
+        "T": "7 (+6)",
+        "W": "4",
+        "I": "6",
+        "A": "-",
+        "Ld": "-"
+      },
+      "equipment": [
+        "wicked_claws",
+        "serrated_maw",
+        "soporific_breath",
+        "draconic_scales"
+      ],
+      "special_rules": [
+        "close_order",
+        "fly_10",
+        "large_target",
+        "stomp_attacks_d6",
+        "swiftstride",
+        "terror"
+      ],
+      "notes": [
+        "A character mounted on a Forest Dragon has +3 Toughness and +6 Wounds.",
+        "Draconic scales counts as full plate armour.",
+        "Wicked claws: R Combat, S S, AP -2.",
+        "Serrated maw: R Combat, S S, AP -, Special Rules: Armour Bane (2), Multiple Wounds (2). In combat, this model must make one of its attacks each turn with this weapon.",
+        "Soporific breath: R N/A, S 2, AP N/A, Special Rules: Breath Weapon. No armour save is permitted against wounds caused by soporific breath (Ward and Regeneration saves can be attempted as normal).",
+        "A Forest Dragon may only be included in your army as a character's mount. Its points are added to that of its rider.",
+        "Available to: Glade Lord only."
+      ]
+    },
+    {
+      "id": "great-eagle-mount",
+      "name": "Great Eagle (mount)",
+      "source": "forces_of_fantasy",
+      "category": "mount",
+      "troop_type": "monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 60,
+      "stats": {
+        "M": "2",
+        "WS": "5",
+        "BS": "-",
+        "S": "4",
+        "T": "4 (+1)",
+        "W": "4",
+        "I": "3",
+        "A": "3",
+        "Ld": "-"
+      },
+      "equipment": [
+        "wicked_claws",
+        "serrated_maw"
+      ],
+      "special_rules": [
+        "close_order",
+        "fear",
+        "fly_10",
+        "stomp_attacks_1",
+        "swiftstride"
+      ],
+      "notes": [
+        "A character mounted on a Great Eagle has +1 Toughness and +1 Wound.",
+        "Wicked claws: R Combat, S S, AP -2.",
+        "Serrated maw: R Combat, S S, AP -, Special Rules: Armour Bane (2), Multiple Wounds (2). In combat, this model must make one of its attacks each turn with this weapon.",
+        "A Great Eagle may be included in your army as a character's mount. Its points are added to that of its rider.",
+        "Available to: Glade Lord, Glade Captain, Spellweaver, Spellsinger."
+      ]
+    },
+    {
+      "id": "glade-guard",
+      "name": "Glade Guard",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 11,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon",
+        "asrai_longbow"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "move_through_cover",
+        "open_order"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Lord's Bowman",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "Any unit may take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 1,
+              "scope": "per_model"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "A Lord's Bowman may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        },
+        {
+          "description": "0-1 unit of Glade Guard per 1,000 points may have the Fire & Flee special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "0-1 unit of Glade Guard per 1,000 points may have the Vanguard special rule",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ]
+    },
+    {
+      "id": "deepwood-scouts",
+      "name": "Deepwood Scouts",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "core",
+      "list_category_overrides": {
+        "grand_army": "core",
+        "host_of_talsyn": "special",
+        "orions_wild_hunt": "rare"
+      },
+      "troop_type": "regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 13,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon",
+        "asrai_longbow"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "evasive",
+        "fire_and_flee",
+        "move_through_cover",
+        "scouts",
+        "skirmishers"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Lord's Bowman",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "Any unit may take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 1,
+              "scope": "per_model"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "A Lord's Bowman may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "0-1 unit of Deepwood Scouts may be taken as a Core choice per 1,000 points in the Grand Army list."
+      ]
+    },
+    {
+      "id": "eternal-guard",
+      "name": "Eternal Guard",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 13,
+      "stats": {
+        "M": "5",
+        "WS": "5",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "9"
+      },
+      "equipment": [
+        "hand weapons",
+        "asrai_spears",
+        "light armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "martial_prowess",
+        "move_through_cover",
+        "stubborn"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Eternal Warden",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "The entire unit may take shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "An Eternal Warden may purchase magic items up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Veteran special rule",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "Martial Prowess: A unit with this special rule can make supporting attacks to its flank or rear, as well as to its front.",
+        "Asrai spear: R Combat, S S, AP -1, Special Rule: Fight in Extra Rank. A model wielding an Asrai spear cannot make a supporting attack during a turn in which it charged. During a turn in which it was charged in its front arc, a model wielding an Asrai spear gains a +1 modifier to its Initiative against the charging unit(s)."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wildwood-rangers",
+      "name": "Wildwood Rangers",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "orions_wild_hunt": "rare"
+      },
+      "troop_type": "regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 14,
+      "stats": {
+        "M": "5",
+        "WS": "5",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "9"
+      },
+      "equipment": [
+        "hand weapons",
+        "rangers_glaives",
+        "light armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "guardians_of_the_wildwood",
+        "immune_to_psychology",
+        "move_through_cover"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Wildwood Warden",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "The entire unit may take shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Wildwood Warden may purchase magic items up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Rangers' glaive: R Combat, S S+2, AP -2, Special Rules: Requires Two Hands.",
+        "Guardians of the Wildwood: Whilst it is in base contact with an enemy model that causes Fear or Terror, a model with this special rule gains a +1 modifier to its Attacks characteristic (to a maximum of 10) and the Multiple Wounds (2) special rule."
+      ]
+    },
+    {
+      "id": "wardancers",
+      "name": "Wardancers",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "host_of_talsyn": "rare"
+      },
+      "troop_type": "regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 16,
+      "stats": {
+        "M": "5",
+        "WS": "6",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "6",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapons"
+      ],
+      "special_rules": [
+        "dances_of_loec",
+        "evasive",
+        "furious_charge",
+        "immune_to_psychology",
+        "loner",
+        "motley_crew",
+        "move_through_cover",
+        "open_order",
+        "skirmishers",
+        "strike_first",
+        "talismanic_tattoos"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Bladesinger",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "Any model in the unit may take one of the following:",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 1,
+              "scope": "per_model"
+            },
+            {
+              "description": "Throwing spear",
+              "cost": 0,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "A Bladesinger may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Dances of Loec: When this unit's combat is chosen during Step 1.1 of any Choose & Fight Combat sub-phase, choose one of the following Dances of Loec for it to perform. Every model within the unit performs the same Dance: Whirling Death (improve AP by 2), Storm of Blades (gain Extra Attacks +1), The Shadows Coil (gain 4+ ward save against any wounds suffered), Woven Mist (enemy directing attacks against this unit suffers -1 modifier to rolls To Hit).",
+        "Note that a Shadowdancer that joins this unit is considered to have this special rule as well."
+      ]
+    },
+    {
+      "id": "waywatchers",
+      "name": "Waywatchers",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "rare",
+      "troop_type": "regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 16,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "5",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapons",
+        "asrai_longbows"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "evasive",
+        "feigned_flight",
+        "fire_and_flee",
+        "ignores_cover",
+        "move_through_cover",
+        "scouts",
+        "skirmishers"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Sentinel",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "description": "Any unit may take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 1,
+              "scope": "per_model"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "A Sentinel may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        },
+        {
+          "description": "0-1 unit in your army may have the Ambushers special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "0-1 unit in your army may have the Vanguard special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "0-1 unit in your army may have the Veteran special rule",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "0-1 unit of Waywatchers per Waystalker taken."
+      ]
+    },
+    {
+      "id": "dryads",
+      "name": "Dryads",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "regular infantry",
+      "base_size": "30 x 30 mm",
+      "unit_size": "5+",
+      "points": 13,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "4",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "4",
+        "A": "2",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapons",
+        "sapwood_flesh"
+      ],
+      "special_rules": [
+        "fear",
+        "flammable",
+        "immune_to_psychology",
+        "magical_attacks",
+        "move_through_cover",
+        "open_order",
+        "regeneration_6plus",
+        "skirmishers",
+        "stubborn",
+        "tree_spirit"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Nymph",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "description": "A Nymph may take Forest Spites up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Sapwood flesh counts as light armour."
+      ]
+    },
+    {
+      "id": "tree-kin",
+      "name": "Tree Kin",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "monstrous infantry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "2+",
+      "points": 51,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "4",
+        "S": "5",
+        "T": "5",
+        "W": "3",
+        "I": "3",
+        "A": "3",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapons",
+        "hardwood_flesh"
+      ],
+      "special_rules": [
+        "armour_bane_2",
+        "close_order",
+        "fear",
+        "flammable",
+        "immune_to_psychology",
+        "magical_attacks",
+        "move_through_cover",
+        "regeneration_5plus",
+        "stomp_attacks_1",
+        "stubborn",
+        "tree_spirit",
+        "tree_whack"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Elder",
+          "cost_per_unit": 7
+        }
+      ],
+      "options": [
+        {
+          "description": "An Elder may take Forest Spites up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Hardwood flesh counts as heavy armour."
+      ]
+    },
+    {
+      "id": "guardians-of-talsyn",
+      "name": "Guardians of Talsyn",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "special",
+      "availability": [
+        "host_of_talsyn"
+      ],
+      "troop_type": "regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 18,
+      "stats": {
+        "M": "5",
+        "WS": "5",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "2",
+        "Ld": "9"
+      },
+      "equipment": [
+        "hand weapon",
+        "asrai_spears",
+        "light armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "drilled",
+        "elven_reflexes",
+        "martial_prowess",
+        "move_through_cover",
+        "parry",
+        "stubborn",
+        "veteran"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Watchmaster",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "The entire unit may take shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Watchmaster may purchase magic items up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Martial Prowess: A unit with this special rule can make supporting attacks to its flank or rear, as well as to its front.",
+        "Parry: When fighting with a hand weapon and shield, or Asrai spear and shield, this unit improves its armour value by 1.",
+        "Asrai spear: R Combat, S S, AP -1, Special Rule: Fight in Extra Rank.",
+        "Guardians of Talsyn can be easily represented with Eternal Guard models."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wood-elf-beast-pack",
+      "name": "Wood Elf Beast Pack",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "rare",
+      "list_category_overrides": {
+        "orions_wild_hunt": "special"
+      },
+      "troop_type": "regular infantry (Beast Keepers) / war beast (beasts)",
+      "base_size": "25 x 25 mm (Beast Keepers), 25 x 50 mm (beasts)",
+      "unit_size": "1+",
+      "points": 11,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapon",
+        "light armour"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "motley_crew",
+        "move_through_cover",
+        "run_with_the_pack",
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "description": "Each Beast Keeper must take one of the following (each Beast Pack can only contain one type of beast):",
+          "choices": [
+            {
+              "description": "1-3 Deepwood Hounds (+8 pts each; M9, WS4, BS-, S3, T3, W1, I3, A1, Ld5; Special Rules: Motley Crew, Run with the Pack, Skirmishers, Warband)",
+              "cost": 8,
+              "scope": "per_model"
+            },
+            {
+              "description": "1-3 Forest Cats (+6 pts each; M7, WS4, BS-, S3, T3, W1, I4, A1, Ld5; Special Rules: Armour Bane (1), Motley Crew, Run with the Pack, Skirmishers)",
+              "cost": 6,
+              "scope": "per_model"
+            },
+            {
+              "description": "1-3 Sylvan Boars (+11 pts each; M6, WS3, BS-, S4, T4, W1, I3, A1, Ld5; Special Rules: Furious Charge, Motley Crew, Razor Tusks, Run with the Pack, Skirmishers)",
+              "cost": 11,
+              "scope": "per_model"
+            },
+            {
+              "description": "1 Bear of Loren (+20 pts; M5, WS4, BS-, S4, T4, W2, I3, A2, Ld6; Special Rules: Armoured Hide (1), Cleaving Blow, Fear, Motley Crew, Run with the Pack, Skirmishers)",
+              "cost": 20,
+              "scope": "per_model"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Run with the Pack: Whilst one or more Beast Keeper remains within this unit, the unit is not subject to the Undisciplined rule and 'war beasts' within this unit do not fear models with the Flaming Attacks special rule. In addition, a unit with this special rule may use the Movement characteristic of the majority of the models in the unit.",
+        "Cleaving Blow: If a model with this special rule rolls a natural 6 when making a roll To Wound for an attack made in combat, it has struck a 'Cleaving Blow'. Enemy models whose troop type is 'regular infantry', 'heavy infantry', 'light cavalry', 'heavy cavalry' or 'war beasts' are not permitted an armour or Regeneration save against a Cleaving Blow.",
+        "Razor Tusks: During a turn in which it charged, the Armour Piercing characteristic of a boar's tusks (hand weapon) is improved by 1.",
+        "Any army made using the Wood Elf Realms Grand Army composition list may include any number of Wood Elf Beast Packs as Rare choices."
+      ]
+    },
+    {
+      "id": "glade-riders",
+      "name": "Glade Riders",
+      "source": "forces_of_fantasy",
+      "category": "cavalry",
+      "list_category": "core",
+      "troop_type": "light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 18,
+      "stats": {
+        "M": "-",
+        "WS": "4",
+        "BS": "4",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapons",
+        "cavalry_spears",
+        "asrai_longbows"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "fast_cavalry",
+        "fire_and_flee",
+        "move_through_cover",
+        "open_order",
+        "skirmishers",
+        "swiftstride"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Glade Knight",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 25,
+      "options": [
+        {
+          "description": "Any unit may take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 1,
+              "scope": "per_model"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "A Glade Knight may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Ambushers special rule",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Reserve Move special rule",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "Elven Steeds included in unit profile: M9, WS3, BS-, S3, T-, W-, I4, A1, Ld-. Hooves counts as a hand weapon."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sisters-of-the-thorn",
+      "name": "Sisters of the Thorn",
+      "source": "forces_of_fantasy",
+      "category": "cavalry",
+      "list_category": "special",
+      "troop_type": "light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 24,
+      "stats": {
+        "M": "-",
+        "WS": "4",
+        "BS": "5",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "9"
+      },
+      "equipment": [
+        "hand weapons",
+        "blackbriar_javelins"
+      ],
+      "special_rules": [
+        "daughters_of_eternity",
+        "deepwood_coven",
+        "elven_reflexes",
+        "fast_cavalry",
+        "fire_and_flee",
+        "move_through_cover",
+        "open_order",
+        "poisoned_attacks",
+        "swiftstride"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Handmaiden of the Thorn",
+          "cost_per_unit": 8
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "A Handmaiden of the Thorn may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Steeds of Isha: M8, WS3, BS-, S4, T-, W-, I4, A1, Ld-. Hooves counts as a hand weapon.",
+        "Daughters of Eternity: This unit has a 4+ Ward save against any wounds suffered.",
+        "Deepwood Coven: A unit of Sisters of the Thorn knows a single spell (chosen by their controlling player before armies are deployed) from either the Battle Magic or Elementalism Lore of Magic. The unit may cast this spell as a Bound spell. If the unit includes a Handmaiden of the Thorn, it may cast this Bound spell with a Power Level of 1. If it includes both a Handmaiden and a standard bearer, it may cast this Bound spell with a Power Level of 2. Otherwise the unit may cast this Bound spell with a Power Level of 0.",
+        "Blackbriar javelin: R 12\", S S, AP -1, Special Rules: Move & Shoot, Quick Shot."
+      ]
+    },
+    {
+      "id": "wild-riders",
+      "name": "Wild Riders",
+      "source": "forces_of_fantasy",
+      "category": "cavalry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "orions_wild_hunt": "core"
+      },
+      "troop_type": "light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 27,
+      "stats": {
+        "M": "-",
+        "WS": "5",
+        "BS": "4",
+        "S": "3",
+        "T": "1",
+        "W": "1",
+        "I": "5",
+        "A": "1",
+        "Ld": "9"
+      },
+      "equipment": [
+        "hand weapons",
+        "hunting_spears",
+        "light armour"
+      ],
+      "special_rules": [
+        "counter_charge",
+        "elven_reflexes",
+        "fast_cavalry",
+        "fear",
+        "frenzy",
+        "furious_charge",
+        "move_through_cover",
+        "open_order",
+        "swiftstride",
+        "talismanic_tattoos"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Wild Hunter",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "magic_standard": 50,
+      "options": [
+        {
+          "description": "The entire unit may take shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Wild Hunter may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Steeds of Kurnous: M9, WS3, BS-, S4, T-, W-, I4, A1, Ld-. Hooves counts as a hand weapon.",
+        "Hunting spear: R Combat, S S+1, AP -2, Special Rules: Armour Bane (1). A hunting spear can only be used during a turn in which the wielder charged; in subsequent turns (or if the wielder did not charge) the model must use its hand weapon instead.",
+        "Furious Charge special rule on the Steeds of Kurnous & Wild Hunter Only label applies to the steeds."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warhawk-riders",
+      "name": "Warhawk Riders",
+      "source": "forces_of_fantasy",
+      "category": "cavalry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "orions_wild_hunt": "special"
+      },
+      "troop_type": "monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "3+",
+      "points": 44,
+      "stats": {
+        "M": "-",
+        "WS": "4",
+        "BS": "5",
+        "S": "3",
+        "T": "4",
+        "W": "2",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "hand weapons",
+        "cavalry_spears",
+        "asrai_longbows"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "evasive",
+        "fear",
+        "feigned_flight",
+        "fire_and_flee",
+        "fly_10",
+        "skirmishers",
+        "swiftstride"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Wind Rider",
+          "cost_per_unit": 8
+        }
+      ],
+      "magic_standard": 25,
+      "options": [
+        {
+          "description": "Any unit may take one of the following types of enchanted arrows:",
+          "choices": [
+            {
+              "description": "Arcane bodkins",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Hagbane tips",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Moonfire shot",
+              "cost": 1,
+              "scope": "per_model"
+            },
+            {
+              "description": "Swiftshiver shards",
+              "cost": 2,
+              "scope": "per_model"
+            },
+            {
+              "description": "Trueflight arrows",
+              "cost": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "A Wind Rider may purchase magic items up to a total of",
+          "max_points": 25,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Warhawks: M2, WS3, BS-, S4, T2, W-, I4, A2, Ld-. Wicked claws: R Combat, S S, AP -2."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treeman",
+      "name": "Treeman",
+      "source": "forces_of_fantasy",
+      "category": "monster",
+      "list_category": "rare",
+      "list_category_overrides": {
+        "host_of_talsyn": "rare"
+      },
+      "troop_type": "behemoth",
+      "base_size": "50 x 50 mm (min), 50 x 75 mm (max)",
+      "unit_size": "1",
+      "points": 215,
+      "stats": {
+        "M": "5",
+        "WS": "6",
+        "BS": "4",
+        "S": "5",
+        "T": "6",
+        "W": "5",
+        "I": "2",
+        "A": "5",
+        "Ld": "9"
+      },
+      "equipment": [
+        "oaken_fists",
+        "strangleroots",
+        "arboreal_armour"
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "close_order",
+        "flammable",
+        "immune_to_psychology",
+        "large_target",
+        "magical_attacks",
+        "move_through_cover",
+        "regeneration_5plus",
+        "stomp_attacks_d3",
+        "stubborn",
+        "terror",
+        "timmm_berr",
+        "tree_spirit",
+        "tree_whack"
+      ],
+      "options": [
+        {
+          "description": "May take Forest Spites up to a total of",
+          "max_points": 50,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Oaken fists: R Combat, S S, AP -2.",
+        "Strangleroots: R 12\", S S, AP -1, Special Rules: Multiple Shots (D6+1).",
+        "Arboreal armour counts as full plate armour."
+      ]
+    },
+    {
+      "id": "great-eagles",
+      "name": "Great Eagles",
+      "source": "forces_of_fantasy",
+      "category": "monster",
+      "list_category": "rare",
+      "troop_type": "monstrous creature",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 60,
+      "stats": {
+        "M": "2",
+        "WS": "5",
+        "BS": "0",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "I": "4",
+        "A": "3",
+        "Ld": "6"
+      },
+      "equipment": [
+        "wicked_claws",
+        "serrated_maw"
+      ],
+      "special_rules": [
+        "close_order",
+        "fear",
+        "fly_10",
+        "stomp_attacks_1",
+        "swiftstride"
+      ],
+      "notes": [
+        "Wicked claws: R Combat, S S, AP -2.",
+        "Serrated maw: R Combat, S S, AP -, Special Rules: Armour Bane (2), Multiple Wounds (2). In combat, this model must make one of its attacks each turn with this weapon.",
+        "0-3 Great Eagles per 1,000 points.",
+        "A Great Eagle may also be taken as a character mount."
+      ]
+    }
+  ],
+  "forest_sprites": [
+    {
+      "id": "blight-of-terrors",
+      "name": "A Blight of Terrors",
+      "source": "forces_of_fantasy",
+      "points": 50,
+      "effect": "This model and any unit it has joined gains the Terror special rule."
+    },
+    {
+      "id": "muster-of-malevolents",
+      "name": "A Muster of Malevolents",
+      "source": "forces_of_fantasy",
+      "points": 40,
+      "effect": "Wood Elf Nobles and Waystalkers only. An enemy model hit by one or more shooting attacks made by this model's Asrai longbow suffers an additional D3 Strength 2 hits, each with an AP of -. These hits have the Armour Bane (1) special rule."
+    },
+    {
+      "id": "befuddlement-of-mischiefs",
+      "name": "A Befuddlement of Mischiefs",
+      "source": "forces_of_fantasy",
+      "points": 30,
+      "effect": "During the Combat phase, a single enemy unit that is in base contact with this model suffers a -1 modifier to both its Weapon Skill and Initiative characteristics."
+    },
+    {
+      "id": "murder-of-spites",
+      "name": "A Murder of Spites",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "effect": "When this model's combat is chosen during Step 1 of the Combat phase, a single enemy unit it is engaged with suffers D3 Strength 2 hits, each with an AP of -1."
+    },
+    {
+      "id": "lamentation-of-despairs",
+      "name": "A Lamentation of Despairs",
+      "source": "forces_of_fantasy",
+      "points": 20,
+      "effect": "Unless this model is fleeing, enemy units that are within 6\" of this model suffer a -1 modifier to their Leadership characteristic when making a Fear, Panic or Terror test (to a minimum of 2)."
+    },
+    {
+      "id": "annoyance-of-netlings",
+      "name": "An Annoyance of Netlings",
+      "source": "forces_of_fantasy",
+      "points": 15,
+      "effect": "Whilst this model is engaged in a challenge, its opponent in the challenge suffers a -1 modifier to its rolls To Hit."
+    },
+    {
+      "id": "resplendence-of-luminescents",
+      "name": "A Resplendence of Luminescents",
+      "source": "forces_of_fantasy",
+      "points": 10,
+      "effect": "This model and any unit it has joined gains the Magical Attacks special rule."
+    }
+  ],
+  "wood_elf_kindreds": {
+    "alter_kindreds": [
+      {
+        "id": "aspect_of_the_hound",
+        "name": "Aspect of the Hound",
+        "cost": 20,
+        "availability": "Wood Elf Nobles and Mages only. Cannot belong to a Noble Kindred. Units joined by this character cannot use this character's Leadership.",
+        "effect": "A character who adopts the Aspect of the Hound, and any unit they have joined, may re-roll any rolls To Hit of a natural 1 during the Combat phase."
+      },
+      {
+        "id": "aspect_of_the_bear",
+        "name": "Aspect of the Bear",
+        "cost": 15,
+        "availability": "Infantry or cavalry only. Wood Elf Nobles and Mages only. Cannot belong to a Noble Kindred. Units joined by this character cannot use this character's Leadership.",
+        "effect": "A character who adopts the Aspect of the Bear increases their Strength and Toughness characteristics by 1."
+      },
+      {
+        "id": "aspect_of_the_boar",
+        "name": "Aspect of the Boar",
+        "cost": 10,
+        "availability": "Wood Elf Nobles and Mages only. Cannot belong to a Noble Kindred. Units joined by this character cannot use this character's Leadership.",
+        "effect": "A character who adopts the Aspect of the Boar improves the Armour Piercing characteristics of its weapon(s) by 1 during a turn in which it charged and gains the Impact Hits (1) special rule."
+      },
+      {
+        "id": "aspect_of_the_cat",
+        "name": "Aspect of the Cat",
+        "cost": 10,
+        "availability": "Wood Elf Nobles and Mages only. Cannot belong to a Noble Kindred. Units joined by this character cannot use this character's Leadership.",
+        "effect": "A character who adopts the Aspect of the Cat gains the Armour Bane (1) special rule and may re-roll all failed rolls To Hit during a challenge."
+      }
+    ],
+    "noble_kindreds": [
+      {
+        "id": "glamour_weave_kindred",
+        "name": "Glamour Weave Kindred",
+        "cost": 25,
+        "availability": "Wood Elf Mages only. Cannot belong to an Alter Kindred.",
+        "effect": "A character belonging to the Glamour Weave Kindred has a 5+ Ward save and gains the Tree Spirit special rule."
+      },
+      {
+        "id": "eternal_kindred",
+        "name": "Eternal Kindred",
+        "cost": 20,
+        "availability": "Infantry only. Wood Elf Nobles and Mages. Cannot belong to an Alter Kindred.",
+        "effect": "A character belonging to the Eternal Kindred, and any unit they have joined, may re-roll any rolls To Hit of a natural 1 during the Combat phase. In addition, the character and any unit they have joined may re-roll any failed rolls To Wound during the Combat phase while within 6\" of a special feature."
+      },
+      {
+        "id": "wild_rider_kindred",
+        "name": "Wild Rider Kindred",
+        "cost": 20,
+        "availability": "Wood Elf Nobles only. Cannot belong to an Alter Kindred. Must be mounted on an Elven Steed or Great Stag and may only wear light armour.",
+        "effect": "A character belonging to the Wild Rider Kindred gains the Counter Charge, Frenzy, Furious Charge and Talismanic Tattoos special rules."
+      },
+      {
+        "id": "scout_kindred",
+        "name": "Scout Kindred",
+        "cost": 15,
+        "availability": "Infantry only. Wood Elf Nobles and Mages. Cannot belong to an Alter Kindred.",
+        "effect": "A character belonging to the Scout Kindred gains the Quick Shot and Scouts special rules."
+      }
+    ]
+  },
+  "magic_items": [
+    {
+      "id": "dragonblade",
+      "name": "Dragonblade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
+      "weapon_profile": {
+        "name": "Dragonblade",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "burning-blade",
+      "name": "Burning Blade*",
+      "points": 5,
+      "category": "magic_weapon",
+      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "biting-blade",
+      "name": "Biting Blade",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
+    },
+    {
+      "id": "sword-of-striking",
+      "name": "Sword of Striking*",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
+    },
+    {
+      "id": "berserker-blade",
+      "name": "Berserker Blade",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+    },
+    {
+      "id": "sword-of-might",
+      "name": "Sword of Might*",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "sword-of-swiftness",
+      "name": "Sword of Swiftness",
+      "points": 25,
+      "category": "magic_weapon",
+      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
+    },
+    {
+      "id": "giant-blade",
+      "name": "Giant Blade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
+      "restrictions": "Giant Blade(Magic Weapon)30 pointsA broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.RangeStrengthArmour Pierc"
+    },
+    {
+      "id": "hell-forged-axe",
+      "name": "Hell-forged Axe",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
+    },
+    {
+      "id": "sword-of-sorrow",
+      "name": "Sword of Sorrow",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
+      "restrictions": "Sword of Sorrow(Magic Weapon)30 pointsThough it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.RangeSt"
+    },
+    {
+      "id": "spelleater-axe",
+      "name": "Spelleater Axe",
+      "points": 35,
+      "category": "magic_weapon",
+      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
+    },
+    {
+      "id": "headsmans-axe",
+      "name": "Headsman's Axe",
+      "points": 45,
+      "category": "magic_weapon",
+      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
+    },
+    {
+      "id": "dragon-slaying-sword",
+      "name": "Dragon Slaying Sword",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
+    },
+    {
+      "id": "meteor-hammer",
+      "name": "Meteor Hammer",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
+    },
+    {
+      "id": "duellists-blades",
+      "name": "Duellist's Blades",
+      "points": 55,
+      "category": "magic_weapon",
+      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
+    },
+    {
+      "id": "sword-of-battle",
+      "name": "Sword of Battle",
+      "points": 60,
+      "category": "magic_weapon",
+      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
+    },
+    {
+      "id": "cackling-blade",
+      "name": "Cackling Blade",
+      "points": 65,
+      "category": "magic_weapon",
+      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
+    },
+    {
+      "id": "ogre-blade",
+      "name": "Ogre Blade",
+      "points": 75,
+      "category": "magic_weapon",
+      "description": "Magic weapons grant the wielder extra abilities, new special rules or an improved profile, the better to slay enemies. Unless otherwise stated, the following rules apply to all magic weapons:\nA magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.\nA character that wields a magic weapon cannot set it aside to use a mundane equivalent. For example, a character cannot set aside a magic combat weapon to use a mundane great weapon instead.",
+      "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
+    },
+    {
+      "id": "charmed-shield",
+      "name": "Charmed Shield*",
+      "points": 5,
+      "category": "magic_armour",
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
+    },
+    {
+      "id": "enchanted-shield",
+      "name": "Enchanted Shield*",
+      "points": 10,
+      "category": "magic_armour",
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
+    },
+    {
+      "id": "armour-of-meteoric-iron",
+      "name": "Armour of Meteoric Iron",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
+      "restrictions": "Armour of Meteoric Iron(Magic Armour)20 pointsThis heavy armour was forged of ore mined from a meteor that fell from the heavens.The Armour of Meteoric Iron gives its wearer an armour value of 5+, whi"
+    },
+    {
+      "id": "trailblazers-hauberk",
+      "name": "Trailblazer's Hauberk",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
+      "restrictions": "Trailblazer's Hauberk(Magic Armour)20 pointsThe local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.Models whose troop type is infantry only. The"
+    },
+    {
+      "id": "levitating-shield",
+      "name": "Levitating Shield",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
+      "restrictions": "Levitating Shield(Magic Armour)25 pointsBorn aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.Models whose troop type is infantry only."
+    },
+    {
+      "id": "spellshield",
+      "name": "Spellshield*",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
+    },
+    {
+      "id": "shield-of-the-warrior-true",
+      "name": "Shield of the Warrior True",
+      "points": 30,
+      "category": "magic_armour",
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
+    },
+    {
+      "id": "glittering-scales",
+      "name": "Glittering Scales",
+      "points": 35,
+      "category": "magic_armour",
+      "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
+    },
+    {
+      "id": "armour-of-silvered-steel",
+      "name": "Armour of Silvered Steel",
+      "points": 40,
+      "category": "magic_armour",
+      "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
+      "restrictions": "Armour of Silvered Steel(Magic Armour)40 pointsPolished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.The Armour of Silvered Steel is a suit of armour that gives"
+    },
+    {
+      "id": "bedazzling-helm",
+      "name": "Bedazzling Helm",
+      "points": 60,
+      "category": "magic_armour",
+      "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
+      "restrictions": "Bedazzling Helm(Magic Armour)60 pointsA gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.Models whose troop type is infantry or cavalry only. May be wo"
+    },
+    {
+      "id": "armour-of-destiny",
+      "name": "Armour of Destiny",
+      "points": 70,
+      "category": "magic_armour",
+      "description": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can only carry one shield, and a mount can only wear a single suit of barding. Therefore, magic armour replaces any mundane equivalent the model is, or may be, equipped with.",
+      "restrictions": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can onl"
+    },
+    {
+      "id": "luckstone",
+      "name": "Luckstone*",
+      "points": 15,
+      "category": "talisman",
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common"
+    },
+    {
+      "id": "obsidian-lodestone",
+      "name": "Obsidian Lodestone*",
+      "points": 20,
+      "category": "talisman",
+      "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.\nA model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
+    },
+    {
+      "id": "paymasters-coin",
+      "name": "Paymaster's Coin*",
+      "points": 25,
+      "category": "talisman",
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common"
+    },
+    {
+      "id": "ironhide-talisman",
+      "name": "Ironhide Talisman",
+      "points": 30,
+      "category": "talisman",
+      "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.\nModels whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6.Note that this magic item does not work against attacks that hit automatically.",
+      "restrictions": "Ironhide Talisman(Talisman)30 pointsIt is said that the one who bears this powerful heirloom can endure even the most telling blows.Models whose troop type is infantry only. Any enemy model that makes"
+    },
+    {
+      "id": "talisman-of-protection",
+      "name": "Talisman of Protection",
+      "points": 30,
+      "category": "talisman",
+      "description": "A powerful magical aura surrounds this humble talisman, protecting its wearer from harm.\nThe Talisman of Protection gives its bearer a 5+ Ward save against any wounds suffered."
+    },
+    {
+      "id": "dawnstone",
+      "name": "Dawnstone",
+      "points": 35,
+      "category": "talisman",
+      "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical.\nThe magic trapped within this semi-precious stone binds together shattered armour plates.\nThe bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
+      "restrictions": "Dawnstone(Talisman)35 pointsThe magic trapped within this semi-precious stone binds together shattered armour plates.The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.Icon of"
+    },
+    {
+      "id": "icon-of-fortitude",
+      "name": "Icon of Fortitude",
+      "points": 35,
+      "category": "talisman",
+      "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.\nModels whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": "Icon of Fortitude(Talisman)35 pointsCarefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.Models whose troop type is infantry or cav"
+    },
+    {
+      "id": "potion-of-foolhardiness",
+      "name": "Potion of Foolhardiness*",
+      "points": 5,
+      "category": "enchanted_item",
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+    },
+    {
+      "id": "potion-of-speed",
+      "name": "Potion of Speed*",
+      "points": 10,
+      "category": "enchanted_item",
+      "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Speed*(Enchanted Item)10 pointsA powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "becalming-orb",
+      "name": "Becalming Orb",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+    },
+    {
+      "id": "potion-of-toughness",
+      "name": "Potion of Toughness*",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Toughness*(Enchanted Item)20 pointsDistilled by magical means, this potion is sure to make the drinker all but invulnerable.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "potion-of-strength",
+      "name": "Potion of Strength*",
+      "points": 25,
+      "category": "enchanted_item",
+      "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Strength*(Enchanted Item)25 pointsA concoction of strength-giving vegetables and roots, mixed together with a touch of magic.Single use. During the Command sub-phase of their turn, the beare"
+    },
+    {
+      "id": "potion-of-fervour",
+      "name": "Potion of Fervour",
+      "points": 30,
+      "category": "enchanted_item",
+      "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
+      "restrictions": "Potion of Fervour(Enchanted Item)30 pointsThis noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.Single Use. During the Command sub-phase of their turn, the bea"
+    },
+    {
+      "id": "healing-potion",
+      "name": "Healing Potion*",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+    },
+    {
+      "id": "ruby-ring-of-ruin",
+      "name": "Ruby Ring of Ruin",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.\nThe wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+    },
+    {
+      "id": "arch-lightning-rod",
+      "name": "Arch-Lightning Rod",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
+      "restrictions": "Arch-Lightning Rod(Enchanted Item)40 pointsCrackling lightning fills the heavens with peril, grounding the creatures of the sky.Single use. During the Command sub-phase of their turn, if they are not"
+    },
+    {
+      "id": "flying-carpet",
+      "name": "Flying Carpet",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!\nModels whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
+      "restrictions": "Flying Carpet(Enchanted Item)40 pointsWoven from the finest silks in a far-off land, this splendid rug does more than warm the feet!Models whose troop type is regular infantry or heavy infantry only."
+    },
+    {
+      "id": "wizarding-hat",
+      "name": "Wizarding Hat",
+      "points": 45,
+      "category": "enchanted_item",
+      "description": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a character might possess.\nNote that a model can only consume a single potion (of any type) per Command phase.\nThis splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
+      "restrictions": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a cha"
+    },
+    {
+      "id": "earthing-rod",
+      "name": "Earthing Rod",
+      "points": 5,
+      "category": "arcane_item",
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+    },
+    {
+      "id": "arcane-familiar",
+      "name": "Arcane Familiar",
+      "points": 15,
+      "category": "arcane_item",
+      "description": "Many Wizards are accompanied by familiars gifted with arcane knowledge. These creatures constantly whisper secrets to their master."
+    },
+    {
+      "id": "dispel-scroll",
+      "name": "Dispel Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+    },
+    {
+      "id": "power-scroll",
+      "name": "Power Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+    },
+    {
+      "id": "lore-familiar",
+      "name": "Lore Familiar",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "By creating a magical homunculus, a Wizard is able to better recall forgotten details of their studies.\nThe owner of a Lore Familiar does not randomly generate their spells. Instead, they may choose which spells they know from their chosen lore (including that lore's signature spell)."
+    },
+    {
+      "id": "scroll-of-disruption",
+      "name": "Scroll of Disruption",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.\nOnce per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "tome-of-spellcraft",
+      "name": "Tome of Spellcraft",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.\nOnce per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "staff-of-quietude",
+      "name": "Staff of Quietude",
+      "points": 35,
+      "category": "arcane_item",
+      "description": "With a gesture, the bearer of the Staff of Quietude calms the Winds of Magic, causing spells and conjurations to dissipate into the other."
+    },
+    {
+      "id": "wand-of-jet",
+      "name": "Wand of Jet",
+      "points": 45,
+      "category": "arcane_item",
+      "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
+      "restrictions": "Wand of Jet(Arcane Item)45 pointsCarved from brittle jet, this wand refines a Wizard's power, but is easily broken.The bearer of the Wand of Jet may apply a +1 modifier to any of their Casting or Disp"
+    },
+    {
+      "id": "scroll-of-transmogrification",
+      "name": "Scroll of Transmogrification*",
+      "points": 50,
+      "category": "arcane_item",
+      "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
+      "restrictions": "Scroll of Transmogrification*(Arcane Item)50 pointsFor a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!Single use. The bearer may use this scroll inste"
+    },
+    {
+      "id": "feedback-scroll",
+      "name": "Feedback Scroll",
+      "points": 60,
+      "category": "arcane_item",
+      "description": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items.\nWhen read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "restrictions": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items."
+    },
+    {
+      "id": "monster-hunters-tapestry",
+      "name": "Monster Hunter's Tapestry",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "Those who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.\nEnemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry.",
+      "restrictions": "Monster Hunter's Tapestry(Magic Standard)25 pointsThose who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.Ene"
+    },
+    {
+      "id": "the-blazing-banner",
+      "name": "The Blazing Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.\nA unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
+      "restrictions": "The Blazing Banner(Magic Standard)25 pointsAn eternal flame flickers about the weapons of those that march beneath the Blazing Banner.A unit carrying the Blazing Banner gains the Flaming Attacks speci"
+    },
+    {
+      "id": "war-banner",
+      "name": "War Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "A proud banner of great age. Those that march beneath the War Banner fight with grim resolve.\nWhen calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point.",
+      "restrictions": "War Banner(Magic Standard)25 pointsA proud banner of great age. Those that march beneath the War Banner fight with grim resolve.When calculating its combat result, a unit carrying the War Banner may c"
+    },
+    {
+      "id": "banner-of-swirling-wind",
+      "name": "Banner of Swirling Wind",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.\nAny enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
+      "restrictions": "Banner of Swirling Wind(Magic Standard)30 pointsGale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.Any enemy model that shoots at"
+    },
+    {
+      "id": "rampaging-banner",
+      "name": "Rampaging Banner",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "As a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.\nWhen a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll.",
+      "restrictions": "Rampaging Banner(Magic Standard)30 pointsAs a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.When a unit carrying the Rampaging Banner declares a charge"
+    },
+    {
+      "id": "razor-standard",
+      "name": "Razor Standard",
+      "points": 40,
+      "category": "magic_standard",
+      "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.\nA unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
+      "restrictions": "Razor Standard(Magic Standard)40 pointsHung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.A unit carrying the Razor Standard gains the Armour Ba"
+    },
+    {
+      "id": "banner-of-iron-resolve",
+      "name": "Banner of Iron Resolve",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer.\nNo regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.\nA unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
+      "restrictions": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer."
+    },
+    {
+      "id": "banner-of-the-steadfast",
+      "name": "Banner of the Steadfast",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Woven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold their ground no matter the odds.",
+      "restrictions": "Banner of the Steadfast(Magic Standard)50 pointsWoven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold t"
+    },
+    {
+      "id": "totem-of-wrath",
+      "name": "Totem of Wrath",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.\nDuring a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
+      "restrictions": "Totem of Wrath(Magic Standard)50 pointsCruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.During a turn in which it char"
+    },
+    {
+      "id": "asyendis-bane",
+      "name": "Asyendi's Bane",
+      "source": "forces_of_fantasy",
+      "type": "magic_weapon",
+      "points": 10,
+      "effect": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks, Quick Shot. Counts as an Asrai longbow. The wielder may re-roll a single failed roll To Hit made during the Shooting phase. However, if the re-roll also fails to hit, the wielder suffers a single Strength 3 hit with an AP of -."
+    },
+    {
+      "id": "banner-of-midsummers-eve",
+      "name": "Banner of Midsummer's Eve",
+      "source": "forces_of_fantasy",
+      "type": "magic_standard",
+      "points": 15,
+      "effect": "A unit carrying the Banner of Midsummer's Eve gains the Ignores Cover special rule."
+    },
+    {
+      "id": "blight-tipped-arrows",
+      "name": "Blight-Tipped Arrows*",
+      "source": "arcane_journal",
+      "type": "enchanted_item",
+      "points": 15,
+      "effect": "Single use. Models with Asrai longbow only. A Blight-Tipped Arrow can be fired as normal from the bearer's Asrai longbow. If an enemy model suffers an unsaved wound from a Blight-Tipped Arrow, at the beginning of each subsequent Start of Turn sub-phase that model must make a Toughness test. If the test is failed, the model immediately suffers a single wound with no armour or Regeneration saves permitted (Ward saves may be attempted as normal).",
+      "extremely_common": true
+    },
+    {
+      "id": "heartwood-pendant",
+      "name": "Heartwood Pendant*",
+      "source": "arcane_journal",
+      "type": "arcane_item",
+      "points": 15,
+      "effect": "In addition to the Lores of Magic they may normally know spells from, the bearer of a Heartwood Pendant may know spells from the Lore of the Wilds.",
+      "extremely_common": true
+    },
+    {
+      "id": "banner-of-springtide",
+      "name": "Banner of Springtide",
+      "source": "arcane_journal",
+      "type": "magic_standard",
+      "points": 20,
+      "effect": "A unit carrying the Banner of Springtide gains the Quick Shot special rule."
+    },
+    {
+      "id": "banner-of-the-eternal-queen",
+      "name": "Banner of the Eternal Queen",
+      "source": "forces_of_fantasy",
+      "type": "magic_standard",
+      "points": 20,
+      "effect": "When calculating its combat result, a unit carrying the Banner of the Eternal Queen may claim an additional bonus of +1 combat result point if it is within 6\" of a woodland terrain feature."
+    },
+    {
+      "id": "wailing-arrow",
+      "name": "Wailing Arrow*",
+      "source": "forces_of_fantasy",
+      "type": "enchanted_item",
+      "points": 20,
+      "effect": "Single use. Models with Asrai Longbow only. A Wailing Arrow can be fired as normal from the bearer's Asrai longbow. Any unit that suffers an unsaved wound from this shot must make a Panic test as if it had taken heavy casualties.",
+      "extremely_common": true
+    },
+    {
+      "id": "banner-of-the-hunter-king",
+      "name": "Banner of the Hunter King",
+      "source": "forces_of_fantasy",
+      "type": "magic_standard",
+      "points": 25,
+      "effect": "A unit carrying the Banner of the Hunter King gains the Vanguard special rule."
+    },
+    {
+      "id": "banner-of-the-wild-hunt",
+      "name": "Banner of the Wild Hunt",
+      "source": "arcane_journal",
+      "type": "magic_standard",
+      "points": 25,
+      "effect": "May only be taken by a model in an Orion's Wild Hunt Army of Infamy. When calculating its combat result, a unit carrying the Banner of the Wild Hunt may claim an additional bonus of +1 combat result point. In addition, the unit may re-roll Pursuit rolls.",
+      "availability": [
+        "orions_wild_hunt"
+      ]
+    },
+    {
+      "id": "blades-of-endless-flame",
+      "name": "Blades of Endless Flame",
+      "source": "arcane_journal",
+      "type": "magic_weapon",
+      "points": 25,
+      "effect": "R Combat, S S, AP -1, Special Rules: Extra Attacks (1), Flaming Attacks, Magical Attacks."
+    },
+    {
+      "id": "orions-favour",
+      "name": "Orion's Favour",
+      "source": "arcane_journal",
+      "type": "talisman",
+      "points": 25,
+      "effect": "Single Use. The bearer of Orion's Favour can re-roll any failed rolls To Hit and/or To Wound made during the Combat phase."
+    },
+    {
+      "id": "sigil-of-the-mage-queen",
+      "name": "Sigil of the Mage Queen",
+      "source": "arcane_journal",
+      "type": "arcane_item",
+      "points": 25,
+      "effect": "Single Use. The bearer of the Sigil of the Mage Queen may use it before making a Casting roll. If they do so, they may apply a +2 modifier to that Casting roll."
+    },
+    {
+      "id": "standard-of-mornings-chill",
+      "name": "Standard of Morning's Chill",
+      "source": "arcane_journal",
+      "type": "magic_standard",
+      "points": 25,
+      "effect": "The bearer of the Standard of Morning's Chill can cast the Swirling Mists spell from the Lore of the Wilds as a Bound Spell, with a Power Level of 2."
+    },
+    {
+      "id": "ariels-favour",
+      "name": "Ariel's Favour",
+      "source": "arcane_journal",
+      "type": "talisman",
+      "points": 30,
+      "effect": "The bearer of Ariel's Favour has the Magic Resistance (-2) special rule."
+    },
+    {
+      "id": "cloak-of-tumbling-leaves",
+      "name": "Cloak of Tumbling Leaves",
+      "source": "arcane_journal",
+      "type": "magic_armour",
+      "points": 30,
+      "effect": "Models whose troop type is 'regular infantry' or 'heavy infantry' only. The Cloak of Tumbling Leaves is a suit of light armour. In addition, its wearer has the Fly (10) and Swiftstride special rules. However, the wearer cannot join a unit."
+    },
+    {
+      "id": "glamourweave",
+      "name": "Glamourweave",
+      "source": "forces_of_fantasy",
+      "type": "talisman",
+      "points": 30,
+      "effect": "Enemy models must make a Leadership test before making any rolls To Hit against the wearer of the Glamourweave during the Combat phase. If this test is failed, only rolls of a natural 6 will hit."
+    },
+    {
+      "id": "moonstone-of-the-hidden-ways",
+      "name": "Moonstone of the Hidden Ways",
+      "source": "arcane_journal",
+      "type": "enchanted_item",
+      "points": 30,
+      "effect": "Single Use. The wearer of the Moonstone of Hidden Ways may cast the Forest Walker spell from the Lore of Athel Loren as a Bound spell with a Power Level of 3."
+    },
+    {
+      "id": "wand-of-wych-elm",
+      "name": "Wand of Wych Elm",
+      "source": "forces_of_fantasy",
+      "type": "arcane_item",
+      "points": 30,
+      "effect": "Once per turn, if they are within 3\" of a woodland terrain feature, the bearer of the Wand of Wych Elm may re-roll a failed Casting roll."
+    },
+    {
+      "id": "crown-of-antlers",
+      "name": "Crown of Antlers",
+      "source": "arcane_journal",
+      "type": "enchanted_item",
+      "points": 35,
+      "effect": "The Crown of Antlers gives its wearer the Armour Bane (1) and Impact Hits (D3) special rules. This Impact Hit has an Armour Piercing characteristic of -2."
+    },
+    {
+      "id": "hail-of-doom-arrow",
+      "name": "Hail of Doom Arrow*",
+      "source": "forces_of_fantasy",
+      "type": "enchanted_item",
+      "points": 35,
+      "effect": "Single use. Models with Asrai Longbow only. A Hail of Doom Arrow can be fired as normal from the bearer's Asrai longbow. If the roll To Hit is successful, place a small (3\") blast template so that its central hole is directly over the centre of the target unit. Any model whose base lies underneath the template risks being hit and suffering a single Strength 4 hit with an AP of -1 and the Magical Attacks special rule.",
+      "extremely_common": true
+    },
+    {
+      "id": "hunt-masters-pride",
+      "name": "Hunt Master's Pride",
+      "source": "arcane_journal",
+      "type": "magic_weapon",
+      "points": 35,
+      "effect": "R Combat, S S, AP -2, Special Rules: Magical Attacks, Multiple Wounds (2). May only be taken by models in an Orion's Wild Hunt Army of Infamy. The Multiple Wounds (2) special rule applies only against models whose troop type is 'monstrous infantry', 'monstrous cavalry', 'monstrous creature' or 'behemoth'.",
+      "availability": [
+        "orions_wild_hunt"
+      ]
+    },
+    {
+      "id": "merciws-locus",
+      "name": "Merciw's Locus",
+      "source": "forces_of_fantasy",
+      "type": "talisman",
+      "points": 35,
+      "effect": "The Strength characteristic of the bearer of Merciw's Locus cannot be modified by any weapon. However, the Strength characteristic of any model that directs its attacks against the bearer during the Combat phase cannot be modified by any weapon either."
+    },
+    {
+      "id": "orb-of-midsummer",
+      "name": "Orb of Midsummer",
+      "source": "arcane_journal",
+      "type": "arcane_item",
+      "points": 35,
+      "effect": "Once per turn, the bearer of the Orb of Midsummer may re-roll a Casting roll."
+    },
+    {
+      "id": "railarians-mantle",
+      "name": "Railarian's Mantle",
+      "source": "forces_of_fantasy",
+      "type": "magic_armour",
+      "points": 35,
+      "effect": "Railarian's Mantle is a suit of light armour. In addition, whilst its wearer is within 6\" of a woodland terrain feature, they have a 4+ Ward save against any wounds suffered."
+    },
+    {
+      "id": "banner-of-the-wildwood",
+      "name": "Banner of the Wildwood",
+      "source": "forces_of_fantasy",
+      "type": "magic_standard",
+      "points": 40,
+      "effect": "A unit carrying the Banner of the Wildwood gains the Fear special rule. If the unit already has the Fear special rule, it instead gains the Terror special rule."
+    },
+    {
+      "id": "bow-of-loren",
+      "name": "Bow of Loren",
+      "source": "forces_of_fantasy",
+      "type": "magic_weapon",
+      "points": 40,
+      "effect": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks. Counts as an Asrai longbow. The wielder may make a number of shooting attacks equal to their Attacks characteristic, rather than the usual one. This model does not suffer any modifiers for firing multiple shots."
+    },
+    {
+      "id": "daiths-reaper",
+      "name": "Daith's Reaper",
+      "source": "arcane_journal",
+      "type": "magic_weapon",
+      "points": 40,
+      "effect": "R Combat, S S+1, AP -1, Special Rules: Magical Attacks. Enemy models must re-roll any successful Armour Save rolls against wounds caused by this weapon."
+    },
+    {
+      "id": "mantle-of-rebirth",
+      "name": "Mantle of Rebirth",
+      "source": "arcane_journal",
+      "type": "magic_armour",
+      "points": 40,
+      "effect": "The Mantle of Rebirth is a suit of light armour. In addition, its wearer has the Regeneration (5+) special rule."
+    },
+    {
+      "id": "oaken-stave",
+      "name": "Oaken Stave",
+      "source": "forces_of_fantasy",
+      "type": "arcane_item",
+      "points": 40,
+      "effect": "Whilst within 3\" of a woodland terrain feature, the bearer of the Oaken Stave increases their Dispel range by 3\". Additionally, whilst within 3\" of a woodland terrain feature, the bearer may roll an extra D6 when making the Dispel roll and discard the lowest result."
+    },
+    {
+      "id": "blades-of-loec",
+      "name": "Blades of Loec",
+      "source": "forces_of_fantasy",
+      "type": "magic_weapon",
+      "points": 45,
+      "effect": "R Combat, S S, AP -, Special Rules: Extra Attacks (+D3), Magical Attacks. The wielder of the Blades of Loec may re-roll any failed rolls To Wound."
+    },
+    {
+      "id": "deepwood-sphere",
+      "name": "Deepwood Sphere",
+      "source": "forces_of_fantasy",
+      "type": "arcane_item",
+      "points": 45,
+      "effect": "Unless the bearer of the Deepwood Sphere is fleeing or engaged in combat, they may use it when an enemy Wizard that is within 6\" of a woodland terrain feature successfully casts a spell. If they do so, no dispel attempt can be made and the spell is cast as normal. Once the spell has been resolved, the enemy Wizard immediately suffers D3 Strength 4 hits, each with an AP of -1."
+    },
+    {
+      "id": "helm-of-the-hunt",
+      "name": "Helm of the Hunt",
+      "source": "forces_of_fantasy",
+      "type": "magic_armour",
+      "points": 50,
+      "effect": "May be worn with other armour. The wearer of the Helm of the Hunt improves their armour value by 1 (to a maximum of 2+). In addition, the wearer has a +1 modifier to both their Weapon Skill and Attacks characteristics during a turn in which they charge."
+    },
+    {
+      "id": "wraithstone",
+      "name": "Wraithstone",
+      "source": "forces_of_fantasy",
+      "type": "enchanted_item",
+      "points": 50,
+      "effect": "Unless the bearer of the Wraithstone is fleeing, enemy units suffer a -1 modifier to their Leadership characteristic (to a minimum of 2) whilst within 6\" of the bearer."
+    },
+    {
+      "id": "vauls-wrath",
+      "name": "Vaul's Wrath",
+      "source": "arcane_journal",
+      "type": "magic_weapon",
+      "points": 55,
+      "effect": "R 32\", S S+1, AP -2, Special Rules: Flaming Attacks, Magical Attacks, Multiple Wounds (2). Once per game, unless the wielder moved during the previous Movement phase, Vaul's Wrath can be shot like a bolt thrower using the 'Through & Through' special rule."
+    },
+    {
+      "id": "spear-of-twilight",
+      "name": "Spear of Twilight",
+      "source": "forces_of_fantasy",
+      "type": "magic_weapon",
+      "points": 65,
+      "effect": "R Combat, S S, AP -2, Special Rules: Killing Blow, Magical Attacks. When the wielder of the Spear of Twilight makes a roll To Wound, a roll of 3+ is always a success, regardless of the target's Toughness."
+    },
+    {
+      "id": "tapestry-of-talsyn",
+      "name": "Tapestry of Talsyn",
+      "source": "arcane_journal",
+      "type": "magic_standard",
+      "points": 80,
+      "effect": "Battle Standard Bearer in a Host of Talsyn Army of Infamy only. A model carrying the Tapestry of Talsyn increases their Command Range to 18\". In addition, friendly units within the bearer's Command Range improve their Leadership characteristic by 1 (to a maximum of 10).",
+      "availability": [
+        "host_of_talsyn"
+      ]
+    }
+  ],
+  "lore_of_athel_loren": [
+    {
+      "id": "tree-singing",
+      "name": "Tree Singing",
+      "type": "Magical Vortex",
+      "casting_value": "7+/9+",
+      "range": "15\"",
+      "effect": "Remains in Play. If this spell is cast with a casting result of 7 or more, place a small (3\") blast template so that its central hole is within 15\" of the caster. If this spell is cast with a casting result of 9 or more, place a large (5\") blast template so that its central hole is within 15\" of the caster. Whilst in play, the template does not move and is treated as a woodland terrain feature. Enemy units treat these woods as dangerous terrain.",
+      "remains_in_play": true,
+      "is_signature": false
+    },
+    {
+      "id": "forest-walker",
+      "name": "Forest Walker",
+      "type": "Conveyance",
+      "casting_value": "10+",
+      "range": "24\"",
+      "effect": "This spell can only target a friendly Wood Elf character that is completely within a woodland terrain feature. If the target is not fleeing, you may immediately remove it from the battlefield and replace it so that it is completely within a different wood anywhere on the battlefield, but not within 6\" of any enemy models. The target cannot move again during this Movement phase.",
+      "remains_in_play": false,
+      "is_signature": false
+    },
+    {
+      "id": "flock-of-doom",
+      "name": "Flock of Doom",
+      "type": "Magic Missile",
+      "casting_value": "9+",
+      "range": "18\"",
+      "effect": "Place a small (3\") blast template so that its central hole is directly over the centre of the target enemy unit. Any enemy model whose base lies underneath the template risks being hit and suffering a single Strength 3 hit with an AP of -1.",
+      "remains_in_play": false,
+      "is_signature": false
+    }
+  ],
+  "lore_of_the_wilds": [
+    {
+      "id": "swirling-mists",
+      "name": "Swirling Mists",
+      "type": "Enchantment",
+      "casting_value": "8+",
+      "range": "Self",
+      "effect": "Until your next Start of Turn sub-phase, any enemy model that directs a shooting attack at the caster, or any unit they have joined, must re-roll any rolls To Hit of a natural 6.",
+      "remains_in_play": false,
+      "is_signature": true
+    },
+    {
+      "id": "fury-of-athel-loren",
+      "name": "Fury of Athel Loren",
+      "type": "Magic Missile",
+      "casting_value": "10+",
+      "range": "18\"",
+      "effect": "The target enemy unit suffers D3+1 Strength 6 hits, each with an AP of -2 and the Multiple Wounds (2) special rule.",
+      "remains_in_play": false,
+      "is_signature": false
+    },
+    {
+      "id": "ariels-blessing",
+      "name": "Ariel's Blessing",
+      "type": "Enchantment",
+      "casting_value": "9+",
+      "range": "10\"",
+      "effect": "Until your next Start of Turn sub-phase, the target friendly unit gains the Regeneration (5+) special rule.",
+      "remains_in_play": false,
+      "is_signature": false
+    },
+    {
+      "id": "spiteful-torrent",
+      "name": "Spiteful Torrent",
+      "type": "Magical Vortex",
+      "casting_value": "10+",
+      "range": "15\"",
+      "effect": "Remains in Play. Place a small (3\") blast template so that its central hole is within 15\" of the caster. Whilst in play, the template is treated as dangerous terrain. The template moves D6\" in a random direction during every Start of Turn sub-phase. Any enemy unit the moving template touches or moves over suffers 3D6 Strength 2 hits, each with an AP of -1.",
+      "remains_in_play": true,
+      "is_signature": false
+    },
+    {
+      "id": "darthus-wrath",
+      "name": "Durthu's Wrath",
+      "type": "Assailment",
+      "casting_value": "10+",
+      "range": "Combat",
+      "effect": "Each model in the fighting rank of a unit that the caster is engaged with must immediately make an Initiative test. Each model that fails this test suffers D3 Strength 4 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal).",
+      "remains_in_play": false,
+      "is_signature": false
+    },
+    {
+      "id": "hidden-pathways",
+      "name": "Hidden Pathways",
+      "type": "Conveyance",
+      "casting_value": "8+",
+      "range": "12\"",
+      "effect": "Until your next Start of Turn sub-phase, the target friendly unit gains the Reserve Move special rule and may perform a Quick Turn, even if it would not normally be able to do so.",
+      "remains_in_play": false,
+      "is_signature": false
+    },
+    {
+      "id": "sapping-blight",
+      "name": "Sapping Blight",
+      "type": "Hex",
+      "casting_value": "9+",
+      "range": "12\"",
+      "effect": "Until your next Start of Turn sub-phase, the target enemy unit suffers a -D3 modifier to its Strength characteristic (to a minimum of 1). This spell may target an enemy unit engaged in combat. If this spell is cast, the effects of any other Hex previously cast on the target unit immediately expire.",
+      "remains_in_play": false,
+      "is_signature": false
+    }
+  ],
+  "knightly_virtues": [],
+  "chivalrous_vows": [],
+  "lore_of_the_lady": []
+}

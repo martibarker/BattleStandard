@@ -1,0 +1,3449 @@
+{
+  "id": "dwarfen-mountain-holds",
+  "name": "Dwarfen Mountain Holds",
+  "sources": [
+    "Warhammer: The Old World — Forces of Fantasy (2024)",
+    "Arcane Journal: Dwarfen Mountain Holds (2024)"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army",
+      "name": "Grand Army of the Dwarfen Mountain Holds",
+      "source": "forces_of_fantasy",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 King, Anvil of Doom or Runelord per 1,000 points; Thanes, Runesmiths, Daemon Slayers, Dragon Slayers and Dwarf Engineers as desired"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "king",
+            "anvil_of_doom",
+            "runelord"
+          ],
+          "notes": "0-1 King, Anvil of Doom or Runelord per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Dwarf Warriors, Quarrellers and Thunderers; 0-1 unit of Rangers may be taken as a Core choice; if your General is a King, 0-1 unit of Longbeards may be taken as a Core choice"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "rangers"
+          ],
+          "notes": "0-1 unit of Rangers may be taken as a Core choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Longbeards, Ironbreakers, Miners, Slayers and Gyrocopters; 0-1 unit of Hammerers per King or Thane taken; 0-3 war machines chosen from Bolt Thrower, Grudge Thrower and Cannon per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 3,
+          "unit_ids": [
+            "bolt_thrower",
+            "grudge_thrower",
+            "cannon"
+          ],
+          "notes": "0-3 war machines chosen from Bolt Thrower, Grudge Thrower and Cannon per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Rangers, Irondrakes and Gyrobombers; 0-2 war machines chosen from Organ Gun and Flame Cannon per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "organ_gun",
+            "flame_cannon"
+          ],
+          "notes": "0-2 war machines chosen from Organ Gun and Flame Cannon per 1,000 points"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20
+        },
+        {
+          "category": "allies",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Any Dwarfen Mountain Holds Army of Infamy composition list; or one of the following Grand Army composition lists: Empire of Man, Kingdom of Bretonnia (Uneasy), High Elf Realms (Suspicious)"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "king",
+      "name": "King",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 125,
+      "profiles": [
+        {
+          "name": "King",
+          "profile": {
+            "M": 3,
+            "WS": 7,
+            "BS": 4,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 4,
+            "A": 4,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon and full plate armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "description": "Crossbow",
+          "cost": 6,
+          "scope": "per_model"
+        },
+        {
+          "description": "Handgun",
+          "cost": 6,
+          "scope": "per_model"
+        },
+        {
+          "description": "Pistol",
+          "cost": 5,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "Oathstone",
+          "cost": 15,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shieldbearers",
+          "cost": 60,
+          "scope": "per_model"
+        },
+        {
+          "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 125
+        }
+      ],
+      "special_rules": [
+        "ancestral_grudge",
+        "dwarf_crafted",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "rallying_cry",
+        "resolute",
+        "stubborn"
+      ],
+      "notes": [
+        "A King may take 0-1 unit of Longbeards as a Core choice",
+        "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction",
+        "Shieldbearers: character has a split profile and follows the Split Profile (Cavalry) rule; +3 Wounds; base size 50 x 50 mm when mounted on Shieldbearers"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Crossbow",
+          "range": "30\"",
+          "strength": "4",
+          "ap": "—",
+          "special_rules": [
+            "Armour Bane (2)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thane",
+      "name": "Thane",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 60,
+      "profiles": [
+        {
+          "name": "Thane",
+          "profile": {
+            "M": 3,
+            "WS": 6,
+            "BS": 4,
+            "S": 4,
+            "T": 5,
+            "W": 2,
+            "I": 3,
+            "A": 3,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon and full plate armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "description": "Crossbow",
+          "cost": 6,
+          "scope": "per_model"
+        },
+        {
+          "description": "Handgun",
+          "cost": 6,
+          "scope": "per_model"
+        },
+        {
+          "description": "Pistol",
+          "cost": 5,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "Oathstone",
+          "cost": 15,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shieldbearers",
+          "cost": 60,
+          "scope": "per_model"
+        },
+        {
+          "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 75
+        }
+      ],
+      "special_rules": [
+        "ancestral_grudge",
+        "dwarf_crafted",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "rallying_cry",
+        "resolute",
+        "stubborn"
+      ],
+      "notes": [
+        "A single Thane in your army may be upgraded to Battle Standard Bearer for +25 points; in addition to their usual runic allowance, a Battle Standard Bearer may purchase Standard runes with no points limit",
+        "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction",
+        "Shieldbearers: character has a split profile and follows the Split Profile (Cavalry) rule; +3 Wounds; base size 50 x 50 mm when mounted on Shieldbearers"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Crossbow",
+          "range": "30\"",
+          "strength": "4",
+          "ap": "—",
+          "special_rules": [
+            "Armour Bane (2)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shieldbearers",
+      "name": "Shieldbearers",
+      "category": "mount",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 60,
+      "profiles": [
+        {
+          "name": "Shieldbearers",
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 4,
+            "S": "-",
+            "T": "(+3)",
+            "W": 2,
+            "I": 3,
+            "A": "-",
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "borne_aloft",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "resolute"
+      ],
+      "notes": [
+        "A character with Shieldbearers has +3 Wounds",
+        "A model with Shieldbearers consists of not one, but four models — the character and three loyal retainers — occupying a single base and acting together as a single entity; follows the Split Profile (Cavalry) rule; in all other respects this model is heavy infantry",
+        "Available to King and Thane"
+      ]
+    },
+    {
+      "id": "anvil_of_doom",
+      "name": "Anvil of Doom",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "War machine (character)",
+      "base_size": "N/A",
+      "unit_size": "1",
+      "points": 235,
+      "profiles": [
+        {
+          "name": "Anvil of Doom",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": 7,
+            "W": 5,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Forgefather & Anvil Guard",
+          "profile": {
+            "M": 3,
+            "WS": 6,
+            "BS": 4,
+            "S": 4,
+            "T": 5,
+            "W": 1,
+            "I": 3,
+            "A": 5,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, heavy armour and shields"
+      ],
+      "options": [
+        {
+          "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 100
+        }
+      ],
+      "special_rules": [
+        "ancestral_shield",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "immune_to_psychology",
+        "magic_resistance_3",
+        "resolute",
+        "rune_lore",
+        "skirmishers",
+        "strike_the_runes",
+        "unbreakable"
+      ],
+      "notes": [
+        "Ancestral Shield: Anvil of Doom and the Forgefather & Anvil Guard have a 5+ Ward save against any wounds suffered",
+        "Immovable Object: once placed on the battlefield during deployment, the Anvil of Doom cannot be moved by its crew during the Remaining Moves sub-phase; it can still pivot freely and make a follow up move",
+        "Strike the Runes: can cast the following Bound spells with Power Level 3 — Rune of Oath & Steel, Rune of Hearth & Home, Rune of Haste & Urgency, Rune of Wrath & Ruin",
+        "Counts as a level 3 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)"
+      ]
+    },
+    {
+      "id": "runelord",
+      "name": "Runelord",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 120,
+      "profiles": [
+        {
+          "name": "Runelord",
+          "profile": {
+            "M": 3,
+            "WS": 6,
+            "BS": 4,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 3,
+            "A": 3,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "Replace heavy armour with full plate armour",
+          "cost": 3,
+          "scope": "per_model"
+        },
+        {
+          "description": "Oathstone",
+          "cost": 15,
+          "scope": "per_model"
+        },
+        {
+          "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 125
+        }
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "forgefire",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_2",
+        "resolute",
+        "rune_lore",
+        "stubborn"
+      ],
+      "notes": [
+        "Counts as a level 2 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)",
+        "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (1) and Flaming Attacks special rules; lost if the character leaves the unit",
+        "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "runesmith",
+      "name": "Runesmith",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 65,
+      "profiles": [
+        {
+          "name": "Runesmith",
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 4,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "Replace heavy armour with full plate armour",
+          "cost": 3,
+          "scope": "per_model"
+        },
+        {
+          "description": "Oathstone",
+          "cost": 15,
+          "scope": "per_model"
+        },
+        {
+          "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 75
+        }
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "forgefire",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_2",
+        "resolute",
+        "rune_lore",
+        "stubborn"
+      ],
+      "notes": [
+        "Counts as a level 1 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)",
+        "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (1) and Flaming Attacks special rules; lost if the character leaves the unit",
+        "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daemon_slayer",
+      "name": "Daemon Slayer",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 130,
+      "profiles": [
+        {
+          "name": "Daemon Slayer",
+          "profile": {
+            "M": 3,
+            "WS": 7,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 5,
+            "A": 4,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon"
+      ],
+      "options": [
+        {
+          "description": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_model"
+        },
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "description": "Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 100
+        },
+        {
+          "description": "Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 25
+        }
+      ],
+      "special_rules": [
+        "deathblow",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "immune_to_psychology",
+        "loner",
+        "magic_resistance_2",
+        "resolute",
+        "slayer_of_daemons",
+        "unbreakable",
+        "vanguard"
+      ],
+      "notes": [
+        "Slayer of Daemons: when making a roll To Wound, a roll of 4+ is always a success regardless of the target's Toughness; each unsaved wound inflicted against an enemy model with the Warp-spawned special rule, or whose troop type is 'behemoth', has the Multiple Wounds (D3) special rule"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dragon_slayer",
+      "name": "Dragon Slayer",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 70,
+      "profiles": [
+        {
+          "name": "Dragon Slayer",
+          "profile": {
+            "M": 3,
+            "WS": 6,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 2,
+            "I": 4,
+            "A": 3,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon"
+      ],
+      "options": [
+        {
+          "description": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_model"
+        },
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "description": "Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 75
+        }
+      ],
+      "special_rules": [
+        "deathblow",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "immune_to_psychology",
+        "killing_blow",
+        "loner",
+        "magic_resistance_2",
+        "resolute",
+        "slayer_of_dragons",
+        "unbreakable",
+        "vanguard"
+      ],
+      "notes": [
+        "Slayer of Dragons: when making a roll To Wound, a roll of 4+ is always a success regardless of the target's Toughness; each unsaved wound inflicted by this character against an enemy model whose troop type is 'behemoth' has the Multiple Wounds (D3) special rule"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dwarf_engineer",
+      "name": "Dwarf Engineer",
+      "category": "character",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 50,
+      "profiles": [
+        {
+          "name": "Engineer",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 5,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Pistol",
+          "cost": 6,
+          "scope": "per_model"
+        },
+        {
+          "description": "Brace of pistols",
+          "cost": 10,
+          "scope": "per_model"
+        },
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "description": "Handgun",
+          "cost": 8,
+          "scope": "per_model"
+        },
+        {
+          "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 50
+        }
+      ],
+      "special_rules": [
+        "artillery_master",
+        "dwarf_crafted",
+        "entrenchment",
+        "gromril_armour",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "stand_back_chief",
+        "stubborn"
+      ],
+      "notes": [
+        "Artillery Master: unless fleeing or in combat, once per turn during the Shooting phase a friendly unit of Quarrellers, Thunderers or Dwarf war machine within Command range may either re-roll any rolls To Hit of a natural 1, or re-roll a single Artillery dice",
+        "Entrenchment: during deployment, may 'Entrench' a single non-character model whose troop type is 'war machine'; an Entrenched war machine is considered to be behind partial cover and behind a low linear obstacle; lost if the war machine moves",
+        "Stand Back Chief: cannot be targeted by enemy shooting or enemy spells whilst within 3\" of a friendly unit whose troop type is 'war machine'"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dwarf_warriors",
+      "name": "Dwarf Warriors",
+      "category": "infantry",
+      "list_category": "core",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 8,
+      "profiles": [
+        {
+          "name": "Warrior",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Veteran",
+          "is_champion": true,
+          "champion_cost": 5,
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapons",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Veteran may purchase Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Veteran",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "magic_standard": 50,
+      "special_rules": [
+        "close_order",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "shieldwall"
+      ],
+      "notes": [
+        "0-1 unit per 1,000 points may have the Drilled special rule (+1 point per model)",
+        "0-1 unit per 1,000 points may have the Veteran special rule (+1 point per model)",
+        "Standard runes may be purchased up to a total of 50 points"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "longbeards",
+      "name": "Longbeards",
+      "category": "infantry",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 12,
+      "profiles": [
+        {
+          "name": "Longbeard",
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Elder",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapons",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "An Elder may purchase Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        },
+        {
+          "description": "An Elder may purchase Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Elder",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "special_rules": [
+        "close_order",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "shieldwall",
+        "venerable",
+        "veteran"
+      ],
+      "notes": [
+        "0-1 unit per 1,000 points may have the Drilled special rule (+1 point per model)",
+        "May be taken as a Core choice if the General is a King",
+        "Venerable: unless this unit is fleeing, friendly units within 6\" of it can re-roll any failed Panic test",
+        "Standard runes may be purchased up to a total of 50 points"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quarrellers",
+      "name": "Quarrellers",
+      "category": "infantry",
+      "list_category": "core",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 9,
+      "profiles": [
+        {
+          "name": "Quarreller",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Veteran",
+          "is_champion": true,
+          "champion_cost": 5,
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 4,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, crossbows and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapons",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Veteran may replace their crossbow with: Pistol (Free) or Brace of pistols (+5 points)",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Veteran",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "special_rules": [
+        "close_order",
+        "dwarf_crafted",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Crossbow",
+          "range": "30\"",
+          "strength": "4",
+          "ap": "—",
+          "special_rules": [
+            "Armour Bane (2)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thunderers",
+      "name": "Thunderers",
+      "category": "infantry",
+      "list_category": "core",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 10,
+      "profiles": [
+        {
+          "name": "Thunderer",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Veteran",
+          "is_champion": true,
+          "champion_cost": 5,
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 4,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, handguns and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapons",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Veteran may replace their handgun with: Pistol (Free) or Brace of pistols (+5 points)",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Veteran",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "special_rules": [
+        "close_order",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rangers",
+      "name": "Rangers",
+      "category": "infantry",
+      "list_category": "rare",
+      "list_category_overrides": {
+        "grand_army": "core"
+      },
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Ranger",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Ol' Deadeye",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, crossbows and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Great weapons",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Take throwing axes",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Replace crossbows with throwing axes",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "description": "An Ol' Deadeye may replace their crossbow with: Pistol (Free) or Brace of pistols (+5 points)",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Ol' Deadeye",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 25,
+      "special_rules": [
+        "dwarf_crafted",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "move_through_cover",
+        "open_order",
+        "resolute",
+        "scouts",
+        "skirmishers"
+      ],
+      "notes": [
+        "0-1 unit of Rangers may be taken as a Core choice in the Grand Army composition",
+        "Standard runes may be purchased up to a total of 25 points"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Crossbow",
+          "range": "30\"",
+          "strength": "4",
+          "ap": "—",
+          "special_rules": [
+            "Armour Bane (2)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hammerers",
+      "name": "Hammerers",
+      "category": "infantry",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 16,
+      "profiles": [
+        {
+          "name": "Hammerer",
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Royal Champion",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, great hammers (see weapon profiles) and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Have the Veteran special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Royal Champion may purchase Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        },
+        {
+          "description": "A Royal Champion may purchase Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Royal Champion",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "magic_standard": 75,
+      "special_rules": [
+        "close_order",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "royal_guard",
+        "shieldwall",
+        "stoic_defenders",
+        "stubborn"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great hammers",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_2",
+            "magical_attacks",
+            "requires_two_hands"
+          ],
+          "notes": "Stoic Defenders: during a turn in which it was charged by the enemy, a model with this special rule gains a +1 modifier to its Initiative and Attacks characteristics"
+        }
+      ],
+      "notes": [
+        "Royal Guard: your army may include one unit of Hammerers for every King or Thane it includes; any model in the unit that has been joined by a King or Thane can issue and accept challenges in the same manner as a character; should the King or Thane leave the unit for any reason that unit loses this ability",
+        "Standard runes may be purchased up to a total of 75 points"
+      ]
+    },
+    {
+      "id": "ironbreakers",
+      "name": "Ironbreakers",
+      "category": "infantry",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 15,
+      "profiles": [
+        {
+          "name": "Ironbreaker",
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Ironbeard",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, full plate armour and shields"
+      ],
+      "options": [
+        {
+          "description": "An Ironbeard may replace their shield with: Brace of drakefire pistols (+10 points) or Drakegun (+10 points)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "description": "An Ironbeard may take cinderblast bombs",
+          "cost": 15,
+          "scope": "per_unit"
+        },
+        {
+          "description": "An Ironbeard may purchase Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Purchase Standard runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Ironbeard",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "magic_standard": 50,
+      "special_rules": [
+        "close_order",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "regimental_unit",
+        "resolute",
+        "runes_of_protection",
+        "shieldwall",
+        "stubborn"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ],
+      "notes": [
+        "Runes of Protection: this unit has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack"
+      ]
+    },
+    {
+      "id": "irondrakes",
+      "name": "Irondrakes",
+      "category": "infantry",
+      "list_category": "rare",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 15,
+      "profiles": [
+        {
+          "name": "Irondrake",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 4,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Ironwarden",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 5,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, drakeguns (see weapon profiles) and full plate armour"
+      ],
+      "options": [
+        {
+          "description": "An Ironwarden may replace their drakegun with: Brace of drakefire pistols (+5 points) or Trollhammer torpedo (+15 points)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "description": "An Ironwarden may take cinderblast bombs",
+          "cost": 15,
+          "scope": "per_unit"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Purchase Standard runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Ironwarden",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "special_rules": [
+        "close_order",
+        "detachment",
+        "gromril_armour",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "runes_of_warding",
+        "stubborn"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ],
+      "notes": [
+        "Runes of Warding: this unit has a 5+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule",
+        "Standard runes may be purchased up to a total of 50 points"
+      ]
+    },
+    {
+      "id": "miners",
+      "name": "Miners",
+      "category": "infantry",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 12,
+      "profiles": [
+        {
+          "name": "Miner",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Prospector",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, great weapons and heavy armour"
+      ],
+      "options": [
+        {
+          "description": "Take blasting charges (see weapon profiles)",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "A Prospector may take a steam drill (+20 points)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "description": "Replace the Close Order special rule with Open Order",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "description": "Have the Veteran special rule",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "Purchase Standard runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Prospector",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 25,
+      "special_rules": [
+        "ambushers",
+        "close_order",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "vanguard"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slayers",
+      "name": "Slayers",
+      "category": "infantry",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 12,
+      "profiles": [
+        {
+          "name": "Troll Slayer",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 4,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 10
+          }
+        },
+        {
+          "name": "Giant Slayer",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons"
+      ],
+      "options": [
+        {
+          "description": "Any number of models may take: Additional hand weapon (+1 point per model) or Great weapon (+2 points per model)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "description": "Any number of models may be upgraded to Giant Slayers",
+          "cost": 7,
+          "scope": "per_model"
+        }
+      ],
+      "command": [
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "magic_standard": 50,
+      "special_rules": [
+        "deathblow",
+        "fight_me",
+        "hatred_orcs_and_goblins",
+        "immune_to_psychology",
+        "loner",
+        "magic_resistance_2",
+        "motley_crew",
+        "open_order",
+        "resolute",
+        "slayer",
+        "unbreakable"
+      ],
+      "notes": [
+        "Troll Slayers have: Deathblow, Hatred (Orcs & Goblins), Immune to Psychology, Loner, Magic Resistance (-2), Motley Crew, Open Order, Resolute, Slayer, Unbreakable",
+        "Giant Slayers additionally have: Fight Me!, Hatred (Orcs & Goblins)",
+        "Giant Slayers always occupy the front rank(s) of the unit, pushing past any Troll Slayers to get there if necessary (such as when the unit turns)",
+        "Fight Me!: any model with this special rule can issue and accept challenges in the same manner as a character",
+        "Slayer: when this model makes a roll To Wound, a roll of 4+ is always a success, regardless of the target's Toughness",
+        "Standard runes may be purchased up to a total of 50 points"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gyrocopters",
+      "name": "Gyrocopters",
+      "category": "cavalry",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "Monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1-6",
+      "points": 60,
+      "profiles": [
+        {
+          "name": "Gyrocopter",
+          "profile": {
+            "M": 1,
+            "WS": 4,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon, steam gun (see weapon profiles) and armoured fuselage (counts as full plate armour)"
+      ],
+      "options": [
+        {
+          "description": "Replace steam gun with Brimstone gun",
+          "cost": 5,
+          "scope": "per_model"
+        },
+        {
+          "description": "Replace steam gun with Clattergun",
+          "cost": 10,
+          "scope": "per_model"
+        }
+      ],
+      "special_rules": [
+        "dive_bomb",
+        "fire_and_flee",
+        "fly_9",
+        "impact_hits_d3",
+        "skirmishers",
+        "swiftstride",
+        "vanguard"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Steam gun",
+          "range": "N/A",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "breath_weapon"
+          ]
+        },
+        {
+          "name": "Brimstone gun",
+          "range": "18\"",
+          "S": "5",
+          "AP": "-2",
+          "special_rules": [
+            "dwarf_crafted",
+            "flaming_attacks",
+            "multiple_shots_d3_plus_1",
+            "quick_shot"
+          ]
+        },
+        {
+          "name": "Clattergun",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "dwarf_crafted",
+            "move_and_shoot",
+            "multiple_shots_d6",
+            "quick_shot"
+          ]
+        }
+      ],
+      "notes": [
+        "Dive Bomb: once per game, a unit with this special rule may perform a 'Dive Bomb' attack against a single enemy unit that is not engaged in combat; the unit must move (by flying) over the unit during the Remaining Moves sub-phase; once movement is complete the enemy unit suffers D6 Strength 3 hits, each with AP of -1, for each model in this unit that moved over it; for each natural 1 rolled when determining number of hits, a bomb has misfired and this unit loses a single Wound"
+      ]
+    },
+    {
+      "id": "gyrobombers",
+      "name": "Gyrobombers",
+      "category": "monster",
+      "list_category": "rare",
+      "source": "forces_of_fantasy",
+      "troop_type": "Monstrous creature",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 95,
+      "profiles": [
+        {
+          "name": "Gyrobomber",
+          "profile": {
+            "M": 1,
+            "WS": 4,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 4,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon, steam gun (see weapon profiles) and armoured fuselage (counts as full plate armour)"
+      ],
+      "options": [
+        {
+          "description": "Replace steam gun with Brimstone gun",
+          "cost": 5,
+          "scope": "per_model"
+        },
+        {
+          "description": "Replace steam gun with Clattergun",
+          "cost": 10,
+          "scope": "per_model"
+        }
+      ],
+      "special_rules": [
+        "bombing_run",
+        "close_order",
+        "fly_8",
+        "impact_hits_d3_plus_1",
+        "swiftstride"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Steam gun",
+          "range": "N/A",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "breath_weapon"
+          ]
+        },
+        {
+          "name": "Brimstone gun",
+          "range": "18\"",
+          "S": "5",
+          "AP": "-2",
+          "special_rules": [
+            "dwarf_crafted",
+            "flaming_attacks",
+            "multiple_shots_d3_plus_1",
+            "quick_shot"
+          ]
+        },
+        {
+          "name": "Clattergun",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "dwarf_crafted",
+            "move_and_shoot",
+            "multiple_shots_d6",
+            "quick_shot"
+          ]
+        }
+      ],
+      "notes": [
+        "Bombing Run: this model may perform a 'Bombing Run' attack against a single enemy unit that is not engaged in combat; the model must move (by flying) over the unit during the Remaining Moves sub-phase; once movement is complete, roll on the Bombing Run table: 1 = Premature Detonation (this model loses a single Wound); 2 = Dud (enemy unit loses a single Wound); 3-4 = Direct Hit (place a large (5\") blast template centred on the enemy unit, scatter D6\", any model whose base lies underneath is hit and suffers a single Strength 4 hit with AP of -1); 5-6 = Bombs Away (place two small (3\") blast templates so their central holes are over the enemy unit, each scatters D6\", any model beneath risks being hit and suffering a single Strength 4 hit with AP of -1)"
+      ]
+    },
+    {
+      "id": "bolt_thrower",
+      "name": "Bolt Thrower",
+      "category": "war_machine",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "War machine",
+      "base_size": "50 x 50 mm (war machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 55,
+      "profiles": [
+        {
+          "name": "Bolt Thrower",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": 6,
+            "W": 3,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Dwarf Crew",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 3,
+            "I": 2,
+            "A": 3,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Bolt thrower, hand weapons and light armour"
+      ],
+      "options": [
+        {
+          "description": "May purchase Engineering runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "special_rules": [
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "skirmishers",
+        "stubborn"
+      ]
+    },
+    {
+      "id": "grudge_thrower",
+      "name": "Grudge Thrower",
+      "category": "war_machine",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "War machine",
+      "base_size": "50 x 75 mm (war machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 95,
+      "profiles": [
+        {
+          "name": "Grudge Thrower",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": 7,
+            "W": 3,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Dwarf Crew",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 3,
+            "I": 2,
+            "A": 3,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Stone thrower, hand weapons and light armour"
+      ],
+      "options": [
+        {
+          "description": "May purchase Engineering runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "special_rules": [
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "skirmishers",
+        "stubborn"
+      ]
+    },
+    {
+      "id": "cannon",
+      "name": "Cannon",
+      "category": "war_machine",
+      "list_category": "special",
+      "source": "forces_of_fantasy",
+      "troop_type": "War machine",
+      "base_size": "50 x 50 mm (war machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 100,
+      "profiles": [
+        {
+          "name": "Cannon",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": 7,
+            "W": 3,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Dwarf Crew",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 3,
+            "I": 2,
+            "A": 3,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Cannon, hand weapons and light armour"
+      ],
+      "options": [
+        {
+          "description": "May purchase Engineering runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "special_rules": [
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "skirmishers",
+        "stubborn"
+      ]
+    },
+    {
+      "id": "organ_gun",
+      "name": "Organ Gun",
+      "category": "war_machine",
+      "list_category": "rare",
+      "source": "forces_of_fantasy",
+      "troop_type": "War machine",
+      "base_size": "50 x 50 mm (war machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 120,
+      "profiles": [
+        {
+          "name": "Organ Gun",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Dwarf Crew",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 3,
+            "I": 2,
+            "A": 3,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Organ gun, hand weapons and light armour"
+      ],
+      "special_rules": [
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "skirmishers",
+        "stubborn"
+      ]
+    },
+    {
+      "id": "flame_cannon",
+      "name": "Flame Cannon",
+      "category": "war_machine",
+      "list_category": "rare",
+      "source": "forces_of_fantasy",
+      "troop_type": "War machine",
+      "base_size": "50 x 75 mm (war machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 125,
+      "profiles": [
+        {
+          "name": "Flame Cannon",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": 6,
+            "W": 3,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Dwarf Crew",
+          "profile": {
+            "M": 3,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 3,
+            "I": 2,
+            "A": 3,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Fire thrower, hand weapons and light armour"
+      ],
+      "special_rules": [
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "skirmishers",
+        "stubborn"
+      ]
+    }
+  ],
+  "runic_items": [
+    {
+      "id": "master_rune_of_smiting",
+      "name": "Master Rune of Smiting",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 75,
+      "description": "A weapon inscribed with the Master Rune of Smiting gains the Multiple Wounds (D6) special rule."
+    },
+    {
+      "id": "master_rune_of_skalf_blackhammer",
+      "name": "Master Rune of Skalf Blackhammer",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 65,
+      "description": "When making a roll To Wound with a weapon inscribed with the Master Rune of Skalf Blackhammer, a roll of 2+ is always a success, regardless of the target's Toughness."
+    },
+    {
+      "id": "master_rune_of_alaric_the_mad",
+      "name": "Master Rune of Alaric the Mad",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 45,
+      "description": "No armour save is permitted against wounds caused by a weapon inscribed with the Master Rune of Alaric the Mad (Ward and Regeneration saves can be attempted as normal)."
+    },
+    {
+      "id": "master_rune_of_dragon_slaying",
+      "name": "Master Rune of Dragon Slaying",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 35,
+      "description": "When making a roll To Wound against an enemy whose troop type is 'behemoth' with a weapon inscribed with the Master Rune of Dragon Slaying, a roll of 2+ is always a success, regardless of the target's Toughness."
+    },
+    {
+      "id": "master_rune_of_flight",
+      "name": "Master Rune of Flight",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "Hand weapon only. Once per turn, during the Shooting phase, a weapon inscribed with the Master Rune of Flight can be thrown with the following profile (which may be modified by additional runes): Range 12\", S: S, AP: -, Special Rules: Magical Attacks, Move & Shoot, Quick Shot."
+    },
+    {
+      "id": "master_rune_of_swiftness",
+      "name": "Master Rune of Swiftness",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "The wielder of a weapon inscribed with the Master Rune of Swiftness gains the Strike First special rule."
+    },
+    {
+      "id": "master_rune_of_breaking",
+      "name": "Master Rune of Breaking",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "Any magic weapon carried by an enemy model that suffers one or more unsaved wounds from a weapon inscribed with the Master Rune of Breaking is destroyed and cannot be used for the remainder of the game. Note that even if their magic weapon is destroyed, the model is still considered to be armed with a hand weapon."
+    },
+    {
+      "id": "rune_of_parrying",
+      "name": "Rune of Parrying",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 35,
+      "description": "Any enemy model that directs its attacks against a model wielding a weapon inscribed with a Rune of Parrying during the Combat phase suffers a -1 modifier to its rolls To Hit."
+    },
+    {
+      "id": "rune_of_banishment",
+      "name": "Rune of Banishment",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "Enemy models with the Warp-spawned special rule cannot make any Ward saves against hits caused by a weapon inscribed with the Rune of Banishment."
+    },
+    {
+      "id": "rune_of_fury",
+      "name": "Rune of Fury",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "For each Rune of Fury inscribed upon a weapon, its wielder has a +1 modifier to their Attacks characteristic."
+    },
+    {
+      "id": "grudge_rune",
+      "name": "Grudge Rune*",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 20,
+      "description": "Duplicable. For each Grudge Rune inscribed upon a weapon, its wielder may re-roll a single roll To Hit of a natural 1 made during the Combat phase."
+    },
+    {
+      "id": "rune_of_might",
+      "name": "Rune of Might*",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 20,
+      "description": "Duplicable. For each Rune of Might inscribed upon a weapon, its wielder has a +1 modifier to their Strength characteristic."
+    },
+    {
+      "id": "rune_of_cleaving",
+      "name": "Rune of Cleaving*",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 15,
+      "description": "Duplicable. Hand weapon only. For each Rune of Cleaving inscribed upon a weapon, its Armour Piercing characteristic is improved by 1."
+    },
+    {
+      "id": "rune_of_striking",
+      "name": "Rune of Striking*",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 15,
+      "description": "Duplicable. For each Rune of Striking inscribed upon a weapon, its wielder has a +1 modifier to their Weapon Skill characteristic."
+    },
+    {
+      "id": "rune_of_fire",
+      "name": "Rune of Fire",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 10,
+      "description": "The wielder of a weapon inscribed with a Rune of Fire gains the Flaming Attacks special rule."
+    },
+    {
+      "id": "rune_of_speed",
+      "name": "Rune of Speed*",
+      "category": "runic_weapon",
+      "source": "forces_of_fantasy",
+      "points": 5,
+      "description": "Duplicable. Hand weapon only. For each Rune of Speed inscribed upon a weapon, its wielder has a +1 modifier to their Initiative characteristic."
+    },
+    {
+      "id": "master_rune_of_adamant",
+      "name": "Master Rune of Adamant",
+      "category": "runic_armour",
+      "source": "forces_of_fantasy",
+      "points": 100,
+      "description": "A model wearing armour inscribed with the Master Rune of Adamant has a Toughness characteristic of 10. This rune cannot be combined with any other Armour runes."
+    },
+    {
+      "id": "master_rune_of_gromril",
+      "name": "Master Rune of Gromril",
+      "category": "runic_armour",
+      "source": "forces_of_fantasy",
+      "points": 45,
+      "description": "A model wearing armour inscribed with the Master Rune of Gromril has an armour value of 2+, which cannot be improved in any way."
+    },
+    {
+      "id": "rune_of_iron",
+      "name": "Rune of Iron",
+      "category": "runic_armour",
+      "source": "forces_of_fantasy",
+      "points": 35,
+      "description": "A model wearing armour inscribed with a Rune of Iron has +1 Wound on its profile."
+    },
+    {
+      "id": "rune_of_fortitude",
+      "name": "Rune of Fortitude*",
+      "category": "runic_armour",
+      "source": "forces_of_fantasy",
+      "points": 30,
+      "description": "Duplicable. For each Rune of Fortitude inscribed upon their armour, a model has a +1 modifier to its Toughness characteristic (to a maximum of 10)."
+    },
+    {
+      "id": "rune_of_preservation",
+      "name": "Rune of Preservation",
+      "category": "runic_armour",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "A model wearing armour inscribed with a Rune of Preservation is immune to both the Killing Blow and Multiple Wounds (X) special rules. If the wearer suffers an unsaved wound from an attack with either of these special rules, they lose a single Wound."
+    },
+    {
+      "id": "rune_of_shielding",
+      "name": "Rune of Shielding*",
+      "category": "runic_armour",
+      "source": "forces_of_fantasy",
+      "points": 15,
+      "description": "Duplicable. A model wearing armour inscribed with a single Rune of Shielding has a 6+ Ward save against any wounds suffered. For each additional Rune of Shielding, this Ward save is improved by 1."
+    },
+    {
+      "id": "rune_of_stone",
+      "name": "Rune of Stone*",
+      "category": "runic_armour",
+      "source": "forces_of_fantasy",
+      "points": 5,
+      "description": "Duplicable. Single use. For each Rune of Stone inscribed upon their armour, a model may re-roll a single failed Armour Save roll."
+    },
+    {
+      "id": "master_rune_of_calm",
+      "name": "Master Rune of Calm",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 50,
+      "description": "Anvil of Doom and Dwarf Runesmiths only. The bearer of the Master Rune of Calm can cast the following Bound spell with a Power Level of 2 — Type: Hex, Casting Value: 8+/11+, Range: Self, Effect: if cast with result 8+ enemy Wizards within 18\" must increase their spells' casting value by 2; if cast with result 11+ enemy Wizards within 36\" must increase their spells' casting value by 2. This spell lasts until your next Start of Turn sub-phase."
+    },
+    {
+      "id": "master_rune_of_balance",
+      "name": "Master Rune of Balance",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 35,
+      "description": "Anvil of Doom and Dwarf Runesmiths only. Once per turn, the bearer of the Master Rune of Balance may use it when attempting a Wizardly Dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result."
+    },
+    {
+      "id": "master_rune_of_spite",
+      "name": "Master Rune of Spite",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 35,
+      "description": "Each time the bearer of the Master Rune of Spite loses a Wound to an enemy attack during the Combat phase, the unit that made the attack suffers a Strength 5 hit with an AP of -2."
+    },
+    {
+      "id": "rune_of_spellbreaking",
+      "name": "Rune of Spellbreaking*",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "Duplicable. Anvil of Doom and Dwarf Runesmiths only. Single use. The bearer of a Rune of Spellbreaking may use it instead of making a Dispel attempt. If they do so, the spell is automatically dispelled with no Dispel roll required."
+    },
+    {
+      "id": "rune_of_warding",
+      "name": "Rune of Warding*",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 20,
+      "description": "Duplicable. Single use. Each Rune of Warding gives its bearer a 2+ Ward save against a single wound."
+    },
+    {
+      "id": "rune_of_luck",
+      "name": "Rune of Luck*",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 15,
+      "description": "Duplicable. Single use. The bearer of a Rune of Luck may use it to re-roll a single failed roll To Hit or To Wound, or to re-roll a single failed Armour Save roll."
+    },
+    {
+      "id": "rune_of_the_furnace",
+      "name": "Rune of the Furnace",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 5,
+      "description": "The bearer of a Rune of the Furnace has a 3+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule."
+    },
+    {
+      "id": "rune_of_passage",
+      "name": "Rune of Passage",
+      "category": "runic_talisman",
+      "source": "forces_of_fantasy",
+      "points": 5,
+      "description": "The bearer of a Rune of Passage gains the Move through Cover special rule. Any unit joined by the bearer also gains the Move through Cover special rule. Should the bearer leave the unit for any reason, the unit loses this special rule."
+    },
+    {
+      "id": "master_rune_of_grungni",
+      "name": "Master Rune of Grungni",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 80,
+      "description": "Battle Standard Bearer only. A unit carrying a standard inscribed with the Master Rune of Grungni has a 5+ Ward save against any wounds suffered. In addition, whilst within 6\" of the model carrying this standard, friendly units have a 6+ Ward save against any wounds suffered during the Shooting phase."
+    },
+    {
+      "id": "master_rune_of_stromni_redbeard",
+      "name": "Master Rune of Stromni Redbeard",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 75,
+      "description": "When calculating its combat result, any unit carrying a standard inscribed with the Master Rune of Stromni Redbeard that is within the Command range of the model carrying the standard may claim an additional bonus of +1 combat result point."
+    },
+    {
+      "id": "master_rune_of_hesitation",
+      "name": "Master Rune of Hesitation",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 45,
+      "description": "An enemy unit that charges the front arc of a unit carrying a standard inscribed with the Rune of Hesitation does not count as having charged for the purposes of choosing which weapon to use or using any special rules it may have. Note that the unit carrying this rune still counts as having been charged."
+    },
+    {
+      "id": "rune_of_confusion",
+      "name": "Rune of Confusion",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 35,
+      "description": "Any enemy unit that charges the front arc of a unit carrying a standard inscribed with the Rune of Confusion makes a disordered charge."
+    },
+    {
+      "id": "rune_of_fear",
+      "name": "Rune of Fear",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 30,
+      "description": "A unit carrying a standard inscribed with the Rune of Fear gains the Fear special rule."
+    },
+    {
+      "id": "rune_of_battle",
+      "name": "Rune of Battle",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "When calculating its combat result, a unit carrying a standard inscribed with a Rune of Battle may claim an additional bonus of +1 combat result point."
+    },
+    {
+      "id": "strollaz_rune",
+      "name": "Strollaz' Rune",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "A unit carrying a standard inscribed with Strollaz' Rune gains the Vanguard special rule."
+    },
+    {
+      "id": "rune_of_courage",
+      "name": "Rune of Courage",
+      "category": "runic_standard",
+      "source": "forces_of_fantasy",
+      "points": 15,
+      "description": "A unit carrying a standard inscribed with the Rune of Courage automatically passes any Fear or Terror tests it is required to make."
+    },
+    {
+      "id": "master_rune_of_immolation",
+      "name": "Master Rune of Immolation",
+      "category": "runic_engineering",
+      "source": "forces_of_fantasy",
+      "points": 30,
+      "description": "Cannon only. Single use. If a cannon inscribed with the Master Rune of Immolation loses its last Wound to an enemy attack during the Combat phase, it may be exploded by its crew. Every enemy unit in base contact with this model suffers D6 Strength 5 hits with an AP of -2. The cannon is then removed from play as a casualty."
+    },
+    {
+      "id": "master_rune_of_disguise",
+      "name": "Master Rune of Disguise",
+      "category": "runic_engineering",
+      "source": "forces_of_fantasy",
+      "points": 25,
+      "description": "A war machine inscribed with the Master Rune of Disguise is always considered to be behind full cover."
+    },
+    {
+      "id": "rune_of_skewering",
+      "name": "Rune of Skewering",
+      "category": "runic_engineering",
+      "source": "forces_of_fantasy",
+      "points": 20,
+      "description": "Bolt throwers only. A bolt thrower inscribed with this rune has a +1 modifier to its Strength characteristic. In addition, no armour save is permitted against wounds caused by a bolt thrower inscribed with a Rune of Skewering (Ward and Regeneration saves can be attempted as normal)."
+    },
+    {
+      "id": "rune_of_forging",
+      "name": "Rune of Forging*",
+      "category": "runic_engineering",
+      "source": "forces_of_fantasy",
+      "points": 15,
+      "description": "Duplicable. Single use. A war machine inscribed with a Rune of Forging may use it to re-roll a single misfire on the Artillery dice."
+    },
+    {
+      "id": "rune_of_burning",
+      "name": "Rune of Burning",
+      "category": "runic_engineering",
+      "source": "forces_of_fantasy",
+      "points": 10,
+      "description": "A war machine inscribed with a Rune of Burning gains the Flaming Attacks special rule."
+    },
+    {
+      "id": "rune_of_reloading",
+      "name": "Rune of Reloading",
+      "category": "runic_engineering",
+      "source": "forces_of_fantasy",
+      "points": 5,
+      "description": "A war machine inscribed with a Rune of Reloading can shoot every turn, even if it misfired and malfunctioned during its previous turn."
+    },
+    {
+      "id": "stalwart_rune",
+      "name": "Stalwart Rune",
+      "category": "runic_engineering",
+      "source": "forces_of_fantasy",
+      "points": 5,
+      "description": "When calculating its combat result, a war machine inscribed with a Stalwart Rune may claim a bonus of +1 combat result point."
+    }
+  ],
+  "magic_items": [
+    {
+      "id": "dragonblade",
+      "name": "Dragonblade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
+      "weapon_profile": {
+        "name": "Dragonblade",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "burning-blade",
+      "name": "Burning Blade*",
+      "points": 5,
+      "category": "magic_weapon",
+      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "biting-blade",
+      "name": "Biting Blade",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
+    },
+    {
+      "id": "sword-of-striking",
+      "name": "Sword of Striking*",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
+    },
+    {
+      "id": "berserker-blade",
+      "name": "Berserker Blade",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+    },
+    {
+      "id": "sword-of-might",
+      "name": "Sword of Might*",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "sword-of-swiftness",
+      "name": "Sword of Swiftness",
+      "points": 25,
+      "category": "magic_weapon",
+      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
+    },
+    {
+      "id": "giant-blade",
+      "name": "Giant Blade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
+      "restrictions": "Giant Blade(Magic Weapon)30 pointsA broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.RangeStrengthArmour Pierc"
+    },
+    {
+      "id": "hell-forged-axe",
+      "name": "Hell-forged Axe",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
+    },
+    {
+      "id": "sword-of-sorrow",
+      "name": "Sword of Sorrow",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
+      "restrictions": "Sword of Sorrow(Magic Weapon)30 pointsThough it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.RangeSt"
+    },
+    {
+      "id": "spelleater-axe",
+      "name": "Spelleater Axe",
+      "points": 35,
+      "category": "magic_weapon",
+      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
+    },
+    {
+      "id": "headsmans-axe",
+      "name": "Headsman's Axe",
+      "points": 45,
+      "category": "magic_weapon",
+      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
+    },
+    {
+      "id": "dragon-slaying-sword",
+      "name": "Dragon Slaying Sword",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
+    },
+    {
+      "id": "meteor-hammer",
+      "name": "Meteor Hammer",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
+    },
+    {
+      "id": "duellists-blades",
+      "name": "Duellist's Blades",
+      "points": 55,
+      "category": "magic_weapon",
+      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
+    },
+    {
+      "id": "sword-of-battle",
+      "name": "Sword of Battle",
+      "points": 60,
+      "category": "magic_weapon",
+      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
+    },
+    {
+      "id": "cackling-blade",
+      "name": "Cackling Blade",
+      "points": 65,
+      "category": "magic_weapon",
+      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
+    },
+    {
+      "id": "ogre-blade",
+      "name": "Ogre Blade",
+      "points": 75,
+      "category": "magic_weapon",
+      "description": "Magic weapons grant the wielder extra abilities, new special rules or an improved profile, the better to slay enemies. Unless otherwise stated, the following rules apply to all magic weapons:\nA magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.\nA character that wields a magic weapon cannot set it aside to use a mundane equivalent. For example, a character cannot set aside a magic combat weapon to use a mundane great weapon instead.",
+      "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
+    },
+    {
+      "id": "charmed-shield",
+      "name": "Charmed Shield*",
+      "points": 5,
+      "category": "magic_armour",
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
+    },
+    {
+      "id": "enchanted-shield",
+      "name": "Enchanted Shield*",
+      "points": 10,
+      "category": "magic_armour",
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
+    },
+    {
+      "id": "armour-of-meteoric-iron",
+      "name": "Armour of Meteoric Iron",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
+      "restrictions": "Armour of Meteoric Iron(Magic Armour)20 pointsThis heavy armour was forged of ore mined from a meteor that fell from the heavens.The Armour of Meteoric Iron gives its wearer an armour value of 5+, whi"
+    },
+    {
+      "id": "trailblazers-hauberk",
+      "name": "Trailblazer's Hauberk",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
+      "restrictions": "Trailblazer's Hauberk(Magic Armour)20 pointsThe local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.Models whose troop type is infantry only. The"
+    },
+    {
+      "id": "levitating-shield",
+      "name": "Levitating Shield",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
+      "restrictions": "Levitating Shield(Magic Armour)25 pointsBorn aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.Models whose troop type is infantry only."
+    },
+    {
+      "id": "spellshield",
+      "name": "Spellshield*",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
+    },
+    {
+      "id": "shield-of-the-warrior-true",
+      "name": "Shield of the Warrior True",
+      "points": 30,
+      "category": "magic_armour",
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
+    },
+    {
+      "id": "glittering-scales",
+      "name": "Glittering Scales",
+      "points": 35,
+      "category": "magic_armour",
+      "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
+    },
+    {
+      "id": "armour-of-silvered-steel",
+      "name": "Armour of Silvered Steel",
+      "points": 40,
+      "category": "magic_armour",
+      "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
+      "restrictions": "Armour of Silvered Steel(Magic Armour)40 pointsPolished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.The Armour of Silvered Steel is a suit of armour that gives"
+    },
+    {
+      "id": "bedazzling-helm",
+      "name": "Bedazzling Helm",
+      "points": 60,
+      "category": "magic_armour",
+      "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
+      "restrictions": "Bedazzling Helm(Magic Armour)60 pointsA gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.Models whose troop type is infantry or cavalry only. May be wo"
+    },
+    {
+      "id": "armour-of-destiny",
+      "name": "Armour of Destiny",
+      "points": 70,
+      "category": "magic_armour",
+      "description": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can only carry one shield, and a mount can only wear a single suit of barding. Therefore, magic armour replaces any mundane equivalent the model is, or may be, equipped with.",
+      "restrictions": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can onl"
+    },
+    {
+      "id": "luckstone",
+      "name": "Luckstone*",
+      "points": 15,
+      "category": "talisman",
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common"
+    },
+    {
+      "id": "obsidian-lodestone",
+      "name": "Obsidian Lodestone*",
+      "points": 20,
+      "category": "talisman",
+      "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.\nA model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
+    },
+    {
+      "id": "paymasters-coin",
+      "name": "Paymaster's Coin*",
+      "points": 25,
+      "category": "talisman",
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common"
+    },
+    {
+      "id": "ironhide-talisman",
+      "name": "Ironhide Talisman",
+      "points": 30,
+      "category": "talisman",
+      "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.\nModels whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6.Note that this magic item does not work against attacks that hit automatically.",
+      "restrictions": "Ironhide Talisman(Talisman)30 pointsIt is said that the one who bears this powerful heirloom can endure even the most telling blows.Models whose troop type is infantry only. Any enemy model that makes"
+    },
+    {
+      "id": "talisman-of-protection",
+      "name": "Talisman of Protection",
+      "points": 30,
+      "category": "talisman",
+      "description": "A powerful magical aura surrounds this humble talisman, protecting its wearer from harm.\nThe Talisman of Protection gives its bearer a 5+ Ward save against any wounds suffered."
+    },
+    {
+      "id": "dawnstone",
+      "name": "Dawnstone",
+      "points": 35,
+      "category": "talisman",
+      "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical.\nThe magic trapped within this semi-precious stone binds together shattered armour plates.\nThe bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
+      "restrictions": "Dawnstone(Talisman)35 pointsThe magic trapped within this semi-precious stone binds together shattered armour plates.The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.Icon of"
+    },
+    {
+      "id": "icon-of-fortitude",
+      "name": "Icon of Fortitude",
+      "points": 35,
+      "category": "talisman",
+      "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.\nModels whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": "Icon of Fortitude(Talisman)35 pointsCarefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.Models whose troop type is infantry or cav"
+    },
+    {
+      "id": "potion-of-foolhardiness",
+      "name": "Potion of Foolhardiness*",
+      "points": 5,
+      "category": "enchanted_item",
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+    },
+    {
+      "id": "potion-of-speed",
+      "name": "Potion of Speed*",
+      "points": 10,
+      "category": "enchanted_item",
+      "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Speed*(Enchanted Item)10 pointsA powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "becalming-orb",
+      "name": "Becalming Orb",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+    },
+    {
+      "id": "potion-of-toughness",
+      "name": "Potion of Toughness*",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Toughness*(Enchanted Item)20 pointsDistilled by magical means, this potion is sure to make the drinker all but invulnerable.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "potion-of-strength",
+      "name": "Potion of Strength*",
+      "points": 25,
+      "category": "enchanted_item",
+      "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Strength*(Enchanted Item)25 pointsA concoction of strength-giving vegetables and roots, mixed together with a touch of magic.Single use. During the Command sub-phase of their turn, the beare"
+    },
+    {
+      "id": "potion-of-fervour",
+      "name": "Potion of Fervour",
+      "points": 30,
+      "category": "enchanted_item",
+      "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
+      "restrictions": "Potion of Fervour(Enchanted Item)30 pointsThis noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.Single Use. During the Command sub-phase of their turn, the bea"
+    },
+    {
+      "id": "healing-potion",
+      "name": "Healing Potion*",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+    },
+    {
+      "id": "ruby-ring-of-ruin",
+      "name": "Ruby Ring of Ruin",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.\nThe wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+    },
+    {
+      "id": "arch-lightning-rod",
+      "name": "Arch-Lightning Rod",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
+      "restrictions": "Arch-Lightning Rod(Enchanted Item)40 pointsCrackling lightning fills the heavens with peril, grounding the creatures of the sky.Single use. During the Command sub-phase of their turn, if they are not"
+    },
+    {
+      "id": "flying-carpet",
+      "name": "Flying Carpet",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!\nModels whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
+      "restrictions": "Flying Carpet(Enchanted Item)40 pointsWoven from the finest silks in a far-off land, this splendid rug does more than warm the feet!Models whose troop type is regular infantry or heavy infantry only."
+    },
+    {
+      "id": "wizarding-hat",
+      "name": "Wizarding Hat",
+      "points": 45,
+      "category": "enchanted_item",
+      "description": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a character might possess.\nNote that a model can only consume a single potion (of any type) per Command phase.\nThis splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
+      "restrictions": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a cha"
+    },
+    {
+      "id": "earthing-rod",
+      "name": "Earthing Rod",
+      "points": 5,
+      "category": "arcane_item",
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+    },
+    {
+      "id": "arcane-familiar",
+      "name": "Arcane Familiar",
+      "points": 15,
+      "category": "arcane_item",
+      "description": "Many Wizards are accompanied by familiars gifted with arcane knowledge. These creatures constantly whisper secrets to their master."
+    },
+    {
+      "id": "dispel-scroll",
+      "name": "Dispel Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+    },
+    {
+      "id": "power-scroll",
+      "name": "Power Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+    },
+    {
+      "id": "lore-familiar",
+      "name": "Lore Familiar",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "By creating a magical homunculus, a Wizard is able to better recall forgotten details of their studies.\nThe owner of a Lore Familiar does not randomly generate their spells. Instead, they may choose which spells they know from their chosen lore (including that lore's signature spell)."
+    },
+    {
+      "id": "scroll-of-disruption",
+      "name": "Scroll of Disruption",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.\nOnce per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "tome-of-spellcraft",
+      "name": "Tome of Spellcraft",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.\nOnce per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "staff-of-quietude",
+      "name": "Staff of Quietude",
+      "points": 35,
+      "category": "arcane_item",
+      "description": "With a gesture, the bearer of the Staff of Quietude calms the Winds of Magic, causing spells and conjurations to dissipate into the other."
+    },
+    {
+      "id": "wand-of-jet",
+      "name": "Wand of Jet",
+      "points": 45,
+      "category": "arcane_item",
+      "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
+      "restrictions": "Wand of Jet(Arcane Item)45 pointsCarved from brittle jet, this wand refines a Wizard's power, but is easily broken.The bearer of the Wand of Jet may apply a +1 modifier to any of their Casting or Disp"
+    },
+    {
+      "id": "scroll-of-transmogrification",
+      "name": "Scroll of Transmogrification*",
+      "points": 50,
+      "category": "arcane_item",
+      "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
+      "restrictions": "Scroll of Transmogrification*(Arcane Item)50 pointsFor a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!Single use. The bearer may use this scroll inste"
+    },
+    {
+      "id": "feedback-scroll",
+      "name": "Feedback Scroll",
+      "points": 60,
+      "category": "arcane_item",
+      "description": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items.\nWhen read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "restrictions": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items."
+    },
+    {
+      "id": "monster-hunters-tapestry",
+      "name": "Monster Hunter's Tapestry",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "Those who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.\nEnemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry.",
+      "restrictions": "Monster Hunter's Tapestry(Magic Standard)25 pointsThose who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.Ene"
+    },
+    {
+      "id": "the-blazing-banner",
+      "name": "The Blazing Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.\nA unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
+      "restrictions": "The Blazing Banner(Magic Standard)25 pointsAn eternal flame flickers about the weapons of those that march beneath the Blazing Banner.A unit carrying the Blazing Banner gains the Flaming Attacks speci"
+    },
+    {
+      "id": "war-banner",
+      "name": "War Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "A proud banner of great age. Those that march beneath the War Banner fight with grim resolve.\nWhen calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point.",
+      "restrictions": "War Banner(Magic Standard)25 pointsA proud banner of great age. Those that march beneath the War Banner fight with grim resolve.When calculating its combat result, a unit carrying the War Banner may c"
+    },
+    {
+      "id": "banner-of-swirling-wind",
+      "name": "Banner of Swirling Wind",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.\nAny enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
+      "restrictions": "Banner of Swirling Wind(Magic Standard)30 pointsGale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.Any enemy model that shoots at"
+    },
+    {
+      "id": "rampaging-banner",
+      "name": "Rampaging Banner",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "As a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.\nWhen a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll.",
+      "restrictions": "Rampaging Banner(Magic Standard)30 pointsAs a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.When a unit carrying the Rampaging Banner declares a charge"
+    },
+    {
+      "id": "razor-standard",
+      "name": "Razor Standard",
+      "points": 40,
+      "category": "magic_standard",
+      "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.\nA unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
+      "restrictions": "Razor Standard(Magic Standard)40 pointsHung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.A unit carrying the Razor Standard gains the Armour Ba"
+    },
+    {
+      "id": "banner-of-iron-resolve",
+      "name": "Banner of Iron Resolve",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer.\nNo regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.\nA unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
+      "restrictions": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer."
+    },
+    {
+      "id": "banner-of-the-steadfast",
+      "name": "Banner of the Steadfast",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Woven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold their ground no matter the odds.",
+      "restrictions": "Banner of the Steadfast(Magic Standard)50 pointsWoven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold t"
+    },
+    {
+      "id": "totem-of-wrath",
+      "name": "Totem of Wrath",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.\nDuring a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
+      "restrictions": "Totem of Wrath(Magic Standard)50 pointsCruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.During a turn in which it char"
+    }
+  ],
+  "knightly_virtues": [],
+  "chivalrous_vows": [],
+  "lore_of_the_lady": []
+}

@@ -1,0 +1,4499 @@
+{
+  "id": "warriors-of-chaos",
+  "name": "Warriors of Chaos",
+  "sources": [
+    "Warhammer: The Old World — Ravening Hordes (2024)",
+    "Arcane Journal: Warriors of Chaos"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army",
+      "name": "Warriors of Chaos — Grand Army",
+      "source": "ravening_hordes",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Chaos Lord or Daemon Prince; 0-1 Exalted Champion or Sorcerer Lord per 1,000 points; Aspiring Champions and Exalted Sorcerers as desired"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Chaos Warriors, Chaos Marauders, Forsaken, Chaos Knights, Marauder Horsemen and Chaos Warhounds"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 unit of Chosen Chaos Warriors; 0-1 unit of Chosen Chaos Knights; Chaos Ogres, Chaos Trolls, Chaos Spawn, Chaos Chariots and Chimeras; Dragon Ogres (see Beastmen Brayherds army list)"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "chosen_chaos_warriors"
+          ],
+          "notes": "0-1 unit of Chosen Chaos Warriors"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "chosen_chaos_knights"
+          ],
+          "notes": "0-1 unit of Chosen Chaos Knights"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Gorebeast Chariots; 0-1 Hellcannon per 1,000 points; 0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres (see Beastmen Brayherds army list); 0-1 Chaos Giant per 1,000 points (see Beastmen Brayherds army list); 0-1 Warpfire Dragon"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "hellcannon"
+          ],
+          "notes": "0-1 Hellcannon per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "warpfire_dragon"
+          ],
+          "notes": "0-1 Warpfire Dragon as Rare choice (see Arcane Journal)"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20
+        },
+        {
+          "category": "allies",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Any Warriors of Chaos Army of Infamy composition list; or one of: Orc & Goblin Tribes (Uneasy), Beastmen Brayherds, Tomb Kings of Khemri (Suspicious)"
+        }
+      ],
+      "battle_standard_bearer": {
+        "eligible_units": [
+          "exalted_champion",
+          "aspiring_champion"
+        ],
+        "upgrade_cost": 25,
+        "notes": "A single Exalted Champion or Aspiring Champion may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit."
+      }
+    },
+    {
+      "id": "wolves_of_the_sea",
+      "name": "Warriors of Chaos — Wolves of the Sea",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Chaos Lord, Daemon Prince or Sorcerer Lord; 0-1 Exalted Champion or Exalted Sorcerer per 1,000 points; Aspiring Champions and Marauder Tribe Chieftains as desired"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Chaos Marauders, Marauder Horsemen, Marauder Tribe Berserkers and Chaos Warhounds"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Chaos Warriors, Chaos Chariots, Skin Wolves, Marauder Tribe Huscarls and Chaos Spawn"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 33,
+          "notes": "Chaos Ogres, Chaos Trolls and Dragon Ogres (see Ravening Hordes); 0-1 Gigantic Spawn of Chaos per 1,000 points; 0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres; 0-1 Chaos Giant per 1,000 points (see Ravening Hordes)"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "gigantic_spawn_of_chaos"
+          ],
+          "notes": "0-1 Gigantic Spawn of Chaos per 1,000 points"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Gor Herds and Ungor Herds (see Ravening Hordes). Mercenary units are subject to the Misbehaving Mercenaries rules."
+        }
+      ],
+      "army_special_rules": [
+        {
+          "id": "favour_of_the_gods",
+          "name": "Favour of the Gods",
+          "description": "If a character within a Wolves of the Sea army kills their opponent in a challenge, they must immediately roll on the Gaze of the Gods table. Additionally, should a unit within a Wolves of the Sea army claim the standard of an enemy unit as a trophy of war, that unit may immediately make a roll on the Gaze of the Gods table (changing references from 'this model' to 'this unit')."
+        },
+        {
+          "id": "sea_born_raiders",
+          "name": "Sea-Born Raiders",
+          "description": "Units of Chaos Marauders and Marauder Horsemen within a Wolves of the Sea army may have the Ambushers special rule for +1 point per model. Aspiring Champions whose troop type is 'infantry' or 'cavalry' within a Wolves of the Sea army may have the Ambushers special rule for +10 points per model."
+        },
+        {
+          "id": "warriors_duel",
+          "name": "Warriors' Duel",
+          "description": "Instead of rolling off to determine which player takes the first turn, you may challenge your opponent to a Warrior's Duel. If your opponent accepts, both players choose a single unit champion with a Wounds characteristic of 1 whose troop type is 'infantry' or 'cavalry' from within their army. The chosen combatants fight as if engaged in a challenge. Once a victor has been determined, that model's controlling player takes the first turn. If the challenge is declined, the Wolves of the Sea army counts as having won the roll-off to determine which player takes the first turn."
+        }
+      ],
+      "battle_standard_bearer": {
+        "eligible_units": [
+          "aspiring_champion",
+          "marauder_tribe_chieftain"
+        ],
+        "upgrade_cost": 25,
+        "notes": "A single Aspiring Champion or Marauder Tribe Chieftain may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit."
+      }
+    },
+    {
+      "id": "heralds_of_darkness",
+      "name": "Warriors of Chaos — Heralds of Darkness",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Chaos Lord or Daemon Prince; 0-1 Exalted Champion or Sorcerer Lord per 1,000 points; Aspiring Champions and Exalted Sorcerers as desired"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 33,
+          "notes": "1+ unit of Chaos Knights; Marauder Horsemen and Chaos Warhounds; 0-1 Chaos Chariot may be taken as a Core choice"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "chaos_knights"
+          ],
+          "notes": "Must include at least 1 unit of Chaos Knights"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 unit of Chosen Chaos Knights; 0-1 Chosen Chaos Chariot per 1,000 points; Chaos Spawn, Chaos Chariots and Chimeras; Dragon Ogres (see Ravening Hordes)"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "chosen_chaos_knights"
+          ],
+          "notes": "0-1 unit of Chosen Chaos Knights"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "chosen_chaos_chariot"
+          ],
+          "notes": "0-1 Chosen Chaos Chariot per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Gorebeast Chariots; 0-1 Dragon Ogre Shaggoth per unit of Dragon Ogres; 0-1 Gigantic Spawn of Chaos per 1,000 points; 0-1 Chaos Giant per 1,000 points (see Ravening Hordes); 0-1 Warpfire Dragon"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "gigantic_spawn_of_chaos"
+          ],
+          "notes": "0-1 Gigantic Spawn of Chaos per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "warpfire_dragon"
+          ],
+          "notes": "0-1 Warpfire Dragon"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Centigor Chieftains and Centigor Herds (see Ravening Hordes). Mercenary units are subject to the Misbehaving Mercenaries rules."
+        }
+      ],
+      "army_special_rules": [
+        {
+          "id": "mounted_host",
+          "name": "Mounted Host",
+          "description": "All characters within a Heralds of Darkness army must be mounted or have the Fly (X) special rule."
+        },
+        {
+          "id": "steeds_of_darkness",
+          "name": "Steeds of Darkness",
+          "description": "When a unit in this army whose troop type is 'cavalry' or 'chariot' makes a Charge, Flee or Pursuit roll, it may re-roll any dice that roll a natural 1, before discarding any dice that are required to be discarded."
+        },
+        {
+          "id": "the_shadow_grows",
+          "name": "The Shadow Grows",
+          "description": "For each character your army includes that has a Mark of Chaos other than the Mark of Chaos Undivided, it must also include a non-character unit with the same Mark of Chaos, and vice versa."
+        }
+      ],
+      "battle_standard_bearer": {
+        "eligible_units": [
+          "exalted_champion",
+          "aspiring_champion"
+        ],
+        "upgrade_cost": 25,
+        "notes": "A single Exalted Champion or Aspiring Champion may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit."
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "chaos_lord",
+      "name": "Chaos Lord",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry (character)",
+      "points": 195,
+      "stats": {
+        "M": "4",
+        "WS": "7",
+        "BS": "3",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "I": "6",
+        "A": "5",
+        "Ld": "9"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Full plate armour"
+      ],
+      "special_rules": [
+        "chaos_armour_5",
+        "ensorcelled_weapons",
+        "gaze_of_the_gods",
+        "mark_of_chaos_undivided",
+        "rallying_cry"
+      ],
+      "options": [
+        {
+          "description": "May take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapon",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Flail",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Great weapon",
+              "points": 4,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Halberd",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Lance (if appropriately mounted)",
+              "points": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Shield",
+          "points": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "May be mounted",
+          "points": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Gifts of Chaos",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "May take Gifts of Chaos up to a total of 50 points"
+        },
+        {
+          "name": "Magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "notes": "A Chaos Lord may purchase magic items up to a total of 100 points"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exalted_champion",
+      "name": "Exalted Champion",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry (character)",
+      "points": 125,
+      "stats": {
+        "M": "4",
+        "WS": "6",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "I": "5",
+        "A": "4",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "chaos_armour_5",
+        "ensorcelled_weapons",
+        "gaze_of_the_gods",
+        "mark_of_chaos_undivided",
+        "rallying_cry"
+      ],
+      "options": [
+        {
+          "description": "May take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapon",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Flail",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Great weapon",
+              "points": 4,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Halberd",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Lance (if appropriately mounted)",
+              "points": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Shield",
+          "points": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "May be mounted",
+          "points": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Gifts of Chaos",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "May take Gifts of Chaos up to a total of 50 points"
+        },
+        {
+          "name": "Magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 75,
+          "notes": "An Exalted Champion may purchase magic items up to a total of 75 points"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aspiring_champion",
+      "name": "Aspiring Champion",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry (character)",
+      "points": 70,
+      "stats": {
+        "M": "4",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "I": "4",
+        "A": "3",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "chaos_armour_5",
+        "ensorcelled_weapons",
+        "gaze_of_the_gods",
+        "mark_of_chaos_undivided",
+        "rallying_cry"
+      ],
+      "options": [
+        {
+          "description": "May take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapon",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Flail",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Great weapon",
+              "points": 4,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Halberd",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Lance (if appropriately mounted)",
+              "points": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Shield",
+          "points": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "May be mounted",
+          "points": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Gifts of Chaos",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "May take Gifts of Chaos up to a total of 50 points"
+        },
+        {
+          "name": "Magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "An Aspiring Champion may purchase magic items up to a total of 50 points"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daemon_prince",
+      "name": "Daemon Prince",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "50 x 50 mm",
+      "troop_type": "Monstrous infantry (character)",
+      "points": 215,
+      "stats": {
+        "M": "6",
+        "WS": "7",
+        "BS": "5",
+        "S": "6",
+        "T": "5",
+        "W": "4",
+        "I": "7",
+        "A": "5",
+        "Ld": "9"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "magic": {
+        "notes": "A Daemon Prince may be a Wizard. A Daemon Prince that is a Wizard knows spells from one of the following Lores of Magic: Battle Magic, Daemonology, Dark Magic.",
+        "lores": [
+          "battle_magic",
+          "daemonology",
+          "dark_magic"
+        ]
+      },
+      "special_rules": [
+        "chaos_armour_4",
+        "ensorcelled_weapons",
+        "fear",
+        "gaze_of_the_gods",
+        "immune_to_psychology",
+        "lore_of_chaos",
+        "mark_of_chaos_undivided",
+        "regeneration_5",
+        "unbreakable",
+        "unstable",
+        "warp_spawned"
+      ],
+      "options": [
+        {
+          "name": "Replace light armour with heavy armour",
+          "points": 6,
+          "scope": "per_unit"
+        },
+        {
+          "name": "May have the Fly (9) special rule",
+          "points": 30,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Unless it has the Mark of Khorne, a Daemon Prince may be a Wizard",
+          "choices": [
+            {
+              "name": "Wizard Level 1",
+              "points": 25,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Wizard Level 2",
+              "points": 50,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Wizard Level 3",
+              "points": 75,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Wizard Level 4",
+              "points": 100,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Gifts of Chaos",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "May take Gifts of Chaos up to a total of 50 points"
+        },
+        {
+          "name": "Magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "notes": "May purchase magic items up to a total of 100 points"
+        }
+      ]
+    },
+    {
+      "id": "sorcerer_lord",
+      "name": "Sorcerer Lord",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry (character)",
+      "points": 195,
+      "stats": {
+        "M": "4",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "I": "4",
+        "A": "3",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour"
+      ],
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "battle_magic",
+          "daemonology",
+          "dark_magic"
+        ]
+      },
+      "special_rules": [
+        "chaos_armour_5",
+        "ensorcelled_weapons",
+        "gaze_of_the_gods",
+        "lore_of_chaos",
+        "mark_of_chaos_undivided"
+      ],
+      "options": [
+        {
+          "name": "May be mounted",
+          "points": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Gifts of Chaos",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "May take Gifts of Chaos up to a total of 50 points"
+        },
+        {
+          "description": "A Sorcerer Lord may",
+          "choices": [
+            {
+              "name": "Be a Level 4 Wizard",
+              "points": 30,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "notes": "A Sorcerer Lord may purchase magic items up to a total of 100 points"
+        }
+      ]
+    },
+    {
+      "id": "exalted_sorcerer",
+      "name": "Exalted Sorcerer",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry (character)",
+      "points": 90,
+      "stats": {
+        "M": "4",
+        "WS": "4",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "I": "3",
+        "A": "2",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "daemonology",
+          "dark_magic"
+        ]
+      },
+      "special_rules": [
+        "chaos_armour_5",
+        "ensorcelled_weapons",
+        "gaze_of_the_gods",
+        "lore_of_chaos",
+        "mark_of_chaos_undivided"
+      ],
+      "options": [
+        {
+          "name": "May be mounted",
+          "points": 0,
+          "scope": "per_unit",
+          "notes": "See character mounts page"
+        },
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Gifts of Chaos",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "May take Gifts of Chaos up to a total of 50 points"
+        },
+        {
+          "description": "An Exalted Sorcerer may",
+          "choices": [
+            {
+              "name": "Be a Level 2 Wizard",
+              "points": 30,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "notes": "An Exalted Sorcerer may purchase magic items up to a total of 50 points"
+        }
+      ]
+    },
+    {
+      "id": "chaos_warhound_handler",
+      "name": "Chaos Warhound Handler",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Regular infantry (character)",
+      "points": 15,
+      "notes": [
+        "A Chaos Warhound Handler is a special upgrade character taken as +15 points per unit of Chaos Warhounds. Must be positioned with its unit of Chaos Warhounds during deployment. Cannot leave its unit. Friendly units of Chaos Warhounds within Command range may use this model's Leadership instead of their own."
+      ],
+      "stats": {
+        "M": "5",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "handler",
+        "loner",
+        "mark_of_chaos_undivided",
+        "move_through_cover",
+        "vanguard"
+      ],
+      "options": [
+        {
+          "description": "May take one of the following",
+          "choices": [
+            {
+              "name": "Additional hand weapon",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Whip",
+              "points": 0,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marauder_tribe_chieftain",
+      "name": "Marauder Tribe Chieftain",
+      "source": "arcane_journal",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "25 x 25 mm",
+      "troop_type": "Regular infantry (character)",
+      "points": 65,
+      "stats": {
+        "M": "4",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "I": "4",
+        "A": "3",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "special_rules": [
+        "ambushers",
+        "chaos_armour_6",
+        "gaze_of_the_gods",
+        "mark_of_chaos_undivided",
+        "rallying_cry",
+        "warband"
+      ],
+      "options": [
+        {
+          "description": "May take one of the following weapons",
+          "choices": [
+            {
+              "name": "Flail",
+              "points": 3,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Great weapon",
+              "points": 4,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Cavalry spear (if appropriately mounted)",
+              "points": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "May take one of the following ranged weapons",
+          "choices": [
+            {
+              "name": "Throwing axes",
+              "points": 2,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Javelins",
+              "points": 2,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Shield",
+          "points": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount on a Warhorse",
+          "points": 14,
+          "scope": "per_unit"
+        },
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "name": "Magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frydaal_the_chainmaker",
+      "name": "Frydaal the Chainmaker",
+      "source": "arcane_journal",
+      "category": "character",
+      "unit_size": "1",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry (named character)",
+      "points": 235,
+      "notes": [
+        "Frydaal the Chainmaker is an Exalted Champion. She may be included in any Warriors of Chaos army made using any army composition list that includes this option.",
+        "Chainmaker: Any enemy standard captured by Frydaal or any unit she has joined is worth 100 Victory Points as a trophy of war.",
+        "Commander & Captain: Unless she is fleeing, friendly units of Chaos Marauders, Marauder Horsemen, Marauder Tribe Huscarls and Marauder Tribe Berserkers gain a +1 modifier to their Leadership characteristic whilst within Frydaal's Command range (to a maximum of 10).",
+        "Peerless Raider: 0-1 unit of Chaos Marauders or Marauder Horsemen in the same muster list as Frydaal may have the Ambushers special rule for free. If Frydaal is your General, you may apply a +1 or -1 modifier to the result when rolling to determine if she or any unit of Chaos Marauders, Marauder Horsemen, Marauder Tribe Huscarls or Marauder Tribe Berserkers with the Ambushers special rule that is currently held in reserve arrives this turn as reinforcements or is delayed.",
+        "Storm's Wrath (weapon): Combat, S+2, AP -1; Extra Attacks (D3), Magical Attacks, Requires Two Hands. Strength modifier applies only during the first round of combat."
+      ],
+      "stats": {
+        "M": "4",
+        "WS": "6",
+        "BS": "3",
+        "S": "5",
+        "T": "4",
+        "W": "3",
+        "I": "5",
+        "A": "4",
+        "Ld": "9"
+      },
+      "equipment": [
+        "Hand weapon",
+        "Storm's Wrath (great flail)",
+        "Full plate armour",
+        "Shield"
+      ],
+      "special_rules": [
+        "ambushers",
+        "chainmaker",
+        "chaos_armour_5",
+        "commander_and_captain",
+        "ensorcelled_weapons",
+        "gaze_of_the_gods",
+        "impact_hits_1",
+        "mark_of_chaos_undivided",
+        "peerless_raider",
+        "rallying_cry"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "galrauch_the_great_drake",
+      "name": "Galrauch, the Great Drake",
+      "source": "arcane_journal",
+      "category": "monster",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Behemoth (named character)",
+      "points": 465,
+      "notes": [
+        "Galrauch, the Great Drake may be included in any Warriors of Chaos army made using any army composition list.",
+        "Spirit of Galrauch: During the Start of Turn sub-phase of each of your turns, make a Leadership test for Galrauch. If the test is passed, Galrauch is controlled as normal. If the test is failed, Galrauch's spirit rebels from within: his Level of Wizardry is reduced to 1 and he can only cast one spell per turn; he becomes subject to the Random Movement (2D6) special rule; if he is engaged in combat, he must direct D3 of his attacks against himself. Any wounds Galrauch causes against himself are added to the enemy's combat result score.",
+        "Two-headed Dragon: Galrauch may use either Dark Fire of Chaos or Fumes of Contagion during the Shooting phase. It cannot use both during the same turn.",
+        "Breath of Change: Once per game, instead of using Dark Fire of Chaos or Fumes of Contagion, Galrauch may use the Breath of Change. Place a flame template — any model hit must immediately make a Toughness test. If failed, the model is removed from play as a casualty. If passed, the attack has no effect.",
+        "Dark Fire of Chaos: Range N/A, S 4, AP -1; Breath Weapon, Flaming Attacks, Magical Attacks.",
+        "Fumes of Contagion: Range N/A, S 2, AP N/A; Breath Weapon, Magical Attacks. No armour save is permitted (Ward and Regeneration saves can be attempted as normal).",
+        "Wicked claws: Combat, S, AP -2."
+      ],
+      "stats": {
+        "M": "6",
+        "WS": "6",
+        "BS": "3",
+        "S": "6",
+        "T": "6",
+        "W": "6",
+        "I": "4",
+        "A": "6",
+        "Ld": "9"
+      },
+      "equipment": [
+        "Wicked claws",
+        "Dark Fire of Chaos",
+        "Fumes of Contagion",
+        "Draconic scales (counts as full plate armour)"
+      ],
+      "magic": {
+        "wizard_level": 4,
+        "lores": [
+          "dark_magic"
+        ]
+      },
+      "special_rules": [
+        "armoured_hide_1",
+        "breath_of_change",
+        "close_order",
+        "fly_10",
+        "large_target",
+        "mark_of_tzeentch",
+        "regeneration_5",
+        "spirit_of_galrauch",
+        "stomp_attacks_d6",
+        "swiftstride",
+        "terror",
+        "two_headed_dragon"
+      ]
+    },
+    {
+      "id": "chaos_steed",
+      "name": "Chaos Steed",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "base_size": "30 x 60 mm",
+      "troop_type": "Heavy cavalry",
+      "points": 16,
+      "notes": [
+        "Character mount for Chaos Lords, Exalted Champions, Aspiring Champions, Sorcerer Lords and Exalted Sorcerers. Points added to rider's cost."
+      ],
+      "stats": {
+        "M": "7",
+        "WS": "3",
+        "BS": "-",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "I": "3",
+        "A": "1",
+        "Ld": "-"
+      },
+      "equipment": [
+        "Iron-shod hooves (counts as hand weapon)",
+        "Barding"
+      ],
+      "special_rules": [
+        "first_charge",
+        "swiftstride"
+      ]
+    },
+    {
+      "id": "daemonic_mount",
+      "name": "Daemonic Mount",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "base_size": "40 x 60 mm (min), 50 x 75 mm (max)",
+      "troop_type": "Monstrous cavalry",
+      "points": 35,
+      "notes": [
+        "Character mount for Chaos Lords, Exalted Champions, Sorcerer Lords and Exalted Sorcerers. Points added to rider's cost. A character mounted on a Daemonic Mount has +1 Wound."
+      ],
+      "stats": {
+        "M": "8",
+        "WS": "4",
+        "BS": "-",
+        "S": "5",
+        "T": "-",
+        "W": "(+1)",
+        "I": "3",
+        "A": "2",
+        "Ld": "-"
+      },
+      "equipment": [
+        "Daemonic hooves (counts as hand weapon)"
+      ],
+      "special_rules": [
+        "armour_bane_1_daemonic_mount_only",
+        "fear",
+        "magical_attacks",
+        "mark_of_chaos_as_rider",
+        "stomp_attacks_1",
+        "swiftstride"
+      ]
+    },
+    {
+      "id": "chaos_warriors",
+      "name": "Chaos Warriors",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry",
+      "points": 13,
+      "stats": {
+        "M": "4",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Hand weapons",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "ensorcelled_weapons",
+        "mark_of_chaos_undivided"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Champion",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "description": "The entire unit may take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapons",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Great weapons",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Halberds",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Shields",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 2,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Purchase a magic standard",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        },
+        {
+          "name": "Champion may purchase magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chosen_chaos_warriors",
+      "name": "Chosen Chaos Warriors",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "special",
+      "unit_size": "5+",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry",
+      "points": 17,
+      "notes": [
+        "0-1 unit per army in the Grand Army composition list."
+      ],
+      "stats": {
+        "M": "4",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "I": "4",
+        "A": "2",
+        "Ld": "9"
+      },
+      "equipment": [
+        "Hand weapons",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "chaos_armour_6",
+        "close_order",
+        "ensorcelled_weapons",
+        "mark_of_chaos_undivided",
+        "stubborn"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Champion",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "options": [
+        {
+          "description": "The entire unit may take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapons",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Great weapons",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Halberds",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Shields",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 2,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Replace heavy armour with full plate armour",
+          "points": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Have the Drilled special rule",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Purchase a magic standard",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        },
+        {
+          "name": "Champion may purchase magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaos_marauders",
+      "name": "Chaos Marauders",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "base_size": "25 x 25 mm",
+      "troop_type": "Regular infantry",
+      "points": 6,
+      "stats": {
+        "M": "4",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "3",
+        "A": "1",
+        "Ld": "6"
+      },
+      "equipment": [
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "close_order",
+        "mark_of_chaos_undivided",
+        "shieldwall",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Marauder Chieftain",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "description": "The entire unit may take one of the following weapons",
+          "choices": [
+            {
+              "name": "Great weapons",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Flails",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Light armour",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Shields",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "0-1 unit in your army may take one of the following (replaces Close Order)",
+          "choices": [
+            {
+              "name": "Replace Close Order with Skirmishers",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Replace Close Order with Open Order",
+              "points": 0,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "forsaken",
+      "name": "Forsaken",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "base_size": "30 x 30 mm",
+      "troop_type": "Heavy infantry",
+      "points": 19,
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "0",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "I": "3",
+        "A": "D3",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Mutated weapons (counts as hand weapons)",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "chaos_armour_5",
+        "ensorcelled_weapons",
+        "furious_charge",
+        "immune_to_psychology",
+        "loner",
+        "open_order",
+        "rampant_mutation",
+        "random_attacks",
+        "stubborn"
+      ],
+      "notes": [
+        "Rampant Mutation: At the start of each combat, roll D6: 1-2 Venomous Fangs (unit gains Poisoned Attacks); 3-4 Razor Talons (unit attacks have AP -2); 5-6 Decapitating Claws (unit gains Killing Blow).",
+        "The entire unit must be one of the following: Forsaken by Khorne (Hatred all enemies), Forsaken by Nurgle (Fear), Forsaken by Slaanesh (Swiftstride), Forsaken by Tzeentch (Magic Resistance -3)."
+      ],
+      "options": [
+        {
+          "description": "The entire unit must be one of the following",
+          "choices": [
+            {
+              "name": "Forsaken by Khorne (gains Hatred all enemies)",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Forsaken by Nurgle (gains Fear)",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Forsaken by Slaanesh (gains Swiftstride)",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Forsaken by Tzeentch (gains Magic Resistance -3)",
+              "points": 0,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaos_ogres",
+      "name": "Chaos Ogres",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "special",
+      "unit_size": "3-15",
+      "base_size": "40 x 40 mm",
+      "troop_type": "Monstrous infantry",
+      "points": 33,
+      "stats": {
+        "M": "6",
+        "WS": "3",
+        "BS": "2",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "I": "2",
+        "A": "3",
+        "Ld": "7"
+      },
+      "equipment": [
+        "Hand weapons",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "close_order",
+        "fear",
+        "impact_hits_1",
+        "mark_of_chaos_undivided",
+        "ogre_charge"
+      ],
+      "notes": [
+        "Ogre Charge: The Armour Piercing characteristic of any Impact Hits caused by a model with this special rule is improved by the current Rank Bonus of its unit."
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Champion",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "description": "The entire unit may take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapons",
+              "points": 3,
+              "scope": "per_model"
+            },
+            {
+              "name": "Great weapons",
+              "points": 4,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 3,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 3,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 3,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 3,
+              "scope": "per_model"
+            }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaos_trolls",
+      "name": "Chaos Trolls",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "special",
+      "unit_size": "1-9",
+      "base_size": "40 x 40 mm",
+      "troop_type": "Monstrous infantry",
+      "points": 41,
+      "stats": {
+        "M": "6",
+        "WS": "3",
+        "BS": "1",
+        "S": "5",
+        "T": "4",
+        "W": "3",
+        "I": "2",
+        "A": "3",
+        "Ld": "4"
+      },
+      "equipment": [
+        "Hand weapons",
+        "Troll vomit (see notes)",
+        "Calloused hides (counts as light armour)"
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "close_order",
+        "fear",
+        "flammable",
+        "regeneration_5",
+        "stupidity"
+      ],
+      "notes": [
+        "Troll vomit: Combat, S 3, AP -2. A Chaos Troll that is in base contact with an enemy model may make one additional attack each turn with this weapon. This attack must be made last, after all other attacks have been made (including Stomp Attacks), but it hits automatically."
+      ],
+      "options": [
+        {
+          "description": "The entire unit may take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapons",
+              "points": 3,
+              "scope": "per_model"
+            },
+            {
+              "name": "Great weapons",
+              "points": 4,
+              "scope": "per_model"
+            }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaos_spawn",
+      "name": "Chaos Spawn",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "special",
+      "unit_size": "1-4",
+      "base_size": "50 x 50 mm",
+      "troop_type": "Monstrous infantry",
+      "points": 50,
+      "stats": {
+        "M": "2D6",
+        "WS": "3",
+        "BS": "0",
+        "S": "4",
+        "T": "5",
+        "W": "3",
+        "I": "3",
+        "A": "D6",
+        "Ld": "10"
+      },
+      "equipment": [
+        "Flailing appendages (counts as hand weapons)",
+        "Scaly skin (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "armour_bane_2",
+        "fear",
+        "immune_to_psychology",
+        "open_order",
+        "random_attacks",
+        "random_movement",
+        "stomp_attacks_1",
+        "unbreakable"
+      ],
+      "notes": [
+        "Spawn of Khorne (+3 pts/model): gains Killing Blow.",
+        "Spawn of Nurgle (+2 pts/model): gains Poisoned Attacks.",
+        "Spawn of Slaanesh (+3 pts/model): gains Strike First.",
+        "Spawn of Tzeentch (+1 pt/model): gains Flaming Attacks and Magical Attacks."
+      ],
+      "options": [
+        {
+          "description": "The entire unit may be one of the following",
+          "choices": [
+            {
+              "name": "Spawn of Khorne (gains Killing Blow)",
+              "points": 3,
+              "scope": "per_model"
+            },
+            {
+              "name": "Spawn of Nurgle (gains Poisoned Attacks)",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Spawn of Slaanesh (gains Strike First)",
+              "points": 3,
+              "scope": "per_model"
+            },
+            {
+              "name": "Spawn of Tzeentch (gains Flaming Attacks, Magical Attacks)",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marauder_tribe_berserkers",
+      "name": "Marauder Tribe Berserkers",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "base_size": "25 x 25 mm",
+      "troop_type": "Regular infantry",
+      "points": 8,
+      "notes": [
+        "Core choice in the Wolves of the Sea Army of Infamy only."
+      ],
+      "stats": {
+        "M": "5",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "3",
+        "A": "1",
+        "Ld": "7"
+      },
+      "equipment": [
+        "Hand weapons",
+        "Light armour"
+      ],
+      "special_rules": [
+        "frenzy",
+        "mark_of_chaos_undivided",
+        "move_through_cover",
+        "open_order",
+        "relentless_warriors",
+        "skirmishers",
+        "warband"
+      ],
+      "notes_rules": [
+        "Relentless Warriors: A model with this special rule has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack."
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Headtaker",
+          "cost_per_unit": 8
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "description": "The entire unit may take one of the following weapons",
+          "choices": [
+            {
+              "name": "Additional hand weapons",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Flails",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Throwing axes",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Have the Ambushers special rule",
+          "points": 1,
+          "scope": "per_model"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skin_wolves",
+      "name": "Skin Wolves",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "special",
+      "unit_size": "2+",
+      "base_size": "40 x 40 mm",
+      "troop_type": "Monstrous infantry",
+      "points": 45,
+      "notes": [
+        "Special choice in the Wolves of the Sea Army of Infamy only.",
+        "Warped Form: When this unit's combat is chosen during Step 1.1 of any Choose & Fight combat sub-phase, choose one: Enlarged Claws (AP improved by 1, gains Armour Bane 2), Barbed Protrusions (gains Extra Attacks +1), Toughened Flesh (Toughness +1 and armour value improved by 2). Each Transfiguration lasts until your next Start of Turn sub-phase."
+      ],
+      "stats": {
+        "M": "7",
+        "WS": "5",
+        "BS": "-",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "I": "4",
+        "A": "3",
+        "Ld": "7"
+      },
+      "equipment": [
+        "Claws and fangs (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "blood_rage",
+        "mark_of_chaos_undivided",
+        "open_order",
+        "primal_fury",
+        "regeneration_5",
+        "skirmishers",
+        "swiftstride",
+        "warped_form"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Skin Wolf Jarl",
+          "cost_per_unit": 7
+        }
+      ]
+    },
+    {
+      "id": "chaos_knights",
+      "name": "Chaos Knights",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "core",
+      "unit_size": "4+",
+      "base_size": "30 x 60 mm",
+      "troop_type": "Heavy cavalry",
+      "points": 27,
+      "stats": {
+        "M": "-",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "I": "4",
+        "A": "1",
+        "Ld": "8"
+      },
+      "stats_mount": {
+        "name": "Chaos Steed",
+        "M": "7",
+        "WS": "3",
+        "BS": "-",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "I": "3",
+        "A": "1",
+        "Ld": "-"
+      },
+      "equipment": {
+        "rider": [
+          "Hand weapons",
+          "Heavy armour",
+          "Shields"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapon)",
+          "Barding"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "ensorcelled_weapons",
+        "first_charge",
+        "mark_of_chaos_undivided",
+        "swiftstride"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Champion",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "name": "Lances",
+          "points": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 2,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Purchase a magic standard",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        },
+        {
+          "name": "Champion may purchase magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chosen_chaos_knights",
+      "name": "Chosen Chaos Knights",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "4+",
+      "base_size": "30 x 60 mm",
+      "troop_type": "Heavy cavalry",
+      "points": 36,
+      "notes": [
+        "0-1 unit per army in the Grand Army and Heralds of Darkness composition lists."
+      ],
+      "stats": {
+        "M": "-",
+        "WS": "5",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "1",
+        "I": "4",
+        "A": "2",
+        "Ld": "9"
+      },
+      "stats_mount": {
+        "name": "Chaos Steed",
+        "M": "7",
+        "WS": "3",
+        "BS": "-",
+        "S": "4",
+        "T": "-",
+        "W": "-",
+        "I": "3",
+        "A": "1",
+        "Ld": "-"
+      },
+      "equipment": {
+        "rider": [
+          "Hand weapons",
+          "Heavy armour",
+          "Shields"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapon)",
+          "Barding"
+        ]
+      },
+      "special_rules": [
+        "chaos_armour_6",
+        "close_order",
+        "counter_charge",
+        "ensorcelled_weapons",
+        "first_charge",
+        "mark_of_chaos_undivided",
+        "stubborn",
+        "swiftstride"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Champion",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "options": [
+        {
+          "name": "Lances",
+          "points": 2,
+          "scope": "per_model"
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 2,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Replace heavy armour with full plate armour",
+          "points": 3,
+          "scope": "per_model"
+        },
+        {
+          "name": "Have the Drilled special rule",
+          "points": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Purchase a magic standard",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        },
+        {
+          "name": "Champion may purchase magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marauder_horsemen",
+      "name": "Marauder Horsemen",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "base_size": "30 x 60 mm",
+      "troop_type": "Light cavalry",
+      "points": 12,
+      "stats": {
+        "M": "-",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "3",
+        "A": "1",
+        "Ld": "6"
+      },
+      "stats_mount": {
+        "name": "Warhorse",
+        "M": "8",
+        "WS": "3",
+        "BS": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "I": "3",
+        "A": "1",
+        "Ld": "-"
+      },
+      "equipment": {
+        "rider": [
+          "Hand weapons",
+          "Light armour"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapon)"
+        ]
+      },
+      "special_rules": [
+        "fast_cavalry",
+        "fire_and_flee",
+        "mark_of_chaos_undivided",
+        "open_order",
+        "skirmishers",
+        "swiftstride",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Marauder Horsemaster",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "description": "The entire unit may take one of the following primary weapons",
+          "choices": [
+            {
+              "name": "Cavalry spears",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Throwing spears",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Flails",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "The entire unit may take one of the following ranged weapons",
+          "choices": [
+            {
+              "name": "Throwing axes",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Javelins",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Shields",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 2,
+              "scope": "per_model"
+            }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        },
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marauder_tribe_huscarls",
+      "name": "Marauder Tribe Huscarls",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "5+",
+      "base_size": "30 x 60 mm",
+      "troop_type": "Light cavalry",
+      "points": 18,
+      "notes": [
+        "Special choice in the Wolves of the Sea Army of Infamy only.",
+        "0-1 unit per 1,000 points may have the Drilled special rule."
+      ],
+      "stats": {
+        "M": "4",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "3",
+        "A": "1",
+        "Ld": "7"
+      },
+      "stats_mount": {
+        "name": "Warhorse",
+        "M": "8",
+        "WS": "3",
+        "BS": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "I": "3",
+        "A": "1",
+        "Ld": "-"
+      },
+      "equipment": {
+        "rider": [
+          "Hand weapons",
+          "Light armour"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapon)"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "counter_charge",
+        "furious_charge",
+        "mark_of_chaos_undivided",
+        "swiftstride",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "First Sword",
+          "cost_per_unit": 8
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "description": "The entire unit must take one of the following",
+          "choices": [
+            {
+              "name": "Cavalry spears",
+              "points": 0,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Flails",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "The entire unit may take one of the following ranged weapons",
+          "choices": [
+            {
+              "name": "Throwing axes",
+              "points": 1,
+              "scope": "per_model"
+            },
+            {
+              "name": "Javelins",
+              "points": 1,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "Replace light armour with heavy armour",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Shields",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 2,
+              "scope": "per_model"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 2,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "name": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "points": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Purchase a magic standard",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        },
+        {
+          "name": "First Sword may purchase magic items",
+          "points": 0,
+          "scope": "per_unit",
+          "max_points": 25
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        },
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaos_warhounds",
+      "name": "Chaos Warhounds",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "base_size": "25 x 50 mm",
+      "troop_type": "War beasts",
+      "points": 6,
+      "notes": [
+        "Troop type is War beasts (categorised under Cavalry for army list purposes)."
+      ],
+      "stats": {
+        "M": "7",
+        "WS": "4",
+        "BS": "0",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "I": "3",
+        "A": "1",
+        "Ld": "6"
+      },
+      "equipment": [
+        "Claws and fangs (counts as hand weapon)"
+      ],
+      "special_rules": [
+        "loner",
+        "move_through_cover",
+        "open_order",
+        "swiftstride"
+      ],
+      "options": [
+        {
+          "name": "Armoured Hide (1) special rule",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Poisoned Attacks special rule",
+          "points": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Vanguard special rule",
+          "points": 5,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Be accompanied by a Chaos Warhound Handler",
+          "points": 15,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "chaos_chariot",
+      "name": "Chaos Chariots",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Heavy chariot",
+      "points": 110,
+      "notes": [
+        "Armour Value: 3+. Character Mount: A Chaos Chariot may be included in your army as a character's mount. If so, its points are added to that of its rider."
+      ],
+      "stats": {
+        "M": "-",
+        "WS": "-",
+        "BS": "-",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "I": "-",
+        "A": "-",
+        "Ld": "-"
+      },
+      "stats_crew": [
+        {
+          "name": "Chaos Charioteer (x2)",
+          "WS": "5",
+          "BS": "3",
+          "S": "4",
+          "I": "4",
+          "A": "1",
+          "Ld": "8"
+        }
+      ],
+      "stats_mount": {
+        "name": "Chaos Steed (x2)",
+        "M": "7",
+        "WS": "3",
+        "BS": "-",
+        "S": "4",
+        "I": "3",
+        "A": "1"
+      },
+      "equipment": {
+        "crew": [
+          "Hand weapons",
+          "Halberds"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapon)"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "ensorcelled_weapons",
+        "first_charge",
+        "impact_hits_d6_plus_1",
+        "mark_of_chaos_undivided"
+      ],
+      "options": [
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chosen_chaos_chariot",
+      "name": "Chosen Chaos Chariots",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Heavy chariot",
+      "points": 140,
+      "notes": [
+        "Armour Value: 3+.",
+        "Special choice in the Heralds of Darkness Army of Infamy (0-1 per 1,000 points).",
+        "Character Mount (Heralds of Darkness only): Chosen Chariots may be included as character mounts in addition to being taken as Special choices. A Chaos Lord, Exalted Champion or Aspiring Champion may be mounted on a Chosen Chaos Chariot for +140 points."
+      ],
+      "stats": {
+        "M": "-",
+        "WS": "-",
+        "BS": "-",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "I": "-",
+        "A": "-",
+        "Ld": "-"
+      },
+      "stats_crew": [
+        {
+          "name": "Chosen Charioteer (x2)",
+          "WS": "5",
+          "BS": "3",
+          "S": "4",
+          "I": "4",
+          "A": "2",
+          "Ld": "9"
+        }
+      ],
+      "stats_mount": {
+        "name": "Chaos Steed (x2)",
+        "M": "7",
+        "WS": "3",
+        "BS": "-",
+        "S": "4",
+        "I": "3",
+        "A": "1"
+      },
+      "equipment": {
+        "crew": [
+          "Hand weapons",
+          "Halberds"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapon)"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "counter_charge",
+        "ensorcelled_weapons",
+        "first_charge",
+        "impact_hits_d6_plus_1_chariot_only",
+        "mark_of_chaos_undivided"
+      ],
+      "options": [
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gorebeast_chariot",
+      "name": "Gorebeast Chariots",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "rare",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Heavy chariot",
+      "points": 135,
+      "notes": [
+        "Armour Value: 3+. Character Mount: A Gorebeast Chariot may be included in your army as a character's mount. If so, its points are added to that of its rider."
+      ],
+      "stats": {
+        "M": "-",
+        "WS": "-",
+        "BS": "-",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "I": "-",
+        "A": "-",
+        "Ld": "-"
+      },
+      "stats_crew": [
+        {
+          "name": "Chaos Charioteer (x2)",
+          "WS": "5",
+          "BS": "3",
+          "S": "4",
+          "I": "4",
+          "A": "1",
+          "Ld": "8"
+        }
+      ],
+      "stats_mount": {
+        "name": "Gorebeast (x1)",
+        "M": "6",
+        "WS": "4",
+        "BS": "-",
+        "S": "5",
+        "I": "2",
+        "A": "3"
+      },
+      "equipment": {
+        "crew": [
+          "Hand weapons",
+          "Halberds"
+        ],
+        "mount": [
+          "Goring horns (counts as hand weapon)"
+        ]
+      },
+      "special_rules": [
+        "armour_bane_1_gorebeast_only",
+        "close_order",
+        "ensorcelled_weapons",
+        "first_charge",
+        "impact_hits_d6_plus_2",
+        "killing_blow_gorebeast_only",
+        "mark_of_chaos_undivided"
+      ],
+      "options": [
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "name": "Mark of Khorne",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Nurgle",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Slaanesh",
+              "points": 10,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Mark of Tzeentch",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manticore",
+      "name": "Manticore",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Monstrous creature",
+      "points": 120,
+      "notes": [
+        "Character Mount: A Manticore may only be included in your army as a character's mount (Chaos Lords and Sorcerer Lords only). Its points are added to that of its rider. A character mounted on a Manticore has +4 Wounds.",
+        "Wicked claws: Combat, S, AP -2.",
+        "Venomous tail (optional): Combat, S, AP -; Poisoned Attacks, Strike First. In combat, this model must make one of its attacks each turn with this weapon.",
+        "Wilful Beast: Must pass Leadership test at Start of Turn sub-phase to remain under control. If failed, rider loses control and mount becomes subject to Frenzy until next Start of Turn sub-phase."
+      ],
+      "stats": {
+        "M": "6",
+        "WS": "5",
+        "BS": "-",
+        "S": "5",
+        "T": "-",
+        "W": "(+4)",
+        "I": "5",
+        "A": "4",
+        "Ld": "-"
+      },
+      "special_rules": [
+        "close_order",
+        "fly_9",
+        "large_target",
+        "stomp_attacks_d3",
+        "swiftstride",
+        "terror",
+        "wilful_beast"
+      ],
+      "options": [
+        {
+          "name": "Venomous tail",
+          "points": 15,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "chaos_dragon",
+      "name": "Chaos Dragon",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Behemoth",
+      "points": 285,
+      "notes": [
+        "Character Mount: A Chaos Dragon may only be included in your army as a character's mount (Chaos Lords and Sorcerer Lords only). Its points are added to that of its rider. A character mounted on a Chaos Dragon has +1 Toughness and +6 Wounds.",
+        "Two-headed Dragon: A Chaos Dragon may use either Dark Fire of Chaos or Fumes of Contagion during the Shooting phase. It cannot use both during the same turn.",
+        "Dark Fire of Chaos: Range N/A, S 4, AP -1; Breath Weapon, Flaming Attacks, Magical Attacks.",
+        "Fumes of Contagion: Range N/A, S 2, AP N/A; Breath Weapon, Magical Attacks. No armour save permitted (Ward and Regeneration saves as normal).",
+        "Wicked claws: Combat, S, AP -2."
+      ],
+      "stats": {
+        "M": "6",
+        "WS": "6",
+        "BS": "-",
+        "S": "7",
+        "T": "(+1)",
+        "W": "(+6)",
+        "I": "4",
+        "A": "6",
+        "Ld": "-"
+      },
+      "special_rules": [
+        "close_order",
+        "fly_10",
+        "large_target",
+        "stomp_attacks_d6",
+        "swiftstride",
+        "terror",
+        "two_headed_dragon"
+      ]
+    },
+    {
+      "id": "chimera",
+      "name": "Chimera",
+      "source": "ravening_hordes",
+      "category": "monster",
+      "list_category": "special",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Monstrous creature",
+      "points": 180,
+      "notes": [
+        "Flaming breath: Range N/A, S 4, AP -; Breath Weapon, Flaming Attacks.",
+        "Fiend tail (optional): Combat, S, AP -1; Extra Attacks (D3). In combat, a Chimera with a fiend tail may make an additional D3 attacks each turn with this weapon."
+      ],
+      "stats": {
+        "M": "6",
+        "WS": "4",
+        "BS": "0",
+        "S": "6",
+        "T": "5",
+        "W": "4",
+        "I": "3",
+        "A": "6",
+        "Ld": "5"
+      },
+      "equipment": [
+        "Claws and fangs (counts as hand weapon)",
+        "Scaly skin (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "armour_bane_2_claws_and_fangs_only",
+        "close_order",
+        "fly_10",
+        "large_target",
+        "stomp_attacks_1",
+        "swiftstride",
+        "terror"
+      ],
+      "options": [
+        {
+          "name": "Flaming breath",
+          "points": 20,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Fiend tail",
+          "points": 10,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Regeneration (5+) special rule",
+          "points": 15,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Poisoned Attacks special rule",
+          "points": 10,
+          "scope": "per_unit"
+        }
+      ]
+    },
+    {
+      "id": "hellcannon",
+      "name": "Hellcannon",
+      "source": "ravening_hordes",
+      "category": "war_machine",
+      "list_category": "rare",
+      "unit_size": "1",
+      "base_size": "100 x 150 mm",
+      "troop_type": "Behemoth",
+      "points": 215,
+      "notes": [
+        "Armour Value: 4+. 0-1 per 1,000 points.",
+        "Doomfire: Range 12-60\", S 5 (10), AP -2 (-5); Bombardment, Cumbersome, Move or Shoot, Multiple Wounds (D3). Shoots like a stone thrower using the Bombardment special rule and a 3\" blast template. Any unit that suffers one or more unsaved wounds from this weapon must make a Panic test as if it had taken heavy casualties.",
+        "Caged Fury: During the Start of Turn sub-phase of each of your turns, make a Leadership test for this model. If this test is failed, roll on the Hellcannon Misfire table.",
+        "Hellcannon Misfire Table — D6: 1 Free at Last! Every unit within 3D6\" suffers D6 S5 hits (AP -1); Hellcannon removed. 2-4 Chomp! Remove one of the Hellcannon's Chaos Dwarf Handlers. 5-6 Blooood! Hellcannon breaks chains, immediately moves 3D6\" as if subject to Random Movement."
+      ],
+      "stats": {
+        "M": "3",
+        "WS": "4",
+        "BS": "3",
+        "S": "5",
+        "T": "6",
+        "W": "5",
+        "I": "1",
+        "A": "5",
+        "Ld": "4"
+      },
+      "stats_crew": [
+        {
+          "name": "Chaos Dwarf Handlers (x3)",
+          "M": "3",
+          "WS": "4",
+          "BS": "-",
+          "S": "3",
+          "T": "-",
+          "W": "-",
+          "I": "2",
+          "A": "1",
+          "Ld": "9"
+        }
+      ],
+      "equipment": {
+        "machine": [
+          "Doomfire"
+        ],
+        "crew": [
+          "Hand weapons"
+        ]
+      },
+      "special_rules": [
+        "armour_bane_1",
+        "caged_fury",
+        "close_order",
+        "ensorcelled_weapons",
+        "immune_to_psychology",
+        "impact_hits_d6",
+        "large_target",
+        "monster_handlers",
+        "regeneration_6",
+        "terror",
+        "unbreakable",
+        "warp_spawned"
+      ]
+    },
+    {
+      "id": "gigantic_spawn_of_chaos",
+      "name": "Gigantic Spawn of Chaos",
+      "source": "arcane_journal",
+      "category": "monster",
+      "list_category": "rare",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Behemoth",
+      "points": 145,
+      "notes": [
+        "0-1 per 1,000 points as a Rare choice in Warriors of Chaos Grand Army and Beastmen Brayherds Grand Army lists, and in the Wolves of the Sea and Heralds of Darkness Armies of Infamy.",
+        "Cursed by the Gods: Gigantic Spawn of Khorne have Impact Hits (D3) and Killing Blow. Gigantic Spawn of Nurgle have Poisoned Attacks and Regeneration (5+). Gigantic Spawn of Slaanesh have Counter Charge and Strikes First. Gigantic Spawn of Tzeentch have Flaming Attacks, Magical Attacks and Magic Resistance (-2).",
+        "Slashing talons: Combat, S, AP -1. Gnashing maws: Combat, S, AP -2; Strikes Last. In combat, this model may choose to make one of its attacks each turn with gnashing maws. For each Wound an enemy unit loses as a result of an attack made with gnashing maws, this model immediately recovers a single lost Wound."
+      ],
+      "stats": {
+        "M": "3D6",
+        "WS": "3",
+        "BS": "0",
+        "S": "6",
+        "T": "6",
+        "W": "6",
+        "I": "3",
+        "A": "D6+1",
+        "Ld": "10"
+      },
+      "equipment": [
+        "Slashing talons",
+        "Gnashing maws",
+        "Scaly skin (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "armour_bane_2",
+        "close_order",
+        "first_charge",
+        "immune_to_psychology",
+        "large_target",
+        "random_attacks",
+        "random_movement",
+        "stomp_attacks_d6",
+        "terror",
+        "timmm_berrr",
+        "unbreakable"
+      ],
+      "options": [
+        {
+          "description": "May be one of the following",
+          "choices": [
+            {
+              "name": "Gigantic Spawn of Khorne (Impact Hits D3, Killing Blow)",
+              "points": 20,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Gigantic Spawn of Nurgle (Poisoned Attacks, Regeneration 5+)",
+              "points": 25,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Gigantic Spawn of Slaanesh (Counter Charge, Strikes First)",
+              "points": 15,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Gigantic Spawn of Tzeentch (Flaming Attacks, Magical Attacks, Magic Resistance -2)",
+              "points": 10,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warpfire_dragon",
+      "name": "Warpfire Dragon",
+      "source": "arcane_journal",
+      "category": "monster",
+      "list_category": "rare",
+      "unit_size": "1",
+      "base_size": "60 x 100 mm",
+      "troop_type": "Behemoth",
+      "points": 375,
+      "notes": [
+        "0-1 as a Rare choice in the Warriors of Chaos Grand Army and Heralds of Darkness Army of Infamy.",
+        "Explosive Demise: When a Warpfire Dragon loses its last Wound, before the model is removed from play, every unit (friend or foe) within 6\" of it suffers D6 Strength 5 hits, each with an AP of -2.",
+        "Fire & Chaos: Warpfire Dragons have a 5+ Ward save against any wounds suffered that were caused by an attack that has either the Magical Attacks or Flaming Attacks special rule.",
+        "Warpfire Aura: Other models (both friend and foe) are not permitted a Ward save whilst within 3\" of this model.",
+        "Warpfire Blast: Range 6\"-24\", S 4 (8), AP -1 (-3); Bombardment, Cumbersome, Flaming Attacks, Multiple Wounds (D3+1). Shoots like a stone thrower using the Bombardment rule and a 3\" blast template. If a Misfire is rolled, this model loses a single Wound instead. The Multiple Wounds (D3+1) special rule applies only to a single model whose base lies underneath the central hole.",
+        "Wicked claws: Combat, S, AP -2."
+      ],
+      "stats": {
+        "M": "6",
+        "WS": "6",
+        "BS": "0",
+        "S": "6",
+        "T": "6",
+        "W": "6",
+        "I": "3",
+        "A": "5",
+        "Ld": "8"
+      },
+      "equipment": [
+        "Wicked claws",
+        "Warpfire Blast",
+        "Draconic scales (counts as full plate armour)"
+      ],
+      "magic": {
+        "notes": "A Warpfire Dragon may be a Wizard (see below). A Warpfire Dragon that is a Wizard knows spells from one of the following Lores of Magic: Battle Magic, Daemonology, Dark Magic.",
+        "lores": [
+          "battle_magic",
+          "daemonology",
+          "dark_magic"
+        ]
+      },
+      "special_rules": [
+        "explosive_demise",
+        "fire_and_chaos",
+        "fly_10",
+        "large_target",
+        "lore_of_chaos",
+        "magical_attacks",
+        "magic_resistance_2",
+        "mark_of_chaos_undivided",
+        "regeneration_5",
+        "stomp_attacks_d6",
+        "swiftstride",
+        "terror",
+        "warpfire_aura"
+      ],
+      "options": [
+        {
+          "description": "A Warpfire Dragon may be a Wizard",
+          "choices": [
+            {
+              "name": "Wizard Level 1",
+              "points": 30,
+              "scope": "per_unit"
+            },
+            {
+              "name": "Wizard Level 2",
+              "points": 60,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gifts_of_chaos": [
+    {
+      "id": "dark_majesty",
+      "name": "Dark Majesty",
+      "points": 50,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "Unless this character is fleeing, any enemy unit that is required to make a Fear or Terror test whilst within this character's Command range does so with an additional -1 modifier to its Leadership characteristic (to a minimum of 2)."
+    },
+    {
+      "id": "daemon_flesh",
+      "name": "Daemon-flesh",
+      "points": 45,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "This character cannot be wounded by a roll To Wound of 2, regardless of the Strength of the attack."
+    },
+    {
+      "id": "extra_arm",
+      "name": "Extra Arm",
+      "points": 40,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "This character (but not their mount) has a +1 modifier to their Attacks characteristic."
+    },
+    {
+      "id": "diabolic_splendour",
+      "name": "Diabolic Splendour",
+      "points": 35,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "Any enemy model that targets this character or any unit they have joined during the Shooting phase suffers an additional -1 To Hit modifier."
+    },
+    {
+      "id": "enchanting_aura",
+      "name": "Enchanting Aura",
+      "points": 35,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "Enemy units engaged in combat with this character cannot use the Strike First special rule. Enemy models that do not have the Strike First special rule become subject to the Strike Last special rule instead."
+    },
+    {
+      "id": "aura_of_pain",
+      "name": "Aura of Pain",
+      "points": 30,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "Once per game, when this character's combat is chosen during Step 1.1 of the Choose & Fight Combat sub-phase, a single enemy unit they are engaged with suffers D6 Strength 3 hits, with no armour or Regeneration saves permitted (Ward saves can be attempted as normal)."
+    },
+    {
+      "id": "master_of_mortals",
+      "name": "Master of Mortals",
+      "points": 25,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "Unless this character is fleeing, friendly units of Chaos Marauders and Marauder Horsemen gain a +1 modifier to their Leadership characteristic whilst within this character's Command range (to a maximum of 10)."
+    },
+    {
+      "id": "acid_ichor",
+      "name": "Acid Ichor",
+      "points": 15,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "For every Wound this character loses during a challenge, their enemy suffers a Strength 4 hit, with an AP of -2."
+    },
+    {
+      "id": "poisonous_slime",
+      "name": "Poisonous Slime",
+      "points": 15,
+      "restrictions": "Each gift may only be chosen once per army.",
+      "description": "This character (but not their mount) has the Poisoned Attacks special rule."
+    }
+  ],
+  "magic_items": [
+    {
+      "id": "dragonblade",
+      "name": "Dragonblade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
+      "weapon_profile": {
+        "name": "Dragonblade",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "burning-blade",
+      "name": "Burning Blade*",
+      "points": 5,
+      "category": "magic_weapon",
+      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "biting-blade",
+      "name": "Biting Blade",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
+    },
+    {
+      "id": "sword-of-striking",
+      "name": "Sword of Striking*",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
+    },
+    {
+      "id": "berserker-blade",
+      "name": "Berserker Blade",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+    },
+    {
+      "id": "sword-of-might",
+      "name": "Sword of Might*",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "sword-of-swiftness",
+      "name": "Sword of Swiftness",
+      "points": 25,
+      "category": "magic_weapon",
+      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
+    },
+    {
+      "id": "giant-blade",
+      "name": "Giant Blade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
+      "restrictions": "Giant Blade(Magic Weapon)30 pointsA broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.RangeStrengthArmour Pierc"
+    },
+    {
+      "id": "hell-forged-axe",
+      "name": "Hell-forged Axe",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
+    },
+    {
+      "id": "sword-of-sorrow",
+      "name": "Sword of Sorrow",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
+      "restrictions": "Sword of Sorrow(Magic Weapon)30 pointsThough it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.RangeSt"
+    },
+    {
+      "id": "spelleater-axe",
+      "name": "Spelleater Axe",
+      "points": 35,
+      "category": "magic_weapon",
+      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
+    },
+    {
+      "id": "headsmans-axe",
+      "name": "Headsman's Axe",
+      "points": 45,
+      "category": "magic_weapon",
+      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
+    },
+    {
+      "id": "dragon-slaying-sword",
+      "name": "Dragon Slaying Sword",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
+    },
+    {
+      "id": "meteor-hammer",
+      "name": "Meteor Hammer",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
+    },
+    {
+      "id": "duellists-blades",
+      "name": "Duellist's Blades",
+      "points": 55,
+      "category": "magic_weapon",
+      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
+    },
+    {
+      "id": "sword-of-battle",
+      "name": "Sword of Battle",
+      "points": 60,
+      "category": "magic_weapon",
+      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
+    },
+    {
+      "id": "cackling-blade",
+      "name": "Cackling Blade",
+      "points": 65,
+      "category": "magic_weapon",
+      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
+    },
+    {
+      "id": "ogre-blade",
+      "name": "Ogre Blade",
+      "points": 75,
+      "category": "magic_weapon",
+      "description": "Magic weapons grant the wielder extra abilities, new special rules or an improved profile, the better to slay enemies. Unless otherwise stated, the following rules apply to all magic weapons:\nA magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.\nA character that wields a magic weapon cannot set it aside to use a mundane equivalent. For example, a character cannot set aside a magic combat weapon to use a mundane great weapon instead.",
+      "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
+    },
+    {
+      "id": "charmed-shield",
+      "name": "Charmed Shield*",
+      "points": 5,
+      "category": "magic_armour",
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
+    },
+    {
+      "id": "enchanted-shield",
+      "name": "Enchanted Shield*",
+      "points": 10,
+      "category": "magic_armour",
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
+    },
+    {
+      "id": "armour-of-meteoric-iron",
+      "name": "Armour of Meteoric Iron",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
+      "restrictions": "Armour of Meteoric Iron(Magic Armour)20 pointsThis heavy armour was forged of ore mined from a meteor that fell from the heavens.The Armour of Meteoric Iron gives its wearer an armour value of 5+, whi"
+    },
+    {
+      "id": "trailblazers-hauberk",
+      "name": "Trailblazer's Hauberk",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
+      "restrictions": "Trailblazer's Hauberk(Magic Armour)20 pointsThe local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.Models whose troop type is infantry only. The"
+    },
+    {
+      "id": "levitating-shield",
+      "name": "Levitating Shield",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
+      "restrictions": "Levitating Shield(Magic Armour)25 pointsBorn aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.Models whose troop type is infantry only."
+    },
+    {
+      "id": "spellshield",
+      "name": "Spellshield*",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
+    },
+    {
+      "id": "shield-of-the-warrior-true",
+      "name": "Shield of the Warrior True",
+      "points": 30,
+      "category": "magic_armour",
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
+    },
+    {
+      "id": "glittering-scales",
+      "name": "Glittering Scales",
+      "points": 35,
+      "category": "magic_armour",
+      "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
+    },
+    {
+      "id": "armour-of-silvered-steel",
+      "name": "Armour of Silvered Steel",
+      "points": 40,
+      "category": "magic_armour",
+      "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
+      "restrictions": "Armour of Silvered Steel(Magic Armour)40 pointsPolished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.The Armour of Silvered Steel is a suit of armour that gives"
+    },
+    {
+      "id": "bedazzling-helm",
+      "name": "Bedazzling Helm",
+      "points": 60,
+      "category": "magic_armour",
+      "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
+      "restrictions": "Bedazzling Helm(Magic Armour)60 pointsA gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.Models whose troop type is infantry or cavalry only. May be wo"
+    },
+    {
+      "id": "armour-of-destiny",
+      "name": "Armour of Destiny",
+      "points": 70,
+      "category": "magic_armour",
+      "description": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can only carry one shield, and a mount can only wear a single suit of barding. Therefore, magic armour replaces any mundane equivalent the model is, or may be, equipped with.",
+      "restrictions": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can onl"
+    },
+    {
+      "id": "luckstone",
+      "name": "Luckstone*",
+      "points": 15,
+      "category": "talisman",
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common"
+    },
+    {
+      "id": "obsidian-lodestone",
+      "name": "Obsidian Lodestone*",
+      "points": 20,
+      "category": "talisman",
+      "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.\nA model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
+    },
+    {
+      "id": "paymasters-coin",
+      "name": "Paymaster's Coin*",
+      "points": 25,
+      "category": "talisman",
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common"
+    },
+    {
+      "id": "ironhide-talisman",
+      "name": "Ironhide Talisman",
+      "points": 30,
+      "category": "talisman",
+      "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.\nModels whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6.Note that this magic item does not work against attacks that hit automatically.",
+      "restrictions": "Ironhide Talisman(Talisman)30 pointsIt is said that the one who bears this powerful heirloom can endure even the most telling blows.Models whose troop type is infantry only. Any enemy model that makes"
+    },
+    {
+      "id": "talisman-of-protection",
+      "name": "Talisman of Protection",
+      "points": 30,
+      "category": "talisman",
+      "description": "A powerful magical aura surrounds this humble talisman, protecting its wearer from harm.\nThe Talisman of Protection gives its bearer a 5+ Ward save against any wounds suffered."
+    },
+    {
+      "id": "dawnstone",
+      "name": "Dawnstone",
+      "points": 35,
+      "category": "talisman",
+      "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical.\nThe magic trapped within this semi-precious stone binds together shattered armour plates.\nThe bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
+      "restrictions": "Dawnstone(Talisman)35 pointsThe magic trapped within this semi-precious stone binds together shattered armour plates.The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.Icon of"
+    },
+    {
+      "id": "icon-of-fortitude",
+      "name": "Icon of Fortitude",
+      "points": 35,
+      "category": "talisman",
+      "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.\nModels whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": "Icon of Fortitude(Talisman)35 pointsCarefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.Models whose troop type is infantry or cav"
+    },
+    {
+      "id": "potion-of-foolhardiness",
+      "name": "Potion of Foolhardiness*",
+      "points": 5,
+      "category": "enchanted_item",
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+    },
+    {
+      "id": "potion-of-speed",
+      "name": "Potion of Speed*",
+      "points": 10,
+      "category": "enchanted_item",
+      "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Speed*(Enchanted Item)10 pointsA powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "becalming-orb",
+      "name": "Becalming Orb",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+    },
+    {
+      "id": "potion-of-toughness",
+      "name": "Potion of Toughness*",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Toughness*(Enchanted Item)20 pointsDistilled by magical means, this potion is sure to make the drinker all but invulnerable.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "potion-of-strength",
+      "name": "Potion of Strength*",
+      "points": 25,
+      "category": "enchanted_item",
+      "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Strength*(Enchanted Item)25 pointsA concoction of strength-giving vegetables and roots, mixed together with a touch of magic.Single use. During the Command sub-phase of their turn, the beare"
+    },
+    {
+      "id": "potion-of-fervour",
+      "name": "Potion of Fervour",
+      "points": 30,
+      "category": "enchanted_item",
+      "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
+      "restrictions": "Potion of Fervour(Enchanted Item)30 pointsThis noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.Single Use. During the Command sub-phase of their turn, the bea"
+    },
+    {
+      "id": "healing-potion",
+      "name": "Healing Potion*",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+    },
+    {
+      "id": "ruby-ring-of-ruin",
+      "name": "Ruby Ring of Ruin",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.\nThe wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+    },
+    {
+      "id": "arch-lightning-rod",
+      "name": "Arch-Lightning Rod",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
+      "restrictions": "Arch-Lightning Rod(Enchanted Item)40 pointsCrackling lightning fills the heavens with peril, grounding the creatures of the sky.Single use. During the Command sub-phase of their turn, if they are not"
+    },
+    {
+      "id": "flying-carpet",
+      "name": "Flying Carpet",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!\nModels whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
+      "restrictions": "Flying Carpet(Enchanted Item)40 pointsWoven from the finest silks in a far-off land, this splendid rug does more than warm the feet!Models whose troop type is regular infantry or heavy infantry only."
+    },
+    {
+      "id": "wizarding-hat",
+      "name": "Wizarding Hat",
+      "points": 45,
+      "category": "enchanted_item",
+      "description": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a character might possess.\nNote that a model can only consume a single potion (of any type) per Command phase.\nThis splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
+      "restrictions": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a cha"
+    },
+    {
+      "id": "earthing-rod",
+      "name": "Earthing Rod",
+      "points": 5,
+      "category": "arcane_item",
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+    },
+    {
+      "id": "arcane-familiar",
+      "name": "Arcane Familiar",
+      "points": 15,
+      "category": "arcane_item",
+      "description": "Many Wizards are accompanied by familiars gifted with arcane knowledge. These creatures constantly whisper secrets to their master."
+    },
+    {
+      "id": "dispel-scroll",
+      "name": "Dispel Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+    },
+    {
+      "id": "power-scroll",
+      "name": "Power Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+    },
+    {
+      "id": "lore-familiar",
+      "name": "Lore Familiar",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "By creating a magical homunculus, a Wizard is able to better recall forgotten details of their studies.\nThe owner of a Lore Familiar does not randomly generate their spells. Instead, they may choose which spells they know from their chosen lore (including that lore's signature spell)."
+    },
+    {
+      "id": "scroll-of-disruption",
+      "name": "Scroll of Disruption",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.\nOnce per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "tome-of-spellcraft",
+      "name": "Tome of Spellcraft",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.\nOnce per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "staff-of-quietude",
+      "name": "Staff of Quietude",
+      "points": 35,
+      "category": "arcane_item",
+      "description": "With a gesture, the bearer of the Staff of Quietude calms the Winds of Magic, causing spells and conjurations to dissipate into the other."
+    },
+    {
+      "id": "wand-of-jet",
+      "name": "Wand of Jet",
+      "points": 45,
+      "category": "arcane_item",
+      "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
+      "restrictions": "Wand of Jet(Arcane Item)45 pointsCarved from brittle jet, this wand refines a Wizard's power, but is easily broken.The bearer of the Wand of Jet may apply a +1 modifier to any of their Casting or Disp"
+    },
+    {
+      "id": "scroll-of-transmogrification",
+      "name": "Scroll of Transmogrification*",
+      "points": 50,
+      "category": "arcane_item",
+      "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
+      "restrictions": "Scroll of Transmogrification*(Arcane Item)50 pointsFor a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!Single use. The bearer may use this scroll inste"
+    },
+    {
+      "id": "feedback-scroll",
+      "name": "Feedback Scroll",
+      "points": 60,
+      "category": "arcane_item",
+      "description": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items.\nWhen read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "restrictions": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items."
+    },
+    {
+      "id": "monster-hunters-tapestry",
+      "name": "Monster Hunter's Tapestry",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "Those who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.\nEnemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry.",
+      "restrictions": "Monster Hunter's Tapestry(Magic Standard)25 pointsThose who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.Ene"
+    },
+    {
+      "id": "the-blazing-banner",
+      "name": "The Blazing Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.\nA unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
+      "restrictions": "The Blazing Banner(Magic Standard)25 pointsAn eternal flame flickers about the weapons of those that march beneath the Blazing Banner.A unit carrying the Blazing Banner gains the Flaming Attacks speci"
+    },
+    {
+      "id": "war-banner",
+      "name": "War Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "A proud banner of great age. Those that march beneath the War Banner fight with grim resolve.\nWhen calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point.",
+      "restrictions": "War Banner(Magic Standard)25 pointsA proud banner of great age. Those that march beneath the War Banner fight with grim resolve.When calculating its combat result, a unit carrying the War Banner may c"
+    },
+    {
+      "id": "banner-of-swirling-wind",
+      "name": "Banner of Swirling Wind",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.\nAny enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
+      "restrictions": "Banner of Swirling Wind(Magic Standard)30 pointsGale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.Any enemy model that shoots at"
+    },
+    {
+      "id": "rampaging-banner",
+      "name": "Rampaging Banner",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "As a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.\nWhen a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll.",
+      "restrictions": "Rampaging Banner(Magic Standard)30 pointsAs a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.When a unit carrying the Rampaging Banner declares a charge"
+    },
+    {
+      "id": "razor-standard",
+      "name": "Razor Standard",
+      "points": 40,
+      "category": "magic_standard",
+      "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.\nA unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
+      "restrictions": "Razor Standard(Magic Standard)40 pointsHung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.A unit carrying the Razor Standard gains the Armour Ba"
+    },
+    {
+      "id": "banner-of-iron-resolve",
+      "name": "Banner of Iron Resolve",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer.\nNo regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.\nA unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
+      "restrictions": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer."
+    },
+    {
+      "id": "banner-of-the-steadfast",
+      "name": "Banner of the Steadfast",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Woven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold their ground no matter the odds.",
+      "restrictions": "Banner of the Steadfast(Magic Standard)50 pointsWoven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold t"
+    },
+    {
+      "id": "totem-of-wrath",
+      "name": "Totem of Wrath",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.\nDuring a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
+      "restrictions": "Totem of Wrath(Magic Standard)50 pointsCruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.During a turn in which it char"
+    },
+    {
+      "id": "favour_of_the_gods",
+      "name": "Favour of the Gods",
+      "type": "enchanted_item",
+      "source": "ravening_hordes",
+      "points": 5,
+      "extremely_common": true,
+      "description": "Single use. The bearer of a Favour of the Gods may re-roll the D6 when rolling on the Gaze of the Gods table."
+    },
+    {
+      "id": "spell_familiar",
+      "name": "Spell Familiar",
+      "type": "arcane_item",
+      "source": "ravening_hordes",
+      "points": 15,
+      "extremely_common": true,
+      "restrictions": "0-1 per Wizard.",
+      "description": "The owner of a Spell Familiar knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry. Note that this does not increase the Wizard's Level."
+    },
+    {
+      "id": "brazen_collar",
+      "name": "Brazen Collar",
+      "type": "talisman",
+      "source": "ravening_hordes",
+      "points": 20,
+      "extremely_common": true,
+      "description": "The wearer of a Brazen Collar has Magic Resistance (-2)."
+    },
+    {
+      "id": "helm_of_many_eyes",
+      "name": "Helm of Many Eyes",
+      "type": "enchanted_item",
+      "source": "ravening_hordes",
+      "points": 20,
+      "description": "Gives its wearer (but not their mount) the Strike First special rule. However, due to the confusing images the helm conjures up, its wearer is also subject to the Stupidity special rule."
+    },
+    {
+      "id": "icon_of_darkness",
+      "name": "Icon of Darkness",
+      "type": "magic_standard",
+      "source": "arcane_journal",
+      "points": 20,
+      "description": "Any enemy model that targets a unit carrying the Icon of Darkness during the Shooting phase suffers an additional -1 To Hit modifier."
+    },
+    {
+      "id": "spellthieving_sword",
+      "name": "Spellthieving Sword",
+      "type": "magic_weapon",
+      "source": "ravening_hordes",
+      "points": 20,
+      "description": "Combat, S, AP -1; Magical Attacks. Any enemy Wizard that suffers one or more unsaved wounds from the Spellthieving Sword immediately forgets a single spell (determined at random) for the remainder of the game."
+    },
+    {
+      "id": "banner_of_the_baying_hound",
+      "name": "Banner of the Baying Hound",
+      "type": "magic_standard",
+      "source": "arcane_journal",
+      "points": 25,
+      "restrictions": "May only be taken by a model in a Heralds of Darkness Army of Infamy.",
+      "description": "A unit carrying the Banner of the Baying Hound gains the Vanguard special rule."
+    },
+    {
+      "id": "sea_raiders_crest",
+      "name": "Sea Raider's Crest",
+      "type": "magic_standard",
+      "source": "arcane_journal",
+      "points": 25,
+      "restrictions": "May only be taken by a model in a Wolves of the Sea Army of Infamy.",
+      "description": "A unit carrying the Sea Raider's Crest gains the Fear special rule. If the unit already has the Fear special rule, it gains the Terror special rule."
+    },
+    {
+      "id": "taskmasters_scourge",
+      "name": "Taskmaster's Scourge",
+      "type": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 25,
+      "restrictions": "Models whose troop type is 'infantry' only.",
+      "description": "Combat, S, AP -1; Extra Attacks (1), Magical Attacks. During the Command sub-phase of their turn, the wielder of the Taskmaster's Scourge may attempt to urge those around them into battle with a lash of their whip by making a Leadership test (using their own Leadership). If the test is passed, until your next Start of Turn sub-phase, this character and any unit they have joined gain a +D3 modifier to their Movement characteristic (to a maximum of 10)."
+    },
+    {
+      "id": "chieftains_blade",
+      "name": "Chieftain's Blade",
+      "type": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 30,
+      "restrictions": "May only be taken by a model in a Wolves of the Sea Army of Infamy. Whilst engaged in a challenge, the wielder has a +1 modifier to their rolls To Hit.",
+      "description": "Combat, S+1, AP -1; Armour Bane (1), Magical Attacks."
+    },
+    {
+      "id": "pendant_of_damnation",
+      "name": "Pendant of Damnation",
+      "type": "enchanted_item",
+      "source": "ravening_hordes",
+      "points": 30,
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "description": "The bearer of the Pendant of Damnation gains a +1 modifier to their Attacks characteristic for every Wound they lose."
+    },
+    {
+      "id": "banner_of_rage",
+      "name": "Banner of Rage",
+      "type": "magic_standard",
+      "source": "ravening_hordes",
+      "points": 35,
+      "description": "A unit carrying the Banner of Rage gains the Frenzy special rule. However, unlike other Frenzied units, this unit cannot lose this special rule."
+    },
+    {
+      "id": "daemon_forged_barding",
+      "name": "Daemon-Forged Barding",
+      "type": "enchanted_item",
+      "source": "arcane_journal",
+      "points": 35,
+      "restrictions": "May only be taken by a model whose troop type is 'cavalry' in a Heralds of Darkness Army of Infamy.",
+      "description": "On a turn in which the bearer charged, their mount and all mounts in any unit they have joined have a +1 modifier to their Attacks characteristics."
+    },
+    {
+      "id": "dagger_of_the_dark_pantheon",
+      "name": "Dagger of the Dark Pantheon",
+      "type": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 35,
+      "description": "Combat, S, AP -2; Magical Attacks. For each Wound an enemy unit loses as a result of an attack made with the Dagger of the Dark Pantheon, its wielder may apply a +1 modifier to their next Casting or Dispel roll."
+    },
+    {
+      "id": "talisman_of_the_soaring_eagle",
+      "name": "Talisman of the Soaring Eagle",
+      "type": "talisman",
+      "source": "arcane_journal",
+      "points": 35,
+      "description": "The bearer of the Talisman of the Soaring Eagle has the Magic Resistance (-2) special rule. In addition, the bearer has a 5+ Ward save against any wounds suffered that were caused by an attack that has the Magical Attacks special rule."
+    },
+    {
+      "id": "tome_of_the_dark_gods",
+      "name": "Tome of the Dark Gods",
+      "type": "arcane_item",
+      "source": "arcane_journal",
+      "points": 35,
+      "restrictions": "Models with the Mark of Chaos Undivided only.",
+      "description": "When generating their spells, the bearer of the Tome of the Dark Gods may discard any number of their randomly generated spells. For each spell they discard, they may select any spell from the Lore of Chaos as if they had the corresponding Mark of Chaos."
+    },
+    {
+      "id": "blasted_standard",
+      "name": "Blasted Standard",
+      "type": "magic_standard",
+      "source": "ravening_hordes",
+      "points": 40,
+      "description": "A unit carrying the Blasted Standard may re-roll any rolls of a natural 1 when making an Armour Save roll against wounds suffered during the Shooting phase."
+    },
+    {
+      "id": "crimson_armour_of_dargan",
+      "name": "Crimson Armour of Dargan",
+      "type": "magic_armour",
+      "source": "ravening_hordes",
+      "points": 40,
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "description": "Heavy armour. In addition, the wearer is immune to the Multiple Wounds (X) special rule. If the wearer suffers an unsaved wound from an attack with this special rule, they lose a single Wound."
+    },
+    {
+      "id": "crown_of_everlasting_conquest",
+      "name": "Crown of Everlasting Conquest",
+      "type": "talisman",
+      "source": "ravening_hordes",
+      "points": 40,
+      "description": "The wearer of the Crown of Everlasting Conquest gains the Regenerate (5+) special rule."
+    },
+    {
+      "id": "filth_mace",
+      "name": "Filth Mace",
+      "type": "magic_weapon",
+      "source": "ravening_hordes",
+      "points": 40,
+      "description": "Combat, S+1, AP -1; Magical Attacks. Any enemy model that suffers one or more unsaved wounds from the Filth Mace must immediately make a Toughness test. If this test is failed, the wounded model suffers a -1 modifier to its Toughness characteristic (to a minimum of 1) until the end of the turn."
+    },
+    {
+      "id": "mighty_serpents_scalemail",
+      "name": "Mighty Serpent's Scalemail",
+      "type": "magic_armour",
+      "source": "arcane_journal",
+      "points": 40,
+      "restrictions": "May only be taken by models in a Wolves of the Sea Army of Infamy.",
+      "description": "Heavy armour. In addition, its wearer gains the Strike First special rule."
+    },
+    {
+      "id": "rod_of_the_damned",
+      "name": "Rod of the Damned",
+      "type": "enchanted_item",
+      "source": "arcane_journal",
+      "points": 40,
+      "description": "The bearer of the Rod of the Damned may cast The Summoning spell from the Lore of Daemonology as a Bound spell with a Power Level of 2."
+    },
+    {
+      "id": "bloodskull_pendant",
+      "name": "Bloodskull Pendant",
+      "type": "enchanted_item",
+      "source": "arcane_journal",
+      "points": 45,
+      "restrictions": "Models whose troop type is 'infantry' only.",
+      "description": "Instead of attacking normally, the bearer of the Bloodskull Pendant may choose to inflict a single Strength 8 hit on every enemy model it is in base contact with, each with an AP of -1. These hits have the Killing Blow special rule."
+    },
+    {
+      "id": "chaos_runesword",
+      "name": "Chaos Runesword",
+      "type": "magic_weapon",
+      "source": "ravening_hordes",
+      "points": 45,
+      "description": "Combat, S+1, AP -1; Magical Attacks. The wielder of the Chaos Runesword has a +1 modifier to their Weapon Skill and Initiative characteristics."
+    },
+    {
+      "id": "talisman_of_the_carrion_crow",
+      "name": "Talisman of the Carrion Crow",
+      "type": "talisman",
+      "source": "arcane_journal",
+      "points": 45,
+      "description": "The bearer of the Talisman of the Carrion Crow has the Regeneration (5+) and Poisoned Attacks special rules."
+    },
+    {
+      "id": "banner_of_the_dark_powers",
+      "name": "Banner of the Dark Powers",
+      "type": "magic_standard",
+      "source": "arcane_journal",
+      "points": 50,
+      "description": "A unit carrying the Banner of the Dark Powers gains the Magic Resistance (-3) special rule."
+    },
+    {
+      "id": "daemonic_platemail",
+      "name": "Daemonic Platemail",
+      "type": "magic_armour",
+      "source": "arcane_journal",
+      "points": 50,
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "description": "Full plate armour. In addition, its wearer improves their Toughness and Initiative characteristics by 1."
+    },
+    {
+      "id": "grimoire_of_ogvold",
+      "name": "Grimoire of Ogvold",
+      "type": "arcane_item",
+      "source": "arcane_journal",
+      "points": 50,
+      "description": "Rather than randomly generating the spells they know, and regardless of their Level of Wizardry, the bearer of the Grimoire of Ogvold knows all seven spells from their chosen Lore of Magic (including the signature spell). However, they can only cast a number of spells equal to their Level of Wizardry per turn."
+    },
+    {
+      "id": "infernal_puppet",
+      "name": "Infernal Puppet",
+      "type": "arcane_item",
+      "source": "ravening_hordes",
+      "points": 50,
+      "description": "Unless the owner of the Infernal Puppet is fleeing or engaged in combat, they may use it whenever an enemy Wizard that is within 24\" of them makes a Casting roll. If they do so, the enemy Wizard must roll an extra D6 and discard the highest result."
+    },
+    {
+      "id": "obsidian_dread_glaive",
+      "name": "Obsidian Dread-Glaive",
+      "type": "magic_weapon",
+      "source": "arcane_journal",
+      "points": 55,
+      "restrictions": "May only be taken by a model in a Heralds of Darkness Army of Infamy.",
+      "description": "Combat, S+2, AP -1; Armour Bane (1), Killing Blow, Magical Attacks, Requires Two Hands, Strikes Last."
+    },
+    {
+      "id": "sceptre_of_power",
+      "name": "Sceptre of Power",
+      "type": "arcane_item",
+      "source": "arcane_journal",
+      "points": 55,
+      "description": "The bearer of the Sceptre of Power may apply a +1 modifier to any of their Casting or Dispel rolls. However, should they roll any natural double when making a Casting or Dispel roll, the bearer suffers a single Strength 10 hit with an AP of -3 after the effects of the roll have been resolved."
+    },
+    {
+      "id": "skull_of_katam",
+      "name": "Skull of Katam",
+      "type": "arcane_item",
+      "source": "ravening_hordes",
+      "points": 60,
+      "description": "The bearer of the Skull of Katam and any other Wizard within 3\" (friend or foe) may apply a +1 modifier to any Casting roll they make. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+    },
+    {
+      "id": "doom_totem",
+      "name": "Doom Totem",
+      "type": "magic_standard",
+      "source": "ravening_hordes",
+      "points": 65,
+      "description": "All enemy units that can draw a line of sight to the model carrying the Doom Totem suffer a -1 modifier to their Leadership characteristic."
+    },
+    {
+      "id": "armour_of_the_damned",
+      "name": "Armour of the Damned",
+      "type": "magic_armour",
+      "source": "ravening_hordes",
+      "points": 70,
+      "description": "Full plate armour. In addition, during the Combat phase, enemy models must re-roll successful rolls To Hit made against the wearer."
+    },
+    {
+      "id": "banner_of_the_gods",
+      "name": "Banner of the Gods",
+      "type": "magic_standard",
+      "source": "ravening_hordes",
+      "points": 75,
+      "description": "A unit carrying the Banner of the Gods ignores all negative modifiers to its Leadership characteristic."
+    },
+    {
+      "id": "daemonsword",
+      "name": "Daemonsword",
+      "type": "magic_weapon",
+      "source": "ravening_hordes",
+      "points": 75,
+      "description": "Combat, S+D3, AP -2; Extra Attacks (+D3), Magical Attacks, Strike First. Every roll of a natural 1 made when rolling To Hit with this weapon results in a hit which must be resolved against the unit the wielder has joined, rather than the enemy. If the wielder has not joined a unit, this hit must be resolved against the wielder."
+    }
+  ],
+  "lore_of_chaos": [
+    {
+      "id": "winds_of_chaos",
+      "name": "Winds of Chaos",
+      "type": "Hex",
+      "casting_value": "7+/9+",
+      "range": "21\"",
+      "mark": "Mark of Chaos Undivided",
+      "is_signature": true,
+      "effect": "If this spell is cast with a casting result of 7 or more, the target enemy unit suffers a -1 modifier to its Movement characteristic (to a minimum of 1). If this spell is cast with a casting result of 9 or more, the target enemy unit suffers a -2 modifier to its Movement characteristic (to a minimum of 1). This spell lasts until your next Start of Turn sub-phase."
+    },
+    {
+      "id": "acquiescence",
+      "name": "Acquiescence",
+      "type": "Hex",
+      "casting_value": "6+",
+      "range": "12\"",
+      "mark": "Mark of Slaanesh",
+      "effect": "Until the end of the Combat phase, the target enemy unit becomes subject to the Strike Last special rule."
+    },
+    {
+      "id": "fleshy_abundance",
+      "name": "Fleshy Abundance",
+      "type": "Enchantment",
+      "casting_value": "7+",
+      "range": "Self",
+      "mark": "Mark of Nurgle",
+      "remains_in_play": true,
+      "effect": "Whilst this spell is in play, the caster and any unit they have joined gain a +1 modifier to their Toughness characteristic (to a maximum of 7)."
+    },
+    {
+      "id": "blue_fire",
+      "name": "Blue Fire",
+      "type": "Magic Missile",
+      "casting_value": "9+",
+      "range": "18\"",
+      "mark": "Mark of Tzeentch",
+      "effect": "The target enemy unit suffers D6+3 Strength 4 hits, each with an AP of -2 and with the Flaming Attacks special rule."
+    }
+  ],
+  "knightly_virtues": [],
+  "chivalrous_vows": [],
+  "lore_of_the_lady": []
+}

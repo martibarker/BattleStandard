@@ -1,0 +1,4867 @@
+{
+  "id": "orc-and-goblin-tribes",
+  "name": "Orc & Goblin Tribes",
+  "sources": [
+    "Warhammer: The Old World — Ravening Hordes (2024)",
+    "Arcane Journal: Orc & Goblin Tribes (2024)"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army",
+      "name": "Orc & Goblin Tribes Grand Army",
+      "source": "ravening_hordes",
+      "special_abilities": [],
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Black Orc Warboss, Orc Warboss or Orc Weirdnob per 1,000 points; Black Orc Bigbosses, Orc Bigbosses, Orc Weirdboys, Goblin Bosses, Goblin Shamans, Night Goblin Bosses and Night Goblin Shamans"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "orc_mobs",
+            "goblin_mobs",
+            "snotling_mobs",
+            "goblin_spider_rider_mobs",
+            "goblin_wolf_rider_mobs",
+            "night_goblin_mobs",
+            "night_goblin_squig_herds",
+            "black_orc_mobs"
+          ],
+          "notes": "Orc Mobs, Goblin Mobs, Snotling Mobs, Goblin Spider Rider Mobs and Goblin Wolf Rider Mobs; 0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken; 0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken; If your General is a Black Orc Boss, 0-1 Black Orc Mob may be taken as a Core choice"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "night_goblin_mobs"
+          ],
+          "notes": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "night_goblin_squig_herds"
+          ],
+          "notes": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "eligible_unit_ids": [
+            "black_orc_mobs",
+            "troll_mobs",
+            "orc_boar_boy_mobs",
+            "orc_boar_chariots",
+            "goblin_wolf_chariots",
+            "snotling_pump_wagons",
+            "night_goblin_squig_hopper_mobs",
+            "goblin_bolt_throwas"
+          ],
+          "notes": "Black Orc Mobs, Troll Mobs, Orc Boar Boy Mobs, Orc Boar Chariots, Goblin Wolf Chariots and Snotling Pump Wagons; 0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken; 0-2 Goblin Bolt Throwas per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "night_goblin_squig_hopper_mobs"
+          ],
+          "notes": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "goblin_bolt_throwas"
+          ],
+          "notes": "0-2 Goblin Bolt Throwas per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "arachnarok_spiders",
+            "giants",
+            "mangler_squigs",
+            "goblin_rock_lobbers",
+            "doom_diver_catapults",
+            "troll_hag"
+          ],
+          "notes": "Arachnarok Spiders and Giants; 0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken; 0-1 Goblin Rock Lobber per 1,000 points; 0-1 Doom Diver Catapult per 1,000 points; 0-1 Troll Hag if army includes one or more Troll Mobs"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "mangler_squigs"
+          ],
+          "notes": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "goblin_rock_lobbers"
+          ],
+          "notes": "0-1 Goblin Rock Lobber per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "doom_diver_catapults"
+          ],
+          "notes": "0-1 Doom Diver Catapult per 1,000 points"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20
+        },
+        {
+          "category": "allies",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Any Orc & Goblin Tribes Army of Infamy composition list; Warriors of Chaos (Uneasy); Beastmen Brayherds (Uneasy); Tomb Kings of Khemri (Suspicious)"
+        }
+      ]
+    },
+    {
+      "id": "nomadic_waaagh",
+      "name": "Orc & Goblin Tribes — Nomadic Waaagh!",
+      "source": "arcane_journal",
+      "special_abilities": [
+        {
+          "name": "Cunning Hunters",
+          "description": "Wolf Rider Mobs can have Ambushers special rule; Goblin Bosses/Shamans on Giant Wolf also get Ambushers",
+          "units_affected": [
+            "goblin_wolf_rider_mobs",
+            "goblin_warboss",
+            "goblin_bigboss",
+            "goblin_oddnob",
+            "goblin_oddgit"
+          ]
+        },
+        {
+          "name": "Hit 'em Fast and Hit 'em 'Ard!",
+          "description": "Orc models mounted on War Boar gain Impact Hits (1); 0-1 Boar Boy Mob per 1,000 pts may have Vanguard",
+          "units_affected": [
+            "orc_boar_boy_mobs",
+            "orc_warboss",
+            "orc_bigboss",
+            "orc_oddnob",
+            "orc_oddgit"
+          ]
+        },
+        {
+          "name": "Hunting Packs",
+          "description": "Wolf Rider Mobs can exchange Open Order/Skirmishers with Close Order/Horde",
+          "units_affected": [
+            "goblin_wolf_rider_mobs"
+          ]
+        },
+        {
+          "name": "On Da Move",
+          "description": "All characters must be mounted; effects adjusted for mounted status",
+          "units_affected": []
+        }
+      ],
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Black Orc Warboss or Black Orc Bigboss per Black Orc Boar Chariot; 0-1 Orc Warboss or Orc Weirdnob per 1,000 points; Orc Bigbosses, Orc Weirdboys, Goblin Bosses and Goblin Shamans. All characters must be mounted."
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "goblin_wolf_rider_mobs",
+            "goblin_wolf_chariots",
+            "orc_boar_boy_mobs",
+            "black_orc_boar_chariots"
+          ],
+          "notes": "Goblin Wolf Rider Mobs and Goblin Wolf Chariots; If your General is an Orc Boss, 0-1 Boar Boy Mob may be taken as a Core choice; If your General is a Black Orc Boss, 0-1 Black Orc Boar Chariot may be taken as a Core choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "eligible_unit_ids": [
+            "orc_boar_boy_mobs",
+            "orc_boar_chariots",
+            "snotling_pump_wagons"
+          ],
+          "notes": "Orc Boar Boy Mobs, Orc Boar Chariots and Snotling Pump Wagons"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "black_orc_boar_chariots",
+            "giants"
+          ],
+          "notes": "Black Orc Boar Chariots and Giants"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "badlands_ogre_bulls",
+            "bonegrinder_giants"
+          ],
+          "notes": "Badlands Ogre Bulls; 0-1 Bonegrinder Giant"
+        }
+      ]
+    },
+    {
+      "id": "troll_horde",
+      "name": "Orc & Goblin Tribes — Troll Horde",
+      "source": "arcane_journal",
+      "special_abilities": [
+        {
+          "name": "Enhanced Regeneration",
+          "description": "Models with Regeneration may re-roll failed regen saves vs non-magical attacks",
+          "units_affected": [
+            "troll_mobs",
+            "troll_hag"
+          ]
+        },
+        {
+          "name": "Oil Dis Waw!",
+          "description": "Friendly Troll Mobs within command range of Shaman/Troll Hag can use that character's Leadership instead",
+          "units_affected": [
+            "troll_mobs"
+          ]
+        },
+        {
+          "name": "Troll Tongue",
+          "description": "Shamans in Troll Horde may know spells from Lore of Troll Magic in addition to normal lores",
+          "units_affected": [
+            "orc_weirdboy",
+            "orc_weirdnob",
+            "goblin_oddgit",
+            "goblin_oddnob"
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Orc Warboss or Orc Weirdnob per 1,000 points; Orc Bigbosses, Orc Weirdboys, Goblin Bosses, Goblin Shamans and Troll Hags"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 33,
+          "eligible_unit_ids": [
+            "troll_mobs",
+            "orc_mobs",
+            "goblin_mobs",
+            "goblin_spider_rider_mobs",
+            "goblin_wolf_rider_mobs"
+          ],
+          "notes": "1 Troll Mob per 1,000 points; 0-1 additional Troll Mob may be taken as a Core choice per Troll Hag taken; Orc Mobs, Goblin Mobs, Goblin Spider Rider Mobs and Goblin Wolf Rider Mobs"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "troll_mobs"
+          ],
+          "notes": "1 Troll Mob per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "eligible_unit_ids": [
+            "troll_mobs",
+            "goblin_wolf_chariots",
+            "orc_boar_boy_mobs",
+            "orc_boar_chariots"
+          ],
+          "notes": "Troll Mobs and Goblin Wolf Chariots; 0-1 Orc Boar Boy Mobs per 1,000 points; 0-1 Orc Boar Chariots per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "orc_boar_boy_mobs"
+          ],
+          "notes": "0-1 Orc Boar Boy Mobs per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "orc_boar_chariots"
+          ],
+          "notes": "0-1 Orc Boar Chariots per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "giants"
+          ],
+          "notes": "Giants"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "badlands_ogre_bulls",
+            "bonegrinder_giants"
+          ],
+          "notes": "Badlands Ogre Bulls; 0-1 Bonegrinder Giant"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "black_orc_warboss",
+      "name": "Black Orc Warboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 135,
+      "base_size": "30x30mm",
+      "troop_type": "Heavy infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 7,
+        "BS": 3,
+        "S": 5,
+        "T": 5,
+        "W": 3,
+        "I": 6,
+        "A": 4,
+        "Ld": 9
+      },
+      "equipment": [
+        "Hand weapon",
+        "Full plate armour"
+      ],
+      "special_rules": [
+        "choppas",
+        "da_boyz",
+        "furious_charge",
+        "ignore_panic",
+        "quell_impetuosity",
+        "rallying_cry",
+        "waaagh"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "notes": [
+        "Furious Charge does not apply to this model's mount (should it have one)"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "black_orc_bigboss",
+      "name": "Black Orc Bigboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 75,
+      "base_size": "30x30mm",
+      "troop_type": "Heavy infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 6,
+        "BS": 3,
+        "S": 4,
+        "T": 5,
+        "W": 2,
+        "I": 5,
+        "A": 3,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon",
+        "Full plate armour"
+      ],
+      "special_rules": [
+        "choppas",
+        "da_boyz",
+        "furious_charge",
+        "ignore_panic",
+        "quell_impetuosity",
+        "rallying_cry",
+        "waaagh"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "notes": [
+        "Furious Charge does not apply to this model's mount (should it have one)",
+        "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orc_warboss",
+      "name": "Orc Warboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 110,
+      "base_size": "30x30mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 6,
+        "BS": 2,
+        "S": 5,
+        "T": 5,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "special_rules": [
+        "choppas",
+        "furious_charge",
+        "ignore_goblin_panic",
+        "impetuous",
+        "rallying_cry",
+        "waaagh",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Replace light armour with heavy armour",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Frenzy special rule (0-1 per 1,000 pts)",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Warpaint (Frenzied Orc Warboss only)",
+          "cost": 5,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "notes": [
+        "Furious Charge does not apply to this model's mount (should it have one)"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orc_bigboss",
+      "name": "Orc Bigboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 55,
+      "base_size": "30x30mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 5,
+        "BS": 2,
+        "S": 4,
+        "T": 5,
+        "W": 2,
+        "I": 4,
+        "A": 3,
+        "Ld": 7
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "special_rules": [
+        "choppas",
+        "furious_charge",
+        "ignore_goblin_panic",
+        "impetuous",
+        "rallying_cry",
+        "waaagh",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Replace light armour with heavy armour",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Frenzy special rule (0-1 per 1,000 pts)",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Warpaint (Frenzied Orc Bigboss only)",
+          "cost": 5,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "notes": [
+        "Furious Charge does not apply to this model's mount (should it have one)",
+        "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orc_weirdnob",
+      "name": "Orc Weirdnob",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 140,
+      "base_size": "30x30mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 2,
+        "S": 4,
+        "T": 5,
+        "W": 3,
+        "I": 4,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "waaagh_magic"
+        ]
+      },
+      "special_rules": [
+        "choppas",
+        "ignore_goblin_panic",
+        "lore_of_gork",
+        "mob_rule",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Be a Level 4 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Frenzy special rule (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Warpaint (Frenzied Orc Weirdnob only)",
+          "cost": 5,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "notes": [
+        "Mob Rule: +1 to Casting rolls when joined to an Orc unit (Orcs or Black Orcs) with Unit Strength 10+"
+      ]
+    },
+    {
+      "id": "orc_weirdboy",
+      "name": "Orc Weirdboy",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 65,
+      "base_size": "30x30mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 2,
+        "S": 3,
+        "T": 4,
+        "W": 2,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "waaagh_magic"
+        ]
+      },
+      "special_rules": [
+        "choppas",
+        "ignore_goblin_panic",
+        "lore_of_gork",
+        "mob_rule",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Be a Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Frenzy special rule (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Warpaint (Frenzied Orc Weirdboy only)",
+          "cost": 5,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "notes": [
+        "Mob Rule: +1 to Casting rolls when joined to an Orc unit (Orcs or Black Orcs) with Unit Strength 10+"
+      ]
+    },
+    {
+      "id": "goblin_warboss",
+      "name": "Goblin Warboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 60,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 5,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Ld": 7
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "fear_of_elves",
+        "impetuous",
+        "rallying_cry",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Light armour",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "notes": [
+        "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goblin_bigboss",
+      "name": "Goblin Bigboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 35,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 4,
+        "W": 2,
+        "I": 4,
+        "A": 3,
+        "Ld": 6
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "fear_of_elves",
+        "impetuous",
+        "rallying_cry",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Light armour",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "notes": [
+        "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goblin_oddnob",
+      "name": "Goblin Oddnob",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 135,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 3,
+        "I": 4,
+        "A": 2,
+        "Ld": 7
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "elementalism",
+          "waaagh_magic"
+        ]
+      },
+      "special_rules": [
+        "fear_of_elves",
+        "lore_of_mork",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Be a Level 4 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ]
+    },
+    {
+      "id": "goblin_oddgit",
+      "name": "Goblin Oddgit",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 60,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "elementalism",
+          "waaagh_magic"
+        ]
+      },
+      "special_rules": [
+        "fear_of_elves",
+        "lore_of_mork",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Be a Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "condition": "See character mounts"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ]
+    },
+    {
+      "id": "night_goblin_warboss",
+      "name": "Night Goblin Warboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 55,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 5,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Ld": 6
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "fear_of_elves",
+        "hatred_dwarfs",
+        "rallying_cry",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Light armour",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount on a Giant Cave Squig",
+          "cost": 25,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ],
+      "notes": [
+        "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_goblin_bigboss",
+      "name": "Night Goblin Bigboss",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 30,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 4,
+        "A": 3,
+        "Ld": 5
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "fear_of_elves",
+        "hatred_dwarfs",
+        "rallying_cry",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Cavalry spear (if appropriately mounted)",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Shield",
+          "cost": 2,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Light armour",
+          "cost": 3,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Mount on a Giant Cave Squig",
+          "cost": 25,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "notes": [
+        "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_goblin_oddnob",
+      "name": "Night Goblin Oddnob",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 130,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 3,
+        "I": 4,
+        "A": 2,
+        "Ld": 6
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "illusion",
+          "waaagh_magic"
+        ]
+      },
+      "special_rules": [
+        "fear_of_elves",
+        "hatred_dwarfs",
+        "lore_of_mork",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Be a Level 4 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100
+        }
+      ]
+    },
+    {
+      "id": "night_goblin_oddgit",
+      "name": "Night Goblin Oddgit",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 55,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 3,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "illusion",
+          "waaagh_magic"
+        ]
+      },
+      "special_rules": [
+        "fear_of_elves",
+        "hatred_dwarfs",
+        "lore_of_mork",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Be a Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ]
+    },
+    {
+      "id": "orc_bully",
+      "name": "Orc Bully",
+      "source": "ravening_hordes",
+      "category": "character",
+      "unit_size": "1",
+      "points": 10,
+      "base_size": "30x30mm",
+      "troop_type": "Regular infantry (character)",
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 2,
+        "Ld": 7
+      },
+      "equipment": [
+        "Hand weapon",
+        "Whip"
+      ],
+      "special_rules": [
+        "bully",
+        "choppas"
+      ],
+      "notes": [
+        "Special character that accompanies a war machine; cannot leave it; friendly war machines within Command range may use its Leadership"
+      ]
+    },
+    {
+      "id": "troll_hag",
+      "name": "Troll Hag",
+      "source": "arcane_journal",
+      "category": "character",
+      "unit_size": "1",
+      "points": 235,
+      "base_size": "60x100mm",
+      "troop_type": "Behemoth (character)",
+      "stats": {
+        "M": 5,
+        "WS": 2,
+        "BS": 2,
+        "S": 6,
+        "T": 5,
+        "W": 6,
+        "I": 2,
+        "A": 3,
+        "Ld": 8
+      },
+      "equipment": [
+        "Gnarled stump (hand weapon)",
+        "Troll vomit",
+        "Swamp breath",
+        "Scaly skin (heavy armour)"
+      ],
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "troll_magic"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "flammable",
+        "immune_to_psychology",
+        "indiscriminate_hunger",
+        "large_target",
+        "motherly_love",
+        "regeneration_5",
+        "slimy_shanks",
+        "stomp_attacks_d6",
+        "stupidity",
+        "terror",
+        "timmm_berrr",
+        "unbreakable"
+      ],
+      "options": [
+        {
+          "name": "Be a Level 2 Wizard",
+          "cost": 35,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50
+        }
+      ],
+      "notes": [
+        "Troll Mother: any Grand Army list including one or more Troll Mobs may include 0-1 Troll Hag as a Rare choice",
+        "Indiscriminate Hunger: may make a special attack in combat to deal 1 Wound to an enemy unit; recovers a Wound for each Wound caused this way",
+        "Motherly Love: instead of normal attacks, roll on Motherly Love table (D6)"
+      ]
+    },
+    {
+      "id": "kiknik_toofsnatcha",
+      "name": "Kiknik Toofsnatcha",
+      "source": "arcane_journal",
+      "category": "character",
+      "is_named_character": true,
+      "unit_size": "1",
+      "points": 105,
+      "base_size": "25x50mm",
+      "troop_type": "Light Cavalry (named character)",
+      "stats": {
+        "M": 4,
+        "WS": 5,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 3,
+        "I": 5,
+        "A": 4,
+        "Ld": 8
+      },
+      "mount": {
+        "name": "Chompa",
+        "stats": {
+          "M": 9,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 2,
+          "Ld": "-"
+        }
+      },
+      "equipment": [
+        "Da Boss's Trophy Rack",
+        "Da Skull Smasha",
+        "Cavalry spear",
+        "Shield",
+        "Light armour",
+        "Claws and fangs (Chompa)"
+      ],
+      "special_rules": [
+        "all_sneaky_like",
+        "ambushers",
+        "armoured_hide_1_chompa",
+        "armoured_hide_1",
+        "chariot_runners",
+        "fast_cavalry",
+        "fear_of_elves",
+        "impetuous",
+        "it_and_run",
+        "rallying_cry",
+        "swiftstride",
+        "warband"
+      ],
+      "notes": [
+        "Must be fielded as presented; General of any army using the Nomadic Waaagh! composition must be Kiknik",
+        "All Sneaky Like: 0-1 Goblin Wolf Rider Mob in same list may have Ambushers for free; +1/-1 to rolls for Goblin Wolf Rider Mobs with Ambushers",
+        "It & Run: if wins a round of combat, may choose to Fall Back in Good Order instead of pursuing",
+        "Da Boss's Trophy Rack: causes Fear and +1 combat result when Kiknik charged that turn",
+        "Da Skull Smasha: two profiles (Hammer: S+2, AP-1, Armour Bane 2, Magical Attacks; Pick: S, AP-2, Armour Bane 2, Magical Attacks, Multiple Wounds 2); choose profile at start of each combat"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ogdruz_swampdigga",
+      "name": "Ogdruz Swampdigga",
+      "source": "arcane_journal",
+      "category": "character",
+      "is_named_character": true,
+      "unit_size": "1",
+      "points": 195,
+      "base_size": "30x30mm",
+      "troop_type": "Regular Infantry (named character)",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 2,
+        "S": 4,
+        "T": 5,
+        "W": 3,
+        "I": 4,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipment": [
+        "Bog-wood staff",
+        "Troll-hide shawl",
+        "Lore Familiar"
+      ],
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "elementalism",
+          "troll_magic"
+        ]
+      },
+      "special_rules": [
+        "choppas",
+        "da_troll_calla",
+        "ignore_goblin_panic",
+        "protect_da_boss",
+        "syphoned_strength",
+        "warband"
+      ],
+      "notes": [
+        "Trollhide Shawl: improves armour value by 1, Regeneration (5+) and Flammable",
+        "Da Troll Calla: friendly Troll Mobs within Command range may use his Leadership",
+        "Protect Da Boss: cannot be targeted by shooting or spells if within 3\" of a friendly Troll Mob unless closest target",
+        "Syphoned Strength: +1 to Casting rolls when within 3\" of a friendly Troll Mob with Unit Strength 6+ that is not fleeing",
+        "Bog-wood Staff: S+2, AP-1, Magical Attacks, Requires Two Hands; recovers a lost Wound for each unsaved Wound inflicted"
+      ]
+    },
+    {
+      "id": "war_boar",
+      "name": "War Boar",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "points": 16,
+      "base_size": "30x60mm",
+      "troop_type": "Heavy cavalry",
+      "stats": {
+        "M": 7,
+        "WS": 3,
+        "BS": "-",
+        "S": 3,
+        "T": "-",
+        "W": "-",
+        "I": 3,
+        "A": 1,
+        "Ld": "-"
+      },
+      "equipment": [
+        "Tusks (hand weapon)"
+      ],
+      "special_rules": [
+        "armoured_hide_1",
+        "counter_charge",
+        "swiftstride",
+        "tusker_charge"
+      ],
+      "notes": [
+        "Available to: Orc Warboss, Orc Bigboss, Black Orc Warboss, Black Orc Bigboss, Orc Weirdnob"
+      ]
+    },
+    {
+      "id": "giant_wolf",
+      "name": "Giant Wolf",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "points": 10,
+      "base_size": "25x50mm",
+      "troop_type": "Light cavalry",
+      "stats": {
+        "M": 9,
+        "WS": 3,
+        "BS": "-",
+        "S": 3,
+        "T": "-",
+        "W": "-",
+        "I": 3,
+        "A": 1,
+        "Ld": "-"
+      },
+      "equipment": [
+        "Claws and fangs (hand weapon)"
+      ],
+      "special_rules": [
+        "chariot_runners",
+        "fast_cavalry",
+        "fire_and_flee",
+        "swiftstride"
+      ],
+      "notes": [
+        "Available to: Goblin Warboss, Goblin Bigboss, Goblin Oddnob, Goblin Oddgit"
+      ]
+    },
+    {
+      "id": "gigantic_spider",
+      "name": "Gigantic Spider",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "points": 35,
+      "base_size": "50x50mm",
+      "troop_type": "Light cavalry",
+      "stats": {
+        "M": 7,
+        "WS": 4,
+        "BS": "-",
+        "S": 4,
+        "T": "-",
+        "W": "(+1)",
+        "I": 4,
+        "A": 3,
+        "Ld": "-"
+      },
+      "equipment": [
+        "Claws and fangs (hand weapon)"
+      ],
+      "special_rules": [
+        "armoured_hide_1",
+        "fast_cavalry",
+        "poisoned_attacks",
+        "swiftstride"
+      ],
+      "notes": [
+        "A character mounted on a Gigantic Spider has +1 Wound",
+        "Available to: Goblin Warboss, Goblin Bigboss"
+      ]
+    },
+    {
+      "id": "giant_cave_squig",
+      "name": "Giant Cave Squig",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "points": 25,
+      "base_size": "50x50mm",
+      "troop_type": "Monstrous cavalry",
+      "stats": {
+        "M": "3D6",
+        "WS": 4,
+        "BS": "-",
+        "S": 5,
+        "T": "-",
+        "W": "(+1)",
+        "I": 3,
+        "A": 3,
+        "Ld": "-"
+      },
+      "equipment": [
+        "Massive Gob"
+      ],
+      "special_rules": [
+        "armoured_hide_1",
+        "hatred_dwarfs",
+        "impact_hits_d3",
+        "loner",
+        "random_movement"
+      ],
+      "notes": [
+        "A character mounted on a Giant Cave Squig has +1 Wound",
+        "Available to: Night Goblin Warboss, Night Goblin Bigboss",
+        "Massive Gob: Combat, S, AP-1, Armour Bane (1), Killing Blow"
+      ]
+    },
+    {
+      "id": "black_orc_mobs",
+      "name": "Black Orc Mobs",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "special",
+      "unit_size": "5+",
+      "points": 12,
+      "base_size": "30x30mm",
+      "troop_type": "Heavy infantry",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapons",
+        "Full plate armour"
+      ],
+      "special_rules": [
+        "choppas",
+        "close_order",
+        "da_boyz",
+        "furious_charge",
+        "ignore_panic",
+        "motley_crew",
+        "quell_impetuosity"
+      ],
+      "command": [
+        {
+          "role": "Boss (champion)",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "Musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Shield",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts (0-1 per army)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Stubborn special rule (0-1 per army)",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Veteran special rule (0-1 per army)",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "Boss may purchase magic items up to 25 pts",
+        "Da Boyz: army must include one Black Orc Boss for every Black Orc Mob and vice versa"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orc_mobs",
+      "name": "Orc Mobs",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "points": 5,
+      "base_size": "30x30mm",
+      "troop_type": "Regular infantry",
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipment": [
+        "Hand weapons",
+        "Light armour"
+      ],
+      "special_rules": [
+        "choppas",
+        "close_order",
+        "ignore_goblin_panic",
+        "impetuous",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "Boss (champion)",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "Musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "name": "Warbows",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Additional hand weapons",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Thrusting spears",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Throwing spears",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Big 'Uns special rule",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Replace Close Order with Skirmishers",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Replace light armour with Frenzy (0-1 per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Warpaint (Frenzied unit only)",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Big Stabbas (Frenzied unit only)",
+          "cost": 5,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Boss may purchase magic items up to 25 pts",
+        "Big Stabbas: unit gains Impact Hits (D3); applies to unit as a whole not individual models"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goblin_mobs",
+      "name": "Goblin Mobs",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "10+",
+      "points": 3,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry",
+      "stats": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 2,
+        "A": 1,
+        "Ld": 5
+      },
+      "equipment": [
+        "Hand weapons",
+        "Shields"
+      ],
+      "special_rules": [
+        "close_order",
+        "fear_of_elves",
+        "horde",
+        "impetuous",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "Boss (champion)",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "Musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "name": "Thrusting spears",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Replace shields with shortbows",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Light armour",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Include 0-3 Nasty Skulkers",
+          "cost": 10,
+          "scope": "per_model"
+        },
+        {
+          "name": "Replace Close Order with Skirmishers (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Boss may purchase magic items up to 25 pts — not listed in RH but inferred by analogy; check source"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_goblin_mobs",
+      "name": "Night Goblin Mobs",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "10+",
+      "points": 3,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry",
+      "stats": {
+        "M": 4,
+        "WS": 2,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 4
+      },
+      "equipment": [
+        "Hand weapons",
+        "Shields"
+      ],
+      "special_rules": [
+        "close_order",
+        "fear_of_elves",
+        "hatred_dwarfs",
+        "horde",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "Boss (champion)",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "Musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "name": "Thrusting spears",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Replace shields with shortbows",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Netters special rule",
+          "cost": 20,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Include 0-3 Fanatics",
+          "cost": 25,
+          "scope": "per_model"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken (Core slot)",
+        "Netters: when combat chosen, may entangle one engaged enemy unit; roll D6: on 1 unit entangles itself, on 2+ enemy is entangled; entangled unit suffers -1 Strength (minimum 1) until end of Combat phase; not cumulative",
+        "Fanatics are concealed within the unit; released during Start of Turn sub-phase"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snotling_mobs",
+      "name": "Snotling Mobs",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "2+",
+      "points": 35,
+      "base_size": "40x40mm",
+      "troop_type": "Swarms",
+      "stats": {
+        "M": 5,
+        "WS": 2,
+        "BS": 2,
+        "S": 2,
+        "T": 2,
+        "W": 6,
+        "I": 3,
+        "A": 5,
+        "Ld": 4
+      },
+      "equipment": [
+        "Hand weapons",
+        "Throwing weapons"
+      ],
+      "special_rules": [
+        "immune_to_psychology",
+        "impetuous",
+        "loner",
+        "open_order",
+        "skirmishers",
+        "unbreakable",
+        "vanguard"
+      ],
+      "notes": [
+        "Points value is per base (swarm base)"
+      ]
+    },
+    {
+      "id": "nasty_skulkers",
+      "name": "Nasty Skulkers",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "unit_size": "1",
+      "points": 10,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry",
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 4,
+        "A": 2,
+        "Ld": 6
+      },
+      "equipment": [
+        "Hand weapons",
+        "Light armour"
+      ],
+      "special_rules": [
+        "armour_bane_2",
+        "fear_of_elves",
+        "horde",
+        "skulking_menace",
+        "strike_first"
+      ],
+      "notes": [
+        "Concealed within Goblin Mobs (0-3 per unit); revealed at the start of first round of combat during Step 1.1 of Choose Combat & Fight sub-phase; cannot be revealed at other times; removed as casualties if concealing unit is destroyed or flees before revelation",
+        "Points value is per model (added to Goblin Mob cost)"
+      ]
+    },
+    {
+      "id": "fanatics",
+      "name": "Fanatics",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "unit_size": "1",
+      "points": 25,
+      "base_size": "25mm (round base)",
+      "troop_type": "Regular infantry",
+      "stats": {
+        "M": "*",
+        "WS": "*",
+        "BS": "*",
+        "S": 5,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": "*",
+        "Ld": 10
+      },
+      "equipment": [
+        "Fanatic ball & chain"
+      ],
+      "special_rules": [
+        "immune_to_psychology",
+        "release_the_fanatics"
+      ],
+      "notes": [
+        "Concealed within Night Goblin Mobs (0-3 per unit, +25 pts each)",
+        "Release the Fanatics: concealing unit may release one or more Fanatics during any Start of Turn sub-phase; Fanatic moves 2D6\" each Compulsory Moves sub-phase in controller-chosen direction; thereafter moves 2D6\" in random direction each Compulsory Moves sub-phase; any unit moved through suffers D6 S5 hits each with AP-3; ignores 1\" rule; removed if it moves into difficult/dangerous/impassable terrain or rolls a natural double; removed as casualties if concealing unit destroyed or flees before release"
+      ]
+    },
+    {
+      "id": "night_goblin_squig_herds",
+      "name": "Night Goblin Squig Herds",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "1+/5+*",
+      "points": 3,
+      "base_size": "25x25mm",
+      "troop_type": "Regular infantry",
+      "stats_by_model": [
+        {
+          "model": "Squig Herder",
+          "M": 4,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 6,
+          "points": 3
+        },
+        {
+          "model": "Cave Squig",
+          "M": 4,
+          "WS": 4,
+          "BS": "-",
+          "S": 5,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 2,
+          "Ld": 3,
+          "points": 10
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Squig Herders",
+          "equipment": [
+            "Squig-herding implements (hand weapons)"
+          ]
+        },
+        {
+          "model": "Cave Squigs",
+          "equipment": [
+            "Huge gobs"
+          ]
+        }
+      ],
+      "special_rules": [
+        "hatred_dwarfs",
+        "immune_to_psychology",
+        "impetuous",
+        "loner",
+        "motley_crew",
+        "open_order",
+        "skirmishers",
+        "squigs_go_wild",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Squig Herder thrusting spear",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "0-1 per Night Goblin Chief or Night Goblin Shaman taken (Core slot)",
+        "Must contain at least 1 Squig Herder per 5 Cave Squigs; Cave Squigs occupy front ranks",
+        "Squigs Go Wild: if Squig Herd ever Breaks and flees, Cave Squigs go wild; every unit (friend or foe) within 2D6\" suffers D3 S5 hits, AP-1; +1 to D3 per additional 5 Cave Squigs; then unit treated as destroyed",
+        "Cave Squig Huge gob: Combat, S, AP-1, Armour Bane (1)",
+        "Motley Crew applies to Squig Herders only"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "troll_mobs",
+      "name": "Troll Mobs",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "special",
+      "unit_size": "1-9",
+      "points": 41,
+      "base_size": "40x40mm",
+      "troop_type": "Monstrous infantry",
+      "stats_by_model": [
+        {
+          "model": "Common Troll",
+          "M": 6,
+          "WS": 3,
+          "BS": 1,
+          "S": 5,
+          "T": 4,
+          "W": 3,
+          "I": 2,
+          "A": 3,
+          "Ld": 4,
+          "points": 41
+        },
+        {
+          "model": "River Troll",
+          "M": 6,
+          "WS": 3,
+          "BS": 1,
+          "S": 5,
+          "T": 4,
+          "W": 4,
+          "I": 1,
+          "A": 3,
+          "Ld": 4,
+          "points": 49
+        },
+        {
+          "model": "Stone Troll",
+          "M": 6,
+          "WS": 3,
+          "BS": 1,
+          "S": 5,
+          "T": 4,
+          "W": 3,
+          "I": 1,
+          "A": 3,
+          "Ld": 5,
+          "points": 45
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Troll vomit",
+        "Calloused hides (light armour)"
+      ],
+      "special_rules_by_model": [
+        {
+          "model": "Common Trolls",
+          "rules": [
+            "armour_bane_1",
+            "close_order",
+            "fear",
+            "flammable",
+            "regeneration_5",
+            "stupidity"
+          ]
+        },
+        {
+          "model": "River Trolls",
+          "rules": [
+            "armour_bane_1",
+            "close_order",
+            "fear",
+            "flammable",
+            "regeneration_5",
+            "stupidity"
+          ]
+        },
+        {
+          "model": "Stone Trolls",
+          "rules": [
+            "armour_bane_1",
+            "armoured_hide_1",
+            "close_order",
+            "fear",
+            "flammable",
+            "magic_resistance_minus_1",
+            "regeneration_5",
+            "stupidity"
+          ]
+        }
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapons",
+          "cost": 3,
+          "scope": "per_model"
+        },
+        {
+          "name": "Great weapons",
+          "cost": 4,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "Troll vomit: Combat, S3, AP-2; Troll makes one additional attack each turn with this weapon after all other attacks (including Stomp Attacks); hits automatically",
+        "A unit may contain only one type of Troll"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orc_boar_boy_mobs",
+      "name": "Orc Boar Boy Mobs",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "4+",
+      "points": 15,
+      "base_size": "30x60mm",
+      "troop_type": "Heavy cavalry",
+      "stats_by_model": [
+        {
+          "model": "Boar Boy",
+          "M": "-",
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 4,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 6,
+          "points": 15
+        },
+        {
+          "model": "Boss",
+          "M": "-",
+          "WS": 3,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 3,
+          "A": 2,
+          "Ld": 7,
+          "points_bonus": 8
+        },
+        {
+          "model": "War Boar",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Boar Boys",
+          "equipment": [
+            "Hand weapons",
+            "Light armour"
+          ]
+        },
+        {
+          "model": "War Boars",
+          "equipment": [
+            "Tusks (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "armoured_hide_1",
+        "choppas",
+        "close_order",
+        "counter_charge",
+        "furious_charge",
+        "ignore_goblin_panic",
+        "impetuous",
+        "swiftstride",
+        "tusker_charge",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "Boss (champion)",
+          "cost_per_unit": 8
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "Musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "name": "Cavalry spears",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Shields",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Replace light armour with heavy armour",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Big 'Uns special rule (0-1 per army)",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Replace light armour with Frenzy (0-1 per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Warpaint (Frenzied unit only)",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "Furious Charge applies to Orc Boar Boys & Boss only; Boss may purchase magic items up to 25 pts"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goblin_spider_rider_mobs",
+      "name": "Goblin Spider Rider Mobs",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "points": 12,
+      "base_size": "25x50mm",
+      "troop_type": "Light cavalry",
+      "stats_by_model": [
+        {
+          "model": "Spider Rider",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 5,
+          "points": 12
+        },
+        {
+          "model": "Boss",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 2,
+          "Ld": 6,
+          "points_bonus": 7
+        },
+        {
+          "model": "Giant Spider",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Spider Riders",
+          "equipment": [
+            "Hand weapons",
+            "Shields"
+          ]
+        },
+        {
+          "model": "Giant Spiders",
+          "equipment": [
+            "Poisonous fangs (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "fast_cavalry",
+        "fear_of_elves",
+        "impetuous",
+        "move_through_cover",
+        "open_order",
+        "poisoned_attacks",
+        "swiftstride",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "Boss (champion)",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "Musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "name": "Cavalry spears",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Shortbows",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Light armour",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goblin_wolf_rider_mobs",
+      "name": "Goblin Wolf Rider Mobs",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "core",
+      "unit_size": "5+",
+      "points": 10,
+      "base_size": "25x50mm",
+      "troop_type": "Light cavalry",
+      "stats_by_model": [
+        {
+          "model": "Wolf Rider",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 5,
+          "points": 10
+        },
+        {
+          "model": "Boss",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 2,
+          "Ld": 6,
+          "points_bonus": 7
+        },
+        {
+          "model": "Giant Wolf",
+          "M": 9,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Wolf Riders",
+          "equipment": [
+            "Hand weapons",
+            "Shields"
+          ]
+        },
+        {
+          "model": "Giant Wolves",
+          "equipment": [
+            "Claws and fangs (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "chariot_runners",
+        "fast_cavalry",
+        "fear_of_elves",
+        "fire_and_flee",
+        "impetuous",
+        "open_order",
+        "skirmishers",
+        "swiftstride",
+        "warband"
+      ],
+      "command": [
+        {
+          "role": "Boss (champion)",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "Musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "options": [
+        {
+          "name": "Cavalry spears",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Replace shields with shortbows",
+          "cost": 0,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Light armour",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Feigned Flight special rule (0-1 per 1,000 pts)",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Reserve Move special rule (0-1 per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_goblin_squig_hopper_mobs",
+      "name": "Night Goblin Squig Hopper Mobs",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "5+",
+      "points": 12,
+      "base_size": "25x25mm",
+      "troop_type": "Light cavalry",
+      "stats_by_model": [
+        {
+          "model": "Squig Hopper",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 5,
+          "points": 12
+        },
+        {
+          "model": "Boss",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 2,
+          "Ld": 6,
+          "points_bonus": 6
+        },
+        {
+          "model": "Bounder Squig",
+          "M": "3D6",
+          "WS": 4,
+          "BS": "-",
+          "S": 5,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 2,
+          "Ld": "-"
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Squig Hoppers",
+          "equipment": [
+            "Hand weapons"
+          ]
+        },
+        {
+          "model": "Bounder Squigs",
+          "equipment": [
+            "Huge gobs"
+          ]
+        }
+      ],
+      "special_rules": [
+        "hatred_dwarfs",
+        "immune_to_psychology",
+        "impact_hits_1",
+        "loner",
+        "open_order",
+        "random_movement",
+        "skirmishers",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Cavalry spears",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Light armour",
+          "cost": 1,
+          "scope": "per_model"
+        }
+      ],
+      "notes": [
+        "0-1 per Night Goblin Chief or Night Goblin Shaman taken (Special slot)",
+        "Boss may purchase magic items up to 25 pts",
+        "Huge gob: Combat, S, AP-1, Armour Bane (1)"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orc_boar_chariots",
+      "name": "Orc Boar Chariots",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "1",
+      "points": 90,
+      "base_size": "50x100mm",
+      "troop_type": "Heavy chariot",
+      "armour_value": "4+",
+      "stats_by_model": [
+        {
+          "model": "Chariot",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": 5,
+          "T": 5,
+          "W": 4,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Orc Crew (x2)",
+          "M": "-",
+          "WS": 3,
+          "BS": 3,
+          "S": "-",
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": 7
+        },
+        {
+          "model": "War Boars (x2)",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Orc Crew",
+          "equipment": [
+            "Hand weapons",
+            "Cavalry spears"
+          ]
+        },
+        {
+          "model": "War Boars",
+          "equipment": [
+            "Tusks (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "choppas",
+        "close_order",
+        "first_charge",
+        "ignore_goblin_panic",
+        "impact_hits_d6_plus_1",
+        "impetuous",
+        "tusker_charge",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Add a third Orc crew member",
+          "cost": 5,
+          "scope": "per_unit"
+        },
+        {
+          "name": "Frenzy special rule (0-1 per 1,000 pts)",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Warpaint (Frenzied chariot only)",
+          "cost": 10,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Character mount: may be included as a character's mount; points added to rider's total"
+      ]
+    },
+    {
+      "id": "goblin_wolf_chariots",
+      "name": "Goblin Wolf Chariots",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "1-5",
+      "points": 53,
+      "base_size": "50x100mm (two wolves), 60x100mm (three wolves)",
+      "troop_type": "Light chariot",
+      "armour_value": "5+",
+      "stats_by_model": [
+        {
+          "model": "Chariot",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": 5,
+          "T": 4,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Goblin Crew (x3)",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": "-",
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": 6
+        },
+        {
+          "model": "Giant Wolves (x2)",
+          "M": 9,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Goblin Crew",
+          "equipment": [
+            "Hand weapons",
+            "Cavalry spears",
+            "Shortbows"
+          ]
+        },
+        {
+          "model": "Giant Wolves",
+          "equipment": [
+            "Claws and fangs (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "fear_of_elves",
+        "impact_hits_d3_plus_1",
+        "impetuous",
+        "open_order",
+        "swiftstride",
+        "warband"
+      ],
+      "options": [
+        {
+          "name": "Add a third Giant Wolf",
+          "cost": 5,
+          "scope": "per_model"
+        },
+        {
+          "name": "Upgrade one model to a standard bearer",
+          "cost": 5,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Character mount: may be included as a character's mount; points added to rider's total"
+      ]
+    },
+    {
+      "id": "snotling_pump_wagons",
+      "name": "Snotling Pump Wagons",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "special",
+      "unit_size": "1-6",
+      "points": 35,
+      "base_size": "50x75mm (min), 50x100mm (max)",
+      "troop_type": "Light chariot",
+      "armour_value": "6+",
+      "stats_by_model": [
+        {
+          "model": "Pump Wagon",
+          "M": "2D6",
+          "WS": "-",
+          "BS": "-",
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Snotling Crew (x6)",
+          "M": "-",
+          "WS": 2,
+          "BS": 2,
+          "S": 2,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": 4
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Snotling Crew",
+          "equipment": [
+            "Hand weapons",
+            "Throwing weapons"
+          ]
+        }
+      ],
+      "special_rules": [
+        "armour_bane_3_pump_wagon_impact_hits_only",
+        "immune_to_psychology",
+        "impact_hits_d3_plus_1",
+        "loner",
+        "open_order",
+        "random_movement"
+      ]
+    },
+    {
+      "id": "black_orc_boar_chariots",
+      "name": "Black Orc Boar Chariots",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "rare",
+      "list_category_overrides": [
+        {
+          "composition_id": "nomadic_waaagh",
+          "list_category": "rare"
+        }
+      ],
+      "unit_size": "1",
+      "points": 130,
+      "base_size": "50x100mm",
+      "troop_type": "Heavy Chariot",
+      "armour_value": "3+",
+      "stats_by_model": [
+        {
+          "model": "Chariot",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": 5,
+          "T": 5,
+          "W": 4,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Black Orc Crew (x2)",
+          "M": "-",
+          "WS": 4,
+          "BS": 3,
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        },
+        {
+          "model": "War Boars (x2)",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Black Orc Crew",
+          "equipment": [
+            "Hand weapons"
+          ]
+        },
+        {
+          "model": "War Boars",
+          "equipment": [
+            "Tusks (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "choppas",
+        "close_order",
+        "first_charge",
+        "furious_charge",
+        "ignore_panic",
+        "impact_hits_d6_plus_1",
+        "tusker_charge"
+      ],
+      "options": [
+        {
+          "name": "Each Black Orc Crew: additional hand weapon",
+          "cost": 1,
+          "scope": "per_model"
+        },
+        {
+          "name": "Each Black Orc Crew: great weapon",
+          "cost": 2,
+          "scope": "per_model"
+        },
+        {
+          "name": "Standard bearer",
+          "cost": 10,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Character mount: Black Orc Warboss or Bigboss may be mounted on a Black Orc Boar Chariot for +130 pts",
+        "Furious Charge applies to Black Orc Crew only"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wyvern",
+      "name": "Wyvern",
+      "source": "ravening_hordes",
+      "category": "mount",
+      "unit_size": "1",
+      "points": 130,
+      "base_size": "50x100mm",
+      "troop_type": "Monstrous creature",
+      "stats": {
+        "M": 4,
+        "WS": 5,
+        "BS": "-",
+        "S": 6,
+        "T": "(+1)",
+        "W": "(+4)",
+        "I": 3,
+        "A": 3,
+        "Ld": "-"
+      },
+      "equipment": [
+        "Wicked claws",
+        "Venomous tail",
+        "Scaly skin (heavy armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "fly_9",
+        "large_target",
+        "stomp_attacks_d3",
+        "swiftstride",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        },
+        {
+          "name": "Venomous tail",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "poisoned_attacks",
+            "strike_first"
+          ],
+          "notes": "Must make one attack each turn with the venomous tail"
+        }
+      ],
+      "notes": [
+        "A character mounted on a Wyvern has +1 Toughness and +4 Wounds",
+        "Available to: Orc Warboss, Black Orc Warboss, Orc Weirdnob (Orc Weirdnobs only)",
+        "Character mount only; points added to rider's total"
+      ]
+    },
+    {
+      "id": "arachnarok_spiders",
+      "name": "Arachnarok Spiders",
+      "source": "ravening_hordes",
+      "category": "monster",
+      "list_category": "rare",
+      "unit_size": "1",
+      "points": 310,
+      "base_size": "100x150mm",
+      "troop_type": "Behemoth",
+      "armour_value": "4+",
+      "stats_by_model": [
+        {
+          "model": "Arachnarok Spider",
+          "M": 7,
+          "WS": 4,
+          "BS": "-",
+          "S": 5,
+          "T": 6,
+          "W": 7,
+          "I": 4,
+          "A": 6,
+          "Ld": "-"
+        },
+        {
+          "model": "Goblin Crew (x8)",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": "-",
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment_by_model": [
+        {
+          "model": "Arachnarok Spider",
+          "equipment": [
+            "Poisonous fangs (hand weapon)",
+            "Venom surge"
+          ]
+        },
+        {
+          "model": "Goblin Crew",
+          "equipment": [
+            "Hand weapons",
+            "Cavalry spears",
+            "Shortbows"
+          ]
+        }
+      ],
+      "special_rules": [
+        "close_order",
+        "howdah",
+        "immune_to_psychology",
+        "large_target",
+        "move_through_cover",
+        "poisoned_attacks",
+        "stomp_attacks_d6",
+        "stubborn",
+        "swiftstride",
+        "terror"
+      ],
+      "options": [
+        {
+          "name": "Spidersilk lobber",
+          "cost": 35,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Character mount: may be included as a character's mount (considered a chariot mount due to Howdah rule); points added to rider's total",
+        "Venom surge: Combat, S, AP-2, Multiple Wounds (D6), Poisoned Attacks, Strike First; may choose to make one attack with this weapon each turn",
+        "Spidersilk lobber: 12-48\", S2(4), AP-(−1), Bombardment, Cumbersome; uses stone thrower rules; on Misfire this model loses 1 Wound instead of rolling on Misfire table"
+      ]
+    },
+    {
+      "id": "mangler_squigs",
+      "name": "Mangler Squigs",
+      "source": "ravening_hordes",
+      "category": "monster",
+      "list_category": "rare",
+      "unit_size": "1",
+      "points": 95,
+      "base_size": "50x75mm",
+      "troop_type": "Behemoth",
+      "stats": {
+        "M": "3D6",
+        "WS": 4,
+        "BS": 0,
+        "S": 6,
+        "T": 5,
+        "W": 4,
+        "I": 3,
+        "A": "D6",
+        "Ld": 4
+      },
+      "equipment": [
+        "Colossal fang-filled gob",
+        "Scaly skin (heavy armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "hatred_dwarfs",
+        "immune_to_psychology",
+        "impact_hits_d6",
+        "ker_splat",
+        "large_target",
+        "random_attacks",
+        "random_movement",
+        "spiked_ball_and_chains",
+        "stomp_attacks_d3",
+        "timmm_berrr"
+      ],
+      "notes": [
+        "0-1 per Night Goblin Chief or Night Goblin Shaman taken (Rare slot)",
+        "Ker-splat: treats all difficult terrain as dangerous terrain",
+        "Spiked Ball & Chains: Impact Hits caused have AP-3",
+        "Colossal fang-filled gob: Combat, S, AP-2, Killing Blow"
+      ]
+    },
+    {
+      "id": "giants",
+      "name": "Giants",
+      "source": "ravening_hordes",
+      "category": "monster",
+      "list_category": "rare",
+      "unit_size": "1",
+      "points": 200,
+      "base_size": "50x50mm (min), 50x75mm (max)",
+      "troop_type": "Behemoth",
+      "stats": {
+        "M": 6,
+        "WS": 3,
+        "BS": 1,
+        "S": 6,
+        "T": 6,
+        "W": 6,
+        "I": 2,
+        "A": "*",
+        "Ld": 10
+      },
+      "equipment": [
+        "Giant's club",
+        "Calloused hide (light armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "giant_attacks",
+        "immune_to_psychology",
+        "large_target",
+        "pick_up_and",
+        "stomp_attacks_d6",
+        "terror",
+        "timmm_berrr",
+        "unbreakable"
+      ],
+      "notes": [
+        "Giant Attacks: instead of normal attacks, roll on Giant Attacks table (D6): 1='Eadbutt (D3+1 wounds no saves), 2=Belly Flop (5\" template), 3-4=Mighty Swing (D6+1 attacks S+1 AP-2), 5=Thump With Club (S+4 AP-4 Multiple Wounds D6), 6=Jump Up & Down (D6+1 S hits no armour save)",
+        "Pick Up And...: vs regular/heavy infantry, may pick up enemy models instead of normal attacks"
+      ]
+    },
+    {
+      "id": "goblin_bolt_throwas",
+      "name": "Goblin Bolt Throwas",
+      "source": "ravening_hordes",
+      "category": "war_machine",
+      "list_category": "special",
+      "unit_size": "1",
+      "points": 45,
+      "base_size": "50x50mm (machine), 25x25mm (crew)",
+      "troop_type": "War machine",
+      "stats_by_model": [
+        {
+          "model": "Bolt Throwa",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 5,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Goblin Crew",
+          "M": 4,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 3,
+          "I": 3,
+          "A": 3,
+          "Ld": 4
+        }
+      ],
+      "equipment": [
+        "Bolt thrower",
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "fear_of_elves",
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "name": "Orc Bully upgrade",
+          "cost": 10,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "0-2 per 1,000 points (Special slot)"
+      ]
+    },
+    {
+      "id": "doom_diver_catapults",
+      "name": "Doom Diver Catapults",
+      "source": "ravening_hordes",
+      "category": "war_machine",
+      "list_category": "rare",
+      "unit_size": "1",
+      "points": 95,
+      "base_size": "50x75mm (machine), 25x25mm (crew)",
+      "troop_type": "War machine",
+      "stats_by_model": [
+        {
+          "model": "Doom Diver Catapult",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 5,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Goblin Crew",
+          "M": 4,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 3,
+          "I": 3,
+          "A": 3,
+          "Ld": 4
+        }
+      ],
+      "equipment": [
+        "Doom Diver catapult (stone thrower)",
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "doom_diver",
+        "fear_of_elves",
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "name": "Orc Bully upgrade",
+          "cost": 10,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "0-1 per 1,000 points (Rare slot)",
+        "Doom Diver: when shooting, after Scatter, may roll D3 and move the 3\" blast template that many inches in any direction; on indirect fire, if Hit! rolled use arrow above Hit symbol; move template Artillery dice minus D3 inches in that direction (minimum 0)"
+      ]
+    },
+    {
+      "id": "goblin_rock_lobbers",
+      "name": "Goblin Rock Lobbers",
+      "source": "ravening_hordes",
+      "category": "war_machine",
+      "list_category": "rare",
+      "unit_size": "1",
+      "points": 75,
+      "base_size": "60x100mm (machine), 25x25mm (crew)",
+      "troop_type": "War machine",
+      "stats_by_model": [
+        {
+          "model": "Rock Lobber",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 6,
+          "W": 4,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Goblin Crew",
+          "M": 4,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 4,
+          "W": 3,
+          "I": 3,
+          "A": 3,
+          "Ld": 4
+        }
+      ],
+      "equipment": [
+        "Stone thrower",
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "fear_of_elves",
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "name": "Orc Bully upgrade",
+          "cost": 10,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "0-1 per 1,000 points (Rare slot)"
+      ]
+    },
+    {
+      "id": "badlands_ogre_bulls",
+      "name": "Badlands Ogre Bulls",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "core",
+      "unit_size": "3+",
+      "points": 31,
+      "base_size": "40x40mm",
+      "troop_type": "Monstrous infantry",
+      "stats_by_model": [
+        {
+          "model": "Ogre",
+          "M": 6,
+          "WS": 3,
+          "BS": 2,
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": 2,
+          "A": 3,
+          "Ld": 7,
+          "points": 31
+        },
+        {
+          "model": "Crusher",
+          "M": 6,
+          "WS": 3,
+          "BS": 2,
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": 2,
+          "A": 4,
+          "Ld": 7,
+          "points_bonus": 7
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Light armour"
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "close_order",
+        "fear",
+        "impact_hits_1",
+        "mercenaries",
+        "motley_crew",
+        "ogre_charge"
+      ],
+      "command": [
+        {
+          "role": "Crusher (champion)",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "Standard bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "Bellower (musician)",
+          "cost_per_unit": 6
+        }
+      ],
+      "options": [
+        {
+          "name": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_model"
+        },
+        {
+          "name": "Great weapon",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "name": "Ironfist",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "name": "Replace light armour with heavy armour",
+          "cost": 4,
+          "scope": "per_model"
+        },
+        {
+          "name": "Magic standard worth up to 50 pts",
+          "cost": 0,
+          "scope": "per_unit"
+        }
+      ],
+      "notes": [
+        "Mercenaries: may be taken as Mercenaries in any Grand Army composition list with Mercenaries category; subject to Misbehaving Mercenaries rules",
+        "Ogre Charge: AP of Impact Hits is improved by current Rank Bonus of the unit",
+        "Ironfist: S AP-; Extra Attacks (1), Requires Two Hands; improves armour value by 1"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bonegrinder_giants",
+      "name": "Bonegrinder Giants",
+      "source": "arcane_journal",
+      "category": "monster",
+      "list_category": "rare",
+      "unit_size": "1",
+      "points": 300,
+      "base_size": "50x100mm (min), 100x150mm (max)",
+      "troop_type": "Behemoth",
+      "stats": {
+        "M": 6,
+        "WS": 3,
+        "BS": 1,
+        "S": 7,
+        "T": 6,
+        "W": 8,
+        "I": 3,
+        "A": "*",
+        "Ld": 10
+      },
+      "equipment": [
+        "Bonegrinder Giant's club",
+        "Calloused hide (light armour)"
+      ],
+      "special_rules": [
+        "bonegrinder_giant_attacks",
+        "close_order",
+        "immune_to_psychology",
+        "large_target",
+        "mercenaries",
+        "stomp_attacks_d6_plus_1",
+        "terror",
+        "timmm_berrr",
+        "unbreakable"
+      ],
+      "notes": [
+        "Dogs of War: 0-1 Bonegrinder Giant may be taken as Mercenary in Orc & Goblin Tribes, Warriors of Chaos, or Beastmen Brayherds Grand Army lists; subject to Misbehaving Mercenaries rules",
+        "Bonegrinder Giant Attacks table: determines attacks vs Little Things (regular/heavy infantry, swarms, light/heavy cavalry, war beasts), Big Things (monstrous infantry/cavalry, light chariot, war machine) and Bigger Things (heavy chariot, monstrous creature, behemoth)"
+      ]
+    }
+  ],
+  "magic_items": [
+    {
+      "id": "dragonblade",
+      "name": "Dragonblade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
+      "weapon_profile": {
+        "name": "Dragonblade",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "burning-blade",
+      "name": "Burning Blade*",
+      "points": 5,
+      "category": "magic_weapon",
+      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "biting-blade",
+      "name": "Biting Blade",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
+    },
+    {
+      "id": "sword-of-striking",
+      "name": "Sword of Striking*",
+      "points": 15,
+      "category": "magic_weapon",
+      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
+    },
+    {
+      "id": "wollopas_one_hit_wunda",
+      "name": "Wollopa's One Hit Wunda",
+      "source": "ravening_hordes",
+      "category": "magic_weapon",
+      "points": 15,
+      "effect": "Goblin and Night Goblin Bosses only. Single use. Once per game, during the first round of combat, wielder may use: Combat, S10, AP-3, Magical Attacks, Strike First. At all other times counts as a hand weapon with Magical Attacks."
+    },
+    {
+      "id": "berserker-blade",
+      "name": "Berserker Blade",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+    },
+    {
+      "id": "sword-of-might",
+      "name": "Sword of Might*",
+      "points": 20,
+      "category": "magic_weapon",
+      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
+    },
+    {
+      "id": "backstabbers_blade",
+      "name": "Backstabber's Blade*",
+      "source": "arcane_journal",
+      "category": "magic_weapon",
+      "points": 25,
+      "effect": "Goblin Bosses and Night Goblin Bosses only. Combat, S+1, AP-1, Magical Attacks. If engaged with an enemy's flank arc, may re-roll any failed rolls To Wound. If engaged with an enemy's rear arc, may re-roll any failed rolls To Hit and To Wound. Extremely Common magic item."
+    },
+    {
+      "id": "sword-of-swiftness",
+      "name": "Sword of Swiftness",
+      "points": 25,
+      "category": "magic_weapon",
+      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
+    },
+    {
+      "id": "da_akrit_axe",
+      "name": "Da Akrit Axe",
+      "source": "arcane_journal",
+      "category": "magic_weapon",
+      "points": 30,
+      "effect": "Combat, S+1, AP-, Armour Bane (1), Magical Attacks. Wearer may re-roll any failed rolls To Hit made whilst using this weapon. However, the Strength modifier only applies during the first round of combat."
+    },
+    {
+      "id": "giant-blade",
+      "name": "Giant Blade",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
+      "restrictions": "Giant Blade(Magic Weapon)30 pointsA broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.RangeStrengthArmour Pierc"
+    },
+    {
+      "id": "hell-forged-axe",
+      "name": "Hell-forged Axe",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
+    },
+    {
+      "id": "sword-of-sorrow",
+      "name": "Sword of Sorrow",
+      "points": 30,
+      "category": "magic_weapon",
+      "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
+      "restrictions": "Sword of Sorrow(Magic Weapon)30 pointsThough it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.RangeSt"
+    },
+    {
+      "id": "da_choppiest_choppa",
+      "name": "Da Choppiest Choppa",
+      "source": "ravening_hordes",
+      "category": "magic_weapon",
+      "points": 35,
+      "effect": "Combat, S+1, AP-3, Magical Attacks."
+    },
+    {
+      "id": "spelleater-axe",
+      "name": "Spelleater Axe",
+      "points": 35,
+      "category": "magic_weapon",
+      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
+    },
+    {
+      "id": "porkos_pigstikka",
+      "name": "Porko's Pigstikka",
+      "source": "ravening_hordes",
+      "category": "magic_weapon",
+      "points": 40,
+      "effect": "Combat, S+1, AP-1, Armour Bane (1), Magical Attacks. Models whose troop type is 'cavalry', 'monster' or 'chariot' only. Strength and Armour Piercing modifiers apply only during the first round of combat. During a turn in which the wielder charged, grants +1 Attack for each rank the enemy unit has."
+    },
+    {
+      "id": "headsmans-axe",
+      "name": "Headsman's Axe",
+      "points": 45,
+      "category": "magic_weapon",
+      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
+    },
+    {
+      "id": "dragon-slaying-sword",
+      "name": "Dragon Slaying Sword",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
+    },
+    {
+      "id": "martogs_best_basha",
+      "name": "Martog's Best Basha",
+      "source": "arcane_journal",
+      "category": "magic_weapon",
+      "points": 50,
+      "effect": "Combat, S+1, AP-2, Magical Attacks, Requires Two Hands. Wearer has +1 to their Weapon Skill and Initiative characteristics."
+    },
+    {
+      "id": "meteor-hammer",
+      "name": "Meteor Hammer",
+      "points": 50,
+      "category": "magic_weapon",
+      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
+    },
+    {
+      "id": "bigger_choppier_axe",
+      "name": "Bigger, Choppier Axe",
+      "source": "arcane_journal",
+      "category": "magic_weapon",
+      "points": 55,
+      "effect": "Combat, S+2, AP-2, Killing Blow, Magical Attacks, Requires Two Hands, Strikes Last."
+    },
+    {
+      "id": "duellists-blades",
+      "name": "Duellist's Blades",
+      "points": 55,
+      "category": "magic_weapon",
+      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
+    },
+    {
+      "id": "sword-of-battle",
+      "name": "Sword of Battle",
+      "points": 60,
+      "category": "magic_weapon",
+      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
+    },
+    {
+      "id": "cackling-blade",
+      "name": "Cackling Blade",
+      "points": 65,
+      "category": "magic_weapon",
+      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
+    },
+    {
+      "id": "battleaxe_of_the_last_big_waaagh",
+      "name": "Battleaxe of the Last Big Waaagh!",
+      "source": "ravening_hordes",
+      "category": "magic_weapon",
+      "points": 75,
+      "effect": "Combat, S+2, AP-2, Extra Attacks (+D6), Magical Attacks, Requires Two Hands, Strike Last. If a natural 6 is rolled for the Extra Attacks (+D6) rule, the Battleaxe loses the Extra Attacks (+D6) rule at the end of the current Combat phase."
+    },
+    {
+      "id": "ogre-blade",
+      "name": "Ogre Blade",
+      "points": 75,
+      "category": "magic_weapon",
+      "description": "Magic weapons grant the wielder extra abilities, new special rules or an improved profile, the better to slay enemies. Unless otherwise stated, the following rules apply to all magic weapons:\nA magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.\nA character that wields a magic weapon cannot set it aside to use a mundane equivalent. For example, a character cannot set aside a magic combat weapon to use a mundane great weapon instead.",
+      "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
+    },
+    {
+      "id": "charmed-shield",
+      "name": "Charmed Shield*",
+      "points": 5,
+      "category": "magic_armour",
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
+    },
+    {
+      "id": "enchanted-shield",
+      "name": "Enchanted Shield*",
+      "points": 10,
+      "category": "magic_armour",
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
+    },
+    {
+      "id": "armour-of-meteoric-iron",
+      "name": "Armour of Meteoric Iron",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
+      "restrictions": "Armour of Meteoric Iron(Magic Armour)20 pointsThis heavy armour was forged of ore mined from a meteor that fell from the heavens.The Armour of Meteoric Iron gives its wearer an armour value of 5+, whi"
+    },
+    {
+      "id": "spiteful_shield",
+      "name": "Spiteful Shield",
+      "source": "arcane_journal",
+      "category": "magic_armour",
+      "points": 20,
+      "effect": "Counts as a shield. Any enemy model that rolls a natural 1 when making a roll To Hit or To Wound against the wielder of the Spiteful Shield during the Combat phase immediately suffers a Strength 4 hit with an AP of -."
+    },
+    {
+      "id": "trailblazers-hauberk",
+      "name": "Trailblazer's Hauberk",
+      "points": 20,
+      "category": "magic_armour",
+      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
+      "restrictions": "Trailblazer's Hauberk(Magic Armour)20 pointsThe local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.Models whose troop type is infantry only. The"
+    },
+    {
+      "id": "levitating-shield",
+      "name": "Levitating Shield",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
+      "restrictions": "Levitating Shield(Magic Armour)25 pointsBorn aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.Models whose troop type is infantry only."
+    },
+    {
+      "id": "spellshield",
+      "name": "Spellshield*",
+      "points": 25,
+      "category": "magic_armour",
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
+    },
+    {
+      "id": "armour_of_mork",
+      "name": "Armour of Mork",
+      "source": "ravening_hordes",
+      "category": "magic_armour",
+      "points": 30,
+      "effect": "Suit of heavy armour. Wearer has Magic Resistance (-2)."
+    },
+    {
+      "id": "shield-of-the-warrior-true",
+      "name": "Shield of the Warrior True",
+      "points": 30,
+      "category": "magic_armour",
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
+    },
+    {
+      "id": "dead_ard_armour",
+      "name": "Dead 'Ard Armour",
+      "source": "arcane_journal",
+      "category": "magic_armour",
+      "points": 35,
+      "effect": "Black Orc Bosses and Orc Bosses whose troop type is 'infantry', 'cavalry' or 'chariot' only. Full plate armour. Wearer improves their Toughness characteristic by 1."
+    },
+    {
+      "id": "glittering-scales",
+      "name": "Glittering Scales",
+      "points": 35,
+      "category": "magic_armour",
+      "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
+    },
+    {
+      "id": "armour-of-silvered-steel",
+      "name": "Armour of Silvered Steel",
+      "points": 40,
+      "category": "magic_armour",
+      "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
+      "restrictions": "Armour of Silvered Steel(Magic Armour)40 pointsPolished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.The Armour of Silvered Steel is a suit of armour that gives"
+    },
+    {
+      "id": "trollhide_trousers",
+      "name": "Trollhide Trousers*",
+      "source": "ravening_hordes",
+      "category": "magic_armour",
+      "points": 40,
+      "effect": "May be worn with other armour. Improves wearer's armour value by 1 (to a maximum of 2+). Wearer has the Regeneration (5+) special rule. Extremely Common magic item."
+    },
+    {
+      "id": "bedazzling-helm",
+      "name": "Bedazzling Helm",
+      "points": 60,
+      "category": "magic_armour",
+      "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
+      "restrictions": "Bedazzling Helm(Magic Armour)60 pointsA gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.Models whose troop type is infantry or cavalry only. May be wo"
+    },
+    {
+      "id": "armour-of-destiny",
+      "name": "Armour of Destiny",
+      "points": 70,
+      "category": "magic_armour",
+      "description": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can only carry one shield, and a mount can only wear a single suit of barding. Therefore, magic armour replaces any mundane equivalent the model is, or may be, equipped with.",
+      "restrictions": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can onl"
+    },
+    {
+      "id": "luckstone",
+      "name": "Luckstone*",
+      "points": 15,
+      "category": "talisman",
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common"
+    },
+    {
+      "id": "obsidian-lodestone",
+      "name": "Obsidian Lodestone*",
+      "points": 20,
+      "category": "talisman",
+      "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.\nA model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
+    },
+    {
+      "id": "the_collar_of_zorga",
+      "name": "The Collar of Zorga",
+      "source": "ravening_hordes",
+      "category": "talisman",
+      "points": 20,
+      "effect": "Any enemy 'beast of burden' that directs its attacks against the wearer of the Collar of Zorga or their unit during the Combat phase suffers a -1 modifier to its rolls To Hit."
+    },
+    {
+      "id": "paymasters-coin",
+      "name": "Paymaster's Coin*",
+      "points": 25,
+      "category": "talisman",
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common"
+    },
+    {
+      "id": "ironhide-talisman",
+      "name": "Ironhide Talisman",
+      "points": 30,
+      "category": "talisman",
+      "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.\nModels whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6.Note that this magic item does not work against attacks that hit automatically.",
+      "restrictions": "Ironhide Talisman(Talisman)30 pointsIt is said that the one who bears this powerful heirloom can endure even the most telling blows.Models whose troop type is infantry only. Any enemy model that makes"
+    },
+    {
+      "id": "talisman-of-protection",
+      "name": "Talisman of Protection",
+      "points": 30,
+      "category": "talisman",
+      "description": "A powerful magical aura surrounds this humble talisman, protecting its wearer from harm.\nThe Talisman of Protection gives its bearer a 5+ Ward save against any wounds suffered."
+    },
+    {
+      "id": "dawnstone",
+      "name": "Dawnstone",
+      "points": 35,
+      "category": "talisman",
+      "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical.\nThe magic trapped within this semi-precious stone binds together shattered armour plates.\nThe bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
+      "restrictions": "Dawnstone(Talisman)35 pointsThe magic trapped within this semi-precious stone binds together shattered armour plates.The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.Icon of"
+    },
+    {
+      "id": "effigy_of_mork",
+      "name": "Effigy of Mork",
+      "source": "arcane_journal",
+      "category": "talisman",
+      "points": 35,
+      "effect": "Any model that directs its attacks against the bearer of the Effigy of Mork during the Combat phase suffers a -1 modifier to its rolls To Hit."
+    },
+    {
+      "id": "glowy_green_amulet",
+      "name": "Glowy Green Amulet",
+      "source": "ravening_hordes",
+      "category": "talisman",
+      "points": 35,
+      "effect": "If the bearer (and any unit they have joined) is the target of an enemy spell, they may use the Glowy Green Amulet instead of making a Wizardly dispel attempt. Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes — destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation."
+    },
+    {
+      "id": "icon-of-fortitude",
+      "name": "Icon of Fortitude",
+      "points": 35,
+      "category": "talisman",
+      "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.\nModels whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": "Icon of Fortitude(Talisman)35 pointsCarefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.Models whose troop type is infantry or cav"
+    },
+    {
+      "id": "sparkly_wizard_finda",
+      "name": "Sparkly Wizard Finda",
+      "source": "arcane_journal",
+      "category": "talisman",
+      "points": 45,
+      "effect": "The bearer has the Magic Resistance (-2) and Hatred (enemy Wizards) special rules."
+    },
+    {
+      "id": "potion-of-foolhardiness",
+      "name": "Potion of Foolhardiness*",
+      "points": 5,
+      "category": "enchanted_item",
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+    },
+    {
+      "id": "fungus_wine",
+      "name": "Fungus Wine*",
+      "source": "ravening_hordes",
+      "category": "enchanted_item",
+      "points": 10,
+      "effect": "Night Goblin characters only. Single use. During the Command sub-phase, if not engaged in combat, may distribute Fungus Wine to their unit by making a Leadership test (using own Leadership). If passed, until next Start of Turn sub-phase, character and any unit they have joined gains the Immune to Psychology special rule. Extremely Common magic item."
+    },
+    {
+      "id": "potion-of-speed",
+      "name": "Potion of Speed*",
+      "points": 10,
+      "category": "enchanted_item",
+      "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Speed*(Enchanted Item)10 pointsA powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "eadbuttin_at",
+      "name": "'Eadbuttin' 'At*",
+      "source": "ravening_hordes",
+      "category": "enchanted_item",
+      "points": 15,
+      "effect": "Wearer gains the Impact Hits (1) special rule. This Impact Hit has an Armour Piercing characteristic of -2. Extremely Common magic item."
+    },
+    {
+      "id": "becalming-orb",
+      "name": "Becalming Orb",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+    },
+    {
+      "id": "potion-of-toughness",
+      "name": "Potion of Toughness*",
+      "points": 20,
+      "category": "enchanted_item",
+      "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Toughness*(Enchanted Item)20 pointsDistilled by magical means, this potion is sure to make the drinker all but invulnerable.Single use. During the Command sub-phase of their turn, the bearer"
+    },
+    {
+      "id": "da_thinkin_orcs_at",
+      "name": "Da Thinkin' Orc's 'At",
+      "source": "arcane_journal",
+      "category": "enchanted_item",
+      "points": 25,
+      "effect": "Wearer improves their Initiative characteristic by 1. In addition, the wearer and any unit they have joined is not subject to the Impetuous special rule."
+    },
+    {
+      "id": "potion-of-strength",
+      "name": "Potion of Strength*",
+      "points": 25,
+      "category": "enchanted_item",
+      "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
+      "restrictions": "Potion of Strength*(Enchanted Item)25 pointsA concoction of strength-giving vegetables and roots, mixed together with a touch of magic.Single use. During the Command sub-phase of their turn, the beare"
+    },
+    {
+      "id": "grisly_trophy_rack",
+      "name": "Grisly Trophy Rack",
+      "source": "arcane_journal",
+      "category": "enchanted_item",
+      "points": 30,
+      "effect": "Black Orc Bosses, Orc Bosses, Goblin Bosses and Night Goblin Bosses only. All enemy units within 6\" of the bearer of the Grisly Trophy Rack suffer a -1 modifier to their Leadership characteristic (to a minimum of 2)."
+    },
+    {
+      "id": "potion-of-fervour",
+      "name": "Potion of Fervour",
+      "points": 30,
+      "category": "enchanted_item",
+      "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
+      "restrictions": "Potion of Fervour(Enchanted Item)30 pointsThis noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.Single Use. During the Command sub-phase of their turn, the bea"
+    },
+    {
+      "id": "healing-potion",
+      "name": "Healing Potion*",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+    },
+    {
+      "id": "ruby-ring-of-ruin",
+      "name": "Ruby Ring of Ruin",
+      "points": 35,
+      "category": "enchanted_item",
+      "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.\nThe wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+    },
+    {
+      "id": "arch-lightning-rod",
+      "name": "Arch-Lightning Rod",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
+      "restrictions": "Arch-Lightning Rod(Enchanted Item)40 pointsCrackling lightning fills the heavens with peril, grounding the creatures of the sky.Single use. During the Command sub-phase of their turn, if they are not"
+    },
+    {
+      "id": "flying-carpet",
+      "name": "Flying Carpet",
+      "points": 40,
+      "category": "enchanted_item",
+      "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!\nModels whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
+      "restrictions": "Flying Carpet(Enchanted Item)40 pointsWoven from the finest silks in a far-off land, this splendid rug does more than warm the feet!Models whose troop type is regular infantry or heavy infantry only."
+    },
+    {
+      "id": "wizarding-hat",
+      "name": "Wizarding Hat",
+      "points": 45,
+      "category": "enchanted_item",
+      "description": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a character might possess.\nNote that a model can only consume a single potion (of any type) per Command phase.\nThis splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
+      "restrictions": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a cha"
+    },
+    {
+      "id": "big_boss_at",
+      "name": "Big Boss 'At",
+      "source": "ravening_hordes",
+      "category": "enchanted_item",
+      "points": 50,
+      "effect": "During Command sub-phase of their turn, if not engaged in combat, the wearer may make a Leadership test (using own Leadership). If passed, until the next Start of Turn sub-phase, this character and any unit they have joined gains the Unbreakable special rule."
+    },
+    {
+      "id": "necklace_of_blessed_teef",
+      "name": "Necklace of Blessed Teef",
+      "source": "arcane_journal",
+      "category": "enchanted_item",
+      "points": 50,
+      "effect": "The bearer may re-roll any Armour Save roll, Ward Save roll or Regeneration Save roll of a natural 1."
+    },
+    {
+      "id": "earthing-rod",
+      "name": "Earthing Rod",
+      "points": 5,
+      "category": "arcane_item",
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+    },
+    {
+      "id": "arcane-familiar",
+      "name": "Arcane Familiar",
+      "points": 15,
+      "category": "arcane_item",
+      "description": "Many Wizards are accompanied by familiars gifted with arcane knowledge. These creatures constantly whisper secrets to their master."
+    },
+    {
+      "id": "dispel-scroll",
+      "name": "Dispel Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+    },
+    {
+      "id": "power-scroll",
+      "name": "Power Scroll*",
+      "points": 20,
+      "category": "arcane_item",
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+    },
+    {
+      "id": "da_hags_brew",
+      "name": "Da Hag's Brew",
+      "source": "arcane_journal",
+      "category": "arcane_item",
+      "points": 25,
+      "effect": "Orc Shamans, Goblin Shamans and Night Goblin Shamans only. In addition to the Lores of Magic they may normally know spells from, the bearer of Da Hag's Brew may know spells from the Lore of Troll Magic."
+    },
+    {
+      "id": "idol_of_mork",
+      "name": "Idol of Mork",
+      "source": "ravening_hordes",
+      "category": "arcane_item",
+      "points": 30,
+      "effect": "Bearer increases their Dispel range by 3\". Additionally, once per turn, when attempting a Wizardly dispel, the bearer of the Idol of Mork may re-roll the Dispel roll."
+    },
+    {
+      "id": "lore-familiar",
+      "name": "Lore Familiar",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "By creating a magical homunculus, a Wizard is able to better recall forgotten details of their studies.\nThe owner of a Lore Familiar does not randomly generate their spells. Instead, they may choose which spells they know from their chosen lore (including that lore's signature spell)."
+    },
+    {
+      "id": "scroll-of-disruption",
+      "name": "Scroll of Disruption",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.\nOnce per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "tome-of-spellcraft",
+      "name": "Tome of Spellcraft",
+      "points": 30,
+      "category": "arcane_item",
+      "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.\nOnce per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+    },
+    {
+      "id": "buzgobs_knobbly_staff",
+      "name": "Buzgob's Knobbly Staff",
+      "source": "ravening_hordes",
+      "category": "arcane_item",
+      "points": 35,
+      "effect": "Once per turn, the bearer of the Buzgob's Knobbly Staff may re-roll a Casting roll."
+    },
+    {
+      "id": "staff-of-quietude",
+      "name": "Staff of Quietude",
+      "points": 35,
+      "category": "arcane_item",
+      "description": "With a gesture, the bearer of the Staff of Quietude calms the Winds of Magic, causing spells and conjurations to dissipate into the other."
+    },
+    {
+      "id": "glittering_wotnots",
+      "name": "Glittering Wotnots",
+      "source": "ravening_hordes",
+      "category": "arcane_item",
+      "points": 40,
+      "effect": "If bearer (or their unit) is the target of an enemy spell, may use the Glittering Wotnots instead of making a Wizardly dispel attempt. Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster — caster (and their unit) become the target; caster may make a Wizardly dispel attempt."
+    },
+    {
+      "id": "idol_of_gork",
+      "name": "Idol of Gork",
+      "source": "arcane_journal",
+      "category": "arcane_item",
+      "points": 40,
+      "effect": "Bearer increases the range of all their spells by 3\". Additionally, once per turn, the bearer of the Idol of Gork may re-roll a Casting roll."
+    },
+    {
+      "id": "wand-of-jet",
+      "name": "Wand of Jet",
+      "points": 45,
+      "category": "arcane_item",
+      "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
+      "restrictions": "Wand of Jet(Arcane Item)45 pointsCarved from brittle jet, this wand refines a Wizard's power, but is easily broken.The bearer of the Wand of Jet may apply a +1 modifier to any of their Casting or Disp"
+    },
+    {
+      "id": "scroll-of-transmogrification",
+      "name": "Scroll of Transmogrification*",
+      "points": 50,
+      "category": "arcane_item",
+      "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
+      "restrictions": "Scroll of Transmogrification*(Arcane Item)50 pointsFor a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!Single use. The bearer may use this scroll inste"
+    },
+    {
+      "id": "staff_of_baduumm",
+      "name": "Staff of Baduumm",
+      "source": "arcane_journal",
+      "category": "arcane_item",
+      "points": 55,
+      "effect": "Bearer applies a +D3 modifier to the result of any Casting roll they make. However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer — every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll."
+    },
+    {
+      "id": "feedback-scroll",
+      "name": "Feedback Scroll",
+      "points": 60,
+      "category": "arcane_item",
+      "description": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items.\nWhen read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "restrictions": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items."
+    },
+    {
+      "id": "banner_of_the_wildz",
+      "name": "Banner of the Wildz",
+      "source": "arcane_journal",
+      "category": "magic_standard",
+      "points": 20,
+      "effect": "A unit carrying the Banner of the Wildz gains the Move through Cover special rule."
+    },
+    {
+      "id": "guffs_windy_banner",
+      "name": "Guff's Windy Banner",
+      "source": "ravening_hordes",
+      "category": "magic_standard",
+      "points": 20,
+      "effect": "A unit carrying the Guff's Windy Banner may re-roll any failed Panic test."
+    },
+    {
+      "id": "da_banner_of_da_nomadz",
+      "name": "Da Banner Of Da Nomadz",
+      "source": "arcane_journal",
+      "category": "magic_standard",
+      "points": 25,
+      "effect": "When a unit carrying Da Banner Of Da Nomadz makes a Charge, Flee or Pursuit roll, it may re-roll any dice that roll a natural 1, before discarding any dice that are required to be discarded."
+    },
+    {
+      "id": "monster-hunters-tapestry",
+      "name": "Monster Hunter's Tapestry",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "Those who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.\nEnemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry.",
+      "restrictions": "Monster Hunter's Tapestry(Magic Standard)25 pointsThose who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.Ene"
+    },
+    {
+      "id": "the-blazing-banner",
+      "name": "The Blazing Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.\nA unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
+      "restrictions": "The Blazing Banner(Magic Standard)25 pointsAn eternal flame flickers about the weapons of those that march beneath the Blazing Banner.A unit carrying the Blazing Banner gains the Flaming Attacks speci"
+    },
+    {
+      "id": "war-banner",
+      "name": "War Banner",
+      "points": 25,
+      "category": "magic_standard",
+      "description": "A proud banner of great age. Those that march beneath the War Banner fight with grim resolve.\nWhen calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point.",
+      "restrictions": "War Banner(Magic Standard)25 pointsA proud banner of great age. Those that march beneath the War Banner fight with grim resolve.When calculating its combat result, a unit carrying the War Banner may c"
+    },
+    {
+      "id": "banner-of-swirling-wind",
+      "name": "Banner of Swirling Wind",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.\nAny enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
+      "restrictions": "Banner of Swirling Wind(Magic Standard)30 pointsGale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.Any enemy model that shoots at"
+    },
+    {
+      "id": "rampaging-banner",
+      "name": "Rampaging Banner",
+      "points": 30,
+      "category": "magic_standard",
+      "description": "As a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.\nWhen a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll.",
+      "restrictions": "Rampaging Banner(Magic Standard)30 pointsAs a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.When a unit carrying the Rampaging Banner declares a charge"
+    },
+    {
+      "id": "da_angry_ladz_flag",
+      "name": "Da Angry Ladz Flag",
+      "source": "arcane_journal",
+      "category": "magic_standard",
+      "points": 35,
+      "effect": "A unit carrying Da Angry Ladz Flag gains the Frenzy special rule."
+    },
+    {
+      "id": "da_banner_of_butchery",
+      "name": "Da Banner of Butchery",
+      "source": "ravening_hordes",
+      "category": "magic_standard",
+      "points": 35,
+      "effect": "All models in a unit carrying Da Banner of Butchery have a +1 modifier to their Strength characteristic during a turn in which they charge."
+    },
+    {
+      "id": "da_spider_banner",
+      "name": "Da Spider Banner",
+      "source": "arcane_journal",
+      "category": "magic_standard",
+      "points": 35,
+      "effect": "A unit carrying Da Spider Banner gains the Poisoned Attacks special rule. If the unit already has the Poisoned Attacks special rule, then their attacks will wound automatically on a roll of a natural 5 or 6 To Hit, rather than the usual 6."
+    },
+    {
+      "id": "razor-standard",
+      "name": "Razor Standard",
+      "points": 40,
+      "category": "magic_standard",
+      "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.\nA unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
+      "restrictions": "Razor Standard(Magic Standard)40 pointsHung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.A unit carrying the Razor Standard gains the Armour Ba"
+    },
+    {
+      "id": "waaagh_banner",
+      "name": "Waaagh! Banner",
+      "source": "ravening_hordes",
+      "category": "magic_standard",
+      "points": 40,
+      "effect": "A unit carrying the Waaagh! Banner increases its maximum possible charge range by 3\" and, when it makes a Charge roll, may apply a +D3 modifier to the result."
+    },
+    {
+      "id": "banner-of-iron-resolve",
+      "name": "Banner of Iron Resolve",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer.\nNo regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.\nA unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
+      "restrictions": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer."
+    },
+    {
+      "id": "banner-of-the-steadfast",
+      "name": "Banner of the Steadfast",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Woven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold their ground no matter the odds.",
+      "restrictions": "Banner of the Steadfast(Magic Standard)50 pointsWoven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold t"
+    },
+    {
+      "id": "the_big_red_raggedy_flag",
+      "name": "The Big Red Raggedy Flag",
+      "source": "ravening_hordes",
+      "category": "magic_standard",
+      "points": 50,
+      "effect": "A unit carrying this flag has a +1 modifier to its Weapon Skill characteristic (to a maximum of 10). In addition, when calculating its combat result, the unit may claim an additional bonus of +1 combat result point."
+    },
+    {
+      "id": "totem-of-wrath",
+      "name": "Totem of Wrath",
+      "points": 50,
+      "category": "magic_standard",
+      "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.\nDuring a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
+      "restrictions": "Totem of Wrath(Magic Standard)50 pointsCruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.During a turn in which it char"
+    }
+  ],
+  "lore_of_gork": [
+    {
+      "id": "brain_bursta",
+      "name": "Brain Bursta",
+      "type": "Assailment",
+      "casting_value": 10,
+      "range": "Combat",
+      "effect": "A single enemy model the caster is engaged in combat with suffers a single Strength 6 hit with the Multiple Wounds (D3) special rule and with no armour or Regeneration saves permitted (Ward saves can be attempted as normal).",
+      "is_signature": false
+    },
+    {
+      "id": "gaze_of_gork",
+      "name": "Gaze of Gork",
+      "type": "Magic Missile",
+      "casting_value": 9,
+      "range": "5D6\"",
+      "effect": "Draw a straight line, 5D6\" in length, from the caster's base edge. Any model (friend or foe) whose base falls under this line suffers a Strength 5 hit, with an AP of -3.",
+      "is_signature": false
+    }
+  ],
+  "lore_of_mork": [
+    {
+      "id": "morks_curse",
+      "name": "Mork's Curse",
+      "type": "Hex",
+      "casting_value": 8,
+      "range": "18\"",
+      "effect": "Remains in Play. Whilst this spell is in play, the target enemy unit must re-roll any Armour Save roll of a natural 6.",
+      "remains_in_play": true,
+      "is_signature": false
+    },
+    {
+      "id": "itchy_nuisance",
+      "name": "Itchy Nuisance",
+      "type": "Hex",
+      "casting_value": 9,
+      "range": "15\"",
+      "effect": "Until your next Start of Turn sub-phase, the target enemy unit suffers a -D3 modifier to its Toughness and Initiative characteristics (to a minimum of 1).",
+      "is_signature": false
+    }
+  ],
+  "lore_of_troll_magic": [
+    {
+      "id": "big_smartz",
+      "name": "Big Smartz",
+      "type": "Enchantment",
+      "casting_value": 8,
+      "range": "Self",
+      "effect": "Remains in Play. Whilst this spell is in play, friendly units within the Command range of this model may re-roll any failed Stupidity tests. Additionally, if a friendly unit within the Command range of this model when this spell is cast failed its Stupidity test during the Start of Turn sub-phase of the same turn, it may immediately make this test again.",
+      "remains_in_play": true,
+      "is_signature": true
+    },
+    {
+      "id": "acidic_bile",
+      "name": "Acidic Bile",
+      "type": "Magic Missile",
+      "casting_value": 8,
+      "range": "18\"",
+      "effect": "Place a small (3\") blast template so that its central hole is directly over the centre of the target enemy unit. Once placed, the template will scatter D3+1\". Any enemy model whose base lies underneath the template's final position risks being hit and suffering a single Strength 3 hit with an AP of -2.",
+      "is_signature": false
+    },
+    {
+      "id": "troll_brainz",
+      "name": "Troll Brainz",
+      "type": "Hex",
+      "casting_value": 9,
+      "range": "15\"",
+      "effect": "Remains in Play. Whilst this spell is in play, the target enemy unit becomes subject to the Stupidity special rule and reduces their Leadership characteristic by 1.",
+      "remains_in_play": true,
+      "is_signature": false
+    },
+    {
+      "id": "ravenous_recourse",
+      "name": "Ravenous Recourse",
+      "type": "Conveyance",
+      "casting_value": 8,
+      "range": "Self",
+      "effect": "Until the end of this turn, all friendly units that have the Stupidity special rule and are within 12\" of the caster gain a +2 modifier to their Movement characteristic.",
+      "is_signature": false
+    },
+    {
+      "id": "foetid_whirlpool",
+      "name": "Foetid Whirlpool",
+      "type": "Magical Vortex",
+      "casting_value": 9,
+      "range": "18\"",
+      "effect": "Remains in Play. Place a small (3\") blast template so that its central hole is within 18\" of the caster. Whilst in play, the template is treated as dangerous terrain. The template moves D6\" in a random direction during every Start of Turn sub-phase. Any enemy unit the moving template touches or moves over suffers D3+3 Strength 4 hits, each with an AP of -2.",
+      "remains_in_play": true,
+      "is_signature": false
+    },
+    {
+      "id": "torrent_of_filth",
+      "name": "Torrent of Filth",
+      "type": "Assailment",
+      "casting_value": 8,
+      "range": "Combat",
+      "effect": "Place a flame template so that the narrow end touches the caster's base edge and the broad end is over a unit they are engaged in combat with. Any model (friend or foe) whose base lies underneath the template risks being hit and suffering a single Strength 3 hit with an AP of -2.",
+      "is_signature": false
+    },
+    {
+      "id": "rapid_regeneration",
+      "name": "Rapid Regeneration",
+      "type": "Enchantment",
+      "casting_value": 9,
+      "range": "12\"",
+      "effect": "Until the end of your next Start of Turn sub-phase, the target friendly unit gains the Flammable and Regeneration (5+) special rules.",
+      "is_signature": false
+    }
+  ],
+  "knightly_virtues": [],
+  "chivalrous_vows": [],
+  "lore_of_the_lady": []
+}

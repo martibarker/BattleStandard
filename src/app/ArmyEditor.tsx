@@ -711,9 +711,10 @@ function EntryOptionsPanel({
             {regularOptions.map((opt) => {
               const totalCost = opt.scope === 'per_model' && perModel ? opt.cost * entry.quantity : opt.cost;
               const isChecked = entry.selectedOptions.includes(opt.description);
-              // Find matching weapon profile by name (case-insensitive)
+              // Find matching weapon profile by name (case-insensitive, partial match for conditional names)
               const weaponProfile = unit.weapon_profiles?.find(
-                (wp) => wp.name.toLowerCase() === opt.description.toLowerCase()
+                (wp) => wp.name.toLowerCase() === opt.description.toLowerCase() ||
+                       opt.description.toLowerCase().startsWith(wp.name.toLowerCase())
               );
               return (
                 <label
@@ -735,7 +736,7 @@ function EntryOptionsPanel({
                     <span className="text-xs leading-snug" style={{ color: isChecked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
                       {opt.description}{opt.cost > 0 ? ` — +${totalCost} pts` : ''}
                     </span>
-                    {weaponProfile && (
+                    {isChecked && weaponProfile && (
                       <div className="mt-0.5 overflow-x-auto">
                         <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
                           <thead>

@@ -498,6 +498,324 @@
       "name": "Multiple Wounds (D3+1)",
       "source": "rulebook",
       "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "fear",
+      "name": "Fear",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "stupidity",
+      "name": "Stupidity",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "flammable",
+      "name": "Flammable",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "poisoned_attacks",
+      "name": "Poisoned Attacks",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "random_movement",
+      "name": "Random Movement",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "random_attacks",
+      "name": "Random Attacks",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "strike_first",
+      "name": "Strike First",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "impact_hits_1",
+      "name": "Impact Hits (1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "impact_hits_d3",
+      "name": "Impact Hits (D3)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "impact_hits_d6",
+      "name": "Impact Hits (D6)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "impact_hits_d3_plus_1",
+      "name": "Impact Hits (D3+1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "impact_hits_d6_plus_1",
+      "name": "Impact Hits (D6+1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "stomp_attacks_d6",
+      "name": "Stomp Attacks (D6)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "stomp_attacks_d6_plus_1",
+      "name": "Stomp Attacks (D6+1)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "multiple_wounds_d6",
+      "name": "Multiple Wounds (D6)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "howdah",
+      "name": "Howdah",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "regeneration_5",
+      "name": "Regeneration (5+)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "mercenaries",
+      "name": "Mercenaries",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "big_uns",
+      "name": "Big 'Uns",
+      "source": "army",
+      "description": "When engaged in combat, a model with this special rule has a +1 modifier to its Strength characteristic, and gains the Armour Bane (1) special rule."
+    },
+    {
+      "id": "choppas",
+      "name": "Choppas",
+      "source": "army",
+      "description": "During a turn in which it charged, a model with this special rule may re-roll any rolls To Wound of a natural 1, and improves the Armour Piercing characteristic of its weapon(s) by 1. This special rule only applies to non-magical weapons and does not apply to a model's mount. If the model is using a magic weapon, this special rule ceases to apply."
+    },
+    {
+      "id": "da_boyz",
+      "name": "Da Boyz",
+      "source": "army",
+      "description": "Your army must include one Black Orc Boss for every Black Orc Mob it includes, and vice versa. For each Black Orc Mob your army includes, it must also include one Black Orc War Boss or Big Boss. For each Black Orc War Boss or Big Boss your army includes, it must also include one Black Orc Mob."
+    },
+    {
+      "id": "fear_of_elves",
+      "name": "Fear of Elves",
+      "source": "army",
+      "description": "Elves of any type cause Fear in models with this special rule."
+    },
+    {
+      "id": "ignore_goblin_panic",
+      "name": "Ignore Goblin Panic",
+      "source": "army",
+      "description": "This unit does not have to make a Panic test when a friendly Goblin unit is destroyed or Breaks and flees from combat whilst within 6\" of it. Nor does this unit have to make a Panic test when it is fled through by a friendly Goblin unit. A Goblin unit is considered to be any unit made up entirely of Goblins of any kind, mounted or otherwise, including any war machine or chariot crewed entirely by Goblins. Should a Goblin unit be joined by an Orc character, it is no longer considered to be a Goblin unit."
+    },
+    {
+      "id": "ignore_panic",
+      "name": "Ignore Panic",
+      "source": "army",
+      "description": "This unit does not have to make a Panic test when a friendly unit that does not also have this special rule is destroyed or Breaks and flees from combat whilst within 6\" of it. Nor does this unit have to make a Panic test when it is fled through by a friendly unit that does not also have this special rule."
+    },
+    {
+      "id": "quell_impetuosity",
+      "name": "Quell Impetuosity",
+      "source": "army",
+      "description": "Whilst within 6\" of a unit with this special rule, friendly units may choose to ignore the Impetuous special rule."
+    },
+    {
+      "id": "waaagh",
+      "name": "Waaagh!",
+      "source": "army",
+      "description": "Once per game, during the Command sub-phase of their turn, this character may attempt to invoke the power of the Waaagh! by making a Leadership test (using their own Leadership). If this test is passed, until your next Start of Turn sub-phase this character, their mount and any Orc unit they have joined may re-roll any rolls To Hit of a natural 1 and, when calculating its combat result, may claim an additional bonus of +1 combat result point. An Orc unit is any unit made up entirely of Orcs or Black Orcs, mounted or otherwise. Should an Orc unit be joined by a Goblin character, it is no longer considered to be an Orc unit. This special rule is not cumulative."
+    },
+    {
+      "id": "mob_rule",
+      "name": "Mob Rule",
+      "source": "army",
+      "description": "This Wizard applies a +1 modifier to their Casting rolls when they have joined an Orc unit (Orcs or Black Orcs) with Unit Strength 10 or more."
+    },
+    {
+      "id": "lore_of_gork",
+      "name": "Lore of Gork",
+      "source": "army",
+      "description": "A Wizard with this rule may discard one randomly generated spell and instead select the signature spell of their chosen Lore of Magic, or one of the Lore of Gork spells (Brain Bursta or Gaze of Gork)."
+    },
+    {
+      "id": "lore_of_mork",
+      "name": "Lore of Mork",
+      "source": "army",
+      "description": "A Wizard with this rule may discard one randomly generated spell and instead select the signature spell of their chosen Lore of Magic, or one of the Lore of Mork spells (Mork's Curse or Itchy Nuisance)."
+    },
+    {
+      "id": "hatred_dwarfs",
+      "name": "Hatred (Dwarfs)",
+      "source": "army",
+      "description": "Models with this special rule have the Hatred special rule, but only against models with the Dwarf keyword. Refer to the Warhammer: The Old World rulebook for the Hatred special rule."
+    },
+    {
+      "id": "tusker_charge",
+      "name": "Tusker Charge",
+      "source": "army",
+      "description": "During a turn in which it charged, a War Boar's Tusks (hand weapon) have a Strength characteristic of S+1 and an Armour Piercing characteristic of -1. This special rule only applies to attacks made by a War Boar, not to their rider, a chariot or its crew."
+    },
+    {
+      "id": "chariot_runners",
+      "name": "Chariot Runners",
+      "source": "army",
+      "description": "Refer to the Warhammer: The Old World rulebook for the Chariot Runners special rule."
+    },
+    {
+      "id": "warpaint",
+      "name": "Warpaint",
+      "source": "army",
+      "description": "Warpaint gives its wearer a 6+ Ward save against any wounds suffered. However, a model with this special rule can never wear armour of any sort (though they may carry a shield)."
+    },
+    {
+      "id": "skulking_menace",
+      "name": "Skulking Menace",
+      "source": "army",
+      "description": "Nasty Skulkers are not placed on the battlefield at the start of the game. Instead, make a note of which Goblin Mobs include Nasty Skulkers. These units are referred to as 'concealing' units. At the start of its first round of combat, during Step 1.1 of the Choose Combat & Fight sub-phase, a concealing unit must reveal its Nasty Skulkers — they cannot be revealed at any other time. Position each revealed Nasty Skulker as you would a character that has joined the unit. Once placed, Nasty Skulkers cannot leave their concealing unit. If a concealing unit is destroyed or flees the battlefield before its Nasty Skulkers are revealed, they are removed as casualties."
+    },
+    {
+      "id": "release_the_fanatics",
+      "name": "Release the Fanatics",
+      "source": "army",
+      "description": "Fanatics are concealed within Night Goblin Mobs. The concealing unit may release one or more Fanatics during any Start of Turn sub-phase. A released Fanatic moves 2D6\" in a controller-chosen direction during the Compulsory Moves sub-phase of the turn they are released; thereafter they move 2D6\" in a random direction each Compulsory Moves sub-phase. Any unit (friend or foe) moved through suffers D6 Strength 5 hits each with AP-3. Fanatics ignore the 1\" rule. A Fanatic is removed if it moves into difficult, dangerous or impassable terrain, or rolls a natural double on its movement dice. They are removed as casualties if their concealing unit is destroyed or flees before release."
+    },
+    {
+      "id": "squigs_go_wild",
+      "name": "Squigs Go Wild",
+      "source": "army",
+      "description": "If a Night Goblin Squig Herd ever Breaks and flees, the Cave Squigs go wild. Every unit (friend or foe) within 2D6\" suffers D3 Strength 5 hits with AP-1; +1 to D3 per additional 5 Cave Squigs in the unit. The unit is then treated as destroyed."
+    },
+    {
+      "id": "timmm_berrr",
+      "name": "Timmm-berrr!",
+      "source": "army",
+      "description": "Refer to the Warhammer: The Old World rulebook for the Timmm-berrr! special rule (used by Giants and similar large models that may fall over when slain)."
+    },
+    {
+      "id": "giant_attacks",
+      "name": "Giant Attacks",
+      "source": "army",
+      "description": "Instead of making normal attacks, a Giant rolls on the Giant Attacks table (D6): 1='Eadbutt (D3+1 wounds, no saves); 2=Belly Flop (5\" template); 3-4=Mighty Swing (D6+1 attacks, S+1, AP-2); 5=Thump With Club (S+4, AP-4, Multiple Wounds D6); 6=Jump Up & Down (D6+1 Strength hits, no armour save)."
+    },
+    {
+      "id": "bonegrinder_giant_attacks",
+      "name": "Bonegrinder Giant Attacks",
+      "source": "army",
+      "description": "Instead of making normal attacks, a Bonegrinder Giant rolls on its own Giant Attacks table with entries for Little Things (regular/heavy infantry, swarms, light/heavy cavalry, war beasts), Big Things (monstrous infantry/cavalry, light chariot, war machine) and Bigger Things (heavy chariot, monstrous creature, behemoth). Refer to Arcane Journal: Orc & Goblin Tribes for full details."
+    },
+    {
+      "id": "pick_up_and",
+      "name": "Pick Up And...",
+      "source": "army",
+      "description": "When fighting models whose troop type is regular infantry or heavy infantry, a Giant may pick up enemy models instead of making normal attacks. Refer to the Warhammer: The Old World rulebook for full details."
+    },
+    {
+      "id": "ker_splat",
+      "name": "Ker-splat!",
+      "source": "army",
+      "description": "Mangler Squigs treat all difficult terrain as dangerous terrain."
+    },
+    {
+      "id": "spiked_ball_and_chains",
+      "name": "Spiked Ball & Chains",
+      "source": "army",
+      "description": "Impact Hits caused by this model have an Armour Piercing characteristic of -3."
+    },
+    {
+      "id": "doom_diver",
+      "name": "Doom Diver",
+      "source": "army",
+      "description": "When shooting, after the Scatter roll, the controlling player may roll D3 and move the 3\" blast template that many inches in any direction. On indirect fire, if Hit! is rolled, use the arrow above the Hit symbol and move the template Artillery dice minus D3 inches in that direction (minimum 0)."
+    },
+    {
+      "id": "bully",
+      "name": "Bully",
+      "source": "army",
+      "description": "An Orc Bully accompanies a war machine and cannot leave it. Friendly war machines within the Orc Bully's Command range may use its Leadership characteristic."
+    },
+    {
+      "id": "indiscriminate_hunger",
+      "name": "Indiscriminate Hunger",
+      "source": "army",
+      "description": "In combat, a Troll Hag may make a special attack to deal 1 Wound to an enemy unit. She recovers a lost Wound for each Wound caused this way. Refer to Arcane Journal: Orc & Goblin Tribes for full details."
+    },
+    {
+      "id": "motherly_love",
+      "name": "Motherly Love",
+      "source": "army",
+      "description": "Instead of making normal attacks, a Troll Hag rolls on the Motherly Love table (D6). Refer to Arcane Journal: Orc & Goblin Tribes for full details."
+    },
+    {
+      "id": "slimy_shanks",
+      "name": "Slimy Shanks",
+      "source": "army",
+      "description": "Refer to Arcane Journal: Orc & Goblin Tribes for full details."
+    },
+    {
+      "id": "da_troll_calla",
+      "name": "Da Troll Calla",
+      "source": "army",
+      "description": "Friendly Troll Mobs within Ogdruz Swampdigga's Command range may use his Leadership characteristic."
+    },
+    {
+      "id": "protect_da_boss",
+      "name": "Protect Da Boss",
+      "source": "army",
+      "description": "Ogdruz Swampdigga cannot be targeted by shooting or spells if he is within 3\" of a friendly Troll Mob, unless he is the closest target."
+    },
+    {
+      "id": "syphoned_strength",
+      "name": "Syphoned Strength",
+      "source": "army",
+      "description": "Ogdruz Swampdigga applies a +1 modifier to his Casting rolls when he is within 3\" of a friendly Troll Mob with Unit Strength 6 or more that is not fleeing."
+    },
+    {
+      "id": "all_sneaky_like",
+      "name": "All Sneaky Like",
+      "source": "army",
+      "description": "0-1 Goblin Wolf Rider Mob in the same army list may have the Ambushers special rule for free. In addition, Kiknik applies a +1 modifier to rolls for Goblin Wolf Rider Mobs with the Ambushers special rule, and enemy units apply a -1 modifier to such rolls."
+    },
+    {
+      "id": "it_and_run",
+      "name": "It & Run",
+      "source": "army",
+      "description": "If Kiknik Toofsnatcha wins a round of combat, he may choose to Fall Back in Good Order instead of pursuing the enemy."
+    },
+    {
+      "id": "ogre_charge",
+      "name": "Ogre Charge",
+      "source": "army",
+      "description": "The Armour Piercing characteristic of this unit's Impact Hits is improved by the unit's current Rank Bonus."
     }
   ]
 }
