@@ -265,6 +265,11 @@
       "name": "Armour of Destiny",
       "points": 70,
       "category": "magic_armour",
+      "armour_profile": {
+        "armour_value": "5+",
+        "special_rules": ["ward_save_4_plus"],
+        "notes": "Ward save against any wounds suffered"
+      },
       "description": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can only carry one shield, and a mount can only wear a single suit of barding. Therefore, magic armour replaces any mundane equivalent the model is, or may be, equipped with.",
       "restrictions": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can onl"
     },
@@ -273,6 +278,11 @@
       "name": "Armour of Meteoric Iron",
       "points": 20,
       "category": "magic_armour",
+      "armour_profile": {
+        "armour_value": "5+",
+        "special_rules": ["unmodifiable_armour"],
+        "notes": "Armour value cannot be improved or reduced"
+      },
       "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
       "restrictions": "Armour of Meteoric Iron(Magic Armour)20 pointsThis heavy armour was forged of ore mined from a meteor that fell from the heavens.The Armour of Meteoric Iron gives its wearer an armour value of 5+, whi"
     },
@@ -281,6 +291,11 @@
       "name": "Armour of Silvered Steel",
       "points": 40,
       "category": "magic_armour",
+      "armour_profile": {
+        "armour_value": "3+",
+        "special_rules": ["unimprovable_armour"],
+        "notes": "Armour value cannot be improved in any way"
+      },
       "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
       "restrictions": "Armour of Silvered Steel(Magic Armour)40 pointsPolished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.The Armour of Silvered Steel is a suit of armour that gives"
     },
@@ -289,6 +304,12 @@
       "name": "Bedazzling Helm",
       "points": 60,
       "category": "magic_armour",
+      "armour_profile": {
+        "type": "helm",
+        "armour_value": "+1",
+        "special_rules": ["to_hit_penalty_1"],
+        "notes": "Infantry/Cavalry only. Improves wearer's armour by 1 (max 2+). Enemy models attacking the wearer suffer -1 modifier to To Hit rolls."
+      },
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
       "restrictions": "Bedazzling Helm(Magic Armour)60 pointsA gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.Models whose troop type is infantry or cavalry only. May be wo"
     },
@@ -297,6 +318,12 @@
       "name": "Charmed Shield*",
       "points": 5,
       "category": "magic_armour",
+      "armour_profile": {
+        "type": "shield",
+        "armour_value": "+1",
+        "special_rules": ["ward_save_5_plus_once_per_game"],
+        "notes": "Once per game, provides 5+ Ward save against a single wound. Becomes mundane after use."
+      },
       "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
     },
     {
@@ -304,6 +331,12 @@
       "name": "Enchanted Shield*",
       "points": 10,
       "category": "magic_armour",
+      "armour_profile": {
+        "type": "shield",
+        "armour_value": "+1",
+        "special_rules": ["ward_save_6_plus_non_magical"],
+        "notes": "6+ Ward save against wounds from non-magical attacks"
+      },
       "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
     },
     {
@@ -311,6 +344,11 @@
       "name": "Glittering Scales",
       "points": 35,
       "category": "magic_armour",
+      "armour_profile": {
+        "armour_value": "6+",
+        "special_rules": ["to_hit_reroll"],
+        "notes": "Once per turn, force opponent to re-roll a single To Hit roll against wearer"
+      },
       "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
     },
     {
@@ -318,6 +356,12 @@
       "name": "Levitating Shield",
       "points": 25,
       "category": "magic_armour",
+      "armour_profile": {
+        "type": "shield",
+        "armour_value": "+1",
+        "special_rules": ["two_hands_compatible"],
+        "notes": "Infantry only. May be used alongside weapons that Require Two Hands in combat."
+      },
       "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
       "restrictions": "Levitating Shield(Magic Armour)25 pointsBorn aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.Models whose troop type is infantry only."
     },
@@ -326,6 +370,12 @@
       "name": "Shield of the Warrior True",
       "points": 30,
       "category": "magic_armour",
+      "armour_profile": {
+        "type": "shield",
+        "armour_value": "+1",
+        "special_rules": ["ward_save_5_plus_shooting"],
+        "notes": "5+ Ward save against wounds suffered during the Shooting phase"
+      },
       "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
     },
     {
@@ -333,6 +383,12 @@
       "name": "Spellshield*",
       "points": 25,
       "category": "magic_armour",
+      "armour_profile": {
+        "type": "shield",
+        "armour_value": "+1",
+        "special_rules": ["ward_save_5_plus_magic"],
+        "notes": "5+ Ward save against wounds from Magic Missile, Magical Vortex, or Assailment spells"
+      },
       "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
     },
     {
@@ -340,6 +396,11 @@
       "name": "Trailblazer's Hauberk",
       "points": 20,
       "category": "magic_armour",
+      "armour_profile": {
+        "armour_value": "5+",
+        "special_rules": ["move_through_cover", "scouts"],
+        "notes": "Infantry only. Heavy armour."
+      },
       "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
       "restrictions": "Trailblazer's Hauberk(Magic Armour)20 pointsThe local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.Models whose troop type is infantry only. The"
     },

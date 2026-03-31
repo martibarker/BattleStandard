@@ -225,7 +225,6 @@ export default function ArmyEditor() {
                       {minCost !== unit.points && !isFixed ? ` · from ${minCost} pts` : ''}
                     </p>
                     <StatBar unit={unit} />
-                    <WeaponProfileTable profiles={unit.weapon_profiles ?? []} />
                   </div>
                   <button
                     onClick={() => handleAddUnit(unit)}
