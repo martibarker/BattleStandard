@@ -900,6 +900,15 @@
           "special_rules": [
             "Fight In Extra Rank"
           ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "fight_in_extra_rank"
+          ]
         }
       ]
     },

@@ -1001,6 +1001,15 @@
             "Requires Two Hands",
             "Strike Last"
           ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "fight_in_extra_rank"
+          ]
         }
       ]
     },
@@ -1624,6 +1633,15 @@
             "Armour Bane (1)",
             "Requires Two Hands",
             "Strike Last"
+          ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "fight_in_extra_rank"
           ]
         }
       ]

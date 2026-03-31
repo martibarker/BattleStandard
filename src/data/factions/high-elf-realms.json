@@ -430,6 +430,15 @@
           "special_rules": [
             "Armour Bane (1)"
           ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "fight_in_extra_rank"
+          ]
         }
       ]
     },
@@ -570,6 +579,15 @@
           "ap": "-2",
           "special_rules": [
             "Armour Bane (1)"
+          ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -982,6 +1000,15 @@
           "ap": "—",
           "special_rules": [
             "Fight In Extra Rank"
+          ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2190,6 +2217,15 @@
           "ap": "—",
           "special_rules": [
             "Fight In Extra Rank"
+          ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "fight_in_extra_rank"
           ]
         }
       ]
