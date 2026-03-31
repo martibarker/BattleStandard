@@ -1353,6 +1353,30 @@
         "swiftstride",
         "terror",
         "two_headed_dragon"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Dark Fire of Chaos",
+          "range": "N/A",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "breath_weapon",
+            "flaming_attacks",
+            "magical_attacks"
+          ]
+        },
+        {
+          "name": "Fumes of Contagion",
+          "range": "N/A",
+          "S": "2",
+          "AP": "-",
+          "special_rules": [
+            "breath_weapon",
+            "magical_attacks",
+            "no_armour_save"
+          ]
+        }
       ]
     },
     {

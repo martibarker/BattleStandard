@@ -907,6 +907,18 @@
         "nehekharan_undead",
         "regeneration_6+"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Whip",
+          "range": "Combat",
+          "S": "4",
+          "AP": "-",
+          "special_rules": [
+            "fight_in_extra_rank",
+            "strike_first"
+          ]
+        }
+      ],
       "notes": [
         "Eternal Taskmaster: During the Command sub-phase, this character may attempt to drive a unit they have joined to greater efforts by making a Leadership test (using their own Leadership). If passed, until your next Start of Turn sub-phase this character and any unit they have joined gains the Extra Attacks (+1) and Hatred (all enemies) special rules."
       ]
@@ -1290,6 +1302,18 @@
         "nehekharan_undead",
         "regeneration_5+",
         "stone_shaper"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Whip",
+          "range": "Combat",
+          "S": "4",
+          "AP": "-",
+          "special_rules": [
+            "fight_in_extra_rank",
+            "strike_first"
+          ]
+        }
       ],
       "notes": [
         "Immortal Overseer: During the Command sub-phase, this character may attempt to drive a single friendly unit within their Command range to greater efforts by making a Leadership test. If passed, until your next Start of Turn sub-phase that unit gains a +D3 modifier to its Initiative characteristic (to a maximum of 10).",
@@ -1744,6 +1768,17 @@
         "poisoned_attacks",
         "regeneration_6+",
         "skirmishers"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Venomous Bites and Stings",
+          "range": "Combat",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "poisoned_attacks"
+          ]
+        }
       ]
     },
     {
@@ -2364,6 +2399,28 @@
         "swiftstride",
         "vanguard"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Decapitating Claws",
+          "range": "Combat",
+          "S": "5",
+          "AP": "-2",
+          "special_rules": [
+            "killing_blow",
+            "monster_slayer"
+          ]
+        },
+        {
+          "name": "Envenomed Sting",
+          "range": "Combat",
+          "S": "5",
+          "AP": "-",
+          "special_rules": [
+            "poisoned_attacks",
+            "strike_first"
+          ]
+        }
+      ],
       "notes": [
         "0-3 Tomb Scorpions per 1,000 points in the Grand Army."
       ]
@@ -2403,6 +2460,18 @@
         "terror",
         "timmm_berrr",
         "unstoppable_assault"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Paired Great Khopeshes",
+          "range": "Combat",
+          "S": "6",
+          "AP": "-2",
+          "special_rules": [
+            "killing_blow",
+            "requires_two_hands"
+          ]
+        }
       ],
       "notes": [
         "Unstoppable Assault: During the Combat phase of any turn in which this model charged, every attack it makes that causes an unsaved wound allows it to immediately make one additional attack. These additional attacks also benefit from this special rule. Note that unsaved wounds caused by Stomp Attacks (D3) do not benefit from this special rule."
@@ -2495,6 +2564,23 @@
         "nehekharan_undead",
         "regeneration_6+",
         "skirmishers"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Screaming Skull Catapult",
+          "range": "12-60\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "bombardment",
+            "cumbersome",
+            "flaming_attacks",
+            "magical_attacks",
+            "move_or_shoot",
+            "multiple_wounds_d3_plus_1",
+            "screaming_skulls"
+          ]
+        }
       ],
       "notes": [
         "Screaming Skulls: Any unit that suffers one or more unsaved wounds from this weapon must make a Panic test as if it had taken heavy casualties.",
