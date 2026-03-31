@@ -1167,6 +1167,19 @@
         "precision_strikes",
         "valour_of_ages"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Bow of Avelorn",
+          "range": "30\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "magical_attacks",
+            "volley_fire"
+          ]
+        }
+      ],
       "notes": [
         "Mathlann's Ire: Combat, S+1, AP -2; Armour Bane (1), Magical Attacks. Enemy models must re-roll a single successful roll To Hit made against the wielder of Mathlann's Ire",
         "Commanding Voice: Command Range increased by 3\". If General, Command Range is 15\"",
@@ -1695,6 +1708,18 @@
           "scope": "per_unit",
           "max_points": 50
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Chracian Great Blade",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-3",
+          "special_rules": [
+            "requires_two_hands",
+            "strike_last"
+          ]
+        }
       ]
     },
     {
@@ -1772,6 +1797,18 @@
           "scope": "per_model"
         }
       ],
+      "weapon_profiles": [
+        {
+          "name": "Chracian Great Blade",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-3",
+          "special_rules": [
+            "requires_two_hands",
+            "strike_last"
+          ]
+        }
+      ],
       "availability": [
         "chracian_warhost"
       ]
@@ -1837,6 +1874,18 @@
           "description": "Magic standard",
           "scope": "per_unit",
           "max_points": 50
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Chracian Great Blade",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-3",
+          "special_rules": [
+            "requires_two_hands",
+            "strike_last"
+          ]
         }
       ],
       "availability": [
@@ -1910,6 +1959,18 @@
           "description": "Magic standard",
           "scope": "per_unit",
           "max_points": 50
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Sword of Hoeth",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "magical_attacks",
+            "requires_two_hands"
+          ]
         }
       ]
     },
@@ -2122,6 +2183,19 @@
           "description": "0-1 unit in army: Stubborn special rule",
           "points": 1,
           "scope": "per_model"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Bow of Avelorn",
+          "range": "30\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "magical_attacks",
+            "volley_fire"
+          ]
         }
       ],
       "notes": [
