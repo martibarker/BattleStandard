@@ -426,6 +426,48 @@
       "notes": [
         "My Will Be Done: During the Command sub-phase, this character may attempt to exert their will by making a Leadership test. If passed, choose one of: 'Forward to Glory!' (+D3 Movement), 'My Worthy Champions!' (+1 Weapon Skill), 'Strike like the Cobra!' (+D3 Initiative). Until your next Start of Turn sub-phase this character, their mount, and any unit they have joined gains that modifier (to a maximum of 10). This special rule is not cumulative.",
         "A Tomb King may be the army's Hierophant. A Tomb King taken as General for the Nehekharan Royal Host may purchase the Language of the Priests upgrade for +35 points to gain the Arise! special rule and become a Level 1 Wizard (Lore of Necromancy)."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -511,6 +553,48 @@
         "my_will_be_done",
         "nehekharan_undead",
         "regeneration_5+"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -737,6 +821,48 @@
       "notes": [
         "Banner of the King: A Royal Herald upgraded to Battle Standard Bearer replaces the 'Hold Your Ground' rule with: Friendly units within the Battle Standard Bearer's Command range may re-roll any failed Leadership test. In addition, friendly units within the Command range reduce the number of Wounds lost due to the Unstable special rule by D3. Not cumulative with Indomitable (X); use the highest value.",
         "Sworn Protector: Should a Monarch of Nehekhara model suffer a hit whilst within 3\" of this model, you may choose to transfer that hit and all of its effects onto this model."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -1271,6 +1397,18 @@
         "nehekharan_undead",
         "regeneration_6+",
         "regimental_unit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
       ]
     },
     {
@@ -1375,6 +1513,17 @@
         "nehekharan_undead",
         "regeneration_6+",
         "regimental_unit"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -1735,6 +1884,17 @@
       ],
       "notes": [
         "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -1918,6 +2078,17 @@
           "ap": "—",
           "special_rules": [
             "Fight In Extra Rank"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
           ]
         }
       ]

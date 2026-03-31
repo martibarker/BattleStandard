@@ -444,6 +444,71 @@
       ],
       "notes": [
         "This character and any unit they have joined automatically passes any Panic tests they are required to make (Hold the Line)."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        }
       ]
     },
     {
@@ -563,6 +628,71 @@
       "special_rules": [
         "hold_the_line",
         "rallying_cry"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        }
       ]
     },
     {
@@ -775,6 +905,28 @@
       ],
       "notes": [
         "Must be mounted. If this model joins a unit of Empire Knights, Inner Circle Knights or Demigryph Knights, that unit gains the Immune to Psychology special rule (Master of Battle)."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
       ]
     },
     {
@@ -877,6 +1029,28 @@
       ],
       "notes": [
         "Must be mounted. If this model joins a unit of Empire Knights, Inner Circle Knights or Demigryph Knights, that unit gains the Immune to Psychology special rule (Master of Battle)."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
       ]
     },
     {
@@ -973,6 +1147,62 @@
         "The Revenant: Witch Hunter and joined unit gains Hatred (Undead models) and Flaming Attacks.",
         "The Mutant: Witch Hunter and joined unit gains Hatred (Warriors of Chaos & Beasts of Chaos) and Magic Resistance (-1).",
         "The Daemon: Witch Hunter and joined unit gains Hatred (Daemonic models) and Magical Attacks."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Crossbow",
+          "range": "30\"",
+          "strength": "4",
+          "ap": "—",
+          "special_rules": [
+            "Armour Bane (2)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        }
       ]
     },
     {
@@ -1042,6 +1272,19 @@
         "magical_attacks",
         "magic_resistance_1",
         "prayers_of_sigmar"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
       ]
     },
     {
@@ -1111,6 +1354,19 @@
         "magical_attacks",
         "magic_resistance_1",
         "prayers_of_sigmar"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
       ]
     },
     {
@@ -1180,6 +1436,19 @@
         "magical_attacks",
         "magic_resistance_1",
         "prayers_of_ulric"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
       ]
     },
     {
@@ -1249,6 +1518,19 @@
         "magical_attacks",
         "magic_resistance_1",
         "prayers_of_ulric"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
       ]
     },
     {
@@ -1330,6 +1612,50 @@
       "notes": [
         "Clouds of Soot and Smoke: This model is considered to be behind full cover whilst it is within 3\" of a friendly unit whose troop type is 'war machine'.",
         "Master of Ballistics: Once per turn a friendly Empire war machine within Command range may use this model's Ballistic Skill, or re-roll a single Artillery dice."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Repeater Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Repeater Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
+            "Quick Shot"
+          ]
+        }
       ]
     },
     {
@@ -1392,6 +1718,29 @@
         "Any Empire of Man army that includes one or more units of Flagellants may include 0-1 Harbinger of Doom as a Character choice.",
         "Zealot: A character with this special rule can only join a unit with the Fanatical Zeal special rule.",
         "Prayer of the Damned: During Command sub-phase, character may chant the Prayer of the Damned on a Leadership test. If passed, until next Start of Turn sub-phase, the character and any unit they have joined gains a 6+ Ward save and a 5+ Ward save against wounds caused in combat by an enemy with Fear or Terror."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
       ]
     },
     {
@@ -1852,6 +2201,27 @@
       ],
       "notes": [
         "State Troops may be 5+ if a detachment."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -1938,6 +2308,27 @@
       "notes": [
         "Veteran State Troops may be 5+ if a detachment.",
         "A Veteran Sergeant may purchase magic items up to a total of 25 points."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -2045,6 +2436,50 @@
           "ap": "—",
           "special_rules": [
             "Armour Bane (2)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Repeater Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
             "Ponderous"
           ]
         }
@@ -2400,6 +2835,38 @@
         "Hand weapons",
         "Light armour"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Morning Star",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        }
+      ],
       "options": [
         {
           "description": "Any model in the unit may take one of the following:",
@@ -2550,6 +3017,38 @@
             "Armour Bane (1)",
             "Quick Shot"
           ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Repeater Handgun",
+          "range": "24\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
+            "Ponderous"
+          ]
+        },
+        {
+          "name": "Repeater Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
+            "Quick Shot"
+          ]
         }
       ]
     },
@@ -2652,6 +3151,30 @@
             "Multiple Shots (3)",
             "Ponderous"
           ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Repeater Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
+            "Quick Shot"
+          ]
         }
       ]
     },
@@ -2742,6 +3265,28 @@
       ],
       "notes": [
         "A Preceptor may purchase magic items up to a total of 25 points."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
       ]
     },
     {
@@ -2826,6 +3371,28 @@
         "0-1 unit per 1,000 points in the Grand Army composition.",
         "Inner Circle: When engaged in combat, a model with this special rule (but not its mount) may re-roll any rolls To Hit of a natural 1.",
         "An Inner Circle Preceptor may purchase magic items up to a total of 50 points."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
       ]
     },
     {
@@ -2933,6 +3500,40 @@
             "Armour Bane (2)",
             "Ponderous"
           ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (2)",
+            "Quick Shot",
+            "Extra Attacks (+1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Repeater Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
+            "Quick Shot"
+          ]
         }
       ]
     },
@@ -3010,6 +3611,27 @@
       "notes": [
         "Demigryph: Wicked claws Combat S -2.",
         "A Demigryph Preceptor may purchase magic items up to a total of 50 points."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
       ]
     },
     {
@@ -3209,6 +3831,29 @@
         "Temperamental: If a natural 1 is rolled on either die when making a Steam Power or Charge roll, choose: Bang (ignores pressure, finds its own release) or Phweee (Tank halts, cannot move again this turn). If natural 1 on both dice, Tank loses a Wound and halts.",
         "Steam Cannon: 24\" S8 AP 2. Armour Bane (2), Cannon Fire, Cumbersome, Multiple Wounds (D3). Uses Black Powder Misfire table. On Misfire loses a Wound instead of rolling.",
         "Steam Gun: N/A S2 AP N/A. Breath Weapon. No armour save permitted."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Quick Shot"
+          ]
+        },
+        {
+          "name": "Repeater Pistol",
+          "range": "12\"",
+          "strength": "4",
+          "ap": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)",
+            "Quick Shot"
+          ]
+        }
       ]
     },
     {
@@ -3454,6 +4099,27 @@
       ],
       "notes": [
         "Nuln State Troops may be 5+ if a detachment."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -3566,6 +4232,16 @@
             "Armour Bane (2)",
             "Ponderous"
           ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Ponderous"
+          ]
         }
       ]
     },
@@ -3642,6 +4318,27 @@
       ],
       "notes": [
         "Nuln Swordsmen may be 5+ if a detachment."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -3731,6 +4428,27 @@
       "notes": [
         "Nuln Veteran State Troops may be 5+ if a detachment.",
         "A Veteran Sergeant may purchase magic items up to a total of 25 points."
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     }
   ],

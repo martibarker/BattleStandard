@@ -384,6 +384,48 @@
           "max_points": 100,
           "notes": "A Chaos Lord may purchase magic items up to a total of 100 points"
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
       ]
     },
     {
@@ -498,6 +540,48 @@
           "max_points": 75,
           "notes": "An Exalted Champion may purchase magic items up to a total of 75 points"
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
+        }
       ]
     },
     {
@@ -611,6 +695,48 @@
           "scope": "per_unit",
           "max_points": 50,
           "notes": "An Aspiring Champion may purchase magic items up to a total of 50 points"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)"
+          ]
         }
       ]
     },
@@ -1081,6 +1207,38 @@
           "scope": "per_unit",
           "max_points": 50
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "strength": "S",
+          "ap": "—",
+          "special_rules": [
+            "Fight In Extra Rank"
+          ]
+        }
       ]
     },
     {
@@ -1372,6 +1530,29 @@
           "scope": "per_unit",
           "max_points": 25
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
       ]
     },
     {
@@ -1497,6 +1678,29 @@
           "scope": "per_unit",
           "max_points": 25
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Halberd",
+          "range": "Combat",
+          "strength": "S+1",
+          "ap": "-1(-2)",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
+        }
       ]
     },
     {
@@ -1608,6 +1812,29 @@
               "points": 0,
               "scope": "per_unit"
             }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        },
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
           ]
         }
       ]
@@ -1772,6 +1999,19 @@
             }
           ]
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
+          ]
+        }
       ]
     },
     {
@@ -1825,6 +2065,19 @@
               "points": 4,
               "scope": "per_model"
             }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strike Last"
           ]
         }
       ]
@@ -1990,6 +2243,18 @@
           "name": "Have the Ambushers special rule",
           "points": 1,
           "scope": "per_model"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Flail",
+          "range": "Combat",
+          "strength": "S+2",
+          "ap": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands"
+          ]
         }
       ]
     },
