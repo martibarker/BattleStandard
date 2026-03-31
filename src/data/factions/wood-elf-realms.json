@@ -511,6 +511,18 @@
           "max_points": 100,
           "scope": "per_unit"
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Asrai Longbow",
+          "range": "32\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "volley_fire"
+          ]
+        }
       ]
     },
     {
@@ -621,6 +633,18 @@
           "description": "May purchase magic items up to a total of",
           "max_points": 50,
           "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Asrai Longbow",
+          "range": "32\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "volley_fire"
+          ]
         }
       ]
     },
@@ -942,6 +966,18 @@
           "description": "May purchase magic items up to a total of",
           "max_points": 50,
           "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Asrai Longbow",
+          "range": "32\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "volley_fire"
+          ]
         }
       ]
     },
@@ -1610,6 +1646,18 @@
           "cost": 1,
           "scope": "per_model"
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Asrai Longbow",
+          "range": "32\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "volley_fire"
+          ]
+        }
       ]
     },
     {
@@ -1701,6 +1749,18 @@
           "description": "A Lord's Bowman may purchase magic items up to a total of",
           "max_points": 25,
           "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Asrai Longbow",
+          "range": "32\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "volley_fire"
+          ]
         }
       ],
       "notes": [
@@ -1856,6 +1916,17 @@
           "description": "A Wildwood Warden may purchase magic items up to a total of",
           "max_points": 50,
           "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Ranger's Glaive",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "requires_two_hands"
+          ]
         }
       ],
       "notes": [
@@ -2038,6 +2109,18 @@
           "description": "0-1 unit in your army may have the Veteran special rule",
           "cost": 1,
           "scope": "per_model"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Asrai Longbow",
+          "range": "32\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "volley_fire"
+          ]
         }
       ],
       "notes": [
