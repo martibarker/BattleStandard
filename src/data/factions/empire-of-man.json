@@ -2509,6 +2509,18 @@
         "open_order",
         "warband"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Blunderbuss",
+          "range": "12\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "multiple_shots_d3",
+            "volley_fire"
+          ]
+        }
+      ],
       "notes": [
         "Free Company Militia may be 5+ if a detachment."
       ]
@@ -3149,6 +3161,17 @@
           "special_rules": [
             "armour_bane_1",
             "quick_shot"
+          ]
+        },
+        {
+          "name": "Hochland Long Rifle",
+          "range": "36\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "cumbersome",
+            "ponderous"
           ]
         }
       ]
@@ -3823,6 +3846,28 @@
             "armour_bane_1",
             "quick_shot"
           ]
+        },
+        {
+          "name": "Steam Cannon",
+          "range": "24\"",
+          "S": "8",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_2",
+            "cannon_fire",
+            "cumbersome",
+            "multiple_wounds_d3"
+          ]
+        },
+        {
+          "name": "Steam Gun",
+          "range": "N/A",
+          "S": "2",
+          "AP": "N/A",
+          "special_rules": [
+            "breath_weapon",
+            "no_armour_save"
+          ]
         }
       ]
     },
@@ -3957,6 +4002,20 @@
       "special_rules": [
         "skirmishers"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Helblaster Volley Gun",
+          "range": "24\"",
+          "S": "5",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_2",
+            "cumbersome",
+            "helblaster",
+            "move_or_shoot"
+          ]
+        }
+      ],
       "notes": [
         "0-1 per 1,000 points (Grand Army rare); 0-2 per 1,000 points as part of Nuln rare allotment; may gain Vanguard for +15 points (Gun Limbers, City-state of Nuln).",
         "Helblaster: Roll 3 Artillery dice before shooting; total shots equal sum of all three. Misfire on one die: -1 To Hit. Misfire on two dice: no shots, roll Misfire table. Misfire on all three: 30 shots but +1 -1 To Hit modifier and weapon destroyed after.",
@@ -3990,6 +4049,19 @@
       ],
       "special_rules": [
         "skirmishers"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Helstorm Rocket Battery",
+          "range": "12-48\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "cumbersome",
+            "helstorm",
+            "move_or_shoot"
+          ]
+        }
       ],
       "notes": [
         "0-1 per 1,000 points (Grand Army rare); 0-2 per 1,000 points as part of Nuln rare allotment; may gain Vanguard for +10 points (Gun Limbers, City-state of Nuln).",
