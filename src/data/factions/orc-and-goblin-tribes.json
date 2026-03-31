@@ -414,28 +414,6 @@
       ],
       "notes": [
         "Furious Charge does not apply to this model's mount (should it have one)"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -508,28 +486,6 @@
       "notes": [
         "Furious Charge does not apply to this model's mount (should it have one)",
         "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -616,28 +572,6 @@
       ],
       "notes": [
         "Furious Charge does not apply to this model's mount (should it have one)"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -725,28 +659,6 @@
       "notes": [
         "Furious Charge does not apply to this model's mount (should it have one)",
         "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -961,28 +873,6 @@
       ],
       "notes": [
         "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -1055,28 +945,6 @@
       ],
       "notes": [
         "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -1258,28 +1126,6 @@
       ],
       "notes": [
         "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -1351,28 +1197,6 @@
       ],
       "notes": [
         "Battle Standard Bearer: may be upgraded for +25 pts; can purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -1918,19 +1742,6 @@
       "notes": [
         "Boss may purchase magic items up to 25 pts",
         "Da Boyz: army must include one Black Orc Boss for every Black Orc Mob and vice versa"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -2039,17 +1850,6 @@
       "notes": [
         "Boss may purchase magic items up to 25 pts",
         "Big Stabbas: unit gains Impact Hits (D3); applies to unit as a whole not individual models"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -2132,17 +1932,6 @@
       ],
       "notes": [
         "Boss may purchase magic items up to 25 pts — not listed in RH but inferred by analogy; check source"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -2222,17 +2011,6 @@
         "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken (Core slot)",
         "Netters: when combat chosen, may entangle one engaged enemy unit; roll D6: on 1 unit entangles itself, on 2+ enemy is entangled; entangled unit suffers -1 Strength (minimum 1) until end of Combat phase; not cumulative",
         "Fanatics are concealed within the unit; released during Start of Turn sub-phase"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -2417,17 +2195,6 @@
         "Squigs Go Wild: if Squig Herd ever Breaks and flees, Cave Squigs go wild; every unit (friend or foe) within 2D6\" suffers D3 S5 hits, AP-1; +1 to D3 per additional 5 Cave Squigs; then unit treated as destroyed",
         "Cave Squig Huge gob: Combat, S, AP-1, Armour Bane (1)",
         "Motley Crew applies to Squig Herders only"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -2538,19 +2305,6 @@
       "notes": [
         "Troll vomit: Combat, S3, AP-2; Troll makes one additional attack each turn with this weapon after all other attacks (including Stomp Attacks); hits automatically",
         "A unit may contain only one type of Troll"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -2683,17 +2437,6 @@
       ],
       "notes": [
         "Furious Charge applies to Orc Boar Boys & Boss only; Boss may purchase magic items up to 25 pts"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -2805,17 +2548,6 @@
           "name": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
           "cost": 0,
           "scope": "per_unit"
-        }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
         }
       ]
     },
@@ -2940,17 +2672,6 @@
           "cost": 0,
           "scope": "per_unit"
         }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -3043,17 +2764,6 @@
         "0-1 per Night Goblin Chief or Night Goblin Shaman taken (Special slot)",
         "Boss may purchase magic items up to 25 pts",
         "Huge gob: Combat, S, AP-1, Armour Bane (1)"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -3393,19 +3103,6 @@
       "notes": [
         "Character mount: Black Orc Warboss or Bigboss may be mounted on a Black Orc Boar Chariot for +130 pts",
         "Furious Charge applies to Black Orc Crew only"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -3895,19 +3592,6 @@
         "Mercenaries: may be taken as Mercenaries in any Grand Army composition list with Mercenaries category; subject to Misbehaving Mercenaries rules",
         "Ogre Charge: AP of Impact Hits is improved by current Rank Bonus of the unit",
         "Ironfist: S AP-; Extra Attacks (1), Requires Two Hands; improves armour value by 1"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {

@@ -389,19 +389,6 @@
       ],
       "notes": [
         "Brayhorn: General only. From round 2 onwards, if your General is on the battlefield during the Command sub-phase, they may attempt to sound the Brayhorn by making a Leadership test. If passed, immediately re-roll for each unit of Ambushers held in reserve that did not arrive during the Start of Turn sub-phase of this turn."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -503,19 +490,6 @@
       ],
       "notes": [
         "Brayhorn: General only. From round 2 onwards, if your General is on the battlefield during the Command sub-phase, they may attempt to sound the Brayhorn by making a Leadership test. If passed, immediately re-roll for each unit of Ambushers held in reserve that did not arrive during the Start of Turn sub-phase of this turn."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -770,19 +744,6 @@
       ],
       "notes": [
         "Slaughterer's Call: Whilst this model is Frenzied, any unit it has joined will also become Frenzied."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -869,19 +830,6 @@
       ],
       "notes": [
         "Slaughterer's Call: Whilst this model is Frenzied, any unit it has joined will also become Frenzied."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -979,28 +927,6 @@
           "scope": "per_unit",
           "max_points": 50,
           "notes": "May purchase magic items up to a total of 50 points"
-        }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
         }
       ]
     },
@@ -1217,19 +1143,6 @@
       ],
       "notes": [
         "Bestial Charge: During a turn in which it made a charge move of 3\" or more, a model with this special rule gains a +1 modifier to its Strength characteristic."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -1317,17 +1230,6 @@
           "points": 1,
           "scope": "per_model",
           "condition": "0-1 unit per 1,000 points may"
-        }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
         }
       ]
     },
@@ -1474,19 +1376,6 @@
       ],
       "notes": [
         "May be taken as a Core choice if the General is a Doombull or Gorebull (Grand Army composition only)."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -1604,28 +1493,6 @@
           "max_points": 50,
           "condition": "0-1 unit per 1,000 points may"
         }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -1722,29 +1589,6 @@
       ],
       "notes": [
         "The Quickening Storm: This model has a 5+ Ward save against wounds from Magic Missiles or Magical Vortex spells. If this model, or the unit it belongs to, suffers one or more hits from Storm Call, it becomes 'Quickened' (+1 Initiative and Attacks until next Start of Turn sub-phase)."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Halberd",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
-          ]
-        }
       ]
     },
     {
@@ -2032,19 +1876,6 @@
       ],
       "notes": [
         "Storm Call: Bound spell, Power Level 1. Type: Magic Missile. Casting Value: 7+. Range: Self. Effect: All units within 6\" of this model (friend or foe), including units engaged in combat and this model, suffer D3 Strength 4 hits, each with an AP of -1."
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {

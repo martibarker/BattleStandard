@@ -177,49 +177,6 @@
         "A King may take 0-1 unit of Longbeards as a Core choice",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction",
         "Shieldbearers: character has a split profile and follows the Split Profile (Cavalry) rule; +3 Wounds; base size 50 x 50 mm when mounted on Shieldbearers"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Crossbow",
-          "range": "30\"",
-          "strength": "4",
-          "ap": "—",
-          "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
-          ]
-        },
-        {
-          "name": "Handgun",
-          "range": "24\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Ponderous"
-          ]
-        },
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
-          ]
-        }
       ]
     },
     {
@@ -308,49 +265,6 @@
         "A single Thane in your army may be upgraded to Battle Standard Bearer for +25 points; in addition to their usual runic allowance, a Battle Standard Bearer may purchase Standard runes with no points limit",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction",
         "Shieldbearers: character has a split profile and follows the Split Profile (Cavalry) rule; +3 Wounds; base size 50 x 50 mm when mounted on Shieldbearers"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Crossbow",
-          "range": "30\"",
-          "strength": "4",
-          "ap": "—",
-          "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
-          ]
-        },
-        {
-          "name": "Handgun",
-          "range": "24\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Ponderous"
-          ]
-        },
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
-          ]
-        }
       ]
     },
     {
@@ -535,19 +449,6 @@
         "Counts as a level 2 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)",
         "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (1) and Flaming Attacks special rules; lost if the character leaves the unit",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -621,19 +522,6 @@
         "Counts as a level 1 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)",
         "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (1) and Flaming Attacks special rules; lost if the character leaves the unit",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -702,19 +590,6 @@
       ],
       "notes": [
         "Slayer of Daemons: when making a roll To Wound, a roll of 4+ is always a success regardless of the target's Toughness; each unsaved wound inflicted against an enemy model with the Warp-spawned special rule, or whose troop type is 'behemoth', has the Multiple Wounds (D3) special rule"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -778,19 +653,6 @@
       ],
       "notes": [
         "Slayer of Dragons: when making a roll To Wound, a roll of 4+ is always a success regardless of the target's Toughness; each unsaved wound inflicted by this character against an enemy model whose troop type is 'behemoth' has the Multiple Wounds (D3) special rule"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -864,52 +726,6 @@
         "Artillery Master: unless fleeing or in combat, once per turn during the Shooting phase a friendly unit of Quarrellers, Thunderers or Dwarf war machine within Command range may either re-roll any rolls To Hit of a natural 1, or re-roll a single Artillery dice",
         "Entrenchment: during deployment, may 'Entrench' a single non-character model whose troop type is 'war machine'; an Entrenched war machine is considered to be behind partial cover and behind a low linear obstacle; lost if the war machine moves",
         "Stand Back Chief: cannot be targeted by enemy shooting or enemy spells whilst within 3\" of a friendly unit whose troop type is 'war machine'"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
-          ]
-        },
-        {
-          "name": "Brace of Pistols",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Handgun",
-          "range": "24\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Ponderous"
-          ]
-        }
       ]
     },
     {
@@ -1002,19 +818,6 @@
         "0-1 unit per 1,000 points may have the Drilled special rule (+1 point per model)",
         "0-1 unit per 1,000 points may have the Veteran special rule (+1 point per model)",
         "Standard runes may be purchased up to a total of 50 points"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -1117,19 +920,6 @@
         "May be taken as a Core choice if the General is a King",
         "Venerable: unless this unit is fleeing, friendly units within 6\" of it can re-roll any failed Panic test",
         "Standard runes may be purchased up to a total of 50 points"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -1226,40 +1016,6 @@
             "Armour Bane (2)",
             "Ponderous"
           ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Brace of Pistols",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
-          ]
         }
       ]
     },
@@ -1355,40 +1111,6 @@
           "special_rules": [
             "Armour Bane (1)",
             "Ponderous"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Brace of Pistols",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
           ]
         }
       ]
@@ -1507,40 +1229,6 @@
           "special_rules": [
             "Armour Bane (2)",
             "Ponderous"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Brace of Pistols",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
           ]
         }
       ]
@@ -1767,18 +1455,6 @@
         "shieldwall",
         "stubborn"
       ],
-      "weapon_profiles": [
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
-          ]
-        }
-      ],
       "notes": [
         "Runes of Protection: this unit has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack"
       ]
@@ -1876,18 +1552,6 @@
         "resolute",
         "runes_of_warding",
         "stubborn"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
-          ]
-        }
       ],
       "notes": [
         "Runes of Warding: this unit has a 5+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule",
@@ -2093,19 +1757,6 @@
         "Fight Me!: any model with this special rule can issue and accept challenges in the same manner as a character",
         "Slayer: when this model makes a roll To Wound, a roll of 4+ is always a success, regardless of the target's Toughness",
         "Standard runes may be purchased up to a total of 50 points"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -2166,31 +1817,6 @@
           "AP": "-1",
           "special_rules": [
             "breath_weapon"
-          ]
-        },
-        {
-          "name": "Brimstone gun",
-          "range": "18\"",
-          "S": "5",
-          "AP": "-2",
-          "special_rules": [
-            "dwarf_crafted",
-            "flaming_attacks",
-            "multiple_shots_d3_plus_1",
-            "quick_shot"
-          ]
-        },
-        {
-          "name": "Clattergun",
-          "range": "24\"",
-          "S": "4",
-          "AP": "-1",
-          "special_rules": [
-            "armour_bane_1",
-            "dwarf_crafted",
-            "move_and_shoot",
-            "multiple_shots_d6",
-            "quick_shot"
           ]
         }
       ],
@@ -2254,31 +1880,6 @@
           "AP": "-1",
           "special_rules": [
             "breath_weapon"
-          ]
-        },
-        {
-          "name": "Brimstone gun",
-          "range": "18\"",
-          "S": "5",
-          "AP": "-2",
-          "special_rules": [
-            "dwarf_crafted",
-            "flaming_attacks",
-            "multiple_shots_d3_plus_1",
-            "quick_shot"
-          ]
-        },
-        {
-          "name": "Clattergun",
-          "range": "24\"",
-          "S": "4",
-          "AP": "-1",
-          "special_rules": [
-            "armour_bane_1",
-            "dwarf_crafted",
-            "move_and_shoot",
-            "multiple_shots_d6",
-            "quick_shot"
           ]
         }
       ],

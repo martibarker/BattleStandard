@@ -417,37 +417,6 @@
       ],
       "notes": [
         "A single Paladin in the army may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Morning Star",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Lance",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
-        }
       ]
     },
     {
@@ -533,37 +502,6 @@
         "blessings_of_the_lady",
         "rallying_cry",
         "knights_vow"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Morning Star",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Lance",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
-        }
       ]
     },
     {
@@ -652,37 +590,6 @@
       ],
       "notes": [
         "A single Paladin may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Morning Star",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Lance",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
-        }
       ]
     },
     {
@@ -880,27 +787,6 @@
         "peasants_duty",
         "peasantry",
         "warband"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Halberd",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -1263,19 +1149,6 @@
         "close_order",
         "furious_charge",
         "knights_vow"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        }
       ]
     },
     {
@@ -1464,25 +1337,6 @@
         "peasantry",
         "shieldwall",
         "warband"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Polearm (single-handed)",
-          "range": "Combat",
-          "S": "S",
-          "AP": "-",
-          "special_rules": [
-            "fight_in_extra_rank"
-          ]
-        },
-        {
-          "name": "Polearm (double-handed)",
-          "range": "Combat",
-          "S": "S+1",
-          "AP": "-1",
-          "special_rules": [],
-          "notes": "Requires Two Hands. A polearm has two profiles. You must choose which the unit will use at the start of the first round of a combat. A model wielding a polearm cannot make a supporting attack during a turn in which it charged."
-        }
       ],
       "notes": [
         "A Grail Monk is a command group model that follows the rules for a champion — a unit containing both a Yeoman and a Grail Monk has two champions"
@@ -2430,30 +2284,6 @@
         "unbreakable",
         "unstable"
       ],
-      "weapon_profiles": [
-        {
-          "name": "The Dolorous Blade — Rapid strikes",
-          "range": "Combat",
-          "S": "S",
-          "AP": "-1",
-          "special_rules": [
-            "extra_attacks_d6",
-            "magical_attacks"
-          ]
-        },
-        {
-          "name": "The Dolorous Blade — Deadly blows",
-          "range": "Combat",
-          "S": "S+2",
-          "AP": "-1",
-          "special_rules": [
-            "armour_bane_1",
-            "magical_attacks",
-            "multiple_wounds_2"
-          ],
-          "notes": "The Dolorous Blade has two profiles. You must choose which the wielder will use at the start of each round of combat."
-        }
-      ],
       "notes": [
         "May be included in any Kingdom of Bretonnia army using any army composition list",
         "Must be fielded as presented — no additional options",
@@ -2782,27 +2612,6 @@
         "shieldwall",
         "veteran",
         "warband"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Halberd",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -2931,28 +2740,6 @@
         "motley_crew",
         "open_order",
         "warband"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Pistol",
-          "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
-          ]
-        },
-        {
-          "name": "Crossbow",
-          "range": "30\"",
-          "strength": "4",
-          "ap": "—",
-          "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
-          ]
-        }
       ]
     },
     {

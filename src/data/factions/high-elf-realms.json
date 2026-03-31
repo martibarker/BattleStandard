@@ -390,47 +390,6 @@
           "scope": "per_unit",
           "max_points": 100
         }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Halberd",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Lance",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
-        }
       ]
     },
     {
@@ -530,47 +489,6 @@
           "description": "Magic items",
           "scope": "per_unit",
           "max_points": 50
-        }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        },
-        {
-          "name": "Great Weapon",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
-          ]
-        },
-        {
-          "name": "Halberd",
-          "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
-          "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
-          ]
-        },
-        {
-          "name": "Lance",
-          "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
-          "special_rules": [
-            "Armour Bane (1)"
-          ]
         }
       ]
     },
@@ -973,17 +891,6 @@
       ],
       "availability": [
         "sea_guard_garrison"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
@@ -1587,17 +1494,6 @@
       ],
       "availability": [
         "sea_guard_garrison"
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "strength": "S",
-          "ap": "—",
-          "special_rules": [
-            "Fight In Extra Rank"
-          ]
-        }
       ]
     },
     {
