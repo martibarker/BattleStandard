@@ -1163,10 +1163,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -1225,10 +1225,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -1280,10 +1280,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -1786,10 +1786,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2233,10 +2233,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2420,10 +2420,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2572,10 +2572,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2671,10 +2671,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]

@@ -182,42 +182,42 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Crossbow",
           "range": "30\"",
-          "strength": "4",
-          "ap": "—",
+          "S": "4",
+          "AP": "—",
           "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
+            "armour_bane_2",
+            "ponderous"
           ]
         },
         {
           "name": "Handgun",
           "range": "24\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Ponderous"
+            "armour_bane_1",
+            "ponderous"
           ]
         },
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         }
       ]
@@ -313,42 +313,42 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Crossbow",
           "range": "30\"",
-          "strength": "4",
-          "ap": "—",
+          "S": "4",
+          "AP": "—",
           "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
+            "armour_bane_2",
+            "ponderous"
           ]
         },
         {
           "name": "Handgun",
           "range": "24\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Ponderous"
+            "armour_bane_1",
+            "ponderous"
           ]
         },
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         }
       ]
@@ -540,12 +540,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -626,12 +626,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -707,12 +707,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -783,12 +783,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -869,45 +869,42 @@
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         },
         {
           "name": "Brace of Pistols",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "quick_shot"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Handgun",
           "range": "24\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Ponderous"
+            "armour_bane_1",
+            "ponderous"
           ]
         }
       ]
@@ -1007,12 +1004,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -1122,12 +1119,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -1220,45 +1217,42 @@
         {
           "name": "Crossbow",
           "range": "30\"",
-          "strength": "4",
-          "ap": "—",
+          "S": "4",
+          "AP": "—",
           "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
+            "armour_bane_2",
+            "ponderous"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Brace of Pistols",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "quick_shot"
           ]
         },
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         }
       ]
@@ -1350,45 +1344,42 @@
         {
           "name": "Handgun",
           "range": "24\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Ponderous"
+            "armour_bane_1",
+            "ponderous"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Brace of Pistols",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "quick_shot"
           ]
         },
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         }
       ]
@@ -1502,45 +1493,42 @@
         {
           "name": "Crossbow",
           "range": "30\"",
-          "strength": "4",
-          "ap": "—",
+          "S": "4",
+          "AP": "—",
           "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
+            "armour_bane_2",
+            "ponderous"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Brace of Pistols",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Multiple Shots (2)",
-            "Quick Shot",
-            "Extra Attacks (+1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "quick_shot"
           ]
         },
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         }
       ]
@@ -1771,11 +1759,11 @@
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         }
       ],
@@ -1881,11 +1869,11 @@
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         }
       ],
@@ -1995,12 +1983,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -2098,12 +2086,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]

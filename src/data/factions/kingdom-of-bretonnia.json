@@ -422,30 +422,30 @@
         {
           "name": "Morning Star",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Lance",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         }
       ]
@@ -538,30 +538,30 @@
         {
           "name": "Morning Star",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Lance",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         }
       ]
@@ -657,30 +657,30 @@
         {
           "name": "Morning Star",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Lance",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         }
       ]
@@ -885,27 +885,27 @@
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         },
         {
           "name": "Cavalry spear",
           "range": "Combat",
-          "S": "S",
-          "AP": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
             "fight_in_extra_rank"
           ]
@@ -1172,7 +1172,7 @@
           "name": "Serrated maw",
           "range": "Combat",
           "S": "S",
-          "AP": "-",
+          "AP": "—",
           "special_rules": [
             "armour_bane_2",
             "multiple_wounds_2"
@@ -1277,12 +1277,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -1747,10 +1747,10 @@
         {
           "name": "Lance",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         }
       ]
@@ -1854,10 +1854,10 @@
         {
           "name": "Lance",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         }
       ]
@@ -1969,12 +1969,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -2085,10 +2085,10 @@
         {
           "name": "Lance",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         }
       ]
@@ -2189,10 +2189,10 @@
         {
           "name": "Lance",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)"
+            "armour_bane_1"
           ]
         }
       ]
@@ -2307,10 +2307,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2796,20 +2796,20 @@
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2945,21 +2945,21 @@
         {
           "name": "Pistol",
           "range": "12\"",
-          "strength": "4",
-          "ap": "-1",
+          "S": "4",
+          "AP": "-1",
           "special_rules": [
-            "Armour Bane (1)",
-            "Quick Shot"
+            "armour_bane_1",
+            "quick_shot"
           ]
         },
         {
           "name": "Crossbow",
           "range": "30\"",
-          "strength": "4",
-          "ap": "—",
+          "S": "4",
+          "AP": "—",
           "special_rules": [
-            "Armour Bane (2)",
-            "Ponderous"
+            "armour_bane_2",
+            "ponderous"
           ]
         }
       ]

@@ -431,41 +431,41 @@
         {
           "name": "Flail",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -558,41 +558,41 @@
         {
           "name": "Flail",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -826,41 +826,41 @@
         {
           "name": "Flail",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         },
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         },
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -1088,10 +1088,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -1239,11 +1239,11 @@
         {
           "name": "Flail",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         }
       ]
@@ -1402,11 +1402,11 @@
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         }
       ]
@@ -1518,10 +1518,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -1889,10 +1889,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2074,21 +2074,21 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         },
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -2140,11 +2140,11 @@
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         }
       ]
@@ -2239,10 +2239,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2313,10 +2313,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2550,12 +2550,12 @@
         {
           "name": "Great Weapon",
           "range": "Combat",
-          "strength": "S+2",
-          "ap": "-2",
+          "S": "S+2",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands",
-            "Strike Last"
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
           ]
         }
       ]
@@ -2654,10 +2654,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2812,10 +2812,10 @@
         {
           "name": "Spear",
           "range": "Combat",
-          "strength": "S",
-          "ap": "—",
+          "S": "S+1",
+          "AP": "-1",
           "special_rules": [
-            "Fight In Extra Rank"
+            "fight_in_extra_rank"
           ]
         }
       ]
@@ -2952,11 +2952,11 @@
         {
           "name": "Halberd",
           "range": "Combat",
-          "strength": "S+1",
-          "ap": "-1(-2)",
+          "S": "S+1",
+          "AP": "-1(-2)",
           "special_rules": [
-            "Armour Bane (1)",
-            "Requires Two Hands"
+            "armour_bane_1",
+            "requires_two_hands"
           ]
         }
       ]
