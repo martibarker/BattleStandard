@@ -1575,6 +1575,18 @@
         "bully",
         "choppas"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Whip",
+          "range": "Combat",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "fight_in_extra_rank",
+            "strike_first"
+          ]
+        }
+      ],
       "notes": [
         "Special character that accompanies a war machine; cannot leave it; friendly war machines within Command range may use its Leadership"
       ]
@@ -2407,6 +2419,18 @@
       "special_rules": [
         "immune_to_psychology",
         "release_the_fanatics"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Fanatic Ball & Chain",
+          "range": "Combat",
+          "S": "5",
+          "AP": "-3",
+          "special_rules": [
+            "hits_friend_or_foe",
+            "on_model_movement"
+          ]
+        }
       ],
       "notes": [
         "Concealed within Night Goblin Mobs (0-3 per unit, +25 pts each)",
@@ -3791,6 +3815,20 @@
           "scope": "per_unit"
         }
       ],
+      "weapon_profiles": [
+        {
+          "name": "Bolt Thrower",
+          "range": "48\"",
+          "S": "6",
+          "AP": "-3",
+          "special_rules": [
+            "cumbersome",
+            "move_or_shoot",
+            "multiple_wounds_2",
+            "through_and_through"
+          ]
+        }
+      ],
       "notes": [
         "0-2 per 1,000 points (Special slot)"
       ]
@@ -3847,6 +3885,21 @@
           "scope": "per_unit"
         }
       ],
+      "weapon_profiles": [
+        {
+          "name": "Doom Diver Catapult",
+          "range": "12-60\"",
+          "S": "5",
+          "AP": "-3",
+          "special_rules": [
+            "bombardment",
+            "cumbersome",
+            "move_or_shoot",
+            "flight_adjustment",
+            "on_model_movement"
+          ]
+        }
+      ],
       "notes": [
         "0-1 per 1,000 points (Rare slot)",
         "Doom Diver: when shooting, after Scatter, may roll D3 and move the 3\" blast template that many inches in any direction; on indirect fire, if Hit! rolled use arrow above Hit symbol; move template Artillery dice minus D3 inches in that direction (minimum 0)"
@@ -3901,6 +3954,20 @@
           "name": "Orc Bully upgrade",
           "cost": 10,
           "scope": "per_unit"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Stone Thrower",
+          "range": "12-60\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "bombardment",
+            "cumbersome",
+            "move_or_shoot",
+            "multiple_wounds_d3_plus_1"
+          ]
         }
       ],
       "notes": [
