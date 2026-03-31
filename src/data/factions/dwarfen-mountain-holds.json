@@ -1765,6 +1765,18 @@
             "armour_bane_1",
             "quick_shot"
           ]
+        },
+        {
+          "name": "Drakegun",
+          "range": "18\"",
+          "S": "5",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_2",
+            "dwarf_crafted",
+            "flaming_attacks",
+            "quick_shot"
+          ]
         }
       ],
       "notes": [
@@ -1874,6 +1886,29 @@
           "special_rules": [
             "armour_bane_1",
             "quick_shot"
+          ]
+        },
+        {
+          "name": "Drakegun",
+          "range": "18\"",
+          "S": "5",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_2",
+            "dwarf_crafted",
+            "flaming_attacks",
+            "quick_shot"
+          ]
+        },
+        {
+          "name": "Trollhammer Torpedo",
+          "range": "24\"",
+          "S": "5",
+          "AP": "-3",
+          "special_rules": [
+            "cumbersome",
+            "flaming_attacks",
+            "multiple_wounds_d3"
           ]
         }
       ],
@@ -1987,6 +2022,17 @@
           "AP": "-2",
           "special_rules": [
             "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Steam Drill",
+          "range": "Combat",
+          "S": "S+3",
+          "AP": "-3",
+          "special_rules": [
+            "furious_charge",
             "requires_two_hands",
             "strike_last"
           ]
