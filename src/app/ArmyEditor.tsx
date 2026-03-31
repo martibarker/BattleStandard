@@ -395,9 +395,14 @@ export default function ArmyEditor() {
                         </div>
                       )}
 
-                      {unit.weapon_profiles && unit.weapon_profiles.length > 0 && (
-                        <WeaponProfileTable profiles={unit.weapon_profiles} />
-                      )}
+                      {unit.weapon_profiles && unit.weapon_profiles.length > 0 && (() => {
+                        // Only display weapon_profiles that match base equipment
+                        const equipmentLower = (unit.equipment ?? []).map(e => e.toLowerCase());
+                        const baseWeaponProfiles = unit.weapon_profiles.filter(wp =>
+                          equipmentLower.some(eq => eq.includes(wp.name.toLowerCase()))
+                        );
+                        return baseWeaponProfiles.length > 0 ? <WeaponProfileTable profiles={baseWeaponProfiles} /> : null;
+                      })()}
 
                       {unit.command && unit.command.length > 0 && (
                         <div className="flex flex-wrap gap-2">
