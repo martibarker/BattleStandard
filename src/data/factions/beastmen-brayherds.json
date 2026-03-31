@@ -598,6 +598,28 @@
           "notes": "A Great Bray-Shaman may purchase magic items up to a total of 100 points"
         }
       ],
+      "weapon_profiles": [
+        {
+          "name": "Braystaff (Offensive)",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Braystaff (Defensive)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "armour_save_5_plus"
+          ]
+        }
+      ],
       "notes": [
         "Braystaff: When this model's combat is chosen during Step 1.1 of any Choose & Fight Combat sub-phase, it must choose to use its Braystaff offensively or defensively. Used offensively, a Braystaff counts as a great weapon. Used defensively, a Braystaff counts as a hand weapon and gives its wielder an Armour Value of 5+."
       ]
@@ -680,6 +702,28 @@
           "scope": "per_unit",
           "max_points": 50,
           "notes": "A Bray-Shaman may purchase magic items up to a total of 50 points"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Braystaff (Offensive)",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Braystaff (Defensive)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "armour_save_5_plus"
+          ]
         }
       ],
       "notes": [
@@ -2726,6 +2770,28 @@
         "primal_fury",
         "warband"
       ],
+      "weapon_profiles": [
+        {
+          "name": "Braystaff (Offensive)",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Braystaff (Defensive)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "armour_save_5_plus"
+          ]
+        }
+      ],
       "notes": [
         "May be included in any Beastmen Brayherds army made using any army composition list that includes this option. Must be fielded as presented here.",
         "Future Sight: Kralmaw has a 4+ Ward save against any wounds suffered.",
@@ -2769,6 +2835,20 @@
         "swiftstride",
         "the_sons_of_ghorros",
         "warband"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Mansmasher",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "magical_attacks",
+            "multiple_wounds_d3",
+            "charge_turn_only"
+          ]
+        }
       ],
       "notes": [
         "May be included in any Beastmen Brayherds army made using any army composition list that includes this option. Must be fielded as presented here.",
