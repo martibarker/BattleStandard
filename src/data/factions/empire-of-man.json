@@ -4445,35 +4445,85 @@
       "name": "Burning Blade*",
       "points": 5,
       "category": "magic_weapon",
-      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
+      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common",
+      "weapon_profile": {
+        "name": "Burning Blade",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "flaming_attacks",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "biting-blade",
       "name": "Biting Blade",
       "points": 15,
       "category": "magic_weapon",
-      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
+      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks",
+      "weapon_profile": {
+        "name": "Biting Blade",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "sword-of-striking",
       "name": "Sword of Striking*",
       "points": 15,
       "category": "magic_weapon",
-      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
+      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common",
+      "weapon_profile": {
+        "name": "Sword of Striking",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "magical_attacks"
+        ],
+        "notes": "Wielder has +1 modifier to rolls To Hit during Combat phase"
+      }
     },
     {
       "id": "berserker-blade",
       "name": "Berserker Blade",
       "points": 20,
       "category": "magic_weapon",
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
+      "weapon_profile": {
+        "name": "Berserker Blade",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-",
+        "special_rules": [
+          "extra_attacks",
+          "impetuous",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "sword-of-might",
       "name": "Sword of Might*",
       "points": 20,
       "category": "magic_weapon",
-      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
+      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common",
+      "weapon_profile": {
+        "name": "Sword of Might",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "dragon_bow",
@@ -4484,14 +4534,34 @@
       "description": "36\" S6 AP -2. Magical Attacks, Multiple Wounds (2). Commanders of the Empire only.",
       "restrictions": [
         "Commanders of the Empire only"
-      ]
+      ],
+      "weapon_profile": {
+        "name": "Dragon Bow",
+        "range": "36\"",
+        "S": "6",
+        "AP": "-2",
+        "special_rules": [
+          "magical_attacks",
+          "multiple_wounds_2"
+        ]
+      }
     },
     {
       "id": "sword-of-swiftness",
       "name": "Sword of Swiftness",
       "points": 25,
       "category": "magic_weapon",
-      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
+      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First",
+      "weapon_profile": {
+        "name": "Sword of Swiftness",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "strike_first",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "von_trickschottes_wondrous_arquebus",
@@ -4502,7 +4572,18 @@
       "description": "36\" S5 AP -2. Armour Bane (1), Multiple Wounds (D3). City-state of Nuln Army of Infamy only. The wielder does not suffer the usual -1 modifier for shooting at long range.",
       "restrictions": [
         "City-state of Nuln Army of Infamy only"
-      ]
+      ],
+      "weapon_profile": {
+        "name": "Von Trickschotte's Wondrous Arquebus",
+        "range": "36\"",
+        "S": "5",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "multiple_wounds_d3"
+        ],
+        "notes": "Wielder does not suffer -1 modifier for shooting at long range"
+      }
     },
     {
       "id": "blade_of_silvered_steel",
@@ -4513,7 +4594,18 @@
       "description": "Combat S+1 AP -1. Hatred (Undead models), Magical Attacks. May only be taken by a model in a Knightly Order Army of Infamy. Undead models cannot make Armour or Regeneration saves against a wound caused by this weapon.",
       "restrictions": [
         "Knightly Order Army of Infamy only"
-      ]
+      ],
+      "weapon_profile": {
+        "name": "Blade of Silvered Steel",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "hatred_undead",
+          "magical_attacks"
+        ],
+        "notes": "Undead models cannot make Armour or Regeneration saves against wounds from this weapon"
+      }
     },
     {
       "id": "giant-blade",
@@ -4521,14 +4613,35 @@
       "points": 30,
       "category": "magic_weapon",
       "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
-      "restrictions": "Giant Blade(Magic Weapon)30 pointsA broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.RangeStrengthArmour Pierc"
+      "weapon_profile": {
+        "name": "Giant Blade",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-",
+        "special_rules": [
+          "armour_bane_2",
+          "multiple_wounds_2",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "hell-forged-axe",
       "name": "Hell-forged Axe",
       "points": 30,
       "category": "magic_weapon",
-      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
+      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks",
+      "weapon_profile": {
+        "name": "Hell-forged Axe",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "armour_bane_3",
+          "flaming_attacks",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "sword-of-sorrow",
@@ -4536,7 +4649,15 @@
       "points": 30,
       "category": "magic_weapon",
       "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
-      "restrictions": "Sword of Sorrow(Magic Weapon)30 pointsThough it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.RangeSt"
+      "weapon_profile": {
+        "name": "Sword of Sorrow",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "pearl_daggers",
@@ -4544,28 +4665,71 @@
       "source": "arcane_journal",
       "category": "magic_weapon",
       "points": 35,
-      "description": "Combat S -1. Extra Attacks (D3), Magical Attacks, Requires Two Hands. The wielder of the Pearl Daggers may re-roll any failed rolls To Hit during the Combat phase."
+      "description": "Combat S -1. Extra Attacks (D3), Magical Attacks, Requires Two Hands. The wielder of the Pearl Daggers may re-roll any failed rolls To Hit during the Combat phase.",
+      "weapon_profile": {
+        "name": "Pearl Daggers",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "extra_attacks_d3",
+          "requires_two_hands",
+          "magical_attacks"
+        ],
+        "notes": "Wielder may re-roll any failed rolls To Hit during the Combat phase"
+      }
     },
     {
       "id": "spelleater-axe",
       "name": "Spelleater Axe",
       "points": 35,
       "category": "magic_weapon",
-      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
+      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)",
+      "weapon_profile": {
+        "name": "Spelleater Axe",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "magic_resistance_2",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "headsmans-axe",
       "name": "Headsman's Axe",
       "points": 45,
       "category": "magic_weapon",
-      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
+      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands",
+      "weapon_profile": {
+        "name": "Headsman's Axe",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "killing_blow",
+          "requires_two_hands",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "dragon-slaying-sword",
       "name": "Dragon Slaying Sword",
       "points": 50,
       "category": "magic_weapon",
-      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
+      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer",
+      "weapon_profile": {
+        "name": "Dragon Slaying Sword",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "monster_slayer",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "hammer_of_righteousness",
@@ -4573,14 +4737,37 @@
       "source": "arcane_journal",
       "category": "magic_weapon",
       "points": 50,
-      "description": "Combat S+2 AP -2. Magical Attacks, Requires Two Hands, Strikes Last. Models hit by the Hammer of Righteousness must make a Leadership test for each hit suffered. If the test is failed, the hit wounds automatically and no Armour save is allowed (Regeneration and Ward saves may be taken as normal). If the test is passed, rolls To Wound and Armour saves are made as normal."
+      "description": "Combat S+2 AP -2. Magical Attacks, Requires Two Hands, Strikes Last. Models hit by the Hammer of Righteousness must make a Leadership test for each hit suffered. If the test is failed, the hit wounds automatically and no Armour save is allowed (Regeneration and Ward saves may be taken as normal). If the test is passed, rolls To Wound and Armour saves are made as normal.",
+      "weapon_profile": {
+        "name": "Hammer of Righteousness",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "requires_two_hands",
+          "strike_last",
+          "magical_attacks"
+        ],
+        "notes": "Targets of hits must make a Leadership test or the hit wounds automatically with no Armour save"
+      }
     },
     {
       "id": "meteor-hammer",
       "name": "Meteor Hammer",
       "points": 50,
       "category": "magic_weapon",
-      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
+      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness.",
+      "weapon_profile": {
+        "name": "Meteor Hammer",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-3",
+        "special_rules": [
+          "requires_two_hands",
+          "magical_attacks"
+        ],
+        "notes": "When making a roll To Wound with this weapon, a roll of 3+ is always a success, regardless of the target's Toughness"
+      }
     },
     {
       "id": "sword_of_justice",
@@ -4588,28 +4775,73 @@
       "source": "forces_of_fantasy",
       "category": "magic_weapon",
       "points": 50,
-      "description": "Combat S -1. Armour Bane (1), Magical Attacks, Multiple Wounds (2). The wielder of the Sword of Justice may re-roll any failed rolls To Wound."
+      "description": "Combat S -1. Armour Bane (1), Magical Attacks, Multiple Wounds (2). The wielder of the Sword of Justice may re-roll any failed rolls To Wound.",
+      "weapon_profile": {
+        "name": "Sword of Justice",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks",
+          "multiple_wounds_2"
+        ],
+        "notes": "Wielder may re-roll any failed rolls To Wound"
+      }
     },
     {
       "id": "duellists-blades",
       "name": "Duellist's Blades",
       "points": 55,
       "category": "magic_weapon",
-      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
+      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands",
+      "weapon_profile": {
+        "name": "Duellist's Blades",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "extra_attacks_2",
+          "requires_two_hands",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "sword-of-battle",
       "name": "Sword of Battle",
       "points": 60,
       "category": "magic_weapon",
-      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
+      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks",
+      "weapon_profile": {
+        "name": "Sword of Battle",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "armour_bane_1",
+          "extra_attacks",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "cackling-blade",
       "name": "Cackling Blade",
       "points": 65,
       "category": "magic_weapon",
-      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
+      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound.",
+      "weapon_profile": {
+        "name": "Cackling Blade",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "extra_attacks_d6",
+          "magical_attacks"
+        ],
+        "notes": "If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder immediately loses a single Wound"
+      }
     },
     {
       "id": "mace_of_helsturm",
@@ -4617,7 +4849,18 @@
       "source": "forces_of_fantasy",
       "category": "magic_weapon",
       "points": 65,
-      "description": "Single-handed: Combat S -. Magical Attacks, Multiple Wounds (D6). Double-handed: Combat S10 AP -5. Magical Attacks, Multiple Wounds (D6), Requires Two Hands. You must choose which mode at the start of each round of combat. If used double-handed, the wielder may only make one attack, regardless of their Attacks characteristic."
+      "description": "Single-handed: Combat S -. Magical Attacks, Multiple Wounds (D6). Double-handed: Combat S10 AP -5. Magical Attacks, Multiple Wounds (D6), Requires Two Hands. You must choose which mode at the start of each round of combat. If used double-handed, the wielder may only make one attack, regardless of their Attacks characteristic.",
+      "weapon_profile": {
+        "name": "Mace of Helsturm",
+        "range": "Combat",
+        "S": "S / 10",
+        "AP": "- / -5",
+        "special_rules": [
+          "magical_attacks",
+          "multiple_wounds_d6"
+        ],
+        "notes": "Two profiles: Single-handed (S, AP-, Multiple Wounds D6) or Double-handed (S10, AP-5, Multiple Wounds D6, Requires Two Hands, one attack only). Choose at start of each round of combat."
+      }
     },
     {
       "id": "ogre-blade",
@@ -4625,7 +4868,15 @@
       "points": 75,
       "category": "magic_weapon",
       "description": "Magic weapons grant the wielder extra abilities, new special rules or an improved profile, the better to slay enemies. Unless otherwise stated, the following rules apply to all magic weapons:\nA magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.\nA character that wields a magic weapon cannot set it aside to use a mundane equivalent. For example, a character cannot set aside a magic combat weapon to use a mundane great weapon instead.",
-      "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
+      "weapon_profile": {
+        "name": "Ogre Blade",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "runefang",
@@ -4633,7 +4884,18 @@
       "source": "forces_of_fantasy",
       "category": "magic_weapon",
       "points": 100,
-      "description": "Combat S5 AP -2. Magical Attacks, Strike First. When making a roll To Wound for a hit caused with a Runefang, a roll of 2+ is always a success, regardless of the target's Toughness."
+      "description": "Combat S5 AP -2. Magical Attacks, Strike First. When making a roll To Wound for a hit caused with a Runefang, a roll of 2+ is always a success, regardless of the target's Toughness.",
+      "weapon_profile": {
+        "name": "Runefang",
+        "range": "Combat",
+        "S": "5",
+        "AP": "-2",
+        "special_rules": [
+          "strike_first",
+          "magical_attacks"
+        ],
+        "notes": "When making a roll To Wound with this weapon, a roll of 2+ is always a success, regardless of the target's Toughness"
+      }
     },
     {
       "id": "charmed-shield",
