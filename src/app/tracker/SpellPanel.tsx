@@ -17,6 +17,8 @@ export default function SpellPanel({ side }: SpellPanelProps) {
   const isInCombat = currentPhase === 'combat';
   const isInMagicPhase = currentPhase === 'magic';
   const isInStartOfTurn = currentPhase === 'start_of_turn';
+  const isInMovement = currentPhase === 'movement';
+  const isInShooting = currentPhase === 'shooting';
 
   // Visibility rules:
   // – Active player's panel: always visible
@@ -27,8 +29,13 @@ export default function SpellPanel({ side }: SpellPanelProps) {
   const combatInactiveFilter = !isActiveSide && isInCombat;
 
   // During start_of_turn, only Hex and Enchantment spells are relevant
-  // (these are the ongoing "Remains in Play" types that affect the current turn)
   const startOfTurnFilter = isInStartOfTurn && isActiveSide;
+
+  // During movement, only Conveyance spells are relevant
+  const movementFilter = isInMovement && isActiveSide;
+
+  // During shooting, only Magic Missile spells are relevant
+  const shootingFilter = isInShooting && isActiveSide;
 
   const visibleSelections = combatInactiveFilter
     ? allSpells
@@ -41,6 +48,20 @@ export default function SpellPanel({ side }: SpellPanelProps) {
           spells: sel.spells.filter(
             (sp) => sp.spellType === 'Hex' || sp.spellType === 'Enchantment',
           ),
+        }))
+        .filter((sel) => sel.spells.length > 0)
+    : movementFilter
+    ? allSpells
+        .map((sel) => ({
+          ...sel,
+          spells: sel.spells.filter((sp) => sp.spellType === 'Conveyance'),
+        }))
+        .filter((sel) => sel.spells.length > 0)
+    : shootingFilter
+    ? allSpells
+        .map((sel) => ({
+          ...sel,
+          spells: sel.spells.filter((sp) => sp.spellType === 'Magic Missile'),
         }))
         .filter((sel) => sel.spells.length > 0)
     : allSpells;
@@ -102,6 +123,44 @@ export default function SpellPanel({ side }: SpellPanelProps) {
     );
   }
 
+  if (movementFilter && visibleSelections.length === 0) {
+    return (
+      <div
+        className="rounded border p-4"
+        style={{
+          backgroundColor: 'var(--color-bg-elevated)',
+          borderColor: 'var(--color-border)',
+        }}
+      >
+        <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+          Conveyance Spells
+        </h3>
+        <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+          No Conveyance spells available.
+        </p>
+      </div>
+    );
+  }
+
+  if (shootingFilter && visibleSelections.length === 0) {
+    return (
+      <div
+        className="rounded border p-4"
+        style={{
+          backgroundColor: 'var(--color-bg-elevated)',
+          borderColor: 'var(--color-border)',
+        }}
+      >
+        <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+          Magic Missiles
+        </h3>
+        <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+          No Magic Missile spells available.
+        </p>
+      </div>
+    );
+  }
+
   if (combatInactiveFilter && visibleSelections.length === 0) {
     return (
       <div
@@ -125,6 +184,10 @@ export default function SpellPanel({ side }: SpellPanelProps) {
     ? 'Assailment Spells'
     : startOfTurnFilter
     ? 'Ongoing Spells'
+    : movementFilter
+    ? 'Conveyance Spells'
+    : shootingFilter
+    ? 'Magic Missiles'
     : `Spells${!isInMagicPhase ? ' (Reference)' : ''}`;
 
   return (

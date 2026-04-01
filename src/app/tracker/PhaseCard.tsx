@@ -317,12 +317,13 @@ function generatePrompts(
   }
 
   if (phase === 'end_of_turn') {
-    // Random game length roll at turn 5
-    if (gameLengthRule === 'random' && currentTurn === 5) {
+    // Random game length: roll from end of round 5 onwards (D6 + round number ≥ 10 = game ends)
+    if (gameLengthRule === 'random' && currentTurn >= 5) {
+      const needed = 10 - currentTurn;
       prompts.push({
         id: 'random-length-roll',
         title: 'Random Game Length Roll',
-        description: 'Roll a d6: 1-3 = game ends, 4-5 = turn 6, 6 = turn 7. Inform your opponent of the result.',
+        description: `Roll a D6 and add ${currentTurn} (the round number). On a result of 10 or more the battle ends immediately; otherwise play continues. Roll needed: ${needed}+ on the D6.`,
         category: 'required',
       });
     }

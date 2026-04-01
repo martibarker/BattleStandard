@@ -114,7 +114,7 @@ export default function ScorePanel() {
       {activeSecondaries.length > 0 && (
         <div className="mb-4 space-y-1">
           {activeSecondaries.map((id) => {
-            const obj = SECONDARY_OBJECTIVES.flatMap((s) => s.objectives).find((o) => o.id === id);
+            const obj = SECONDARY_OBJECTIVES.find((o) => o.id === id);
             if (!obj) return null;
             return (
               <div
@@ -124,7 +124,7 @@ export default function ScorePanel() {
               >
                 <span style={{ color: 'var(--color-text-primary)' }}>{obj.name}</span>
                 <span className="ml-auto font-semibold" style={{ color: 'var(--color-accent-amber)' }}>
-                  +{obj.vpValue} VP
+                  {obj.vpSummary}
                 </span>
               </div>
             );

@@ -31,7 +31,7 @@ export default function SecondaryScorePrompt() {
 
       <div className="space-y-3">
         {activeSecondaries.map((id) => {
-          const obj = SECONDARY_OBJECTIVES.flatMap((s) => s.objectives).find((o) => o.id === id);
+          const obj = SECONDARY_OBJECTIVES.find((o) => o.id === id);
           if (!obj) return null;
 
           return (
@@ -46,22 +46,16 @@ export default function SecondaryScorePrompt() {
                     {obj.name}
                   </p>
                   <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-secondary)' }}>
-                    {obj.description}
+                    {obj.vpSummary}
                   </p>
                 </div>
-                <span
-                  className="text-xs font-bold shrink-0"
-                  style={{ color: 'var(--color-accent-amber)' }}
-                >
-                  +{obj.vpValue} VP
-                </span>
               </div>
 
               <div className="flex gap-2 mt-2">
                 {(['p1', 'p2'] as PlayerSide[]).map((side) => (
                   <button
                     key={side}
-                    onClick={() => addSecondaryVP(side, obj.vpValue, obj.name)}
+                    onClick={() => addSecondaryVP(side, obj.defaultVp, obj.name)}
                     className="flex-1 py-2 rounded text-sm font-semibold"
                     style={{
                       backgroundColor:
@@ -77,7 +71,7 @@ export default function SecondaryScorePrompt() {
                       }`,
                     }}
                   >
-                    {players[side].name} scored
+                    {players[side].name} +{obj.defaultVp} VP
                   </button>
                 ))}
               </div>

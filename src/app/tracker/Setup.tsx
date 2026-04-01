@@ -3,7 +3,7 @@ import { useGameStore, type PlayerGameState, type SpellEntry } from '../../store
 import { useArmyStore } from '../../store/armyStore';
 import { getFaction } from '../../data/factions';
 import { isWizard } from '../../utils/armyValidation';
-import { getSecondariesForFormat, type MatchedPlayFormat } from '../../data/secondary-objectives';
+import { SECONDARY_OBJECTIVES } from '../../data/secondary-objectives';
 import {
   getLore,
   getLoreSpells,
@@ -48,7 +48,6 @@ interface SetupState {
   p1IsAttacker: boolean;
   p2GoesFirst: boolean;
   gameLengthRule: 'standard' | 'random';
-  matchedPlayFormat: MatchedPlayFormat;
   selectedSecondaries: string[];
 }
 
@@ -126,7 +125,6 @@ export default function Setup({ onCancel }: Props) {
     p1IsAttacker: true,
     p2GoesFirst: false,
     gameLengthRule: 'standard',
-    matchedPlayFormat: 'open_war',
     selectedSecondaries: [],
   });
 
@@ -813,12 +811,43 @@ export default function Setup({ onCancel }: Props) {
                   onChange={() => setState((s) => ({ ...s, gameLengthRule: 'random' }))}
                 />
                 <span className="text-sm">
-                  Random (5-7 turns)
+                  Random Game Length
                   <span style={{ color: 'var(--color-text-secondary)', fontSize: '0.85em', marginLeft: '4px' }}>
-                    — Roll d6 at turn 5
+                    — From end of round 5, roll D6 + round number; 10+ ends the battle
                   </span>
                 </span>
               </label>
+            </div>
+          </div>
+
+          <div className="rounded border p-4" style={cardStyle}>
+            <label className="block mb-3 text-sm font-semibold">Pre-game Checklist</label>
+            <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+              After deployment is complete, resolve these before Turn 1 begins.
+              If both players have pre-game special rules, roll off for order; then alternate.
+            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex items-start gap-2" style={{ color: 'var(--color-text-secondary)' }}>
+                <span className="shrink-0 mt-0.5">→</span>
+                <span>
+                  <strong style={{ color: 'var(--color-text-primary)' }}>Scouts:</strong>{' '}
+                  Deploy any units with Scouts now (they count as part of your deployment for the first-turn roll-off).
+                </span>
+              </div>
+              <div className="flex items-start gap-2" style={{ color: 'var(--color-text-secondary)' }}>
+                <span className="shrink-0 mt-0.5">→</span>
+                <span>
+                  <strong style={{ color: 'var(--color-text-primary)' }}>Vanguard:</strong>{' '}
+                  Units with Vanguard may make a free move now, before Turn 1.
+                </span>
+              </div>
+              <div className="flex items-start gap-2" style={{ color: 'var(--color-text-secondary)' }}>
+                <span className="shrink-0 mt-0.5">→</span>
+                <span>
+                  <strong style={{ color: 'var(--color-text-primary)' }}>First Turn Roll-off:</strong>{' '}
+                  Winner chooses who goes first. The player who finished deploying first (including Scouts) adds +1 to their roll.
+                </span>
+              </div>
             </div>
           </div>
 
@@ -849,8 +878,35 @@ export default function Setup({ onCancel }: Props) {
   // Step 4: Secondary Objectives
   // ---------------------------------------------------------------------------
   if (state.step === 4) {
-    const secondarySet = getSecondariesForFormat(state.matchedPlayFormat);
-    const isMultiSelect = secondarySet?.selectionType === 'all_three';
+    // Strategic Locations are mutually exclusive (only one marker count at a time).
+    // All other objectives can be combined freely.
+    const strategicIds = ['strategic_locations_2', 'strategic_locations_3', 'strategic_locations_4'];
+    const isStrategicSelected = (id: string) => strategicIds.includes(id) && state.selectedSecondaries.includes(id);
+    const anyStrategicSelected = strategicIds.some((id) => state.selectedSecondaries.includes(id));
+
+    const toggleObjective = (id: string) => {
+      setState((s) => {
+        if (strategicIds.includes(id)) {
+          // Radio-style for Strategic Locations: deselect others, toggle this one
+          const alreadySelected = s.selectedSecondaries.includes(id);
+          const withoutStrategic = s.selectedSecondaries.filter((x) => !strategicIds.includes(x));
+          return {
+            ...s,
+            selectedSecondaries: alreadySelected ? withoutStrategic : [...withoutStrategic, id],
+          };
+        }
+        // Checkbox for all others
+        return {
+          ...s,
+          selectedSecondaries: s.selectedSecondaries.includes(id)
+            ? s.selectedSecondaries.filter((x) => x !== id)
+            : [...s.selectedSecondaries, id],
+        };
+      });
+    };
+
+    const nonStrategicObjectives = SECONDARY_OBJECTIVES.filter((o) => !strategicIds.includes(o.id));
+    const strategicObjectives = SECONDARY_OBJECTIVES.filter((o) => strategicIds.includes(o.id));
 
     return (
       <div className="max-w-2xl mx-auto p-6">
@@ -859,75 +915,33 @@ export default function Setup({ onCancel }: Props) {
         </h2>
 
         <div className="space-y-6">
-          <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-4 text-sm font-semibold">Matched Play Format</label>
-            <div className="space-y-2">
-              {(
-                [
-                  { id: 'open_war', label: 'Open War', hint: 'Choose 1 secondary' },
-                  { id: 'grand_melee', label: 'Grand Melee', hint: 'Choose 1 secondary' },
-                  { id: 'combined_arms', label: 'Combined Arms', hint: 'All 3 secondaries' },
-                ] as { id: MatchedPlayFormat; label: string; hint: string }[]
-              ).map(({ id, label, hint }) => (
-                <label key={id} className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="format"
-                    checked={state.matchedPlayFormat === id}
-                    onChange={() => {
-                      const autoSelected =
-                        id === 'combined_arms'
-                          ? getSecondariesForFormat('combined_arms')?.objectives.map((o) => o.id) ?? []
-                          : [];
-                      setState((s) => ({
-                        ...s,
-                        matchedPlayFormat: id,
-                        selectedSecondaries: autoSelected,
-                      }));
-                    }}
-                  />
-                  <span className="text-sm font-semibold">{label}</span>
-                  <span style={{ color: 'var(--color-text-secondary)', fontSize: '0.85em' }}>
-                    — {hint}
-                  </span>
-                </label>
-              ))}
-            </div>
-          </div>
+          <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+            Secondary objectives are chosen by the organiser and may be applied to any scenario.
+            Tick whichever objectives are in use for this game.
+          </p>
 
-          {secondarySet && (
-            <div className="rounded border p-4" style={cardStyle}>
-              <label className="block mb-4 text-sm font-semibold">
-                {isMultiSelect ? 'Secondary Objectives (All Active)' : 'Secondary Objectives (Choose One)'}
-              </label>
-              <div className="space-y-3">
-                {secondarySet.objectives.map((obj) => (
+          {/* Baggage Trains, Special Feature, Domination — checkboxes */}
+          <div className="rounded border p-4" style={cardStyle}>
+            <label className="block mb-3 text-sm font-semibold">Objectives</label>
+            <div className="space-y-3">
+              {nonStrategicObjectives.map((obj) => {
+                const active = state.selectedSecondaries.includes(obj.id);
+                return (
                   <label
                     key={obj.id}
                     className="block p-3 rounded cursor-pointer"
                     style={{
                       backgroundColor: 'var(--color-bg-dark)',
-                      borderLeft: state.selectedSecondaries.includes(obj.id)
-                        ? '3px solid var(--color-accent-amber)'
-                        : '3px solid transparent',
+                      borderLeft: active ? '3px solid var(--color-accent-amber)' : '3px solid transparent',
                     }}
                   >
                     <div className="flex items-start gap-3">
                       <input
-                        type={isMultiSelect ? 'checkbox' : 'radio'}
-                        name="secondary"
-                        checked={state.selectedSecondaries.includes(obj.id)}
-                        onChange={() => {
-                          setState((s) => ({
-                            ...s,
-                            selectedSecondaries: isMultiSelect
-                              ? s.selectedSecondaries.includes(obj.id)
-                                ? s.selectedSecondaries.filter((id) => id !== obj.id)
-                                : [...s.selectedSecondaries, obj.id]
-                              : [obj.id],
-                          }));
-                        }}
+                        type="checkbox"
+                        checked={active}
+                        onChange={() => toggleObjective(obj.id)}
                         className="mt-1"
+                        style={{ accentColor: 'var(--color-accent-amber)' }}
                       />
                       <div className="flex-1">
                         <div className="font-semibold text-sm">{obj.name}</div>
@@ -935,34 +949,80 @@ export default function Setup({ onCancel }: Props) {
                           {obj.description}
                         </div>
                         <div className="text-xs font-semibold mt-2" style={{ color: 'var(--color-accent-amber)' }}>
-                          {obj.vpValue} VP
+                          {obj.vpSummary}
                         </div>
                       </div>
                     </div>
                   </label>
-                ))}
-              </div>
+                );
+              })}
             </div>
-          )}
+          </div>
+
+          {/* Strategic Locations — radio (mutually exclusive marker count) */}
+          <div className="rounded border p-4" style={cardStyle}>
+            <label className="block mb-1 text-sm font-semibold">Strategic Locations</label>
+            <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+              Choose one marker count, or none.
+            </p>
+            <div className="space-y-3">
+              {strategicObjectives.map((obj) => {
+                const active = isStrategicSelected(obj.id);
+                return (
+                  <label
+                    key={obj.id}
+                    className="block p-3 rounded cursor-pointer"
+                    style={{
+                      backgroundColor: 'var(--color-bg-dark)',
+                      borderLeft: active ? '3px solid var(--color-accent-amber)' : '3px solid transparent',
+                    }}
+                  >
+                    <div className="flex items-start gap-3">
+                      <input
+                        type="radio"
+                        name="strategic-locations"
+                        checked={active}
+                        onChange={() => toggleObjective(obj.id)}
+                        onClick={() => {
+                          // Allow deselecting by clicking the already-selected radio
+                          if (active) toggleObjective(obj.id);
+                        }}
+                        className="mt-1"
+                        style={{ accentColor: 'var(--color-accent-amber)' }}
+                      />
+                      <div className="flex-1">
+                        <div className="font-semibold text-sm">{obj.name}</div>
+                        <div className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>
+                          {obj.description}
+                        </div>
+                        <div className="text-xs font-semibold mt-2" style={{ color: 'var(--color-accent-amber)' }}>
+                          {obj.vpSummary}
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                );
+              })}
+            </div>
+          </div>
 
           <div
             className="rounded border p-4"
             style={{ backgroundColor: 'var(--color-bg-dark)', borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}
           >
             <p className="text-sm">
-              <strong>Format:</strong>{' '}
-              {state.matchedPlayFormat === 'open_war'
-                ? 'Open War'
-                : state.matchedPlayFormat === 'grand_melee'
-                ? 'Grand Melee'
-                : 'Combined Arms'}
-            </p>
-            <p className="text-sm mt-2">
-              <strong>Selected:</strong>{' '}
+              <strong style={{ color: 'var(--color-text-primary)' }}>Active objectives:</strong>{' '}
               {state.selectedSecondaries.length === 0
-                ? 'None yet'
-                : `${state.selectedSecondaries.length} objective${state.selectedSecondaries.length > 1 ? 's' : ''}`}
+                ? 'None (standard VP only)'
+                : state.selectedSecondaries
+                    .map((id) => SECONDARY_OBJECTIVES.find((o) => o.id === id)?.name ?? id)
+                    .join(', ')}
             </p>
+            {anyStrategicSelected && (
+              <p className="text-xs mt-2">
+                Strategic Locations VP is scored at the end of each player's turn throughout the game.
+              </p>
+            )}
           </div>
 
           <div className="flex gap-3 mt-6 justify-between">
