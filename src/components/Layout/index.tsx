@@ -12,7 +12,7 @@ const armyItems: NavItem[] = [
 ];
 
 const companionItems: NavItem[] = [
-  { to: '/turn-tracker', label: 'Turn Tracker', icon: '⏱' },
+  { to: '/turn-tracker', label: "General's Adjutant", icon: '⏱' },
   { to: '/rules', label: 'Rules', icon: '📖' },
   { to: '/documents', label: 'Documents', icon: '📄' },
 ];
@@ -20,7 +20,7 @@ const companionItems: NavItem[] = [
 const mobileTabItems: NavItem[] = [
   { to: '/', label: 'Home', icon: '⚔', end: true },
   { to: '/army-builder', label: 'Army', icon: '🛡', end: true },
-  { to: '/turn-tracker', label: 'Turns', icon: '⏱' },
+  { to: '/turn-tracker', label: 'Adjutant', icon: '⏱' },
   { to: '/rules', label: 'Rules', icon: '📖' },
   { to: '/documents', label: 'Docs', icon: '📄' },
 ];
@@ -113,7 +113,7 @@ export default function Layout() {
               `text-sm font-medium transition-colors ${isActive ? 'text-amber-500' : 'text-gray-400 hover:text-gray-200'}`
             }
           >
-            Gaming Companion
+            General's Adjutant
           </NavLink>
         </nav>
       </header>
@@ -126,7 +126,7 @@ export default function Layout() {
           style={{ backgroundColor: 'var(--color-bg-surface)', borderColor: 'var(--color-border)' }}
         >
           <SidebarSection title="Army Builder" items={armyItems} />
-          <SidebarSection title="Gaming Companion" items={companionItems} />
+          <SidebarSection title="General's Adjutant" items={companionItems} />
         </aside>
 
         {/* Page content */}

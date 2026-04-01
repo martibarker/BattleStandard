@@ -2,6 +2,21 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { idbStorage } from './idbStorage';
 
+export interface SavedGame {
+  gameId: string;
+  gameName: string;
+  savedAt: number;
+  currentTurn: number;
+  currentPhase: GamePhase;
+  currentSide: PlayerSide;
+  players: { p1: PlayerGameState; p2: PlayerGameState };
+  log: GameEvent[];
+  gameLengthRule: 'standard' | 'random';
+  turnLimit: number;
+  activeSecondaries: string[];
+  secondaryScores: { p1: number; p2: number };
+}
+
 export type GamePhase =
   | 'setup'
   | 'start_of_turn'
@@ -62,6 +77,7 @@ export interface GameEvent {
 
 export interface GameState {
   gameId: string | null;
+  gameName: string;
   currentTurn: number;
   currentPhase: GamePhase;
   currentSide: PlayerSide;
@@ -76,10 +92,18 @@ export interface GameState {
   activeSecondaries: string[];
   /** VP scored from secondary objectives (tracked separately from battle VP) */
   secondaryScores: { p1: number; p2: number };
+  /** Persisted saved games list */
+  savedGames: SavedGame[];
 
   // Actions
-  startGame: (p1: Partial<PlayerGameState>, p2: Partial<PlayerGameState>, gameLengthRule?: 'standard' | 'random', activeSecondaries?: string[]) => void;
+  startGame: (p1: Partial<PlayerGameState>, p2: Partial<PlayerGameState>, gameLengthRule?: 'standard' | 'random', activeSecondaries?: string[], gameName?: string) => void;
   resetGame: () => void;
+  /** Save current game state to the saved games list and return to hub */
+  exitGame: () => void;
+  /** Load a saved game as the active game */
+  loadGame: (gameId: string) => void;
+  /** Permanently delete a saved game */
+  deleteGame: (gameId: string) => void;
   advancePhase: () => void;
   toggleUnitShot: (side: PlayerSide, entryId: string) => void;
   toggleUnitFought: (side: PlayerSide, entryId: string) => void;
@@ -118,6 +142,7 @@ export const useGameStore = create<GameState>()(
   persist(
     (set, get) => ({
       gameId: null,
+      gameName: '',
       currentTurn: 1,
       currentPhase: 'setup',
       currentSide: 'p1',
@@ -131,13 +156,16 @@ export const useGameStore = create<GameState>()(
       turnLimit: 6,
       activeSecondaries: [],
       secondaryScores: { p1: 0, p2: 0 },
+      savedGames: [],
 
-      startGame: (p1Setup: Partial<PlayerGameState>, p2Setup: Partial<PlayerGameState>, gameLengthRule: 'standard' | 'random' = 'standard', activeSecondaries: string[] = []): void => {
+      startGame: (p1Setup: Partial<PlayerGameState>, p2Setup: Partial<PlayerGameState>, gameLengthRule: 'standard' | 'random' = 'standard', activeSecondaries: string[] = [], gameName = ''): void => {
         const p1State = { ...initialPlayerState('p1'), ...p1Setup };
         const p2State = { ...initialPlayerState('p2'), ...p2Setup };
+        const resolvedName = gameName.trim() || `${p1State.name} vs ${p2State.name}`;
 
         set({
           gameId: `game_${Date.now()}`,
+          gameName: resolvedName,
           currentTurn: 1,
           currentPhase: 'start_of_turn',
           currentSide: p1State.goesFirst ? 'p1' : 'p2',
@@ -154,6 +182,7 @@ export const useGameStore = create<GameState>()(
       resetGame: (): void => {
         set({
           gameId: null,
+          gameName: '',
           currentTurn: 1,
           currentPhase: 'setup',
           currentSide: 'p1',
@@ -168,6 +197,59 @@ export const useGameStore = create<GameState>()(
           activeSecondaries: [],
           secondaryScores: { p1: 0, p2: 0 },
         });
+      },
+
+      exitGame: (): void => {
+        const state = get();
+        if (!state.gameId) return;
+        const snapshot: SavedGame = {
+          gameId: state.gameId,
+          gameName: state.gameName,
+          savedAt: Date.now(),
+          currentTurn: state.currentTurn,
+          currentPhase: state.currentPhase,
+          currentSide: state.currentSide,
+          players: state.players,
+          log: state.log,
+          gameLengthRule: state.gameLengthRule,
+          turnLimit: state.turnLimit,
+          activeSecondaries: state.activeSecondaries,
+          secondaryScores: state.secondaryScores,
+        };
+        const existing = state.savedGames.findIndex((g) => g.gameId === state.gameId);
+        const savedGames = existing >= 0
+          ? state.savedGames.map((g, i) => (i === existing ? snapshot : g))
+          : [...state.savedGames, snapshot];
+        set({
+          savedGames,
+          isGameActive: false,
+        });
+      },
+
+      loadGame: (gameId: string): void => {
+        const state = get();
+        const saved = state.savedGames.find((g) => g.gameId === gameId);
+        if (!saved) return;
+        set({
+          gameId: saved.gameId,
+          gameName: saved.gameName,
+          currentTurn: saved.currentTurn,
+          currentPhase: saved.currentPhase,
+          currentSide: saved.currentSide,
+          players: saved.players,
+          log: saved.log,
+          isGameActive: true,
+          gameLengthRule: saved.gameLengthRule,
+          turnLimit: saved.turnLimit,
+          activeSecondaries: saved.activeSecondaries,
+          secondaryScores: saved.secondaryScores,
+        });
+      },
+
+      deleteGame: (gameId: string): void => {
+        set((state) => ({
+          savedGames: state.savedGames.filter((g) => g.gameId !== gameId),
+        }));
       },
 
       advancePhase: (): void => {

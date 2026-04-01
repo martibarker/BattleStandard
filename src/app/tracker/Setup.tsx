@@ -14,6 +14,7 @@ interface ManualCaster {
 
 interface SetupState {
   step: 1 | 2 | 3 | 4;
+  gameName: string;
   p1Name: string;
   p2Name: string;
   p1ArmyId: string | null;
@@ -31,13 +32,19 @@ interface SetupState {
   selectedSecondaries: string[];
 }
 
-export default function Setup() {
+interface Props {
+  onCancel: () => void;
+  onStarted: () => void;
+}
+
+export default function Setup({ onCancel }: Props) {
   const startGame = useGameStore((s) => s.startGame);
   const addSpellsToWizard = useGameStore((s) => s.addSpellsToWizard);
   const armies = useArmyStore((s) => s.armies);
 
   const [state, setState] = useState<SetupState>({
     step: 1,
+    gameName: '',
     p1Name: 'Player 1',
     p2Name: 'Player 2',
     p1ArmyId: null,
@@ -86,7 +93,7 @@ export default function Setup() {
       goesFirst: state.p2GoesFirst,
     };
 
-    startGame(p1Setup, p2Setup, state.gameLengthRule, state.selectedSecondaries);
+    startGame(p1Setup, p2Setup, state.gameLengthRule, state.selectedSecondaries, state.gameName);
 
     // Spells from linked army wizards
     if (state.p1Faction) {
@@ -171,11 +178,28 @@ export default function Setup() {
   if (state.step === 1) {
     return (
       <div className="max-w-2xl mx-auto p-6">
-        <h2 className="text-2xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-          Step 1: Army Selection
-        </h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
+            Step 1: Army Selection
+          </h2>
+          <button onClick={onCancel} className="text-sm px-3 py-1.5 rounded" style={btnSecondary}>
+            Cancel
+          </button>
+        </div>
 
         <div className="space-y-6">
+          <div className="rounded border p-4" style={cardStyle}>
+            <label className="block mb-2 text-sm font-semibold">Game Name (optional)</label>
+            <input
+              type="text"
+              placeholder={`${state.p1Name} vs ${state.p2Name}`}
+              value={state.gameName}
+              onChange={(e) => setState((s) => ({ ...s, gameName: e.target.value }))}
+              className="w-full px-3 py-2 rounded text-sm"
+              style={inputStyle}
+            />
+          </div>
+
           {(['p1', 'p2'] as const).map((side) => {
             const nameKey = side === 'p1' ? 'p1Name' : 'p2Name';
             const armyIdKey = side === 'p1' ? 'p1ArmyId' : 'p2ArmyId';
