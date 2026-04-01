@@ -10,6 +10,7 @@ import orcsRaw from './orc-and-goblin-tribes.json';
 import warriorsRaw from './warriors-of-chaos.json';
 import beastmenRaw from './beastmen-brayherds.json';
 import tombKingsRaw from './tomb-kings-of-khemri.json';
+import globalMagicItemsRaw from '../magic-items.json';
 
 /**
  * Normalise the options array on a unit so all factions use the same
@@ -53,10 +54,41 @@ function normalizeOptions(options: unknown[] | undefined): Option[] {
   return result;
 }
 
+// Build lookup map: id → canonical data from global magic items
+type GlobalItemData = {
+  description?: string;
+  restrictions?: string;
+  weapon_profile?: Record<string, unknown>;
+  armour_profile?: Record<string, unknown>;
+};
+const globalItemData = new Map<string, GlobalItemData>();
+for (const item of (globalMagicItemsRaw as { magic_items: Record<string, unknown>[] }).magic_items) {
+  globalItemData.set(item.id as string, {
+    description: item.description as string | undefined,
+    restrictions: item.restrictions as string | undefined,
+    weapon_profile: item.weapon_profile as Record<string, unknown> | undefined,
+    armour_profile: item.armour_profile as Record<string, unknown> | undefined,
+  });
+}
+
 function normalizeFaction(raw: unknown): Faction {
   const f = raw as Record<string, unknown>;
+  // Normalise faction magic items: canonical data wins over faction copies for global items
+  const factionMagicItems = (f.magic_items as Record<string, unknown>[] | undefined ?? []).map((item) => {
+    const globals = globalItemData.get(item.id as string);
+    return {
+      ...item,
+      // For global items: use canonical description/restrictions from magic-items.json
+      description: globals?.description ?? (item.description ?? item.effect),
+      restrictions: globals !== undefined ? globals.restrictions : item.restrictions,
+      weapon_profile: globals?.weapon_profile ?? item.weapon_profile,
+      armour_profile: globals?.armour_profile ?? item.armour_profile,
+    };
+  });
+
   return {
     ...f,
+    magic_items: factionMagicItems,
     units: (f.units as Record<string, unknown>[]).map((u) => {
       // Transform stats into profiles format if needed
       let profiles = u.profiles as unknown[];

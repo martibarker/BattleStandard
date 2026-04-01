@@ -211,8 +211,8 @@
         "S": "S+1",
         "AP": "-"
       },
-      "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Magical Attacks",
-      "restrictions": "A magic weapon cannot be used alongside an additional hand weapon, magical or mundane, to gain an extra attack.A character that wields a magic weapon cannot set it aside to use a mundane equivalent. F"
+      "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.",
+      "restrictions": ""
     },
     {
       "id": "spelleater-axe",
@@ -328,8 +328,8 @@
         ],
         "notes": "Ward save against any wounds suffered"
       },
-      "description": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can only carry one shield, and a mount can only wear a single suit of barding. Therefore, magic armour replaces any mundane equivalent the model is, or may be, equipped with.",
-      "restrictions": "Only a model that is equipped with (or that has the option to be equipped with) armour, a shield or barding may purchase a magical equivalent. A model can only wear a single suit of armour and can onl"
+      "description": "A suit of magical armour forged at the confluence of two ley lines, the Armour of Destiny protects its wearer from harm beyond mortal ken.",
+      "restrictions": "May only be worn by a model that is equipped with (or has the option to be equipped with) armour."
     },
     {
       "id": "armour-of-meteoric-iron",
@@ -489,7 +489,7 @@
       "points": 35,
       "category": "talisman",
       "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical.\nThe magic trapped within this semi-precious stone binds together shattered armour plates.\nThe bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
-      "restrictions": "Dawnstone(Talisman)35 pointsThe magic trapped within this semi-precious stone binds together shattered armour plates.The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.Icon of"
+      "restrictions": ""
     },
     {
       "id": "icon-of-fortitude",
@@ -497,7 +497,7 @@
       "points": 35,
       "category": "talisman",
       "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.\nModels whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
-      "restrictions": "Icon of Fortitude(Talisman)35 pointsCarefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.Models whose troop type is infantry or cav"
+      "restrictions": ""
     },
     {
       "id": "ironhide-talisman",
@@ -505,7 +505,7 @@
       "points": 30,
       "category": "talisman",
       "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.\nModels whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6.Note that this magic item does not work against attacks that hit automatically.",
-      "restrictions": "Ironhide Talisman(Talisman)30 pointsIt is said that the one who bears this powerful heirloom can endure even the most telling blows.Models whose troop type is infantry only. Any enemy model that makes"
+      "restrictions": ""
     },
     {
       "id": "luckstone",
@@ -541,7 +541,7 @@
       "points": 40,
       "category": "enchanted_item",
       "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
-      "restrictions": "Arch-Lightning Rod(Enchanted Item)40 pointsCrackling lightning fills the heavens with peril, grounding the creatures of the sky.Single use. During the Command sub-phase of their turn, if they are not"
+      "restrictions": ""
     },
     {
       "id": "becalming-orb",
@@ -556,7 +556,7 @@
       "points": 40,
       "category": "enchanted_item",
       "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!\nModels whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
-      "restrictions": "Flying Carpet(Enchanted Item)40 pointsWoven from the finest silks in a far-off land, this splendid rug does more than warm the feet!Models whose troop type is regular infantry or heavy infantry only."
+      "restrictions": ""
     },
     {
       "id": "healing-potion",
@@ -571,7 +571,7 @@
       "points": 30,
       "category": "enchanted_item",
       "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
-      "restrictions": "Potion of Fervour(Enchanted Item)30 pointsThis noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.Single Use. During the Command sub-phase of their turn, the bea"
+      "restrictions": ""
     },
     {
       "id": "potion-of-foolhardiness",
@@ -586,7 +586,7 @@
       "points": 10,
       "category": "enchanted_item",
       "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": "Potion of Speed*(Enchanted Item)10 pointsA powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.Single use. During the Command sub-phase of their turn, the bearer"
+      "restrictions": ""
     },
     {
       "id": "potion-of-strength",
@@ -594,7 +594,7 @@
       "points": 25,
       "category": "enchanted_item",
       "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": "Potion of Strength*(Enchanted Item)25 pointsA concoction of strength-giving vegetables and roots, mixed together with a touch of magic.Single use. During the Command sub-phase of their turn, the beare"
+      "restrictions": ""
     },
     {
       "id": "potion-of-toughness",
@@ -602,7 +602,7 @@
       "points": 20,
       "category": "enchanted_item",
       "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": "Potion of Toughness*(Enchanted Item)20 pointsDistilled by magical means, this potion is sure to make the drinker all but invulnerable.Single use. During the Command sub-phase of their turn, the bearer"
+      "restrictions": ""
     },
     {
       "id": "ruby-ring-of-ruin",
@@ -616,8 +616,8 @@
       "name": "Wizarding Hat",
       "points": 45,
       "category": "enchanted_item",
-      "description": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a character might possess.\nNote that a model can only consume a single potion (of any type) per Command phase.\nThis splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
-      "restrictions": "The enchanted items category includes all manner of wonderful artefacts too unique or specific to be included in another category. Enchanted items are often amongst the most prized magical items a cha"
+      "description": "This splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
+      "restrictions": ""
     },
     {
       "id": "arcane-familiar",
@@ -645,8 +645,8 @@
       "name": "Feedback Scroll",
       "points": 60,
       "category": "arcane_item",
-      "description": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items.\nWhen read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
-      "restrictions": "Arcane items are items that enhance a Wizard's magical powers in some fashion. Only Wizards can purchase Arcane Items."
+      "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "restrictions": ""
     },
     {
       "id": "lore-familiar",
@@ -675,7 +675,7 @@
       "points": 50,
       "category": "arcane_item",
       "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
-      "restrictions": "Scroll of Transmogrification*(Arcane Item)50 pointsFor a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!Single use. The bearer may use this scroll inste"
+      "restrictions": ""
     },
     {
       "id": "staff-of-quietude",
@@ -697,15 +697,15 @@
       "points": 45,
       "category": "arcane_item",
       "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
-      "restrictions": "Wand of Jet(Arcane Item)45 pointsCarved from brittle jet, this wand refines a Wizard's power, but is easily broken.The bearer of the Wand of Jet may apply a +1 modifier to any of their Casting or Disp"
+      "restrictions": ""
     },
     {
       "id": "banner-of-iron-resolve",
       "name": "Banner of Iron Resolve",
       "points": 50,
       "category": "magic_standard",
-      "description": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer.\nNo regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.\nA unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
-      "restrictions": "Some units have the option to purchase magic standards. To do so, the unit must include a standard bearer. The only character that can carry a magic standard is your army's Battle Standard Bearer."
+      "description": "No regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe. A unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
+      "restrictions": ""
     },
     {
       "id": "banner-of-swirling-wind",
