@@ -136,8 +136,8 @@ export interface GameState {
 const PHASE_ORDER: GamePhase[] = [
   'start_of_turn',
   'movement',
-  'shooting',
   'magic',
+  'shooting',
   'combat',
   'end_of_turn',
 ];

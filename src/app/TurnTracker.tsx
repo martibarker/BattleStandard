@@ -36,39 +36,50 @@ export default function TurnTracker() {
 
   // Active game tracker layout
   return (
-    <div className="min-h-screen p-4" style={{ backgroundColor: 'var(--color-bg-dark)' }}>
-      {/* Top-right controls */}
-      <div className="fixed top-4 right-4 flex gap-2 z-10">
-        <button
-          onClick={() => exitGame()}
-          className="px-3 py-1 rounded text-xs font-semibold"
-          style={{
-            backgroundColor: 'rgba(96, 165, 250, 0.15)',
-            color: 'var(--color-accent-blue)',
-            border: '1px solid var(--color-accent-blue)',
-          }}
-        >
-          Save & Exit
-        </button>
-        <button
-          onClick={() => {
-            if (confirm('Abandon game? All progress will be lost.')) {
-              resetGame();
-            }
-          }}
-          className="px-3 py-1 rounded text-xs font-semibold"
-          style={{
-            backgroundColor: 'rgba(217, 119, 6, 0.15)',
-            color: 'var(--color-accent-amber)',
-            border: '1px solid var(--color-accent-amber)',
-          }}
-        >
-          Abandon
-        </button>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg-dark)' }}>
+      {/* Exit bar */}
+      <div
+        className="flex items-center justify-between px-4 py-2 border-b"
+        style={{
+          backgroundColor: 'var(--color-bg-elevated)',
+          borderColor: 'var(--color-border)',
+        }}
+      >
+        <span className="text-sm font-semibold" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text-secondary)' }}>
+          General's Adjutant
+        </span>
+        <div className="flex gap-2">
+          <button
+            onClick={() => exitGame()}
+            className="px-4 py-1.5 rounded text-sm font-semibold"
+            style={{
+              backgroundColor: 'rgba(96, 165, 250, 0.15)',
+              color: 'var(--color-accent-blue)',
+              border: '1px solid var(--color-accent-blue)',
+            }}
+          >
+            Save &amp; Exit
+          </button>
+          <button
+            onClick={() => {
+              if (confirm('Abandon game? All progress will be lost.')) {
+                resetGame();
+              }
+            }}
+            className="px-4 py-1.5 rounded text-sm font-semibold"
+            style={{
+              backgroundColor: 'rgba(239, 68, 68, 0.1)',
+              color: '#f87171',
+              border: '1px solid #f87171',
+            }}
+          >
+            Abandon
+          </button>
+        </div>
       </div>
 
       {/* Main layout */}
-      <div className="space-y-4 max-w-7xl mx-auto">
+      <div className="space-y-4 max-w-7xl mx-auto p-4">
         <div>
           <PhaseCard />
         </div>
