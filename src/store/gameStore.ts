@@ -22,7 +22,6 @@ export type GamePhase =
   | 'start_of_turn'
   | 'movement'
   | 'shooting'
-  | 'magic'
   | 'combat'
   | 'end_of_turn';
 
@@ -136,7 +135,6 @@ export interface GameState {
 const PHASE_ORDER: GamePhase[] = [
   'start_of_turn',
   'movement',
-  'magic',
   'shooting',
   'combat',
   'end_of_turn',

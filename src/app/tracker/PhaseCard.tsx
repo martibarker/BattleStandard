@@ -153,7 +153,6 @@ function formatPhaseLabel(phase: GamePhase): string {
       start_of_turn: 'Start of Turn',
       movement: 'Movement',
       shooting: 'Shooting',
-      magic: 'Magic',
       combat: 'Combat',
       end_of_turn: 'End of Turn',
     } as Record<GamePhase, string>
@@ -168,7 +167,6 @@ function phaseDescription(phase: GamePhase): string {
         'Resolve any mandatory effects at the start of the turn (stupidity, rallying, ambushers, etc.).',
       movement: 'Move your units. Declare charges.',
       shooting: 'Units with ranged weapons shoot at enemies.',
-      magic: 'Cast spells from your wizard(s).',
       combat: 'Resolve close combat between units in contact.',
       end_of_turn: 'Check objectives, end-of-turn effects.',
     } as Record<GamePhase, string>
@@ -283,25 +281,6 @@ function generatePrompts(
     }
   }
 
-  if (phase === 'magic') {
-    // Unused spells
-    const unusedSpells = player.spells?.filter((s: any) => s.spells.length > 0) ?? [];
-    if (unusedSpells.length > 0) {
-      prompts.push({
-        id: 'spells',
-        title: 'Cast Spells',
-        description: `${unusedSpells.length} wizard(s) with available spells`,
-        category: 'reminder',
-      });
-    } else if (player.spells && player.spells.length > 0) {
-      prompts.push({
-        id: 'no-spells',
-        title: 'No Spells Available',
-        description: 'All spells have been cast',
-        category: 'optional',
-      });
-    }
-  }
 
   if (phase === 'combat') {
     // Combat reminder

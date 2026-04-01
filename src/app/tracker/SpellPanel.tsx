@@ -15,7 +15,6 @@ export default function SpellPanel({ side }: SpellPanelProps) {
 
   const isActiveSide = side === currentSide;
   const isInCombat = currentPhase === 'combat';
-  const isInMagicPhase = currentPhase === 'magic';
   const isInStartOfTurn = currentPhase === 'start_of_turn';
   const isInMovement = currentPhase === 'movement';
   const isInShooting = currentPhase === 'shooting';
@@ -188,7 +187,7 @@ export default function SpellPanel({ side }: SpellPanelProps) {
     ? 'Conveyance Spells'
     : shootingFilter
     ? 'Magic Missiles'
-    : `Spells${!isInMagicPhase ? ' (Reference)' : ''}`;
+    : 'Spells (Reference)';
 
   return (
     <div
@@ -304,18 +303,6 @@ export default function SpellPanel({ side }: SpellPanelProps) {
         ))}
       </div>
 
-      {isInMagicPhase && isActiveSide && (
-        <div
-          className="mt-4 pt-3 rounded"
-          style={{
-            borderTop: '1px solid var(--color-border)',
-          }}
-        >
-          <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-            Cast your spells now. Mark them in the log when cast.
-          </p>
-        </div>
-      )}
     </div>
   );
 }
