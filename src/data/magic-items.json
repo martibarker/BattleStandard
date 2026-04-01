@@ -94,17 +94,15 @@
       "points": 30,
       "category": "magic_weapon",
       "weapon_profile": {
-        "weapon_type": "Sword",
         "range": "Combat",
         "special_rules": [
           "armour_bane_1",
           "magical_attacks"
         ],
-        "notes": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
         "S": "S+2",
         "AP": "-2"
       },
-      "description": "RangeStrengthArmour PiercingSpecial RulesCombatS+2-2Armour Bane (1)Magical AttacksNotes: Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.\nNotes: Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy."
+      "description": "Inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy."
     },
     {
       "id": "duellists-blades",

@@ -3499,7 +3499,18 @@
       "source": "forces_of_fantasy",
       "type": "magic_weapon",
       "points": 10,
-      "effect": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks, Quick Shot. Counts as an Asrai longbow. The wielder may re-roll a single failed roll To Hit made during the Shooting phase. However, if the re-roll also fails to hit, the wielder suffers a single Strength 3 hit with an AP of -."
+      "effect": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks, Quick Shot. Counts as an Asrai longbow. The wielder may re-roll a single failed roll To Hit made during the Shooting phase. However, if the re-roll also fails to hit, the wielder suffers a single Strength 3 hit with an AP of -.",
+      "weapon_profile": {
+        "name": "Asyendi's Bane",
+        "range": "32\"",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks",
+          "quick_shot"
+        ]
+      }
     },
     {
       "id": "banner-of-midsummers-eve",
@@ -3577,7 +3588,18 @@
       "source": "arcane_journal",
       "type": "magic_weapon",
       "points": 25,
-      "effect": "R Combat, S S, AP -1, Special Rules: Extra Attacks (1), Flaming Attacks, Magical Attacks."
+      "effect": "R Combat, S S, AP -1, Special Rules: Extra Attacks (1), Flaming Attacks, Magical Attacks.",
+      "weapon_profile": {
+        "name": "Blades of Endless Flame",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "extra_attacks_1",
+          "flaming_attacks",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "orions-favour",
@@ -3669,7 +3691,17 @@
       "effect": "R Combat, S S, AP -2, Special Rules: Magical Attacks, Multiple Wounds (2). May only be taken by models in an Orion's Wild Hunt Army of Infamy. The Multiple Wounds (2) special rule applies only against models whose troop type is 'monstrous infantry', 'monstrous cavalry', 'monstrous creature' or 'behemoth'.",
       "availability": [
         "orions_wild_hunt"
-      ]
+      ],
+      "weapon_profile": {
+        "name": "Hunt Master's Pride",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-2",
+        "special_rules": [
+          "magical_attacks",
+          "multiple_wounds_2"
+        ]
+      }
     },
     {
       "id": "merciws-locus",
@@ -3709,7 +3741,17 @@
       "source": "forces_of_fantasy",
       "type": "magic_weapon",
       "points": 40,
-      "effect": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks. Counts as an Asrai longbow. The wielder may make a number of shooting attacks equal to their Attacks characteristic, rather than the usual one. This model does not suffer any modifiers for firing multiple shots."
+      "effect": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks. Counts as an Asrai longbow. The wielder may make a number of shooting attacks equal to their Attacks characteristic, rather than the usual one. This model does not suffer any modifiers for firing multiple shots.",
+      "weapon_profile": {
+        "name": "Bow of Loren",
+        "range": "32\"",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "daiths-reaper",
@@ -3717,7 +3759,16 @@
       "source": "arcane_journal",
       "type": "magic_weapon",
       "points": 40,
-      "effect": "R Combat, S S+1, AP -1, Special Rules: Magical Attacks. Enemy models must re-roll any successful Armour Save rolls against wounds caused by this weapon."
+      "effect": "R Combat, S S+1, AP -1, Special Rules: Magical Attacks. Enemy models must re-roll any successful Armour Save rolls against wounds caused by this weapon.",
+      "weapon_profile": {
+        "name": "Daith's Reaper",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "mantle-of-rebirth",
@@ -3741,7 +3792,17 @@
       "source": "forces_of_fantasy",
       "type": "magic_weapon",
       "points": 45,
-      "effect": "R Combat, S S, AP -, Special Rules: Extra Attacks (+D3), Magical Attacks. The wielder of the Blades of Loec may re-roll any failed rolls To Wound."
+      "effect": "R Combat, S S, AP -, Special Rules: Extra Attacks (+D3), Magical Attacks. The wielder of the Blades of Loec may re-roll any failed rolls To Wound.",
+      "weapon_profile": {
+        "name": "Blades of Loec",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "extra_attacks_d3",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "deepwood-sphere",
@@ -3773,7 +3834,18 @@
       "source": "arcane_journal",
       "type": "magic_weapon",
       "points": 55,
-      "effect": "R 32\", S S+1, AP -2, Special Rules: Flaming Attacks, Magical Attacks, Multiple Wounds (2). Once per game, unless the wielder moved during the previous Movement phase, Vaul's Wrath can be shot like a bolt thrower using the 'Through & Through' special rule."
+      "effect": "R 32\", S S+1, AP -2, Special Rules: Flaming Attacks, Magical Attacks, Multiple Wounds (2). Once per game, unless the wielder moved during the previous Movement phase, Vaul's Wrath can be shot like a bolt thrower using the 'Through & Through' special rule.",
+      "weapon_profile": {
+        "name": "Vaul's Wrath",
+        "range": "32\"",
+        "S": "S+1",
+        "AP": "-2",
+        "special_rules": [
+          "flaming_attacks",
+          "magical_attacks",
+          "multiple_wounds_d3"
+        ]
+      }
     },
     {
       "id": "spear-of-twilight",
@@ -3781,7 +3853,17 @@
       "source": "forces_of_fantasy",
       "type": "magic_weapon",
       "points": 65,
-      "effect": "R Combat, S S, AP -2, Special Rules: Killing Blow, Magical Attacks. When the wielder of the Spear of Twilight makes a roll To Wound, a roll of 3+ is always a success, regardless of the target's Toughness."
+      "effect": "R Combat, S S, AP -2, Special Rules: Killing Blow, Magical Attacks. When the wielder of the Spear of Twilight makes a roll To Wound, a roll of 3+ is always a success, regardless of the target's Toughness.",
+      "weapon_profile": {
+        "name": "Spear of Twilight",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-2",
+        "special_rules": [
+          "killing_blow",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "tapestry-of-talsyn",

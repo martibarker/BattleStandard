@@ -4172,7 +4172,18 @@
       "source": "ravening_hordes",
       "category": "magic_weapon",
       "points": 15,
-      "effect": "Goblin and Night Goblin Bosses only. Single use. Once per game, during the first round of combat, wielder may use: Combat, S10, AP-3, Magical Attacks, Strike First. At all other times counts as a hand weapon with Magical Attacks."
+      "effect": "Goblin and Night Goblin Bosses only. Single use. Once per game, during the first round of combat, wielder may use: Combat, S10, AP-3, Magical Attacks, Strike First. At all other times counts as a hand weapon with Magical Attacks.",
+      "weapon_profile": {
+        "name": "Wollopa's One Hit Wunda",
+        "range": "Combat",
+        "S": "10",
+        "AP": "-3",
+        "special_rules": [
+          "magical_attacks",
+          "strike_first"
+        ],
+        "notes": "Single use. First round of combat only."
+      }
     },
     {
       "id": "berserker-blade",
@@ -4194,7 +4205,16 @@
       "source": "arcane_journal",
       "category": "magic_weapon",
       "points": 25,
-      "effect": "Goblin Bosses and Night Goblin Bosses only. Combat, S+1, AP-1, Magical Attacks. If engaged with an enemy's flank arc, may re-roll any failed rolls To Wound. If engaged with an enemy's rear arc, may re-roll any failed rolls To Hit and To Wound. Extremely Common magic item."
+      "effect": "Goblin Bosses and Night Goblin Bosses only. Combat, S+1, AP-1, Magical Attacks. If engaged with an enemy's flank arc, may re-roll any failed rolls To Wound. If engaged with an enemy's rear arc, may re-roll any failed rolls To Hit and To Wound. Extremely Common magic item.",
+      "weapon_profile": {
+        "name": "Backstabber's Blade",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "sword-of-swiftness",
@@ -4209,7 +4229,17 @@
       "source": "arcane_journal",
       "category": "magic_weapon",
       "points": 30,
-      "effect": "Combat, S+1, AP-, Armour Bane (1), Magical Attacks. Wearer may re-roll any failed rolls To Hit made whilst using this weapon. However, the Strength modifier only applies during the first round of combat."
+      "effect": "Combat, S+1, AP-, Armour Bane (1), Magical Attacks. Wearer may re-roll any failed rolls To Hit made whilst using this weapon. However, the Strength modifier only applies during the first round of combat.",
+      "weapon_profile": {
+        "name": "Da Akrit Axe",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "giant-blade",
@@ -4240,7 +4270,16 @@
       "source": "ravening_hordes",
       "category": "magic_weapon",
       "points": 35,
-      "effect": "Combat, S+1, AP-3, Magical Attacks."
+      "effect": "Combat, S+1, AP-3, Magical Attacks.",
+      "weapon_profile": {
+        "name": "Da Choppiest Choppa",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-3",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "spelleater-axe",
@@ -4255,7 +4294,18 @@
       "source": "ravening_hordes",
       "category": "magic_weapon",
       "points": 40,
-      "effect": "Combat, S+1, AP-1, Armour Bane (1), Magical Attacks. Models whose troop type is 'cavalry', 'monster' or 'chariot' only. Strength and Armour Piercing modifiers apply only during the first round of combat. During a turn in which the wielder charged, grants +1 Attack for each rank the enemy unit has."
+      "effect": "Combat, S+1, AP-1, Armour Bane (1), Magical Attacks. Models whose troop type is 'cavalry', 'monster' or 'chariot' only. Strength and Armour Piercing modifiers apply only during the first round of combat. During a turn in which the wielder charged, grants +1 Attack for each rank the enemy unit has.",
+      "weapon_profile": {
+        "name": "Porko's Pigstikka",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ],
+        "notes": "Cavalry, monster or chariot only."
+      }
     },
     {
       "id": "headsmans-axe",
@@ -4277,7 +4327,17 @@
       "source": "arcane_journal",
       "category": "magic_weapon",
       "points": 50,
-      "effect": "Combat, S+1, AP-2, Magical Attacks, Requires Two Hands. Wearer has +1 to their Weapon Skill and Initiative characteristics."
+      "effect": "Combat, S+1, AP-2, Magical Attacks, Requires Two Hands. Wearer has +1 to their Weapon Skill and Initiative characteristics.",
+      "weapon_profile": {
+        "name": "Martog's Best Basha",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-2",
+        "special_rules": [
+          "magical_attacks",
+          "requires_two_hands"
+        ]
+      }
     },
     {
       "id": "meteor-hammer",
@@ -4292,7 +4352,19 @@
       "source": "arcane_journal",
       "category": "magic_weapon",
       "points": 55,
-      "effect": "Combat, S+2, AP-2, Killing Blow, Magical Attacks, Requires Two Hands, Strikes Last."
+      "effect": "Combat, S+2, AP-2, Killing Blow, Magical Attacks, Requires Two Hands, Strikes Last.",
+      "weapon_profile": {
+        "name": "Bigger, Choppier Axe",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "killing_blow",
+          "magical_attacks",
+          "requires_two_hands",
+          "strikes_last"
+        ]
+      }
     },
     {
       "id": "duellists-blades",
@@ -4321,7 +4393,19 @@
       "source": "ravening_hordes",
       "category": "magic_weapon",
       "points": 75,
-      "effect": "Combat, S+2, AP-2, Extra Attacks (+D6), Magical Attacks, Requires Two Hands, Strike Last. If a natural 6 is rolled for the Extra Attacks (+D6) rule, the Battleaxe loses the Extra Attacks (+D6) rule at the end of the current Combat phase."
+      "effect": "Combat, S+2, AP-2, Extra Attacks (+D6), Magical Attacks, Requires Two Hands, Strike Last. If a natural 6 is rolled for the Extra Attacks (+D6) rule, the Battleaxe loses the Extra Attacks (+D6) rule at the end of the current Combat phase.",
+      "weapon_profile": {
+        "name": "Battleaxe of the Last Big Waaagh!",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "extra_attacks_d6",
+          "magical_attacks",
+          "requires_two_hands",
+          "strikes_last"
+        ]
+      }
     },
     {
       "id": "ogre-blade",
