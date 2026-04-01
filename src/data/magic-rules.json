@@ -1,0 +1,42 @@
+{
+  "spells_and_spell_generation": {
+    "title": "Spells & Spell Generation",
+    "headings": [
+      "Warhammer: The Old World Online Rules Index",
+      "Spells & Spell Generation URL Copied!"
+    ],
+    "text": "Warhammer: The Old World Online Rules Index Back Source: Warhammer: The Old World Online Rules Index\n\nURL Copied! The Lores of Magic Table of Contents Last update: 2024 January 31 Rulebook, p. 319 Each player randomly generates spells for each of their Wizards before armies are deployed. If your army contains more than one Wizard, you may generate spells for each in an order of your choosing.\n\nEach Lore of Magic contains seven spells: six numbered (1-6) and a seventh 'signature' spell. To determine the spells your Wizard knows, roll a number of D6 equal to their Level of Wizardry, re-rolling any duplicate results. The result(s) show which spell(s) your Wizard knows.\n\nIf you wish, your Wizard may discard one of these randomly generated spells and instead select the signature spell of their chosen Lore of Magic. Any number of Wizards in your army may do this.\n\nNote that Wizards in the same army may know the same spell(s), so individual spells may be duplicated within your army. However, no single Wizard can know the same spell twice.\n\n, Next - Spell Categories (Lores)"
+  },
+  "wizards": {
+    "title": "Wizards",
+    "headings": [
+      "Warhammer: The Old World Online Rules Index",
+      "Wizards URL Copied!"
+    ],
+    "text": "Warhammer: The Old World Online Rules Index Back Source: Warhammer: The Old World Online Rules Index\n\nURL Copied! Magic Table of Contents Last update: 2024 January 24 Rulebook, p. 106 Only beings that possess awesome mental might can even hope to bend the powers of magic to their will. Lesser persons would be consumed in an instant, their souls torn apart by terrible energies. In Warhammer: the Old World, all models that can cast spells are known collectively as 'Wizards', although specific armies might use other terms. You may see names such as sorcerer, shaman or seer, for example, but all of these and others are considered to be types of Wizard.\n\n, Related: Levels of Wizardry Lores of Magic Spells & Spell Generation (Magic) Spell Categories Next - Levels of Wizardry"
+  },
+  "levels_of_wizardry": {
+    "title": "Levels of Wizardry",
+    "headings": [
+      "Warhammer: The Old World Online Rules Index",
+      "Levels of Wizardry URL Copied!"
+    ],
+    "text": "Warhammer: The Old World Online Rules Index Back Source: Warhammer: The Old World Online Rules Index\n\nURL Copied! Magic Table of Contents Last update: 2024 February 02 Rulebook, p. 106 Naturally, not all Wizards are equal – mastery of magic increases through dedicated practice (and, occasionally, through sheer luck). To represent this, Wizards are divided into four degrees of ability called 'Levels of Wizardry' (often shortened simply to 'Level' in the rules that follow). The higher a Wizard's Level, the greater their knowledge of magic:\n\nLevel 1: Wizards of the first level are those of humble ability.\n\nLevel 2: Wizards of the second level are experienced spellcasters.\n\nLevel 3: Wizards of the third level are great sorcerers of a kind rarely seen.\n\nLevel 4: Wizards of the fourth level are the mightiest of all Wizards, the very equal of crowned monarchs within the realms of sorcery.\n\n, Parent: Wizards Previous - Wizards\n\nNext - Lores of Magic"
+  },
+  "spell_categories": {
+    "title": "Spell Categories",
+    "headings": [
+      "Warhammer: The Old World Online Rules Index",
+      "Spell Categories URL Copied!"
+    ],
+    "text": "Warhammer: The Old World Online Rules Index Back Source: Warhammer: The Old World Online Rules Index\n\nURL Copied! Magic Table of Contents Last update: 2024 January 31 Rulebook, p. 107 Spells fall into six categories. These determine during which phase of the game they can be cast. These are:\n\n, Parent: Wizards Related: Enchantment Hex Conveyance Magic Missiles Magical Vortex Assailment Previous - Spells & Spell Generation (Magic)\n\nNext - Enchantment"
+  },
+  "casting_spells": {
+    "title": "Casting Spells",
+    "headings": [
+      "Warhammer: The Old World Online Rules Index",
+      "Casting Spells URL Copied!"
+    ],
+    "text": "Warhammer: The Old World Online Rules Index Back Source: Warhammer: The Old World Online Rules Index\n\nURL Copied! Magic Table of Contents Last update: 2025 June 25 Rulebook, p. 108 When a spell can be cast depends upon its type:\n\nEnchantment and Hex spells can be cast during the Conjuration sub-phase of your Strategy phase.\n\nConveyance spells can be cast at any point during the Remaining Moves sub-phase of your Movement phase.\n\nMagic Missiles and Magical Vortex spells can be cast when a Wizard is chosen during your Shooting phase.\n\nAssailment spells can be cast when a Wizard fights during any Combat phase.\n\nA Wizard can attempt to cast a number of spells equal to their Level of Wizardry per turn, but may only attempt to cast each spell once per turn. Unless stated otherwise, Wizards that are engaged in combat can only cast Assailment or range self spells.\n\nTo cast a spell, a Wizard declares which spell they wish to cast and its target (if required).\n\n, Related: Choosing a Target Casting Roll, Casting Result & Casting Value Magic Resistance (-X) (Magic) Miscasts & Perfect Invocations Bound Spells Previous - Assailment\n\nNext - Choosing a Target"
+  }
+}
