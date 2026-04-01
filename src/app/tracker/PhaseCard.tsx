@@ -2,6 +2,7 @@ import { useGameStore, type GamePhase, type PlayerSide } from '../../store/gameS
 import { useArmyStore } from '../../store/armyStore';
 import { getFaction } from '../../data/factions';
 import type { Unit } from '../../types/faction';
+import StartOfTurnPanel from './StartOfTurnPanel';
 
 interface Prompt {
   id: string;
@@ -74,8 +75,10 @@ export default function PhaseCard() {
         </div>
       </div>
 
-      {/* Prompts */}
-      {prompts.length > 0 ? (
+      {/* Start of Turn: interactive checklist replaces generic prompts */}
+      {currentPhase === 'start_of_turn' ? (
+        <StartOfTurnPanel />
+      ) : prompts.length > 0 ? (
         <div className="space-y-4 mb-6">
           {prompts.map((prompt) => (
             <div
@@ -195,31 +198,9 @@ function generatePrompts(
 ): Prompt[] {
   const prompts: Prompt[] = [];
 
+  // start_of_turn is handled by StartOfTurnPanel — skip prompt generation for it
   if (phase === 'start_of_turn') {
-    // Stupidity tests
-    if (faction) {
-      const stupidUnits = getUnitsWithRule(faction, entries, 'stupidity');
-      if (stupidUnits.length > 0) {
-        prompts.push({
-          id: 'stupidity',
-          title: 'Stupidity Tests',
-          description: `Roll for: ${stupidUnits.map((u) => u.name).join(', ')}`,
-          category: 'required',
-        });
-      }
-    }
-
-    // Rally fleeing units
-    if (player.unitStates?.some((u: any) => u.fled)) {
-      prompts.push({
-        id: 'rally',
-        title: 'Rally Fleeing Units',
-        description: `${player.unitStates.filter((u: any) => u.fled).length} unit(s) fled last turn`,
-        category: 'required',
-      });
-    }
-
-    // Ambusher arrival rolls
+    // Ambusher arrival still shown as a generic prompt alongside the panel
     const ambushers = player.unitStates?.filter((u: any) => u.ambushing && !u.hasArrived) ?? [];
     if (ambushers.length > 0) {
       prompts.push({
@@ -227,16 +208,6 @@ function generatePrompts(
         title: 'Ambusher Arrival Rolls',
         description: `${ambushers.length} ambusher(s) waiting to arrive`,
         category: 'required',
-      });
-    }
-
-    // Chaos-specific: Gaze of the Gods
-    if (faction?.id === 'warriors-of-chaos') {
-      prompts.push({
-        id: 'gaze',
-        title: 'Gaze of the Gods',
-        description: 'Roll on the Gaze table for any Chaos units',
-        category: 'optional',
       });
     }
   }

@@ -74,6 +74,11 @@ export interface PlayerGameState {
   unitStates: UnitGameState[];
   pointsTotal: number;
   matchedPlayFormats: string[];
+  /**
+   * Cumulative Gaze of the Gods log for Warriors of Chaos characters.
+   * Key = unit id, value = array of result strings (one per roll, e.g. "Turn 2: D6:4 — Chaotic Attribute (scales)")
+   */
+  gazeOfGodsLog: Record<string, string[]>;
 }
 
 export interface GameEvent {
@@ -123,6 +128,8 @@ export interface GameState {
   addSpellsToWizard: (side: PlayerSide, unitId: string, unitName: string, lore: string, spells: SpellEntry[]) => void;
   addSecondaryVP: (side: PlayerSide, vp: number, objectiveName: string) => void;
   toggleSpellAssailment: (side: PlayerSide, unitId: string, lore: string, spellIndex: number) => void;
+  /** Record a Gaze of the Gods result for a Warriors of Chaos character */
+  recordGazeResult: (side: PlayerSide, unitId: string, result: string) => void;
   addEvent: (side: PlayerSide, message: string) => void;
 }
 
@@ -146,6 +153,7 @@ const initialPlayerState = (side: PlayerSide): PlayerGameState => ({
   unitStates: [],
   pointsTotal: 0,
   matchedPlayFormats: [],
+  gazeOfGodsLog: {},
 });
 
 export const useGameStore = create<GameState>()(
@@ -427,6 +435,24 @@ export const useGameStore = create<GameState>()(
               message: `${objectiveName}: +${vp} secondary VP`,
             },
           ],
+        }));
+      },
+
+      recordGazeResult: (side: PlayerSide, unitId: string, result: string): void => {
+        set((state: GameState) => ({
+          players: {
+            ...state.players,
+            [side]: {
+              ...state.players[side],
+              gazeOfGodsLog: {
+                ...state.players[side].gazeOfGodsLog,
+                [unitId]: [
+                  ...(state.players[side].gazeOfGodsLog[unitId] ?? []),
+                  result,
+                ],
+              },
+            },
+          },
         }));
       },
 

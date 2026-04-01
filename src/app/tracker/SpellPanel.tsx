@@ -16,6 +16,7 @@ export default function SpellPanel({ side }: SpellPanelProps) {
   const isActiveSide = side === currentSide;
   const isInCombat = currentPhase === 'combat';
   const isInMagicPhase = currentPhase === 'magic';
+  const isInStartOfTurn = currentPhase === 'start_of_turn';
 
   // Visibility rules:
   // – Active player's panel: always visible
@@ -25,9 +26,22 @@ export default function SpellPanel({ side }: SpellPanelProps) {
   // During combat, inactive player shows only Assailment spells
   const combatInactiveFilter = !isActiveSide && isInCombat;
 
+  // During start_of_turn, only Hex and Enchantment spells are relevant
+  // (these are the ongoing "Remains in Play" types that affect the current turn)
+  const startOfTurnFilter = isInStartOfTurn && isActiveSide;
+
   const visibleSelections = combatInactiveFilter
     ? allSpells
         .map((sel) => ({ ...sel, spells: sel.spells.filter((sp) => sp.isAssailment) }))
+        .filter((sel) => sel.spells.length > 0)
+    : startOfTurnFilter
+    ? allSpells
+        .map((sel) => ({
+          ...sel,
+          spells: sel.spells.filter(
+            (sp) => sp.spellType === 'Hex' || sp.spellType === 'Enchantment',
+          ),
+        }))
         .filter((sel) => sel.spells.length > 0)
     : allSpells;
 
@@ -69,6 +83,25 @@ export default function SpellPanel({ side }: SpellPanelProps) {
     );
   }
 
+  if (startOfTurnFilter && visibleSelections.length === 0) {
+    return (
+      <div
+        className="rounded border p-4"
+        style={{
+          backgroundColor: 'var(--color-bg-elevated)',
+          borderColor: 'var(--color-border)',
+        }}
+      >
+        <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+          Ongoing Spells
+        </h3>
+        <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+          No active Hexes or Enchantments in play.
+        </p>
+      </div>
+    );
+  }
+
   if (combatInactiveFilter && visibleSelections.length === 0) {
     return (
       <div
@@ -88,7 +121,11 @@ export default function SpellPanel({ side }: SpellPanelProps) {
     );
   }
 
-  const title = combatInactiveFilter ? 'Assailment Spells' : `Spells${!isInMagicPhase ? ' (Reference)' : ''}`;
+  const title = combatInactiveFilter
+    ? 'Assailment Spells'
+    : startOfTurnFilter
+    ? 'Ongoing Spells'
+    : `Spells${!isInMagicPhase ? ' (Reference)' : ''}`;
 
   return (
     <div
