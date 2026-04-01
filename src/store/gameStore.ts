@@ -31,6 +31,16 @@ export type PlayerSide = 'p1' | 'p2';
 export interface SpellEntry {
   name: string;
   isAssailment: boolean;
+  /** lores.json spell id — enables casting value lookup at render time */
+  spellId?: string;
+  /** Cached from lores.json at setup time */
+  castingValue?: string;
+  /** e.g. 'Assailment', 'Magic Missile', 'Hex', 'Enchantment' */
+  spellType?: string;
+  /** True for spells granted by a bound spell item */
+  isBound?: boolean;
+  /** Power level for bound spells */
+  powerLevel?: number;
 }
 
 export interface SpellSelection {

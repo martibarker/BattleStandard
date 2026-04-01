@@ -31,7 +31,6 @@ export default function SpellPanel({ side }: SpellPanelProps) {
         .filter((sel) => sel.spells.length > 0)
     : allSpells;
 
-  // Empty state
   if (!panelVisible) {
     return (
       <div
@@ -106,6 +105,7 @@ export default function SpellPanel({ side }: SpellPanelProps) {
       <div className="space-y-4">
         {visibleSelections.map((sel) => (
           <div key={`${sel.unitId}-${sel.lore}`}>
+            {/* Wizard / group header */}
             <div
               className="text-sm font-semibold mb-2 px-2 py-1 rounded"
               style={{
@@ -113,7 +113,7 @@ export default function SpellPanel({ side }: SpellPanelProps) {
                 color: 'var(--color-accent-amber)',
               }}
             >
-              {sel.unitName} — {sel.lore}
+              {sel.unitName}
             </div>
 
             {sel.spells.length === 0 ? (
@@ -125,11 +125,13 @@ export default function SpellPanel({ side }: SpellPanelProps) {
                 {sel.spells.map((spellEntry, idx) => {
                   // Find index in original allSpells array for the toggle action
                   const originalSel = allSpells.find(
-                    (s) => s.unitId === sel.unitId && s.lore === sel.lore
+                    (s) => s.unitId === sel.unitId && s.lore === sel.lore,
                   );
                   const originalIdx = originalSel
                     ? originalSel.spells.findIndex((s) => s.name === spellEntry.name)
                     : idx;
+
+                  const isBound = spellEntry.isBound === true;
 
                   return (
                     <div
@@ -139,32 +141,60 @@ export default function SpellPanel({ side }: SpellPanelProps) {
                         backgroundColor: 'var(--color-bg-dark)',
                         borderLeft: spellEntry.isAssailment
                           ? '2px solid var(--color-accent-amber)'
-                          : '2px solid var(--color-accent-blue)',
+                          : isBound
+                          ? '2px solid var(--color-accent-blue)'
+                          : '2px solid var(--color-border)',
                       }}
                     >
-                      <span className="text-sm flex-1" style={{ color: 'var(--color-text-primary)' }}>
-                        {spellEntry.name}
-                      </span>
-                      <button
-                        onClick={() =>
-                          toggleSpellAssailment(side, sel.unitId, sel.lore, originalIdx)
-                        }
-                        className="text-xs px-2 py-0.5 rounded shrink-0"
-                        title={spellEntry.isAssailment ? 'Remove Assailment tag' : 'Mark as Assailment'}
-                        style={{
-                          backgroundColor: spellEntry.isAssailment
-                            ? 'rgba(217, 119, 6, 0.2)'
-                            : 'var(--color-bg-elevated)',
-                          color: spellEntry.isAssailment
-                            ? 'var(--color-accent-amber)'
-                            : 'var(--color-text-secondary)',
-                          border: spellEntry.isAssailment
-                            ? '1px solid var(--color-accent-amber)'
-                            : '1px solid var(--color-border)',
-                        }}
-                      >
-                        Assailment
-                      </button>
+                      {/* Spell name + casting value */}
+                      <div className="flex items-baseline gap-2 flex-1 min-w-0">
+                        <span
+                          className="text-sm truncate"
+                          style={{ color: 'var(--color-text-primary)' }}
+                        >
+                          {isBound ? '⚡ ' : ''}{spellEntry.name}
+                        </span>
+                        {spellEntry.castingValue && (
+                          <span
+                            className="text-xs font-mono shrink-0"
+                            style={{ color: 'var(--color-accent-blue)' }}
+                          >
+                            {spellEntry.castingValue}
+                          </span>
+                        )}
+                        {isBound && spellEntry.powerLevel !== undefined && (
+                          <span
+                            className="text-xs shrink-0"
+                            style={{ color: 'var(--color-text-secondary)' }}
+                          >
+                            Pwr {spellEntry.powerLevel}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Assailment toggle — not applicable to bound spells */}
+                      {!isBound && (
+                        <button
+                          onClick={() =>
+                            toggleSpellAssailment(side, sel.unitId, sel.lore, originalIdx)
+                          }
+                          className="text-xs px-2 py-0.5 rounded shrink-0"
+                          title={spellEntry.isAssailment ? 'Remove Assailment tag' : 'Mark as Assailment'}
+                          style={{
+                            backgroundColor: spellEntry.isAssailment
+                              ? 'rgba(217, 119, 6, 0.2)'
+                              : 'var(--color-bg-elevated)',
+                            color: spellEntry.isAssailment
+                              ? 'var(--color-accent-amber)'
+                              : 'var(--color-text-secondary)',
+                            border: spellEntry.isAssailment
+                              ? '1px solid var(--color-accent-amber)'
+                              : '1px solid var(--color-border)',
+                          }}
+                        >
+                          Assailment
+                        </button>
+                      )}
                     </div>
                   );
                 })}
