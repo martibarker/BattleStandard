@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@keyframes toast-pop {
+  0%   { opacity: 0; transform: translateY(6px); }
+  12%  { opacity: 1; transform: translateY(0); }
+  75%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+
 @layer base {
   :root {
     --color-bg-dark: #0f1117;

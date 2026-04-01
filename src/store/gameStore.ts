@@ -13,11 +13,16 @@ export type GamePhase =
 
 export type PlayerSide = 'p1' | 'p2';
 
+export interface SpellEntry {
+  name: string;
+  isAssailment: boolean;
+}
+
 export interface SpellSelection {
   unitId: string;
   unitName: string;
   lore: string;
-  spells: string[];
+  spells: SpellEntry[];
 }
 
 export interface UnitGameState {
@@ -69,6 +74,8 @@ export interface GameState {
   turnLimit: number;
   /** Secondary objectives for this game (e.g. ['open_war_first_blood', 'open_war_breakthrough']) */
   activeSecondaries: string[];
+  /** VP scored from secondary objectives (tracked separately from battle VP) */
+  secondaryScores: { p1: number; p2: number };
 
   // Actions
   startGame: (p1: Partial<PlayerGameState>, p2: Partial<PlayerGameState>, gameLengthRule?: 'standard' | 'random', activeSecondaries?: string[]) => void;
@@ -79,7 +86,9 @@ export interface GameState {
   markUnitDestroyed: (side: PlayerSide, entryId: string) => void;
   markUnitFled: (side: PlayerSide, entryId: string) => void;
   markAmbusherArrived: (side: PlayerSide, entryId: string) => void;
-  addSpellsToWizard: (side: PlayerSide, unitId: string, unitName: string, lore: string, spells: string[]) => void;
+  addSpellsToWizard: (side: PlayerSide, unitId: string, unitName: string, lore: string, spells: SpellEntry[]) => void;
+  addSecondaryVP: (side: PlayerSide, vp: number, objectiveName: string) => void;
+  toggleSpellAssailment: (side: PlayerSide, unitId: string, lore: string, spellIndex: number) => void;
   addEvent: (side: PlayerSide, message: string) => void;
 }
 
@@ -121,6 +130,7 @@ export const useGameStore = create<GameState>()(
       gameLengthRule: 'standard',
       turnLimit: 6,
       activeSecondaries: [],
+      secondaryScores: { p1: 0, p2: 0 },
 
       startGame: (p1Setup: Partial<PlayerGameState>, p2Setup: Partial<PlayerGameState>, gameLengthRule: 'standard' | 'random' = 'standard', activeSecondaries: string[] = []): void => {
         const p1State = { ...initialPlayerState('p1'), ...p1Setup };
@@ -137,6 +147,7 @@ export const useGameStore = create<GameState>()(
           gameLengthRule,
           turnLimit: 6,
           activeSecondaries,
+          secondaryScores: { p1: 0, p2: 0 },
         });
       },
 
@@ -155,6 +166,7 @@ export const useGameStore = create<GameState>()(
           gameLengthRule: 'standard',
           turnLimit: 6,
           activeSecondaries: [],
+          secondaryScores: { p1: 0, p2: 0 },
         });
       },
 
@@ -264,7 +276,7 @@ export const useGameStore = create<GameState>()(
         }));
       },
 
-      addSpellsToWizard: (side: PlayerSide, unitId: string, unitName: string, lore: string, spells: string[]): void => {
+      addSpellsToWizard: (side: PlayerSide, unitId: string, unitName: string, lore: string, spells: SpellEntry[]): void => {
         set((state: GameState) => {
           const existing = state.players[side].spells.find(
             (s: SpellSelection) => s.unitId === unitId && s.lore === lore
@@ -278,7 +290,15 @@ export const useGameStore = create<GameState>()(
                   ...state.players[side],
                   spells: state.players[side].spells.map((s) =>
                     s.unitId === unitId && s.lore === lore
-                      ? { ...s, spells: [...new Set([...s.spells, ...spells])] }
+                      ? {
+                          ...s,
+                          spells: [
+                            ...s.spells,
+                            ...spells.filter(
+                              (sp) => !s.spells.some((existing) => existing.name === sp.name)
+                            ),
+                          ],
+                        }
                       : s
                   ),
                 },
@@ -296,6 +316,46 @@ export const useGameStore = create<GameState>()(
             },
           };
         });
+      },
+
+      addSecondaryVP: (side: PlayerSide, vp: number, objectiveName: string): void => {
+        set((state: GameState) => ({
+          secondaryScores: {
+            ...state.secondaryScores,
+            [side]: state.secondaryScores[side] + vp,
+          },
+          log: [
+            ...state.log,
+            {
+              id: `secondary_${Date.now()}_${Math.random()}`,
+              turn: state.currentTurn,
+              phase: state.currentPhase,
+              side,
+              timestamp: Date.now(),
+              message: `${objectiveName}: +${vp} secondary VP`,
+            },
+          ],
+        }));
+      },
+
+      toggleSpellAssailment: (side: PlayerSide, unitId: string, lore: string, spellIndex: number): void => {
+        set((state: GameState) => ({
+          players: {
+            ...state.players,
+            [side]: {
+              ...state.players[side],
+              spells: state.players[side].spells.map((sel: SpellSelection) => {
+                if (sel.unitId !== unitId || sel.lore !== lore) return sel;
+                return {
+                  ...sel,
+                  spells: sel.spells.map((sp: SpellEntry, i: number) =>
+                    i === spellIndex ? { ...sp, isAssailment: !sp.isAssailment } : sp
+                  ),
+                };
+              }),
+            },
+          },
+        }));
       },
 
       addEvent: (side: PlayerSide, message: string): void => {

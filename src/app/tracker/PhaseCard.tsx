@@ -300,7 +300,7 @@ function generatePrompts(
 
     // Magic missiles
     const missileSpells = player.spells?.filter((s: any) =>
-      s.spells.some((sp: string) => sp.toLowerCase().includes('missile'))
+      s.spells.some((sp: { name: string }) => sp.name.toLowerCase().includes('missile'))
     ) ?? [];
     if (missileSpells.length > 0) {
       prompts.push({

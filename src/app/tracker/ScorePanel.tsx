@@ -5,23 +5,97 @@ import { SECONDARY_OBJECTIVES } from '../../data/secondary-objectives';
 const SCORING_RULES = {
   unitDestroyed: 'Unit destroyed: 100 × (unit cost / 1,000) VP',
   modelFled: 'Model fled: 25 VP per model',
-  secondaryObjective: 'Secondary objective: 20 VP (varies by format)',
+  secondaryObjective: 'Secondary objective: VP value varies by objective',
 };
 
 export default function ScorePanel() {
   const players = useGameStore((s) => s.players);
   const currentTurn = useGameStore((s) => s.currentTurn);
   const turnLimit = useGameStore((s) => s.turnLimit);
-  const [scores, setScores] = useState<{ p1: number; p2: number }>({ p1: 0, p2: 0 });
-  const [showGuide, setShowGuide] = useState(false);
   const activeSecondaries = useGameStore((s) => s.activeSecondaries);
+  const secondaryScores = useGameStore((s) => s.secondaryScores);
+
+  const [battleScores, setBattleScores] = useState<{ p1: number; p2: number }>({ p1: 0, p2: 0 });
+  const [showGuide, setShowGuide] = useState(false);
 
   const p1 = players.p1;
   const p2 = players.p2;
 
-  const handleScoreChange = (side: 'p1' | 'p2', value: string) => {
+  const p1Total = battleScores.p1 + secondaryScores.p1;
+  const p2Total = battleScores.p2 + secondaryScores.p2;
+
+  const handleBattleScoreChange = (side: 'p1' | 'p2', value: string) => {
     const num = parseInt(value) || 0;
-    setScores((s) => ({ ...s, [side]: Math.max(0, num) }));
+    setBattleScores((s) => ({ ...s, [side]: Math.max(0, num) }));
+  };
+
+  const PlayerCol = ({
+    side,
+    player,
+    accentColor,
+  }: {
+    side: 'p1' | 'p2';
+    player: typeof p1;
+    accentColor: string;
+  }) => {
+    const battle = battleScores[side];
+    const secondary = secondaryScores[side];
+    const total = battle + secondary;
+
+    return (
+      <div
+        className="rounded p-3"
+        style={{
+          backgroundColor: 'var(--color-bg-dark)',
+          borderLeft: `3px solid ${accentColor}`,
+        }}
+      >
+        <div className="text-sm mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+          {player.name}
+          {player.isAttacker && ' (Attacker)'}
+        </div>
+
+        {/* Total — prominent */}
+        <div className="flex items-baseline gap-1 mb-3">
+          <span className="font-bold" style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem' }}>
+            {total}
+          </span>
+          <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+            VP total
+          </span>
+        </div>
+
+        {/* Battle sub-score */}
+        <div className="mb-2">
+          <label className="text-xs block mb-1" style={{ color: 'var(--color-text-secondary)' }}>
+            Battle VP
+          </label>
+          <input
+            type="number"
+            min="0"
+            value={battle}
+            onChange={(e) => handleBattleScoreChange(side, e.target.value)}
+            className="w-full px-2 py-1 rounded text-sm"
+            style={{
+              backgroundColor: 'var(--color-bg-elevated)',
+              border: '1px solid var(--color-border)',
+              color: 'var(--color-text-primary)',
+            }}
+          />
+        </div>
+
+        {/* Secondary sub-score */}
+        {activeSecondaries.length > 0 && (
+          <div
+            className="text-xs px-2 py-1 rounded flex justify-between"
+            style={{ backgroundColor: 'var(--color-bg-elevated)' }}
+          >
+            <span style={{ color: 'var(--color-text-secondary)' }}>Secondary VP</span>
+            <span style={{ color: 'var(--color-accent-amber)', fontWeight: 600 }}>{secondary}</span>
+          </div>
+        )}
+      </div>
+    );
   };
 
   return (
@@ -36,32 +110,22 @@ export default function ScorePanel() {
         Victory Points
       </h3>
 
-      {/* Active Secondary Objectives */}
+      {/* Active Secondary Objectives reference */}
       {activeSecondaries.length > 0 && (
-        <div className="mb-4 space-y-2">
-          {activeSecondaries.map((secondaryId) => {
-            const secondary = SECONDARY_OBJECTIVES.flatMap((set) => set.objectives).find(
-              (obj) => obj.id === secondaryId
-            );
-            if (!secondary) return null;
-
+        <div className="mb-4 space-y-1">
+          {activeSecondaries.map((id) => {
+            const obj = SECONDARY_OBJECTIVES.flatMap((s) => s.objectives).find((o) => o.id === id);
+            if (!obj) return null;
             return (
-              <div key={secondaryId} className="text-xs">
-                <div
-                  className="flex items-center gap-2 p-2 rounded"
-                  style={{
-                    backgroundColor: 'var(--color-bg-dark)',
-                    borderLeft: '2px solid var(--color-accent-blue)',
-                  }}
-                >
-                  <span>{secondary.name}</span>
-                  <span
-                    className="ml-auto font-semibold"
-                    style={{ color: 'var(--color-accent-amber)' }}
-                  >
-                    +{secondary.vpValue}
-                  </span>
-                </div>
+              <div
+                key={id}
+                className="flex items-center gap-2 p-2 rounded text-xs"
+                style={{ backgroundColor: 'var(--color-bg-dark)', borderLeft: '2px solid var(--color-accent-blue)' }}
+              >
+                <span style={{ color: 'var(--color-text-primary)' }}>{obj.name}</span>
+                <span className="ml-auto font-semibold" style={{ color: 'var(--color-accent-amber)' }}>
+                  +{obj.vpValue} VP
+                </span>
               </div>
             );
           })}
@@ -69,128 +133,46 @@ export default function ScorePanel() {
       )}
 
       <div className="grid grid-cols-2 gap-4">
-        {/* Player 1 */}
-        <div
-          className="rounded p-3"
-          style={{
-            backgroundColor: 'var(--color-bg-dark)',
-            borderLeft: '3px solid var(--color-accent-amber)',
-          }}
-        >
-          <div className="text-sm mb-2" style={{ color: 'var(--color-text-secondary)' }}>
-            {p1.name}
-            {p1.isAttacker && ' (Attacker)'}
-          </div>
-          <div className="flex items-baseline gap-2 mb-3">
-            <span
-              className="text-3xl font-bold"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              {scores.p1}
-            </span>
-            <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-              VP
-            </span>
-          </div>
-          <input
-            type="number"
-            min="0"
-            value={scores.p1}
-            onChange={(e) => handleScoreChange('p1', e.target.value)}
-            className="w-full px-2 py-1 rounded text-sm"
-            style={{
-              backgroundColor: 'var(--color-bg-elevated)',
-              borderColor: 'var(--color-border)',
-              color: 'var(--color-text-primary)',
-            }}
-          />
-        </div>
-
-        {/* Player 2 */}
-        <div
-          className="rounded p-3"
-          style={{
-            backgroundColor: 'var(--color-bg-dark)',
-            borderLeft: '3px solid var(--color-accent-blue)',
-          }}
-        >
-          <div className="text-sm mb-2" style={{ color: 'var(--color-text-secondary)' }}>
-            {p2.name}
-            {p2.isAttacker && ' (Attacker)'}
-          </div>
-          <div className="flex items-baseline gap-2 mb-3">
-            <span
-              className="text-3xl font-bold"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              {scores.p2}
-            </span>
-            <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-              VP
-            </span>
-          </div>
-          <input
-            type="number"
-            min="0"
-            value={scores.p2}
-            onChange={(e) => handleScoreChange('p2', e.target.value)}
-            className="w-full px-2 py-1 rounded text-sm"
-            style={{
-              backgroundColor: 'var(--color-bg-elevated)',
-              borderColor: 'var(--color-border)',
-              color: 'var(--color-text-primary)',
-            }}
-          />
-        </div>
+        <PlayerCol side="p1" player={p1} accentColor="var(--color-accent-amber)" />
+        <PlayerCol side="p2" player={p2} accentColor="var(--color-accent-blue)" />
       </div>
 
-      {/* VP Difference */}
+      {/* Difference */}
       <div
-        className="mt-4 pt-4 rounded p-3 text-center"
-        style={{
-          backgroundColor: 'var(--color-bg-dark)',
-          borderColor: 'var(--color-border)',
-        }}
+        className="mt-4 p-3 rounded text-center"
+        style={{ backgroundColor: 'var(--color-bg-dark)' }}
       >
-        <p className="text-xs mb-2" style={{ color: 'var(--color-text-secondary)' }}>
+        <p className="text-xs mb-1" style={{ color: 'var(--color-text-secondary)' }}>
           Difference
         </p>
         <p className="text-2xl font-bold" style={{ fontFamily: 'var(--font-heading)' }}>
           <span
             style={{
               color:
-                scores.p1 > scores.p2
+                p1Total > p2Total
                   ? 'var(--color-accent-amber)'
-                  : scores.p2 > scores.p1
-                    ? 'var(--color-accent-blue)'
-                    : 'var(--color-text-secondary)',
+                  : p2Total > p1Total
+                  ? 'var(--color-accent-blue)'
+                  : 'var(--color-text-secondary)',
             }}
           >
-            {Math.abs(scores.p1 - scores.p2)}
+            {Math.abs(p1Total - p2Total)}
           </span>
           <span style={{ fontSize: '0.6em', marginLeft: '4px', color: 'var(--color-text-secondary)' }}>
-            {scores.p1 > scores.p2 ? p1.name : scores.p2 > scores.p1 ? p2.name : 'Tied'}
+            {p1Total > p2Total ? p1.name : p2Total > p1Total ? p2.name : 'Tied'}
           </span>
         </p>
       </div>
 
-      {/* Turn info */}
-      <div
-        className="mt-4 text-center text-xs"
-        style={{ color: 'var(--color-text-secondary)' }}
-      >
+      <div className="mt-3 text-center text-xs" style={{ color: 'var(--color-text-secondary)' }}>
         Turn {currentTurn} of {turnLimit}
       </div>
 
-      {/* Scoring Guide Toggle */}
       <div className="mt-4 pt-4 border-t" style={{ borderColor: 'var(--color-border)' }}>
         <button
           onClick={() => setShowGuide(!showGuide)}
           className="w-full px-2 py-2 rounded text-xs font-semibold text-center"
-          style={{
-            backgroundColor: 'var(--color-bg-dark)',
-            color: 'var(--color-accent-blue)',
-          }}
+          style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-accent-blue)' }}
         >
           {showGuide ? '▼' : '▶'} Scoring Guide
         </button>
@@ -200,7 +182,7 @@ export default function ScorePanel() {
             <div className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
               <p className="font-semibold mb-1">Primary Scoring:</p>
               {Object.entries(SCORING_RULES).map(([key, rule]) => (
-                <div key={key} className="mb-1 text-xs">
+                <div key={key} className="mb-1">
                   {rule}
                 </div>
               ))}

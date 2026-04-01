@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
 import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
@@ -58,6 +58,8 @@ export default function ArmyEditor() {
     enchanted_item: true,
     arcane_item: true,
   });
+  const [toast, setToast] = useState<{ message: string; key: number } | null>(null);
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   if (!army || !faction) {
     return (
@@ -91,6 +93,9 @@ export default function ArmyEditor() {
       selectedMagicItemIds: [],
       selectedMountId: null,
     });
+    if (toastTimer.current) clearTimeout(toastTimer.current);
+    setToast({ message: `+ ${unit.name} added`, key: Date.now() });
+    toastTimer.current = setTimeout(() => setToast(null), 2000);
   }
 
   function handleQtyChange(entry: ArmyEntry, unit: Unit, delta: number) {
@@ -181,7 +186,7 @@ export default function ArmyEditor() {
   const UnitBrowser = () => {
     const units = getUnitsForTab(faction, browserTab, army.compositionId);
     return (
-      <div className="flex flex-col h-full overflow-hidden">
+      <div className="flex flex-col h-full overflow-hidden relative">
         {/* Tabs */}
         <div className="flex border-b shrink-0" style={{ borderColor: 'var(--color-border)' }}>
           {TABS.map((tab) => (
@@ -206,6 +211,7 @@ export default function ArmyEditor() {
             const { min } = parseUnitSize(unit.unit_size);
             const isFixed = unit.unit_size === '1';
             const minCost = isFixed ? unit.points : unit.points * min;
+            const inListCount = army.entries.filter((e) => e.unitId === unit.id).length;
             return (
               <div
                 key={unit.id}
@@ -226,13 +232,23 @@ export default function ArmyEditor() {
                     </p>
                     <StatBar unit={unit} />
                   </div>
-                  <button
-                    onClick={() => handleAddUnit(unit)}
-                    className="shrink-0 rounded px-3 py-1.5 text-xs font-bold self-start"
-                    style={{ backgroundColor: 'var(--color-accent-amber)', color: '#0f1117' }}
-                  >
-                    + Add
-                  </button>
+                  <div className="flex flex-col items-end gap-1.5 shrink-0">
+                    <button
+                      onClick={() => handleAddUnit(unit)}
+                      className="rounded px-3 py-1.5 text-xs font-bold"
+                      style={{ backgroundColor: 'var(--color-accent-amber)', color: '#0f1117' }}
+                    >
+                      + Add
+                    </button>
+                    {inListCount > 0 && (
+                      <span
+                        className="text-xs font-semibold rounded px-1.5 py-0.5"
+                        style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-accent-amber)' }}
+                      >
+                        ×{inListCount} in list
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             );
@@ -243,6 +259,21 @@ export default function ArmyEditor() {
             </p>
           )}
         </div>
+
+        {/* Add confirmation toast */}
+        {toast && (
+          <div
+            key={toast.key}
+            className="absolute bottom-16 left-0 right-0 flex justify-center pointer-events-none z-50 px-4"
+          >
+            <div
+              className="px-4 py-2 rounded-full text-sm font-bold"
+              style={{ backgroundColor: 'var(--color-accent-amber)', color: '#0f1117', animation: 'toast-pop 2s ease forwards' }}
+            >
+              {toast.message}
+            </div>
+          </div>
+        )}
       </div>
     );
   };
@@ -321,11 +352,11 @@ export default function ArmyEditor() {
                     : null;
                   const extraEquip = [
                     ...entry.selectedOptions.filter(
-                      (o) => /\bshield\b/i.test(o) && !unit.equipment.some((e) => /\bshield\b/i.test(e))
+                      (o) => /\bshield\b/i.test(o) && !(unit.equipment ?? []).some((e) => /\bshield\b/i.test(e))
                     ),
                     ...(mountUnit?.equipment ?? []),
                   ];
-                  const entrySave = calcArmourSave([...unit.equipment, ...extraEquip], unit.special_rules);
+                  const entrySave = calcArmourSave([...(unit.equipment ?? []), ...extraEquip], unit.special_rules ?? []);
 
                   return (
                     <div
@@ -527,7 +558,7 @@ function StatBar({ unit, save }: { unit: Unit; save?: string }) {
   if (!main) return null;
   const p = main.profile;
   const stats = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld'] as const;
-  const displaySave = save ?? calcArmourSave(unit.equipment, unit.special_rules);
+  const displaySave = save ?? calcArmourSave(unit.equipment ?? [], unit.special_rules ?? []);
   return (
     <div className="flex gap-1 mt-1.5 flex-wrap">
       {stats.map((s) => (

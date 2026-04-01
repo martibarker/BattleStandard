@@ -76,6 +76,8 @@ function normalizeFaction(raw: unknown): Faction {
       return {
         ...u,
         profiles: profiles || [],
+        equipment: (u.equipment as string[] | undefined) ?? [],
+        special_rules: (u.special_rules as string[] | undefined) ?? [],
         options: normalizeOptions(u.options as unknown[] | undefined),
         ...(weaponProfiles && { weapon_profiles: weaponProfiles }),
       };
