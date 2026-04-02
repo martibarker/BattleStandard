@@ -60,6 +60,9 @@ export function calcOptionsCost(unit: Unit, entry: ArmyEntry, faction: Faction):
             cost += choice.cost * multiplier;
           }
         }
+      } else if (opt.per_n_models !== undefined) {
+        const qty = entry.optionQuantities?.[opt.description] ?? 0;
+        cost += opt.cost * qty;
       } else {
         if (!entry.selectedOptions.includes(opt.description)) continue;
         const multiplier = opt.scope === 'per_model' && isPerModelPoints(unit) ? entry.quantity : 1;

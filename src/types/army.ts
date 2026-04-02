@@ -30,6 +30,11 @@ export interface ArmyEntry {
    */
   selectedMagicItemIds: string[];
   /**
+   * Quantities for options that use per_n_models scaling (e.g. Fanatics).
+   * Key is the option description; value is the number purchased.
+   */
+  optionQuantities?: Record<string, number>;
+  /**
    * ID of the selected mount from faction.units (category: 'mount').
    * Null if unmounted. Only used for characters with a "Mount (see Character Mounts)" option.
    */

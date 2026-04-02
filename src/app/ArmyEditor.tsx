@@ -7,9 +7,6 @@ import type { Faction, Unit, WeaponProfile, OptionChoice } from '../types/factio
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
 
-const SPECIAL_RULES_MAP: Record<string, string> = Object.fromEntries(
-  (specialRulesData as { rules: { id: string; name: string }[] }).rules.map((r) => [r.id, r.name])
-);
 
 type BrowserTab = 'characters' | 'core' | 'special' | 'rare';
 
@@ -442,35 +439,6 @@ export default function ArmyEditor() {
 
                       <SpecialRulesList ruleIds={unit.special_rules} />
 
-                      {unit.command && unit.command.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
-                          {unit.command.some((c) => c.role === 'champion') && (
-                            <CommandToggle
-                              label={unit.command.find((c) => c.role === 'champion')?.name ?? 'Champion'}
-                              cost={unit.command.find((c) => c.role === 'champion')!.cost_per_unit}
-                              checked={entry.includeChampion}
-                              onChange={(v) => updateEntry(army.id, entry.id, { includeChampion: v })}
-                            />
-                          )}
-                          {unit.command.some((c) => c.role === 'standard_bearer') && (
-                            <CommandToggle
-                              label="Standard"
-                              cost={unit.command.find((c) => c.role === 'standard_bearer')!.cost_per_unit}
-                              checked={entry.includeStandard}
-                              onChange={(v) => updateEntry(army.id, entry.id, { includeStandard: v })}
-                            />
-                          )}
-                          {unit.command.some((c) => c.role === 'musician') && (
-                            <CommandToggle
-                              label="Musician"
-                              cost={unit.command.find((c) => c.role === 'musician')!.cost_per_unit}
-                              checked={entry.includeMusician}
-                              onChange={(v) => updateEntry(army.id, entry.id, { includeMusician: v })}
-                            />
-                          )}
-                        </div>
-                      )}
-
                       {showOptions && (
                         <>
                           <button
@@ -620,52 +588,44 @@ function WeaponProfileTable({ profiles }: { profiles: WeaponProfile[] }) {
   );
 }
 
-function CommandToggle({
-  label,
-  cost,
-  checked,
-  onChange,
-}: {
-  label: string;
-  cost: number;
-  checked: boolean;
-  onChange: (v: boolean) => void;
-}) {
-  return (
-    <label
-      className="flex items-center gap-1 text-xs cursor-pointer rounded px-1.5 py-0.5 border"
-      style={{
-        borderColor: checked ? 'var(--color-accent-blue)' : 'var(--color-border)',
-        color: checked ? 'var(--color-accent-blue)' : 'var(--color-text-secondary)',
-        backgroundColor: 'var(--color-bg-dark)',
-      }}
-    >
-      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="sr-only" />
-      {label} +{cost}
-    </label>
-  );
-}
 
 function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
+  const [expanded, setExpanded] = useState<string | null>(null);
   if (!ruleIds || ruleIds.length === 0) return null;
+  const rulesData = (specialRulesData as { rules: { id: string; name: string; description: string }[] }).rules;
   return (
-    <div className="flex flex-wrap gap-1 mt-1.5">
-      {ruleIds.map((id) => {
-        const name = SPECIAL_RULES_MAP[id] ?? formatRuleName(id);
-        return (
-          <span
-            key={id}
-            className="text-xs px-1.5 py-0.5 rounded"
-            style={{
-              backgroundColor: 'var(--color-bg-dark)',
-              color: 'var(--color-text-secondary)',
-              border: '1px solid var(--color-border)',
-            }}
-          >
-            {name}
-          </span>
-        );
-      })}
+    <div className="flex flex-col gap-1 mt-1.5">
+      <div className="flex flex-wrap gap-1">
+        {ruleIds.map((id) => {
+          const rule = rulesData.find((r) => r.id === id);
+          const name = rule?.name ?? formatRuleName(id);
+          const hasDesc = !!rule?.description;
+          const isOpen = expanded === id;
+          return (
+            <button
+              key={id}
+              onClick={() => hasDesc ? setExpanded(isOpen ? null : id) : undefined}
+              className="text-xs px-1.5 py-0.5 rounded text-left"
+              style={{
+                backgroundColor: isOpen ? 'var(--color-bg-elevated)' : 'var(--color-bg-dark)',
+                color: isOpen ? 'var(--color-accent-blue)' : 'var(--color-text-secondary)',
+                border: `1px solid ${isOpen ? 'var(--color-accent-blue)' : 'var(--color-border)'}`,
+                cursor: hasDesc ? 'pointer' : 'default',
+              }}
+            >
+              {name}{hasDesc ? (isOpen ? ' ▲' : ' ▼') : ''}
+            </button>
+          );
+        })}
+      </div>
+      {expanded && (() => {
+        const rule = rulesData.find((r) => r.id === expanded);
+        return rule?.description ? (
+          <p className="text-xs leading-snug px-2 py-1.5 rounded" style={{ color: 'var(--color-text-secondary)', backgroundColor: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)' }}>
+            {rule.description}
+          </p>
+        ) : null;
+      })()}
     </div>
   );
 }
@@ -724,10 +684,13 @@ function EntryOptionsPanel({
     (o) =>
       o.max_points === undefined &&
       !o.choices &&
+      o.per_n_models === undefined &&
       !o.description.includes('Knightly Virtue') &&
       !o.description.includes('Mount (see Character Mounts)') &&
       !(o.description.startsWith('Replace') && o.description.includes('Vow'))
   );
+
+  const scaledOptions = options.filter((o) => o.per_n_models !== undefined);
 
   const choiceGroups = options.filter(
     (o) =>
@@ -735,6 +698,10 @@ function EntryOptionsPanel({
       o.choices &&
       o.choices.length > 0
   );
+
+  const command = unit.command ?? [];
+  const hasCommand = command.length > 0;
+  const hasEquipmentSection = regularOptions.length > 0 || scaledOptions.length > 0 || hasCommand;
 
   function toggleOption(desc: string, checked: boolean) {
     const next = checked
@@ -785,24 +752,54 @@ function EntryOptionsPanel({
   return (
     <div className="mt-1.5 pt-2 flex flex-col gap-2.5 border-t" style={{ borderColor: 'var(--color-border)' }}>
 
-      {/* Equipment / weapon toggles */}
-      {regularOptions.length > 0 && (
+      {/* Equipment / command / weapon toggles */}
+      {hasEquipmentSection && (
         <div className="flex flex-col gap-1.5">
-          <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Equipment</p>
+          <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Equipment &amp; Command</p>
           <div className="flex flex-col gap-1">
+            {/* Command upgrades */}
+            {command.map((cmd) => {
+              const checked = cmd.role === 'champion' ? entry.includeChampion
+                : cmd.role === 'standard_bearer' ? entry.includeStandard
+                : entry.includeMusician;
+              const label = cmd.role === 'champion' ? (cmd.name ?? 'Champion')
+                : cmd.role === 'standard_bearer' ? 'Standard Bearer'
+                : (cmd.name ?? 'Musician');
+              const onChange = (v: boolean) => {
+                if (cmd.role === 'champion') updateEntry(armyId, entry.id, { includeChampion: v });
+                else if (cmd.role === 'standard_bearer') updateEntry(armyId, entry.id, { includeStandard: v });
+                else updateEntry(armyId, entry.id, { includeMusician: v });
+              };
+              return (
+                <label key={cmd.role} className="flex items-center gap-2 cursor-pointer">
+                  <span
+                    className="shrink-0 w-4 h-4 rounded border flex items-center justify-center text-xs"
+                    style={{
+                      borderColor: checked ? 'var(--color-accent-blue)' : 'var(--color-border)',
+                      backgroundColor: checked ? 'var(--color-accent-blue)' : 'transparent',
+                      color: '#0f1117',
+                    }}
+                  >
+                    {checked ? '✓' : ''}
+                  </span>
+                  <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="sr-only" />
+                  <span className="text-xs" style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                    {label} — +{cmd.cost_per_unit} pts
+                  </span>
+                </label>
+              );
+            })}
+
+            {/* Regular options */}
             {regularOptions.map((opt) => {
               const totalCost = opt.scope === 'per_model' && perModel ? opt.cost * entry.quantity : opt.cost;
               const isChecked = entry.selectedOptions.includes(opt.description);
-              // Find matching weapon profile by name (case-insensitive, partial match for conditional names)
               const weaponProfile = unit.weapon_profiles?.find(
                 (wp) => wp.name.toLowerCase() === opt.description.toLowerCase() ||
                        opt.description.toLowerCase().startsWith(wp.name.toLowerCase())
               );
               return (
-                <label
-                  key={opt.description}
-                  className="flex items-start gap-2 cursor-pointer"
-                >
+                <label key={opt.description} className="flex items-start gap-2 cursor-pointer">
                   <span
                     className="shrink-0 w-4 h-4 mt-0.5 rounded border flex items-center justify-center text-xs"
                     style={{
@@ -845,6 +842,47 @@ function EntryOptionsPanel({
                     )}
                   </span>
                 </label>
+              );
+            })}
+
+            {/* Scaled options (per_n_models, e.g. Fanatics) */}
+            {scaledOptions.map((opt) => {
+              const maxAllowed = Math.min(
+                Math.floor(entry.quantity / opt.per_n_models!),
+                opt.max_count ?? 99
+              );
+              const qty = entry.optionQuantities?.[opt.description] ?? 0;
+              const totalCost = opt.cost * qty;
+              function setQty(next: number) {
+                updateEntry(armyId, entry.id, {
+                  optionQuantities: { ...(entry.optionQuantities ?? {}), [opt.description]: next },
+                });
+              }
+              return (
+                <div key={opt.description} className="flex flex-col gap-0.5">
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setQty(Math.max(0, qty - 1))}
+                      disabled={qty <= 0}
+                      className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30"
+                      style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}
+                    >−</button>
+                    <span className="text-sm font-semibold w-4 text-center" style={{ color: 'var(--color-text-primary)' }}>{qty}</span>
+                    <button
+                      onClick={() => setQty(Math.min(maxAllowed, qty + 1))}
+                      disabled={qty >= maxAllowed}
+                      className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30"
+                      style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}
+                    >+</button>
+                    <span className="text-xs" style={{ color: qty > 0 ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                      {opt.description}{totalCost > 0 ? ` — +${totalCost} pts` : ''}
+                    </span>
+                    <span className="text-xs ml-auto" style={{ color: 'var(--color-text-secondary)' }}>max {maxAllowed}</span>
+                  </div>
+                  {opt.notes && (
+                    <span className="text-xs italic ml-8" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{opt.notes}</span>
+                  )}
+                </div>
               );
             })}
           </div>
