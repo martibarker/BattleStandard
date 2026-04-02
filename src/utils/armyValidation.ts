@@ -51,10 +51,20 @@ export function calcOptionsCost(unit: Unit, entry: ArmyEntry, faction: Faction):
   // Equipment / weapon / vow options
   if (unit.options) {
     for (const opt of unit.options) {
-      if (!entry.selectedOptions.includes(opt.description)) continue;
       if (opt.max_points !== undefined) continue; // allowance info only
-      const multiplier = opt.scope === 'per_model' && isPerModelPoints(unit) ? entry.quantity : 1;
-      cost += opt.cost * multiplier;
+      if (opt.choices) {
+        // Choice group: find the selected choice (if any) and count its cost
+        for (const choice of opt.choices) {
+          if (entry.selectedOptions.includes(choice.description)) {
+            const multiplier = choice.scope === 'per_model' && isPerModelPoints(unit) ? entry.quantity : 1;
+            cost += choice.cost * multiplier;
+          }
+        }
+      } else {
+        if (!entry.selectedOptions.includes(opt.description)) continue;
+        const multiplier = opt.scope === 'per_model' && isPerModelPoints(unit) ? entry.quantity : 1;
+        cost += opt.cost * multiplier;
+      }
     }
   }
 

@@ -58,6 +58,14 @@ export interface MagicDetails {
 
 export type OptionScope = 'per_model' | 'per_unit' | 'per_army';
 
+/** A single option within a mutually-exclusive choice group */
+export interface OptionChoice {
+  description: string;
+  cost: number;
+  scope: OptionScope;
+  notes?: string;
+}
+
 export interface Option {
   description: string;
   cost: number;
@@ -67,6 +75,12 @@ export interface Option {
   replaces?: string;
   /** For magic item allowances: maximum total points value */
   max_points?: number;
+  /** Maximum number that can be purchased (e.g. max 3 Fanatics) */
+  max_count?: number;
+  /** 1 of this option allowed per N models in unit (e.g. 1 Fanatic per 10 Night Goblins) */
+  per_n_models?: number;
+  /** Mutually-exclusive sub-options — rendered as a radio group (pick one) */
+  choices?: OptionChoice[];
 }
 
 export interface CommandUpgrade {

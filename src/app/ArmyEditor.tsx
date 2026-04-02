@@ -3,8 +3,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
 import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
-import type { Faction, Unit, WeaponProfile } from '../types/faction';
+import type { Faction, Unit, WeaponProfile, OptionChoice } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
+import specialRulesData from '../data/rules/special-rules.json';
+
+const SPECIAL_RULES_MAP: Record<string, string> = Object.fromEntries(
+  (specialRulesData as { rules: { id: string; name: string }[] }).rules.map((r) => [r.id, r.name])
+);
 
 type BrowserTab = 'characters' | 'core' | 'special' | 'rare';
 
@@ -231,6 +236,7 @@ export default function ArmyEditor() {
                       {minCost !== unit.points && !isFixed ? ` · from ${minCost} pts` : ''}
                     </p>
                     <StatBar unit={unit} />
+                    <SpecialRulesList ruleIds={unit.special_rules} />
                   </div>
                   <div className="flex flex-col items-end gap-1.5 shrink-0">
                     <button
@@ -343,7 +349,7 @@ export default function ArmyEditor() {
                   const entryPts = calcEntryPoints(unit, entry, faction);
                   const optsCost = calcOptionsCost(unit, entry, faction);
                   const isFixed = unit.unit_size === '1';
-                  const showOptions = !!(unit.options && unit.options.length > 0);
+                  const showOptions = !!(unit.options && unit.options.length > 0) || !!(unit.command && unit.command.length > 0);
                   const { min, max } = parseUnitSize(unit.unit_size);
 
                   // Armour save: combine unit equipment + selected option shields + mount barding
@@ -433,6 +439,8 @@ export default function ArmyEditor() {
                         );
                         return baseWeaponProfiles.length > 0 ? <WeaponProfileTable profiles={baseWeaponProfiles} /> : null;
                       })()}
+
+                      <SpecialRulesList ruleIds={unit.special_rules} />
 
                       {unit.command && unit.command.length > 0 && (
                         <div className="flex flex-wrap gap-2">
@@ -638,6 +646,30 @@ function CommandToggle({
   );
 }
 
+function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
+  if (!ruleIds || ruleIds.length === 0) return null;
+  return (
+    <div className="flex flex-wrap gap-1 mt-1.5">
+      {ruleIds.map((id) => {
+        const name = SPECIAL_RULES_MAP[id] ?? formatRuleName(id);
+        return (
+          <span
+            key={id}
+            className="text-xs px-1.5 py-0.5 rounded"
+            style={{
+              backgroundColor: 'var(--color-bg-dark)',
+              color: 'var(--color-text-secondary)',
+              border: '1px solid var(--color-border)',
+            }}
+          >
+            {name}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
 /** Returns mount units available to the given character based on mount notes */
 function getAvailableMounts(unit: Unit, faction: Faction): Unit[] {
   return faction.units.filter((u) => {
@@ -691,15 +723,30 @@ function EntryOptionsPanel({
   const regularOptions = options.filter(
     (o) =>
       o.max_points === undefined &&
+      !o.choices &&
       !o.description.includes('Knightly Virtue') &&
       !o.description.includes('Mount (see Character Mounts)') &&
       !(o.description.startsWith('Replace') && o.description.includes('Vow'))
+  );
+
+  const choiceGroups = options.filter(
+    (o) =>
+      o.max_points === undefined &&
+      o.choices &&
+      o.choices.length > 0
   );
 
   function toggleOption(desc: string, checked: boolean) {
     const next = checked
       ? [...entry.selectedOptions, desc]
       : entry.selectedOptions.filter((d) => d !== desc);
+    updateEntry(armyId, entry.id, { selectedOptions: next });
+  }
+
+  function selectChoice(choices: OptionChoice[], choiceDesc: string | null) {
+    const allDescs = choices.map((c) => c.description);
+    const without = entry.selectedOptions.filter((d) => !allDescs.includes(d));
+    const next = choiceDesc ? [...without, choiceDesc] : without;
     updateEntry(armyId, entry.id, { selectedOptions: next });
   }
 
@@ -804,10 +851,69 @@ function EntryOptionsPanel({
         </div>
       )}
 
+      {/* Choice groups (OR selections) */}
+      {choiceGroups.length > 0 && (
+        <>
+          {regularOptions.length > 0 && divider}
+          <div className="flex flex-col gap-2.5">
+            {choiceGroups.map((group) => {
+              const choices = group.choices!;
+              const allDescs = choices.map((c) => c.description);
+              const selected = entry.selectedOptions.find((d) => allDescs.includes(d)) ?? null;
+              return (
+                <div key={group.description} className="flex flex-col gap-1.5">
+                  <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>
+                    {group.description}
+                  </p>
+                  <div className="flex flex-col gap-1">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <span
+                        className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
+                        style={{
+                          borderColor: !selected ? 'var(--color-accent-blue)' : 'var(--color-border)',
+                          backgroundColor: !selected ? 'var(--color-accent-blue)' : 'transparent',
+                        }}
+                      >
+                        {!selected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                      </span>
+                      <input type="radio" name={`choice-${entry.id}-${group.description}`} checked={!selected} onChange={() => selectChoice(choices, null)} className="sr-only" />
+                      <span className="text-xs" style={{ color: !selected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                        None
+                      </span>
+                    </label>
+                    {choices.map((choice) => {
+                      const isActive = selected === choice.description;
+                      const totalCost = choice.scope === 'per_model' && perModel ? choice.cost * entry.quantity : choice.cost;
+                      return (
+                        <label key={choice.description} className="flex items-center gap-2 cursor-pointer">
+                          <span
+                            className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
+                            style={{
+                              borderColor: isActive ? 'var(--color-accent-blue)' : 'var(--color-border)',
+                              backgroundColor: isActive ? 'var(--color-accent-blue)' : 'transparent',
+                            }}
+                          >
+                            {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                          </span>
+                          <input type="radio" name={`choice-${entry.id}-${group.description}`} checked={isActive} onChange={() => selectChoice(choices, choice.description)} className="sr-only" />
+                          <span className="text-xs" style={{ color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                            {choice.description}{choice.cost > 0 ? ` — +${totalCost} pts` : ''}
+                          </span>
+                        </label>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
       {/* Vow */}
       {vowOptions.length > 0 && (
         <>
-          {regularOptions.length > 0 && divider}
+          {divider}
           <div className="flex flex-col gap-1.5">
             <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Vow</p>
             <div className="flex flex-col gap-1">

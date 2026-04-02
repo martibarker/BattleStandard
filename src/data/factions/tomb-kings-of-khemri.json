@@ -2,13 +2,13 @@
   "id": "tomb-kings-of-khemri",
   "name": "Tomb Kings of Khemri",
   "sources": [
-    "Warhammer: The Old World — Ravening Hordes (2024)",
+    "Warhammer: The Old World \u2014 Ravening Hordes (2024)",
     "Arcane Journal: Tomb Kings of Khemri"
   ],
   "army_compositions": [
     {
       "id": "grand_army",
-      "name": "Tomb Kings of Khemri — Grand Army",
+      "name": "Tomb Kings of Khemri \u2014 Grand Army",
       "source": "ravening_hordes",
       "rules": [
         {
@@ -108,7 +108,7 @@
     },
     {
       "id": "nehekharan_royal_host",
-      "name": "Tomb Kings of Khemri — Nehekharan Royal Host",
+      "name": "Tomb Kings of Khemri \u2014 Nehekharan Royal Host",
       "source": "arcane_journal",
       "rules": [
         {
@@ -217,7 +217,7 @@
     },
     {
       "id": "mortuary_cult",
-      "name": "Tomb Kings of Khemri — Mortuary Cult",
+      "name": "Tomb Kings of Khemri \u2014 Mortuary Cult",
       "source": "arcane_journal",
       "rules": [
         {
@@ -368,49 +368,49 @@
           "description": "May take one of the following weapons",
           "choices": [
             {
-              "name": "Additional hand weapon",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Additional hand weapon"
             },
             {
-              "name": "Flail",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Flail"
             },
             {
-              "name": "Great weapon",
               "cost": 4,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Great weapon"
             },
             {
-              "name": "Halberd",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Halberd"
             },
             {
-              "name": "Cavalry spear (if appropriately mounted)",
               "cost": 2,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Cavalry spear (if appropriately mounted)"
             }
           ]
         },
         {
-          "name": "Shield",
           "cost": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Shield"
         },
         {
-          "name": "Mount (see character mounts)",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts section"
+          "notes": "See character mounts section",
+          "description": "Mount (see character mounts)"
         },
         {
-          "name": "Magic items",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "notes": "Up to 100 points of magic items"
+          "notes": "Up to 100 points of magic items",
+          "description": "Magic items"
         }
       ],
       "special_rules": [
@@ -499,49 +499,49 @@
           "description": "May take one of the following weapons",
           "choices": [
             {
-              "name": "Additional hand weapon",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Additional hand weapon"
             },
             {
-              "name": "Flail",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Flail"
             },
             {
-              "name": "Great weapon",
               "cost": 4,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Great weapon"
             },
             {
-              "name": "Halberd",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Halberd"
             },
             {
-              "name": "Cavalry spear (if appropriately mounted)",
               "cost": 2,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Cavalry spear (if appropriately mounted)"
             }
           ]
         },
         {
-          "name": "Shield",
           "cost": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Shield"
         },
         {
-          "name": "Mount (see character mounts)",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts section"
+          "notes": "See character mounts section",
+          "description": "Mount (see character mounts)"
         },
         {
-          "name": "Magic items",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Up to 50 points of magic items"
+          "notes": "Up to 50 points of magic items",
+          "description": "Magic items"
         }
       ],
       "special_rules": [
@@ -631,22 +631,22 @@
       },
       "options": [
         {
-          "name": "Mount (see character mounts)",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts section"
+          "notes": "See character mounts section",
+          "description": "Mount (see character mounts)"
         },
         {
-          "name": "Upgrade to Level 4 Wizard",
           "cost": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade to Level 4 Wizard"
         },
         {
-          "name": "Magic items",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "notes": "Up to 100 points of magic items"
+          "notes": "Up to 100 points of magic items",
+          "description": "Magic items"
         }
       ],
       "special_rules": [
@@ -699,22 +699,22 @@
       },
       "options": [
         {
-          "name": "Mount (see character mounts)",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts section"
+          "notes": "See character mounts section",
+          "description": "Mount (see character mounts)"
         },
         {
-          "name": "Upgrade to Level 2 Wizard",
           "cost": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade to Level 2 Wizard"
         },
         {
-          "name": "Magic items",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Up to 50 points of magic items"
+          "notes": "Up to 50 points of magic items",
+          "description": "Magic items"
         }
       ],
       "special_rules": [
@@ -757,55 +757,55 @@
           "description": "May take one of the following weapons",
           "choices": [
             {
-              "name": "Additional hand weapon",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Additional hand weapon"
             },
             {
-              "name": "Flail",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Flail"
             },
             {
-              "name": "Great weapon",
               "cost": 4,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Great weapon"
             },
             {
-              "name": "Halberd",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Halberd"
             },
             {
-              "name": "Cavalry spear (if appropriately mounted)",
               "cost": 2,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "description": "Cavalry spear (if appropriately mounted)"
             }
           ]
         },
         {
-          "name": "Shield",
           "cost": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Shield"
         },
         {
-          "name": "Mount (see character mounts)",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts section"
+          "notes": "See character mounts section",
+          "description": "Mount (see character mounts)"
         },
         {
-          "name": "Magic items",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 75,
-          "notes": "Up to 75 points of magic items"
+          "notes": "Up to 75 points of magic items",
+          "description": "Magic items"
         },
         {
-          "name": "Upgrade to Battle Standard Bearer",
           "cost": 25,
           "scope": "per_unit",
-          "notes": "A single Royal Herald only. Gains Banner of the King rule. May purchase a single magic standard with no points limit."
+          "notes": "A single Royal Herald only. Gains Banner of the King rule. May purchase a single magic standard with no points limit.",
+          "description": "Upgrade to Battle Standard Bearer"
         }
       ],
       "special_rules": [
@@ -892,11 +892,11 @@
       ],
       "options": [
         {
-          "name": "Magic items",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Up to 50 points of magic items"
+          "notes": "Up to 50 points of magic items",
+          "description": "Magic items"
         }
       ],
       "special_rules": [
@@ -1061,20 +1061,20 @@
       ],
       "options": [
         {
-          "name": "Add up to two additional Tomb Guard Crew",
           "cost": 10,
           "scope": "per_unit",
-          "notes": "+10 points each"
+          "notes": "+10 points each",
+          "description": "Add up to two additional Tomb Guard Crew"
         },
         {
-          "name": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First)",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First)"
         },
         {
-          "name": "Fiery roar (N/A, S4, AP -1; Breath Weapon, Flaming Attacks)",
           "cost": 20,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Fiery roar (N/A, S4, AP -1; Breath Weapon, Flaming Attacks)"
         }
       ],
       "special_rules": [
@@ -1287,11 +1287,11 @@
       ],
       "options": [
         {
-          "name": "Magic items",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 75,
-          "notes": "Up to 75 points of magic items"
+          "notes": "Up to 75 points of magic items",
+          "description": "Magic items"
         }
       ],
       "special_rules": [
@@ -1348,52 +1348,52 @@
       ],
       "options": [
         {
-          "name": "Entire unit takes halberds",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "description": "Entire unit takes halberds"
         },
         {
-          "name": "Upgrade one model to Tomb Captain (champion)",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Tomb Captain (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         },
         {
-          "name": "Purchase a magic standard worth up to",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Requires standard bearer"
+          "notes": "Requires standard bearer",
+          "description": "Purchase a magic standard worth up to"
         },
         {
-          "name": "Tomb Captain may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "description": "Tomb Captain may purchase magic items up to a total of"
         },
         {
           "description": "0-1 unit per 1,000 points may (costs per model):",
           "choices": [
             {
-              "name": "Have the Drilled special rule",
               "cost": 1,
               "scope": "per_model",
-              "condition": "0-1 unit per 1,000 points"
+              "condition": "0-1 unit per 1,000 points",
+              "description": "Have the Drilled special rule"
             },
             {
-              "name": "Have the Nehekharan Phalanx special rule",
               "cost": 1,
               "scope": "per_model",
-              "condition": "0-1 unit per 1,000 points"
+              "condition": "0-1 unit per 1,000 points",
+              "description": "Have the Nehekharan Phalanx special rule"
             }
           ]
         }
@@ -1465,53 +1465,53 @@
           "description": "The entire unit may take:",
           "choices": [
             {
-              "name": "Thrusting spears",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "description": "Thrusting spears"
             },
             {
-              "name": "Light armour",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "description": "Light armour"
             }
           ]
         },
         {
-          "name": "Upgrade one model to Master of Arms (champion)",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Master of Arms (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         },
         {
-          "name": "Master of Arms may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "description": "Master of Arms may purchase magic items up to a total of"
         },
         {
           "description": "0-1 unit per 1,000 points may:",
           "choices": [
             {
-              "name": "Have the Nehekharan Phalanx special rule",
               "cost": 10,
               "scope": "per_unit",
-              "condition": "0-1 unit per 1,000 points"
+              "condition": "0-1 unit per 1,000 points",
+              "description": "Have the Nehekharan Phalanx special rule"
             },
             {
-              "name": "Purchase a magic standard worth up to",
               "cost": 0,
               "scope": "per_unit",
               "max_points": 50,
-              "condition": "0-1 unit per 1,000 points, requires standard bearer"
+              "condition": "0-1 unit per 1,000 points, requires standard bearer",
+              "description": "Purchase a magic standard worth up to"
             }
           ]
         }
@@ -1577,24 +1577,24 @@
       ],
       "options": [
         {
-          "name": "Entire unit may take light armour",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "description": "Entire unit may take light armour"
         },
         {
-          "name": "Upgrade one model to Master of Arrows (champion)",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Master of Arrows (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         }
       ],
       "command": [
@@ -1649,22 +1649,22 @@
           "description": "The entire unit may take one of the following:",
           "choices": [
             {
-              "name": "Warbows",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "description": "Warbows"
             },
             {
-              "name": "Shields",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "description": "Shields"
             }
           ]
         },
         {
-          "name": "0-1 unit in your army may have the Ambushers special rule",
           "cost": 1,
           "scope": "per_model",
-          "notes": "0-1 unit in the army"
+          "notes": "0-1 unit in the army",
+          "description": "0-1 unit in your army may have the Ambushers special rule"
         }
       ],
       "special_rules": [
@@ -1704,15 +1704,15 @@
       ],
       "options": [
         {
-          "name": "Entire unit may replace ritual blades with greatbows (30\", S6, AP -1; Armour Bane (2), Multiple Wounds (2), Volley Fire)",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "Free exchange"
+          "notes": "Free exchange",
+          "description": "Entire unit may replace ritual blades with greatbows (30\", S6, AP -1; Armour Bane (2), Multiple Wounds (2), Volley Fire)"
         },
         {
-          "name": "Upgrade one model to Ancient (champion)",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Ancient (champion)"
         }
       ],
       "command": [
@@ -1757,9 +1757,9 @@
       ],
       "options": [
         {
-          "name": "Any unit may have the Ambushers special rule",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "description": "Any unit may have the Ambushers special rule"
         }
       ],
       "special_rules": [
@@ -1843,53 +1843,53 @@
           "description": "The entire unit may take:",
           "choices": [
             {
-              "name": "Cavalry spears",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "description": "Cavalry spears"
             },
             {
-              "name": "Light armour",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "description": "Light armour"
             }
           ]
         },
         {
-          "name": "Upgrade one model to Master of Horse (champion)",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Master of Horse (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         },
         {
-          "name": "Master of Horse may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "description": "Master of Horse may purchase magic items up to a total of"
         },
         {
           "description": "0-1 unit per 1,000 points may:",
           "choices": [
             {
-              "name": "Have the Counter Charge special rule",
               "cost": 1,
               "scope": "per_model",
-              "condition": "0-1 unit per 1,000 points"
+              "condition": "0-1 unit per 1,000 points",
+              "description": "Have the Counter Charge special rule"
             },
             {
-              "name": "Purchase a magic standard worth up to",
               "cost": 0,
               "scope": "per_unit",
               "max_points": 50,
-              "condition": "0-1 unit per 1,000 points, requires standard bearer"
+              "condition": "0-1 unit per 1,000 points, requires standard bearer",
+              "description": "Purchase a magic standard worth up to"
             }
           ]
         }
@@ -1959,29 +1959,29 @@
       ],
       "options": [
         {
-          "name": "Entire unit may take light armour",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "description": "Entire unit may take light armour"
         },
         {
-          "name": "Upgrade one model to Master of Horse (champion)",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Master of Horse (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         },
         {
-          "name": "Have the Chariot Runners special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "description": "Have the Chariot Runners special rule"
         }
       ],
       "command": [
@@ -2040,37 +2040,37 @@
       ],
       "options": [
         {
-          "name": "Upgrade one model to Necropolis Captain (champion)",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Necropolis Captain (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         },
         {
-          "name": "Purchase a magic standard worth up to",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Requires standard bearer"
+          "notes": "Requires standard bearer",
+          "description": "Purchase a magic standard worth up to"
         },
         {
-          "name": "Necropolis Captain may take a great weapon",
           "cost": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Necropolis Captain may take a great weapon"
         },
         {
-          "name": "Necropolis Captain may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "description": "Necropolis Captain may purchase magic items up to a total of"
         }
       ],
       "command": [
@@ -2158,10 +2158,10 @@
       ],
       "options": [
         {
-          "name": "0-1 unit in your army may have the Ambushers special rule",
           "cost": 2,
           "scope": "per_model",
-          "notes": "0-1 unit in the army"
+          "notes": "0-1 unit in the army",
+          "description": "0-1 unit in your army may have the Ambushers special rule"
         }
       ],
       "special_rules": [
@@ -2211,32 +2211,32 @@
       ],
       "options": [
         {
-          "name": "Upgrade one model to include a Master Charioteer (champion)",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to include a Master Charioteer (champion)"
         },
         {
-          "name": "Upgrade one model to include a standard bearer",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to include a standard bearer"
         },
         {
-          "name": "Upgrade one model to include a musician",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to include a musician"
         },
         {
-          "name": "Purchase a magic standard worth up to",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Requires standard bearer"
+          "notes": "Requires standard bearer",
+          "description": "Purchase a magic standard worth up to"
         },
         {
-          "name": "Master Charioteer may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "description": "Master Charioteer may purchase magic items up to a total of"
         }
       ],
       "command": [
@@ -2309,20 +2309,20 @@
       ],
       "options": [
         {
-          "name": "May add up to two additional Tomb Guard Crew",
           "cost": 10,
           "scope": "per_unit",
-          "notes": "+10 points each"
+          "notes": "+10 points each",
+          "description": "May add up to two additional Tomb Guard Crew"
         },
         {
-          "name": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First; one attack per turn)",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First; one attack per turn)"
         },
         {
-          "name": "Fiery roar (N/A, S4, AP -1; Breath Weapon, Flaming Attacks)",
           "cost": 20,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Fiery roar (N/A, S4, AP -1; Breath Weapon, Flaming Attacks)"
         }
       ],
       "special_rules": [
@@ -2384,9 +2384,9 @@
       ],
       "options": [
         {
-          "name": "May have the Ambushers special rule",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "May have the Ambushers special rule"
         }
       ],
       "special_rules": [
@@ -2505,9 +2505,9 @@
       ],
       "options": [
         {
-          "name": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First; one attack per turn)",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First; one attack per turn)"
         }
       ],
       "special_rules": [
@@ -2553,9 +2553,9 @@
       ],
       "options": [
         {
-          "name": "May have the Skulls of the Foe special rule",
           "cost": 20,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "May have the Skulls of the Foe special rule"
         }
       ],
       "special_rules": [
@@ -2673,37 +2673,37 @@
       ],
       "options": [
         {
-          "name": "Upgrade one model to Master of Arms (champion)",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Master of Arms (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         },
         {
-          "name": "Take a magic standard worth up to",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Requires standard bearer"
+          "notes": "Requires standard bearer",
+          "description": "Take a magic standard worth up to"
         },
         {
-          "name": "Have the Nehekharan Phalanx special rule",
           "cost": 10,
-          "scope": "per_model"
+          "scope": "per_model",
+          "description": "Have the Nehekharan Phalanx special rule"
         },
         {
-          "name": "Master of Arms may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 30
+          "max_points": 30,
+          "description": "Master of Arms may purchase magic items up to a total of"
         }
       ],
       "command": [
@@ -2776,9 +2776,9 @@
       ],
       "options": [
         {
-          "name": "Upgrade one model to Venerable Ancient (champion)",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Venerable Ancient (champion)"
         }
       ],
       "command": [
@@ -2829,37 +2829,37 @@
       ],
       "options": [
         {
-          "name": "Upgrade one model to Master of Horse (champion)",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to Master of Horse (champion)"
         },
         {
-          "name": "Upgrade one model to standard bearer",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to standard bearer"
         },
         {
-          "name": "Upgrade one model to musician",
           "cost": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to musician"
         },
         {
-          "name": "Take a magic standard worth up to",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Requires standard bearer"
+          "notes": "Requires standard bearer",
+          "description": "Take a magic standard worth up to"
         },
         {
-          "name": "Have the Counter Charge special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "description": "Have the Counter Charge special rule"
         },
         {
-          "name": "Master of Horse may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 30
+          "max_points": 30,
+          "description": "Master of Horse may purchase magic items up to a total of"
         }
       ],
       "command": [
@@ -2973,32 +2973,32 @@
       ],
       "options": [
         {
-          "name": "Upgrade one model to include a Tomb Captain (champion)",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to include a Tomb Captain (champion)"
         },
         {
-          "name": "Upgrade one model to include a standard bearer",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to include a standard bearer"
         },
         {
-          "name": "Upgrade one model to include a musician",
           "cost": 7,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "description": "Upgrade one model to include a musician"
         },
         {
-          "name": "Purchase a magic standard worth up to",
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "Requires standard bearer"
+          "notes": "Requires standard bearer",
+          "description": "Purchase a magic standard worth up to"
         },
         {
-          "name": "Tomb Captain may purchase magic items up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "description": "Tomb Captain may purchase magic items up to a total of"
         }
       ],
       "command": [
@@ -3337,7 +3337,7 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "description": "A magical brew that fills the drinker with courage\u2026 it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
     },
     {
       "id": "potion-of-speed",
@@ -3493,7 +3493,7 @@
       "name": "Feedback Scroll",
       "points": 60,
       "category": "arcane_item",
-      "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "description": "When read aloud, this charm causes \u00e6theric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
     {
@@ -3614,7 +3614,7 @@
       "source": "arcane_journal",
       "type": "arcane_item",
       "points": 20,
-      "description": "Extremely Common. A Wizard may purchase up to three Tablets of Tahoth, each of which is single use. Before making a Casting roll, a Wizard may choose to use any number of their Tablets. For each Tablet used, you may apply a +1 modifier to the result of the Casting roll. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+      "description": "Extremely Common. A Wizard may purchase up to three Tablets of Tahoth, each of which is single use. Before making a Casting roll, a Wizard may choose to use any number of their Tablets. For each Tablet used, you may apply a +1 modifier to the result of the Casting roll. Note that this is a modifier to the result of a roll \u2014 it does not negate a roll of a natural double 1."
     },
     {
       "id": "collar_of_shapesh",
