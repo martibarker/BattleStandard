@@ -590,33 +590,80 @@ function WeaponProfileTable({ profiles }: { profiles: WeaponProfile[] }) {
 
 
 function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
+  const [activeRule, setActiveRule] = useState<{ name: string; url: string } | null>(null);
   if (!ruleIds || ruleIds.length === 0) return null;
   const rulesData = (specialRulesData as { rules: { id: string; name: string }[] }).rules;
   return (
-    <div className="flex flex-wrap gap-1 mt-1.5">
-      {ruleIds.map((id) => {
-        const rule = rulesData.find((r) => r.id === id);
-        const name = rule?.name ?? formatRuleName(id);
-        const url = `https://tow.whfb.app/special-rules/${id.replace(/_/g, '-')}`;
-        return (
-          <a
-            key={id}
-            href={url}
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs px-1.5 py-0.5 rounded"
-            style={{
-              backgroundColor: 'var(--color-bg-dark)',
-              color: 'var(--color-accent-blue)',
-              border: '1px solid var(--color-border)',
-              textDecoration: 'none',
-            }}
+    <>
+      <div className="flex flex-wrap gap-1 mt-1.5">
+        {ruleIds.map((id) => {
+          const rule = rulesData.find((r) => r.id === id);
+          const name = rule?.name ?? formatRuleName(id);
+          const url = `https://tow.whfb.app/special-rules/${id.replace(/_/g, '-')}`;
+          return (
+            <button
+              key={id}
+              onClick={() => setActiveRule({ name, url })}
+              className="text-xs px-1.5 py-0.5 rounded"
+              style={{
+                backgroundColor: 'var(--color-bg-dark)',
+                color: 'var(--color-accent-blue)',
+                border: '1px solid var(--color-border)',
+                cursor: 'pointer',
+              }}
+            >
+              {name}
+            </button>
+          );
+        })}
+      </div>
+
+      {activeRule && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}
+          onClick={() => setActiveRule(null)}
+        >
+          <div
+            className="flex flex-col rounded-lg overflow-hidden w-full max-w-2xl shadow-2xl"
+            style={{ height: '80vh', backgroundColor: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)' }}
+            onClick={(e) => e.stopPropagation()}
           >
-            {name}
-          </a>
-        );
-      })}
-    </div>
+            <div
+              className="flex items-center justify-between px-4 py-2 shrink-0 border-b"
+              style={{ borderColor: 'var(--color-border)' }}
+            >
+              <span className="text-sm font-semibold" style={{ color: 'var(--color-text-primary)' }}>
+                {activeRule.name}
+              </span>
+              <div className="flex items-center gap-3">
+                <a
+                  href={activeRule.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs"
+                  style={{ color: 'var(--color-text-secondary)' }}
+                >
+                  Open in browser ↗
+                </a>
+                <button
+                  onClick={() => setActiveRule(null)}
+                  className="text-sm font-bold px-2 py-0.5 rounded"
+                  style={{ color: 'var(--color-text-primary)', backgroundColor: 'var(--color-bg-dark)' }}
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+            <iframe
+              src={activeRule.url}
+              className="flex-1 w-full border-0"
+              title={activeRule.name}
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
