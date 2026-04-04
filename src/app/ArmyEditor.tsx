@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
 import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
-import type { Faction, Unit, WeaponProfile, OptionChoice } from '../types/faction';
+import type { Faction, Unit, WeaponProfile, Option, OptionChoice } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
 
@@ -737,8 +737,20 @@ function EntryOptionsPanel({
   );
 
   const command = unit.command ?? [];
-  const hasCommand = command.length > 0;
-  const hasEquipmentSection = regularOptions.length > 0 || scaledOptions.length > 0 || hasCommand;
+
+  // Group regular options by category; uncategorised options fall into 'special'
+  const weaponOptions = regularOptions.filter((o) => o.category === 'weapon');
+  const armourOptions = regularOptions.filter((o) => o.category === 'armour');
+  const specialOptions = regularOptions.filter((o) => !o.category || o.category === 'special');
+
+  // Group choice groups by category
+  const weaponChoiceGroups = choiceGroups.filter((o) => o.category === 'weapon');
+  const armourChoiceGroups = choiceGroups.filter((o) => o.category === 'armour');
+  const specialChoiceGroups = choiceGroups.filter((o) => !o.category || o.category === 'special');
+
+  const hasWeapons = weaponOptions.length > 0 || weaponChoiceGroups.length > 0;
+  const hasArmour = armourOptions.length > 0 || armourChoiceGroups.length > 0;
+  const hasSpecial = specialOptions.length > 0 || scaledOptions.length > 0 || specialChoiceGroups.length > 0;
 
   function toggleOption(desc: string, checked: boolean) {
     const next = checked
@@ -789,200 +801,84 @@ function EntryOptionsPanel({
   return (
     <div className="mt-1.5 pt-2 flex flex-col gap-2.5 border-t" style={{ borderColor: 'var(--color-border)' }}>
 
-      {/* Equipment / command / weapon toggles */}
-      {hasEquipmentSection && (
-        <div className="flex flex-col gap-1.5">
-          <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Equipment &amp; Command</p>
-          <div className="flex flex-col gap-1">
-            {/* Command upgrades */}
-            {command.map((cmd) => {
-              const checked = cmd.role === 'champion' ? entry.includeChampion
-                : cmd.role === 'standard_bearer' ? entry.includeStandard
-                : entry.includeMusician;
-              const label = cmd.role === 'champion' ? (cmd.name ?? 'Champion')
-                : cmd.role === 'standard_bearer' ? 'Standard Bearer'
-                : (cmd.name ?? 'Musician');
-              const onChange = (v: boolean) => {
-                if (cmd.role === 'champion') updateEntry(armyId, entry.id, { includeChampion: v });
-                else if (cmd.role === 'standard_bearer') updateEntry(armyId, entry.id, { includeStandard: v });
-                else updateEntry(armyId, entry.id, { includeMusician: v });
-              };
-              return (
-                <label key={cmd.role} className="flex items-center gap-2 cursor-pointer">
-                  <span
-                    className="shrink-0 w-4 h-4 rounded border flex items-center justify-center text-xs"
-                    style={{
-                      borderColor: checked ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                      backgroundColor: checked ? 'var(--color-accent-blue)' : 'transparent',
-                      color: '#0f1117',
-                    }}
-                  >
-                    {checked ? '✓' : ''}
-                  </span>
-                  <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="sr-only" />
-                  <span className="text-xs" style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                    {label} — +{cmd.cost_per_unit} pts
-                  </span>
-                </label>
-              );
-            })}
-
-            {/* Regular options */}
-            {regularOptions.map((opt) => {
-              const totalCost = opt.scope === 'per_model' && perModel ? opt.cost * entry.quantity : opt.cost;
-              const isChecked = entry.selectedOptions.includes(opt.description);
-              const weaponProfile = unit.weapon_profiles?.find(
-                (wp) => wp.name.toLowerCase() === opt.description.toLowerCase() ||
-                       opt.description.toLowerCase().startsWith(wp.name.toLowerCase())
-              );
-              return (
-                <label key={opt.description} className="flex items-start gap-2 cursor-pointer">
-                  <span
-                    className="shrink-0 w-4 h-4 mt-0.5 rounded border flex items-center justify-center text-xs"
-                    style={{
-                      borderColor: isChecked ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                      backgroundColor: isChecked ? 'var(--color-accent-blue)' : 'transparent',
-                      color: '#0f1117',
-                    }}
-                  >
-                    {isChecked ? '✓' : ''}
-                  </span>
-                  <input type="checkbox" checked={isChecked} onChange={(e) => toggleOption(opt.description, e.target.checked)} className="sr-only" />
-                  <span className="flex flex-col min-w-0 gap-0.5">
-                    <span className="text-xs leading-snug" style={{ color: isChecked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                      {opt.description}{opt.cost > 0 ? ` — +${totalCost} pts` : ''}
-                    </span>
-                    {isChecked && weaponProfile && (
-                      <div className="mt-0.5 overflow-x-auto">
-                        <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
-                          <thead>
-                            <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
-                              <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Rng</th>
-                              <th className="text-center pr-2 pb-0.5 font-medium">S</th>
-                              <th className="text-center pr-2 pb-0.5 font-medium">AP</th>
-                              <th className="text-left pb-0.5 font-medium">Special</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{weaponProfile.range}</td>
-                              <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{weaponProfile.S}</td>
-                              <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{weaponProfile.AP}</td>
-                              <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{weaponProfile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    )}
-                    {opt.condition && (
-                      <span className="text-xs italic" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{opt.condition}</span>
-                    )}
-                  </span>
-                </label>
-              );
-            })}
-
-            {/* Scaled options (per_n_models, e.g. Fanatics) */}
-            {scaledOptions.map((opt) => {
-              const maxAllowed = Math.min(
-                Math.floor(entry.quantity / opt.per_n_models!),
-                opt.max_count ?? 99
-              );
-              const qty = entry.optionQuantities?.[opt.description] ?? 0;
-              const totalCost = opt.cost * qty;
-              function setQty(next: number) {
-                updateEntry(armyId, entry.id, {
-                  optionQuantities: { ...(entry.optionQuantities ?? {}), [opt.description]: next },
-                });
-              }
-              return (
-                <div key={opt.description} className="flex flex-col gap-0.5">
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => setQty(Math.max(0, qty - 1))}
-                      disabled={qty <= 0}
-                      className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30"
-                      style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}
-                    >−</button>
-                    <span className="text-sm font-semibold w-4 text-center" style={{ color: 'var(--color-text-primary)' }}>{qty}</span>
-                    <button
-                      onClick={() => setQty(Math.min(maxAllowed, qty + 1))}
-                      disabled={qty >= maxAllowed}
-                      className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30"
-                      style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}
-                    >+</button>
-                    <span className="text-xs" style={{ color: qty > 0 ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                      {opt.description}{totalCost > 0 ? ` — +${totalCost} pts` : ''}
-                    </span>
-                    <span className="text-xs ml-auto" style={{ color: 'var(--color-text-secondary)' }}>max {maxAllowed}</span>
-                  </div>
-                  {opt.notes && (
-                    <span className="text-xs italic ml-8" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{opt.notes}</span>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
+      {/* Command */}
+      {command.length > 0 && (
+        <OptionsSection label="Command">
+          {command.map((cmd) => {
+            const checked = cmd.role === 'champion' ? entry.includeChampion
+              : cmd.role === 'standard_bearer' ? entry.includeStandard
+              : entry.includeMusician;
+            const label = cmd.role === 'champion' ? (cmd.name ?? 'Champion')
+              : cmd.role === 'standard_bearer' ? 'Standard Bearer'
+              : (cmd.name ?? 'Musician');
+            const onChange = (v: boolean) => {
+              if (cmd.role === 'champion') updateEntry(armyId, entry.id, { includeChampion: v });
+              else if (cmd.role === 'standard_bearer') updateEntry(armyId, entry.id, { includeStandard: v });
+              else updateEntry(armyId, entry.id, { includeMusician: v });
+            };
+            return <OptionCheckbox key={cmd.role} label={`${label} — +${cmd.cost_per_unit} pts`} checked={checked} onChange={onChange} />;
+          })}
+        </OptionsSection>
       )}
 
-      {/* Choice groups (OR selections) */}
-      {choiceGroups.length > 0 && (
-        <>
-          {regularOptions.length > 0 && divider}
-          <div className="flex flex-col gap-2.5">
-            {choiceGroups.map((group) => {
-              const choices = group.choices!;
-              const allDescs = choices.map((c) => c.description);
-              const selected = entry.selectedOptions.find((d) => allDescs.includes(d)) ?? null;
-              return (
-                <div key={group.description} className="flex flex-col gap-1.5">
-                  <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>
-                    {group.description}
-                  </p>
-                  <div className="flex flex-col gap-1">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <span
-                        className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
-                        style={{
-                          borderColor: !selected ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                          backgroundColor: !selected ? 'var(--color-accent-blue)' : 'transparent',
-                        }}
-                      >
-                        {!selected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
-                      </span>
-                      <input type="radio" name={`choice-${entry.id}-${group.description}`} checked={!selected} onChange={() => selectChoice(choices, null)} className="sr-only" />
-                      <span className="text-xs" style={{ color: !selected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                        None
-                      </span>
-                    </label>
-                    {choices.map((choice) => {
-                      const isActive = selected === choice.description;
-                      const totalCost = choice.scope === 'per_model' && perModel ? choice.cost * entry.quantity : choice.cost;
-                      return (
-                        <label key={choice.description} className="flex items-center gap-2 cursor-pointer">
-                          <span
-                            className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
-                            style={{
-                              borderColor: isActive ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                              backgroundColor: isActive ? 'var(--color-accent-blue)' : 'transparent',
-                            }}
-                          >
-                            {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
-                          </span>
-                          <input type="radio" name={`choice-${entry.id}-${group.description}`} checked={isActive} onChange={() => selectChoice(choices, choice.description)} className="sr-only" />
-                          <span className="text-xs" style={{ color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                            {choice.description}{choice.cost > 0 ? ` — +${totalCost} pts` : ''}
-                          </span>
-                        </label>
-                      );
-                    })}
-                  </div>
+      {/* Weapons */}
+      {hasWeapons && (
+        <OptionsSection label="Weapons">
+          {weaponOptions.map((opt) => (
+            <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
+          ))}
+          {weaponChoiceGroups.map((group) => (
+            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} armyId={armyId} />
+          ))}
+        </OptionsSection>
+      )}
+
+      {/* Armour & Shields */}
+      {hasArmour && (
+        <OptionsSection label="Armour &amp; Shields">
+          {armourOptions.map((opt) => (
+            <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
+          ))}
+          {armourChoiceGroups.map((group) => (
+            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} armyId={armyId} />
+          ))}
+        </OptionsSection>
+      )}
+
+      {/* Special Upgrades */}
+      {hasSpecial && (
+        <OptionsSection label="Special Upgrades">
+          {specialOptions.map((opt) => (
+            <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
+          ))}
+          {scaledOptions.map((opt) => {
+            const maxAllowed = Math.min(Math.floor(entry.quantity / opt.per_n_models!), opt.max_count ?? 99);
+            const qty = entry.optionQuantities?.[opt.description] ?? 0;
+            const totalCost = opt.cost * qty;
+            function setQty(next: number) {
+              updateEntry(armyId, entry.id, {
+                optionQuantities: { ...(entry.optionQuantities ?? {}), [opt.description]: next },
+              });
+            }
+            return (
+              <div key={opt.description} className="flex flex-col gap-0.5">
+                <div className="flex items-center gap-2">
+                  <button onClick={() => setQty(Math.max(0, qty - 1))} disabled={qty <= 0} className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}>−</button>
+                  <span className="text-sm font-semibold w-4 text-center" style={{ color: 'var(--color-text-primary)' }}>{qty}</span>
+                  <button onClick={() => setQty(Math.min(maxAllowed, qty + 1))} disabled={qty >= maxAllowed} className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}>+</button>
+                  <span className="text-xs" style={{ color: qty > 0 ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                    {opt.description}{totalCost > 0 ? ` — +${totalCost} pts` : ''}
+                  </span>
+                  <span className="text-xs ml-auto" style={{ color: 'var(--color-text-secondary)' }}>max {maxAllowed}</span>
                 </div>
-              );
-            })}
-          </div>
-        </>
+                {opt.notes && <span className="text-xs italic ml-8" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{opt.notes}</span>}
+              </div>
+            );
+          })}
+          {specialChoiceGroups.map((group) => (
+            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} armyId={armyId} />
+          ))}
+        </OptionsSection>
       )}
 
       {/* Vow */}
@@ -1273,7 +1169,7 @@ function EntryOptionsPanel({
         </>
       )}
 
-      {/* Magic standard (units with standard bearer) */}
+      {/* Magic Standard (units with standard bearer) */}
       {hasMagicStandardSlot && (
         <>
           {divider}
@@ -1348,6 +1244,133 @@ function EntryOptionsPanel({
           </div>
         </>
       )}
+    </div>
+  );
+}
+
+function OptionsSection({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="flex flex-col gap-1.5">
+      <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>{label}</p>
+      <div className="flex flex-col gap-1">{children}</div>
+    </div>
+  );
+}
+
+function OptionCheckbox({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
+  return (
+    <label className="flex items-center gap-2 cursor-pointer">
+      <span
+        className="shrink-0 w-4 h-4 rounded border flex items-center justify-center text-xs"
+        style={{
+          borderColor: checked ? 'var(--color-accent-amber)' : 'var(--color-border)',
+          backgroundColor: checked ? 'var(--color-accent-amber)' : 'transparent',
+          color: '#0f1117',
+        }}
+      >
+        {checked ? '✓' : ''}
+      </span>
+      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="sr-only" />
+      <span className="text-xs" style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+        {label}
+      </span>
+    </label>
+  );
+}
+
+function RegularOption({
+  opt,
+  entry,
+  perModel,
+  toggleOption,
+}: {
+  opt: Option;
+  entry: ArmyEntry;
+  perModel: boolean;
+  toggleOption: (desc: string, checked: boolean) => void;
+}) {
+  const checked = entry.selectedOptions.includes(opt.description);
+  const multiplier = opt.scope === 'per_model' && perModel ? entry.quantity : 1;
+  const costPart = opt.cost > 0 ? ` — +${opt.cost * multiplier} pts${opt.scope === 'per_model' ? '/model' : ''}` : '';
+  return (
+    <div className="flex flex-col gap-0.5">
+      <label className="flex items-center gap-2 cursor-pointer">
+        <span
+          className="shrink-0 w-4 h-4 rounded border flex items-center justify-center text-xs"
+          style={{
+            borderColor: checked ? 'var(--color-accent-amber)' : 'var(--color-border)',
+            backgroundColor: checked ? 'var(--color-accent-amber)' : 'transparent',
+            color: '#0f1117',
+          }}
+        >
+          {checked ? '✓' : ''}
+        </span>
+        <input type="checkbox" checked={checked} onChange={(e) => toggleOption(opt.description, e.target.checked)} className="sr-only" />
+        <span className="text-xs" style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+          {opt.description}{costPart}
+        </span>
+      </label>
+      {opt.replaces && (
+        <span className="text-xs italic ml-6" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+          Replaces: {opt.replaces}
+        </span>
+      )}
+      {opt.notes && (
+        <span className="text-xs italic ml-6" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+          {opt.notes}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function ChoiceGroup(props: {
+  group: Option;
+  entry: ArmyEntry;
+  perModel: boolean;
+  selectChoice: (choices: OptionChoice[], choiceDesc: string | null) => void;
+  armyId: string;
+}) {
+  const { group, entry, perModel, selectChoice } = props;
+  const choices = group.choices!;
+  const selectedDesc = choices.find((c) => entry.selectedOptions.includes(c.description))?.description ?? null;
+  return (
+    <div className="flex flex-col gap-0.5">
+      {group.description && (
+        <p className="text-xs font-medium" style={{ color: 'var(--color-text-secondary)' }}>{group.description}</p>
+      )}
+      {choices.map((choice) => {
+        const isActive = selectedDesc === choice.description;
+        const multiplier = choice.scope === 'per_model' && perModel ? entry.quantity : 1;
+        const costPart = choice.cost > 0 ? ` — +${choice.cost * multiplier} pts${choice.scope === 'per_model' ? '/model' : ''}` : '';
+        return (
+          <label key={choice.description} className="flex items-center gap-2 cursor-pointer ml-2">
+            <span
+              className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
+              style={{
+                borderColor: isActive ? 'var(--color-accent-blue)' : 'var(--color-border)',
+                backgroundColor: isActive ? 'var(--color-accent-blue)' : 'transparent',
+              }}
+            >
+              {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+            </span>
+            <input
+              type="radio"
+              checked={isActive}
+              onChange={() => selectChoice(choices, choice.description)}
+              className="sr-only"
+            />
+            <span className="text-xs" style={{ color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+              {choice.description}{costPart}
+            </span>
+            {choice.notes && (
+              <span className="text-xs italic ml-6" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                {choice.notes}
+              </span>
+            )}
+          </label>
+        );
+      })}
     </div>
   );
 }
