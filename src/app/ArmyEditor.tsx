@@ -431,12 +431,15 @@ export default function ArmyEditor() {
                       <StatBar unit={unit} save={entrySave} />
 
                       {unit.weapon_profiles && unit.weapon_profiles.length > 0 && (() => {
-                        // Only display weapon_profiles that match base equipment
-                        const equipmentLower = (unit.equipment ?? []).map(e => e.toLowerCase());
-                        const baseWeaponProfiles = unit.weapon_profiles.filter(wp =>
-                          equipmentLower.some(eq => eq.includes(wp.name.toLowerCase()))
+                        // Show profiles matching base equipment OR currently selected weapon options
+                        const equipped = [
+                          ...(unit.equipment ?? []),
+                          ...entry.selectedOptions,
+                        ].map(e => e.toLowerCase());
+                        const relevantProfiles = unit.weapon_profiles.filter(wp =>
+                          equipped.some(eq => eq.includes(wp.name.toLowerCase()))
                         );
-                        return baseWeaponProfiles.length > 0 ? <WeaponProfileTable profiles={baseWeaponProfiles} /> : null;
+                        return relevantProfiles.length > 0 ? <WeaponProfileTable profiles={relevantProfiles} /> : null;
                       })()}
 
                       <SpecialRulesList ruleIds={unit.special_rules} />
