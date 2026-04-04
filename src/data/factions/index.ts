@@ -1,4 +1,4 @@
-import type { Faction, Option, OptionScope } from '../../types/faction';
+import type { Faction, Option, OptionChoice, OptionScope } from '../../types/faction';
 
 // Raw JSON imports
 import bretonniaRaw from './kingdom-of-bretonnia.json';
@@ -29,24 +29,30 @@ function normalizeOptions(options: unknown[] | undefined): Option[] {
     const opt = raw as Record<string, unknown>;
 
     if (Array.isArray(opt.choices)) {
-      // Mutually-exclusive group: flatten each choice as its own option
-      const groupLabel = (opt.description ?? opt.name ?? '') as string;
-      for (const choice of opt.choices as Record<string, unknown>[]) {
-        result.push({
-          description: (choice.name ?? choice.description ?? '') as string,
-          cost: (choice.cost ?? 0) as number,
-          scope: (choice.scope ?? 'per_unit') as OptionScope,
-          condition: groupLabel || undefined,
-        });
-      }
+      // Mutually-exclusive group: preserve as a choice group with choices[]
+      const choices: OptionChoice[] = (opt.choices as Record<string, unknown>[]).map((c) => ({
+        description: (c.description ?? c.name ?? '') as string,
+        cost: (c.cost ?? 0) as number,
+        scope: (c.scope ?? 'per_unit') as OptionScope,
+        notes: c.notes as string | undefined,
+      }));
+      result.push({
+        description: (opt.description ?? opt.name ?? '') as string,
+        cost: 0,
+        scope: 'per_unit',
+        choices,
+      });
     } else {
       result.push({
         description: (opt.description ?? opt.name ?? '') as string,
         cost: (opt.cost ?? 0) as number,
         scope: (opt.scope ?? 'per_unit') as OptionScope,
-        condition: (opt.condition ?? opt.notes) as string | undefined,
+        condition: opt.condition as string | undefined,
+        notes: opt.notes as string | undefined,
         replaces: opt.replaces as string | undefined,
         max_points: opt.max_points as number | undefined,
+        max_count: opt.max_count as number | undefined,
+        per_n_models: opt.per_n_models as number | undefined,
       });
     }
   }
