@@ -762,9 +762,14 @@ function EntryOptionsPanel({
   const hasSpecial = specialOptions.length > 0 || scaledOptions.length > 0 || specialChoiceGroups.length > 0;
 
   function toggleOption(desc: string, checked: boolean) {
-    const next = checked
+    let next = checked
       ? [...entry.selectedOptions, desc]
       : entry.selectedOptions.filter((d) => d !== desc);
+    // If unchecking an option, also remove any options that depend on it as a condition
+    if (!checked) {
+      const dependents = options.filter((o) => o.condition === desc).map((o) => o.description);
+      if (dependents.length > 0) next = next.filter((d) => !dependents.includes(d));
+    }
     updateEntry(armyId, entry.id, { selectedOptions: next });
   }
 
@@ -1299,11 +1304,13 @@ function RegularOption({
   toggleOption: (desc: string, checked: boolean) => void;
 }) {
   const checked = entry.selectedOptions.includes(opt.description);
+  const conditionMet = !opt.condition || entry.selectedOptions.includes(opt.condition);
+  const isDisabled = !conditionMet;
   const multiplier = opt.scope === 'per_model' && perModel ? entry.quantity : 1;
   const costPart = opt.cost > 0 ? ` — +${opt.cost * multiplier} pts${opt.scope === 'per_model' ? '/model' : ''}` : '';
   return (
-    <div className="flex flex-col gap-0.5">
-      <label className="flex items-center gap-2 cursor-pointer">
+    <div className={`flex flex-col gap-0.5${isDisabled ? ' opacity-40' : ''}`}>
+      <label className={`flex items-center gap-2 ${isDisabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
         <span
           className="shrink-0 w-4 h-4 rounded border flex items-center justify-center text-xs"
           style={{
@@ -1314,7 +1321,13 @@ function RegularOption({
         >
           {checked ? '✓' : ''}
         </span>
-        <input type="checkbox" checked={checked} onChange={(e) => toggleOption(opt.description, e.target.checked)} className="sr-only" />
+        <input
+          type="checkbox"
+          checked={checked}
+          disabled={isDisabled}
+          onChange={(e) => !isDisabled && toggleOption(opt.description, e.target.checked)}
+          className="sr-only"
+        />
         <span className="text-xs" style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
           {opt.description}{costPart}
         </span>
