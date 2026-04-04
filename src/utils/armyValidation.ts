@@ -250,6 +250,58 @@ export function validateArmy(army: ArmyList, faction: Faction): ValidationIssue[
           }
         }
 
+        if (rule.limit_type === 'min_count') {
+          if (pts.total > 0 && unitCount < rule.limit_value) {
+            issues.push({
+              category: 'Unit requirement',
+              message: `${unitNames}: ${unitCount} units — must include at least ${rule.limit_value}`,
+              severity: 'error',
+            });
+          }
+        }
+
+        if (rule.limit_type === 'max_per_character') {
+          // Count qualifying characters (unlocking characters) in the army
+          const charIds = rule.character_unit_ids ?? [];
+          const charCount = army.entries.filter((e) => charIds.includes(e.unitId)).length;
+          const max = charCount * rule.limit_value;
+          if (unitCount > max) {
+            const charNames = charIds
+              .map((id) => faction.units.find((u) => u.id === id)?.name ?? id)
+              .filter((n, i, arr) => arr.indexOf(n) === i)
+              .join(' / ');
+            issues.push({
+              category: 'Unit limit',
+              message: `${unitNames}: ${unitCount} unit${unitCount !== 1 ? 's' : ''} — max ${rule.limit_value} per ${charNames} (${charCount} in army → max ${max})`,
+              severity: 'error',
+            });
+          }
+        }
+
+        if (rule.limit_type === 'conditional') {
+          // Warn if these units are present but qualifying general types are not in the army.
+          // The General is not explicitly tracked, so this is a player-facing advisory.
+          if (unitCount > 0 && rule.general_unit_ids?.length) {
+            const generalPresent = army.entries.some((e) => rule.general_unit_ids!.includes(e.unitId));
+            if (!generalPresent) {
+              const generalNames = (rule.general_unit_ids ?? [])
+                .map((id) => faction.units.find((u) => u.id === id)?.name ?? id)
+                .join(' or ');
+              issues.push({
+                category: 'General requirement',
+                message: `${unitNames}: requires General to be ${generalNames}`,
+                severity: 'warning',
+              });
+            } else if (unitCount > rule.limit_value) {
+              issues.push({
+                category: 'Unit limit',
+                message: `${unitNames}: ${unitCount} unit${unitCount !== 1 ? 's' : ''} — max ${rule.limit_value} under this condition`,
+                severity: 'error',
+              });
+            }
+          }
+        }
+
         continue; // unit_ids rules don't also do category % checks
       }
 

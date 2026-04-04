@@ -2,7 +2,7 @@
   "id": "orc-and-goblin-tribes",
   "name": "Orc & Goblin Tribes",
   "sources": [
-    "Warhammer: The Old World — Ravening Hordes (2024)",
+    "Warhammer: The Old World \u2014 Ravening Hordes (2024)",
     "Arcane Journal: Orc & Goblin Tribes (2024)"
   ],
   "army_compositions": [
@@ -41,7 +41,13 @@
           "unit_ids": [
             "night_goblin_mobs"
           ],
-          "notes": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken"
+          "notes": "0-1 Night Goblin Mobs per Night Goblin Chief or Night Goblin Shaman taken",
+          "character_unit_ids": [
+            "night_goblin_warboss",
+            "night_goblin_bigboss",
+            "night_goblin_oddnob",
+            "night_goblin_oddgit"
+          ]
         },
         {
           "category": "core",
@@ -50,7 +56,13 @@
           "unit_ids": [
             "night_goblin_squig_herds"
           ],
-          "notes": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken"
+          "notes": "0-1 Night Goblin Squig Herd per Night Goblin Chief or Night Goblin Shaman taken",
+          "character_unit_ids": [
+            "night_goblin_warboss",
+            "night_goblin_bigboss",
+            "night_goblin_oddnob",
+            "night_goblin_oddgit"
+          ]
         },
         {
           "category": "special",
@@ -75,7 +87,13 @@
           "unit_ids": [
             "night_goblin_squig_hopper_mobs"
           ],
-          "notes": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken"
+          "notes": "0-1 Night Goblin Squig Hopper Mob per Night Goblin Chief or Night Goblin Shaman taken",
+          "character_unit_ids": [
+            "night_goblin_warboss",
+            "night_goblin_bigboss",
+            "night_goblin_oddnob",
+            "night_goblin_oddgit"
+          ]
         },
         {
           "category": "special",
@@ -107,7 +125,13 @@
           "unit_ids": [
             "mangler_squigs"
           ],
-          "notes": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken"
+          "notes": "0-1 Mangler Squig per Night Goblin Chief or Night Goblin Shaman taken",
+          "character_unit_ids": [
+            "night_goblin_warboss",
+            "night_goblin_bigboss",
+            "night_goblin_oddnob",
+            "night_goblin_oddgit"
+          ]
         },
         {
           "category": "rare",
@@ -142,7 +166,7 @@
     },
     {
       "id": "nomadic_waaagh",
-      "name": "Orc & Goblin Tribes — Nomadic Waaagh!",
+      "name": "Orc & Goblin Tribes \u2014 Nomadic Waaagh!",
       "source": "arcane_journal",
       "special_abilities": [
         {
@@ -234,7 +258,7 @@
     },
     {
       "id": "troll_horde",
-      "name": "Orc & Goblin Tribes — Troll Horde",
+      "name": "Orc & Goblin Tribes \u2014 Troll Horde",
       "source": "arcane_journal",
       "special_abilities": [
         {
@@ -2326,7 +2350,7 @@
         }
       ],
       "notes": [
-        "Boss may purchase magic items up to 25 pts — not listed in RH but inferred by analogy; check source"
+        "Boss may purchase magic items up to 25 pts \u2014 not listed in RH but inferred by analogy; check source"
       ],
       "weapon_profiles": [
         {
@@ -3746,7 +3770,7 @@
           "name": "Venomous tail",
           "range": "Combat",
           "S": "S",
-          "AP": "—",
+          "AP": "\u2014",
           "special_rules": [
             "poisoned_attacks",
             "strike_first"
@@ -3837,7 +3861,7 @@
       "notes": [
         "Character mount: may be included as a character's mount (considered a chariot mount due to Howdah rule); points added to rider's total",
         "Venom surge: Combat, S, AP-2, Multiple Wounds (D6), Poisoned Attacks, Strike First; may choose to make one attack with this weapon each turn",
-        "Spidersilk lobber: 12-48\", S2(4), AP-(−1), Bombardment, Cumbersome; uses stone thrower rules; on Misfire this model loses 1 Wound instead of rolling on Misfire table"
+        "Spidersilk lobber: 12-48\", S2(4), AP-(\u22121), Bombardment, Cumbersome; uses stone thrower rules; on Misfire this model loses 1 Wound instead of rolling on Misfire table"
       ]
     },
     {
@@ -4853,9 +4877,9 @@
       "source": "ravening_hordes",
       "category": "talisman",
       "points": 35,
-      "effect": "If the bearer (and any unit they have joined) is the target of an enemy spell, they may use the Glowy Green Amulet instead of making a Wizardly dispel attempt. Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes — destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation.",
+      "effect": "If the bearer (and any unit they have joined) is the target of an enemy spell, they may use the Glowy Green Amulet instead of making a Wizardly dispel attempt. Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes \u2014 destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation.",
       "description": "If the bearer (and any unit they have joined) is the target of an enemy spell, they may use the Glowy Green Amulet instead of making a Wizardly dispel attempt.",
-      "rules_text": "Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes — destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation."
+      "rules_text": "Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes \u2014 destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation."
     },
     {
       "id": "icon-of-fortitude",
@@ -4881,7 +4905,7 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.",
+      "description": "A magical brew that fills the drinker with courage\u2026 it may actually just be strong liquor.",
       "single_use": true,
       "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
     },
@@ -5138,9 +5162,9 @@
       "source": "ravening_hordes",
       "category": "arcane_item",
       "points": 40,
-      "effect": "If bearer (or their unit) is the target of an enemy spell, may use the Glittering Wotnots instead of making a Wizardly dispel attempt. Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster — caster (and their unit) become the target; caster may make a Wizardly dispel attempt.",
+      "effect": "If bearer (or their unit) is the target of an enemy spell, may use the Glittering Wotnots instead of making a Wizardly dispel attempt. Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster \u2014 caster (and their unit) become the target; caster may make a Wizardly dispel attempt.",
       "description": "If bearer (or their unit) is the target of an enemy spell, may use the Glittering Wotnots instead of making a Wizardly dispel attempt.",
-      "rules_text": "Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster — caster (and their unit) become the target; caster may make a Wizardly dispel attempt."
+      "rules_text": "Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster \u2014 caster (and their unit) become the target; caster may make a Wizardly dispel attempt."
     },
     {
       "id": "idol_of_gork",
@@ -5174,16 +5198,16 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 55,
-      "effect": "Bearer applies a +D3 modifier to the result of any Casting roll they make. However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer — every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll.",
+      "effect": "Bearer applies a +D3 modifier to the result of any Casting roll they make. However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer \u2014 every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll.",
       "description": "Bearer applies a +D3 modifier to the result of any Casting roll they make.",
-      "rules_text": "However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer — every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll."
+      "rules_text": "However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer \u2014 every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll."
     },
     {
       "id": "feedback-scroll",
       "name": "Feedback Scroll",
       "points": 60,
       "category": "arcane_item",
-      "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "description": "When read aloud, this charm causes \u00e6theric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
     {

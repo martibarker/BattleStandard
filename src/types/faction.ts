@@ -117,7 +117,19 @@ export type ArmyLimitType =
   /** Minimum count of specific unit_ids per 1,000 pts of army points limit */
   | 'min_per_1000_pts'
   /** Absolute maximum count of specific unit_ids regardless of army size */
-  | 'max_count';
+  | 'max_count'
+  /** Absolute minimum count of specific unit_ids regardless of army size */
+  | 'min_count'
+  /**
+   * Maximum count of unit_ids = limit_value × (number of qualifying characters in army).
+   * character_unit_ids lists which character unit IDs count as unlocking characters.
+   */
+  | 'max_per_character'
+  /**
+   * These unit_ids may only be taken if general_unit_ids contains the army's General.
+   * Validated as a warning since the General is not explicitly tracked in the army list.
+   */
+  | 'conditional';
 
 export type UnitSource = 'forces_of_fantasy' | 'arcane_journal' | 'ravening_hordes';
 
@@ -223,6 +235,16 @@ export interface ArmyCompositionRule {
    * Used for per-unit count/rate limits such as "0-1 Field Trebuchet per 1,000 pts".
    */
   unit_ids?: string[];
+  /**
+   * For max_per_character: unit IDs of characters that each unlock limit_value of unit_ids.
+   * e.g. Night Goblin Chiefs/Shamans unlock Night Goblin Mobs.
+   */
+  character_unit_ids?: string[];
+  /**
+   * For conditional: unit IDs of characters that may serve as the General to satisfy this rule.
+   * Validated as a warning — the player must ensure their General is one of these types.
+   */
+  general_unit_ids?: string[];
   notes?: string;
 }
 

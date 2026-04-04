@@ -2,7 +2,7 @@
   "id": "beastmen-brayherds",
   "name": "Beastmen Brayherds",
   "sources": [
-    "Warhammer: The Old World — Ravening Hordes (2024)",
+    "Warhammer: The Old World \u2014 Ravening Hordes (2024)",
     "Arcane Journal: Beastmen Brayherds"
   ],
   "army_compositions": [
@@ -41,7 +41,11 @@
           "unit_ids": [
             "bestigor_herd"
           ],
-          "notes": "0-1 Bestigor Herd may be taken as a Core choice if your General is a Beastlord or Wargor"
+          "notes": "0-1 Bestigor Herd may be taken as a Core choice if your General is a Beastlord or Wargor",
+          "general_unit_ids": [
+            "beastlord",
+            "wargor"
+          ]
         },
         {
           "category": "core",
@@ -50,7 +54,11 @@
           "unit_ids": [
             "minotaur_herd"
           ],
-          "notes": "0-1 Minotaur Herd may be taken as a Core choice if your General is a Doombull or Gorebull"
+          "notes": "0-1 Minotaur Herd may be taken as a Core choice if your General is a Doombull or Gorebull",
+          "general_unit_ids": [
+            "doombull",
+            "gorebull"
+          ]
         },
         {
           "category": "special",
@@ -66,7 +74,11 @@
             "jabberslythe",
             "cygor"
           ],
-          "notes": "0-1 Jabberslythe or Cygor may be taken as a Special choice if your General is a Great Bray-Shaman or Bray-Shaman"
+          "notes": "0-1 Jabberslythe or Cygor may be taken as a Special choice if your General is a Great Bray-Shaman or Bray-Shaman",
+          "general_unit_ids": [
+            "bray_shaman",
+            "great_bray_shaman"
+          ]
         },
         {
           "category": "special",
@@ -75,7 +87,11 @@
           "unit_ids": [
             "ghorgon"
           ],
-          "notes": "0-1 Ghorgon may be taken as a Special choice if your General is a Doombull or Gorebull"
+          "notes": "0-1 Ghorgon may be taken as a Special choice if your General is a Doombull or Gorebull",
+          "general_unit_ids": [
+            "doombull",
+            "gorebull"
+          ]
         },
         {
           "category": "rare",
@@ -99,7 +115,7 @@
     },
     {
       "id": "minotaur_blood_herd",
-      "name": "Beastmen Brayherds — Minotaur Blood Herd",
+      "name": "Beastmen Brayherds \u2014 Minotaur Blood Herd",
       "source": "arcane_journal",
       "rules": [
         {
@@ -198,7 +214,7 @@
     },
     {
       "id": "wild_herd",
-      "name": "Beastmen Brayherds — Wild Herd",
+      "name": "Beastmen Brayherds \u2014 Wild Herd",
       "source": "arcane_journal",
       "rules": [
         {
@@ -3348,7 +3364,7 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.",
+      "description": "A magical brew that fills the drinker with courage\u2026 it may actually just be strong liquor.",
       "single_use": true,
       "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
     },
@@ -3528,7 +3544,7 @@
       "name": "Feedback Scroll",
       "points": 60,
       "category": "arcane_item",
-      "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
+      "description": "When read aloud, this charm causes \u00e6theric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
     {
@@ -3633,7 +3649,7 @@
       "source": "ravening_hordes",
       "restrictions": "Wizard that has joined a unit only",
       "description": "Before making a Casting roll, the bearer of the Jagged Dagger may make a sacrifice. One model belonging to the bearer's unit is immediately removed from play as a casualty.",
-      "rules_text": "The bearer may then modify their Casting roll by adding the Wounds characteristic of the sacrificed model to the result. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+      "rules_text": "The bearer may then modify their Casting roll by adding the Wounds characteristic of the sacrificed model to the result. Note that this is a modifier to the result of a roll \u2014 it does not negate a roll of a natural double 1."
     },
     {
       "id": "skin_of_man",
