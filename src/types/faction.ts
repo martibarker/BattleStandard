@@ -58,12 +58,16 @@ export interface MagicDetails {
 
 export type OptionScope = 'per_model' | 'per_unit' | 'per_army';
 
+/** Determines which section of the options panel an option appears in */
+export type OptionCategory = 'weapon' | 'armour' | 'special';
+
 /** A single option within a mutually-exclusive choice group */
 export interface OptionChoice {
   description: string;
   cost: number;
   scope: OptionScope;
   notes?: string;
+  category?: OptionCategory;
 }
 
 export interface Option {
@@ -79,8 +83,12 @@ export interface Option {
   max_count?: number;
   /** 1 of this option allowed per N models in unit (e.g. 1 Fanatic per 10 Night Goblins) */
   per_n_models?: number;
+  /** Which section of the options panel this option appears in */
+  category?: OptionCategory;
   /** Mutually-exclusive sub-options — rendered as a radio group (pick one) */
   choices?: OptionChoice[];
+  /** Special rule IDs this option grants when selected (e.g. ['frenzy']) */
+  grants_rules?: string[];
 }
 
 export interface CommandUpgrade {

@@ -442,7 +442,12 @@ export default function ArmyEditor() {
                         return relevantProfiles.length > 0 ? <WeaponProfileTable profiles={relevantProfiles} /> : null;
                       })()}
 
-                      <SpecialRulesList ruleIds={unit.special_rules} />
+                      <SpecialRulesList ruleIds={[
+                        ...(unit.special_rules ?? []),
+                        ...(unit.options ?? []).flatMap((o) =>
+                          entry.selectedOptions.includes(o.description) ? (o.grants_rules ?? []) : []
+                        ),
+                      ]} />
 
                       {showOptions && (
                         <>

@@ -56,6 +56,7 @@ function normalizeOptions(options: unknown[] | undefined): Option[] {
         max_count: opt.max_count as number | undefined,
         per_n_models: opt.per_n_models as number | undefined,
         category: opt.category as OptionCategory | undefined,
+        grants_rules: opt.grants_rules as string[] | undefined,
       });
     }
   }

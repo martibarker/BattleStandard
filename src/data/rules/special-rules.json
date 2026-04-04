@@ -816,6 +816,12 @@
       "name": "Ogre Charge",
       "source": "army",
       "description": "The Armour Piercing characteristic of this unit's Impact Hits is improved by the unit's current Rank Bonus."
+    },
+    {
+      "id": "frenzy",
+      "name": "Frenzy",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
     }
   ]
 }

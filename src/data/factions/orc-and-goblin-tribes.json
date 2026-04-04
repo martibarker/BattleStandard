@@ -628,7 +628,10 @@
           "cost": 3,
           "scope": "per_unit",
           "description": "Frenzy special rule (0-1 per 1,000 pts)",
-          "category": "special"
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
         },
         {
           "cost": 5,
@@ -754,7 +757,10 @@
           "cost": 3,
           "scope": "per_unit",
           "description": "Frenzy special rule (0-1 per 1,000 pts)",
-          "category": "special"
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
         },
         {
           "cost": 5,
@@ -869,7 +875,10 @@
           "cost": 0,
           "scope": "per_unit",
           "description": "Frenzy special rule (0-1 per 1,000 pts)",
-          "category": "special"
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
         },
         {
           "cost": 5,
@@ -945,7 +954,10 @@
           "cost": 0,
           "scope": "per_unit",
           "description": "Frenzy special rule (0-1 per 1,000 pts)",
-          "category": "special"
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
         },
         {
           "cost": 5,
@@ -2187,7 +2199,10 @@
           "cost": 1,
           "scope": "per_model",
           "description": "Replace light armour with Frenzy (0-1 per 1,000 pts)",
-          "category": "special"
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
         },
         {
           "cost": 0,
@@ -2878,7 +2893,10 @@
           "cost": 1,
           "scope": "per_model",
           "description": "Replace light armour with Frenzy (0-1 per 1,000 pts)",
-          "category": "special"
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
         },
         {
           "cost": 0,
@@ -3404,7 +3422,10 @@
           "cost": 2,
           "scope": "per_model",
           "description": "Frenzy special rule (0-1 per 1,000 pts)",
-          "category": "special"
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
         },
         {
           "cost": 10,
