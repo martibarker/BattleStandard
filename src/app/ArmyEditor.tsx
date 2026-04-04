@@ -428,6 +428,8 @@ export default function ArmyEditor() {
                         </div>
                       )}
 
+                      <StatBar unit={unit} save={entrySave} />
+
                       {unit.weapon_profiles && unit.weapon_profiles.length > 0 && (() => {
                         // Only display weapon_profiles that match base equipment
                         const equipmentLower = (unit.equipment ?? []).map(e => e.toLowerCase());
