@@ -4355,7 +4355,10 @@
           "strike_first"
         ],
         "notes": "Single use. First round of combat only."
-      }
+      },
+      "restrictions": "Goblin and Night Goblin Bosses only",
+      "description": "Single use. Once per game, during the first round of combat, wielder may use: Combat, S10, AP-3, Magical Attacks, Strike First. At all other times counts as a hand weapon with Magical Attacks.",
+      "single_use": true
     },
     {
       "id": "berserker-blade",
@@ -4386,7 +4389,9 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "restrictions": "Goblin Bosses and Night Goblin Bosses only",
+      "description": "Combat, S+1, AP-1, Magical Attacks. If engaged with an enemy's flank arc, may re-roll any failed rolls To Wound. If engaged with an enemy's rear arc, may re-roll any failed rolls To Hit and To Wound. Extremely Common magic item."
     },
     {
       "id": "sword-of-swiftness",
@@ -4411,7 +4416,8 @@
           "armour_bane_1",
           "magical_attacks"
         ]
-      }
+      },
+      "description": "Combat, S+1, AP-, Armour Bane (1), Magical Attacks. Wearer may re-roll any failed rolls To Hit made whilst using this weapon. However, the Strength modifier only applies during the first round of combat."
     },
     {
       "id": "giant-blade",
@@ -4451,7 +4457,8 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "description": "Combat, S+1, AP-3, Magical Attacks."
     },
     {
       "id": "spelleater-axe",
@@ -4477,7 +4484,8 @@
           "magical_attacks"
         ],
         "notes": "Cavalry, monster or chariot only."
-      }
+      },
+      "description": "Combat, S+1, AP-1, Armour Bane (1), Magical Attacks. Models whose troop type is 'cavalry', 'monster' or 'chariot' only. Strength and Armour Piercing modifiers apply only during the first round of combat. During a turn in which the wielder charged, grants +1 Attack for each rank the enemy unit has."
     },
     {
       "id": "headsmans-axe",
@@ -4509,7 +4517,8 @@
           "magical_attacks",
           "requires_two_hands"
         ]
-      }
+      },
+      "description": "Combat, S+1, AP-2, Magical Attacks, Requires Two Hands. Wearer has +1 to their Weapon Skill and Initiative characteristics."
     },
     {
       "id": "meteor-hammer",
@@ -4536,7 +4545,8 @@
           "requires_two_hands",
           "strikes_last"
         ]
-      }
+      },
+      "description": "Combat, S+2, AP-2, Killing Blow, Magical Attacks, Requires Two Hands, Strikes Last."
     },
     {
       "id": "duellists-blades",
@@ -4577,7 +4587,8 @@
           "requires_two_hands",
           "strikes_last"
         ]
-      }
+      },
+      "description": "Combat, S+2, AP-2, Extra Attacks (+D6), Magical Attacks, Requires Two Hands, Strike Last. If a natural 6 is rolled for the Extra Attacks (+D6) rule, the Battleaxe loses the Extra Attacks (+D6) rule at the end of the current Combat phase."
     },
     {
       "id": "ogre-blade",
@@ -4601,14 +4612,16 @@
       "name": "Charmed Shield*",
       "points": 5,
       "category": "magic_armour",
-      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long.",
+      "is_shield": true
     },
     {
       "id": "enchanted-shield",
       "name": "Enchanted Shield*",
       "points": 10,
       "category": "magic_armour",
-      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common",
+      "is_shield": true
     },
     {
       "id": "armour-of-meteoric-iron",
@@ -4624,7 +4637,14 @@
       "source": "arcane_journal",
       "category": "magic_armour",
       "points": 20,
-      "effect": "Counts as a shield. Any enemy model that rolls a natural 1 when making a roll To Hit or To Wound against the wielder of the Spiteful Shield during the Combat phase immediately suffers a Strength 4 hit with an AP of -."
+      "effect": "Counts as a shield. Any enemy model that rolls a natural 1 when making a roll To Hit or To Wound against the wielder of the Spiteful Shield during the Combat phase immediately suffers a Strength 4 hit with an AP of -.",
+      "description": "Counts as a shield. Any enemy model that rolls a natural 1 when making a roll To Hit or To Wound against the wielder of the Spiteful Shield during the Combat phase immediately suffers a Strength 4 hit with an AP of -.",
+      "is_shield": true,
+      "armour_profile": {
+        "armour_value": "+1",
+        "special_rules": [],
+        "notes": "Counts as a shield. Enemy natural 1s To Hit/Wound in Combat inflict S4 hit on attacker."
+      }
     },
     {
       "id": "trailblazers-hauberk",
@@ -4640,14 +4660,16 @@
       "points": 25,
       "category": "magic_armour",
       "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
-      "restrictions": ""
+      "restrictions": "",
+      "is_shield": true
     },
     {
       "id": "spellshield",
       "name": "Spellshield*",
       "points": 25,
       "category": "magic_armour",
-      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common",
+      "is_shield": true
     },
     {
       "id": "armour_of_mork",
@@ -4655,14 +4677,26 @@
       "source": "ravening_hordes",
       "category": "magic_armour",
       "points": 30,
-      "effect": "Suit of heavy armour. Wearer has Magic Resistance (-2)."
+      "effect": "Suit of heavy armour. Wearer has Magic Resistance (-2).",
+      "description": "Suit of heavy armour. Wearer has Magic Resistance (-2).",
+      "armour_profile": {
+        "armour_value": "5+",
+        "special_rules": [
+          "magic_resistance_2"
+        ],
+        "notes": "Suit of heavy armour."
+      },
+      "grants_rules": [
+        "magic_resistance_2"
+      ]
     },
     {
       "id": "shield-of-the-warrior-true",
       "name": "Shield of the Warrior True",
       "points": 30,
       "category": "magic_armour",
-      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase.",
+      "is_shield": true
     },
     {
       "id": "dead_ard_armour",
@@ -4670,7 +4704,14 @@
       "source": "arcane_journal",
       "category": "magic_armour",
       "points": 35,
-      "effect": "Black Orc Bosses and Orc Bosses whose troop type is 'infantry', 'cavalry' or 'chariot' only. Full plate armour. Wearer improves their Toughness characteristic by 1."
+      "effect": "Black Orc Bosses and Orc Bosses whose troop type is 'infantry', 'cavalry' or 'chariot' only. Full plate armour. Wearer improves their Toughness characteristic by 1.",
+      "restrictions": "Black Orc Bosses and Orc Bosses whose troop type is 'infantry', 'cavalry' or 'chariot' only",
+      "description": "Full plate armour. Wearer improves their Toughness characteristic by 1.",
+      "armour_profile": {
+        "armour_value": "4+",
+        "special_rules": [],
+        "notes": "Full plate armour. +1 Toughness."
+      }
     },
     {
       "id": "glittering-scales",
@@ -4693,7 +4734,18 @@
       "source": "ravening_hordes",
       "category": "magic_armour",
       "points": 40,
-      "effect": "May be worn with other armour. Improves wearer's armour value by 1 (to a maximum of 2+). Wearer has the Regeneration (5+) special rule. Extremely Common magic item."
+      "effect": "May be worn with other armour. Improves wearer's armour value by 1 (to a maximum of 2+). Wearer has the Regeneration (5+) special rule. Extremely Common magic item.",
+      "description": "May be worn with other armour. Improves wearer's armour value by 1 (to a maximum of 2+). Wearer has the Regeneration (5+) special rule. Extremely Common magic item.",
+      "armour_profile": {
+        "armour_value": "+1",
+        "special_rules": [
+          "regeneration_5"
+        ],
+        "notes": "May be worn with other armour. Max armour value 2+."
+      },
+      "grants_rules": [
+        "regeneration_5"
+      ]
     },
     {
       "id": "bedazzling-helm",
@@ -4716,7 +4768,8 @@
       "name": "Luckstone*",
       "points": 15,
       "category": "talisman",
-      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common"
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common",
+      "single_use": true
     },
     {
       "id": "obsidian-lodestone",
@@ -4731,14 +4784,16 @@
       "source": "ravening_hordes",
       "category": "talisman",
       "points": 20,
-      "effect": "Any enemy 'beast of burden' that directs its attacks against the wearer of the Collar of Zorga or their unit during the Combat phase suffers a -1 modifier to its rolls To Hit."
+      "effect": "Any enemy 'beast of burden' that directs its attacks against the wearer of the Collar of Zorga or their unit during the Combat phase suffers a -1 modifier to its rolls To Hit.",
+      "description": "Any enemy 'beast of burden' that directs its attacks against the wearer of the Collar of Zorga or their unit during the Combat phase suffers a -1 modifier to its rolls To Hit."
     },
     {
       "id": "paymasters-coin",
       "name": "Paymaster's Coin*",
       "points": 25,
       "category": "talisman",
-      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common"
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common",
+      "single_use": true
     },
     {
       "id": "ironhide-talisman",
@@ -4769,7 +4824,8 @@
       "source": "arcane_journal",
       "category": "talisman",
       "points": 35,
-      "effect": "Any model that directs its attacks against the bearer of the Effigy of Mork during the Combat phase suffers a -1 modifier to its rolls To Hit."
+      "effect": "Any model that directs its attacks against the bearer of the Effigy of Mork during the Combat phase suffers a -1 modifier to its rolls To Hit.",
+      "description": "Any model that directs its attacks against the bearer of the Effigy of Mork during the Combat phase suffers a -1 modifier to its rolls To Hit."
     },
     {
       "id": "glowy_green_amulet",
@@ -4777,7 +4833,8 @@
       "source": "ravening_hordes",
       "category": "talisman",
       "points": 35,
-      "effect": "If the bearer (and any unit they have joined) is the target of an enemy spell, they may use the Glowy Green Amulet instead of making a Wizardly dispel attempt. Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes — destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation."
+      "effect": "If the bearer (and any unit they have joined) is the target of an enemy spell, they may use the Glowy Green Amulet instead of making a Wizardly dispel attempt. Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes — destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation.",
+      "description": "If the bearer (and any unit they have joined) is the target of an enemy spell, they may use the Glowy Green Amulet instead of making a Wizardly dispel attempt. Roll a D6. On 2+, the spell is dispelled. However, if 1 is rolled, the Glowy Green Amulet explodes — destroyed and bearer loses 1 Wound. Cannot be used against a perfect invocation."
     },
     {
       "id": "icon-of-fortitude",
@@ -4793,14 +4850,16 @@
       "source": "arcane_journal",
       "category": "talisman",
       "points": 45,
-      "effect": "The bearer has the Magic Resistance (-2) and Hatred (enemy Wizards) special rules."
+      "effect": "The bearer has the Magic Resistance (-2) and Hatred (enemy Wizards) special rules.",
+      "description": "The bearer has the Magic Resistance (-2) and Hatred (enemy Wizards) special rules."
     },
     {
       "id": "potion-of-foolhardiness",
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "fungus_wine",
@@ -4808,7 +4867,10 @@
       "source": "ravening_hordes",
       "category": "enchanted_item",
       "points": 10,
-      "effect": "Night Goblin characters only. Single use. During the Command sub-phase, if not engaged in combat, may distribute Fungus Wine to their unit by making a Leadership test (using own Leadership). If passed, until next Start of Turn sub-phase, character and any unit they have joined gains the Immune to Psychology special rule. Extremely Common magic item."
+      "effect": "Night Goblin characters only. Single use. During the Command sub-phase, if not engaged in combat, may distribute Fungus Wine to their unit by making a Leadership test (using own Leadership). If passed, until next Start of Turn sub-phase, character and any unit they have joined gains the Immune to Psychology special rule. Extremely Common magic item.",
+      "restrictions": "Night Goblin characters only",
+      "description": "Single use. During the Command sub-phase, if not engaged in combat, may distribute Fungus Wine to their unit by making a Leadership test (using own Leadership). If passed, until next Start of Turn sub-phase, character and any unit they have joined gains the Immune to Psychology special rule. Extremely Common magic item.",
+      "single_use": true
     },
     {
       "id": "potion-of-speed",
@@ -4816,7 +4878,8 @@
       "points": 10,
       "category": "enchanted_item",
       "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "eadbuttin_at",
@@ -4824,14 +4887,16 @@
       "source": "ravening_hordes",
       "category": "enchanted_item",
       "points": 15,
-      "effect": "Wearer gains the Impact Hits (1) special rule. This Impact Hit has an Armour Piercing characteristic of -2. Extremely Common magic item."
+      "effect": "Wearer gains the Impact Hits (1) special rule. This Impact Hit has an Armour Piercing characteristic of -2. Extremely Common magic item.",
+      "description": "Wearer gains the Impact Hits (1) special rule. This Impact Hit has an Armour Piercing characteristic of -2. Extremely Common magic item."
     },
     {
       "id": "becalming-orb",
       "name": "Becalming Orb",
       "points": 20,
       "category": "enchanted_item",
-      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2.",
+      "single_use": true
     },
     {
       "id": "potion-of-toughness",
@@ -4839,7 +4904,8 @@
       "points": 20,
       "category": "enchanted_item",
       "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "da_thinkin_orcs_at",
@@ -4847,7 +4913,8 @@
       "source": "arcane_journal",
       "category": "enchanted_item",
       "points": 25,
-      "effect": "Wearer improves their Initiative characteristic by 1. In addition, the wearer and any unit they have joined is not subject to the Impetuous special rule."
+      "effect": "Wearer improves their Initiative characteristic by 1. In addition, the wearer and any unit they have joined is not subject to the Impetuous special rule.",
+      "description": "Wearer improves their Initiative characteristic by 1. In addition, the wearer and any unit they have joined is not subject to the Impetuous special rule."
     },
     {
       "id": "potion-of-strength",
@@ -4855,7 +4922,8 @@
       "points": 25,
       "category": "enchanted_item",
       "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "grisly_trophy_rack",
@@ -4863,7 +4931,9 @@
       "source": "arcane_journal",
       "category": "enchanted_item",
       "points": 30,
-      "effect": "Black Orc Bosses, Orc Bosses, Goblin Bosses and Night Goblin Bosses only. All enemy units within 6\" of the bearer of the Grisly Trophy Rack suffer a -1 modifier to their Leadership characteristic (to a minimum of 2)."
+      "effect": "Black Orc Bosses, Orc Bosses, Goblin Bosses and Night Goblin Bosses only. All enemy units within 6\" of the bearer of the Grisly Trophy Rack suffer a -1 modifier to their Leadership characteristic (to a minimum of 2).",
+      "restrictions": "Black Orc Bosses, Orc Bosses, Goblin Bosses and Night Goblin Bosses only",
+      "description": "All enemy units within 6\" of the bearer of the Grisly Trophy Rack suffer a -1 modifier to their Leadership characteristic (to a minimum of 2)."
     },
     {
       "id": "potion-of-fervour",
@@ -4871,14 +4941,16 @@
       "points": 30,
       "category": "enchanted_item",
       "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "healing-potion",
       "name": "Healing Potion*",
       "points": 35,
       "category": "enchanted_item",
-      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.",
+      "single_use": true
     },
     {
       "id": "ruby-ring-of-ruin",
@@ -4917,7 +4989,8 @@
       "source": "ravening_hordes",
       "category": "enchanted_item",
       "points": 50,
-      "effect": "During Command sub-phase of their turn, if not engaged in combat, the wearer may make a Leadership test (using own Leadership). If passed, until the next Start of Turn sub-phase, this character and any unit they have joined gains the Unbreakable special rule."
+      "effect": "During Command sub-phase of their turn, if not engaged in combat, the wearer may make a Leadership test (using own Leadership). If passed, until the next Start of Turn sub-phase, this character and any unit they have joined gains the Unbreakable special rule.",
+      "description": "During Command sub-phase of their turn, if not engaged in combat, the wearer may make a Leadership test (using own Leadership). If passed, until the next Start of Turn sub-phase, this character and any unit they have joined gains the Unbreakable special rule."
     },
     {
       "id": "necklace_of_blessed_teef",
@@ -4925,14 +4998,16 @@
       "source": "arcane_journal",
       "category": "enchanted_item",
       "points": 50,
-      "effect": "The bearer may re-roll any Armour Save roll, Ward Save roll or Regeneration Save roll of a natural 1."
+      "effect": "The bearer may re-roll any Armour Save roll, Ward Save roll or Regeneration Save roll of a natural 1.",
+      "description": "The bearer may re-roll any Armour Save roll, Ward Save roll or Regeneration Save roll of a natural 1."
     },
     {
       "id": "earthing-rod",
       "name": "Earthing Rod",
       "points": 5,
       "category": "arcane_item",
-      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table.",
+      "single_use": true
     },
     {
       "id": "arcane-familiar",
@@ -4946,14 +5021,16 @@
       "name": "Dispel Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "power-scroll",
       "name": "Power Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "da_hags_brew",
@@ -4961,7 +5038,9 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 25,
-      "effect": "Orc Shamans, Goblin Shamans and Night Goblin Shamans only. In addition to the Lores of Magic they may normally know spells from, the bearer of Da Hag's Brew may know spells from the Lore of Troll Magic."
+      "effect": "Orc Shamans, Goblin Shamans and Night Goblin Shamans only. In addition to the Lores of Magic they may normally know spells from, the bearer of Da Hag's Brew may know spells from the Lore of Troll Magic.",
+      "restrictions": "Orc Shamans, Goblin Shamans and Night Goblin Shamans only",
+      "description": "In addition to the Lores of Magic they may normally know spells from, the bearer of Da Hag's Brew may know spells from the Lore of Troll Magic."
     },
     {
       "id": "idol_of_mork",
@@ -4969,7 +5048,8 @@
       "source": "ravening_hordes",
       "category": "arcane_item",
       "points": 30,
-      "effect": "Bearer increases their Dispel range by 3\". Additionally, once per turn, when attempting a Wizardly dispel, the bearer of the Idol of Mork may re-roll the Dispel roll."
+      "effect": "Bearer increases their Dispel range by 3\". Additionally, once per turn, when attempting a Wizardly dispel, the bearer of the Idol of Mork may re-roll the Dispel roll.",
+      "description": "Bearer increases their Dispel range by 3\". Additionally, once per turn, when attempting a Wizardly dispel, the bearer of the Idol of Mork may re-roll the Dispel roll."
     },
     {
       "id": "lore-familiar",
@@ -4998,7 +5078,8 @@
       "source": "ravening_hordes",
       "category": "arcane_item",
       "points": 35,
-      "effect": "Once per turn, the bearer of the Buzgob's Knobbly Staff may re-roll a Casting roll."
+      "effect": "Once per turn, the bearer of the Buzgob's Knobbly Staff may re-roll a Casting roll.",
+      "description": "Once per turn, the bearer of the Buzgob's Knobbly Staff may re-roll a Casting roll."
     },
     {
       "id": "staff-of-quietude",
@@ -5013,7 +5094,8 @@
       "source": "ravening_hordes",
       "category": "arcane_item",
       "points": 40,
-      "effect": "If bearer (or their unit) is the target of an enemy spell, may use the Glittering Wotnots instead of making a Wizardly dispel attempt. Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster — caster (and their unit) become the target; caster may make a Wizardly dispel attempt."
+      "effect": "If bearer (or their unit) is the target of an enemy spell, may use the Glittering Wotnots instead of making a Wizardly dispel attempt. Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster — caster (and their unit) become the target; caster may make a Wizardly dispel attempt.",
+      "description": "If bearer (or their unit) is the target of an enemy spell, may use the Glittering Wotnots instead of making a Wizardly dispel attempt. Roll a D6. On 1-3, no effect. On 4+, spell reflected back upon the caster — caster (and their unit) become the target; caster may make a Wizardly dispel attempt."
     },
     {
       "id": "idol_of_gork",
@@ -5021,7 +5103,8 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 40,
-      "effect": "Bearer increases the range of all their spells by 3\". Additionally, once per turn, the bearer of the Idol of Gork may re-roll a Casting roll."
+      "effect": "Bearer increases the range of all their spells by 3\". Additionally, once per turn, the bearer of the Idol of Gork may re-roll a Casting roll.",
+      "description": "Bearer increases the range of all their spells by 3\". Additionally, once per turn, the bearer of the Idol of Gork may re-roll a Casting roll."
     },
     {
       "id": "wand-of-jet",
@@ -5045,7 +5128,8 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 55,
-      "effect": "Bearer applies a +D3 modifier to the result of any Casting roll they make. However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer — every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll."
+      "effect": "Bearer applies a +D3 modifier to the result of any Casting roll they make. However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer — every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll.",
+      "description": "Bearer applies a +D3 modifier to the result of any Casting roll they make. However, if they roll a natural double 1 or double 6 when making a Casting roll, centre a 5\" blast template over the bearer — every model (friend or foe) underneath risks being hit and suffering a single Strength 6 hit with an AP of -1. The staff is then destroyed and cannot be used again. This is in addition to the effects of rolling a natural double 1 or double 6 when making a Casting roll."
     },
     {
       "id": "feedback-scroll",
@@ -5061,7 +5145,8 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 20,
-      "effect": "A unit carrying the Banner of the Wildz gains the Move through Cover special rule."
+      "effect": "A unit carrying the Banner of the Wildz gains the Move through Cover special rule.",
+      "description": "A unit carrying the Banner of the Wildz gains the Move through Cover special rule."
     },
     {
       "id": "guffs_windy_banner",
@@ -5069,7 +5154,8 @@
       "source": "ravening_hordes",
       "category": "magic_standard",
       "points": 20,
-      "effect": "A unit carrying the Guff's Windy Banner may re-roll any failed Panic test."
+      "effect": "A unit carrying the Guff's Windy Banner may re-roll any failed Panic test.",
+      "description": "A unit carrying the Guff's Windy Banner may re-roll any failed Panic test."
     },
     {
       "id": "da_banner_of_da_nomadz",
@@ -5077,7 +5163,8 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 25,
-      "effect": "When a unit carrying Da Banner Of Da Nomadz makes a Charge, Flee or Pursuit roll, it may re-roll any dice that roll a natural 1, before discarding any dice that are required to be discarded."
+      "effect": "When a unit carrying Da Banner Of Da Nomadz makes a Charge, Flee or Pursuit roll, it may re-roll any dice that roll a natural 1, before discarding any dice that are required to be discarded.",
+      "description": "When a unit carrying Da Banner Of Da Nomadz makes a Charge, Flee or Pursuit roll, it may re-roll any dice that roll a natural 1, before discarding any dice that are required to be discarded."
     },
     {
       "id": "monster-hunters-tapestry",
@@ -5125,7 +5212,8 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 35,
-      "effect": "A unit carrying Da Angry Ladz Flag gains the Frenzy special rule."
+      "effect": "A unit carrying Da Angry Ladz Flag gains the Frenzy special rule.",
+      "description": "A unit carrying Da Angry Ladz Flag gains the Frenzy special rule."
     },
     {
       "id": "da_banner_of_butchery",
@@ -5133,7 +5221,8 @@
       "source": "ravening_hordes",
       "category": "magic_standard",
       "points": 35,
-      "effect": "All models in a unit carrying Da Banner of Butchery have a +1 modifier to their Strength characteristic during a turn in which they charge."
+      "effect": "All models in a unit carrying Da Banner of Butchery have a +1 modifier to their Strength characteristic during a turn in which they charge.",
+      "description": "All models in a unit carrying Da Banner of Butchery have a +1 modifier to their Strength characteristic during a turn in which they charge."
     },
     {
       "id": "da_spider_banner",
@@ -5141,7 +5230,8 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 35,
-      "effect": "A unit carrying Da Spider Banner gains the Poisoned Attacks special rule. If the unit already has the Poisoned Attacks special rule, then their attacks will wound automatically on a roll of a natural 5 or 6 To Hit, rather than the usual 6."
+      "effect": "A unit carrying Da Spider Banner gains the Poisoned Attacks special rule. If the unit already has the Poisoned Attacks special rule, then their attacks will wound automatically on a roll of a natural 5 or 6 To Hit, rather than the usual 6.",
+      "description": "A unit carrying Da Spider Banner gains the Poisoned Attacks special rule. If the unit already has the Poisoned Attacks special rule, then their attacks will wound automatically on a roll of a natural 5 or 6 To Hit, rather than the usual 6."
     },
     {
       "id": "razor-standard",
@@ -5157,7 +5247,8 @@
       "source": "ravening_hordes",
       "category": "magic_standard",
       "points": 40,
-      "effect": "A unit carrying the Waaagh! Banner increases its maximum possible charge range by 3\" and, when it makes a Charge roll, may apply a +D3 modifier to the result."
+      "effect": "A unit carrying the Waaagh! Banner increases its maximum possible charge range by 3\" and, when it makes a Charge roll, may apply a +D3 modifier to the result.",
+      "description": "A unit carrying the Waaagh! Banner increases its maximum possible charge range by 3\" and, when it makes a Charge roll, may apply a +D3 modifier to the result."
     },
     {
       "id": "banner-of-iron-resolve",
@@ -5181,7 +5272,8 @@
       "source": "ravening_hordes",
       "category": "magic_standard",
       "points": 50,
-      "effect": "A unit carrying this flag has a +1 modifier to its Weapon Skill characteristic (to a maximum of 10). In addition, when calculating its combat result, the unit may claim an additional bonus of +1 combat result point."
+      "effect": "A unit carrying this flag has a +1 modifier to its Weapon Skill characteristic (to a maximum of 10). In addition, when calculating its combat result, the unit may claim an additional bonus of +1 combat result point.",
+      "description": "A unit carrying this flag has a +1 modifier to its Weapon Skill characteristic (to a maximum of 10). In addition, when calculating its combat result, the unit may claim an additional bonus of +1 combat result point."
     },
     {
       "id": "totem-of-wrath",

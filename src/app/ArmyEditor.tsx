@@ -1090,14 +1090,136 @@ function EntryOptionsPanel({
               <p className="text-xs italic" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>Arcane items require a Wizard</p>
             )}
             {characterItemCategories.map((cat) => {
-              const items = faction.magic_items.filter((i) => i.category === cat);
+              // Filter items available to this unit (check unit_restriction text against unit name/troop type)
+              const allCatItems = faction.magic_items.filter((i) => i.category === cat);
+              const items = allCatItems.filter((i) => {
+                const r = (i as typeof i & { restrictions?: string }).restrictions ?? '';
+                if (!r) return true;
+                const rl = r.toLowerCase();
+                return rl.includes(unit.name.toLowerCase()) || rl.includes(unit.troop_type.toLowerCase());
+              });
               if (items.length === 0) return null;
-              const catSelected = selectedItems.find((id) => items.some((i) => i.id === id));
-              const isWiz = isWizard(unit);
-              if (cat === 'arcane_item' && !isWiz) return null;
+              if (cat === 'arcane_item' && !isWizard(unit)) return null;
               const isExpanded = expandedMagicCategories[cat] ?? true;
+
+              // For magic_armour: split into armour suits vs shields
+              const armourItems = cat === 'magic_armour' ? items.filter((i) => !(i as typeof i & { is_shield?: boolean }).is_shield) : null;
+              const shieldItems = cat === 'magic_armour' ? items.filter((i) => !!(i as typeof i & { is_shield?: boolean }).is_shield) : null;
+
+              const renderItem = (item: typeof items[0], inputType: 'checkbox' | 'radio' = 'checkbox', radioName?: string) => {
+                const isSelected = selectedItems.includes(item.id);
+                const catSelected = selectedItems.find((id) => items.some((i) => i.id === id));
+                const wouldExceed = !isSelected && item.points > remainingAllowance;
+                const categoryBlocked = inputType === 'checkbox' && !isSelected && !!catSelected;
+                const isDisabled = wouldExceed || categoryBlocked;
+                const itemExt = item as typeof item & { single_use?: boolean; is_shield?: boolean; grants_rules?: string[] };
+                return (
+                  <label
+                    key={item.id}
+                    className={`flex items-start gap-2 pt-1.5 border-t ${isDisabled ? 'opacity-40' : 'cursor-pointer'}`}
+                    style={{ borderColor: 'var(--color-border)' }}
+                  >
+                    {inputType === 'checkbox' ? (
+                      <span
+                        className="shrink-0 w-4 h-4 mt-0.5 rounded border flex items-center justify-center text-xs"
+                        style={{
+                          borderColor: isSelected ? 'var(--color-accent-amber)' : 'var(--color-border)',
+                          backgroundColor: isSelected ? 'var(--color-accent-amber)' : 'transparent',
+                          color: '#0f1117',
+                        }}
+                      >
+                        {isSelected ? '✓' : ''}
+                      </span>
+                    ) : (
+                      <span
+                        className="shrink-0 w-4 h-4 mt-0.5 rounded-full border flex items-center justify-center"
+                        style={{
+                          borderColor: isSelected ? 'var(--color-accent-amber)' : 'var(--color-border)',
+                          backgroundColor: isSelected ? 'var(--color-accent-amber)' : 'transparent',
+                        }}
+                      >
+                        {isSelected && <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#0f1117' }} />}
+                      </span>
+                    )}
+                    <input
+                      type={inputType}
+                      name={radioName}
+                      disabled={isDisabled}
+                      checked={isSelected}
+                      onChange={(e) => toggleMagicItem(item.id, e.target.checked)}
+                      className="sr-only"
+                    />
+                    <span className="flex flex-col min-w-0 gap-0.5 flex-1">
+                      {/* Name + pts + badges */}
+                      <span className="flex items-center gap-1.5 flex-wrap">
+                        <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                          {item.name} — {item.points} pts
+                        </span>
+                        {itemExt.single_use && (
+                          <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-secondary)', fontSize: '0.6rem' }}>Single Use</span>
+                        )}
+                      </span>
+                      {/* Description / rules text */}
+                      {item.description && (
+                        <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.8 }}>
+                          {item.description}
+                        </span>
+                      )}
+                      {/* Weapon profile */}
+                      {item.weapon_profile && (
+                        <div className="mt-0.5 overflow-x-auto">
+                          <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
+                            <thead>
+                              <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                                <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Rng</th>
+                                <th className="text-center pr-2 pb-0.5 font-medium">S</th>
+                                <th className="text-center pr-2 pb-0.5 font-medium">AP</th>
+                                <th className="text-left pb-0.5 font-medium">Special</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.range}</td>
+                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.S}</td>
+                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.AP}</td>
+                                <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{item.weapon_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          {item.weapon_profile.notes && (
+                            <p className="text-xs italic mt-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{item.weapon_profile.notes}</p>
+                          )}
+                        </div>
+                      )}
+                      {/* Armour profile */}
+                      {item.armour_profile && (
+                        <div className="mt-0.5 overflow-x-auto">
+                          <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
+                            <thead>
+                              <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                                <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Armour</th>
+                                <th className="text-left pb-0.5 font-medium">Special</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{item.armour_profile.armour_value}</td>
+                                <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{item.armour_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          {item.armour_profile.notes && (
+                            <p className="text-xs italic mt-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{item.armour_profile.notes}</p>
+                          )}
+                        </div>
+                      )}
+                    </span>
+                  </label>
+                );
+              };
+
               return (
-                <div key={cat} className="flex flex-col gap-1">
+                <div key={cat} className="flex flex-col gap-0">
                   <button
                     onClick={() => setExpandedMagicCategories({ ...expandedMagicCategories, [cat]: !expandedMagicCategories[cat] })}
                     className="text-xs uppercase tracking-wide text-left py-1 px-1.5 rounded hover:opacity-80 transition-opacity"
@@ -1105,86 +1227,24 @@ function EntryOptionsPanel({
                   >
                     {isExpanded ? '▼' : '▶'} {MAGIC_ITEM_CATEGORY_LABELS[cat]}
                   </button>
-                  {isExpanded && items.map((item) => {
-                    const isSelected = selectedItems.includes(item.id);
-                    const wouldExceed = !isSelected && item.points > remainingAllowance;
-                    const categoryBlocked = !isSelected && !!catSelected;
-                    const isDisabled = wouldExceed || categoryBlocked;
-                    return (
-                      <label
-                        key={item.id}
-                        className={`flex items-start gap-2 ${isDisabled ? 'opacity-40' : 'cursor-pointer'}`}
-                      >
-                        <span
-                          className="shrink-0 w-4 h-4 mt-0.5 rounded border flex items-center justify-center text-xs"
-                          style={{
-                            borderColor: isSelected ? 'var(--color-accent-amber)' : 'var(--color-border)',
-                            backgroundColor: isSelected ? 'var(--color-accent-amber)' : 'transparent',
-                            color: '#0f1117',
-                          }}
-                        >
-                          {isSelected ? '✓' : ''}
-                        </span>
-                        <input
-                          type="checkbox"
-                          disabled={isDisabled}
-                          checked={isSelected}
-                          onChange={(e) => toggleMagicItem(item.id, e.target.checked)}
-                          className="sr-only"
-                        />
-                        <span className="flex flex-col min-w-0 gap-0.5">
-                          <span className="text-xs leading-snug" style={{ color: isSelected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                            {item.name} — {item.points} pts{item.restrictions ? ` · ${item.restrictions}` : ''}
-                          </span>
-                          {item.weapon_profile && (
-                            <div className="mt-0.5 overflow-x-auto">
-                              <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
-                                <thead>
-                                  <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
-                                    <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Rng</th>
-                                    <th className="text-center pr-2 pb-0.5 font-medium">S</th>
-                                    <th className="text-center pr-2 pb-0.5 font-medium">AP</th>
-                                    <th className="text-left pb-0.5 font-medium">Special</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.range}</td>
-                                    <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.S}</td>
-                                    <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.AP}</td>
-                                    <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{item.weapon_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          )}
-                          {item.armour_profile && (
-                            <div className="mt-0.5 overflow-x-auto">
-                              <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
-                                <thead>
-                                  <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
-                                    <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Armour</th>
-                                    <th className="text-left pb-0.5 font-medium">Special</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{item.armour_profile.armour_value}</td>
-                                    <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{item.armour_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          )}
-                          {item.description && (
-                            <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
-                              {item.description.split('.')[0]}...
-                            </span>
-                          )}
-                        </span>
-                      </label>
-                    );
-                  })}
+                  {isExpanded && cat === 'magic_armour' ? (
+                    <>
+                      {armourItems && armourItems.length > 0 && (
+                        <div className="flex flex-col">
+                          <p className="text-xs px-1 mb-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.5, fontSize: '0.6rem' }}>ARMOUR</p>
+                          {armourItems.map((item) => renderItem(item))}
+                        </div>
+                      )}
+                      {shieldItems && shieldItems.length > 0 && (
+                        <div className="flex flex-col mt-1.5">
+                          <p className="text-xs px-1 mb-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.5, fontSize: '0.6rem' }}>SHIELDS</p>
+                          {shieldItems.map((item) => renderItem(item))}
+                        </div>
+                      )}
+                    </>
+                  ) : isExpanded ? (
+                    items.map((item) => renderItem(item))
+                  ) : null}
                 </div>
               );
             })}
@@ -1203,7 +1263,6 @@ function EntryOptionsPanel({
                 {selectedStandardItem ? `${selectedStandardItem.points}` : '0'} / {unit.magic_standard} pts
               </p>
             </div>
-            {/* None option */}
             <label className="flex items-center gap-2 cursor-pointer">
               <span
                 className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
@@ -1224,16 +1283,14 @@ function EntryOptionsPanel({
                 }}
                 className="sr-only"
               />
-              <span className="text-xs" style={{ color: !selectedStandardItem ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                No magic standard
-              </span>
+              <span className="text-xs" style={{ color: !selectedStandardItem ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>No magic standard</span>
             </label>
             {faction.magic_items
               .filter((i) => i.category === 'magic_standard' && i.points <= (unit.magic_standard ?? 0))
               .map((item) => {
                 const isSelected = selectedItems.includes(item.id);
                 return (
-                  <label key={item.id} className="flex items-start gap-2 cursor-pointer">
+                  <label key={item.id} className="flex items-start gap-2 pt-1.5 border-t cursor-pointer" style={{ borderColor: 'var(--color-border)' }}>
                     <span
                       className="shrink-0 w-4 h-4 mt-0.5 rounded-full border flex items-center justify-center"
                       style={{
@@ -1254,12 +1311,14 @@ function EntryOptionsPanel({
                       className="sr-only"
                     />
                     <span className="flex flex-col min-w-0 gap-0.5">
-                      <span className="text-xs leading-snug" style={{ color: isSelected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                      <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
                         {item.name} — {item.points} pts
                       </span>
-                      <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
-                        {item.description}
-                      </span>
+                      {item.description && (
+                        <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.8 }}>
+                          {item.description}
+                        </span>
+                      )}
                     </span>
                   </label>
                 );

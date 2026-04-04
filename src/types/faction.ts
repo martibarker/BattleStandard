@@ -170,8 +170,16 @@ export interface MagicItem {
   source: UnitSource;
   points: number;
   extremely_common?: boolean;
+  /** Free-text troop-type or unit-name restriction, e.g. "Goblin Bosses only" */
   restrictions?: string;
+  /** Clean flavour/rules text (no embedded stat tables) */
   description: string;
+  /** True if this item is consumed on use */
+  single_use?: boolean;
+  /** True if this is a magic shield (sub-type of magic_armour) */
+  is_shield?: boolean;
+  /** Rule IDs this item grants to the bearer when equipped */
+  grants_rules?: string[];
   weapon_profile?: WeaponProfile;
   armour_profile?: ArmourProfile;
 }

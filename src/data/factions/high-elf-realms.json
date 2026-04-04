@@ -3380,7 +3380,8 @@
       "name": "Charmed Shield*",
       "points": 5,
       "category": "magic_armour",
-      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long.",
+      "is_shield": true
     },
     {
       "id": "dragon_helm",
@@ -3395,7 +3396,8 @@
       "name": "Enchanted Shield*",
       "points": 10,
       "category": "magic_armour",
-      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common",
+      "is_shield": true
     },
     {
       "id": "armour-of-meteoric-iron",
@@ -3419,21 +3421,24 @@
       "points": 25,
       "category": "magic_armour",
       "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
-      "restrictions": ""
+      "restrictions": "",
+      "is_shield": true
     },
     {
       "id": "spellshield",
       "name": "Spellshield*",
       "points": 25,
       "category": "magic_armour",
-      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common",
+      "is_shield": true
     },
     {
       "id": "shield-of-the-warrior-true",
       "name": "Shield of the Warrior True",
       "points": 30,
       "category": "magic_armour",
-      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase.",
+      "is_shield": true
     },
     {
       "id": "the_golden_shield",
@@ -3441,7 +3446,8 @@
       "source": "arcane_journal",
       "category": "magic_armour",
       "points": 30,
-      "description": "A shield. Any enemy model that directs its attacks against its bearer during the Combat phase must re-roll any rolls To Hit of a natural 6."
+      "description": "A shield. Any enemy model that directs its attacks against its bearer during the Combat phase must re-roll any rolls To Hit of a natural 6.",
+      "is_shield": true
     },
     {
       "id": "armour_of_caledor",
@@ -3496,7 +3502,8 @@
       "name": "Luckstone*",
       "points": 15,
       "category": "talisman",
-      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common"
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common",
+      "single_use": true
     },
     {
       "id": "obsidian-lodestone",
@@ -3512,14 +3519,16 @@
       "category": "talisman",
       "points": 20,
       "extremely_common": true,
-      "description": "Single use. An Opal Amulet gives its bearer a 2+ Ward save against a single wound."
+      "description": "Single use. An Opal Amulet gives its bearer a 2+ Ward save against a single wound.",
+      "single_use": true
     },
     {
       "id": "paymasters-coin",
       "name": "Paymaster's Coin*",
       "points": 25,
       "category": "talisman",
-      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common"
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common",
+      "single_use": true
     },
     {
       "id": "the_loremasters_cloak",
@@ -3581,7 +3590,8 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "potion-of-speed",
@@ -3589,7 +3599,8 @@
       "points": 10,
       "category": "enchanted_item",
       "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "gem_of_courage",
@@ -3599,14 +3610,16 @@
       "points": 15,
       "extremely_common": true,
       "restrictions": "Chracian Warhost Army of Infamy only",
-      "description": "May only be taken by a model in a Chracian Warhost Army of Infamy. Single use. Once per game, when required to make a Break test, the bearer of a Gem of Courage (and their unit) may roll an extra D6 and discard the highest result."
+      "description": "May only be taken by a model in a Chracian Warhost Army of Infamy. Single use. Once per game, when required to make a Break test, the bearer of a Gem of Courage (and their unit) may roll an extra D6 and discard the highest result.",
+      "single_use": true
     },
     {
       "id": "becalming-orb",
       "name": "Becalming Orb",
       "points": 20,
       "category": "enchanted_item",
-      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2.",
+      "single_use": true
     },
     {
       "id": "potion-of-toughness",
@@ -3614,7 +3627,8 @@
       "points": 20,
       "category": "enchanted_item",
       "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "seed_of_rebirth",
@@ -3631,7 +3645,8 @@
       "points": 25,
       "category": "enchanted_item",
       "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "ring_of_fury",
@@ -3648,7 +3663,8 @@
       "points": 30,
       "category": "enchanted_item",
       "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "the_cloak_of_beards",
@@ -3663,7 +3679,8 @@
       "name": "Healing Potion*",
       "points": 35,
       "category": "enchanted_item",
-      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.",
+      "single_use": true
     },
     {
       "id": "ruby-ring-of-ruin",
@@ -3718,7 +3735,8 @@
       "name": "Earthing Rod",
       "points": 5,
       "category": "arcane_item",
-      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table.",
+      "single_use": true
     },
     {
       "id": "arcane-familiar",
@@ -3741,21 +3759,24 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 15,
-      "description": "Single use. Once per game, when the bearer of the Staff of Solidity is required to roll on the Miscast table, they may choose not to."
+      "description": "Single use. Once per game, when the bearer of the Staff of Solidity is required to roll on the Miscast table, they may choose not to.",
+      "single_use": true
     },
     {
       "id": "dispel-scroll",
       "name": "Dispel Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "power-scroll",
       "name": "Power Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "annulian_crystal",
@@ -3800,7 +3821,8 @@
       "category": "arcane_item",
       "points": 40,
       "extremely_common": true,
-      "description": "Single use. A Wizard may use this item instead of making a dispel attempt. If they do so, the spell is automatically dispelled with no Dispel roll required. Note that a perfect invocation cannot be dispelled."
+      "description": "Single use. A Wizard may use this item instead of making a dispel attempt. If they do so, the spell is automatically dispelled with no Dispel roll required. Note that a perfect invocation cannot be dispelled.",
+      "single_use": true
     },
     {
       "id": "the_tricksters_pendant",
@@ -3808,7 +3830,8 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 40,
-      "description": "Single use. A Wizard may use the Trickster's Pendant when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. If the spell is dispelled, the Wizard that attempted to cast it cannot attempt to cast any more spells for the remainder of the current turn. However, if a double 1 is rolled on any two of the dice rolled, the bearer is outclassed in the art."
+      "description": "Single use. A Wizard may use the Trickster's Pendant when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. If the spell is dispelled, the Wizard that attempted to cast it cannot attempt to cast any more spells for the remainder of the current turn. However, if a double 1 is rolled on any two of the dice rolled, the bearer is outclassed in the art.",
+      "single_use": true
     },
     {
       "id": "wand-of-jet",
@@ -3832,7 +3855,8 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 50,
-      "description": "Single use. A Wizard may use this item instead of making a dispel attempt. If they do so, the spell is automatically dispelled with no Dispel roll required. In addition, all 'Remains in Play' spells currently in play are dispelled, including spells cast by friendly Wizards."
+      "description": "Single use. A Wizard may use this item instead of making a dispel attempt. If they do so, the spell is automatically dispelled with no Dispel roll required. In addition, all 'Remains in Play' spells currently in play are dispelled, including spells cast by friendly Wizards.",
+      "single_use": true
     },
     {
       "id": "feedback-scroll",

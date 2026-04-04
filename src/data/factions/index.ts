@@ -68,6 +68,9 @@ function normalizeOptions(options: unknown[] | undefined): Option[] {
 type GlobalItemData = {
   description?: string;
   restrictions?: string;
+  single_use?: boolean;
+  is_shield?: boolean;
+  grants_rules?: string[];
   weapon_profile?: Record<string, unknown>;
   armour_profile?: Record<string, unknown>;
 };
@@ -76,6 +79,9 @@ for (const item of (globalMagicItemsRaw as { magic_items: Record<string, unknown
   globalItemData.set(item.id as string, {
     description: item.description as string | undefined,
     restrictions: item.restrictions as string | undefined,
+    single_use: item.single_use as boolean | undefined,
+    is_shield: item.is_shield as boolean | undefined,
+    grants_rules: item.grants_rules as string[] | undefined,
     weapon_profile: item.weapon_profile as Record<string, unknown> | undefined,
     armour_profile: item.armour_profile as Record<string, unknown> | undefined,
   });
@@ -88,9 +94,12 @@ function normalizeFaction(raw: unknown): Faction {
     const globals = globalItemData.get(item.id as string);
     return {
       ...item,
-      // For global items: use canonical description/restrictions from magic-items.json
+      // For global items: canonical data wins over faction copies
       description: globals?.description ?? (item.description ?? item.effect),
       restrictions: globals !== undefined ? globals.restrictions : item.restrictions,
+      single_use: globals?.single_use ?? (item.single_use as boolean | undefined),
+      is_shield: globals?.is_shield ?? (item.is_shield as boolean | undefined),
+      grants_rules: globals?.grants_rules ?? (item.grants_rules as string[] | undefined),
       weapon_profile: globals?.weapon_profile ?? item.weapon_profile,
       armour_profile: globals?.armour_profile ?? item.armour_profile,
     };

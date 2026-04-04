@@ -3263,14 +3263,16 @@
       "name": "Charmed Shield*",
       "points": 5,
       "category": "magic_armour",
-      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long."
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long.",
+      "is_shield": true
     },
     {
       "id": "enchanted-shield",
       "name": "Enchanted Shield*",
       "points": 10,
       "category": "magic_armour",
-      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common"
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common",
+      "is_shield": true
     },
     {
       "id": "armour-of-meteoric-iron",
@@ -3294,21 +3296,24 @@
       "points": 25,
       "category": "magic_armour",
       "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
-      "restrictions": ""
+      "restrictions": "",
+      "is_shield": true
     },
     {
       "id": "spellshield",
       "name": "Spellshield*",
       "points": 25,
       "category": "magic_armour",
-      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common"
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common",
+      "is_shield": true
     },
     {
       "id": "shield-of-the-warrior-true",
       "name": "Shield of the Warrior True",
       "points": 30,
       "category": "magic_armour",
-      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase."
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase.",
+      "is_shield": true
     },
     {
       "id": "glittering-scales",
@@ -3346,7 +3351,8 @@
       "name": "Luckstone*",
       "points": 15,
       "category": "talisman",
-      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common"
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common",
+      "single_use": true
     },
     {
       "id": "obsidian-lodestone",
@@ -3360,7 +3366,8 @@
       "name": "Paymaster's Coin*",
       "points": 25,
       "category": "talisman",
-      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common"
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common",
+      "single_use": true
     },
     {
       "id": "ironhide-talisman",
@@ -3398,7 +3405,8 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "potion-of-speed",
@@ -3406,14 +3414,16 @@
       "points": 10,
       "category": "enchanted_item",
       "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "becalming-orb",
       "name": "Becalming Orb",
       "points": 20,
       "category": "enchanted_item",
-      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2.",
+      "single_use": true
     },
     {
       "id": "potion-of-toughness",
@@ -3421,7 +3431,8 @@
       "points": 20,
       "category": "enchanted_item",
       "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "potion-of-strength",
@@ -3429,7 +3440,8 @@
       "points": 25,
       "category": "enchanted_item",
       "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "potion-of-fervour",
@@ -3437,14 +3449,16 @@
       "points": 30,
       "category": "enchanted_item",
       "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
-      "restrictions": ""
+      "restrictions": "",
+      "single_use": true
     },
     {
       "id": "healing-potion",
       "name": "Healing Potion*",
       "points": 35,
       "category": "enchanted_item",
-      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.",
+      "single_use": true
     },
     {
       "id": "ruby-ring-of-ruin",
@@ -3482,7 +3496,8 @@
       "name": "Earthing Rod",
       "points": 5,
       "category": "arcane_item",
-      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table.",
+      "single_use": true
     },
     {
       "id": "arcane-familiar",
@@ -3496,14 +3511,16 @@
       "name": "Dispel Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "power-scroll",
       "name": "Power Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "lore-familiar",
@@ -3646,7 +3663,8 @@
           "magical_attacks",
           "quick_shot"
         ]
-      }
+      },
+      "description": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks, Quick Shot. Counts as an Asrai longbow. The wielder may re-roll a single failed roll To Hit made during the Shooting phase. However, if the re-roll also fails to hit, the wielder suffers a single Strength 3 hit with an AP of -."
     },
     {
       "id": "banner-of-midsummers-eve",
@@ -3654,7 +3672,8 @@
       "source": "forces_of_fantasy",
       "type": "magic_standard",
       "points": 15,
-      "effect": "A unit carrying the Banner of Midsummer's Eve gains the Ignores Cover special rule."
+      "effect": "A unit carrying the Banner of Midsummer's Eve gains the Ignores Cover special rule.",
+      "description": "A unit carrying the Banner of Midsummer's Eve gains the Ignores Cover special rule."
     },
     {
       "id": "blight-tipped-arrows",
@@ -3663,7 +3682,9 @@
       "type": "enchanted_item",
       "points": 15,
       "effect": "Single use. Models with Asrai longbow only. A Blight-Tipped Arrow can be fired as normal from the bearer's Asrai longbow. If an enemy model suffers an unsaved wound from a Blight-Tipped Arrow, at the beginning of each subsequent Start of Turn sub-phase that model must make a Toughness test. If the test is failed, the model immediately suffers a single wound with no armour or Regeneration saves permitted (Ward saves may be attempted as normal).",
-      "extremely_common": true
+      "extremely_common": true,
+      "description": "Single use. Models with Asrai longbow only. A Blight-Tipped Arrow can be fired as normal from the bearer's Asrai longbow. If an enemy model suffers an unsaved wound from a Blight-Tipped Arrow, at the beginning of each subsequent Start of Turn sub-phase that model must make a Toughness test. If the test is failed, the model immediately suffers a single wound with no armour or Regeneration saves permitted (Ward saves may be attempted as normal).",
+      "single_use": true
     },
     {
       "id": "heartwood-pendant",
@@ -3672,7 +3693,8 @@
       "type": "arcane_item",
       "points": 15,
       "effect": "In addition to the Lores of Magic they may normally know spells from, the bearer of a Heartwood Pendant may know spells from the Lore of the Wilds.",
-      "extremely_common": true
+      "extremely_common": true,
+      "description": "In addition to the Lores of Magic they may normally know spells from, the bearer of a Heartwood Pendant may know spells from the Lore of the Wilds."
     },
     {
       "id": "banner-of-springtide",
@@ -3680,7 +3702,8 @@
       "source": "arcane_journal",
       "type": "magic_standard",
       "points": 20,
-      "effect": "A unit carrying the Banner of Springtide gains the Quick Shot special rule."
+      "effect": "A unit carrying the Banner of Springtide gains the Quick Shot special rule.",
+      "description": "A unit carrying the Banner of Springtide gains the Quick Shot special rule."
     },
     {
       "id": "banner-of-the-eternal-queen",
@@ -3688,7 +3711,8 @@
       "source": "forces_of_fantasy",
       "type": "magic_standard",
       "points": 20,
-      "effect": "When calculating its combat result, a unit carrying the Banner of the Eternal Queen may claim an additional bonus of +1 combat result point if it is within 6\" of a woodland terrain feature."
+      "effect": "When calculating its combat result, a unit carrying the Banner of the Eternal Queen may claim an additional bonus of +1 combat result point if it is within 6\" of a woodland terrain feature.",
+      "description": "When calculating its combat result, a unit carrying the Banner of the Eternal Queen may claim an additional bonus of +1 combat result point if it is within 6\" of a woodland terrain feature."
     },
     {
       "id": "wailing-arrow",
@@ -3697,7 +3721,9 @@
       "type": "enchanted_item",
       "points": 20,
       "effect": "Single use. Models with Asrai Longbow only. A Wailing Arrow can be fired as normal from the bearer's Asrai longbow. Any unit that suffers an unsaved wound from this shot must make a Panic test as if it had taken heavy casualties.",
-      "extremely_common": true
+      "extremely_common": true,
+      "description": "Single use. Models with Asrai Longbow only. A Wailing Arrow can be fired as normal from the bearer's Asrai longbow. Any unit that suffers an unsaved wound from this shot must make a Panic test as if it had taken heavy casualties.",
+      "single_use": true
     },
     {
       "id": "banner-of-the-hunter-king",
@@ -3705,7 +3731,8 @@
       "source": "forces_of_fantasy",
       "type": "magic_standard",
       "points": 25,
-      "effect": "A unit carrying the Banner of the Hunter King gains the Vanguard special rule."
+      "effect": "A unit carrying the Banner of the Hunter King gains the Vanguard special rule.",
+      "description": "A unit carrying the Banner of the Hunter King gains the Vanguard special rule."
     },
     {
       "id": "banner-of-the-wild-hunt",
@@ -3716,7 +3743,8 @@
       "effect": "May only be taken by a model in an Orion's Wild Hunt Army of Infamy. When calculating its combat result, a unit carrying the Banner of the Wild Hunt may claim an additional bonus of +1 combat result point. In addition, the unit may re-roll Pursuit rolls.",
       "availability": [
         "orions_wild_hunt"
-      ]
+      ],
+      "description": "May only be taken by a model in an Orion's Wild Hunt Army of Infamy. When calculating its combat result, a unit carrying the Banner of the Wild Hunt may claim an additional bonus of +1 combat result point. In addition, the unit may re-roll Pursuit rolls."
     },
     {
       "id": "blades-of-endless-flame",
@@ -3735,7 +3763,8 @@
           "flaming_attacks",
           "magical_attacks"
         ]
-      }
+      },
+      "description": "R Combat, S S, AP -1, Special Rules: Extra Attacks (1), Flaming Attacks, Magical Attacks."
     },
     {
       "id": "orions-favour",
@@ -3743,7 +3772,9 @@
       "source": "arcane_journal",
       "type": "talisman",
       "points": 25,
-      "effect": "Single Use. The bearer of Orion's Favour can re-roll any failed rolls To Hit and/or To Wound made during the Combat phase."
+      "effect": "Single Use. The bearer of Orion's Favour can re-roll any failed rolls To Hit and/or To Wound made during the Combat phase.",
+      "description": "Single Use. The bearer of Orion's Favour can re-roll any failed rolls To Hit and/or To Wound made during the Combat phase.",
+      "single_use": true
     },
     {
       "id": "sigil-of-the-mage-queen",
@@ -3751,7 +3782,9 @@
       "source": "arcane_journal",
       "type": "arcane_item",
       "points": 25,
-      "effect": "Single Use. The bearer of the Sigil of the Mage Queen may use it before making a Casting roll. If they do so, they may apply a +2 modifier to that Casting roll."
+      "effect": "Single Use. The bearer of the Sigil of the Mage Queen may use it before making a Casting roll. If they do so, they may apply a +2 modifier to that Casting roll.",
+      "description": "Single Use. The bearer of the Sigil of the Mage Queen may use it before making a Casting roll. If they do so, they may apply a +2 modifier to that Casting roll.",
+      "single_use": true
     },
     {
       "id": "standard-of-mornings-chill",
@@ -3759,7 +3792,8 @@
       "source": "arcane_journal",
       "type": "magic_standard",
       "points": 25,
-      "effect": "The bearer of the Standard of Morning's Chill can cast the Swirling Mists spell from the Lore of the Wilds as a Bound Spell, with a Power Level of 2."
+      "effect": "The bearer of the Standard of Morning's Chill can cast the Swirling Mists spell from the Lore of the Wilds as a Bound Spell, with a Power Level of 2.",
+      "description": "The bearer of the Standard of Morning's Chill can cast the Swirling Mists spell from the Lore of the Wilds as a Bound Spell, with a Power Level of 2."
     },
     {
       "id": "ariels-favour",
@@ -3767,7 +3801,8 @@
       "source": "arcane_journal",
       "type": "talisman",
       "points": 30,
-      "effect": "The bearer of Ariel's Favour has the Magic Resistance (-2) special rule."
+      "effect": "The bearer of Ariel's Favour has the Magic Resistance (-2) special rule.",
+      "description": "The bearer of Ariel's Favour has the Magic Resistance (-2) special rule."
     },
     {
       "id": "cloak-of-tumbling-leaves",
@@ -3775,7 +3810,9 @@
       "source": "arcane_journal",
       "type": "magic_armour",
       "points": 30,
-      "effect": "Models whose troop type is 'regular infantry' or 'heavy infantry' only. The Cloak of Tumbling Leaves is a suit of light armour. In addition, its wearer has the Fly (10) and Swiftstride special rules. However, the wearer cannot join a unit."
+      "effect": "Models whose troop type is 'regular infantry' or 'heavy infantry' only. The Cloak of Tumbling Leaves is a suit of light armour. In addition, its wearer has the Fly (10) and Swiftstride special rules. However, the wearer cannot join a unit.",
+      "restrictions": "Models whose troop type is 'regular infantry' or 'heavy infantry' only",
+      "description": "The Cloak of Tumbling Leaves is a suit of light armour. In addition, its wearer has the Fly (10) and Swiftstride special rules. However, the wearer cannot join a unit."
     },
     {
       "id": "glamourweave",
@@ -3783,7 +3820,8 @@
       "source": "forces_of_fantasy",
       "type": "talisman",
       "points": 30,
-      "effect": "Enemy models must make a Leadership test before making any rolls To Hit against the wearer of the Glamourweave during the Combat phase. If this test is failed, only rolls of a natural 6 will hit."
+      "effect": "Enemy models must make a Leadership test before making any rolls To Hit against the wearer of the Glamourweave during the Combat phase. If this test is failed, only rolls of a natural 6 will hit.",
+      "description": "Enemy models must make a Leadership test before making any rolls To Hit against the wearer of the Glamourweave during the Combat phase. If this test is failed, only rolls of a natural 6 will hit."
     },
     {
       "id": "moonstone-of-the-hidden-ways",
@@ -3791,7 +3829,9 @@
       "source": "arcane_journal",
       "type": "enchanted_item",
       "points": 30,
-      "effect": "Single Use. The wearer of the Moonstone of Hidden Ways may cast the Forest Walker spell from the Lore of Athel Loren as a Bound spell with a Power Level of 3."
+      "effect": "Single Use. The wearer of the Moonstone of Hidden Ways may cast the Forest Walker spell from the Lore of Athel Loren as a Bound spell with a Power Level of 3.",
+      "description": "Single Use. The wearer of the Moonstone of Hidden Ways may cast the Forest Walker spell from the Lore of Athel Loren as a Bound spell with a Power Level of 3.",
+      "single_use": true
     },
     {
       "id": "wand-of-wych-elm",
@@ -3799,7 +3839,8 @@
       "source": "forces_of_fantasy",
       "type": "arcane_item",
       "points": 30,
-      "effect": "Once per turn, if they are within 3\" of a woodland terrain feature, the bearer of the Wand of Wych Elm may re-roll a failed Casting roll."
+      "effect": "Once per turn, if they are within 3\" of a woodland terrain feature, the bearer of the Wand of Wych Elm may re-roll a failed Casting roll.",
+      "description": "Once per turn, if they are within 3\" of a woodland terrain feature, the bearer of the Wand of Wych Elm may re-roll a failed Casting roll."
     },
     {
       "id": "crown-of-antlers",
@@ -3807,7 +3848,8 @@
       "source": "arcane_journal",
       "type": "enchanted_item",
       "points": 35,
-      "effect": "The Crown of Antlers gives its wearer the Armour Bane (1) and Impact Hits (D3) special rules. This Impact Hit has an Armour Piercing characteristic of -2."
+      "effect": "The Crown of Antlers gives its wearer the Armour Bane (1) and Impact Hits (D3) special rules. This Impact Hit has an Armour Piercing characteristic of -2.",
+      "description": "The Crown of Antlers gives its wearer the Armour Bane (1) and Impact Hits (D3) special rules. This Impact Hit has an Armour Piercing characteristic of -2."
     },
     {
       "id": "hail-of-doom-arrow",
@@ -3816,7 +3858,9 @@
       "type": "enchanted_item",
       "points": 35,
       "effect": "Single use. Models with Asrai Longbow only. A Hail of Doom Arrow can be fired as normal from the bearer's Asrai longbow. If the roll To Hit is successful, place a small (3\") blast template so that its central hole is directly over the centre of the target unit. Any model whose base lies underneath the template risks being hit and suffering a single Strength 4 hit with an AP of -1 and the Magical Attacks special rule.",
-      "extremely_common": true
+      "extremely_common": true,
+      "description": "Single use. Models with Asrai Longbow only. A Hail of Doom Arrow can be fired as normal from the bearer's Asrai longbow. If the roll To Hit is successful, place a small (3\") blast template so that its central hole is directly over the centre of the target unit. Any model whose base lies underneath the template risks being hit and suffering a single Strength 4 hit with an AP of -1 and the Magical Attacks special rule.",
+      "single_use": true
     },
     {
       "id": "hunt-masters-pride",
@@ -3837,7 +3881,8 @@
           "magical_attacks",
           "multiple_wounds_2"
         ]
-      }
+      },
+      "description": "R Combat, S S, AP -2, Special Rules: Magical Attacks, Multiple Wounds (2). May only be taken by models in an Orion's Wild Hunt Army of Infamy. The Multiple Wounds (2) special rule applies only against models whose troop type is 'monstrous infantry', 'monstrous cavalry', 'monstrous creature' or 'behemoth'."
     },
     {
       "id": "merciws-locus",
@@ -3845,7 +3890,8 @@
       "source": "forces_of_fantasy",
       "type": "talisman",
       "points": 35,
-      "effect": "The Strength characteristic of the bearer of Merciw's Locus cannot be modified by any weapon. However, the Strength characteristic of any model that directs its attacks against the bearer during the Combat phase cannot be modified by any weapon either."
+      "effect": "The Strength characteristic of the bearer of Merciw's Locus cannot be modified by any weapon. However, the Strength characteristic of any model that directs its attacks against the bearer during the Combat phase cannot be modified by any weapon either.",
+      "description": "The Strength characteristic of the bearer of Merciw's Locus cannot be modified by any weapon. However, the Strength characteristic of any model that directs its attacks against the bearer during the Combat phase cannot be modified by any weapon either."
     },
     {
       "id": "orb-of-midsummer",
@@ -3853,7 +3899,8 @@
       "source": "arcane_journal",
       "type": "arcane_item",
       "points": 35,
-      "effect": "Once per turn, the bearer of the Orb of Midsummer may re-roll a Casting roll."
+      "effect": "Once per turn, the bearer of the Orb of Midsummer may re-roll a Casting roll.",
+      "description": "Once per turn, the bearer of the Orb of Midsummer may re-roll a Casting roll."
     },
     {
       "id": "railarians-mantle",
@@ -3861,7 +3908,8 @@
       "source": "forces_of_fantasy",
       "type": "magic_armour",
       "points": 35,
-      "effect": "Railarian's Mantle is a suit of light armour. In addition, whilst its wearer is within 6\" of a woodland terrain feature, they have a 4+ Ward save against any wounds suffered."
+      "effect": "Railarian's Mantle is a suit of light armour. In addition, whilst its wearer is within 6\" of a woodland terrain feature, they have a 4+ Ward save against any wounds suffered.",
+      "description": "Railarian's Mantle is a suit of light armour. In addition, whilst its wearer is within 6\" of a woodland terrain feature, they have a 4+ Ward save against any wounds suffered."
     },
     {
       "id": "banner-of-the-wildwood",
@@ -3869,7 +3917,8 @@
       "source": "forces_of_fantasy",
       "type": "magic_standard",
       "points": 40,
-      "effect": "A unit carrying the Banner of the Wildwood gains the Fear special rule. If the unit already has the Fear special rule, it instead gains the Terror special rule."
+      "effect": "A unit carrying the Banner of the Wildwood gains the Fear special rule. If the unit already has the Fear special rule, it instead gains the Terror special rule.",
+      "description": "A unit carrying the Banner of the Wildwood gains the Fear special rule. If the unit already has the Fear special rule, it instead gains the Terror special rule."
     },
     {
       "id": "bow-of-loren",
@@ -3887,7 +3936,8 @@
           "armour_bane_1",
           "magical_attacks"
         ]
-      }
+      },
+      "description": "R 32\", S S, AP -, Special Rules: Armour Bane (1), Magical Attacks. Counts as an Asrai longbow. The wielder may make a number of shooting attacks equal to their Attacks characteristic, rather than the usual one. This model does not suffer any modifiers for firing multiple shots."
     },
     {
       "id": "daiths-reaper",
@@ -3904,7 +3954,8 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "description": "R Combat, S S+1, AP -1, Special Rules: Magical Attacks. Enemy models must re-roll any successful Armour Save rolls against wounds caused by this weapon."
     },
     {
       "id": "mantle-of-rebirth",
@@ -3912,7 +3963,8 @@
       "source": "arcane_journal",
       "type": "magic_armour",
       "points": 40,
-      "effect": "The Mantle of Rebirth is a suit of light armour. In addition, its wearer has the Regeneration (5+) special rule."
+      "effect": "The Mantle of Rebirth is a suit of light armour. In addition, its wearer has the Regeneration (5+) special rule.",
+      "description": "The Mantle of Rebirth is a suit of light armour. In addition, its wearer has the Regeneration (5+) special rule."
     },
     {
       "id": "oaken-stave",
@@ -3920,7 +3972,8 @@
       "source": "forces_of_fantasy",
       "type": "arcane_item",
       "points": 40,
-      "effect": "Whilst within 3\" of a woodland terrain feature, the bearer of the Oaken Stave increases their Dispel range by 3\". Additionally, whilst within 3\" of a woodland terrain feature, the bearer may roll an extra D6 when making the Dispel roll and discard the lowest result."
+      "effect": "Whilst within 3\" of a woodland terrain feature, the bearer of the Oaken Stave increases their Dispel range by 3\". Additionally, whilst within 3\" of a woodland terrain feature, the bearer may roll an extra D6 when making the Dispel roll and discard the lowest result.",
+      "description": "Whilst within 3\" of a woodland terrain feature, the bearer of the Oaken Stave increases their Dispel range by 3\". Additionally, whilst within 3\" of a woodland terrain feature, the bearer may roll an extra D6 when making the Dispel roll and discard the lowest result."
     },
     {
       "id": "blades-of-loec",
@@ -3938,7 +3991,8 @@
           "extra_attacks_d3",
           "magical_attacks"
         ]
-      }
+      },
+      "description": "R Combat, S S, AP -, Special Rules: Extra Attacks (+D3), Magical Attacks. The wielder of the Blades of Loec may re-roll any failed rolls To Wound."
     },
     {
       "id": "deepwood-sphere",
@@ -3946,7 +4000,8 @@
       "source": "forces_of_fantasy",
       "type": "arcane_item",
       "points": 45,
-      "effect": "Unless the bearer of the Deepwood Sphere is fleeing or engaged in combat, they may use it when an enemy Wizard that is within 6\" of a woodland terrain feature successfully casts a spell. If they do so, no dispel attempt can be made and the spell is cast as normal. Once the spell has been resolved, the enemy Wizard immediately suffers D3 Strength 4 hits, each with an AP of -1."
+      "effect": "Unless the bearer of the Deepwood Sphere is fleeing or engaged in combat, they may use it when an enemy Wizard that is within 6\" of a woodland terrain feature successfully casts a spell. If they do so, no dispel attempt can be made and the spell is cast as normal. Once the spell has been resolved, the enemy Wizard immediately suffers D3 Strength 4 hits, each with an AP of -1.",
+      "description": "Unless the bearer of the Deepwood Sphere is fleeing or engaged in combat, they may use it when an enemy Wizard that is within 6\" of a woodland terrain feature successfully casts a spell. If they do so, no dispel attempt can be made and the spell is cast as normal. Once the spell has been resolved, the enemy Wizard immediately suffers D3 Strength 4 hits, each with an AP of -1."
     },
     {
       "id": "helm-of-the-hunt",
@@ -3954,7 +4009,8 @@
       "source": "forces_of_fantasy",
       "type": "magic_armour",
       "points": 50,
-      "effect": "May be worn with other armour. The wearer of the Helm of the Hunt improves their armour value by 1 (to a maximum of 2+). In addition, the wearer has a +1 modifier to both their Weapon Skill and Attacks characteristics during a turn in which they charge."
+      "effect": "May be worn with other armour. The wearer of the Helm of the Hunt improves their armour value by 1 (to a maximum of 2+). In addition, the wearer has a +1 modifier to both their Weapon Skill and Attacks characteristics during a turn in which they charge.",
+      "description": "May be worn with other armour. The wearer of the Helm of the Hunt improves their armour value by 1 (to a maximum of 2+). In addition, the wearer has a +1 modifier to both their Weapon Skill and Attacks characteristics during a turn in which they charge."
     },
     {
       "id": "wraithstone",
@@ -3962,7 +4018,8 @@
       "source": "forces_of_fantasy",
       "type": "enchanted_item",
       "points": 50,
-      "effect": "Unless the bearer of the Wraithstone is fleeing, enemy units suffer a -1 modifier to their Leadership characteristic (to a minimum of 2) whilst within 6\" of the bearer."
+      "effect": "Unless the bearer of the Wraithstone is fleeing, enemy units suffer a -1 modifier to their Leadership characteristic (to a minimum of 2) whilst within 6\" of the bearer.",
+      "description": "Unless the bearer of the Wraithstone is fleeing, enemy units suffer a -1 modifier to their Leadership characteristic (to a minimum of 2) whilst within 6\" of the bearer."
     },
     {
       "id": "vauls-wrath",
@@ -3981,7 +4038,8 @@
           "magical_attacks",
           "multiple_wounds_d3"
         ]
-      }
+      },
+      "description": "R 32\", S S+1, AP -2, Special Rules: Flaming Attacks, Magical Attacks, Multiple Wounds (2). Once per game, unless the wielder moved during the previous Movement phase, Vaul's Wrath can be shot like a bolt thrower using the 'Through & Through' special rule."
     },
     {
       "id": "spear-of-twilight",
@@ -3999,7 +4057,8 @@
           "killing_blow",
           "magical_attacks"
         ]
-      }
+      },
+      "description": "R Combat, S S, AP -2, Special Rules: Killing Blow, Magical Attacks. When the wielder of the Spear of Twilight makes a roll To Wound, a roll of 3+ is always a success, regardless of the target's Toughness."
     },
     {
       "id": "tapestry-of-talsyn",
@@ -4010,7 +4069,9 @@
       "effect": "Battle Standard Bearer in a Host of Talsyn Army of Infamy only. A model carrying the Tapestry of Talsyn increases their Command Range to 18\". In addition, friendly units within the bearer's Command Range improve their Leadership characteristic by 1 (to a maximum of 10).",
       "availability": [
         "host_of_talsyn"
-      ]
+      ],
+      "restrictions": "Battle Standard Bearer in a Host of Talsyn Army of Infamy only",
+      "description": "A model carrying the Tapestry of Talsyn increases their Command Range to 18\". In addition, friendly units within the bearer's Command Range improve their Leadership characteristic by 1 (to a maximum of 10)."
     }
   ],
   "lore_of_athel_loren": [
