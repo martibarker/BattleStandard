@@ -121,6 +121,8 @@ export type ArmyLimitType =
 
 export type UnitSource = 'forces_of_fantasy' | 'arcane_journal' | 'ravening_hordes';
 
+export type FactionPublication = 'forces_of_fantasy' | 'ravening_hordes';
+
 export interface Unit {
   id: string;
   name: string;
@@ -234,6 +236,8 @@ export interface ArmyComposition {
 export interface Faction {
   id: string;
   name: string;
+  /** Which book this faction was published in */
+  publication?: FactionPublication;
   sources: string[];
   army_compositions: ArmyComposition[];
   units: Unit[];

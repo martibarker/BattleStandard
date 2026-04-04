@@ -4262,5 +4262,6 @@
       "description": "A Chivalrous Vow available in Errantry Crusade armies (replaces Knight's Vow at no cost). A model with this Vow has the Veteran special rule and does not have to make a Panic test when a friendly Peasantry unit is destroyed within 6\" or fled through.",
       "restrictions": "A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule. Available in Errantry Crusade armies only."
     }
-  ]
+  ],
+  "publication": "forces_of_fantasy"
 }

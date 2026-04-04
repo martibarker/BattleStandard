@@ -21,6 +21,43 @@ const MATCHED_PLAY_OPTIONS: { value: MatchedPlayFormat; label: string; desc: str
   },
 ];
 
+type PublicationGroup = {
+  id: string;
+  label: string;
+  subtitle: string;
+  factions: Faction[];
+  comingSoon?: boolean;
+};
+
+const FACTION_GROUPS: PublicationGroup[] = [
+  {
+    id: 'forces_of_fantasy',
+    label: 'Forces of Fantasy',
+    subtitle: 'Warhammer: The Old World core army books',
+    factions: FACTIONS.filter((f) => f.publication === 'forces_of_fantasy'),
+  },
+  {
+    id: 'ravening_hordes',
+    label: 'Ravening Hordes',
+    subtitle: 'Supplemental army lists',
+    factions: FACTIONS.filter((f) => f.publication === 'ravening_hordes'),
+  },
+  {
+    id: 'warhammer_legends',
+    label: 'Warhammer Legends',
+    subtitle: 'Classic armies returning to the battlefield',
+    factions: [],
+    comingSoon: true,
+  },
+  {
+    id: 'square_based_legends',
+    label: 'Square Based Legends',
+    subtitle: 'Community-created army supplements',
+    factions: [],
+    comingSoon: true,
+  },
+];
+
 export default function NewArmy() {
   const navigate = useNavigate();
   const createArmy = useArmyStore((s) => s.createArmy);
@@ -32,6 +69,7 @@ export default function NewArmy() {
   const [pointsLimit, setPointsLimit] = useState(2000);
   const [customPoints, setCustomPoints] = useState('');
   const [useCustom, setUseCustom] = useState(false);
+  const [expandedGroup, setExpandedGroup] = useState<string>('forces_of_fantasy');
 
   const effectivePoints = useCustom ? parseInt(customPoints) || 0 : pointsLimit;
 
@@ -83,32 +121,107 @@ export default function NewArmy() {
           />
         </Field>
 
-        {/* Faction */}
-        <Field label="Faction">
-          <div className="grid grid-cols-2 gap-2">
-            {FACTIONS.map((f) => (
-              <label
-                key={f.id}
-                className="flex items-center gap-2 rounded p-2.5 cursor-pointer border transition-colors"
-                style={{
-                  backgroundColor: 'var(--color-bg-elevated)',
-                  borderColor: selectedFaction.id === f.id ? 'var(--color-accent-amber)' : 'var(--color-border)',
-                }}
-              >
-                <input
-                  type="radio"
-                  name="faction"
-                  checked={selectedFaction.id === f.id}
-                  onChange={() => handleFactionChange(f)}
-                  className="shrink-0"
-                />
-                <span className="text-sm font-medium" style={{ color: 'var(--color-text-primary)' }}>
-                  {f.name}
-                </span>
-              </label>
-            ))}
+        {/* Faction — grouped by publication */}
+        <div>
+          <p className="text-sm font-semibold mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>Faction</p>
+          <div className="flex flex-col gap-1.5">
+            {FACTION_GROUPS.map((group) => {
+              const isOpen = expandedGroup === group.id;
+              const selectedInGroup = !group.comingSoon && group.factions.some((f) => f.id === selectedFaction.id);
+
+              return (
+                <div
+                  key={group.id}
+                  className="rounded border overflow-hidden"
+                  style={{
+                    borderColor: selectedInGroup ? 'var(--color-accent-amber)' : 'var(--color-border)',
+                    backgroundColor: 'var(--color-bg-elevated)',
+                  }}
+                >
+                  {/* Group header */}
+                  <button
+                    onClick={() => !group.comingSoon && setExpandedGroup(isOpen ? '' : group.id)}
+                    disabled={group.comingSoon}
+                    className="w-full flex items-center justify-between px-4 py-3 text-left"
+                    style={{ backgroundColor: 'transparent', cursor: group.comingSoon ? 'default' : 'pointer' }}
+                  >
+                    <div className="flex items-center gap-2 min-w-0">
+                      <div className="min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span
+                            className="text-sm font-semibold"
+                            style={{ color: group.comingSoon ? 'var(--color-text-secondary)' : 'var(--color-text-primary)' }}
+                          >
+                            {group.label}
+                          </span>
+                          {group.comingSoon && (
+                            <span
+                              className="text-xs px-1.5 py-0.5 rounded font-medium"
+                              style={{
+                                backgroundColor: 'var(--color-bg-dark)',
+                                color: 'var(--color-accent-blue)',
+                                border: '1px solid var(--color-accent-blue)',
+                                fontSize: '0.6rem',
+                                opacity: 0.8,
+                              }}
+                            >
+                              Coming Soon
+                            </span>
+                          )}
+                          {selectedInGroup && (
+                            <span className="text-xs" style={{ color: 'var(--color-accent-amber)' }}>
+                              {selectedFaction.name}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                          {group.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                    {!group.comingSoon && (
+                      <span className="text-xs shrink-0 ml-3" style={{ color: 'var(--color-text-secondary)' }}>
+                        {isOpen ? '▲' : '▼'}
+                      </span>
+                    )}
+                  </button>
+
+                  {/* Faction list */}
+                  {isOpen && !group.comingSoon && group.factions.length > 0 && (
+                    <div
+                      className="border-t grid grid-cols-2 gap-px"
+                      style={{ borderColor: 'var(--color-border)', backgroundColor: 'var(--color-border)' }}
+                    >
+                      {group.factions.map((f) => (
+                        <label
+                          key={f.id}
+                          className="flex items-center gap-2 px-3 py-2.5 cursor-pointer"
+                          style={{
+                            backgroundColor: selectedFaction.id === f.id ? 'rgba(217,119,6,0.12)' : 'var(--color-bg-elevated)',
+                          }}
+                        >
+                          <input
+                            type="radio"
+                            name="faction"
+                            checked={selectedFaction.id === f.id}
+                            onChange={() => handleFactionChange(f)}
+                            className="shrink-0"
+                          />
+                          <span
+                            className="text-sm font-medium leading-tight"
+                            style={{ color: selectedFaction.id === f.id ? 'var(--color-accent-amber)' : 'var(--color-text-primary)' }}
+                          >
+                            {f.name}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
-        </Field>
+        </div>
 
         {/* Army composition */}
         <Field label="Army composition">
