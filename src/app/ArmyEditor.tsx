@@ -590,42 +590,32 @@ function WeaponProfileTable({ profiles }: { profiles: WeaponProfile[] }) {
 
 
 function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
-  const [expanded, setExpanded] = useState<string | null>(null);
   if (!ruleIds || ruleIds.length === 0) return null;
-  const rulesData = (specialRulesData as { rules: { id: string; name: string; description: string }[] }).rules;
+  const rulesData = (specialRulesData as { rules: { id: string; name: string }[] }).rules;
   return (
-    <div className="flex flex-col gap-1 mt-1.5">
-      <div className="flex flex-wrap gap-1">
-        {ruleIds.map((id) => {
-          const rule = rulesData.find((r) => r.id === id);
-          const name = rule?.name ?? formatRuleName(id);
-          const hasDesc = !!rule?.description;
-          const isOpen = expanded === id;
-          return (
-            <button
-              key={id}
-              onClick={() => hasDesc ? setExpanded(isOpen ? null : id) : undefined}
-              className="text-xs px-1.5 py-0.5 rounded text-left"
-              style={{
-                backgroundColor: isOpen ? 'var(--color-bg-elevated)' : 'var(--color-bg-dark)',
-                color: isOpen ? 'var(--color-accent-blue)' : 'var(--color-text-secondary)',
-                border: `1px solid ${isOpen ? 'var(--color-accent-blue)' : 'var(--color-border)'}`,
-                cursor: hasDesc ? 'pointer' : 'default',
-              }}
-            >
-              {name}{hasDesc ? (isOpen ? ' ▲' : ' ▼') : ''}
-            </button>
-          );
-        })}
-      </div>
-      {expanded && (() => {
-        const rule = rulesData.find((r) => r.id === expanded);
-        return rule?.description ? (
-          <p className="text-xs leading-snug px-2 py-1.5 rounded" style={{ color: 'var(--color-text-secondary)', backgroundColor: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)' }}>
-            {rule.description}
-          </p>
-        ) : null;
-      })()}
+    <div className="flex flex-wrap gap-1 mt-1.5">
+      {ruleIds.map((id) => {
+        const rule = rulesData.find((r) => r.id === id);
+        const name = rule?.name ?? formatRuleName(id);
+        const url = `https://tow.whfb.app/special-rules/${id.replace(/_/g, '-')}`;
+        return (
+          <a
+            key={id}
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs px-1.5 py-0.5 rounded"
+            style={{
+              backgroundColor: 'var(--color-bg-dark)',
+              color: 'var(--color-accent-blue)',
+              border: '1px solid var(--color-border)',
+              textDecoration: 'none',
+            }}
+          >
+            {name}
+          </a>
+        );
+      })}
     </div>
   );
 }
