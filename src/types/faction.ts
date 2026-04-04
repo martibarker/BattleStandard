@@ -157,7 +157,12 @@ export interface Unit {
   /** Base points per model, or total for characters and war machines */
   points: number;
   profiles: ProfileEntry[];
-  equipment: string[];
+  /**
+   * Unit equipment list. Most units use a flat string[].
+   * Cavalry and chariots may use {rider: string[], mount: string[]} or {crew: string[], mount: string[]}.
+   * Use flattenEquipment() from armyValidation to get a safe flat array.
+   */
+  equipment: string[] | Record<string, string[]>;
   options?: Option[];
   command?: CommandUpgrade[];
   /** Maximum points value of magic standard this unit may carry */

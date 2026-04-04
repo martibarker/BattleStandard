@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
-import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
+import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, flattenEquipment, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
 import type { Faction, Unit, WeaponProfile, Option, OptionChoice } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
@@ -353,13 +353,14 @@ export default function ArmyEditor() {
                   const mountUnit = entry.selectedMountId
                     ? faction.units.find((u) => u.id === entry.selectedMountId)
                     : null;
+                  const baseEquip = flattenEquipment(unit.equipment);
                   const extraEquip = [
                     ...entry.selectedOptions.filter(
-                      (o) => /\bshield\b/i.test(o) && !(unit.equipment ?? []).some((e) => /\bshield\b/i.test(e))
+                      (o) => /\bshield\b/i.test(o) && !baseEquip.some((e) => /\bshield\b/i.test(e))
                     ),
-                    ...(mountUnit?.equipment ?? []),
+                    ...flattenEquipment(mountUnit?.equipment),
                   ];
-                  const entrySave = calcArmourSave([...(unit.equipment ?? []), ...extraEquip], unit.special_rules ?? []);
+                  const entrySave = calcArmourSave([...baseEquip, ...extraEquip], unit.special_rules ?? []);
 
                   return (
                     <div
@@ -433,7 +434,7 @@ export default function ArmyEditor() {
                       {unit.weapon_profiles && unit.weapon_profiles.length > 0 && (() => {
                         // Show profiles matching base equipment OR currently selected weapon options
                         const equipped = [
-                          ...(unit.equipment ?? []),
+                          ...flattenEquipment(unit.equipment),
                           ...entry.selectedOptions,
                         ].map(e => e.toLowerCase());
                         const relevantProfiles = unit.weapon_profiles.filter(wp =>
@@ -548,7 +549,7 @@ function StatBar({ unit, save }: { unit: Unit; save?: string }) {
   if (!main) return null;
   const p = main.profile;
   const stats = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld'] as const;
-  const displaySave = save ?? calcArmourSave(unit.equipment ?? [], unit.special_rules ?? []);
+  const displaySave = save ?? calcArmourSave(unit.equipment, unit.special_rules ?? []);
   return (
     <div className="flex gap-1 mt-1.5 flex-wrap">
       {stats.map((s) => (

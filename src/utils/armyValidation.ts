@@ -3,12 +3,26 @@ import type { ArmyList, ArmyEntry } from '../types/army';
 
 
 /**
+ * Normalise a unit's equipment field into a flat string array.
+ * Handles: string[] (most units), {rider/crew/mount: string[]} objects (cavalry/chariots), null/undefined.
+ */
+export function flattenEquipment(raw: unknown): string[] {
+  if (!raw) return [];
+  if (Array.isArray(raw)) return raw as string[];
+  if (typeof raw === 'object') {
+    return Object.values(raw as Record<string, string[]>).flat();
+  }
+  return [];
+}
+
+/**
  * Calculate armour save from equipment strings and special rule IDs.
  * Returns e.g. "4+" or "-" if no armour present.
  * Barding (from mount equipment) should be included in the equipment array.
+ * Accepts a flat string[] or the raw equipment field (object/null) from unit data.
  */
-export function calcArmourSave(equipment: string[], specialRuleIds: string[] = []): string {
-  const equip = equipment.map((e) => e.toLowerCase());
+export function calcArmourSave(equipment: unknown, specialRuleIds: string[] = []): string {
+  const equip = flattenEquipment(equipment).map((e) => e.toLowerCase());
 
   let base: number | null = null;
   if (equip.some((e) => e.includes('full plate'))) base = 4;
