@@ -822,6 +822,18 @@
       "name": "Frenzy",
       "source": "rulebook",
       "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "flaming_attacks",
+      "name": "Flaming Attacks",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "fly_8",
+      "name": "Fly (8)",
+      "source": "rulebook",
+      "description": "Refer to the Warhammer: The Old World rulebook."
     }
   ]
 }

@@ -17,7 +17,10 @@
         "S": "S+1",
         "AP": "-"
       },
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
+      "grants_rules": [
+        "impetuous"
+      ]
     },
     {
       "id": "biting-blade",
@@ -51,7 +54,10 @@
         "S": "S",
         "AP": "-"
       },
-      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
+      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common",
+      "grants_rules": [
+        "flaming_attacks"
+      ]
     },
     {
       "id": "cackling-blade",
@@ -86,7 +92,10 @@
         "S": "S",
         "AP": "-"
       },
-      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
+      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer",
+      "grants_rules": [
+        "monster_slayer"
+      ]
     },
     {
       "id": "dragonblade",
@@ -227,7 +236,10 @@
         "S": "S",
         "AP": "-1"
       },
-      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
+      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)",
+      "grants_rules": [
+        "magic_resistance"
+      ]
     },
     {
       "id": "sword-of-battle",
@@ -312,7 +324,10 @@
         "S": "S",
         "AP": "-"
       },
-      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
+      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First",
+      "grants_rules": [
+        "strike_first"
+      ]
     },
     {
       "id": "armour-of-destiny",
@@ -479,7 +494,11 @@
         "notes": "Infantry only. Heavy armour."
       },
       "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
-      "restrictions": ""
+      "restrictions": "",
+      "grants_rules": [
+        "move_through_cover",
+        "scouts"
+      ]
     },
     {
       "id": "dawnstone",
@@ -554,7 +573,11 @@
       "points": 40,
       "category": "enchanted_item",
       "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!\nModels whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
-      "restrictions": ""
+      "restrictions": "",
+      "grants_rules": [
+        "fly_8",
+        "swiftstride"
+      ]
     },
     {
       "id": "healing-potion",
@@ -576,7 +599,10 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common",
+      "grants_rules": [
+        "immune_to_psychology"
+      ]
     },
     {
       "id": "potion-of-speed",
@@ -703,7 +729,10 @@
       "points": 50,
       "category": "magic_standard",
       "description": "No regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe. A unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
-      "restrictions": ""
+      "restrictions": "",
+      "grants_rules": [
+        "stubborn"
+      ]
     },
     {
       "id": "banner-of-swirling-wind",
@@ -751,7 +780,10 @@
       "points": 25,
       "category": "magic_standard",
       "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.\nA unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
-      "restrictions": ""
+      "restrictions": "",
+      "grants_rules": [
+        "flaming_attacks"
+      ]
     },
     {
       "id": "totem-of-wrath",

@@ -447,6 +447,10 @@ export default function ArmyEditor() {
                         ...(unit.options ?? []).flatMap((o) =>
                           entry.selectedOptions.includes(o.description) ? (o.grants_rules ?? []) : []
                         ),
+                        ...(entry.selectedMagicItemIds ?? []).flatMap((itemId) => {
+                          const item = faction.magic_items.find((i) => i.id === itemId) as (typeof faction.magic_items[0] & { grants_rules?: string[] }) | undefined;
+                          return item?.grants_rules ?? [];
+                        }),
                       ]} />
 
                       {showOptions && (
