@@ -1159,10 +1159,16 @@ function EntryOptionsPanel({
                           <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-secondary)', fontSize: '0.6rem' }}>Single Use</span>
                         )}
                       </span>
-                      {/* Description / rules text */}
+                      {/* Flavour text — italic */}
                       {item.description && (
                         <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.8 }}>
                           {item.description}
+                        </span>
+                      )}
+                      {/* Rules text — non-italic */}
+                      {(item as typeof item & { rules_text?: string }).rules_text && (
+                        <span className="text-xs leading-snug" style={{ color: 'var(--color-text-secondary)' }}>
+                          {(item as typeof item & { rules_text?: string }).rules_text}
                         </span>
                       )}
                       {/* Weapon profile */}
@@ -1317,6 +1323,11 @@ function EntryOptionsPanel({
                       {item.description && (
                         <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.8 }}>
                           {item.description}
+                        </span>
+                      )}
+                      {(item as typeof item & { rules_text?: string }).rules_text && (
+                        <span className="text-xs leading-snug" style={{ color: 'var(--color-text-secondary)' }}>
+                          {(item as typeof item & { rules_text?: string }).rules_text}
                         </span>
                       )}
                     </span>

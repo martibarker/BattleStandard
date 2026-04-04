@@ -5201,25 +5201,28 @@
       "name": "Armour of Meteoric Iron",
       "points": 20,
       "category": "magic_armour",
-      "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
-      "restrictions": ""
+      "description": "",
+      "restrictions": "",
+      "rules_text": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either."
     },
     {
       "id": "trailblazers-hauberk",
       "name": "Trailblazer's Hauberk",
       "points": 20,
       "category": "magic_armour",
-      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.\nModels whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
-      "restrictions": ""
+      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.",
+      "restrictions": "",
+      "rules_text": "Models whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules."
     },
     {
       "id": "levitating-shield",
       "name": "Levitating Shield",
       "points": 25,
       "category": "magic_armour",
-      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.\nModels whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
+      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.",
       "restrictions": "",
-      "is_shield": true
+      "is_shield": true,
+      "rules_text": "Models whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat."
     },
     {
       "id": "spellshield",
@@ -5235,7 +5238,8 @@
       "source": "arcane_journal",
       "category": "magic_armour",
       "points": 25,
-      "description": "Full plate armour. The wearer may cast the Hammerhand spell from the Lore of Battle Magic as a Bound spell with a Power Level of 2."
+      "description": "Full plate armour.",
+      "rules_text": "The wearer may cast the Hammerhand spell from the Lore of Battle Magic as a Bound spell with a Power Level of 2."
     },
     {
       "id": "shield-of-the-warrior-true",
@@ -5251,7 +5255,8 @@
       "source": "forces_of_fantasy",
       "category": "magic_armour",
       "points": 35,
-      "description": "Light armour. May be worn by an Imperial Wizard even if they do not normally have the option to be equipped with armour, a shield or barding, without penalty. Wearer has a 5+ Ward save against any wounds suffered."
+      "description": "Light armour.",
+      "rules_text": "May be worn by an Imperial Wizard even if they do not normally have the option to be equipped with armour, a shield or barding, without penalty. Wearer has a 5+ Ward save against any wounds suffered."
     },
     {
       "id": "glittering-scales",
@@ -5317,15 +5322,17 @@
       "name": "Luckstone*",
       "points": 15,
       "category": "talisman",
-      "description": "Can luck be trapped within a dull stone pendant? Possibly.\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.\n*Extremely Common",
-      "single_use": true
+      "description": "Can luck be trapped within a dull stone pendant? Possibly.",
+      "single_use": true,
+      "rules_text": "Single use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll. *Extremely Common"
     },
     {
       "id": "obsidian-lodestone",
       "name": "Obsidian Lodestone*",
       "points": 20,
       "category": "talisman",
-      "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.\nA model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
+      "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.",
+      "rules_text": "A model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
     },
     {
       "id": "witch_hunters_ward",
@@ -5333,7 +5340,8 @@
       "source": "arcane_journal",
       "category": "talisman",
       "points": 20,
-      "description": "Extremely Common (*). A model bearing this has the Magic Resistance (-2) special rule. Once per game, the bearer may re-roll a single failed Armour Save roll."
+      "description": "Extremely Common (*).",
+      "rules_text": "A model bearing this has the Magic Resistance (-2) special rule. Once per game, the bearer may re-roll a single failed Armour Save roll."
     },
     {
       "id": "jade_amulet",
@@ -5341,23 +5349,26 @@
       "source": "forces_of_fantasy",
       "category": "talisman",
       "points": 25,
-      "description": "Extremely Common (*). The bearer is immune to the Killing Blow special rule. If the bearer is struck a Killing Blow, they are permitted armour and Regeneration saves as normal. If the wound is unsaved, they lose a single Wound."
+      "description": "Extremely Common (*).",
+      "rules_text": "The bearer is immune to the Killing Blow special rule. If the bearer is struck a Killing Blow, they are permitted armour and Regeneration saves as normal. If the wound is unsaved, they lose a single Wound."
     },
     {
       "id": "paymasters-coin",
       "name": "Paymaster's Coin*",
       "points": 25,
       "category": "talisman",
-      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.\n*Extremely Common",
-      "single_use": true
+      "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.",
+      "single_use": true,
+      "rules_text": "Single use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase. *Extremely Common"
     },
     {
       "id": "ironhide-talisman",
       "name": "Ironhide Talisman",
       "points": 30,
       "category": "talisman",
-      "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.\nModels whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6.Note that this magic item does not work against attacks that hit automatically.",
-      "restrictions": ""
+      "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.",
+      "restrictions": "",
+      "rules_text": "Models whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6. Note that this magic item does not work against attacks that hit automatically."
     },
     {
       "id": "talisman-of-protection",
@@ -5379,33 +5390,37 @@
       "name": "Dawnstone",
       "points": 35,
       "category": "talisman",
-      "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical.\nThe magic trapped within this semi-precious stone binds together shattered armour plates.\nThe bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
-      "restrictions": ""
+      "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical. The magic trapped within this semi-precious stone binds together shattered armour plates.",
+      "restrictions": "",
+      "rules_text": "The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1."
     },
     {
       "id": "icon-of-fortitude",
       "name": "Icon of Fortitude",
       "points": 35,
       "category": "talisman",
-      "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.\nModels whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
-      "restrictions": ""
+      "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.",
+      "restrictions": "",
+      "rules_text": "Models whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound."
     },
     {
       "id": "potion-of-foolhardiness",
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common",
-      "single_use": true
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.",
+      "single_use": true,
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
     },
     {
       "id": "potion-of-speed",
       "name": "Potion of Speed*",
       "points": 10,
       "category": "enchanted_item",
-      "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
+      "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.",
       "restrictions": "",
-      "single_use": true
+      "single_use": true,
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common"
     },
     {
       "id": "shroud_of_iron",
@@ -5413,7 +5428,8 @@
       "source": "forces_of_fantasy",
       "category": "enchanted_item",
       "points": 10,
-      "description": "The bearer of the Shroud of Iron (and any unit they have joined) has a 6+ Ward save against any wounds suffered that were caused by a non-magical template."
+      "description": "",
+      "rules_text": "The bearer of the Shroud of Iron (and any unit they have joined) has a 6+ Ward save against any wounds suffered that were caused by a non-magical template."
     },
     {
       "id": "the_silver_horn",
@@ -5421,24 +5437,27 @@
       "source": "forces_of_fantasy",
       "category": "enchanted_item",
       "points": 15,
-      "description": "Characters with the Swiftstride special rule only. The bearer of the Silver Horn (and any unit they have joined) may re-roll the D6 when using the Swiftstride special rule."
+      "description": "Characters with the Swiftstride special rule only.",
+      "rules_text": "The bearer of the Silver Horn (and any unit they have joined) may re-roll the D6 when using the Swiftstride special rule."
     },
     {
       "id": "becalming-orb",
       "name": "Becalming Orb",
       "points": 20,
       "category": "enchanted_item",
-      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.\nSingle Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2.",
-      "single_use": true
+      "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.",
+      "single_use": true,
+      "rules_text": "Single Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
     },
     {
       "id": "potion-of-toughness",
       "name": "Potion of Toughness*",
       "points": 20,
       "category": "enchanted_item",
-      "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
+      "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.",
       "restrictions": "",
-      "single_use": true
+      "single_use": true,
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common"
     },
     {
       "id": "ring_of_fortune",
@@ -5446,8 +5465,9 @@
       "source": "arcane_journal",
       "category": "enchanted_item",
       "points": 20,
-      "description": "Single use. The bearer of the Ring of Fortune can re-roll any failed rolls To Wound made during the Combat phase.",
-      "single_use": true
+      "description": "",
+      "single_use": true,
+      "rules_text": "Single use. The bearer of the Ring of Fortune can re-roll any failed rolls To Wound made during the Combat phase."
     },
     {
       "id": "ring_of_taal",
@@ -5455,41 +5475,46 @@
       "source": "arcane_journal",
       "category": "enchanted_item",
       "points": 20,
-      "description": "Single use. The bearer of the Ring of Taal may cast the Oaken Shield spell from the Lore of Battle Magic as a Bound spell with a Power Level of 3.",
-      "single_use": true
+      "description": "",
+      "single_use": true,
+      "rules_text": "Single use. The bearer of the Ring of Taal may cast the Oaken Shield spell from the Lore of Battle Magic as a Bound spell with a Power Level of 3."
     },
     {
       "id": "potion-of-strength",
       "name": "Potion of Strength*",
       "points": 25,
       "category": "enchanted_item",
-      "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
+      "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.",
       "restrictions": "",
-      "single_use": true
+      "single_use": true,
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common"
     },
     {
       "id": "potion-of-fervour",
       "name": "Potion of Fervour",
       "points": 30,
       "category": "enchanted_item",
-      "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.\nSingle Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10).Note that a model can only consume a single potion (of any type) per Command phase.",
+      "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.",
       "restrictions": "",
-      "single_use": true
+      "single_use": true,
+      "rules_text": "Single Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10). Note that a model can only consume a single potion (of any type) per Command phase."
     },
     {
       "id": "healing-potion",
       "name": "Healing Potion*",
       "points": 35,
       "category": "enchanted_item",
-      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.",
-      "single_use": true
+      "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.",
+      "single_use": true,
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. The model immediately recovers D3 lost Wounds."
     },
     {
       "id": "ruby-ring-of-ruin",
       "name": "Ruby Ring of Ruin",
       "points": 35,
       "category": "enchanted_item",
-      "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.\nThe wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
     },
     {
       "id": "squintsoffen_marvellous_magnifier",
@@ -5497,10 +5522,11 @@
       "source": "arcane_journal",
       "category": "enchanted_item",
       "points": 35,
-      "description": "Extremely Common (*). City-state of Nuln Army of Infamy only. The bearer of a Magnifier and any unit they have joined does not suffer the usual -1 To Hit modifier when shooting at Long Range.",
+      "description": "Extremely Common (*). City-state of Nuln Army of Infamy only.",
       "restrictions": [
         "City-state of Nuln Army of Infamy only"
-      ]
+      ],
+      "rules_text": "The bearer of a Magnifier and any unit they have joined does not suffer the usual -1 To Hit modifier when shooting at Long Range."
     },
     {
       "id": "arch-lightning-rod",
@@ -5515,8 +5541,9 @@
       "name": "Flying Carpet",
       "points": 40,
       "category": "enchanted_item",
-      "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!\nModels whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
-      "restrictions": ""
+      "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!",
+      "restrictions": "",
+      "rules_text": "Models whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit."
     },
     {
       "id": "laurels_of_victory",
@@ -5539,8 +5566,9 @@
       "name": "Earthing Rod",
       "points": 5,
       "category": "arcane_item",
-      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.\nSingle use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table.",
-      "single_use": true
+      "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.",
+      "single_use": true,
+      "rules_text": "Single use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
     },
     {
       "id": "arcane-familiar",
@@ -5555,23 +5583,26 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 20,
-      "description": "Once per turn, you may make your opponent re-roll a single roll To Hit or To Wound made against a friendly character model that is within the Command range of the bearer of the Crystal Ball."
+      "description": "",
+      "rules_text": "Once per turn, you may make your opponent re-roll a single roll To Hit or To Wound made against a friendly character model that is within the Command range of the bearer of the Crystal Ball."
     },
     {
       "id": "dispel-scroll",
       "name": "Dispel Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.\nSingle use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common",
-      "single_use": true
+      "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.",
+      "single_use": true,
+      "rules_text": "Single use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
     },
     {
       "id": "power-scroll",
       "name": "Power Scroll*",
       "points": 20,
       "category": "arcane_item",
-      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.\nSingle use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common",
-      "single_use": true
+      "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.",
+      "single_use": true,
+      "rules_text": "Single use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
     },
     {
       "id": "wizards_staff",
@@ -5579,7 +5610,8 @@
       "source": "forces_of_fantasy",
       "category": "arcane_item",
       "points": 20,
-      "description": "Extremely Common (*). The bearer of the Wizard's Staff gains a +1 modifier to their Casting roll when attempting to cast an Assailment spell or a Magic Missile."
+      "description": "Extremely Common (*).",
+      "rules_text": "The bearer of the Wizard's Staff gains a +1 modifier to their Casting roll when attempting to cast an Assailment spell or a Magic Missile."
     },
     {
       "id": "lore-familiar",
@@ -5593,7 +5625,8 @@
       "name": "Scroll of Disruption",
       "points": 30,
       "category": "arcane_item",
-      "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.\nOnce per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+      "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.",
+      "rules_text": "Once per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
     {
       "id": "tome_of_midnight",
@@ -5601,14 +5634,16 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 30,
-      "description": "The bearer may apply a +1 modifier to their Casting rolls when attempting to cast spells from the Lore of Daemonology, Dark Magic or Necromancy. In addition, they know one more spell (chosen in the usual way) than is normal for their Level of Wizardry. However, the bearer can only cast a number of spells equal to their Level of Wizardry per turn and is subject to the Loner special rule."
+      "description": "",
+      "rules_text": "The bearer may apply a +1 modifier to their Casting rolls when attempting to cast spells from the Lore of Daemonology, Dark Magic or Necromancy. In addition, they know one more spell (chosen in the usual way) than is normal for their Level of Wizardry. However, the bearer can only cast a number of spells equal to their Level of Wizardry per turn and is subject to the Loner special rule."
     },
     {
       "id": "tome-of-spellcraft",
       "name": "Tome of Spellcraft",
       "points": 30,
       "category": "arcane_item",
-      "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.\nOnce per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
+      "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.",
+      "rules_text": "Once per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
     {
       "id": "staff-of-quietude",
@@ -5623,7 +5658,8 @@
       "source": "forces_of_fantasy",
       "category": "arcane_item",
       "points": 35,
-      "description": "Extremely Common (*). 0-1 per Wizard. The owner of a Wizard's Familiar may apply a +1 modifier to any of their Dispel rolls. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+      "description": "Extremely Common (*). 0-1 per Wizard. The owner of a Wizard's Familiar may apply a +1 modifier to any of their Dispel rolls.",
+      "rules_text": "Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
     },
     {
       "id": "twin_tailed_wand",
@@ -5631,7 +5667,8 @@
       "source": "arcane_journal",
       "category": "arcane_item",
       "points": 40,
-      "description": "Once per turn, the bearer of the Twin-tailed Wand may attempt to cast one of their spells a second time. However, should they miscast a spell, the bearer suffers D3 wounds with no armour or Regeneration saves permitted (Ward saves can be attempted as normal)."
+      "description": "",
+      "rules_text": "Once per turn, the bearer of the Twin-tailed Wand may attempt to cast one of their spells a second time. However, should they miscast a spell, the bearer suffers D3 wounds with no armour or Regeneration saves permitted (Ward saves can be attempted as normal)."
     },
     {
       "id": "wand-of-jet",
@@ -5663,7 +5700,8 @@
       "source": "forces_of_fantasy",
       "category": "arcane_item",
       "points": 85,
-      "description": "The bearer increases their Dispel range by 3\" and, unless they roll any natural double, may apply a +1 modifier to any of their Casting or Dispel rolls. However, if the bearer rolls any natural double when making a Casting or Dispel roll, the +1 modifier cannot be applied to that roll."
+      "description": "",
+      "rules_text": "The bearer increases their Dispel range by 3\" and, unless they roll any natural double, may apply a +1 modifier to any of their Casting or Dispel rolls. However, if the bearer rolls any natural double when making a Casting or Dispel roll, the +1 modifier cannot be applied to that roll."
     },
     {
       "id": "banner_of_duty",
@@ -5671,7 +5709,8 @@
       "source": "forces_of_fantasy",
       "category": "magic_standard",
       "points": 10,
-      "description": "A unit carrying the Banner of Duty may re-roll any failed Rally test."
+      "description": "",
+      "rules_text": "A unit carrying the Banner of Duty may re-roll any failed Rally test."
     },
     {
       "id": "gleaming_pennant",
@@ -5679,8 +5718,9 @@
       "source": "forces_of_fantasy",
       "category": "magic_standard",
       "points": 15,
-      "description": "Single use. A unit carrying the Gleaming Pennant may re-roll a single failed Leadership test. Note that a Break test is not a Leadership test.",
-      "single_use": true
+      "description": "",
+      "single_use": true,
+      "rules_text": "Single use. A unit carrying the Gleaming Pennant may re-roll a single failed Leadership test. Note that a Break test is not a Leadership test."
     },
     {
       "id": "banner_of_the_free_state_of_nuln",
@@ -5688,10 +5728,11 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 20,
-      "description": "City-state of Nuln Army of Infamy only. A unit carrying the Banner of the Free State of Nuln gains the Stubborn special rule.",
+      "description": "City-state of Nuln Army of Infamy only.",
       "restrictions": [
         "City-state of Nuln Army of Infamy only"
-      ]
+      ],
+      "rules_text": "A unit carrying the Banner of the Free State of Nuln gains the Stubborn special rule."
     },
     {
       "id": "icon_of_morr",
@@ -5699,7 +5740,8 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 25,
-      "description": "A unit carrying the Icon of Morr gains the Fear special rule. If they already have the Fear special rule, they instead gain the Terror special rule."
+      "description": "",
+      "rules_text": "A unit carrying the Icon of Morr gains the Fear special rule. If they already have the Fear special rule, they instead gain the Terror special rule."
     },
     {
       "id": "monster-hunters-tapestry",
@@ -5714,8 +5756,9 @@
       "name": "The Blazing Banner",
       "points": 25,
       "category": "magic_standard",
-      "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.\nA unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
-      "restrictions": ""
+      "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.",
+      "restrictions": "",
+      "rules_text": "A unit carrying the Blazing Banner gains the Flaming Attacks special rule."
     },
     {
       "id": "war-banner",
@@ -5730,8 +5773,9 @@
       "name": "Banner of Swirling Wind",
       "points": 30,
       "category": "magic_standard",
-      "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.\nAny enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
-      "restrictions": ""
+      "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.",
+      "restrictions": "",
+      "rules_text": "Any enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier."
     },
     {
       "id": "rampaging-banner",
@@ -5746,8 +5790,9 @@
       "name": "Razor Standard",
       "points": 40,
       "category": "magic_standard",
-      "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.\nA unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
-      "restrictions": ""
+      "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.",
+      "restrictions": "",
+      "rules_text": "A unit carrying the Razor Standard gains the Armour Bane (2) special rule."
     },
     {
       "id": "tapestry_of_sigmars_triumph",
@@ -5755,15 +5800,17 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 40,
-      "description": "A unit carrying the Tapestry of Sigmar's Triumph may re-roll any rolls To Wound of a natural 1 during the first round of a combat."
+      "description": "",
+      "rules_text": "A unit carrying the Tapestry of Sigmar's Triumph may re-roll any rolls To Wound of a natural 1 during the first round of a combat."
     },
     {
       "id": "banner-of-iron-resolve",
       "name": "Banner of Iron Resolve",
       "points": 50,
       "category": "magic_standard",
-      "description": "No regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe. A unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
-      "restrictions": ""
+      "description": "No regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.",
+      "restrictions": "",
+      "rules_text": "A unit carrying the Banner of Iron Resolve gains the Stubborn special rule."
     },
     {
       "id": "banner-of-the-steadfast",
@@ -5786,8 +5833,9 @@
       "name": "Totem of Wrath",
       "points": 50,
       "category": "magic_standard",
-      "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.\nDuring a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
-      "restrictions": ""
+      "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.",
+      "restrictions": "",
+      "rules_text": "During a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1."
     },
     {
       "id": "imperial_banner",
@@ -5803,10 +5851,11 @@
       "source": "arcane_journal",
       "category": "magic_standard",
       "points": 80,
-      "description": "Battle Standard Bearer belonging to the Order of the Knights Panther only. A unit carrying the Banner of the Knights Panther gains the Unbreakable special rule.",
+      "description": "Battle Standard Bearer belonging to the Order of the Knights Panther only.",
       "restrictions": [
         "Battle Standard Bearer belonging to the Order of the Knights Panther only"
-      ]
+      ],
+      "rules_text": "A unit carrying the Banner of the Knights Panther gains the Unbreakable special rule."
     }
   ],
   "prayers_of_sigmar": [

@@ -3056,112 +3056,128 @@
       "name": "Master Rune of Smiting",
       "points": 75,
       "category": "magic_weapon",
-      "description": "This rune grants Multiple Wounds (D6), allowing the weapon to inflict D6 wounds instead of a single wound on successful hits."
+      "description": "",
+      "rules_text": "This rune grants Multiple Wounds (D6), allowing the weapon to inflict D6 wounds instead of a single wound on successful hits."
     },
     {
       "id": "master-rune-of-skalf-blackhammer",
       "name": "Master Rune of Skalf Blackhammer",
       "points": 65,
       "category": "magic_weapon",
-      "description": "This ancient rune grants the bearer's weapon the ability to Wound on 2+, ignoring the target's Toughness characteristic."
+      "description": "",
+      "rules_text": "This ancient rune grants the bearer's weapon the ability to Wound on 2+, ignoring the target's Toughness characteristic."
     },
     {
       "id": "master-rune-of-alaric-the-mad",
       "name": "Master Rune of Alaric the Mad",
       "points": 45,
       "category": "magic_weapon",
-      "description": "This rune grants No Armor Saves against the weapon's attacks, allowing wounds to bypass all armor saves."
+      "description": "",
+      "rules_text": "This rune grants No Armor Saves against the weapon's attacks, allowing wounds to bypass all armor saves."
     },
     {
       "id": "master-rune-of-dragon-slaying",
       "name": "Master Rune of Dragon Slaying",
       "points": 35,
       "category": "magic_weapon",
-      "description": "This rune grants Wounds Behemoths on 2+. The weapon wounds Behemoth units on a 2+ instead of using the normal to-wound roll."
+      "description": "",
+      "rules_text": "This rune grants Wounds Behemoths on 2+. The weapon wounds Behemoth units on a 2+ instead of using the normal to-wound roll."
     },
     {
       "id": "rune-of-parrying",
       "name": "Rune of Parrying",
       "points": 35,
       "category": "magic_weapon",
-      "description": "This rune grants -1 to enemy hit rolls made against the bearer when they are in close combat."
+      "description": "",
+      "rules_text": "This rune grants -1 to enemy hit rolls made against the bearer when they are in close combat."
     },
     {
       "id": "master-rune-of-breaking",
       "name": "Master Rune of Breaking",
       "points": 25,
       "category": "magic_weapon",
-      "description": "This rune allows the weapon to Destroy Enemy Magic Weapons. When the bearer's attacks hit an enemy carrying a magic weapon, that magic weapon is destroyed."
+      "description": "",
+      "rules_text": "This rune allows the weapon to Destroy Enemy Magic Weapons. When the bearer's attacks hit an enemy carrying a magic weapon, that magic weapon is destroyed."
     },
     {
       "id": "master-rune-of-flight",
       "name": "Master Rune of Flight",
       "points": 25,
       "category": "magic_weapon",
-      "description": "This rune grants a Throwable Missile Attack (hand weapons only). The weapon can be thrown as a missile attack once per game."
+      "description": "",
+      "rules_text": "This rune grants a Throwable Missile Attack (hand weapons only). The weapon can be thrown as a missile attack once per game."
     },
     {
       "id": "master-rune-of-swiftness",
       "name": "Master Rune of Swiftness",
       "points": 25,
       "category": "magic_weapon",
-      "description": "This rune grants Strike First, allowing the bearer to attack before enemies in close combat."
+      "description": "",
+      "rules_text": "This rune grants Strike First, allowing the bearer to attack before enemies in close combat."
     },
     {
       "id": "rune-of-banishment",
       "name": "Rune of Banishment",
       "points": 25,
       "category": "magic_weapon",
-      "description": "This rune Prevents Ward Saves against attacks against Warp-spawned enemies. Effective against Chaos forces."
+      "description": "",
+      "rules_text": "This rune Prevents Ward Saves against attacks against Warp-spawned enemies. Effective against Chaos forces."
     },
     {
       "id": "rune-of-fury",
       "name": "Rune of Fury",
       "points": 25,
       "category": "magic_weapon",
-      "description": "This rune grants +1 Attacks. The bearer gains one additional attack in close combat. (Duplicable)"
+      "description": "This rune grants +1 Attacks.",
+      "rules_text": "The bearer gains one additional attack in close combat. (Duplicable)"
     },
     {
       "id": "grudge-rune",
       "name": "Grudge Rune",
       "points": 20,
       "category": "magic_weapon",
-      "description": "This rune grants Re-roll 1s to Hit in close combat. The bearer re-rolls failed to-hit rolls of 1. (Duplicable)"
+      "description": "This rune grants Re-roll 1s to Hit in close combat.",
+      "rules_text": "The bearer re-rolls failed to-hit rolls of 1. (Duplicable)"
     },
     {
       "id": "rune-of-might",
       "name": "Rune of Might",
       "points": 20,
       "category": "magic_weapon",
-      "description": "This rune grants +1 Strength. The bearer's Strength is increased by 1. (Duplicable)"
+      "description": "This rune grants +1 Strength.",
+      "rules_text": "The bearer's Strength is increased by 1. (Duplicable)"
     },
     {
       "id": "rune-of-cleaving",
       "name": "Rune of Cleaving",
       "points": 15,
       "category": "magic_weapon",
-      "description": "This rune grants +1 AP to hand weapons. Hand weapons used by the bearer gain +1 Armour Piercing. (Duplicable)"
+      "description": "",
+      "rules_text": "This rune grants +1 AP to hand weapons. Hand weapons used by the bearer gain +1 Armour Piercing. (Duplicable)"
     },
     {
       "id": "rune-of-striking",
       "name": "Rune of Striking",
       "points": 15,
       "category": "magic_weapon",
-      "description": "This rune grants +1 Weapon Skill. The bearer's Weapon Skill is increased by 1. (Duplicable)"
+      "description": "This rune grants +1 Weapon Skill.",
+      "rules_text": "The bearer's Weapon Skill is increased by 1. (Duplicable)"
     },
     {
       "id": "rune-of-fire",
       "name": "Rune of Fire",
       "points": 10,
       "category": "magic_weapon",
-      "description": "This rune grants Flaming Attacks. The weapon's attacks are treated as flaming attacks."
+      "description": "",
+      "rules_text": "This rune grants Flaming Attacks. The weapon's attacks are treated as flaming attacks."
     },
     {
       "id": "rune-of-speed",
       "name": "Rune of Speed",
       "points": 5,
       "category": "magic_weapon",
-      "description": "This rune grants +1 Initiative to hand weapons. Hand weapons used by the bearer grant +1 Initiative. (Duplicable)"
+      "description": "",
+      "rules_text": "This rune grants +1 Initiative to hand weapons. Hand weapons used by the bearer grant +1 Initiative. (Duplicable)"
     },
     {
       "id": "dragonblade",

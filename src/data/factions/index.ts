@@ -67,6 +67,7 @@ function normalizeOptions(options: unknown[] | undefined): Option[] {
 // Build lookup map: id → canonical data from global magic items
 type GlobalItemData = {
   description?: string;
+  rules_text?: string;
   restrictions?: string;
   single_use?: boolean;
   is_shield?: boolean;
@@ -78,6 +79,7 @@ const globalItemData = new Map<string, GlobalItemData>();
 for (const item of (globalMagicItemsRaw as { magic_items: Record<string, unknown>[] }).magic_items) {
   globalItemData.set(item.id as string, {
     description: item.description as string | undefined,
+    rules_text: item.rules_text as string | undefined,
     restrictions: item.restrictions as string | undefined,
     single_use: item.single_use as boolean | undefined,
     is_shield: item.is_shield as boolean | undefined,
@@ -96,6 +98,7 @@ function normalizeFaction(raw: unknown): Faction {
       ...item,
       // For global items: canonical data wins over faction copies
       description: globals?.description ?? (item.description ?? item.effect),
+      rules_text: globals?.rules_text ?? (item.rules_text as string | undefined),
       restrictions: globals !== undefined ? globals.restrictions : item.restrictions,
       single_use: globals?.single_use ?? (item.single_use as boolean | undefined),
       is_shield: globals?.is_shield ?? (item.is_shield as boolean | undefined),

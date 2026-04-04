@@ -172,8 +172,10 @@ export interface MagicItem {
   extremely_common?: boolean;
   /** Free-text troop-type or unit-name restriction, e.g. "Goblin Bosses only" */
   restrictions?: string;
-  /** Clean flavour/rules text (no embedded stat tables) */
+  /** Narrative/flavour text only — displayed italic */
   description: string;
+  /** Mechanical rules text — displayed non-italic below description */
+  rules_text?: string;
   /** True if this item is consumed on use */
   single_use?: boolean;
   /** True if this is a magic shield (sub-type of magic_armour) */
