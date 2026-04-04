@@ -2,7 +2,7 @@
   "id": "empire-of-man",
   "name": "Empire of Man",
   "sources": [
-    "Warhammer: The Old World \u2014 Forces of Fantasy (2023)",
+    "Warhammer: The Old World — Forces of Fantasy (2023)",
     "Arcane Journal: Empire of Man (2024)"
   ],
   "army_compositions": [
@@ -121,7 +121,7 @@
     },
     {
       "id": "city_state_of_nuln",
-      "name": "Empire of Man \u2014 City-State of Nuln",
+      "name": "Empire of Man — City-State of Nuln",
       "source": "arcane_journal",
       "special_abilities": [
         {
@@ -265,7 +265,7 @@
     },
     {
       "id": "knightly_order",
-      "name": "Empire of Man \u2014 Knightly Order",
+      "name": "Empire of Man — Knightly Order",
       "source": "arcane_journal",
       "special_abilities": [],
       "rules": [
@@ -361,34 +361,41 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Halberd"
+              "description": "Halberd",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Lance (if appropriately mounted)"
+              "description": "Lance (if appropriately mounted)",
+              "category": "weapon"
             },
             {
               "cost": 6,
               "scope": "per_unit",
-              "description": "Handgun"
+              "description": "Handgun",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Longbow"
+              "description": "Longbow",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take any of the following:",
@@ -396,19 +403,23 @@
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Pistol"
+              "description": "Pistol",
+              "category": "weapon"
             },
             {
               "cost": 10,
               "scope": "per_unit",
-              "description": "Brace of pistols"
+              "description": "Brace of pistols",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "description": "May replace light armour with:",
@@ -416,26 +427,31 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Heavy armour"
+              "description": "Heavy armour",
+              "category": "armour"
             },
             {
               "cost": 6,
               "scope": "per_unit",
-              "description": "Full plate armour"
+              "description": "Full plate armour",
+              "category": "armour"
             }
-          ]
+          ],
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -539,34 +555,41 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Halberd"
+              "description": "Halberd",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Lance (if appropriately mounted)"
+              "description": "Lance (if appropriately mounted)",
+              "category": "weapon"
             },
             {
               "cost": 6,
               "scope": "per_unit",
-              "description": "Handgun"
+              "description": "Handgun",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Longbow"
+              "description": "Longbow",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take any of the following:",
@@ -574,19 +597,23 @@
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Pistol"
+              "description": "Pistol",
+              "category": "weapon"
             },
             {
               "cost": 10,
               "scope": "per_unit",
-              "description": "Brace of pistols"
+              "description": "Brace of pistols",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "description": "May replace light armour with:",
@@ -594,32 +621,38 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Heavy armour"
+              "description": "Heavy armour",
+              "category": "armour"
             },
             {
               "cost": 6,
               "scope": "per_unit",
-              "description": "Full plate armour"
+              "description": "Full plate armour",
+              "category": "armour"
             }
-          ]
+          ],
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         },
         {
           "cost": 25,
           "scope": "per_unit",
           "notes": "A single Captain of the Empire may be upgraded. In addition to their usual allowance, a Battle Standard Bearer can purchase a single magic standard with no points limit.",
-          "description": "Upgrade to Battle Standard Bearer"
+          "description": "Upgrade to Battle Standard Bearer",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -727,19 +760,22 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Upgrade to Level 4 Wizard"
+          "description": "Upgrade to Level 4 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -785,19 +821,22 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Upgrade to Level 2 Wizard"
+          "description": "Upgrade to Level 2 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -836,55 +875,66 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Lance"
+              "description": "Lance",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "choices": [
             {
               "cost": 16,
               "scope": "per_unit",
-              "description": "Barded Warhorse"
+              "description": "Barded Warhorse",
+              "category": "special"
             },
             {
               "cost": 30,
               "scope": "per_unit",
-              "description": "Pegasus"
+              "description": "Pegasus",
+              "category": "special"
             },
             {
               "cost": 50,
               "scope": "per_unit",
-              "description": "Demigryph"
+              "description": "Demigryph",
+              "category": "special"
             }
           ],
-          "description": "Must be mounted on one of the following:"
+          "description": "Must be mounted on one of the following:",
+          "category": "special"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace heavy armour with full plate armour"
+          "description": "Replace heavy armour with full plate armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -954,61 +1004,73 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Lance"
+              "description": "Lance",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "choices": [
             {
               "cost": 16,
               "scope": "per_unit",
-              "description": "Barded Warhorse"
+              "description": "Barded Warhorse",
+              "category": "special"
             },
             {
               "cost": 30,
               "scope": "per_unit",
-              "description": "Pegasus"
+              "description": "Pegasus",
+              "category": "special"
             },
             {
               "cost": 50,
               "scope": "per_unit",
-              "description": "Demigryph"
+              "description": "Demigryph",
+              "category": "special"
             }
           ],
-          "description": "Must be mounted on one of the following:"
+          "description": "Must be mounted on one of the following:",
+          "category": "special"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace heavy armour with full plate armour"
+          "description": "Replace heavy armour with full plate armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         },
         {
           "cost": 25,
           "scope": "per_unit",
           "notes": "A single Chapter Master may be upgraded. In addition to their usual allowance, a Battle Standard Bearer can purchase a single magic standard with no points limit.",
-          "description": "Upgrade to Battle Standard Bearer"
+          "description": "Upgrade to Battle Standard Bearer",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1078,14 +1140,17 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take one of the following:",
@@ -1093,14 +1158,17 @@
             {
               "cost": 6,
               "scope": "per_unit",
-              "description": "Crossbow"
+              "description": "Crossbow",
+              "category": "weapon"
             },
             {
               "cost": 6,
               "scope": "per_unit",
-              "description": "Handgun"
+              "description": "Handgun",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take one of the following:",
@@ -1108,26 +1176,31 @@
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Pistol"
+              "description": "Pistol",
+              "category": "weapon"
             },
             {
               "cost": 10,
               "scope": "per_unit",
-              "description": "Brace of pistols"
+              "description": "Brace of pistols",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1158,7 +1231,7 @@
           "name": "Crossbow",
           "range": "30\"",
           "S": "4",
-          "AP": "\u2014",
+          "AP": "—",
           "special_rules": [
             "armour_bane_2",
             "ponderous"
@@ -1227,36 +1300,43 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts. Lectors may take War Altar of Sigmar.",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1309,36 +1389,43 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1391,36 +1478,43 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1473,36 +1567,43 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1554,46 +1655,55 @@
             {
               "cost": 10,
               "scope": "per_unit",
-              "description": "Grenade launching blunderbuss"
+              "description": "Grenade launching blunderbuss",
+              "category": "special"
             },
             {
               "cost": 10,
               "scope": "per_unit",
-              "description": "Hochland long rifle"
+              "description": "Hochland long rifle",
+              "category": "weapon"
             },
             {
               "cost": 8,
               "scope": "per_unit",
-              "description": "Repeater handgun"
+              "description": "Repeater handgun",
+              "category": "weapon"
             },
             {
               "cost": 8,
               "scope": "per_unit",
-              "description": "Repeater pistol"
+              "description": "Repeater pistol",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 20,
           "scope": "per_unit",
-          "description": "Pigeon bombs"
+          "description": "Pigeon bombs",
+          "category": "special"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         },
         {
           "cost": 140,
           "scope": "per_unit",
           "notes": "An Empire Engineer may be mounted on a War Wagon.",
-          "description": "Mount on War Wagon (Arcane Journal)"
+          "description": "Mount on War Wagon (Arcane Journal)",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1677,20 +1787,24 @@
             {
               "cost": 3,
               "scope": "per_unit",
-              "description": "Flail"
+              "description": "Flail",
+              "category": "weapon"
             },
             {
               "cost": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -2061,7 +2175,8 @@
           "cost": 20,
           "scope": "per_unit",
           "notes": "Gains +1 to Attacks characteristic.",
-          "description": "Two Heads"
+          "description": "Two Heads",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -2153,19 +2268,23 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Thrusting spears"
+              "description": "Thrusting spears",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         }
       ],
       "command": [
@@ -2245,31 +2364,37 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Thrusting spears"
+              "description": "Thrusting spears",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Drilled special rule"
+          "description": "Drilled special rule",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "Veteran Sergeant only",
-          "description": "Purchase a magic standard worth up to 50 points"
+          "description": "Purchase a magic standard worth up to 50 points",
+          "category": "special"
         }
       ],
       "command": [
@@ -2349,12 +2474,14 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace crossbows with handguns"
+          "description": "Replace crossbows with handguns",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "description": "A Sergeant may replace their crossbow or handgun with:",
@@ -2362,19 +2489,23 @@
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Brace of pistols"
+              "description": "Brace of pistols",
+              "category": "special"
             },
             {
               "cost": 8,
               "scope": "per_unit",
-              "description": "Hochland long rifle"
+              "description": "Hochland long rifle",
+              "category": "weapon"
             },
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Repeater handgun"
+              "description": "Repeater handgun",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "0-1 unit per 1,000 points may:",
@@ -2382,15 +2513,18 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Have the Drilled special rule"
+              "description": "Have the Drilled special rule",
+              "category": "special"
             },
             {
               "cost": 0,
               "scope": "per_unit",
               "max_points": 25,
-              "description": "Purchase a magic standard worth up to 25 points"
+              "description": "Purchase a magic standard worth up to 25 points",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "command": [
@@ -2422,7 +2556,7 @@
           "name": "Crossbow",
           "range": "30\"",
           "S": "4",
-          "AP": "\u2014",
+          "AP": "—",
           "special_rules": [
             "armour_bane_2",
             "ponderous"
@@ -2557,14 +2691,17 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Have the Fire & Flee special rule"
+              "description": "Have the Fire & Flee special rule",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Have the Scouts special rule"
+              "description": "Have the Scouts special rule",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "command": [
@@ -2615,20 +2752,24 @@
             {
               "cost": 2,
               "scope": "per_model",
-              "description": "Have the Drilled special rule"
+              "description": "Have the Drilled special rule",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Have the Veteran special rule"
+              "description": "Have the Veteran special rule",
+              "category": "special"
             },
             {
               "cost": 0,
               "scope": "per_unit",
               "max_points": 50,
-              "description": "Purchase a magic standard worth up to 50 points"
+              "description": "Purchase a magic standard worth up to 50 points",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "command": [
@@ -2774,7 +2915,8 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "0-1 unit may have the Guardians of the Temple special rule"
+          "description": "0-1 unit may have the Guardians of the Temple special rule",
+          "category": "special"
         }
       ],
       "command": [
@@ -2871,29 +3013,35 @@
             {
               "cost": 4,
               "scope": "per_model",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "cost": 2,
               "scope": "per_model",
-              "description": "Morning star"
+              "description": "Morning star",
+              "category": "special"
             },
             {
               "cost": 8,
               "scope": "per_model",
-              "description": "Light cannon"
+              "description": "Light cannon",
+              "category": "weapon"
             },
             {
               "cost": 5,
               "scope": "per_model",
-              "description": "Ogre pistol"
+              "description": "Ogre pistol",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 3,
           "scope": "per_model",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         }
       ],
       "command": [
@@ -2950,25 +3098,30 @@
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Grenade launching blunderbuss"
+              "description": "Grenade launching blunderbuss",
+              "category": "special"
             },
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Repeater handgun"
+              "description": "Repeater handgun",
+              "category": "weapon"
             },
             {
               "cost": 0,
               "scope": "per_unit",
-              "description": "Repeater pistol"
+              "description": "Repeater pistol",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_model",
           "notes": "0-1 unit per 1,000 points",
-          "description": "Vanguard special rule"
+          "description": "Vanguard special rule",
+          "category": "special"
         }
       ],
       "command": [
@@ -3078,19 +3231,23 @@
             {
               "cost": 0,
               "scope": "per_unit",
-              "description": "Brace of pistols"
+              "description": "Brace of pistols",
+              "category": "special"
             },
             {
               "cost": 10,
               "scope": "per_unit",
-              "description": "Grenade launching blunderbuss"
+              "description": "Grenade launching blunderbuss",
+              "category": "special"
             },
             {
               "cost": 0,
               "scope": "per_unit",
-              "description": "Repeater pistol"
+              "description": "Repeater pistol",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         }
       ],
       "command": [
@@ -3209,19 +3366,23 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Great weapons"
+              "description": "Great weapons",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Lances"
+              "description": "Lances",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Or: May replace shields with great weapons"
+          "description": "Or: May replace shields with great weapons",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points may:",
@@ -3229,14 +3390,17 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Have the Drilled special rule"
+              "description": "Have the Drilled special rule",
+              "category": "special"
             },
             {
               "cost": 2,
               "scope": "per_model",
-              "description": "Have the Stubborn special rule"
+              "description": "Have the Stubborn special rule",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "command": [
@@ -3320,24 +3484,29 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Great weapons"
+              "description": "Great weapons",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Lances"
+              "description": "Lances",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Or: May replace shields with great weapons"
+          "description": "Or: May replace shields with great weapons",
+          "category": "special"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Stubborn special rule"
+          "description": "Stubborn special rule",
+          "category": "special"
         }
       ],
       "command": [
@@ -3423,12 +3592,14 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace crossbows with braces of pistols (entire unit)"
+          "description": "Replace crossbows with braces of pistols (entire unit)",
+          "category": "special"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Feigned Flight special rule"
+          "description": "Feigned Flight special rule",
+          "category": "special"
         },
         {
           "description": "A Captain may replace their crossbow with:",
@@ -3436,14 +3607,17 @@
             {
               "cost": 2,
               "scope": "per_unit",
-              "description": "Brace of pistols"
+              "description": "Brace of pistols",
+              "category": "special"
             },
             {
               "cost": 2,
               "scope": "per_unit",
-              "description": "Repeater pistol"
+              "description": "Repeater pistol",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "Any unit may replace the Vanguard special rule with:",
@@ -3451,14 +3625,17 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Ambushers"
+              "description": "Ambushers",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Scouts"
+              "description": "Scouts",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "command": [
@@ -3493,7 +3670,7 @@
           "name": "Crossbow",
           "range": "30\"",
           "S": "4",
-          "AP": "\u2014",
+          "AP": "—",
           "special_rules": [
             "armour_bane_2",
             "ponderous"
@@ -3564,19 +3741,23 @@
             {
               "cost": 0,
               "scope": "per_unit",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             },
             {
               "cost": 0,
               "scope": "per_unit",
-              "description": "Lances"
+              "description": "Lances",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 5,
           "scope": "per_model",
-          "description": "Replace heavy armour with full plate armour"
+          "description": "Replace heavy armour with full plate armour",
+          "category": "armour"
         }
       ],
       "command": [
@@ -3791,19 +3972,23 @@
             {
               "cost": 10,
               "scope": "per_unit",
-              "description": "Hochland long rifle"
+              "description": "Hochland long rifle",
+              "category": "weapon"
             },
             {
               "cost": 20,
               "scope": "per_unit",
-              "description": "Pigeon bombs"
+              "description": "Pigeon bombs",
+              "category": "special"
             },
             {
               "cost": 8,
               "scope": "per_unit",
-              "description": "Repeater pistol"
+              "description": "Repeater pistol",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -3899,7 +4084,8 @@
         {
           "cost": 10,
           "scope": "per_unit",
-          "description": "Veteran special rule"
+          "description": "Veteran special rule",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -3949,7 +4135,8 @@
         {
           "cost": 10,
           "scope": "per_unit",
-          "description": "Veteran special rule"
+          "description": "Veteran special rule",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -4104,19 +4291,23 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Thrusting spears"
+              "description": "Thrusting spears",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         }
       ],
       "command": [
@@ -4196,12 +4387,14 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace crossbows with handguns"
+          "description": "Replace crossbows with handguns",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "description": "A Sergeant may replace their crossbow or handgun with:",
@@ -4209,19 +4402,23 @@
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Brace of pistols"
+              "description": "Brace of pistols",
+              "category": "special"
             },
             {
               "cost": 8,
               "scope": "per_unit",
-              "description": "Hochland long rifle"
+              "description": "Hochland long rifle",
+              "category": "weapon"
             },
             {
               "cost": 5,
               "scope": "per_unit",
-              "description": "Repeater handgun"
+              "description": "Repeater handgun",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "0-1 unit per 1,000 points may:",
@@ -4229,15 +4426,18 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Have the Drilled special rule"
+              "description": "Have the Drilled special rule",
+              "category": "special"
             },
             {
               "cost": 0,
               "scope": "per_unit",
               "max_points": 25,
-              "description": "Purchase a magic standard worth up to 25 points"
+              "description": "Purchase a magic standard worth up to 25 points",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "command": [
@@ -4269,7 +4469,7 @@
           "name": "Crossbow",
           "range": "30\"",
           "S": "4",
-          "AP": "\u2014",
+          "AP": "—",
           "special_rules": [
             "armour_bane_2",
             "ponderous"
@@ -4322,19 +4522,23 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Thrusting spears"
+              "description": "Thrusting spears",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         }
       ],
       "command": [
@@ -4418,31 +4622,37 @@
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             },
             {
               "cost": 1,
               "scope": "per_model",
-              "description": "Thrusting spears"
+              "description": "Thrusting spears",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Drilled special rule"
+          "description": "Drilled special rule",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "Veteran Sergeant only",
-          "description": "Purchase a magic standard worth up to 50 points"
+          "description": "Purchase a magic standard worth up to 50 points",
+          "category": "special"
         }
       ],
       "command": [
@@ -5177,7 +5387,7 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage\u2026 it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
     },
     {
       "id": "potion-of-speed",
@@ -5393,7 +5603,7 @@
       "source": "forces_of_fantasy",
       "category": "arcane_item",
       "points": 35,
-      "description": "Extremely Common (*). 0-1 per Wizard. The owner of a Wizard's Familiar may apply a +1 modifier to any of their Dispel rolls. Note that this is a modifier to the result of a roll \u2014 it does not negate a roll of a natural double 1."
+      "description": "Extremely Common (*). 0-1 per Wizard. The owner of a Wizard's Familiar may apply a +1 modifier to any of their Dispel rolls. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
     },
     {
       "id": "twin_tailed_wand",
@@ -5424,7 +5634,7 @@
       "name": "Feedback Scroll",
       "points": 60,
       "category": "arcane_item",
-      "description": "When read aloud, this charm causes \u00e6theric energy to flood back towards the enemy Wizard.",
+      "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
     {

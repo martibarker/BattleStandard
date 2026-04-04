@@ -123,43 +123,51 @@
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Crossbow",
           "cost": 6,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Handgun",
           "cost": 6,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Pistol",
           "cost": 5,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Oathstone",
           "cost": 15,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Shieldbearers",
           "cost": 60,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 125
+          "max_points": 125,
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -254,43 +262,51 @@
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Crossbow",
           "cost": 6,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Handgun",
           "cost": 6,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Pistol",
           "cost": 5,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Oathstone",
           "cost": 15,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Shieldbearers",
           "cost": 60,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 75
+          "max_points": 75,
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -441,7 +457,8 @@
           "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 100
+          "max_points": 100,
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -496,28 +513,33 @@
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Replace heavy armour with full plate armour",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Oathstone",
           "cost": 15,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 125
+          "max_points": 125,
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -582,28 +604,33 @@
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Replace heavy armour with full plate armour",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Oathstone",
           "cost": 15,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 75
+          "max_points": 75,
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -668,24 +695,28 @@
         {
           "description": "Additional hand weapon",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Weapon runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 100
+          "max_points": 100,
+          "category": "weapon"
         },
         {
           "description": "Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -749,18 +780,21 @@
         {
           "description": "Additional hand weapon",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Weapon runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 75
+          "max_points": 75,
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -825,28 +859,33 @@
         {
           "description": "Pistol",
           "cost": 6,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Brace of pistols",
           "cost": 10,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Handgun",
           "cost": 8,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 50
+          "max_points": 50,
+          "category": "weapon"
         }
       ],
       "special_rules": [
@@ -958,18 +997,21 @@
         {
           "description": "Great weapons",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "A Veteran may purchase Weapon runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "weapon"
         }
       ],
       "command": [
@@ -1063,24 +1105,28 @@
         {
           "description": "Great weapons",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "An Elder may purchase Weapon runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "weapon"
         },
         {
           "description": "An Elder may purchase Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "command": [
@@ -1178,17 +1224,20 @@
         {
           "description": "Great weapons",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "A Veteran may replace their crossbow with: Pistol (Free) or Brace of pistols (+5 points)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         }
       ],
       "command": [
@@ -1306,17 +1355,20 @@
         {
           "description": "Great weapons",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "A Veteran may replace their handgun with: Pistol (Free) or Brace of pistols (+5 points)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         }
       ],
       "command": [
@@ -1436,27 +1488,32 @@
         {
           "description": "Great weapons",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Take throwing axes",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Replace crossbows with throwing axes",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "An Ol' Deadeye may replace their crossbow with: Pistol (Free) or Brace of pistols (+5 points)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         }
       ],
       "command": [
@@ -1582,29 +1639,34 @@
         {
           "description": "Shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Have the Drilled special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Have the Veteran special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "A Royal Champion may purchase Weapon runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "weapon"
         },
         {
           "description": "A Royal Champion may purchase Talismanic runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "command": [
@@ -1702,29 +1764,34 @@
         {
           "description": "An Ironbeard may replace their shield with: Brace of drakefire pistols (+10 points) or Drakegun (+10 points)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "An Ironbeard may take cinderblast bombs",
           "cost": 15,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "An Ironbeard may purchase Weapon runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "weapon"
         },
         {
           "description": "0-1 unit per 1,000 points may have the Drilled special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Purchase Standard runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "command": [
@@ -1832,23 +1899,27 @@
         {
           "description": "An Ironwarden may replace their drakegun with: Brace of drakefire pistols (+5 points) or Trollhammer torpedo (+15 points)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "An Ironwarden may take cinderblast bombs",
           "cost": 15,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points may have the Drilled special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Purchase Standard runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "command": [
@@ -1966,28 +2037,33 @@
         {
           "description": "Take blasting charges (see weapon profiles)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "A Prospector may take a steam drill (+20 points)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Replace the Close Order special rule with Open Order",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Have the Veteran special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Purchase Standard runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "command": [
@@ -2088,12 +2164,14 @@
         {
           "description": "Any number of models may take: Additional hand weapon (+1 point per model) or Great weapon (+2 points per model)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Any number of models may be upgraded to Giant Slayers",
           "cost": 7,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "command": [
@@ -2175,12 +2253,14 @@
         {
           "description": "Replace steam gun with Brimstone gun",
           "cost": 5,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Replace steam gun with Clattergun",
           "cost": 10,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -2265,12 +2345,14 @@
         {
           "description": "Replace steam gun with Brimstone gun",
           "cost": 5,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Replace steam gun with Clattergun",
           "cost": 10,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -2368,7 +2450,8 @@
           "description": "May purchase Engineering runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -2426,7 +2509,8 @@
           "description": "May purchase Engineering runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -2484,7 +2568,8 @@
           "description": "May purchase Engineering runes up to a total of",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ],
       "special_rules": [

@@ -382,28 +382,33 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -484,28 +489,33 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -587,43 +597,51 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Frenzy special rule (0-1 per 1,000 pts)"
+          "description": "Frenzy special rule (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 5,
           "scope": "per_unit",
-          "description": "Warpaint (Frenzied Orc Warboss only)"
+          "description": "Warpaint (Frenzied Orc Warboss only)",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -704,43 +722,51 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Frenzy special rule (0-1 per 1,000 pts)"
+          "description": "Frenzy special rule (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 5,
           "scope": "per_unit",
-          "description": "Warpaint (Frenzied Orc Bigboss only)"
+          "description": "Warpaint (Frenzied Orc Bigboss only)",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -827,23 +853,27 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Be a Level 4 Wizard"
+          "description": "Be a Level 4 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Frenzy special rule (0-1 per 1,000 pts)"
+          "description": "Frenzy special rule (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 5,
           "scope": "per_unit",
-          "description": "Warpaint (Frenzied Orc Weirdnob only)"
+          "description": "Warpaint (Frenzied Orc Weirdnob only)",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -898,23 +928,27 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Be a Level 2 Wizard"
+          "description": "Be a Level 2 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Frenzy special rule (0-1 per 1,000 pts)"
+          "description": "Frenzy special rule (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 5,
           "scope": "per_unit",
-          "description": "Warpaint (Frenzied Orc Weirdboy only)"
+          "description": "Warpaint (Frenzied Orc Weirdboy only)",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -960,33 +994,39 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1063,33 +1103,39 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1172,13 +1218,15 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Be a Level 4 Wizard"
+          "description": "Be a Level 4 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1227,13 +1275,15 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Be a Level 2 Wizard"
+          "description": "Be a Level 2 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
           "condition": "See character mounts",
-          "description": "Mount"
+          "description": "Mount",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1276,32 +1326,38 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 25,
           "scope": "per_unit",
-          "description": "Mount on a Giant Cave Squig"
+          "description": "Mount on a Giant Cave Squig",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1378,32 +1434,38 @@
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_unit",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Cavalry spear (if appropriately mounted)"
+          "description": "Cavalry spear (if appropriately mounted)",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 3,
           "scope": "per_unit",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 25,
           "scope": "per_unit",
-          "description": "Mount on a Giant Cave Squig"
+          "description": "Mount on a Giant Cave Squig",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1487,7 +1549,8 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Be a Level 4 Wizard"
+          "description": "Be a Level 4 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1537,7 +1600,8 @@
         {
           "cost": 30,
           "scope": "per_unit",
-          "description": "Be a Level 2 Wizard"
+          "description": "Be a Level 2 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1643,7 +1707,8 @@
         {
           "cost": 35,
           "scope": "per_unit",
-          "description": "Be a Level 2 Wizard"
+          "description": "Be a Level 2 Wizard",
+          "category": "special"
         },
         {
           "cost": 0,
@@ -1972,32 +2037,38 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts (0-1 per army)"
+          "description": "Magic standard worth up to 50 pts (0-1 per army)",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Stubborn special rule (0-1 per army)"
+          "description": "Stubborn special rule (0-1 per army)",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Veteran special rule (0-1 per army)"
+          "description": "Veteran special rule (0-1 per army)",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2069,57 +2140,68 @@
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Warbows"
+          "description": "Warbows",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Additional hand weapons"
+          "description": "Additional hand weapons",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Thrusting spears"
+          "description": "Thrusting spears",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Throwing spears"
+          "description": "Throwing spears",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "armour"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Big 'Uns special rule"
+          "description": "Big 'Uns special rule",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Replace Close Order with Skirmishers"
+          "description": "Replace Close Order with Skirmishers",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace light armour with Frenzy (0-1 per 1,000 pts)"
+          "description": "Replace light armour with Frenzy (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)"
+          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Warpaint (Frenzied unit only)"
+          "description": "Warpaint (Frenzied unit only)",
+          "category": "special"
         },
         {
           "cost": 5,
           "scope": "per_unit",
-          "description": "Big Stabbas (Frenzied unit only)"
+          "description": "Big Stabbas (Frenzied unit only)",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2189,32 +2271,38 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Thrusting spears"
+          "description": "Thrusting spears",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace shields with shortbows"
+          "description": "Replace shields with shortbows",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 10,
           "scope": "per_model",
-          "description": "Include 0-3 Nasty Skulkers"
+          "description": "Include 0-3 Nasty Skulkers",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Replace Close Order with Skirmishers (0-1 per 1,000 pts)"
+          "description": "Replace Close Order with Skirmishers (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)"
+          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2283,17 +2371,20 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Thrusting spears"
+          "description": "Thrusting spears",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace shields with shortbows"
+          "description": "Replace shields with shortbows",
+          "category": "weapon"
         },
         {
           "cost": 20,
           "scope": "per_unit",
-          "description": "Netters special rule"
+          "description": "Netters special rule",
+          "category": "special"
         },
         {
           "description": "Fanatics",
@@ -2301,12 +2392,14 @@
           "scope": "per_unit",
           "max_count": 3,
           "per_n_models": 10,
-          "notes": "0-1 per 10 Night Goblins in the unit, max 3; 25 pts each"
+          "notes": "0-1 per 10 Night Goblins in the unit, max 3; 25 pts each",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)"
+          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2511,7 +2604,8 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Squig Herder thrusting spear"
+          "description": "Squig Herder thrusting spear",
+          "category": "weapon"
         }
       ],
       "notes": [
@@ -2630,12 +2724,14 @@
         {
           "cost": 3,
           "scope": "per_model",
-          "description": "Additional hand weapons"
+          "description": "Additional hand weapons",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_model",
-          "description": "Great weapons"
+          "description": "Great weapons",
+          "category": "weapon"
         }
       ],
       "notes": [
@@ -2752,37 +2848,44 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Cavalry spears"
+          "description": "Cavalry spears",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "armour"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Big 'Uns special rule (0-1 per army)"
+          "description": "Big 'Uns special rule (0-1 per army)",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Replace light armour with Frenzy (0-1 per 1,000 pts)"
+          "description": "Replace light armour with Frenzy (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)"
+          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Warpaint (Frenzied unit only)"
+          "description": "Warpaint (Frenzied unit only)",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2903,22 +3006,26 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Cavalry spears"
+          "description": "Cavalry spears",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Shortbows"
+          "description": "Shortbows",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)"
+          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -3037,32 +3144,38 @@
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Cavalry spears"
+          "description": "Cavalry spears",
+          "category": "weapon"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Replace shields with shortbows"
+          "description": "Replace shields with shortbows",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Feigned Flight special rule (0-1 per 1,000 pts)"
+          "description": "Feigned Flight special rule (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Reserve Move special rule (0-1 per 1,000 pts)"
+          "description": "Reserve Move special rule (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)"
+          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -3164,12 +3277,14 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Cavalry spears"
+          "description": "Cavalry spears",
+          "category": "weapon"
         },
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         }
       ],
       "notes": [
@@ -3276,17 +3391,20 @@
         {
           "cost": 5,
           "scope": "per_unit",
-          "description": "Add a third Orc crew member"
+          "description": "Add a third Orc crew member",
+          "category": "special"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Frenzy special rule (0-1 per 1,000 pts)"
+          "description": "Frenzy special rule (0-1 per 1,000 pts)",
+          "category": "special"
         },
         {
           "cost": 10,
           "scope": "per_unit",
-          "description": "Warpaint (Frenzied chariot only)"
+          "description": "Warpaint (Frenzied chariot only)",
+          "category": "special"
         }
       ],
       "notes": [
@@ -3370,12 +3488,14 @@
         {
           "cost": 5,
           "scope": "per_model",
-          "description": "Add a third Giant Wolf"
+          "description": "Add a third Giant Wolf",
+          "category": "special"
         },
         {
           "cost": 5,
           "scope": "per_unit",
-          "description": "Upgrade one model to a standard bearer"
+          "description": "Upgrade one model to a standard bearer",
+          "category": "special"
         }
       ],
       "notes": [
@@ -3519,17 +3639,20 @@
         {
           "cost": 1,
           "scope": "per_model",
-          "description": "Each Black Orc Crew: additional hand weapon"
+          "description": "Each Black Orc Crew: additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 2,
           "scope": "per_model",
-          "description": "Each Black Orc Crew: great weapon"
+          "description": "Each Black Orc Crew: great weapon",
+          "category": "weapon"
         },
         {
           "cost": 10,
           "scope": "per_unit",
-          "description": "Standard bearer"
+          "description": "Standard bearer",
+          "category": "special"
         }
       ],
       "notes": [
@@ -3679,7 +3802,8 @@
         {
           "cost": 35,
           "scope": "per_unit",
-          "description": "Spidersilk lobber"
+          "description": "Spidersilk lobber",
+          "category": "weapon"
         }
       ],
       "notes": [
@@ -3822,7 +3946,8 @@
         {
           "cost": 10,
           "scope": "per_unit",
-          "description": "Orc Bully upgrade"
+          "description": "Orc Bully upgrade",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -3892,7 +4017,8 @@
         {
           "cost": 10,
           "scope": "per_unit",
-          "description": "Orc Bully upgrade"
+          "description": "Orc Bully upgrade",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -3963,7 +4089,8 @@
         {
           "cost": 10,
           "scope": "per_unit",
-          "description": "Orc Bully upgrade"
+          "description": "Orc Bully upgrade",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -4055,27 +4182,32 @@
         {
           "cost": 3,
           "scope": "per_model",
-          "description": "Additional hand weapon"
+          "description": "Additional hand weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_model",
-          "description": "Great weapon"
+          "description": "Great weapon",
+          "category": "weapon"
         },
         {
           "cost": 4,
           "scope": "per_model",
-          "description": "Ironfist"
+          "description": "Ironfist",
+          "category": "armour"
         },
         {
           "cost": 4,
           "scope": "per_model",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "cost": 0,
           "scope": "per_unit",
-          "description": "Magic standard worth up to 50 pts"
+          "description": "Magic standard worth up to 50 pts",
+          "category": "special"
         }
       ],
       "notes": [

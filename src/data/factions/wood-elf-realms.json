@@ -446,24 +446,29 @@
             {
               "description": "Additional hand weapon",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             },
             {
               "description": "Great weapon",
               "cost": 4,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             },
             {
               "description": "Cavalry spear (if appropriately mounted)",
               "cost": 2,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take a shield",
           "cost": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "May take one of the following types of enchanted arrows:",
@@ -471,45 +476,54 @@
             {
               "description": "Arcane bodkins",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "May be mounted",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts page"
+          "notes": "See character mounts page",
+          "category": "special"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of",
           "max_points": 100,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -569,24 +583,29 @@
             {
               "description": "Additional hand weapon",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             },
             {
               "description": "Great weapon",
               "cost": 4,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             },
             {
               "description": "Cavalry spear (if appropriately mounted)",
               "cost": 2,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take a shield",
           "cost": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "May take one of the following types of enchanted arrows:",
@@ -594,45 +613,54 @@
             {
               "description": "Arcane bodkins",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "May be mounted",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts page"
+          "notes": "See character mounts page",
+          "category": "special"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -693,33 +721,39 @@
         {
           "description": "May have the Talismanic Tattoos special rule",
           "cost": 15,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be mounted",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts page"
+          "notes": "See character mounts page",
+          "category": "special"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be a Level 4 Wizard",
           "cost": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of (as Level 4)",
           "max_points": 100,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of (as Level 3)",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ]
     },
@@ -768,33 +802,39 @@
         {
           "description": "May have the Talismanic Tattoos special rule",
           "cost": 15,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be mounted",
           "cost": 0,
           "scope": "per_unit",
-          "notes": "See character mounts page"
+          "notes": "See character mounts page",
+          "category": "special"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be a Level 2 Wizard",
           "cost": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of (as Level 2)",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of (as Level 1)",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ]
     },
@@ -851,29 +891,35 @@
             {
               "description": "Spear of Loec",
               "cost": 0,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             },
             {
               "description": "Trickster's Blades",
               "cost": 0,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be a Level 1 Wizard",
           "cost": 35,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ]
     },
@@ -915,7 +961,8 @@
         {
           "description": "May take an additional hand weapon",
           "cost": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "May take one of the following types of enchanted arrows:",
@@ -923,49 +970,59 @@
             {
               "description": "Arcane bodkins",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 6,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "May take light armour",
           "cost": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May have the Ambushers special rule",
           "cost": 10,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May purchase magic items up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1038,17 +1095,20 @@
         {
           "description": "May be a Level 3 Wizard",
           "cost": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be a Level 4 Wizard",
           "cost": 60,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 100,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ]
     },
@@ -1104,24 +1164,29 @@
             {
               "description": "Additional hand weapon",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             },
             {
               "description": "Great weapon",
               "cost": 4,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May be a Level 2 Wizard",
           "cost": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ]
     },
@@ -1175,24 +1240,29 @@
             {
               "description": "Additional hand weapon",
               "cost": 3,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             },
             {
               "description": "Great weapon",
               "cost": 4,
-              "scope": "per_unit"
+              "scope": "per_unit",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take a shield",
           "cost": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "May purchase magic items up to a total of",
           "max_points": 75,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1607,44 +1677,53 @@
             {
               "description": "Arcane bodkins",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "A Lord's Bowman may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "0-1 unit of Glade Guard per 1,000 points may have the Fire & Flee special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit of Glade Guard per 1,000 points may have the Vanguard special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1721,34 +1800,41 @@
             {
               "description": "Arcane bodkins",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "A Lord's Bowman may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1820,22 +1906,26 @@
         {
           "description": "The entire unit may take shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "An Eternal Warden may purchase magic items up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points may have the Drilled special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points may have the Veteran special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "notes": [
@@ -1910,12 +2000,14 @@
         {
           "description": "The entire unit may take shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "A Wildwood Warden may purchase magic items up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1997,19 +2089,23 @@
             {
               "description": "Additional hand weapon",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "weapon"
             },
             {
               "description": "Throwing spear",
               "cost": 0,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "A Bladesinger may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2066,49 +2162,59 @@
             {
               "description": "Arcane bodkins",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "A Sentinel may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "0-1 unit in your army may have the Ambushers special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit in your army may have the Vanguard special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit in your army may have the Veteran special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2175,7 +2281,8 @@
         {
           "description": "A Nymph may take Forest Spites up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2232,7 +2339,8 @@
         {
           "description": "An Elder may take Forest Spites up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2298,12 +2406,14 @@
         {
           "description": "The entire unit may take shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "A Watchmaster may purchase magic items up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2366,24 +2476,29 @@
             {
               "description": "1-3 Deepwood Hounds (+8 pts each; M9, WS4, BS-, S3, T3, W1, I3, A1, Ld5; Special Rules: Motley Crew, Run with the Pack, Skirmishers, Warband)",
               "cost": 8,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "1-3 Forest Cats (+6 pts each; M7, WS4, BS-, S3, T3, W1, I4, A1, Ld5; Special Rules: Armour Bane (1), Motley Crew, Run with the Pack, Skirmishers)",
               "cost": 6,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "armour"
             },
             {
               "description": "1-3 Sylvan Boars (+11 pts each; M6, WS3, BS-, S4, T4, W1, I3, A1, Ld5; Special Rules: Furious Charge, Motley Crew, Razor Tusks, Run with the Pack, Skirmishers)",
               "cost": 11,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "1 Bear of Loren (+20 pts; M5, WS4, BS-, S4, T4, W2, I3, A2, Ld6; Special Rules: Armoured Hide (1), Cleaving Blow, Fear, Motley Crew, Run with the Pack, Skirmishers)",
               "cost": 20,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "armour"
         }
       ],
       "notes": [
@@ -2451,49 +2566,59 @@
             {
               "description": "Arcane bodkins",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "A Glade Knight may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points may have the Ambushers special rule",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points may have the Drilled special rule",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points may have the Reserve Move special rule",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2567,7 +2692,8 @@
         {
           "description": "A Handmaiden of the Thorn may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2638,12 +2764,14 @@
         {
           "description": "The entire unit may take shields",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "A Wild Hunter may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2717,34 +2845,41 @@
             {
               "description": "Arcane bodkins",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Hagbane tips",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Moonfire shot",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Swiftshiver shards",
               "cost": 2,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             },
             {
               "description": "Trueflight arrows",
               "cost": 1,
-              "scope": "per_model"
+              "scope": "per_model",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "A Wind Rider may purchase magic items up to a total of",
           "max_points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2811,7 +2946,8 @@
         {
           "description": "May take Forest Spites up to a total of",
           "max_points": 50,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [

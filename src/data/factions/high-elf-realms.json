@@ -328,67 +328,80 @@
         {
           "description": "Additional hand weapon",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Cavalry spear (if appropriately mounted)",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Halberd",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Lance (if appropriately mounted)",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Longbow",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Bow of Avelorn",
           "points": 12,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Replace light armour with heavy armour",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Replace light armour with full plate armour",
           "points": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "May be mounted (see character mounts)",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May take a single Elven Honour",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -478,67 +491,80 @@
         {
           "description": "Additional hand weapon",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Cavalry spear (if appropriately mounted)",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Halberd",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Lance (if appropriately mounted)",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Longbow",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Bow of Avelorn",
           "points": 12,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Replace light armour with heavy armour",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Replace light armour with full plate armour",
           "points": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "May be mounted (see character mounts)",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May take a single Elven Honour",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -635,22 +661,26 @@
         {
           "description": "Upgrade to Level 4 Wizard",
           "points": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be mounted (see character mounts)",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May take a single Elven Honour",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ]
     },
@@ -697,22 +727,26 @@
         {
           "description": "Upgrade to Level 2 Wizard",
           "points": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May be mounted (see character mounts)",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "May take a single Elven Honour",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ]
     },
@@ -771,12 +805,14 @@
         {
           "description": "Upgrade to Level 2 Wizard",
           "points": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ]
     },
@@ -823,17 +859,20 @@
         {
           "description": "Replace light armour with heavy armour",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "0-1 Handmaiden of the Everqueen may take the Horn of Isha",
           "points": 25,
-          "scope": "per_army"
+          "scope": "per_army",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -889,22 +928,26 @@
         {
           "description": "Additional hand weapon",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Chracian great blade",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "May be mounted on a Chieftain's Chariot",
           "points": 105,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 75
+          "max_points": 75,
+          "category": "special"
         }
       ],
       "availability": [
@@ -951,42 +994,50 @@
         {
           "description": "Cavalry spear (if appropriately mounted)",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Replace warbow with longbow",
           "points": 4,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Replace light armour with heavy armour",
           "points": 3,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Mount on Lothern Skycutter",
           "points": 90,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Mount on Griffon",
           "points": 130,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Mount on Great Eagle",
           "points": 60,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 75
+          "max_points": 75,
+          "category": "special"
         }
       ],
       "availability": [
@@ -1057,22 +1108,26 @@
         {
           "description": "Mount on Unicorn",
           "points": 35,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 2 Wizard",
           "points": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 3 Wizard",
           "points": 60,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "scope": "per_unit",
-          "max_points": 75
+          "max_points": 75,
+          "category": "special"
         }
       ],
       "availability": [
@@ -1126,7 +1181,8 @@
         {
           "description": "Mount on a Chieftain's Chariot",
           "points": 105,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ]
     },
@@ -1371,22 +1427,26 @@
         {
           "description": "Shieldwall special rule (any unit)",
           "points": 10,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Sentinel may replace the Valour of Ages special rule with Veteran",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Magic standard",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points: replace Valour of Ages with Veteran",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1452,17 +1512,20 @@
         {
           "description": "Light armour (any unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "0-1 unit per 1,000 points: replace Valour of Ages with Veteran",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Magic standard (0-1 unit per 1,000 pts only)",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ]
     },
@@ -1520,22 +1583,26 @@
         {
           "description": "Shields (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Sea Master magic items",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points: replace Valour of Ages with Veteran",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Magic standard (0-1 unit per 1,000 pts only)",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1607,22 +1674,26 @@
         {
           "description": "Replace warbows with thrusting spears and shields (entire unit)",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Light armour (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "0-1 unit per 1,000 points: replace Open Order with Skirmishers",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 points: replace Valour of Ages with Veteran",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "availability": [
@@ -1696,17 +1767,20 @@
         {
           "description": "Replace Valour of Ages with Veteran",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Guardian magic items",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         },
         {
           "description": "Magic standard",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1774,27 +1848,32 @@
         {
           "description": "Warbows (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Replace light armour with heavy armour (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Lion Cloak special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "0-1 unit: replace Vanguard with Scouts",
           "points": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "0-1 unit: replace Vanguard with Ambushers",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1868,12 +1947,14 @@
         {
           "description": "Lion Guard Captain magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         },
         {
           "description": "Magic standard",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1948,17 +2029,20 @@
         {
           "description": "Drilled special rule (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Bladelord magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         },
         {
           "description": "Magic standard",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2029,17 +2113,20 @@
         {
           "description": "Drilled special rule (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Keeper of the Flame magic items",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         },
         {
           "description": "Magic standard",
           "scope": "per_unit",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2104,22 +2191,26 @@
         {
           "description": "Shadow-walker magic items",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         },
         {
           "description": "0-1 unit in army: Ambushers special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit in army: Chariot Runners special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit in army: Feigned Flight special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ]
     },
@@ -2172,17 +2263,20 @@
         {
           "description": "High Sister magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         },
         {
           "description": "0-1 unit in army: Ambushers special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit in army: Stubborn special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2255,32 +2349,38 @@
         {
           "description": "Take shortbows (entire unit)",
           "points": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Replace cavalry spears with shortbows (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Harbinger magic items",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 pts: Scouts special rule",
           "points": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 pts: Skirmishers special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "0-1 unit per 1,000 pts: Magic standard",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2358,17 +2458,20 @@
         {
           "description": "Shields (entire unit)",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "High Helm magic items",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "armour"
         },
         {
           "description": "Magic standard",
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2444,12 +2547,14 @@
         {
           "description": "Drakemaster magic items",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         },
         {
           "description": "Magic standard",
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2629,7 +2734,8 @@
         {
           "description": "Eagle-eye bolt thrower",
           "points": 25,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "weapon"
         }
       ]
     },

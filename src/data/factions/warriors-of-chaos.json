@@ -2,13 +2,13 @@
   "id": "warriors-of-chaos",
   "name": "Warriors of Chaos",
   "sources": [
-    "Warhammer: The Old World \u2014 Ravening Hordes (2024)",
+    "Warhammer: The Old World — Ravening Hordes (2024)",
     "Arcane Journal: Warriors of Chaos"
   ],
   "army_compositions": [
     {
       "id": "grand_army",
-      "name": "Warriors of Chaos \u2014 Grand Army",
+      "name": "Warriors of Chaos — Grand Army",
       "source": "ravening_hordes",
       "rules": [
         {
@@ -94,7 +94,7 @@
     },
     {
       "id": "wolves_of_the_sea",
-      "name": "Warriors of Chaos \u2014 Wolves of the Sea",
+      "name": "Warriors of Chaos — Wolves of the Sea",
       "source": "arcane_journal",
       "rules": [
         {
@@ -165,7 +165,7 @@
     },
     {
       "id": "heralds_of_darkness",
-      "name": "Warriors of Chaos \u2014 Heralds of Darkness",
+      "name": "Warriors of Chaos — Heralds of Darkness",
       "source": "arcane_journal",
       "rules": [
         {
@@ -310,40 +310,48 @@
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Flail"
+              "description": "Flail",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Halberd"
+              "description": "Halberd",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Lance (if appropriately mounted)"
+              "description": "Lance (if appropriately mounted)",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "points": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "notes": "See character mounts page",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "description": "May replace the Mark of Chaos Undivided with one of the following",
@@ -351,38 +359,45 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "May take Gifts of Chaos up to a total of 50 points",
-          "description": "Gifts of Chaos"
+          "description": "Gifts of Chaos",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
           "notes": "A Chaos Lord may purchase magic items up to a total of 100 points",
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -466,40 +481,48 @@
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Flail"
+              "description": "Flail",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Halberd"
+              "description": "Halberd",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Lance (if appropriately mounted)"
+              "description": "Lance (if appropriately mounted)",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "points": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "notes": "See character mounts page",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "description": "May replace the Mark of Chaos Undivided with one of the following",
@@ -507,38 +530,45 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "May take Gifts of Chaos up to a total of 50 points",
-          "description": "Gifts of Chaos"
+          "description": "Gifts of Chaos",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 75,
           "notes": "An Exalted Champion may purchase magic items up to a total of 75 points",
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -622,40 +652,48 @@
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Flail"
+              "description": "Flail",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Halberd"
+              "description": "Halberd",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Lance (if appropriately mounted)"
+              "description": "Lance (if appropriately mounted)",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "points": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "notes": "See character mounts page",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "description": "May replace the Mark of Chaos Undivided with one of the following",
@@ -663,38 +701,45 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "May take Gifts of Chaos up to a total of 50 points",
-          "description": "Gifts of Chaos"
+          "description": "Gifts of Chaos",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "An Aspiring Champion may purchase magic items up to a total of 50 points",
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -789,12 +834,14 @@
         {
           "points": 6,
           "scope": "per_unit",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "points": 30,
           "scope": "per_unit",
-          "description": "May have the Fly (9) special rule"
+          "description": "May have the Fly (9) special rule",
+          "category": "special"
         },
         {
           "description": "May replace the Mark of Chaos Undivided with one of the following",
@@ -802,24 +849,29 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "Unless it has the Mark of Khorne, a Daemon Prince may be a Wizard",
@@ -827,38 +879,45 @@
             {
               "points": 25,
               "scope": "per_unit",
-              "description": "Wizard Level 1"
+              "description": "Wizard Level 1",
+              "category": "special"
             },
             {
               "points": 50,
               "scope": "per_unit",
-              "description": "Wizard Level 2"
+              "description": "Wizard Level 2",
+              "category": "special"
             },
             {
               "points": 75,
               "scope": "per_unit",
-              "description": "Wizard Level 3"
+              "description": "Wizard Level 3",
+              "category": "special"
             },
             {
               "points": 100,
               "scope": "per_unit",
-              "description": "Wizard Level 4"
+              "description": "Wizard Level 4",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "May take Gifts of Chaos up to a total of 50 points",
-          "description": "Gifts of Chaos"
+          "description": "Gifts of Chaos",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
           "notes": "May purchase magic items up to a total of 100 points",
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ]
     },
@@ -906,7 +965,8 @@
           "points": 0,
           "scope": "per_unit",
           "notes": "See character mounts page",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "description": "May replace the Mark of Chaos Undivided with one of the following",
@@ -914,26 +974,31 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "May take Gifts of Chaos up to a total of 50 points",
-          "description": "Gifts of Chaos"
+          "description": "Gifts of Chaos",
+          "category": "special"
         },
         {
           "description": "A Sorcerer Lord may",
@@ -941,16 +1006,19 @@
             {
               "points": 30,
               "scope": "per_unit",
-              "description": "Be a Level 4 Wizard"
+              "description": "Be a Level 4 Wizard",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
           "notes": "A Sorcerer Lord may purchase magic items up to a total of 100 points",
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ]
     },
@@ -998,7 +1066,8 @@
           "points": 0,
           "scope": "per_unit",
           "notes": "See character mounts page",
-          "description": "May be mounted"
+          "description": "May be mounted",
+          "category": "special"
         },
         {
           "description": "May replace the Mark of Chaos Undivided with one of the following",
@@ -1006,26 +1075,31 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "May take Gifts of Chaos up to a total of 50 points",
-          "description": "Gifts of Chaos"
+          "description": "Gifts of Chaos",
+          "category": "special"
         },
         {
           "description": "An Exalted Sorcerer may",
@@ -1033,16 +1107,19 @@
             {
               "points": 30,
               "scope": "per_unit",
-              "description": "Be a Level 2 Wizard"
+              "description": "Be a Level 2 Wizard",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
           "notes": "An Exalted Sorcerer may purchase magic items up to a total of 50 points",
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ]
     },
@@ -1087,14 +1164,17 @@
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Additional hand weapon"
+              "description": "Additional hand weapon",
+              "category": "weapon"
             },
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Whip"
+              "description": "Whip",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         }
       ]
     },
@@ -1137,19 +1217,23 @@
             {
               "points": 3,
               "scope": "per_unit",
-              "description": "Flail"
+              "description": "Flail",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Great weapon"
+              "description": "Great weapon",
+              "category": "weapon"
             },
             {
               "points": 4,
               "scope": "per_unit",
-              "description": "Cavalry spear (if appropriately mounted)"
+              "description": "Cavalry spear (if appropriately mounted)",
+              "category": "weapon"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "May take one of the following ranged weapons",
@@ -1157,24 +1241,29 @@
             {
               "points": 2,
               "scope": "per_unit",
-              "description": "Throwing axes"
+              "description": "Throwing axes",
+              "category": "weapon"
             },
             {
               "points": 2,
               "scope": "per_unit",
-              "description": "Javelins"
+              "description": "Javelins",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "points": 2,
           "scope": "per_unit",
-          "description": "Shield"
+          "description": "Shield",
+          "category": "armour"
         },
         {
           "points": 14,
           "scope": "per_unit",
-          "description": "Mount on a Warhorse"
+          "description": "Mount on a Warhorse",
+          "category": "special"
         },
         {
           "description": "May replace the Mark of Chaos Undivided with one of the following",
@@ -1182,30 +1271,36 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Magic items"
+          "description": "Magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1312,7 +1407,7 @@
         "Galrauch, the Great Drake may be included in any Warriors of Chaos army made using any army composition list.",
         "Spirit of Galrauch: During the Start of Turn sub-phase of each of your turns, make a Leadership test for Galrauch. If the test is passed, Galrauch is controlled as normal. If the test is failed, Galrauch's spirit rebels from within: his Level of Wizardry is reduced to 1 and he can only cast one spell per turn; he becomes subject to the Random Movement (2D6) special rule; if he is engaged in combat, he must direct D3 of his attacks against himself. Any wounds Galrauch causes against himself are added to the enemy's combat result score.",
         "Two-headed Dragon: Galrauch may use either Dark Fire of Chaos or Fumes of Contagion during the Shooting phase. It cannot use both during the same turn.",
-        "Breath of Change: Once per game, instead of using Dark Fire of Chaos or Fumes of Contagion, Galrauch may use the Breath of Change. Place a flame template \u2014 any model hit must immediately make a Toughness test. If failed, the model is removed from play as a casualty. If passed, the attack has no effect.",
+        "Breath of Change: Once per game, instead of using Dark Fire of Chaos or Fumes of Contagion, Galrauch may use the Breath of Change. Place a flame template — any model hit must immediately make a Toughness test. If failed, the model is removed from play as a casualty. If passed, the attack has no effect.",
         "Dark Fire of Chaos: Range N/A, S 4, AP -1; Breath Weapon, Flaming Attacks, Magical Attacks.",
         "Fumes of Contagion: Range N/A, S 2, AP N/A; Breath Weapon, Magical Attacks. No armour save is permitted (Ward and Regeneration saves can be attempted as normal).",
         "Wicked claws: Combat, S, AP -2."
@@ -1498,24 +1593,29 @@
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Additional hand weapons"
+              "description": "Additional hand weapons",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Great weapons"
+              "description": "Great weapons",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -1523,36 +1623,43 @@
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Purchase a magic standard"
+          "description": "Purchase a magic standard",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "description": "Champion may purchase magic items"
+          "description": "Champion may purchase magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1636,24 +1743,29 @@
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Additional hand weapons"
+              "description": "Additional hand weapons",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Great weapons"
+              "description": "Great weapons",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Halberds"
+              "description": "Halberds",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -1661,46 +1773,55 @@
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 2,
           "scope": "per_model",
-          "description": "Replace heavy armour with full plate armour"
+          "description": "Replace heavy armour with full plate armour",
+          "category": "armour"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Have the Drilled special rule"
+          "description": "Have the Drilled special rule",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "description": "Purchase a magic standard"
+          "description": "Purchase a magic standard",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "description": "Champion may purchase magic items"
+          "description": "Champion may purchase magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1779,24 +1900,29 @@
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Great weapons"
+              "description": "Great weapons",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Flails"
+              "description": "Flails",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Light armour"
+          "description": "Light armour",
+          "category": "armour"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -1804,24 +1930,29 @@
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "0-1 unit in your army may take one of the following (replaces Close Order)",
@@ -1829,14 +1960,17 @@
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Replace Close Order with Skirmishers"
+              "description": "Replace Close Order with Skirmishers",
+              "category": "special"
             },
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Replace Close Order with Open Order"
+              "description": "Replace Close Order with Open Order",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1910,24 +2044,29 @@
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Forsaken by Khorne (gains Hatred all enemies)"
+              "description": "Forsaken by Khorne (gains Hatred all enemies)",
+              "category": "special"
             },
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Forsaken by Nurgle (gains Fear)"
+              "description": "Forsaken by Nurgle (gains Fear)",
+              "category": "special"
             },
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Forsaken by Slaanesh (gains Swiftstride)"
+              "description": "Forsaken by Slaanesh (gains Swiftstride)",
+              "category": "special"
             },
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Forsaken by Tzeentch (gains Magic Resistance -3)"
+              "description": "Forsaken by Tzeentch (gains Magic Resistance -3)",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ]
     },
@@ -1989,14 +2128,17 @@
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Additional hand weapons"
+              "description": "Additional hand weapons",
+              "category": "special"
             },
             {
               "points": 4,
               "scope": "per_model",
-              "description": "Great weapons"
+              "description": "Great weapons",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -2004,24 +2146,29 @@
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2082,14 +2229,17 @@
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Additional hand weapons"
+              "description": "Additional hand weapons",
+              "category": "special"
             },
             {
               "points": 4,
               "scope": "per_model",
-              "description": "Great weapons"
+              "description": "Great weapons",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2154,24 +2304,29 @@
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Spawn of Khorne (gains Killing Blow)"
+              "description": "Spawn of Khorne (gains Killing Blow)",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Spawn of Nurgle (gains Poisoned Attacks)"
+              "description": "Spawn of Nurgle (gains Poisoned Attacks)",
+              "category": "special"
             },
             {
               "points": 3,
               "scope": "per_model",
-              "description": "Spawn of Slaanesh (gains Strike First)"
+              "description": "Spawn of Slaanesh (gains Strike First)",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Spawn of Tzeentch (gains Flaming Attacks, Magical Attacks)"
+              "description": "Spawn of Tzeentch (gains Flaming Attacks, Magical Attacks)",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2249,24 +2404,29 @@
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Additional hand weapons"
+              "description": "Additional hand weapons",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Flails"
+              "description": "Flails",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Throwing axes"
+          "description": "Throwing axes",
+          "category": "weapon"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Have the Ambushers special rule"
+          "description": "Have the Ambushers special rule",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2398,7 +2558,8 @@
         {
           "points": 2,
           "scope": "per_model",
-          "description": "Lances"
+          "description": "Lances",
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -2406,36 +2567,43 @@
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Purchase a magic standard"
+          "description": "Purchase a magic standard",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "description": "Champion may purchase magic items"
+          "description": "Champion may purchase magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2526,7 +2694,8 @@
         {
           "points": 2,
           "scope": "per_model",
-          "description": "Lances"
+          "description": "Lances",
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -2534,46 +2703,55 @@
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 3,
           "scope": "per_model",
-          "description": "Replace heavy armour with full plate armour"
+          "description": "Replace heavy armour with full plate armour",
+          "category": "armour"
         },
         {
           "points": 2,
           "scope": "per_model",
-          "description": "Have the Drilled special rule"
+          "description": "Have the Drilled special rule",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "description": "Purchase a magic standard"
+          "description": "Purchase a magic standard",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "description": "Champion may purchase magic items"
+          "description": "Champion may purchase magic items",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2661,19 +2839,23 @@
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Cavalry spears"
+              "description": "Cavalry spears",
+              "category": "special"
             },
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Throwing spears"
+              "description": "Throwing spears",
+              "category": "weapon"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Flails"
+              "description": "Flails",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "description": "The entire unit may take one of the following ranged weapons",
@@ -2681,19 +2863,23 @@
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Throwing axes"
+              "description": "Throwing axes",
+              "category": "weapon"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Javelins"
+              "description": "Javelins",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -2701,24 +2887,29 @@
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -2819,14 +3010,17 @@
             {
               "points": 0,
               "scope": "per_unit",
-              "description": "Cavalry spears"
+              "description": "Cavalry spears",
+              "category": "special"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Flails"
+              "description": "Flails",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "description": "The entire unit may take one of the following ranged weapons",
@@ -2834,24 +3028,29 @@
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Throwing axes"
+              "description": "Throwing axes",
+              "category": "weapon"
             },
             {
               "points": 1,
               "scope": "per_model",
-              "description": "Javelins"
+              "description": "Javelins",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "weapon"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Replace light armour with heavy armour"
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Shields"
+          "description": "Shields",
+          "category": "special"
         },
         {
           "description": "The entire unit may replace the Mark of Chaos Undivided with one of the following",
@@ -2859,41 +3058,49 @@
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 2,
               "scope": "per_model",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         },
         {
           "points": 2,
           "scope": "per_model",
-          "description": "0-1 unit per 1,000 points may have the Drilled special rule"
+          "description": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "description": "Purchase a magic standard"
+          "description": "Purchase a magic standard",
+          "category": "special"
         },
         {
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "description": "First Sword may purchase magic items"
+          "description": "First Sword may purchase magic items",
+          "category": "weapon"
         }
       ],
       "weapon_profiles": [
@@ -2955,22 +3162,26 @@
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Armoured Hide (1) special rule"
+          "description": "Armoured Hide (1) special rule",
+          "category": "special"
         },
         {
           "points": 1,
           "scope": "per_model",
-          "description": "Poisoned Attacks special rule"
+          "description": "Poisoned Attacks special rule",
+          "category": "special"
         },
         {
           "points": 5,
           "scope": "per_unit",
-          "description": "Vanguard special rule"
+          "description": "Vanguard special rule",
+          "category": "special"
         },
         {
           "points": 15,
           "scope": "per_unit",
-          "description": "Be accompanied by a Chaos Warhound Handler"
+          "description": "Be accompanied by a Chaos Warhound Handler",
+          "category": "special"
         }
       ]
     },
@@ -3041,24 +3252,29 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ]
     },
@@ -3132,24 +3348,29 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ]
     },
@@ -3222,24 +3443,29 @@
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Khorne"
+              "description": "Mark of Khorne",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Nurgle"
+              "description": "Mark of Nurgle",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Slaanesh"
+              "description": "Mark of Slaanesh",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Mark of Tzeentch"
+              "description": "Mark of Tzeentch",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ]
     },
@@ -3282,7 +3508,8 @@
         {
           "points": 15,
           "scope": "per_unit",
-          "description": "Venomous tail"
+          "description": "Venomous tail",
+          "category": "special"
         }
       ]
     },
@@ -3365,22 +3592,26 @@
         {
           "points": 20,
           "scope": "per_unit",
-          "description": "Flaming breath"
+          "description": "Flaming breath",
+          "category": "special"
         },
         {
           "points": 10,
           "scope": "per_unit",
-          "description": "Fiend tail"
+          "description": "Fiend tail",
+          "category": "special"
         },
         {
           "points": 15,
           "scope": "per_unit",
-          "description": "Regeneration (5+) special rule"
+          "description": "Regeneration (5+) special rule",
+          "category": "special"
         },
         {
           "points": 10,
           "scope": "per_unit",
-          "description": "Poisoned Attacks special rule"
+          "description": "Poisoned Attacks special rule",
+          "category": "special"
         }
       ]
     },
@@ -3398,7 +3629,7 @@
         "Armour Value: 4+. 0-1 per 1,000 points.",
         "Doomfire: Range 12-60\", S 5 (10), AP -2 (-5); Bombardment, Cumbersome, Move or Shoot, Multiple Wounds (D3). Shoots like a stone thrower using the Bombardment special rule and a 3\" blast template. Any unit that suffers one or more unsaved wounds from this weapon must make a Panic test as if it had taken heavy casualties.",
         "Caged Fury: During the Start of Turn sub-phase of each of your turns, make a Leadership test for this model. If this test is failed, roll on the Hellcannon Misfire table.",
-        "Hellcannon Misfire Table \u2014 D6: 1 Free at Last! Every unit within 3D6\" suffers D6 S5 hits (AP -1); Hellcannon removed. 2-4 Chomp! Remove one of the Hellcannon's Chaos Dwarf Handlers. 5-6 Blooood! Hellcannon breaks chains, immediately moves 3D6\" as if subject to Random Movement."
+        "Hellcannon Misfire Table — D6: 1 Free at Last! Every unit within 3D6\" suffers D6 S5 hits (AP -1); Hellcannon removed. 2-4 Chomp! Remove one of the Hellcannon's Chaos Dwarf Handlers. 5-6 Blooood! Hellcannon breaks chains, immediately moves 3D6\" as if subject to Random Movement."
       ],
       "stats": {
         "M": "3",
@@ -3499,24 +3730,29 @@
             {
               "points": 20,
               "scope": "per_unit",
-              "description": "Gigantic Spawn of Khorne (Impact Hits D3, Killing Blow)"
+              "description": "Gigantic Spawn of Khorne (Impact Hits D3, Killing Blow)",
+              "category": "special"
             },
             {
               "points": 25,
               "scope": "per_unit",
-              "description": "Gigantic Spawn of Nurgle (Poisoned Attacks, Regeneration 5+)"
+              "description": "Gigantic Spawn of Nurgle (Poisoned Attacks, Regeneration 5+)",
+              "category": "special"
             },
             {
               "points": 15,
               "scope": "per_unit",
-              "description": "Gigantic Spawn of Slaanesh (Counter Charge, Strikes First)"
+              "description": "Gigantic Spawn of Slaanesh (Counter Charge, Strikes First)",
+              "category": "special"
             },
             {
               "points": 10,
               "scope": "per_unit",
-              "description": "Gigantic Spawn of Tzeentch (Flaming Attacks, Magical Attacks, Magic Resistance -2)"
+              "description": "Gigantic Spawn of Tzeentch (Flaming Attacks, Magical Attacks, Magic Resistance -2)",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ]
     },
@@ -3584,14 +3820,17 @@
             {
               "points": 30,
               "scope": "per_unit",
-              "description": "Wizard Level 1"
+              "description": "Wizard Level 1",
+              "category": "special"
             },
             {
               "points": 60,
               "scope": "per_unit",
-              "description": "Wizard Level 2"
+              "description": "Wizard Level 2",
+              "category": "special"
             }
-          ]
+          ],
+          "category": "special"
         }
       ]
     }
@@ -3950,7 +4189,7 @@
       "name": "Potion of Foolhardiness*",
       "points": 5,
       "category": "enchanted_item",
-      "description": "A magical brew that fills the drinker with courage\u2026 it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.\nSingle use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
     },
     {
       "id": "potion-of-speed",
@@ -4106,7 +4345,7 @@
       "name": "Feedback Scroll",
       "points": 60,
       "category": "arcane_item",
-      "description": "When read aloud, this charm causes \u00e6theric energy to flood back towards the enemy Wizard.",
+      "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
     {
@@ -4451,7 +4690,7 @@
       "type": "arcane_item",
       "source": "ravening_hordes",
       "points": 60,
-      "description": "The bearer of the Skull of Katam and any other Wizard within 3\" (friend or foe) may apply a +1 modifier to any Casting roll they make. Note that this is a modifier to the result of a roll \u2014 it does not negate a roll of a natural double 1."
+      "description": "The bearer of the Skull of Katam and any other Wizard within 3\" (friend or foe) may apply a +1 modifier to any Casting roll they make. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
     },
     {
       "id": "doom_totem",

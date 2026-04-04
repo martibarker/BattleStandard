@@ -601,7 +601,11 @@ function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
         {ruleIds.map((id) => {
           const rule = rulesData.find((r) => r.id === id);
           const name = rule?.name ?? formatRuleName(id);
-          const url = `https://tow.whfb.app/special-rules/${id.replace(/_/g, '-')}`;
+          // Strip parenthetical qualifier (e.g. "Hatred (Dwarfs)" → "hatred") so variants
+          // resolve to the single base rule page on tow.whfb.app
+          const baseName = name.replace(/\s*\(.*\)\s*$/, '').trim();
+          const slug = baseName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+          const url = `https://tow.whfb.app/special-rules/${slug}`;
           return (
             <button
               key={id}

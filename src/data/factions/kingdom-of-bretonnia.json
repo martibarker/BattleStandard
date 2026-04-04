@@ -374,40 +374,47 @@
         {
           "description": "Morning star",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Lance (if appropriately mounted)",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Mount (see Character Mounts)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See mount entries for costs"
+          "condition": "See mount entries for costs",
+          "category": "special"
         },
         {
           "description": "Knightly Virtue (one only)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See Knightly Virtues list"
+          "condition": "See Knightly Virtues list",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -483,50 +490,59 @@
         {
           "description": "Morning star",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Lance (if appropriately mounted)",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Mount (see Character Mounts)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See mount entries for costs"
+          "condition": "See mount entries for costs",
+          "category": "special"
         },
         {
           "description": "Replace Knight's Vow with the Questing Vow",
           "cost": 15,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Replace Knight's Vow with the Grail Vow",
           "cost": 20,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Knightly Virtue (one only)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See Knightly Virtues list"
+          "condition": "See Knightly Virtues list",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 75
+          "max_points": 75,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -599,50 +615,59 @@
         {
           "description": "Morning star",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Great weapon",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Lance (if appropriately mounted)",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Mount (see Character Mounts)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See mount entries for costs"
+          "condition": "See mount entries for costs",
+          "category": "special"
         },
         {
           "description": "Replace Knight's Vow with the Questing Vow",
           "cost": 15,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Replace Knight's Vow with the Grail Vow",
           "cost": 20,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Knightly Virtue (one only)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See Knightly Virtues list"
+          "condition": "See Knightly Virtues list",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -718,18 +743,21 @@
           "description": "Mount (see Character Mounts)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See mount entries for costs"
+          "condition": "See mount entries for costs",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 4 Wizard",
           "cost": 30,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 100
+          "max_points": 100,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -782,18 +810,21 @@
           "description": "Mount (see Character Mounts)",
           "cost": 0,
           "scope": "per_model",
-          "condition": "See mount entries for costs"
+          "condition": "See mount entries for costs",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 2 Wizard",
           "cost": 30,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -846,33 +877,39 @@
         {
           "description": "Halberd",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Additional hand weapon",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Cavalry spear (if appropriately mounted)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Warhorse",
           "cost": 12,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1148,7 +1185,8 @@
         {
           "description": "Barding",
           "cost": 15,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         }
       ],
       "special_rules": [
@@ -1236,19 +1274,22 @@
         {
           "description": "Take great weapons (entire unit)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Replace shields with great weapons (entire unit)",
           "cost": 1,
           "scope": "per_model",
-          "replaces": "Shields"
+          "replaces": "Shields",
+          "category": "special"
         },
         {
           "description": "First Knight may purchase magic items",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "command": [
@@ -1340,12 +1381,14 @@
         {
           "description": "Fire & Flee special rule (entire unit)",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Scouts special rule (entire unit)",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "command": [
@@ -1443,7 +1486,8 @@
           "description": "Grail Monk may be equipped with Blessed Triptych (unit gains Stubborn)",
           "cost": 25,
           "scope": "per_unit",
-          "condition": "Champion Grail Monk only"
+          "condition": "Champion Grail Monk only",
+          "category": "special"
         }
       ],
       "command": [
@@ -1550,23 +1594,27 @@
         {
           "description": "Light armour (entire unit)",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Defensive stakes (unit gains defensive stakes when deployed)",
           "cost": 10,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Burning braziers (unit's longbows gain Flaming Attacks)",
           "cost": 20,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Replace Close Order with Skirmishers (entire unit)",
           "cost": 0,
           "scope": "per_unit",
-          "replaces": "Close Order"
+          "replaces": "Close Order",
+          "category": "special"
         }
       ],
       "command": [
@@ -1639,7 +1687,8 @@
         {
           "description": "Include a Grail Reliquae (counts as standard bearer and musician; grants Immune to Psychology and Unbreakable when within 12\" of a Grail Vow model)",
           "cost": 65,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -1821,7 +1870,8 @@
           "description": "First Knight may purchase magic items",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "command": [
@@ -1931,13 +1981,15 @@
           "description": "Paragon may take a single Knightly Virtue",
           "cost": 0,
           "scope": "per_unit",
-          "condition": "Paragon only; see Knightly Virtues list"
+          "condition": "Paragon only; see Knightly Virtues list",
+          "category": "special"
         },
         {
           "description": "Paragon may purchase magic items",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 25
+          "max_points": 25,
+          "category": "special"
         }
       ],
       "command": [
@@ -2045,13 +2097,15 @@
           "description": "Grail Guardian may take a single Knightly Virtue",
           "cost": 0,
           "scope": "per_unit",
-          "condition": "Grail Guardian only; see Knightly Virtues list"
+          "condition": "Grail Guardian only; see Knightly Virtues list",
+          "category": "special"
         },
         {
           "description": "Grail Guardian may purchase magic items",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "command": [
@@ -2265,17 +2319,20 @@
         {
           "description": "Light armour (entire unit)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Shields (entire unit)",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Feigned Flight special rule (entire unit)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "command": [
@@ -2638,23 +2695,27 @@
         {
           "description": "Warhorse",
           "cost": 12,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 2 Wizard",
           "cost": 30,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 3 Wizard",
           "cost": 60,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "cost": 0,
           "scope": "per_model",
-          "max_points": 75
+          "max_points": 75,
+          "category": "special"
         }
       ],
       "special_rules": [
@@ -2744,23 +2805,27 @@
         {
           "description": "Halberds (entire unit)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Polearms (entire unit; see weapon profiles)",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Thrusting spears (entire unit)",
           "cost": 0,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Grail Monk may be equipped with Blessed Triptych (unit gains Stubborn)",
           "cost": 25,
           "scope": "per_unit",
-          "condition": "Grail Monk champion only"
+          "condition": "Grail Monk champion only",
+          "category": "special"
         }
       ],
       "command": [
@@ -2867,55 +2932,65 @@
         {
           "description": "Additional hand weapon (per model)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Shield (per model)",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Pistol (per model)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Blunderbuss (per model; see weapon profiles)",
           "cost": 4,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Crossbow (per model)",
           "cost": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "weapon"
         },
         {
           "description": "Replace Open Order with Close Order (0-1 unit per 1,000 pts)",
           "cost": 0,
           "scope": "per_unit",
-          "replaces": "Open Order"
+          "replaces": "Open Order",
+          "category": "special"
         },
         {
           "description": "Replace Open Order with Skirmishers (0-1 unit per 1,000 pts)",
           "cost": 0,
           "scope": "per_unit",
-          "replaces": "Open Order"
+          "replaces": "Open Order",
+          "category": "special"
         },
         {
           "description": "Ambushers (Skirmisher units only)",
           "cost": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Scouts (Skirmisher units only)",
           "cost": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Desperado may purchase magic items",
           "cost": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "command": [

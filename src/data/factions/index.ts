@@ -1,4 +1,4 @@
-import type { Faction, Option, OptionChoice, OptionScope } from '../../types/faction';
+import type { Faction, Option, OptionCategory, OptionChoice, OptionScope } from '../../types/faction';
 
 // Raw JSON imports
 import bretonniaRaw from './kingdom-of-bretonnia.json';
@@ -35,11 +35,13 @@ function normalizeOptions(options: unknown[] | undefined): Option[] {
         cost: (c.cost ?? 0) as number,
         scope: (c.scope ?? 'per_unit') as OptionScope,
         notes: c.notes as string | undefined,
+        category: c.category as OptionCategory | undefined,
       }));
       result.push({
         description: (opt.description ?? opt.name ?? '') as string,
         cost: 0,
         scope: 'per_unit',
+        category: opt.category as OptionCategory | undefined,
         choices,
       });
     } else {
@@ -53,6 +55,7 @@ function normalizeOptions(options: unknown[] | undefined): Option[] {
         max_points: opt.max_points as number | undefined,
         max_count: opt.max_count as number | undefined,
         per_n_models: opt.per_n_models as number | undefined,
+        category: opt.category as OptionCategory | undefined,
       });
     }
   }

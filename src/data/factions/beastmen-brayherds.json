@@ -327,64 +327,74 @@
           "description": "Additional hand weapon",
           "points": 3,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Light armour",
           "points": 2,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Heavy armour",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Shield",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Chaos Mutations",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 10,
           "scope": "per_unit",
-          "condition": "0-1 per 1,000 points may"
+          "condition": "0-1 per 1,000 points may",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Tuskgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Tuskgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Razorgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Razorgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "notes": "May purchase magic items up to a total of 100 points"
+          "notes": "May purchase magic items up to a total of 100 points",
+          "category": "special"
         }
       ],
       "notes": [
@@ -441,64 +451,74 @@
           "description": "Additional hand weapon",
           "points": 3,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Light armour",
           "points": 2,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Heavy armour",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Shield",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Chaos Mutations",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 10,
           "scope": "per_unit",
-          "condition": "0-1 per 1,000 points may"
+          "condition": "0-1 per 1,000 points may",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Tuskgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Tuskgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Razorgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Razorgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "A Wargor may purchase magic items up to a total of 50 points"
+          "notes": "A Wargor may purchase magic items up to a total of 50 points",
+          "category": "special"
         }
       ],
       "notes": [
@@ -563,39 +583,45 @@
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 10,
           "scope": "per_unit",
-          "condition": "0-1 per 1,000 points may"
+          "condition": "0-1 per 1,000 points may",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Tuskgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Tuskgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Razorgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Razorgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 4 Wizard",
           "points": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "notes": "A Great Bray-Shaman may purchase magic items up to a total of 100 points"
+          "notes": "A Great Bray-Shaman may purchase magic items up to a total of 100 points",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -669,39 +695,45 @@
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 10,
           "scope": "per_unit",
-          "condition": "0-1 per 1,000 points may"
+          "condition": "0-1 per 1,000 points may",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Tuskgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Tuskgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Be mounted on a Razorgor Chariot",
           "points": 0,
           "scope": "per_unit",
           "notes": "See Razorgor Chariot entry; points added to rider",
-          "condition": "Or: mount option"
+          "condition": "Or: mount option",
+          "category": "special"
         },
         {
           "description": "Upgrade to Level 2 Wizard",
           "points": 30,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "A Bray-Shaman may purchase magic items up to a total of 50 points"
+          "notes": "A Bray-Shaman may purchase magic items up to a total of 50 points",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -772,44 +804,51 @@
           "description": "Additional hand weapon",
           "points": 3,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Light armour",
           "points": 3,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Heavy armour",
           "points": 6,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Shield",
           "points": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Chaos Mutations",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 100,
-          "notes": "A Doombull may purchase magic items up to a total of 100 points"
+          "notes": "A Doombull may purchase magic items up to a total of 100 points",
+          "category": "special"
         }
       ],
       "notes": [
@@ -871,44 +910,51 @@
           "description": "Additional hand weapon",
           "points": 3,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Light armour",
           "points": 3,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Heavy armour",
           "points": 6,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Shield",
           "points": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Chaos Mutations",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "A Gorebull may purchase magic items up to a total of 50 points"
+          "notes": "A Gorebull may purchase magic items up to a total of 50 points",
+          "category": "special"
         }
       ],
       "notes": [
@@ -967,62 +1013,72 @@
           "description": "Cavalry spear",
           "points": 2,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Light armour",
           "points": 2,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Heavy armour",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "armour"
         },
         {
           "description": "Throwing axes",
           "points": 2,
           "scope": "per_unit",
-          "condition": "May take one of the following ranged options"
+          "condition": "May take one of the following ranged options",
+          "category": "weapon"
         },
         {
           "description": "Javelins",
           "points": 2,
           "scope": "per_unit",
-          "condition": "May take one of the following ranged options"
+          "condition": "May take one of the following ranged options",
+          "category": "special"
         },
         {
           "description": "Shield",
           "points": 2,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 10,
           "scope": "per_unit",
-          "condition": "0-1 per 1,000 points may"
+          "condition": "0-1 per 1,000 points may",
+          "category": "special"
         },
         {
           "description": "Chaos Mutations",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May purchase magic items up to a total of 50 points"
+          "notes": "May purchase magic items up to a total of 50 points",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1121,33 +1177,38 @@
           "description": "Purchase a magic standard worth up to 50 points",
           "points": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         },
         {
           "description": "Chaos Mutations for Gouge-horn",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Gouge-horn may take Chaos Mutations up to a total of 25 points"
+          "notes": "A Gouge-horn may take Chaos Mutations up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Magic items for Gouge-horn",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Gouge-horn may take magic items up to a total of 25 points"
+          "notes": "A Gouge-horn may take magic items up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Stubborn special rule",
           "points": 1,
           "scope": "per_model",
-          "condition": "0-1 unit in your army may have the Stubborn special rule"
+          "condition": "0-1 unit in your army may have the Stubborn special rule",
+          "category": "special"
         },
         {
           "description": "Veteran special rule",
           "points": 1,
           "scope": "per_model",
-          "condition": "0-1 unit in your army may have the Veteran special rule"
+          "condition": "0-1 unit in your army may have the Veteran special rule",
+          "category": "special"
         }
       ],
       "notes": [
@@ -1233,39 +1294,45 @@
           "description": "Additional hand weapons",
           "points": 0,
           "scope": "per_unit",
-          "condition": "The entire unit must take one of the following (free)"
+          "condition": "The entire unit must take one of the following (free)",
+          "category": "special"
         },
         {
           "description": "Shields",
           "points": 0,
           "scope": "per_unit",
-          "condition": "The entire unit must take one of the following (free)"
+          "condition": "The entire unit must take one of the following (free)",
+          "category": "special"
         },
         {
           "description": "Replace a hand weapon or shield with a great weapon for True-horn",
           "points": 0,
           "scope": "per_unit",
-          "notes": "A True-horn may replace a hand weapon or its shield with a great weapon for free"
+          "notes": "A True-horn may replace a hand weapon or its shield with a great weapon for free",
+          "category": "weapon"
         },
         {
           "description": "Magic items for True-horn",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A True-horn may purchase magic items up to a total of 25 points"
+          "notes": "A True-horn may purchase magic items up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 1,
           "scope": "per_model",
-          "condition": "0-1 unit per 1,000 points may"
+          "condition": "0-1 unit per 1,000 points may",
+          "category": "special"
         },
         {
           "description": "Purchase a magic standard worth up to 50 points",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "condition": "0-1 unit per 1,000 points may"
+          "condition": "0-1 unit per 1,000 points may",
+          "category": "special"
         }
       ],
       "notes": [
@@ -1351,25 +1418,29 @@
           "description": "Thrusting spears",
           "points": 1,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following"
+          "condition": "The entire unit may take one of the following",
+          "category": "special"
         },
         {
           "description": "Throwing spears",
           "points": 1,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following"
+          "condition": "The entire unit may take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Replace shields with shortbows",
           "points": 0,
           "scope": "per_unit",
-          "condition": "Or the entire unit may replace shields with shortbows for free"
+          "condition": "Or the entire unit may replace shields with shortbows for free",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 1,
           "scope": "per_model",
-          "condition": "0-1 unit per 1,000 points may"
+          "condition": "0-1 unit per 1,000 points may",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1485,44 +1556,51 @@
           "description": "Additional hand weapon",
           "points": 3,
           "scope": "per_model",
-          "condition": "Any model in the unit may take one of the following"
+          "condition": "Any model in the unit may take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
           "scope": "per_model",
-          "condition": "Any model in the unit may take one of the following"
+          "condition": "Any model in the unit may take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Shield",
           "points": 2,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Purchase a magic standard worth up to 50 points",
           "points": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         },
         {
           "description": "Chaos Mutations for Bloodkine",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Bloodkine may take Chaos Mutations up to a total of 25 points"
+          "notes": "A Bloodkine may take Chaos Mutations up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Magic items for Bloodkine",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Bloodkine may take magic items up to a total of 25 points"
+          "notes": "A Bloodkine may take magic items up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 3,
           "scope": "per_model",
-          "condition": "0-1 unit in your army may"
+          "condition": "0-1 unit in your army may",
+          "category": "special"
         }
       ],
       "notes": [
@@ -1611,51 +1689,59 @@
           "description": "Cavalry spears",
           "points": 1,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following"
+          "condition": "The entire unit may take one of the following",
+          "category": "special"
         },
         {
           "description": "Throwing spears",
           "points": 1,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following"
+          "condition": "The entire unit may take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Replace shields with great weapons",
           "points": 1,
           "scope": "per_model",
-          "condition": "Or the entire unit may replace shields with great weapons"
+          "condition": "Or the entire unit may replace shields with great weapons",
+          "category": "special"
         },
         {
           "description": "Throwing axes",
           "points": 1,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following ranged options"
+          "condition": "The entire unit may take one of the following ranged options",
+          "category": "weapon"
         },
         {
           "description": "Javelins",
           "points": 1,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following ranged options"
+          "condition": "The entire unit may take one of the following ranged options",
+          "category": "special"
         },
         {
           "description": "Magic items for Gorehoof",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Gorehoof may purchase magic items up to a total of 25 points"
+          "notes": "A Gorehoof may purchase magic items up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 1,
           "scope": "per_model",
-          "condition": "0-1 unit in your army may"
+          "condition": "0-1 unit in your army may",
+          "category": "special"
         },
         {
           "description": "Purchase a magic standard worth up to 50 points",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "condition": "0-1 unit per 1,000 points may"
+          "condition": "0-1 unit per 1,000 points may",
+          "category": "special"
         }
       ],
       "weapon_profiles": [
@@ -1748,38 +1834,44 @@
           "description": "Additional hand weapons",
           "points": 3,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following"
+          "condition": "The entire unit may take one of the following",
+          "category": "special"
         },
         {
           "description": "Great weapons",
           "points": 4,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following"
+          "condition": "The entire unit may take one of the following",
+          "category": "special"
         },
         {
           "description": "Halberds",
           "points": 3,
           "scope": "per_model",
-          "condition": "The entire unit may take one of the following"
+          "condition": "The entire unit may take one of the following",
+          "category": "special"
         },
         {
           "description": "Replace light armour with heavy armour",
           "points": 3,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "armour"
         },
         {
           "description": "Chaos Mutations for Shartak",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Shartak may take Chaos Mutations up to a total of 25 points"
+          "notes": "A Shartak may take Chaos Mutations up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Magic items for Shartak",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Shartak may purchase magic items up to a total of 25 points"
+          "notes": "A Shartak may purchase magic items up to a total of 25 points",
+          "category": "special"
         }
       ],
       "notes": [
@@ -1843,17 +1935,20 @@
         {
           "description": "Armoured Hide (1) special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Poisoned Attacks special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Vanguard special rule",
           "points": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ]
     },
@@ -2064,32 +2159,37 @@
           "description": "Additional hand weapon",
           "points": 3,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Great weapon",
           "points": 4,
           "scope": "per_unit",
-          "condition": "May take one of the following"
+          "condition": "May take one of the following",
+          "category": "weapon"
         },
         {
           "description": "Replace light armour with heavy armour",
           "points": 6,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Chaos Mutations",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May take Chaos Mutations up to a total of 50 points"
+          "notes": "May take Chaos Mutations up to a total of 50 points",
+          "category": "special"
         },
         {
           "description": "Magic items",
           "points": 0,
           "scope": "per_unit",
           "max_points": 50,
-          "notes": "May purchase magic items up to a total of 50 points"
+          "notes": "May purchase magic items up to a total of 50 points",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2193,12 +2293,14 @@
           "description": "Acidic vomit",
           "points": 20,
           "scope": "per_unit",
-          "notes": "Acidic vomit: Range N/A, S=3, AP=-1, Breath Weapon"
+          "notes": "Acidic vomit: Range N/A, S=3, AP=-1, Breath Weapon",
+          "category": "special"
         },
         {
           "description": "Poisoned Attacks special rule",
           "points": 10,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2289,12 +2391,14 @@
         {
           "description": "Scaly skin (counts as heavy armour)",
           "points": 10,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "armour"
         },
         {
           "description": "Regeneration (6+) special rule",
           "points": 20,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2449,19 +2553,22 @@
           "description": "Additional hand weapons",
           "points": 0,
           "scope": "per_unit",
-          "condition": "The entire unit must take one of the following (free)"
+          "condition": "The entire unit must take one of the following (free)",
+          "category": "special"
         },
         {
           "description": "Shields",
           "points": 0,
           "scope": "per_unit",
-          "condition": "The entire unit must take one of the following (free)"
+          "condition": "The entire unit must take one of the following (free)",
+          "category": "special"
         },
         {
           "description": "Have the Ambushers special rule",
           "points": 1,
           "scope": "per_model",
-          "condition": "0-1 unit may"
+          "condition": "0-1 unit may",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2551,44 +2658,51 @@
           "description": "Additional hand weapons for Gors",
           "points": 0,
           "scope": "per_unit",
-          "condition": "Gors must take one of the following (free)"
+          "condition": "Gors must take one of the following (free)",
+          "category": "special"
         },
         {
           "description": "Shields for Gors",
           "points": 0,
           "scope": "per_unit",
-          "condition": "Gors must take one of the following (free)"
+          "condition": "Gors must take one of the following (free)",
+          "category": "special"
         },
         {
           "description": "Thrusting spears for Ungors",
           "points": 0,
           "scope": "per_unit",
-          "condition": "Ungors must take one of the following (free)"
+          "condition": "Ungors must take one of the following (free)",
+          "category": "special"
         },
         {
           "description": "Throwing spears for Ungors",
           "points": 0,
           "scope": "per_unit",
-          "condition": "Ungors must take one of the following (free)"
+          "condition": "Ungors must take one of the following (free)",
+          "category": "weapon"
         },
         {
           "description": "Replace a hand weapon or shield with a great weapon for Foe-render",
           "points": 0,
           "scope": "per_unit",
-          "notes": "A Foe-render may replace a hand weapon or its shield with a great weapon for free"
+          "notes": "A Foe-render may replace a hand weapon or its shield with a great weapon for free",
+          "category": "weapon"
         },
         {
           "description": "Magic items for Foe-render",
           "points": 0,
           "scope": "per_unit",
           "max_points": 25,
-          "notes": "A Foe-render may purchase magic items up to a total of 25 points"
+          "notes": "A Foe-render may purchase magic items up to a total of 25 points",
+          "category": "special"
         },
         {
           "description": "Purchase a magic standard worth up to 50 points",
           "points": 0,
           "scope": "per_unit",
-          "max_points": 50
+          "max_points": 50,
+          "category": "special"
         }
       ],
       "notes": [
@@ -2656,17 +2770,20 @@
           "description": "Include one Ungor Ravager for every three Primal Warhounds",
           "points": 7,
           "scope": "per_unit",
-          "notes": "7 points each per Ungor Ravager added"
+          "notes": "7 points each per Ungor Ravager added",
+          "category": "special"
         },
         {
           "description": "Armoured Hide (1) special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         },
         {
           "description": "Poisoned Attacks special rule",
           "points": 1,
-          "scope": "per_model"
+          "scope": "per_model",
+          "category": "special"
         }
       ],
       "notes": [
@@ -2714,12 +2831,14 @@
         {
           "description": "Ambushers special rule",
           "points": 10,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         },
         {
           "description": "Frenzy special rule",
           "points": 5,
-          "scope": "per_unit"
+          "scope": "per_unit",
+          "category": "special"
         }
       ],
       "notes": [
