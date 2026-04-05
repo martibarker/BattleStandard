@@ -3,8 +3,12 @@
     {
       "id": "berserker-blade",
       "name": "Berserker Blade",
-      "points": 20,
       "category": "magic_weapon",
+      "points": 20,
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.",
+      "grants_rules": [
+        "impetuous"
+      ],
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -16,17 +20,14 @@
         "notes": "The wielder of the Berserker Blade is Impetuous.",
         "S": "S+1",
         "AP": "-"
-      },
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.",
-      "grants_rules": [
-        "impetuous"
-      ]
+      }
     },
     {
       "id": "biting-blade",
       "name": "Biting Blade",
-      "points": 15,
       "category": "magic_weapon",
+      "points": 15,
+      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -36,14 +37,17 @@
         ],
         "S": "S",
         "AP": "-2"
-      },
-      "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease."
+      }
     },
     {
       "id": "burning-blade",
       "name": "Burning Blade*",
-      "points": 5,
       "category": "magic_weapon",
+      "points": 5,
+      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.",
+      "grants_rules": [
+        "flaming_attacks"
+      ],
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -53,17 +57,14 @@
         ],
         "S": "S",
         "AP": "-"
-      },
-      "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.",
-      "grants_rules": [
-        "flaming_attacks"
-      ]
+      }
     },
     {
       "id": "cackling-blade",
       "name": "Cackling Blade",
-      "points": 65,
       "category": "magic_weapon",
+      "points": 65,
+      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -74,14 +75,17 @@
         "notes": "If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound.",
         "S": "S+1",
         "AP": "-1"
-      },
-      "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril."
+      }
     },
     {
       "id": "dragon-slaying-sword",
       "name": "Dragon Slaying Sword",
-      "points": 50,
       "category": "magic_weapon",
+      "points": 50,
+      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.",
+      "grants_rules": [
+        "monster_slayer"
+      ],
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -91,17 +95,14 @@
         ],
         "S": "S",
         "AP": "-"
-      },
-      "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.",
-      "grants_rules": [
-        "monster_slayer"
-      ]
+      }
     },
     {
       "id": "dragonblade",
       "name": "Dragonblade",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
+      "description": "Inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
       "weapon_profile": {
         "range": "Combat",
         "special_rules": [
@@ -110,14 +111,14 @@
         ],
         "S": "S+2",
         "AP": "-2"
-      },
-      "description": "Inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy."
+      }
     },
     {
       "id": "duellists-blades",
       "name": "Duellist's Blades",
-      "points": 55,
       "category": "magic_weapon",
+      "points": 55,
+      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -128,14 +129,15 @@
         ],
         "S": "S",
         "AP": "-1"
-      },
-      "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening."
+      }
     },
     {
       "id": "giant-blade",
       "name": "Giant Blade",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
+      "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.",
+      "restrictions": "",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -146,15 +148,14 @@
         ],
         "S": "S+1",
         "AP": "-"
-      },
-      "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.",
-      "restrictions": ""
+      }
     },
     {
       "id": "headsmans-axe",
       "name": "Headsman's Axe",
-      "points": 45,
       "category": "magic_weapon",
+      "points": 45,
+      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.",
       "weapon_profile": {
         "weapon_type": "Axe",
         "range": "Combat",
@@ -165,14 +166,14 @@
         ],
         "S": "S+1",
         "AP": "-1"
-      },
-      "description": "A wide bladed axe, steeped in the blood of its countless helpless victims."
+      }
     },
     {
       "id": "hell-forged-axe",
       "name": "Hell-forged Axe",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
+      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.",
       "weapon_profile": {
         "weapon_type": "Axe",
         "range": "Combat",
@@ -183,14 +184,14 @@
         ],
         "S": "S+1",
         "AP": "-1"
-      },
-      "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon."
+      }
     },
     {
       "id": "meteor-hammer",
       "name": "Meteor Hammer",
-      "points": 50,
       "category": "magic_weapon",
+      "points": 50,
+      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.",
       "weapon_profile": {
         "weapon_type": "Hammer",
         "range": "Combat",
@@ -201,14 +202,15 @@
         "notes": "When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness.",
         "S": "S",
         "AP": "-3"
-      },
-      "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens."
+      }
     },
     {
       "id": "ogre-blade",
       "name": "Ogre Blade",
-      "points": 75,
       "category": "magic_weapon",
+      "points": 75,
+      "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.",
+      "restrictions": "",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -217,15 +219,17 @@
         ],
         "S": "S+1",
         "AP": "-"
-      },
-      "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.",
-      "restrictions": ""
+      }
     },
     {
       "id": "spelleater-axe",
       "name": "Spelleater Axe",
-      "points": 35,
       "category": "magic_weapon",
+      "points": 35,
+      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.",
+      "grants_rules": [
+        "magic_resistance"
+      ],
       "weapon_profile": {
         "weapon_type": "Axe",
         "range": "Combat",
@@ -235,17 +239,14 @@
         ],
         "S": "S",
         "AP": "-1"
-      },
-      "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.",
-      "grants_rules": [
-        "magic_resistance"
-      ]
+      }
     },
     {
       "id": "sword-of-battle",
       "name": "Sword of Battle",
-      "points": 60,
       "category": "magic_weapon",
+      "points": 60,
+      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -256,14 +257,14 @@
         ],
         "S": "S+1",
         "AP": "-1"
-      },
-      "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests."
+      }
     },
     {
       "id": "sword-of-might",
       "name": "Sword of Might*",
-      "points": 20,
       "category": "magic_weapon",
+      "points": 20,
+      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -272,14 +273,15 @@
         ],
         "S": "S+1",
         "AP": "-1"
-      },
-      "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer."
+      }
     },
     {
       "id": "sword-of-sorrow",
       "name": "Sword of Sorrow",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
+      "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
+      "restrictions": "",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -288,15 +290,14 @@
         ],
         "S": "S",
         "AP": "-"
-      },
-      "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
-      "restrictions": ""
+      }
     },
     {
       "id": "sword-of-striking",
       "name": "Sword of Striking*",
-      "points": 15,
       "category": "magic_weapon",
+      "points": 15,
+      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.",
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -306,14 +307,17 @@
         "notes": "During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.",
         "S": "S",
         "AP": "-"
-      },
-      "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision."
+      }
     },
     {
       "id": "sword-of-swiftness",
       "name": "Sword of Swiftness",
-      "points": 25,
       "category": "magic_weapon",
+      "points": 25,
+      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.",
+      "grants_rules": [
+        "strike_first"
+      ],
       "weapon_profile": {
         "weapon_type": "Sword",
         "range": "Combat",
@@ -323,62 +327,60 @@
         ],
         "S": "S",
         "AP": "-"
-      },
-      "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.",
-      "grants_rules": [
-        "strike_first"
-      ]
+      }
     },
     {
       "id": "armour-of-destiny",
       "name": "Armour of Destiny",
-      "points": 70,
       "category": "magic_armour",
+      "points": 70,
+      "description": "A suit of magical armour forged at the confluence of two ley lines, the Armour of Destiny protects its wearer from harm beyond mortal ken.",
+      "restrictions": "May only be worn by a model that is equipped with (or has the option to be equipped with) armour.",
       "armour_profile": {
         "armour_value": "5+",
         "special_rules": [
           "ward_save_4_plus"
         ],
         "notes": "Ward save against any wounds suffered"
-      },
-      "description": "A suit of magical armour forged at the confluence of two ley lines, the Armour of Destiny protects its wearer from harm beyond mortal ken.",
-      "restrictions": "May only be worn by a model that is equipped with (or has the option to be equipped with) armour."
+      }
     },
     {
       "id": "armour-of-meteoric-iron",
       "name": "Armour of Meteoric Iron",
-      "points": 20,
       "category": "magic_armour",
+      "points": 20,
+      "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.",
+      "restrictions": "",
       "armour_profile": {
         "armour_value": "5+",
         "special_rules": [
           "unmodifiable_armour"
         ],
         "notes": "Armour value cannot be improved or reduced"
-      },
-      "description": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.",
-      "restrictions": ""
+      }
     },
     {
       "id": "armour-of-silvered-steel",
       "name": "Armour of Silvered Steel",
-      "points": 40,
       "category": "magic_armour",
+      "points": 40,
+      "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.",
+      "restrictions": "",
       "armour_profile": {
         "armour_value": "3+",
         "special_rules": [
           "unimprovable_armour"
         ],
         "notes": "Armour value cannot be improved in any way"
-      },
-      "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.",
-      "restrictions": ""
+      }
     },
     {
       "id": "bedazzling-helm",
       "name": "Bedazzling Helm",
-      "points": 60,
       "category": "magic_armour",
+      "points": 60,
+      "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
+      "restrictions": "",
       "armour_profile": {
         "type": "helm",
         "armour_value": "+1",
@@ -386,15 +388,15 @@
           "to_hit_penalty_1"
         ],
         "notes": "Infantry/Cavalry only. Improves wearer's armour by 1 (max 2+). Enemy models attacking the wearer suffer -1 modifier to To Hit rolls."
-      },
-      "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      }
     },
     {
       "id": "charmed-shield",
       "name": "Charmed Shield*",
-      "points": 5,
       "category": "magic_armour",
+      "points": 5,
+      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long.",
+      "is_shield": true,
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
@@ -402,15 +404,15 @@
           "ward_save_5_plus_once_per_game"
         ],
         "notes": "Once per game, provides 5+ Ward save against a single wound. Becomes mundane after use."
-      },
-      "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long.",
-      "is_shield": true
+      }
     },
     {
       "id": "enchanted-shield",
       "name": "Enchanted Shield*",
-      "points": 10,
       "category": "magic_armour",
+      "points": 10,
+      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.",
+      "is_shield": true,
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
@@ -418,29 +420,30 @@
           "ward_save_6_plus_non_magical"
         ],
         "notes": "6+ Ward save against wounds from non-magical attacks"
-      },
-      "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.",
-      "is_shield": true
+      }
     },
     {
       "id": "glittering-scales",
       "name": "Glittering Scales",
-      "points": 35,
       "category": "magic_armour",
+      "points": 35,
+      "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.",
       "armour_profile": {
         "armour_value": "6+",
         "special_rules": [
           "to_hit_reroll"
         ],
         "notes": "Once per turn, force opponent to re-roll a single To Hit roll against wearer"
-      },
-      "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal."
+      }
     },
     {
       "id": "levitating-shield",
       "name": "Levitating Shield",
-      "points": 25,
       "category": "magic_armour",
+      "points": 25,
+      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.",
+      "restrictions": "",
+      "is_shield": true,
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
@@ -448,16 +451,15 @@
           "two_hands_compatible"
         ],
         "notes": "Infantry only. May be used alongside weapons that Require Two Hands in combat."
-      },
-      "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.",
-      "restrictions": "",
-      "is_shield": true
+      }
     },
     {
       "id": "shield-of-the-warrior-true",
       "name": "Shield of the Warrior True",
-      "points": 30,
       "category": "magic_armour",
+      "points": 30,
+      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.",
+      "is_shield": true,
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
@@ -465,15 +467,15 @@
           "ward_save_5_plus_shooting"
         ],
         "notes": "5+ Ward save against wounds suffered during the Shooting phase"
-      },
-      "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.",
-      "is_shield": true
+      }
     },
     {
       "id": "spellshield",
       "name": "Spellshield*",
-      "points": 25,
       "category": "magic_armour",
+      "points": 25,
+      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.",
+      "is_shield": true,
       "armour_profile": {
         "type": "shield",
         "armour_value": "+1",
@@ -481,15 +483,19 @@
           "ward_save_5_plus_magic"
         ],
         "notes": "5+ Ward save against wounds from Magic Missile, Magical Vortex, or Assailment spells"
-      },
-      "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.",
-      "is_shield": true
+      }
     },
     {
       "id": "trailblazers-hauberk",
       "name": "Trailblazer's Hauberk",
-      "points": 20,
       "category": "magic_armour",
+      "points": 20,
+      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.",
+      "restrictions": "",
+      "grants_rules": [
+        "move_through_cover",
+        "scouts"
+      ],
       "armour_profile": {
         "armour_value": "5+",
         "special_rules": [
@@ -497,358 +503,350 @@
           "scouts"
         ],
         "notes": "Infantry only. Heavy armour."
-      },
-      "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.",
-      "restrictions": "",
-      "grants_rules": [
-        "move_through_cover",
-        "scouts"
-      ]
+      }
     },
     {
       "id": "dawnstone",
       "name": "Dawnstone",
-      "points": 35,
       "category": "talisman",
+      "points": 35,
       "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical.",
-      "restrictions": "",
-      "rules_text": "The magic trapped within this semi-precious stone binds together shattered armour plates. The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1."
+      "rules_text": "The magic trapped within this semi-precious stone binds together shattered armour plates. The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
+      "restrictions": ""
     },
     {
       "id": "icon-of-fortitude",
       "name": "Icon of Fortitude",
-      "points": 35,
       "category": "talisman",
+      "points": 35,
       "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound."
+      "rules_text": "Models whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": ""
     },
     {
       "id": "ironhide-talisman",
       "name": "Ironhide Talisman",
-      "points": 30,
       "category": "talisman",
+      "points": 30,
       "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6. Note that this magic item does not work against attacks that hit automatically."
+      "rules_text": "Models whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6. Note that this magic item does not work against attacks that hit automatically.",
+      "restrictions": ""
     },
     {
       "id": "luckstone",
       "name": "Luckstone*",
-      "points": 15,
       "category": "talisman",
+      "points": 15,
       "description": "Can luck be trapped within a dull stone pendant? Possibly.",
-      "single_use": true,
-      "rules_text": "Single use. The bearer of a Luckstone can re-roll a single failed Armour Save roll."
+      "rules_text": "Single use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.",
+      "single_use": true
     },
     {
       "id": "obsidian-lodestone",
       "name": "Obsidian Lodestone*",
-      "points": 20,
       "category": "talisman",
+      "points": 20,
       "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.",
       "rules_text": "A model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3)."
     },
     {
       "id": "paymasters-coin",
       "name": "Paymaster's Coin*",
-      "points": 25,
       "category": "talisman",
+      "points": 25,
       "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.",
-      "single_use": true,
-      "rules_text": "Single use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase."
+      "rules_text": "Single use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.",
+      "single_use": true
     },
     {
       "id": "talisman-of-protection",
       "name": "Talisman of Protection",
-      "points": 30,
       "category": "talisman",
+      "points": 30,
       "description": "A powerful magical aura surrounds this humble talisman, protecting its wearer from harm.",
       "rules_text": "The Talisman of Protection gives its bearer a 5+ Ward save against any wounds suffered."
     },
     {
       "id": "arch-lightning-rod",
       "name": "Arch-Lightning Rod",
-      "points": 40,
       "category": "enchanted_item",
+      "points": 40,
       "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
       "restrictions": ""
     },
     {
       "id": "becalming-orb",
       "name": "Becalming Orb",
-      "points": 20,
       "category": "enchanted_item",
+      "points": 20,
       "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.",
-      "single_use": true,
-      "rules_text": "Single Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+      "rules_text": "Single Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2.",
+      "single_use": true
     },
     {
       "id": "flying-carpet",
       "name": "Flying Carpet",
-      "points": 40,
       "category": "enchanted_item",
+      "points": 40,
       "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!",
+      "rules_text": "Models whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
       "restrictions": "",
       "grants_rules": [
         "fly_8",
         "swiftstride"
-      ],
-      "rules_text": "Models whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit."
+      ]
     },
     {
       "id": "healing-potion",
       "name": "Healing Potion*",
-      "points": 35,
       "category": "enchanted_item",
+      "points": 35,
       "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds."
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.",
+      "single_use": true
     },
     {
       "id": "potion-of-fervour",
       "name": "Potion of Fervour",
-      "points": 30,
       "category": "enchanted_item",
+      "points": 30,
       "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.",
+      "rules_text": "Single Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10). Note that a model can only consume a single potion (of any type) per Command phase.",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10). Note that a model can only consume a single potion (of any type) per Command phase."
+      "single_use": true
     },
     {
       "id": "potion-of-foolhardiness",
       "name": "Potion of Foolhardiness*",
-      "points": 5,
       "category": "enchanted_item",
+      "points": 5,
       "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.",
+      "single_use": true,
       "grants_rules": [
         "immune_to_psychology"
-      ],
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule."
+      ]
     },
     {
       "id": "potion-of-speed",
       "name": "Potion of Speed*",
-      "points": 10,
       "category": "enchanted_item",
+      "points": 10,
       "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10)."
+      "single_use": true
     },
     {
       "id": "potion-of-strength",
       "name": "Potion of Strength*",
-      "points": 25,
       "category": "enchanted_item",
+      "points": 25,
       "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10)."
+      "single_use": true
     },
     {
       "id": "potion-of-toughness",
       "name": "Potion of Toughness*",
-      "points": 20,
       "category": "enchanted_item",
+      "points": 20,
       "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10)."
+      "single_use": true
     },
     {
       "id": "ruby-ring-of-ruin",
       "name": "Ruby Ring of Ruin",
-      "points": 35,
       "category": "enchanted_item",
+      "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
       "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
     },
     {
       "id": "wizarding-hat",
       "name": "Wizarding Hat",
-      "points": 45,
       "category": "enchanted_item",
+      "points": 45,
       "description": "This splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
       "restrictions": ""
     },
     {
       "id": "arcane-familiar",
       "name": "Arcane Familiar",
-      "points": 15,
       "category": "arcane_item",
+      "points": 15,
       "description": "Many Wizards are accompanied by familiars gifted with arcane knowledge. These creatures constantly whisper secrets to their master."
     },
     {
       "id": "dispel-scroll",
       "name": "Dispel Scroll*",
-      "points": 20,
       "category": "arcane_item",
+      "points": 20,
       "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.",
-      "single_use": true,
-      "rules_text": "Single use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art."
+      "rules_text": "Single use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.",
+      "single_use": true
     },
     {
       "id": "earthing-rod",
       "name": "Earthing Rod",
-      "points": 5,
       "category": "arcane_item",
+      "points": 5,
       "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.",
-      "single_use": true,
-      "rules_text": "Single use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+      "rules_text": "Single use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table.",
+      "single_use": true
     },
     {
       "id": "feedback-scroll",
       "name": "Feedback Scroll",
-      "points": 60,
       "category": "arcane_item",
+      "points": 60,
       "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
     {
       "id": "lore-familiar",
       "name": "Lore Familiar",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "By creating a magical homunculus, a Wizard is able to better recall forgotten details of their studies.",
       "rules_text": "The owner of a Lore Familiar does not randomly generate their spells. Instead, they may choose which spells they know from their chosen lore (including that lore's signature spell)."
     },
     {
       "id": "power-scroll",
       "name": "Power Scroll*",
-      "points": 20,
       "category": "arcane_item",
+      "points": 20,
       "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.",
-      "single_use": true,
-      "rules_text": "Single use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast."
+      "rules_text": "Single use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.",
+      "single_use": true
     },
     {
       "id": "scroll-of-disruption",
       "name": "Scroll of Disruption",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.",
       "rules_text": "Once per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
     {
       "id": "scroll-of-transmogrification",
       "name": "Scroll of Transmogrification*",
-      "points": 50,
       "category": "arcane_item",
+      "points": 50,
       "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
       "restrictions": ""
     },
     {
       "id": "staff-of-quietude",
       "name": "Staff of Quietude",
-      "points": 35,
       "category": "arcane_item",
+      "points": 35,
       "description": "With a gesture, the bearer of the Staff of Quietude calms the Winds of Magic, causing spells and conjurations to dissipate into the other."
     },
     {
       "id": "tome-of-spellcraft",
       "name": "Tome of Spellcraft",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.",
       "rules_text": "Once per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
     {
       "id": "wand-of-jet",
       "name": "Wand of Jet",
-      "points": 45,
       "category": "arcane_item",
+      "points": 45,
       "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
       "restrictions": ""
     },
     {
       "id": "banner-of-iron-resolve",
       "name": "Banner of Iron Resolve",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "No regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.",
+      "rules_text": "A unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
       "restrictions": "",
       "grants_rules": [
         "stubborn"
-      ],
-      "rules_text": "A unit carrying the Banner of Iron Resolve gains the Stubborn special rule."
+      ]
     },
     {
       "id": "banner-of-swirling-wind",
       "name": "Banner of Swirling Wind",
-      "points": 30,
       "category": "magic_standard",
+      "points": 30,
       "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.",
-      "restrictions": "",
-      "rules_text": "Any enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier."
+      "rules_text": "Any enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
+      "restrictions": ""
     },
     {
       "id": "banner-of-the-steadfast",
       "name": "Banner of the Steadfast",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "Woven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold their ground no matter the odds.",
       "restrictions": ""
     },
     {
       "id": "monster-hunters-tapestry",
       "name": "Monster Hunter's Tapestry",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "Those who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.",
-      "restrictions": "",
-      "rules_text": "Enemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry."
+      "rules_text": "Enemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry.",
+      "restrictions": ""
     },
     {
       "id": "rampaging-banner",
       "name": "Rampaging Banner",
-      "points": 30,
       "category": "magic_standard",
+      "points": 30,
       "description": "As a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.",
-      "restrictions": "",
-      "rules_text": "When a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll."
+      "rules_text": "When a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll.",
+      "restrictions": ""
     },
     {
       "id": "razor-standard",
       "name": "Razor Standard",
-      "points": 40,
       "category": "magic_standard",
+      "points": 40,
       "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.",
-      "restrictions": "",
-      "rules_text": "A unit carrying the Razor Standard gains the Armour Bane (2) special rule."
+      "rules_text": "A unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
+      "restrictions": ""
     },
     {
       "id": "the-blazing-banner",
       "name": "The Blazing Banner",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.",
+      "rules_text": "A unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
       "restrictions": "",
       "grants_rules": [
         "flaming_attacks"
-      ],
-      "rules_text": "A unit carrying the Blazing Banner gains the Flaming Attacks special rule."
+      ]
     },
     {
       "id": "totem-of-wrath",
       "name": "Totem of Wrath",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.",
-      "restrictions": "",
-      "rules_text": "During a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1."
+      "rules_text": "During a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
+      "restrictions": ""
     },
     {
       "id": "war-banner",
       "name": "War Banner",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "A proud banner of great age. Those that march beneath the War Banner fight with grim resolve.",
-      "restrictions": "",
-      "rules_text": "When calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point."
+      "rules_text": "When calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point.",
+      "restrictions": ""
     }
-  ],
-  "total": 67,
-  "scraped_at": "2026-03-30T14:31:31.036Z"
+  ]
 }

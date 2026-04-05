@@ -92,18 +92,6 @@
           "limit_value": 25,
           "notes": "Any Tomb Kings of Khemri Army of Infamy composition list; or one of: Orc & Goblin Tribes (Suspicious), Warriors of Chaos (Suspicious), Beastmen Brayherds (Suspicious)"
         }
-      ],
-      "special_rules": [
-        {
-          "id": "battle_standard_bearer",
-          "name": "Battle Standard Bearer",
-          "description": "A single Royal Herald in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit."
-        },
-        {
-          "id": "hierophant",
-          "name": "The Hierophant",
-          "description": "Your army must include at least one Liche Priest to be its Hierophant. If your army includes several Liche Priests, the Hierophant will be the one with the highest Level of Wizardry. If two or more models have the highest Wizard Level, you may choose which one is the Hierophant when writing your muster list. You must tell your opponent which model is your Hierophant before deploying your army. Should the Hierophant be slain, all friendly units with the Nehekharan Undead special rule lose the Regeneration (X) special rule. At the end of the phase in which your Hierophant was removed, and during each of your Start of Turn sub-phases for the remainder of the game, all friendly units with the Nehekharan Undead special rule currently on the battlefield must make a Leadership test. If the test is failed, the unit loses a number of Wounds equal to the amount by which it failed the test."
-        }
       ]
     },
     {
@@ -180,38 +168,6 @@
             "screaming_skull_catapult"
           ],
           "notes": "0-2 Screaming Skull Catapults per 1,000 points"
-        }
-      ],
-      "special_rules": [
-        {
-          "id": "battle_standard_bearer_royal_host",
-          "name": "Battle Standard Bearer",
-          "description": "A single Royal Herald in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit."
-        },
-        {
-          "id": "grind_them_down",
-          "name": "Grind Them Down!",
-          "description": "Whilst within the General's Command range, friendly models whose troop type is 'Chariot' may re-roll the dice when rolling to determine the number of Impact Hits they cause."
-        },
-        {
-          "id": "the_language_of_the_priests",
-          "name": "The Language of the Priests",
-          "description": "The General of a Nehekharan Royal Host must be a Tomb King or a Tomb Prince. For +35 points, this character may have the Arise! special rule and be a Level 1 Wizard. If so, this character knows spells from the Lore of Necromancy and must also be chosen to be the army's Hierophant, even if it does not have the highest Level of Wizardry in your army. A Wizard with this special rule may wear armour without penalty."
-        },
-        {
-          "id": "lay_in_wait",
-          "name": "Lay in Wait",
-          "description": "0-1 unit of Skeleton Skirmishers per 1,000 points may have the Ambushers special rule for free."
-        },
-        {
-          "id": "masterful_outriders",
-          "name": "Masterful Outriders",
-          "description": "0-1 unit of Skeleton Horse Archers per 1,000 points may have the Chariot Runners special rule for free."
-        },
-        {
-          "id": "steadfast_discipline",
-          "name": "Steadfast Discipline",
-          "description": "A unit with this special rule can Volley Fire during a turn in which it moved, or whilst performing a Stand & Shoot charge reaction."
         }
       ]
     },
@@ -308,33 +264,6 @@
           ],
           "notes": "0-1 Casket of Souls per 1,000 points"
         }
-      ],
-      "special_rules": [
-        {
-          "id": "battle_standard_bearer_mortuary_cult",
-          "name": "Battle Standard Bearer",
-          "description": "A single Mortuary Priest in your army may be upgraded to be your Battle Standard Bearer for +25 points. In addition to their usual allowance of points to spend on magic items, a Battle Standard Bearer can purchase a single magic standard with no points limit. This model replaces the 'Hold Your Ground' rule given in the Warhammer: the Old World rulebook with the version given in the Banner of the King special rule."
-        },
-        {
-          "id": "authority_of_the_hierophant",
-          "name": "Authority of the Hierophant",
-          "description": "A Mortuary Cult army must include at least one Liche Priest to be its Hierophant. The Hierophant of a Mortuary Cult army must also be its General, even if they are not the character with the highest Leadership in your army."
-        },
-        {
-          "id": "harmonious_incantations",
-          "name": "Harmonious Incantations",
-          "description": "If a Liche Priest within a Mortuary Cult army uses the Arise! special rule whilst within the Command range of one or more other friendly Liche Priests, the number of lost Wounds the chosen unit recovers is increased by 1."
-        },
-        {
-          "id": "sepulchral_animus",
-          "name": "Sepulchral Animus",
-          "description": "Before making a Casting roll, any Liche Priest in a Mortuary Cult army may draw upon the magical animus of any nearby undead constructs. To do so, nominate a friendly unit that has the Nehekharan Undead special rule, that is within the Liche Priest's Command range and whose troop type is 'swarms', 'monstrous infantry', 'monstrous cavalry', 'monstrous creature' or 'behemoth'. The Liche Priest may then modify their Casting roll by adding the number of Wounds lost by the nominated unit to the result. The nominated unit must immediately make a number of Initiative tests equal to 1-3 Wounds, as chosen by the controlling player. For each test that is failed, a single model belonging to the nominated unit is removed from play as a casualty."
-        },
-        {
-          "id": "the_terrors_below",
-          "name": "The Terrors Below",
-          "description": "Any Tomb Scorpion or unit of Necroserpents may have this special rule for +2 points per model. When a unit with this special rule is placed on the battlefield as a result of using the From Beneath the Sands special rule, it may nominate a single enemy unit that is within 8\" of it and whose troop type is 'regular infantry' or 'heavy infantry'. The nominated enemy unit must immediately make a number of Initiative tests equal to the Unit Strength of this unit. For each test that is failed, a single model belonging to the nominated unit is removed from play as a casualty."
-        }
       ]
     }
   ],
@@ -347,6 +276,7 @@
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 160,
       "stats": {
         "M": "4",
         "WS": "6",
@@ -358,10 +288,19 @@
         "A": "4",
         "Ld": "10"
       },
-      "points": 160,
       "equipment": [
         "Hand weapon",
         "Heavy armour"
+      ],
+      "special_rules": [
+        "curse_of_the_necropolis",
+        "dry_as_dust",
+        "flammable",
+        "indomitable_2",
+        "khopesh",
+        "my_will_be_done",
+        "nehekharan_undead",
+        "regeneration_5+"
       ],
       "options": [
         {
@@ -422,20 +361,6 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "curse_of_the_necropolis",
-        "dry_as_dust",
-        "flammable",
-        "indomitable_2",
-        "khopesh",
-        "my_will_be_done",
-        "nehekharan_undead",
-        "regeneration_5+"
-      ],
-      "notes": [
-        "My Will Be Done: During the Command sub-phase, this character may attempt to exert their will by making a Leadership test. If passed, choose one of: 'Forward to Glory!' (+D3 Movement), 'My Worthy Champions!' (+1 Weapon Skill), 'Strike like the Cobra!' (+D3 Initiative). Until your next Start of Turn sub-phase this character, their mount, and any unit they have joined gains that modifier (to a maximum of 10). This special rule is not cumulative.",
-        "A Tomb King may be the army's Hierophant. A Tomb King taken as General for the Nehekharan Royal Host may purchase the Language of the Priests upgrade for +35 points to gain the Arise! special rule and become a Level 1 Wizard (Lore of Necromancy)."
-      ],
       "weapon_profiles": [
         {
           "name": "Flail",
@@ -477,6 +402,10 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "My Will Be Done: During the Command sub-phase, this character may attempt to exert their will by making a Leadership test. If passed, choose one of: 'Forward to Glory!' (+D3 Movement), 'My Worthy Champions!' (+1 Weapon Skill), 'Strike like the Cobra!' (+D3 Initiative). Until your next Start of Turn sub-phase this character, their mount, and any unit they have joined gains that modifier (to a maximum of 10). This special rule is not cumulative.",
+        "A Tomb King may be the army's Hierophant. A Tomb King taken as General for the Nehekharan Royal Host may purchase the Language of the Priests upgrade for +35 points to gain the Arise! special rule and become a Level 1 Wizard (Lore of Necromancy)."
       ]
     },
     {
@@ -487,6 +416,7 @@
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 90,
       "stats": {
         "M": "4",
         "WS": "5",
@@ -498,10 +428,19 @@
         "A": "3",
         "Ld": "9"
       },
-      "points": 90,
       "equipment": [
         "Hand weapon",
         "Light armour"
+      ],
+      "special_rules": [
+        "curse_of_the_necropolis",
+        "dry_as_dust",
+        "flammable",
+        "indomitable_2",
+        "khopesh",
+        "my_will_be_done",
+        "nehekharan_undead",
+        "regeneration_5+"
       ],
       "options": [
         {
@@ -561,16 +500,6 @@
           "description": "Magic items",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "curse_of_the_necropolis",
-        "dry_as_dust",
-        "flammable",
-        "indomitable_2",
-        "khopesh",
-        "my_will_be_done",
-        "nehekharan_undead",
-        "regeneration_5+"
       ],
       "weapon_profiles": [
         {
@@ -623,6 +552,16 @@
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 140,
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "elementalism",
+          "illusion",
+          "necromancy",
+          "lore_of_nehekhara"
+        ]
+      },
       "stats": {
         "M": "4",
         "WS": "3",
@@ -634,19 +573,19 @@
         "A": "2",
         "Ld": "8"
       },
-      "points": 140,
       "equipment": [
         "Hand weapon"
       ],
-      "magic": {
-        "wizard_level": 3,
-        "lores": [
-          "elementalism",
-          "illusion",
-          "necromancy",
-          "lore_of_nehekhara"
-        ]
-      },
+      "special_rules": [
+        "arise",
+        "curse_of_the_necropolis",
+        "indomitable_1",
+        "khopesh",
+        "lore_of_nehekhara",
+        "nehekharan_undead",
+        "regeneration_5+",
+        "from_beneath_the_sands"
+      ],
       "options": [
         {
           "cost": 0,
@@ -670,16 +609,6 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "arise",
-        "curse_of_the_necropolis",
-        "indomitable_1",
-        "khopesh",
-        "lore_of_nehekhara",
-        "nehekharan_undead",
-        "regeneration_5+",
-        "from_beneath_the_sands"
-      ],
       "notes": [
         "Arise!: During the Command sub-phase, if not engaged in combat, this character may attempt to resurrect the fallen by making a Leadership test. If passed, a single friendly unit that has the Nehekharan Undead special rule and is within 12\" of this character recovers a number of lost Wounds based on the unit's troop type and this character's Level of Wizardry: regular/heavy infantry/swarms recover Level of Wizardry +D3; light/heavy cavalry/war beasts recover Level of Wizardry +1; monstrous infantry/cavalry/light chariot recover Level of Wizardry; heavy chariot/monstrous creature/behemoth/war machine recover 1 Wound.",
         "From Beneath the Sands: During the Command sub-phase, if not in combat, this character may choose a single friendly unit that has both the Nehekharan Undead and Ambushers special rules and is in reserve, and attempt to summon it by making a Leadership test. If passed, the unit is placed on the battlefield completely within 12\" of this character, but not within 6\" of any enemy models. If failed, the summons is delayed until next turn. Ambushers arrive automatically at the start of round five.",
@@ -694,6 +623,16 @@
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 55,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "elementalism",
+          "illusion",
+          "necromancy",
+          "lore_of_nehekhara"
+        ]
+      },
       "stats": {
         "M": "4",
         "WS": "3",
@@ -705,19 +644,19 @@
         "A": "1",
         "Ld": "7"
       },
-      "points": 55,
       "equipment": [
         "Hand weapon"
       ],
-      "magic": {
-        "wizard_level": 1,
-        "lores": [
-          "elementalism",
-          "illusion",
-          "necromancy",
-          "lore_of_nehekhara"
-        ]
-      },
+      "special_rules": [
+        "arise",
+        "curse_of_the_necropolis",
+        "indomitable_1",
+        "khopesh",
+        "lore_of_nehekhara",
+        "nehekharan_undead",
+        "regeneration_5+",
+        "from_beneath_the_sands"
+      ],
       "options": [
         {
           "cost": 0,
@@ -740,16 +679,6 @@
           "description": "Magic items",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "arise",
-        "curse_of_the_necropolis",
-        "indomitable_1",
-        "khopesh",
-        "lore_of_nehekhara",
-        "nehekharan_undead",
-        "regeneration_5+",
-        "from_beneath_the_sands"
       ]
     },
     {
@@ -760,6 +689,7 @@
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 60,
       "stats": {
         "M": "4",
         "WS": "4",
@@ -771,10 +701,19 @@
         "A": "3",
         "Ld": "8"
       },
-      "points": 60,
       "equipment": [
         "Hand weapon",
         "Light armour"
+      ],
+      "special_rules": [
+        "banner_of_the_king",
+        "dry_as_dust",
+        "flammable",
+        "indomitable_1",
+        "khopesh",
+        "nehekharan_undead",
+        "regeneration_5+",
+        "sworn_protector"
       ],
       "options": [
         {
@@ -842,20 +781,6 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "banner_of_the_king",
-        "dry_as_dust",
-        "flammable",
-        "indomitable_1",
-        "khopesh",
-        "nehekharan_undead",
-        "regeneration_5+",
-        "sworn_protector"
-      ],
-      "notes": [
-        "Banner of the King: A Royal Herald upgraded to Battle Standard Bearer replaces the 'Hold Your Ground' rule with: Friendly units within the Battle Standard Bearer's Command range may re-roll any failed Leadership test. In addition, friendly units within the Command range reduce the number of Wounds lost due to the Unstable special rule by D3. Not cumulative with Indomitable (X); use the highest value.",
-        "Sworn Protector: Should a Monarch of Nehekhara model suffer a hit whilst within 3\" of this model, you may choose to transfer that hit and all of its effects onto this model."
-      ],
       "weapon_profiles": [
         {
           "name": "Flail",
@@ -897,6 +822,10 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "Banner of the King: A Royal Herald upgraded to Battle Standard Bearer replaces the 'Hold Your Ground' rule with: Friendly units within the Battle Standard Bearer's Command range may re-roll any failed Leadership test. In addition, friendly units within the Command range reduce the number of Wounds lost due to the Unstable special rule by D3. Not cumulative with Indomitable (X); use the highest value.",
+        "Sworn Protector: Should a Monarch of Nehekhara model suffer a hit whilst within 3\" of this model, you may choose to transfer that hit and all of its effects onto this model."
       ]
     },
     {
@@ -907,6 +836,7 @@
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 55,
       "stats": {
         "M": "4",
         "WS": "3",
@@ -918,11 +848,18 @@
         "A": "2",
         "Ld": "7"
       },
-      "points": 55,
       "equipment": [
         "Hand weapon",
         "Whip",
         "Light armour"
+      ],
+      "special_rules": [
+        "dry_as_dust",
+        "eternal_taskmaster",
+        "flammable",
+        "khopesh",
+        "nehekharan_undead",
+        "regeneration_6+"
       ],
       "options": [
         {
@@ -933,14 +870,6 @@
           "description": "Magic items",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "dry_as_dust",
-        "eternal_taskmaster",
-        "flammable",
-        "khopesh",
-        "nehekharan_undead",
-        "regeneration_6+"
       ],
       "weapon_profiles": [
         {
@@ -966,6 +895,7 @@
       "troop_type": "Heavy cavalry",
       "base_size": "25 x 50 mm",
       "unit_size": "1",
+      "points": 12,
       "stats": {
         "M": "8",
         "WS": "2",
@@ -977,7 +907,6 @@
         "A": "1",
         "Ld": "-"
       },
-      "points": 12,
       "equipment": [
         "Skeletal hooves (counts as hand weapons)"
       ],
@@ -998,6 +927,7 @@
       "troop_type": "Light chariot",
       "base_size": "50 x 100 mm",
       "unit_size": "1",
+      "points": 35,
       "stats": {
         "M": "-",
         "WS": "-",
@@ -1009,7 +939,6 @@
         "A": "-",
         "Ld": "-"
       },
-      "points": 35,
       "equipment": [
         "Skeletal hooves (counts as hand weapons)"
       ],
@@ -1034,6 +963,7 @@
       "troop_type": "Behemoth",
       "base_size": "100 x 150 mm",
       "unit_size": "1",
+      "points": 195,
       "stats": {
         "M": "6",
         "WS": "4",
@@ -1045,7 +975,6 @@
         "A": "5",
         "Ld": "-"
       },
-      "points": 195,
       "equipment": [
         "Wicked claws (Combat, S, AP -2)",
         "Breath of desiccation (N/A, S3, AP -2; Breath Weapon, Magical Attacks, Multiple Wounds (2))",
@@ -1078,6 +1007,7 @@
       "troop_type": "Behemoth",
       "base_size": "60 x 100 mm",
       "unit_size": "1",
+      "points": 0,
       "stats": {
         "M": "6",
         "WS": "4",
@@ -1089,10 +1019,22 @@
         "A": "4",
         "Ld": "-"
       },
-      "points": 0,
       "equipment": [
         "Wicked claws (Combat, S, AP -2)",
         "Tomb Guard Crew (x2): Hand weapons, cavalry spears and shortbows"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "cleaving_blow",
+        "close_order",
+        "howdah",
+        "indomitable_2",
+        "khopesh",
+        "large_target",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "stomp_attacks_d3",
+        "terror"
       ],
       "options": [
         {
@@ -1115,25 +1057,6 @@
           "category": "weapon"
         }
       ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "cleaving_blow",
-        "close_order",
-        "howdah",
-        "indomitable_2",
-        "khopesh",
-        "large_target",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "stomp_attacks_d3",
-        "terror"
-      ],
-      "notes": [
-        "Armour Value: 5+. Tomb Guard Crew WS3, BS3, S4, T-, W-, I3, A1, Ld8.",
-        "Character Mount: This model may be included in your army as a character's mount; points are added to that of its rider. Because it has the Howdah special rule, a Khemrian Warsphinx is considered to be a chariot mount rather than a ridden monster.",
-        "Cleaving Blow applies to Tomb Guard Crew only. Khopesh applies to Tomb Guard Crew only.",
-        "Available to Tomb Kings only."
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -1144,6 +1067,12 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "Armour Value: 5+. Tomb Guard Crew WS3, BS3, S4, T-, W-, I3, A1, Ld8.",
+        "Character Mount: This model may be included in your army as a character's mount; points are added to that of its rider. Because it has the Howdah special rule, a Khemrian Warsphinx is considered to be a chariot mount rather than a ridden monster.",
+        "Cleaving Blow applies to Tomb Guard Crew only. Khopesh applies to Tomb Guard Crew only.",
+        "Available to Tomb Kings only."
       ]
     },
     {
@@ -1154,6 +1083,13 @@
       "troop_type": "Heavy chariot (named character)",
       "base_size": "100 x 150 mm",
       "unit_size": "1",
+      "points": 445,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "necromancy"
+        ]
+      },
       "stats": {
         "M": "-",
         "WS": "7",
@@ -1165,7 +1101,6 @@
         "A": "5",
         "Ld": "10"
       },
-      "points": 445,
       "equipment": [
         "The Blessed Blade of Ptra (Combat, S, AP -3; Flaming Attacks, Magical Attacks, Requires Two Hands)",
         "Chariot of the Gods (Troop type: Heavy chariot; S4, T5, W8, Armour Value 4+; Impact Hits (2D3), Flaming Attacks, Magical Attacks)",
@@ -1173,12 +1108,6 @@
         "Scarab Brooch of Usirian (5+ Ward save against any wounds suffered)",
         "Skeletal Steed (x4) (M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-; Skeletal hooves counts as hand weapons)"
       ],
-      "magic": {
-        "wizard_level": 1,
-        "lores": [
-          "necromancy"
-        ]
-      },
       "special_rules": [
         "commander_of_legions",
         "curse_of_the_necropolis",
@@ -1211,6 +1140,7 @@
       "troop_type": "Regular infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 130,
       "stats": {
         "M": "4",
         "WS": "4",
@@ -1222,7 +1152,6 @@
         "A": "5",
         "Ld": "8"
       },
-      "points": 130,
       "equipment": [
         "Swarming mass (N/A, S2, AP -; Breath Weapon; roll of 4+ always wounds regardless of Toughness)",
         "Light armour"
@@ -1253,6 +1182,7 @@
       "troop_type": "Regular infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 120,
       "stats": {
         "M": "4",
         "WS": "5",
@@ -1264,7 +1194,6 @@
         "A": "3",
         "Ld": "8"
       },
-      "points": 120,
       "equipment": [
         "The Flail of Conquered Kings (Combat, S+2, AP -2; Magical Attacks, Multiple Wounds (2), Requires Two Hands; Strength modifier applies only during the first round of combat)",
         "Light armour"
@@ -1280,11 +1209,6 @@
         "settras_champion",
         "sworn_protector"
       ],
-      "notes": [
-        "Nekaph, Emissary of Settra is a Royal Herald. He may be included in any Tomb Kings of Khemri army made using any army composition list that includes this option.",
-        "Herald of Despair: Any enemy unit that is in base contact with Nekaph or a unit he has joined must roll an extra D6 when making a Fear or Terror test, and discard the lowest result.",
-        "Settra's Champion: Nekaph must always issue and accept challenges (if possible). However, challenges issued by Nekaph cannot be refused. In addition, whilst engaged in a challenge, Nekaph strikes a Killing Blow if he rolls a natural 5 or 6 when making a roll To Wound, rather than the usual 6."
-      ],
       "weapon_profiles": [
         {
           "name": "Flail",
@@ -1296,6 +1220,11 @@
             "requires_two_hands"
           ]
         }
+      ],
+      "notes": [
+        "Nekaph, Emissary of Settra is a Royal Herald. He may be included in any Tomb Kings of Khemri army made using any army composition list that includes this option.",
+        "Herald of Despair: Any enemy unit that is in base contact with Nekaph or a unit he has joined must roll an extra D6 when making a Fear or Terror test, and discard the lowest result.",
+        "Settra's Champion: Nekaph must always issue and accept challenges (if possible). However, challenges issued by Nekaph cannot be refused. In addition, whilst engaged in a challenge, Nekaph strikes a Killing Blow if he rolls a natural 5 or 6 when making a roll To Wound, rather than the usual 6."
       ]
     },
     {
@@ -1306,6 +1235,7 @@
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
+      "points": 90,
       "stats": {
         "M": "4",
         "WS": "4",
@@ -1317,11 +1247,19 @@
         "A": "3",
         "Ld": "8"
       },
-      "points": 90,
       "equipment": [
         "Hand weapon",
         "Whip",
         "Light armour"
+      ],
+      "special_rules": [
+        "dry_as_dust",
+        "flammable",
+        "immortal_overseer",
+        "khopesh",
+        "nehekharan_undead",
+        "regeneration_5+",
+        "stone_shaper"
       ],
       "options": [
         {
@@ -1332,15 +1270,6 @@
           "description": "Magic items",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "dry_as_dust",
-        "flammable",
-        "immortal_overseer",
-        "khopesh",
-        "nehekharan_undead",
-        "regeneration_5+",
-        "stone_shaper"
       ],
       "weapon_profiles": [
         {
@@ -1368,6 +1297,7 @@
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5+",
+      "points": 10,
       "stats": {
         "M": "4",
         "WS": "3",
@@ -1379,11 +1309,19 @@
         "A": "1",
         "Ld": "7"
       },
-      "points": 10,
       "equipment": [
         "Hand weapons",
         "Light armour",
         "Shields"
+      ],
+      "special_rules": [
+        "cleaving_blow",
+        "close_order",
+        "indomitable_1",
+        "khopesh",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "regimental_unit"
       ],
       "options": [
         {
@@ -1461,15 +1399,6 @@
           "cost_per_unit": 6
         }
       ],
-      "special_rules": [
-        "cleaving_blow",
-        "close_order",
-        "indomitable_1",
-        "khopesh",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "regimental_unit"
-      ],
       "weapon_profiles": [
         {
           "name": "Halberd",
@@ -1492,6 +1421,7 @@
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "10+",
+      "points": 4,
       "stats": {
         "M": "4",
         "WS": "2",
@@ -1503,10 +1433,16 @@
         "A": "1",
         "Ld": "5"
       },
-      "points": 4,
       "equipment": [
         "Hand weapons",
         "Shields"
+      ],
+      "special_rules": [
+        "close_order",
+        "horde",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "regimental_unit"
       ],
       "options": [
         {
@@ -1589,13 +1525,6 @@
           "cost_per_unit": 5
         }
       ],
-      "special_rules": [
-        "close_order",
-        "horde",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "regimental_unit"
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -1617,6 +1546,7 @@
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "10+ (5+ if a detachment)",
+      "points": 5,
       "stats": {
         "M": "4",
         "WS": "2",
@@ -1628,10 +1558,16 @@
         "A": "1",
         "Ld": "5"
       },
-      "points": 5,
       "equipment": [
         "Hand weapons",
         "Warbows"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "detachment",
+        "nehekharan_undead",
+        "open_order",
+        "regeneration_6+"
       ],
       "options": [
         {
@@ -1673,13 +1609,6 @@
           "role": "musician",
           "cost_per_unit": 5
         }
-      ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "detachment",
-        "nehekharan_undead",
-        "open_order",
-        "regeneration_6+"
       ]
     },
     {
@@ -1691,6 +1620,7 @@
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5-20",
+      "points": 4,
       "stats": {
         "M": "5",
         "WS": "2",
@@ -1702,9 +1632,16 @@
         "A": "1",
         "Ld": "4"
       },
-      "points": 4,
       "equipment": [
         "Hand weapons"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "chariot_runners",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "skirmishers",
+        "vanguard"
       ],
       "options": [
         {
@@ -1732,14 +1669,6 @@
           "description": "0-1 unit in your army may have the Ambushers special rule",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "chariot_runners",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "skirmishers",
-        "vanguard"
       ]
     },
     {
@@ -1751,6 +1680,7 @@
       "troop_type": "Monstrous infantry",
       "base_size": "40 x 40 mm",
       "unit_size": "3+",
+      "points": 49,
       "stats": {
         "M": "5",
         "WS": "4",
@@ -1762,11 +1692,18 @@
         "A": "3",
         "Ld": "8"
       },
-      "points": 49,
       "equipment": [
         "Hand weapons",
         "Ritual blades (Combat, S+2, AP -3; Requires Two Hands, Strike Last)",
         "Heavy armour"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "close_order",
+        "indomitable_1",
+        "khopesh",
+        "nehekharan_undead",
+        "regeneration_6+"
       ],
       "options": [
         {
@@ -1789,14 +1726,6 @@
           "name": "Ancient",
           "cost_per_unit": 7
         }
-      ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "close_order",
-        "indomitable_1",
-        "khopesh",
-        "nehekharan_undead",
-        "regeneration_6+"
       ]
     },
     {
@@ -1808,6 +1737,7 @@
       "troop_type": "Swarms",
       "base_size": "40 x 40 mm",
       "unit_size": "2-10",
+      "points": 37,
       "stats": {
         "M": "5",
         "WS": "3",
@@ -1819,9 +1749,15 @@
         "A": "5",
         "Ld": "10"
       },
-      "points": 37,
       "equipment": [
         "Venomous bites and stings (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "dry_as_dust",
+        "nehekharan_undead",
+        "poisoned_attacks",
+        "regeneration_6+",
+        "skirmishers"
       ],
       "options": [
         {
@@ -1830,13 +1766,6 @@
           "description": "Any unit may have the Ambushers special rule",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "dry_as_dust",
-        "nehekharan_undead",
-        "poisoned_attacks",
-        "regeneration_6+",
-        "skirmishers"
       ],
       "weapon_profiles": [
         {
@@ -1859,6 +1788,7 @@
       "troop_type": "Monstrous infantry",
       "base_size": "40 x 40 mm",
       "unit_size": "2+",
+      "points": 27,
       "stats": {
         "M": "2",
         "WS": "3",
@@ -1870,7 +1800,6 @@
         "A": "3",
         "Ld": "4"
       },
-      "points": 27,
       "equipment": [
         "Beaks and talons (counts as hand weapons)"
       ],
@@ -1891,6 +1820,7 @@
       "troop_type": "Heavy cavalry",
       "base_size": "25 x 50 mm",
       "unit_size": "5+",
+      "points": 11,
       "stats": {
         "M": "-",
         "WS": "2",
@@ -1902,10 +1832,17 @@
         "A": "1",
         "Ld": "5"
       },
-      "points": 11,
       "equipment": [
         "Skeleton Horsemen: Hand weapons and shields",
         "Skeletal Steed: Skeletal hooves (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "close_order",
+        "horde",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "swiftstride",
+        "vanguard"
       ],
       "options": [
         {
@@ -1988,17 +1925,6 @@
           "cost_per_unit": 6
         }
       ],
-      "special_rules": [
-        "close_order",
-        "horde",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "swiftstride",
-        "vanguard"
-      ],
-      "notes": [
-        "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -2009,6 +1935,9 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
       ]
     },
     {
@@ -2020,6 +1949,7 @@
       "troop_type": "Light cavalry",
       "base_size": "25 x 50 mm",
       "unit_size": "5+",
+      "points": 11,
       "stats": {
         "M": "-",
         "WS": "2",
@@ -2031,10 +1961,19 @@
         "A": "1",
         "Ld": "5"
       },
-      "points": 11,
       "equipment": [
         "Skeleton Horse Archer: Hand weapons and warbows",
         "Skeletal Steed: Skeletal hooves (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "nehekharan_undead",
+        "open_order",
+        "regeneration_6+",
+        "reserve_move",
+        "scouts",
+        "skirmishers",
+        "swiftstride"
       ],
       "options": [
         {
@@ -2083,16 +2022,6 @@
           "cost_per_unit": 6
         }
       ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "nehekharan_undead",
-        "open_order",
-        "regeneration_6+",
-        "reserve_move",
-        "scouts",
-        "skirmishers",
-        "swiftstride"
-      ],
       "notes": [
         "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
       ]
@@ -2106,6 +2035,7 @@
       "troop_type": "Monstrous cavalry",
       "base_size": "50 x 100 mm",
       "unit_size": "2+",
+      "points": 54,
       "stats": {
         "M": "-",
         "WS": "4",
@@ -2117,10 +2047,21 @@
         "A": "2",
         "Ld": "8"
       },
-      "points": 54,
       "equipment": [
         "Necropolis Knights: Hand weapons, cavalry spears, light armour and shields",
         "Necroserpent: Lashing tails (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "armoured_hide_1",
+        "cleaving_blow",
+        "close_order",
+        "impact_hits_1",
+        "indomitable_1",
+        "khopesh",
+        "nehekharan_undead",
+        "poisoned_attacks",
+        "regeneration_6+",
+        "swiftstride"
       ],
       "options": [
         {
@@ -2178,23 +2119,6 @@
           "cost_per_unit": 7
         }
       ],
-      "special_rules": [
-        "armoured_hide_1",
-        "cleaving_blow",
-        "close_order",
-        "impact_hits_1",
-        "indomitable_1",
-        "khopesh",
-        "nehekharan_undead",
-        "poisoned_attacks",
-        "regeneration_6+",
-        "swiftstride"
-      ],
-      "notes": [
-        "Cleaving Blow and Khopesh apply to Necropolis Knights and Captain only.",
-        "Poisoned Attacks applies to the Necroserpent only.",
-        "Necroserpent stats: M7, WS3, BS-, S5, T-, W-, I3, A3, Ld-"
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -2216,6 +2140,11 @@
             "strike_last"
           ]
         }
+      ],
+      "notes": [
+        "Cleaving Blow and Khopesh apply to Necropolis Knights and Captain only.",
+        "Poisoned Attacks applies to the Necroserpent only.",
+        "Necroserpent stats: M7, WS3, BS-, S5, T-, W-, I3, A3, Ld-"
       ]
     },
     {
@@ -2227,6 +2156,7 @@
       "troop_type": "Monstrous cavalry",
       "base_size": "50 x 100 mm",
       "unit_size": "2+",
+      "points": 52,
       "stats": {
         "M": "7",
         "WS": "3",
@@ -2238,13 +2168,19 @@
         "A": "2",
         "Ld": "8"
       },
-      "points": 52,
       "equipment": [
         "Hand weapons",
         "Writhing tails (Combat, S, AP -1; Extra Attacks (D3); each model may make D3 additional attacks per turn with this weapon)",
         "Halberds",
         "Petrifying gaze (18\", S2, AP N/A; Magical Attacks, Multiple Wounds (D3); substitute target's Toughness with its Initiative for wound rolls; no armour save permitted, Ward and Regeneration saves can be attempted)",
         "Heavy armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "indomitable_1",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "swiftstride"
       ],
       "options": [
         {
@@ -2254,13 +2190,6 @@
           "description": "0-1 unit in your army may have the Ambushers special rule",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "close_order",
-        "indomitable_1",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "swiftstride"
       ],
       "weapon_profiles": [
         {
@@ -2284,6 +2213,7 @@
       "troop_type": "Light chariot",
       "base_size": "50 x 100 mm",
       "unit_size": "1+",
+      "points": 43,
       "stats": {
         "M": "-",
         "WS": "-",
@@ -2295,10 +2225,20 @@
         "A": "-",
         "Ld": "-"
       },
-      "points": 43,
       "equipment": [
         "Skeleton Crew (x2): Hand weapons, cavalry spears and warbows",
         "Skeletal Steed (x2): Skeletal hooves (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "dry_as_dust",
+        "horde",
+        "impact_hits_d3",
+        "nehekharan_undead",
+        "open_order",
+        "regeneration_6+",
+        "reserve_move",
+        "swiftstride"
       ],
       "options": [
         {
@@ -2350,22 +2290,6 @@
           "cost_per_unit": 6
         }
       ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "dry_as_dust",
-        "horde",
-        "impact_hits_d3",
-        "nehekharan_undead",
-        "open_order",
-        "regeneration_6+",
-        "reserve_move",
-        "swiftstride"
-      ],
-      "notes": [
-        "Armour Value: 5+.",
-        "A Master Charioteer, standard bearer or musician each replace a single Skeleton Crewman, and each must be placed aboard a different Chariot.",
-        "Skeleton Crew: M-, WS3, BS2, S3, T-, W-, I2, A1, Ld7. Master Charioteer: M-, WS3, BS2, S3, T-, W-, I2, A2, Ld7."
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -2376,6 +2300,11 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "Armour Value: 5+.",
+        "A Master Charioteer, standard bearer or musician each replace a single Skeleton Crewman, and each must be placed aboard a different Chariot.",
+        "Skeleton Crew: M-, WS3, BS2, S3, T-, W-, I2, A1, Ld7. Master Charioteer: M-, WS3, BS2, S3, T-, W-, I2, A2, Ld7."
       ]
     },
     {
@@ -2387,6 +2316,7 @@
       "troop_type": "Behemoth",
       "base_size": "60 x 100 mm",
       "unit_size": "1",
+      "points": 175,
       "stats": {
         "M": "6",
         "WS": "4",
@@ -2398,10 +2328,22 @@
         "A": "4",
         "Ld": "-"
       },
-      "points": 175,
       "equipment": [
         "Wicked claws (Combat, S, AP -2)",
         "Tomb Guard Crew (x2): Hand weapons, cavalry spears and shortbows"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "cleaving_blow",
+        "close_order",
+        "howdah",
+        "indomitable_2",
+        "khopesh",
+        "large_target",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "stomp_attacks_d3",
+        "terror"
       ],
       "options": [
         {
@@ -2424,25 +2366,6 @@
           "category": "weapon"
         }
       ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "cleaving_blow",
-        "close_order",
-        "howdah",
-        "indomitable_2",
-        "khopesh",
-        "large_target",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "stomp_attacks_d3",
-        "terror"
-      ],
-      "notes": [
-        "Armour Value: 5+. Tomb Guard Crew: WS3, BS3, S4, T-, W-, I3, A1, Ld8.",
-        "Cleaving Blow and Khopesh apply to Tomb Guard Crew only.",
-        "This model may also be included in your army as a character's mount (Tomb Kings only). If so, its points are added to that of its rider. Because it has the Howdah special rule, a Khemrian Warsphinx is considered to be a chariot mount rather than a ridden monster.",
-        "0-2 Khemrian Warsphinx (not counting character mounts) per 1,000 points."
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -2453,6 +2376,12 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "Armour Value: 5+. Tomb Guard Crew: WS3, BS3, S4, T-, W-, I3, A1, Ld8.",
+        "Cleaving Blow and Khopesh apply to Tomb Guard Crew only.",
+        "This model may also be included in your army as a character's mount (Tomb Kings only). If so, its points are added to that of its rider. Because it has the Howdah special rule, a Khemrian Warsphinx is considered to be a chariot mount rather than a ridden monster.",
+        "0-2 Khemrian Warsphinx (not counting character mounts) per 1,000 points."
       ]
     },
     {
@@ -2464,6 +2393,7 @@
       "troop_type": "Monstrous creature",
       "base_size": "75 x 50 mm",
       "unit_size": "1",
+      "points": 70,
       "stats": {
         "M": "7",
         "WS": "4",
@@ -2475,19 +2405,10 @@
         "A": "4",
         "Ld": "8"
       },
-      "points": 70,
       "equipment": [
         "Decapitating claws (Combat, S, AP -2; Killing Blow, Monster Slayer)",
         "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First; one attack per turn)",
         "Bone carapace (counts as heavy armour)"
-      ],
-      "options": [
-        {
-          "cost": 5,
-          "scope": "per_unit",
-          "description": "May have the Ambushers special rule",
-          "category": "special"
-        }
       ],
       "special_rules": [
         "close_order",
@@ -2498,6 +2419,14 @@
         "stomp_attacks_d3",
         "swiftstride",
         "vanguard"
+      ],
+      "options": [
+        {
+          "cost": 5,
+          "scope": "per_unit",
+          "description": "May have the Ambushers special rule",
+          "category": "special"
+        }
       ],
       "weapon_profiles": [
         {
@@ -2534,6 +2463,7 @@
       "troop_type": "Behemoth",
       "base_size": "50 x 50 mm",
       "unit_size": "1",
+      "points": 160,
       "stats": {
         "M": "6",
         "WS": "3",
@@ -2545,7 +2475,6 @@
         "A": "4",
         "Ld": "8"
       },
-      "points": 160,
       "equipment": [
         "Paired great khopeshes (Combat, S, AP -2; Killing Blow, Requires Two Hands)",
         "Heavy armour"
@@ -2586,6 +2515,7 @@
       "troop_type": "Behemoth",
       "base_size": "60 x 100 mm",
       "unit_size": "1",
+      "points": 195,
       "stats": {
         "M": "6",
         "WS": "4",
@@ -2597,19 +2527,10 @@
         "A": "5",
         "Ld": "8"
       },
-      "points": 195,
       "equipment": [
         "Cleaving blades (Combat, S, AP -1; Killing Blow)",
         "Decapitating strike (Combat, S+5, AP -4; Killing Blow, Monster Slayer, Strike Last; one additional attack per turn)",
         "Heavy armour"
-      ],
-      "options": [
-        {
-          "cost": 5,
-          "scope": "per_unit",
-          "description": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First; one attack per turn)",
-          "category": "special"
-        }
       ],
       "special_rules": [
         "close_order",
@@ -2622,6 +2543,14 @@
         "stomp_attacks_d3_plus_2",
         "swiftstride",
         "terror"
+      ],
+      "options": [
+        {
+          "cost": 5,
+          "scope": "per_unit",
+          "description": "Envenomed sting (Combat, S, AP -; Poisoned Attacks, Strike First; one attack per turn)",
+          "category": "special"
+        }
       ],
       "notes": [
         "Soul Reaper: After deployment but before the first turn begins, nominate a single enemy character. This model may re-roll any rolls To Hit of a natural 1 made against the nominated character."
@@ -2636,6 +2565,7 @@
       "troop_type": "War machine",
       "base_size": "60 x 100 mm (war machine), 25 x 25 mm (crew)",
       "unit_size": "1",
+      "points": 105,
       "stats": {
         "M": "-",
         "WS": "-",
@@ -2647,10 +2577,16 @@
         "A": "-",
         "Ld": "-"
       },
-      "points": 105,
       "equipment": [
         "Screaming skull catapult (12-60\", S4(8), AP -1(-3); Bombardment, Cumbersome, Flaming Attacks, Magical Attacks, Move or Shoot, Multiple Wounds (D3+1), Screaming Skulls)",
         "Skeleton Crew: Hand weapons and light armour"
+      ],
+      "special_rules": [
+        "dry_as_dust",
+        "indomitable_1",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "skirmishers"
       ],
       "options": [
         {
@@ -2659,13 +2595,6 @@
           "description": "May have the Skulls of the Foe special rule",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "dry_as_dust",
-        "indomitable_1",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "skirmishers"
       ],
       "weapon_profiles": [
         {
@@ -2700,6 +2629,7 @@
       "troop_type": "War machine",
       "base_size": "N/A",
       "unit_size": "1",
+      "points": 135,
       "stats": {
         "M": "-",
         "WS": "-",
@@ -2711,7 +2641,6 @@
         "A": "-",
         "Ld": "-"
       },
-      "points": 135,
       "equipment": [
         "Casket Guardians: Hand weapons, great weapons and light armour"
       ],
@@ -2727,13 +2656,6 @@
         "unbound_spirits",
         "vortex_of_souls"
       ],
-      "notes": [
-        "Covenant of Power: Whilst within 12\" of a Casket of Souls, friendly Liche Priests may apply a +1 modifier to any Casting roll they make. Additionally, any model (friend or foe) that casts a Bound spell whilst within 12\" of a Casket of Souls may apply a +1 modifier to the Casting roll. This bonus does not apply to Bound spells cast by a Casket of Souls itself.",
-        "Immovable Object: Once placed on the battlefield during deployment it cannot be moved by its crew during the Remaining Moves sub-phase. It may still pivot freely and make a follow-up move.",
-        "Unbound Spirits: If the crew of a Casket of Souls is reduced to zero Wounds, immediately roll a D6 for every unit (friend or foe) within 12\". On a 4+, the unit suffers D6 Strength 3 hits with no armour or Regeneration saves permitted (Ward saves can be attempted). The Casket of Souls is then removed from play.",
-        "Vortex of Souls: A Casket of Souls can cast the following Bound spells with a Power Level of 3: Light of Death (Magic Missile, Casting Value 7+, Range 36\": target makes Leadership test; if passed suffers D3 Strength 3 hits at AP -1, if failed suffers D6+3 Strength 6 hits with Multiple Wounds (2), no armour or Regeneration saves permitted, Ward saves can be attempted) and Light of Protection (Enchantment, Casting Value 8+, Range Self, Remains in Play: this model and friendly units within 18\" gain a 6+ Ward save; enemy units suffer -1 To Hit against this model and friendly units within 18\"; expires if Light of Death is cast).",
-        "Casket Guardians: M4, WS3, BS3, S3, T3, W4, I3, A4, Ld8."
-      ],
       "weapon_profiles": [
         {
           "name": "Great Weapon",
@@ -2746,6 +2668,13 @@
             "strike_last"
           ]
         }
+      ],
+      "notes": [
+        "Covenant of Power: Whilst within 12\" of a Casket of Souls, friendly Liche Priests may apply a +1 modifier to any Casting roll they make. Additionally, any model (friend or foe) that casts a Bound spell whilst within 12\" of a Casket of Souls may apply a +1 modifier to the Casting roll. This bonus does not apply to Bound spells cast by a Casket of Souls itself.",
+        "Immovable Object: Once placed on the battlefield during deployment it cannot be moved by its crew during the Remaining Moves sub-phase. It may still pivot freely and make a follow-up move.",
+        "Unbound Spirits: If the crew of a Casket of Souls is reduced to zero Wounds, immediately roll a D6 for every unit (friend or foe) within 12\". On a 4+, the unit suffers D6 Strength 3 hits with no armour or Regeneration saves permitted (Ward saves can be attempted). The Casket of Souls is then removed from play.",
+        "Vortex of Souls: A Casket of Souls can cast the following Bound spells with a Power Level of 3: Light of Death (Magic Missile, Casting Value 7+, Range 36\": target makes Leadership test; if passed suffers D3 Strength 3 hits at AP -1, if failed suffers D6+3 Strength 6 hits with Multiple Wounds (2), no armour or Regeneration saves permitted, Ward saves can be attempted) and Light of Protection (Enchantment, Casting Value 8+, Range Self, Remains in Play: this model and friendly units within 18\" gain a 6+ Ward save; enemy units suffer -1 To Hit against this model and friendly units within 18\"; expires if Light of Death is cast).",
+        "Casket Guardians: M4, WS3, BS3, S3, T3, W4, I3, A4, Ld8."
       ]
     },
     {
@@ -2757,6 +2686,7 @@
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "10+/10+*",
+      "points": 5,
       "stats": {
         "M": "4",
         "WS": "2",
@@ -2768,10 +2698,19 @@
         "A": "1",
         "Ld": "5"
       },
-      "points": 5,
       "equipment": [
         "Royal Host Warriors: Hand weapons, thrusting spears, light armour and shields",
         "Royal Host Archers: Hand weapons, light armour and warbows"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "close_order",
+        "horde",
+        "motley_crew",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "regimental_unit",
+        "steadfast_discipline"
       ],
       "options": [
         {
@@ -2829,21 +2768,6 @@
           "cost_per_unit": 5
         }
       ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "close_order",
-        "horde",
-        "motley_crew",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "regimental_unit",
-        "steadfast_discipline"
-      ],
-      "notes": [
-        "Nehekharan Royal Host Army of Infamy only.",
-        "A Skeleton Infantry Cohort must contain at least ten Royal Host Warriors and ten Royal Host Archers. Royal Host Warriors always occupy the front ranks of the unit.",
-        "Master of Arms stats: M4, WS2, BS2, S3, T3, W1, I3, A2, Ld5."
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -2854,6 +2778,11 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "Nehekharan Royal Host Army of Infamy only.",
+        "A Skeleton Infantry Cohort must contain at least ten Royal Host Warriors and ten Royal Host Archers. Royal Host Warriors always occupy the front ranks of the unit.",
+        "Master of Arms stats: M4, WS2, BS2, S3, T3, W1, I3, A2, Ld5."
       ]
     },
     {
@@ -2865,6 +2794,7 @@
       "troop_type": "Monstrous infantry",
       "base_size": "40 x 40 mm",
       "unit_size": "3+",
+      "points": 56,
       "stats": {
         "M": "4",
         "WS": "5",
@@ -2876,11 +2806,18 @@
         "A": "3",
         "Ld": "8"
       },
-      "points": 56,
       "equipment": [
         "Hand weapons",
         "Ritual blades (Combat, S+2, AP -3; Requires Two Hands, Strike Last)",
         "Heavy armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "indomitable_1",
+        "khopesh",
+        "magic_resistance_2",
+        "nehekharan_undead",
+        "regeneration_6+"
       ],
       "options": [
         {
@@ -2897,14 +2834,6 @@
           "cost_per_unit": 7
         }
       ],
-      "special_rules": [
-        "close_order",
-        "indomitable_1",
-        "khopesh",
-        "magic_resistance_2",
-        "nehekharan_undead",
-        "regeneration_6+"
-      ],
       "notes": [
         "Mortuary Cult Army of Infamy and Nehekharan Royal Host Army of Infamy only.",
         "Venerable Ancient: M4, WS5, BS3, S5, T4, W3, I2, A4, Ld8."
@@ -2919,6 +2848,7 @@
       "troop_type": "Heavy cavalry",
       "base_size": "25 x 50 mm",
       "unit_size": "5+/5+*",
+      "points": 12,
       "stats": {
         "M": "-",
         "WS": "2",
@@ -2930,11 +2860,21 @@
         "A": "1",
         "Ld": "5"
       },
-      "points": 12,
       "equipment": [
         "Royal Host Horsemen: Hand weapons, cavalry spears, light armour and shields",
         "Royal Host Horse Archers: Hand weapons, light armour and warbows",
         "Skeletal Steed: Skeletal hooves (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "arrows_of_asaph",
+        "close_order",
+        "horde",
+        "motley_crew",
+        "nehekharan_undead",
+        "regeneration_6+",
+        "steadfast_discipline",
+        "swiftstride",
+        "vanguard"
       ],
       "options": [
         {
@@ -2992,23 +2932,6 @@
           "cost_per_unit": 6
         }
       ],
-      "special_rules": [
-        "arrows_of_asaph",
-        "close_order",
-        "horde",
-        "motley_crew",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "steadfast_discipline",
-        "swiftstride",
-        "vanguard"
-      ],
-      "notes": [
-        "Nehekharan Royal Host Army of Infamy only.",
-        "A Skeleton Cavalry Cohort must contain at least five Royal Host Horsemen and five Royal Host Horse Archers. Royal Host Horsemen always occupy the front ranks of the unit.",
-        "Royal Host Horse Archer: M-, WS2, BS2, S3, T3, W1, I2, A1, Ld5. Master of Horse: M-, WS2, BS2, S3, T3, W1, I3, A2, Ld5.",
-        "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -3019,6 +2942,12 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "notes": [
+        "Nehekharan Royal Host Army of Infamy only.",
+        "A Skeleton Cavalry Cohort must contain at least five Royal Host Horsemen and five Royal Host Horse Archers. Royal Host Horsemen always occupy the front ranks of the unit.",
+        "Royal Host Horse Archer: M-, WS2, BS2, S3, T3, W1, I2, A1, Ld5. Master of Horse: M-, WS2, BS2, S3, T3, W1, I3, A2, Ld5.",
+        "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
       ]
     },
     {
@@ -3030,6 +2959,7 @@
       "troop_type": "Monstrous cavalry",
       "base_size": "50 x 100 mm",
       "unit_size": "2+",
+      "points": 38,
       "stats": {
         "M": "7",
         "WS": "3",
@@ -3041,7 +2971,6 @@
         "A": "3",
         "Ld": "7"
       },
-      "points": 38,
       "equipment": [
         "Lashing tails and venomous fangs (counts as hand weapons)"
       ],
@@ -3070,6 +2999,7 @@
       "troop_type": "Light chariot",
       "base_size": "50 x 100 mm",
       "unit_size": "3+",
+      "points": 53,
       "stats": {
         "M": "-",
         "WS": "-",
@@ -3081,10 +3011,21 @@
         "A": "-",
         "Ld": "-"
       },
-      "points": 53,
       "equipment": [
         "Tomb Guard Crew (x2): Hand weapons, halberds and shields",
         "Skeletal Steed (x2): Skeletal hooves (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "cleaving_blow",
+        "dry_as_dust",
+        "impact_hits_d3_plus_1",
+        "indomitable_2",
+        "khopesh",
+        "nehekharan_undead",
+        "open_order",
+        "regeneration_6+",
+        "reserve_move",
+        "swiftstride"
       ],
       "options": [
         {
@@ -3136,24 +3077,6 @@
           "cost_per_unit": 7
         }
       ],
-      "special_rules": [
-        "cleaving_blow",
-        "dry_as_dust",
-        "impact_hits_d3_plus_1",
-        "indomitable_2",
-        "khopesh",
-        "nehekharan_undead",
-        "open_order",
-        "regeneration_6+",
-        "reserve_move",
-        "swiftstride"
-      ],
-      "notes": [
-        "Armour Value: 4+. Nehekharan Royal Host Army of Infamy only.",
-        "Cleaving Blow and Khopesh apply to Tomb Guard Crew only.",
-        "A Tomb Captain, standard bearer or musician each replace a single Tomb Guard Crewman, and each must be placed aboard a different Chariot.",
-        "Tomb Guard Crew stats: M-, WS3, BS3, S4, T-, W-, I2, A1, Ld7. Tomb Captain: M-, WS3, BS3, S4, T-, W-, I2, A2, Ld7."
-      ],
       "weapon_profiles": [
         {
           "name": "Halberd",
@@ -3165,6 +3088,12 @@
             "requires_two_hands"
           ]
         }
+      ],
+      "notes": [
+        "Armour Value: 4+. Nehekharan Royal Host Army of Infamy only.",
+        "Cleaving Blow and Khopesh apply to Tomb Guard Crew only.",
+        "A Tomb Captain, standard bearer or musician each replace a single Tomb Guard Crewman, and each must be placed aboard a different Chariot.",
+        "Tomb Guard Crew stats: M-, WS3, BS3, S4, T-, W-, I2, A1, Ld7. Tomb Captain: M-, WS3, BS3, S4, T-, W-, I2, A2, Ld7."
       ]
     }
   ],
@@ -3172,8 +3101,8 @@
     {
       "id": "dragonblade",
       "name": "Dragonblade",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
       "weapon_profile": {
         "name": "Dragonblade",
@@ -3189,122 +3118,122 @@
     {
       "id": "burning-blade",
       "name": "Burning Blade*",
-      "points": 5,
       "category": "magic_weapon",
+      "points": 5,
       "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common"
     },
     {
       "id": "biting-blade",
       "name": "Biting Blade",
-      "points": 15,
       "category": "magic_weapon",
+      "points": 15,
       "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks"
     },
     {
       "id": "sword-of-striking",
       "name": "Sword of Striking*",
-      "points": 15,
       "category": "magic_weapon",
+      "points": 15,
       "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common"
     },
     {
       "id": "berserker-blade",
       "name": "Berserker Blade",
-      "points": 20,
       "category": "magic_weapon",
+      "points": 20,
       "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
     },
     {
       "id": "sword-of-might",
       "name": "Sword of Might*",
-      "points": 20,
       "category": "magic_weapon",
+      "points": 20,
       "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common"
     },
     {
       "id": "sword-of-swiftness",
       "name": "Sword of Swiftness",
-      "points": 25,
       "category": "magic_weapon",
+      "points": 25,
       "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First"
     },
     {
       "id": "giant-blade",
       "name": "Giant Blade",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
       "restrictions": ""
     },
     {
       "id": "hell-forged-axe",
       "name": "Hell-forged Axe",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks"
     },
     {
       "id": "sword-of-sorrow",
       "name": "Sword of Sorrow",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
       "restrictions": ""
     },
     {
       "id": "spelleater-axe",
       "name": "Spelleater Axe",
-      "points": 35,
       "category": "magic_weapon",
+      "points": 35,
       "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)"
     },
     {
       "id": "headsmans-axe",
       "name": "Headsman's Axe",
-      "points": 45,
       "category": "magic_weapon",
+      "points": 45,
       "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands"
     },
     {
       "id": "dragon-slaying-sword",
       "name": "Dragon Slaying Sword",
-      "points": 50,
       "category": "magic_weapon",
+      "points": 50,
       "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer"
     },
     {
       "id": "meteor-hammer",
       "name": "Meteor Hammer",
-      "points": 50,
       "category": "magic_weapon",
+      "points": 50,
       "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness."
     },
     {
       "id": "duellists-blades",
       "name": "Duellist's Blades",
-      "points": 55,
       "category": "magic_weapon",
+      "points": 55,
       "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands"
     },
     {
       "id": "sword-of-battle",
       "name": "Sword of Battle",
-      "points": 60,
       "category": "magic_weapon",
+      "points": 60,
       "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks"
     },
     {
       "id": "cackling-blade",
       "name": "Cackling Blade",
-      "points": 65,
       "category": "magic_weapon",
+      "points": 65,
       "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound."
     },
     {
       "id": "ogre-blade",
       "name": "Ogre Blade",
-      "points": 75,
       "category": "magic_weapon",
+      "points": 75,
       "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.",
       "restrictions": "",
       "weapon_profile": {
@@ -3320,724 +3249,689 @@
     {
       "id": "charmed-shield",
       "name": "Charmed Shield*",
-      "points": 5,
       "category": "magic_armour",
+      "points": 5,
       "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long.",
       "is_shield": true
     },
     {
       "id": "enchanted-shield",
       "name": "Enchanted Shield*",
-      "points": 10,
       "category": "magic_armour",
+      "points": 10,
       "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common",
       "is_shield": true
     },
     {
       "id": "armour-of-meteoric-iron",
       "name": "Armour of Meteoric Iron",
-      "points": 20,
       "category": "magic_armour",
+      "points": 20,
       "description": "",
-      "restrictions": "",
-      "rules_text": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either."
+      "rules_text": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
+      "restrictions": ""
     },
     {
       "id": "trailblazers-hauberk",
       "name": "Trailblazer's Hauberk",
-      "points": 20,
       "category": "magic_armour",
+      "points": 20,
       "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules."
+      "rules_text": "Models whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
+      "restrictions": ""
     },
     {
       "id": "levitating-shield",
       "name": "Levitating Shield",
-      "points": 25,
       "category": "magic_armour",
+      "points": 25,
       "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.",
+      "rules_text": "Models whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
       "restrictions": "",
-      "is_shield": true,
-      "rules_text": "Models whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat."
+      "is_shield": true
     },
     {
       "id": "spellshield",
       "name": "Spellshield*",
-      "points": 25,
       "category": "magic_armour",
+      "points": 25,
       "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common",
       "is_shield": true
     },
     {
       "id": "shield-of-the-warrior-true",
       "name": "Shield of the Warrior True",
-      "points": 30,
       "category": "magic_armour",
+      "points": 30,
       "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase.",
       "is_shield": true
     },
     {
       "id": "glittering-scales",
       "name": "Glittering Scales",
-      "points": 35,
       "category": "magic_armour",
+      "points": 35,
       "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
     },
     {
       "id": "armour-of-silvered-steel",
       "name": "Armour of Silvered Steel",
-      "points": 40,
       "category": "magic_armour",
+      "points": 40,
       "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
       "restrictions": ""
     },
     {
       "id": "bedazzling-helm",
       "name": "Bedazzling Helm",
-      "points": 60,
       "category": "magic_armour",
+      "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
       "restrictions": ""
     },
     {
       "id": "armour-of-destiny",
       "name": "Armour of Destiny",
-      "points": 70,
       "category": "magic_armour",
+      "points": 70,
       "description": "A suit of magical armour forged at the confluence of two ley lines, the Armour of Destiny protects its wearer from harm beyond mortal ken.",
       "restrictions": "May only be worn by a model that is equipped with (or has the option to be equipped with) armour."
     },
     {
       "id": "luckstone",
       "name": "Luckstone*",
-      "points": 15,
       "category": "talisman",
+      "points": 15,
       "description": "Can luck be trapped within a dull stone pendant? Possibly.",
-      "single_use": true,
-      "rules_text": "Single use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll. *Extremely Common"
+      "rules_text": "Single use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll. *Extremely Common",
+      "single_use": true
     },
     {
       "id": "obsidian-lodestone",
       "name": "Obsidian Lodestone*",
-      "points": 20,
       "category": "talisman",
+      "points": 20,
       "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.",
       "rules_text": "A model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
     },
     {
       "id": "paymasters-coin",
       "name": "Paymaster's Coin*",
-      "points": 25,
       "category": "talisman",
+      "points": 25,
       "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.",
-      "single_use": true,
-      "rules_text": "Single use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase. *Extremely Common"
+      "rules_text": "Single use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase. *Extremely Common",
+      "single_use": true
     },
     {
       "id": "ironhide-talisman",
       "name": "Ironhide Talisman",
-      "points": 30,
       "category": "talisman",
+      "points": 30,
       "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6. Note that this magic item does not work against attacks that hit automatically."
+      "rules_text": "Models whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6. Note that this magic item does not work against attacks that hit automatically.",
+      "restrictions": ""
     },
     {
       "id": "talisman-of-protection",
       "name": "Talisman of Protection",
-      "points": 30,
       "category": "talisman",
+      "points": 30,
       "description": "A powerful magical aura surrounds this humble talisman, protecting its wearer from harm.\nThe Talisman of Protection gives its bearer a 5+ Ward save against any wounds suffered."
     },
     {
       "id": "dawnstone",
       "name": "Dawnstone",
-      "points": 35,
       "category": "talisman",
+      "points": 35,
       "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical. The magic trapped within this semi-precious stone binds together shattered armour plates.",
-      "restrictions": "",
-      "rules_text": "The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1."
+      "rules_text": "The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
+      "restrictions": ""
     },
     {
       "id": "icon-of-fortitude",
       "name": "Icon of Fortitude",
-      "points": 35,
       "category": "talisman",
+      "points": 35,
       "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound."
+      "rules_text": "Models whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": ""
     },
     {
       "id": "potion-of-foolhardiness",
       "name": "Potion of Foolhardiness*",
-      "points": 5,
       "category": "enchanted_item",
+      "points": 5,
       "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "potion-of-speed",
       "name": "Potion of Speed*",
-      "points": 10,
       "category": "enchanted_item",
+      "points": 10,
       "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common"
+      "single_use": true
     },
     {
       "id": "becalming-orb",
       "name": "Becalming Orb",
-      "points": 20,
       "category": "enchanted_item",
+      "points": 20,
       "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.",
-      "single_use": true,
-      "rules_text": "Single Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+      "rules_text": "Single Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2.",
+      "single_use": true
     },
     {
       "id": "potion-of-toughness",
       "name": "Potion of Toughness*",
-      "points": 20,
       "category": "enchanted_item",
+      "points": 20,
       "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common"
+      "single_use": true
     },
     {
       "id": "potion-of-strength",
       "name": "Potion of Strength*",
-      "points": 25,
       "category": "enchanted_item",
+      "points": 25,
       "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common"
+      "single_use": true
     },
     {
       "id": "potion-of-fervour",
       "name": "Potion of Fervour",
-      "points": 30,
       "category": "enchanted_item",
+      "points": 30,
       "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.",
+      "rules_text": "Single Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10). Note that a model can only consume a single potion (of any type) per Command phase.",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10). Note that a model can only consume a single potion (of any type) per Command phase."
+      "single_use": true
     },
     {
       "id": "healing-potion",
       "name": "Healing Potion*",
-      "points": 35,
       "category": "enchanted_item",
+      "points": 35,
       "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. The model immediately recovers D3 lost Wounds."
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. The model immediately recovers D3 lost Wounds.",
+      "single_use": true
     },
     {
       "id": "ruby-ring-of-ruin",
       "name": "Ruby Ring of Ruin",
-      "points": 35,
       "category": "enchanted_item",
+      "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
       "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
     },
     {
       "id": "arch-lightning-rod",
       "name": "Arch-Lightning Rod",
-      "points": 40,
       "category": "enchanted_item",
+      "points": 40,
       "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
       "restrictions": ""
     },
     {
       "id": "flying-carpet",
       "name": "Flying Carpet",
-      "points": 40,
       "category": "enchanted_item",
+      "points": 40,
       "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit."
+      "rules_text": "Models whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
+      "restrictions": ""
     },
     {
       "id": "wizarding-hat",
       "name": "Wizarding Hat",
-      "points": 45,
       "category": "enchanted_item",
+      "points": 45,
       "description": "This splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
       "restrictions": ""
     },
     {
       "id": "earthing-rod",
       "name": "Earthing Rod",
-      "points": 5,
       "category": "arcane_item",
+      "points": 5,
       "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.",
-      "single_use": true,
-      "rules_text": "Single use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+      "rules_text": "Single use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table.",
+      "single_use": true
     },
     {
       "id": "arcane-familiar",
       "name": "Arcane Familiar",
-      "points": 15,
       "category": "arcane_item",
+      "points": 15,
       "description": "Many Wizards are accompanied by familiars gifted with arcane knowledge. These creatures constantly whisper secrets to their master."
     },
     {
       "id": "dispel-scroll",
       "name": "Dispel Scroll*",
-      "points": 20,
       "category": "arcane_item",
+      "points": 20,
       "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.",
-      "single_use": true,
-      "rules_text": "Single use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+      "rules_text": "Single use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "power-scroll",
       "name": "Power Scroll*",
-      "points": 20,
       "category": "arcane_item",
+      "points": 20,
       "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.",
-      "single_use": true,
-      "rules_text": "Single use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+      "rules_text": "Single use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "lore-familiar",
       "name": "Lore Familiar",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "By creating a magical homunculus, a Wizard is able to better recall forgotten details of their studies.\nThe owner of a Lore Familiar does not randomly generate their spells. Instead, they may choose which spells they know from their chosen lore (including that lore's signature spell)."
     },
     {
       "id": "scroll-of-disruption",
       "name": "Scroll of Disruption",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.",
       "rules_text": "Once per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
     {
       "id": "tome-of-spellcraft",
       "name": "Tome of Spellcraft",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.",
       "rules_text": "Once per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
     {
       "id": "staff-of-quietude",
       "name": "Staff of Quietude",
-      "points": 35,
       "category": "arcane_item",
+      "points": 35,
       "description": "With a gesture, the bearer of the Staff of Quietude calms the Winds of Magic, causing spells and conjurations to dissipate into the other."
     },
     {
       "id": "wand-of-jet",
       "name": "Wand of Jet",
-      "points": 45,
       "category": "arcane_item",
+      "points": 45,
       "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
       "restrictions": ""
     },
     {
       "id": "scroll-of-transmogrification",
       "name": "Scroll of Transmogrification*",
-      "points": 50,
       "category": "arcane_item",
+      "points": 50,
       "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
       "restrictions": ""
     },
     {
       "id": "feedback-scroll",
       "name": "Feedback Scroll",
-      "points": 60,
       "category": "arcane_item",
+      "points": 60,
       "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
     {
       "id": "monster-hunters-tapestry",
       "name": "Monster Hunter's Tapestry",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "Those who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.\nEnemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry.",
       "restrictions": ""
     },
     {
       "id": "the-blazing-banner",
       "name": "The Blazing Banner",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.",
-      "restrictions": "",
-      "rules_text": "A unit carrying the Blazing Banner gains the Flaming Attacks special rule."
+      "rules_text": "A unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
+      "restrictions": ""
     },
     {
       "id": "war-banner",
       "name": "War Banner",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "A proud banner of great age. Those that march beneath the War Banner fight with grim resolve.\nWhen calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point.",
       "restrictions": ""
     },
     {
       "id": "banner-of-swirling-wind",
       "name": "Banner of Swirling Wind",
-      "points": 30,
       "category": "magic_standard",
+      "points": 30,
       "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.",
-      "restrictions": "",
-      "rules_text": "Any enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier."
+      "rules_text": "Any enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
+      "restrictions": ""
     },
     {
       "id": "rampaging-banner",
       "name": "Rampaging Banner",
-      "points": 30,
       "category": "magic_standard",
+      "points": 30,
       "description": "As a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.\nWhen a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll.",
       "restrictions": ""
     },
     {
       "id": "razor-standard",
       "name": "Razor Standard",
-      "points": 40,
       "category": "magic_standard",
+      "points": 40,
       "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.",
-      "restrictions": "",
-      "rules_text": "A unit carrying the Razor Standard gains the Armour Bane (2) special rule."
+      "rules_text": "A unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
+      "restrictions": ""
     },
     {
       "id": "banner-of-iron-resolve",
       "name": "Banner of Iron Resolve",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "No regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.",
-      "restrictions": "",
-      "rules_text": "A unit carrying the Banner of Iron Resolve gains the Stubborn special rule."
+      "rules_text": "A unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
+      "restrictions": ""
     },
     {
       "id": "banner-of-the-steadfast",
       "name": "Banner of the Steadfast",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "Woven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold their ground no matter the odds.",
       "restrictions": ""
     },
     {
       "id": "totem-of-wrath",
       "name": "Totem of Wrath",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.",
-      "restrictions": "",
-      "rules_text": "During a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1."
+      "rules_text": "During a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
+      "restrictions": ""
     },
     {
       "id": "curse_weaver_wand",
       "name": "Curse-Weaver Wand",
-      "source": "arcane_journal",
-      "type": "arcane_item",
       "points": 20,
+      "source": "arcane_journal",
       "description": "",
       "rules_text": "The bearer of the Curse-Weaver Wand gains a +1 modifier to their Casting roll when attempting to cast a Hex spell."
     },
     {
       "id": "death_mask_of_kharnutt",
       "name": "Death Mask of Kharnutt",
-      "source": "ravening_hordes",
-      "type": "enchanted_item",
       "points": 20,
+      "source": "ravening_hordes",
       "description": "",
       "rules_text": "The wearer of the Death Mask of Kharnutt gains the Terror special rule."
     },
     {
       "id": "mirage_banner",
       "name": "Mirage Banner",
-      "source": "ravening_hordes",
-      "type": "magic_standard",
       "points": 20,
+      "source": "ravening_hordes",
       "description": "",
       "rules_text": "Any enemy model that targets a unit carrying the Mirage Banner during the Shooting phase suffers an additional -1 To Hit modifier."
     },
     {
       "id": "scarab_brooch",
       "name": "Scarab Brooch",
-      "source": "ravening_hordes",
-      "type": "arcane_item",
       "points": 20,
+      "source": "ravening_hordes",
       "description": "When using the From Beneath the Sands special rule, a summoned unit can be placed on the battlefield anywhere completely within 18\" of a Liche Priest wearing the Scarab Brooch, rather than the usual 12\"."
     },
     {
       "id": "serpent_staff",
       "name": "Serpent Staff",
-      "source": "ravening_hordes",
-      "type": "magic_weapon",
       "points": 20,
+      "source": "ravening_hordes",
       "description": "Combat, S+2, AP -2; Magical Attacks, Poisoned Attacks, Requires Two Hands. Liche Priests only."
     },
     {
       "id": "tablets_of_tahoth",
       "name": "Tablets of Tahoth*",
-      "source": "arcane_journal",
-      "type": "arcane_item",
       "points": 20,
+      "source": "arcane_journal",
       "description": "Extremely Common. A Wizard may purchase up to three Tablets of Tahoth, each of which is single use. Before making a Casting roll, a Wizard may choose to use any number of their Tablets. For each Tablet used, you may apply a +1 modifier to the result of the Casting roll.",
-      "single_use": true,
-      "rules_text": "Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+      "rules_text": "Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1.",
+      "single_use": true
     },
     {
       "id": "collar_of_shapesh",
       "name": "Collar of Shapesh",
-      "source": "ravening_hordes",
-      "type": "talisman",
       "points": 25,
+      "source": "ravening_hordes",
       "description": "",
-      "single_use": true,
-      "rules_text": "Single use. When the wearer of the Collar of Shapesh loses their last Wound, roll a D6. On a roll of 4+, the Wound is not lost. Instead, a single friendly model within the wearer's Command range is removed from play as a casualty."
+      "rules_text": "Single use. When the wearer of the Collar of Shapesh loses their last Wound, roll a D6. On a roll of 4+, the Wound is not lost. Instead, a single friendly model within the wearer's Command range is removed from play as a casualty.",
+      "single_use": true
     },
     {
       "id": "hieratic_jar",
       "name": "Hieratic Jar*",
-      "source": "ravening_hordes",
-      "type": "arcane_item",
       "points": 25,
+      "source": "ravening_hordes",
       "description": "Extremely Common.",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase, if not engaged in combat, the bearer of a Hieratic Jar can release the power held within it. The bearer may attempt to resurrect the fallen by using the Arise! special rule twice during this Command sub-phase (rather than the usual once)."
+      "rules_text": "Single use. During the Command sub-phase, if not engaged in combat, the bearer of a Hieratic Jar can release the power held within it. The bearer may attempt to resurrect the fallen by using the Arise! special rule twice during this Command sub-phase (rather than the usual once).",
+      "single_use": true
     },
     {
       "id": "relic_of_the_desert_sun",
       "name": "Relic of the Desert Sun",
-      "source": "arcane_journal",
-      "type": "talisman",
       "points": 25,
+      "source": "arcane_journal",
       "description": "",
       "rules_text": "The bearer of the Relic of the Desert Sun is not subject to the Dry as Dust or Flammable special rules."
     },
     {
       "id": "shield_of_ptra",
       "name": "Shield of Ptra",
-      "source": "ravening_hordes",
-      "type": "magic_armour",
       "points": 25,
+      "source": "ravening_hordes",
       "description": "Shield. In addition, any enemy model that directs their attacks against the bearer during the Combat phase suffers a -1 modifier to their Weapon Skill characteristic.",
       "is_shield": true
     },
     {
       "id": "amulet_of_the_serpent",
       "name": "Amulet of the Serpent",
-      "source": "arcane_journal",
-      "type": "talisman",
       "points": 30,
+      "source": "arcane_journal",
       "description": "",
       "rules_text": "The bearer of the Amulet of the Serpent and any unit they have joined gains the Poisoned Attacks special rule."
     },
     {
       "id": "banner_of_the_desert_winds",
       "name": "Banner of the Desert Winds",
-      "source": "arcane_journal",
-      "type": "magic_standard",
       "points": 30,
+      "source": "arcane_journal",
       "description": "",
       "rules_text": "Models whose troop type is 'infantry' only. A unit carrying the Banner of the Desert Winds gains the Vanguard and Reserve Move special rules."
     },
     {
       "id": "crown_of_kings",
       "name": "Crown of Kings*",
-      "source": "ravening_hordes",
-      "type": "talisman",
       "points": 30,
+      "source": "ravening_hordes",
       "description": "Extremely Common. Monarch of Nehekhara only.",
       "rules_text": "During the Command sub-phase, if not engaged in combat, the wearer may attempt to resurrect the fallen (Arise!) by making a Leadership test. If passed, a single friendly unit of Skeleton Warriors, Skeleton Archers, Skeleton Horsemen or Skeleton Horse Archers that is within this model's Command range recovers D3+1 Wounds."
     },
     {
       "id": "enkhils_kanopi",
       "name": "Enkhil's Kanopi",
-      "source": "arcane_journal",
-      "type": "arcane_item",
       "points": 30,
+      "source": "arcane_journal",
       "description": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase, if not engaged in combat, the bearer may attempt to unleash its contents by making a Leadership test (using their own, unmodified Leadership). If passed, all 'Remains in Play' spells currently in play are dispelled, including spells cast by friendly Wizards."
+      "rules_text": "Single use. During the Command sub-phase, if not engaged in combat, the bearer may attempt to unleash its contents by making a Leadership test (using their own, unmodified Leadership). If passed, all 'Remains in Play' spells currently in play are dispelled, including spells cast by friendly Wizards.",
+      "single_use": true
     },
     {
       "id": "staff_of_aeons",
       "name": "Staff of Aeons",
-      "source": "arcane_journal",
-      "type": "magic_weapon",
       "points": 30,
+      "source": "arcane_journal",
       "description": "Combat, S+2, AP -1; Magical Attacks, Requires Two Hands. May only be taken by a Liche Priest in a Mortuary Cult Army of Infamy.",
       "rules_text": "Any model that is hit by one or more close combat attacks made using this weapon suffers a -1 modifier to its armour value for the remainder of the game."
     },
     {
       "id": "flail_of_skulls",
       "name": "Flail of Skulls",
-      "source": "ravening_hordes",
-      "type": "magic_weapon",
       "points": 35,
+      "source": "ravening_hordes",
       "description": "Combat, S+3, AP -1; Magical Attacks, Multiple Wounds (2), Requires Two Hands. The Flail of Skulls' Strength modifier applies only during the first round of combat."
     },
     {
       "id": "icon_of_rulership",
       "name": "Icon of Rulership*",
-      "source": "ravening_hordes",
-      "type": "enchanted_item",
       "points": 35,
+      "source": "ravening_hordes",
       "description": "Extremely Common.",
       "rules_text": "Models whose troop type is 'chariot' only. This model doubles its Unit Strength, from 3 to 6. In addition, any Impact Hits caused by this model have an Armour Piercing characteristic of -2 and the Magical Attacks special rule."
     },
     {
       "id": "phakths_blades_of_justice",
       "name": "Phakth's Blades of Justice",
-      "source": "arcane_journal",
-      "type": "magic_weapon",
       "points": 35,
+      "source": "arcane_journal",
       "description": "Combat, S, AP -1; Magical Attacks, Requires Two Hands.",
       "rules_text": "Models whose troop type is 'infantry' only. Phakth's Blades of Justice grant the wielder +1 Attack for each enemy unit the wielder is engaged with."
     },
     {
       "id": "tapestry_of_conquered_lands",
       "name": "Tapestry of Conquered Lands",
-      "source": "arcane_journal",
-      "type": "magic_standard",
       "points": 35,
+      "source": "arcane_journal",
       "description": "",
       "rules_text": "Any enemy standard captured by a unit carrying the Tapestry of Conquered Lands is worth 100 Victory Points as a trophy of war."
     },
     {
       "id": "warding_splint",
       "name": "Warding Splint",
-      "source": "arcane_journal",
-      "type": "magic_armour",
       "points": 35,
+      "source": "arcane_journal",
       "description": "A suit of heavy armour which may be purchased and worn by a Liche Priest, even if they do not have the option to be equipped with armour, without penalty. In addition, its wearer has a 5+ Ward save against any wounds suffered."
     },
     {
       "id": "icon_of_rakaph",
       "name": "Icon of Rakaph",
-      "source": "ravening_hordes",
-      "type": "magic_standard",
       "points": 40,
+      "source": "ravening_hordes",
       "description": "Unless making a charge move, a unit carrying the Icon of Rakaph may perform a single free reform at any point during its movement."
     },
     {
       "id": "orb_of_ptra",
       "name": "Orb of Ptra",
-      "source": "arcane_journal",
-      "type": "enchanted_item",
       "points": 40,
+      "source": "arcane_journal",
       "description": "",
       "rules_text": "Any enemy model that targets this character or any unit they have joined during the Shooting phase suffers an additional -1 To Hit modifier."
     },
     {
       "id": "phazerakt_kanopi",
       "name": "Phazerakt's Kanopi",
-      "source": "arcane_journal",
-      "type": "arcane_item",
       "points": 40,
+      "source": "arcane_journal",
       "description": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase, if not engaged in combat, the bearer of Phazerakt's Kanopi may attempt to unleash its contents by making a Leadership test (using their own, unmodified Leadership). If passed, place a unit of 2D6+3 Summoned Skeleton Warriors on the battlefield anywhere completely within 12\" of this model, but not within 1\" of any enemy models. Summoned Skeleton Warriors have: M4, WS2, BS2, S3, T3, W1, I2, A1, Ld5; Troop Type Regular infantry; Base Size 25x25mm; Unit Size 2D6+3; Equipment: Hand weapons and shields; Special Rules: Horde, Nehekharan Undead, Regeneration (6+), Skirmishers. Summoned Skeleton Warriors are not worth any Victory Points."
+      "rules_text": "Single use. During the Command sub-phase, if not engaged in combat, the bearer of Phazerakt's Kanopi may attempt to unleash its contents by making a Leadership test (using their own, unmodified Leadership). If passed, place a unit of 2D6+3 Summoned Skeleton Warriors on the battlefield anywhere completely within 12\" of this model, but not within 1\" of any enemy models. Summoned Skeleton Warriors have: M4, WS2, BS2, S3, T3, W1, I2, A1, Ld5; Troop Type Regular infantry; Base Size 25x25mm; Unit Size 2D6+3; Equipment: Hand weapons and shields; Special Rules: Horde, Nehekharan Undead, Regeneration (6+), Skirmishers. Summoned Skeleton Warriors are not worth any Victory Points.",
+      "single_use": true
     },
     {
       "id": "royal_mantle",
       "name": "Royal Mantle",
-      "source": "arcane_journal",
-      "type": "magic_armour",
       "points": 40,
+      "source": "arcane_journal",
       "description": "May only be taken by models in a Nehekharan Royal Host Army of Infamy.",
       "rules_text": "May be worn with other armour. The wearer of the Royal Mantle improves their armour value by 1 (to a maximum of 2+). In addition, the wearer's My Will Be Done special rule affects all friendly units with the Nehekharan Undead special rule within 6\" of them, not just a unit they have joined."
     },
     {
       "id": "blade_of_antarhak",
       "name": "Blade of Antarhak",
-      "source": "arcane_journal",
-      "type": "magic_weapon",
       "points": 45,
+      "source": "arcane_journal",
       "description": "Combat, S+1, AP -1; Magical Attacks. May only be taken by a model in a Nehekharan Royal Host Army of Infamy. For each Wound an enemy unit loses as a result of an attack made with the Blade of Antarhak, its wielder immediately recovers a single lost Wound."
     },
     {
       "id": "sigil_of_centuries",
       "name": "Sigil of Centuries",
-      "source": "arcane_journal",
-      "type": "magic_standard",
       "points": 45,
+      "source": "arcane_journal",
       "description": "All enemy units within 6\" of the model carrying the Sigil of Centuries suffer a -1 modifier to their Initiative characteristic (to a minimum of 1)."
     },
     {
       "id": "armour_of_the_ages",
       "name": "Armour of the Ages",
-      "source": "ravening_hordes",
-      "type": "magic_armour",
       "points": 50,
+      "source": "ravening_hordes",
       "description": "Suit of light armour. In addition, enemy models must re-roll successful rolls To Wound made against the wearer."
     },
     {
       "id": "cloak_of_the_dunes",
       "name": "Cloak of the Dunes",
-      "source": "ravening_hordes",
-      "type": "enchanted_item",
       "points": 50,
+      "source": "ravening_hordes",
       "description": "",
       "rules_text": "Models whose troop type is 'infantry' only. The wearer gains the Fly (9) special rule. In addition, any enemy unit the wearer moves over during the Remaining Moves sub-phase suffers D6 Strength 2 hits, each with an AP of -1."
     },
     {
       "id": "crook_and_flail_of_radiance",
       "name": "Crook & Flail of Radiance",
-      "source": "ravening_hordes",
-      "type": "magic_weapon",
       "points": 50,
+      "source": "ravening_hordes",
       "description": "Combat, S, AP -1; Extra Attacks (+D3), Magical Attacks, Requires Two Hands, Strike First. Monarchs of Nehekhara only."
     },
     {
       "id": "icon_of_the_sacred_eye",
       "name": "Icon of the Sacred Eye",
-      "source": "ravening_hordes",
-      "type": "magic_standard",
       "points": 50,
+      "source": "ravening_hordes",
       "description": "",
       "rules_text": "A unit carrying the Icon of the Sacred Eye has a +1 modifier to its Weapon Skill characteristic (to a maximum of 10)."
     },
     {
       "id": "royal_standard_of_settra",
       "name": "Royal Standard of Settra",
-      "source": "arcane_journal",
-      "type": "magic_standard",
       "points": 50,
+      "source": "arcane_journal",
       "description": "May only be taken in a muster list that includes Settra the Imperishable and/or Nekaph, Emissary of Settra.",
       "rules_text": "A unit carrying the Royal Standard of Settra gains the Hatred (enemy characters) and Terror special rules."
     },
     {
       "id": "staff_of_awakening",
       "name": "Staff of Awakening",
-      "source": "arcane_journal",
-      "type": "enchanted_item",
       "points": 50,
+      "source": "arcane_journal",
       "description": "High Priest only. When the wielder of the Staff of Awakening uses the Arise! special rule on a friendly unit whose troop type is 'infantry' or 'cavalry', that unit recovers an additional D3 Wounds."
     },
     {
       "id": "conquerors_blade",
       "name": "The Conqueror's Blade",
-      "source": "arcane_journal",
-      "type": "magic_weapon",
       "points": 55,
+      "source": "arcane_journal",
       "description": "Combat, S+2, AP -2; Killing Blow, Magical Attacks, Requires Two Hands, Strike Last. Whilst engaged in a challenge, the bearer strikes a Killing Blow if they roll a natural 5 or 6 when making a roll To Wound, rather than the usual 6. In addition, should the wielder slay the enemy General in a challenge, you win a bonus of 100 Victory Points at the end of the game."
     },
     {
       "id": "destroyer_of_eternities",
       "name": "Destroyer of Eternities",
-      "source": "ravening_hordes",
-      "type": "magic_weapon",
       "points": 75,
+      "source": "ravening_hordes",
       "description": "Combat, S+2, AP -2; Killing Blow, Magical Attacks, Requires Two Hands, Strike Last. Rather than attacking normally, the wielder may make a special 'Scything' attack. If they do, the enemy unit they are directing their attacks against suffers D6 automatic hits, each resolved using the Destroyer of Eternities' profile."
     },
     {
       "id": "standard_of_the_cursing_word",
       "name": "Standard of the Cursing Word",
-      "source": "ravening_hordes",
-      "type": "magic_standard",
       "points": 80,
+      "source": "ravening_hordes",
       "description": "Battle Standard Bearer only. At the end of any phase in which one or more models in a unit joined by the bearer lost its last Wound to an enemy attack, the unit that made the attack must make a Leadership test. If failed, the enemy unit suffers D3 Strength 2 hits, each with an AP of -, for each model that lost its last Wound."
     }
   ],

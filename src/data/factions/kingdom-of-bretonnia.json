@@ -344,8 +344,8 @@
     {
       "id": "duke",
       "name": "Duke",
-      "category": "character",
       "source": "forces_of_fantasy",
+      "category": "character",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -369,6 +369,11 @@
       "equipment": [
         "Hand weapon",
         "Heavy armour"
+      ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "rallying_cry",
+        "grail_vow"
       ],
       "options": [
         {
@@ -417,14 +422,6 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "blessings_of_the_lady",
-        "rallying_cry",
-        "grail_vow"
-      ],
-      "notes": [
-        "A single Paladin in the army may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
-      ],
       "weapon_profiles": [
         {
           "name": "Morning Star",
@@ -455,13 +452,16 @@
             "armour_bane_1"
           ]
         }
+      ],
+      "notes": [
+        "A single Paladin in the army may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
       ]
     },
     {
       "id": "baron",
       "name": "Baron",
-      "category": "character",
       "source": "forces_of_fantasy",
+      "category": "character",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -485,6 +485,11 @@
       "equipment": [
         "Hand weapon",
         "Heavy armour"
+      ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "rallying_cry",
+        "knights_vow"
       ],
       "options": [
         {
@@ -545,11 +550,6 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "blessings_of_the_lady",
-        "rallying_cry",
-        "knights_vow"
-      ],
       "weapon_profiles": [
         {
           "name": "Morning Star",
@@ -585,8 +585,8 @@
     {
       "id": "paladin",
       "name": "Paladin",
-      "category": "character",
       "source": "forces_of_fantasy",
+      "category": "character",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -610,6 +610,11 @@
       "equipment": [
         "Hand weapon",
         "Heavy armour"
+      ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "rallying_cry",
+        "knights_vow"
       ],
       "options": [
         {
@@ -670,14 +675,6 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "blessings_of_the_lady",
-        "rallying_cry",
-        "knights_vow"
-      ],
-      "notes": [
-        "A single Paladin may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
-      ],
       "weapon_profiles": [
         {
           "name": "Morning Star",
@@ -708,17 +705,28 @@
             "armour_bane_1"
           ]
         }
+      ],
+      "notes": [
+        "A single Paladin may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
       ]
     },
     {
       "id": "prophetess",
       "name": "Prophetess",
-      "category": "character",
       "source": "forces_of_fantasy",
+      "category": "character",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
       "points": 135,
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "illusion"
+        ]
+      },
       "profiles": [
         {
           "name": "Prophetess",
@@ -737,6 +745,14 @@
       ],
       "equipment": [
         "Hand weapon"
+      ],
+      "special_rules": [
+        "aura_of_the_lady",
+        "blessings_of_the_lady",
+        "lore_of_the_lady",
+        "magical_attacks",
+        "magic_resistance_2",
+        "shield_of_the_lady"
       ],
       "options": [
         {
@@ -759,33 +775,25 @@
           "max_points": 100,
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "aura_of_the_lady",
-        "blessings_of_the_lady",
-        "lore_of_the_lady",
-        "magical_attacks",
-        "magic_resistance_2",
-        "shield_of_the_lady"
-      ],
-      "magic": {
-        "wizard_level": 3,
-        "lores": [
-          "Battle Magic",
-          "Elementalism",
-          "Illusion"
-        ]
-      }
+      ]
     },
     {
       "id": "damsel",
       "name": "Damsel",
-      "category": "character",
       "source": "forces_of_fantasy",
+      "category": "character",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
       "points": 60,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "illusion"
+        ]
+      },
       "profiles": [
         {
           "name": "Damsel",
@@ -804,6 +812,14 @@
       ],
       "equipment": [
         "Hand weapon"
+      ],
+      "special_rules": [
+        "aura_of_the_lady",
+        "blessings_of_the_lady",
+        "lore_of_the_lady",
+        "magical_attacks",
+        "magic_resistance_2",
+        "shield_of_the_lady"
       ],
       "options": [
         {
@@ -826,29 +842,13 @@
           "max_points": 50,
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "aura_of_the_lady",
-        "blessings_of_the_lady",
-        "lore_of_the_lady",
-        "magical_attacks",
-        "magic_resistance_2",
-        "shield_of_the_lady"
-      ],
-      "magic": {
-        "wizard_level": 1,
-        "lores": [
-          "Battle Magic",
-          "Elementalism",
-          "Illusion"
-        ]
-      }
+      ]
     },
     {
       "id": "sergeant_at_arms",
       "name": "Sergeant-at-Arms",
-      "category": "character",
       "source": "forces_of_fantasy",
+      "category": "character",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -872,6 +872,12 @@
       "equipment": [
         "Hand weapon",
         "Light armour"
+      ],
+      "special_rules": [
+        "levies",
+        "peasants_duty",
+        "peasantry",
+        "warband"
       ],
       "options": [
         {
@@ -912,12 +918,6 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "levies",
-        "peasants_duty",
-        "peasantry",
-        "warband"
-      ],
       "weapon_profiles": [
         {
           "name": "Halberd",
@@ -952,8 +952,8 @@
     {
       "id": "bretonnian_warhorse",
       "name": "Bretonnian Warhorse",
-      "category": "mount",
       "source": "forces_of_fantasy",
+      "category": "mount",
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "1",
@@ -991,8 +991,8 @@
     {
       "id": "warhorse",
       "name": "Warhorse",
-      "category": "mount",
       "source": "forces_of_fantasy",
+      "category": "mount",
       "troop_type": "Light cavalry",
       "base_size": "25 x 50 mm",
       "unit_size": "1",
@@ -1027,8 +1027,8 @@
     {
       "id": "barded_pegasus",
       "name": "Barded Pegasus",
-      "category": "mount",
       "source": "forces_of_fantasy",
+      "category": "mount",
       "troop_type": "Monstrous cavalry",
       "base_size": "40 x 60 mm",
       "unit_size": "1",
@@ -1067,8 +1067,8 @@
     {
       "id": "royal_pegasus",
       "name": "Royal Pegasus",
-      "category": "mount",
       "source": "forces_of_fantasy",
+      "category": "mount",
       "troop_type": "Monstrous cavalry",
       "base_size": "50 x 50 mm",
       "unit_size": "1",
@@ -1110,8 +1110,8 @@
     {
       "id": "unicorn",
       "name": "Unicorn",
-      "category": "mount",
       "source": "forces_of_fantasy",
+      "category": "mount",
       "troop_type": "Monstrous cavalry",
       "base_size": "40 x 60 mm",
       "unit_size": "1",
@@ -1153,8 +1153,8 @@
     {
       "id": "hippogryph",
       "name": "Hippogryph",
-      "category": "mount",
       "source": "forces_of_fantasy",
+      "category": "mount",
       "troop_type": "Monstrous creature",
       "base_size": "50 x 50 mm",
       "unit_size": "1",
@@ -1181,14 +1181,6 @@
         "Serrated maw (see weapon profiles)",
         "Griffonic pelt (counts as heavy armour)"
       ],
-      "options": [
-        {
-          "description": "Barding",
-          "cost": 15,
-          "scope": "per_model",
-          "category": "armour"
-        }
-      ],
       "special_rules": [
         "close_order",
         "counter_charge",
@@ -1197,6 +1189,14 @@
         "stomp_attacks_d3",
         "swiftstride",
         "terror"
+      ],
+      "options": [
+        {
+          "description": "Barding",
+          "cost": 15,
+          "scope": "per_model",
+          "category": "armour"
+        }
       ],
       "weapon_profiles": [
         {
@@ -1226,9 +1226,9 @@
     {
       "id": "knights_of_the_realm_on_foot",
       "name": "Knights of the Realm on Foot",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
-      "source": "forces_of_fantasy",
       "troop_type": "Heavy infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5+",
@@ -1270,6 +1270,12 @@
         "Heavy armour",
         "Shields"
       ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "close_order",
+        "furious_charge",
+        "knights_vow"
+      ],
       "options": [
         {
           "description": "Take great weapons (entire unit)",
@@ -1307,13 +1313,6 @@
           "cost_per_unit": 6
         }
       ],
-      "magic_standard": 25,
-      "special_rules": [
-        "blessings_of_the_lady",
-        "close_order",
-        "furious_charge",
-        "knights_vow"
-      ],
       "weapon_profiles": [
         {
           "name": "Great Weapon",
@@ -1326,17 +1325,18 @@
             "strike_last"
           ]
         }
-      ]
+      ],
+      "magic_standard": 25
     },
     {
       "id": "squires",
       "name": "Squires",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "special",
       "list_category_overrides": {
         "errantry_crusade": "core"
       },
-      "source": "forces_of_fantasy",
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5+",
@@ -1377,6 +1377,13 @@
         "Hand weapons",
         "Longbows"
       ],
+      "special_rules": [
+        "move_through_cover",
+        "open_order",
+        "peasantry",
+        "skirmishers",
+        "vanguard"
+      ],
       "options": [
         {
           "description": "Fire & Flee special rule (entire unit)",
@@ -1405,24 +1412,17 @@
           "role": "musician",
           "cost_per_unit": 5
         }
-      ],
-      "special_rules": [
-        "move_through_cover",
-        "open_order",
-        "peasantry",
-        "skirmishers",
-        "vanguard"
       ]
     },
     {
       "id": "men_at_arms",
       "name": "Men-at-Arms",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
         "errantry_crusade": "special"
       },
-      "source": "forces_of_fantasy",
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "10+",
@@ -1481,6 +1481,14 @@
         "Light armour",
         "Shields"
       ],
+      "special_rules": [
+        "close_order",
+        "horde",
+        "levies",
+        "peasantry",
+        "shieldwall",
+        "warband"
+      ],
       "options": [
         {
           "description": "Grail Monk may be equipped with Blessed Triptych (unit gains Stubborn)",
@@ -1510,14 +1518,6 @@
           "cost_per_unit": 5
         }
       ],
-      "special_rules": [
-        "close_order",
-        "horde",
-        "levies",
-        "peasantry",
-        "shieldwall",
-        "warband"
-      ],
       "weapon_profiles": [
         {
           "name": "Polearm (single-handed)",
@@ -1544,12 +1544,12 @@
     {
       "id": "peasant_bowmen",
       "name": "Peasant Bowmen",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
         "errantry_crusade": "special"
       },
-      "source": "forces_of_fantasy",
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "10+",
@@ -1589,6 +1589,11 @@
       "equipment": [
         "Hand weapons",
         "Longbows"
+      ],
+      "special_rules": [
+        "close_order",
+        "levies",
+        "peasantry"
       ],
       "options": [
         {
@@ -1631,19 +1636,14 @@
           "role": "musician",
           "cost_per_unit": 5
         }
-      ],
-      "special_rules": [
-        "close_order",
-        "levies",
-        "peasantry"
       ]
     },
     {
       "id": "battle_pilgrims",
       "name": "Battle Pilgrims & Grail Reliquae",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "special",
-      "source": "forces_of_fantasy",
       "troop_type": "Heavy infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5-30",
@@ -1683,6 +1683,13 @@
         "Light armour",
         "Shields"
       ],
+      "special_rules": [
+        "close_order",
+        "hatred_all_enemies",
+        "levies",
+        "peasantry",
+        "stubborn"
+      ],
       "options": [
         {
           "description": "Include a Grail Reliquae (counts as standard bearer and musician; grants Immune to Psychology and Unbreakable when within 12\" of a Grail Vow model)",
@@ -1690,13 +1697,6 @@
           "scope": "per_unit",
           "category": "special"
         }
-      ],
-      "special_rules": [
-        "close_order",
-        "hatred_all_enemies",
-        "levies",
-        "peasantry",
-        "stubborn"
       ],
       "notes": [
         "Battle Pilgrims: Close Order, Hatred (All Enemies), Levies, Peasantry, Stubborn",
@@ -1708,9 +1708,9 @@
     {
       "id": "knights_errant",
       "name": "Knights Errant",
+      "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "core",
-      "source": "forces_of_fantasy",
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
@@ -1766,6 +1766,16 @@
         "Knights Errant: Hand weapons, lances, heavy armour and shields",
         "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
       ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "close_order",
+        "finest_warhorses",
+        "first_charge",
+        "impetuous",
+        "lance_formation",
+        "swiftstride",
+        "knights_vow"
+      ],
       "command": [
         {
           "role": "champion",
@@ -1781,17 +1791,6 @@
           "cost_per_unit": 6
         }
       ],
-      "magic_standard": 25,
-      "special_rules": [
-        "blessings_of_the_lady",
-        "close_order",
-        "finest_warhorses",
-        "first_charge",
-        "impetuous",
-        "lance_formation",
-        "swiftstride",
-        "knights_vow"
-      ],
       "weapon_profiles": [
         {
           "name": "Lance",
@@ -1802,14 +1801,15 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "magic_standard": 25
     },
     {
       "id": "mounted_knights_of_the_realm",
       "name": "Mounted Knights of the Realm",
+      "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "core",
-      "source": "forces_of_fantasy",
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
@@ -1865,6 +1865,16 @@
         "Knights of the Realm: Hand weapons, lances, heavy armour and shields",
         "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
       ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "close_order",
+        "counter_charge",
+        "finest_warhorses",
+        "first_charge",
+        "lance_formation",
+        "swiftstride",
+        "knights_vow"
+      ],
       "options": [
         {
           "description": "First Knight may purchase magic items",
@@ -1889,17 +1899,6 @@
           "cost_per_unit": 7
         }
       ],
-      "magic_standard": 25,
-      "special_rules": [
-        "blessings_of_the_lady",
-        "close_order",
-        "counter_charge",
-        "finest_warhorses",
-        "first_charge",
-        "lance_formation",
-        "swiftstride",
-        "knights_vow"
-      ],
       "weapon_profiles": [
         {
           "name": "Lance",
@@ -1910,17 +1909,18 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "magic_standard": 25
     },
     {
       "id": "questing_knights",
       "name": "Questing Knights",
+      "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
       "list_category_overrides": {
         "bretonnian_exiles": "rare"
       },
-      "source": "forces_of_fantasy",
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
@@ -1976,6 +1976,15 @@
         "Questing Knights: Hand weapons, great weapons, heavy armour and shields",
         "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
       ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "close_order",
+        "finest_warhorses",
+        "first_charge",
+        "lance_formation",
+        "swiftstride",
+        "questing_vow"
+      ],
       "options": [
         {
           "description": "Paragon may take a single Knightly Virtue",
@@ -2007,16 +2016,6 @@
           "cost_per_unit": 7
         }
       ],
-      "magic_standard": 100,
-      "special_rules": [
-        "blessings_of_the_lady",
-        "close_order",
-        "finest_warhorses",
-        "first_charge",
-        "lance_formation",
-        "swiftstride",
-        "questing_vow"
-      ],
       "weapon_profiles": [
         {
           "name": "Great Weapon",
@@ -2029,14 +2028,15 @@
             "strike_last"
           ]
         }
-      ]
+      ],
+      "magic_standard": 100
     },
     {
       "id": "grail_knights",
       "name": "Grail Knights",
+      "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "rare",
-      "source": "forces_of_fantasy",
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "3+",
@@ -2092,6 +2092,17 @@
         "Grail Knights: Hand weapons, lances, heavy armour and shields",
         "Bretonnian Warhorse: Iron-shod hooves (counts as a hand weapon) and barding"
       ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "close_order",
+        "counter_charge",
+        "finest_warhorses",
+        "first_charge",
+        "lance_formation",
+        "living_saints",
+        "swiftstride",
+        "grail_vow"
+      ],
       "options": [
         {
           "description": "Grail Guardian may take a single Knightly Virtue",
@@ -2123,18 +2134,6 @@
           "cost_per_unit": 7
         }
       ],
-      "magic_standard": 100,
-      "special_rules": [
-        "blessings_of_the_lady",
-        "close_order",
-        "counter_charge",
-        "finest_warhorses",
-        "first_charge",
-        "lance_formation",
-        "living_saints",
-        "swiftstride",
-        "grail_vow"
-      ],
       "weapon_profiles": [
         {
           "name": "Lance",
@@ -2145,14 +2144,15 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "magic_standard": 100
     },
     {
       "id": "pegasus_knights",
       "name": "Pegasus Knights",
+      "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
-      "source": "forces_of_fantasy",
       "troop_type": "Monstrous cavalry",
       "base_size": "40 x 60 mm",
       "unit_size": "3+",
@@ -2208,6 +2208,18 @@
         "Pegasus Knights: Hand weapons, lances, heavy armour and shields",
         "Barded Pegasus: Iron-shod hooves (counts as a hand weapon) and barding"
       ],
+      "special_rules": [
+        "blessings_of_the_lady",
+        "counter_charge",
+        "dispersed_formation",
+        "first_charge",
+        "fly_10",
+        "furious_charge",
+        "lance_formation",
+        "skirmishers",
+        "swiftstride",
+        "knights_vow"
+      ],
       "command": [
         {
           "role": "champion",
@@ -2223,22 +2235,6 @@
           "cost_per_unit": 7
         }
       ],
-      "magic_standard": 50,
-      "special_rules": [
-        "blessings_of_the_lady",
-        "counter_charge",
-        "dispersed_formation",
-        "first_charge",
-        "fly_10",
-        "furious_charge",
-        "lance_formation",
-        "skirmishers",
-        "swiftstride",
-        "knights_vow"
-      ],
-      "notes": [
-        "Furious Charge applies to Pegasus Knights and First Knight models only"
-      ],
       "weapon_profiles": [
         {
           "name": "Lance",
@@ -2249,17 +2245,21 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "notes": [
+        "Furious Charge applies to Pegasus Knights and First Knight models only"
+      ],
+      "magic_standard": 50
     },
     {
       "id": "mounted_yeomen",
       "name": "Mounted Yeomen",
+      "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
       "list_category_overrides": {
         "errantry_crusade": "rare"
       },
-      "source": "forces_of_fantasy",
       "troop_type": "Light cavalry",
       "base_size": "25 x 50 mm",
       "unit_size": "5+",
@@ -2315,6 +2315,16 @@
         "Mounted Yeoman: Hand weapons, cavalry spears and shortbows",
         "Warhorse: Iron-shod hooves (counts as a hand weapon)"
       ],
+      "special_rules": [
+        "fast_cavalry",
+        "fire_and_flee",
+        "levies",
+        "open_order",
+        "peasantry",
+        "reserve_move",
+        "skirmishers",
+        "swiftstride"
+      ],
       "options": [
         {
           "description": "Light armour (entire unit)",
@@ -2350,16 +2360,6 @@
           "cost_per_unit": 5
         }
       ],
-      "special_rules": [
-        "fast_cavalry",
-        "fire_and_flee",
-        "levies",
-        "open_order",
-        "peasantry",
-        "reserve_move",
-        "skirmishers",
-        "swiftstride"
-      ],
       "weapon_profiles": [
         {
           "name": "Spear",
@@ -2375,9 +2375,9 @@
     {
       "id": "field_trebuchet",
       "name": "Field Trebuchet",
+      "source": "forces_of_fantasy",
       "category": "war_machine",
       "list_category": "rare",
-      "source": "forces_of_fantasy",
       "troop_type": "War machine",
       "base_size": "60 x 100 mm (machine), 25 x 25 mm (crew)",
       "unit_size": "1",
@@ -2441,13 +2441,13 @@
     {
       "id": "green_knight",
       "name": "The Green Knight",
-      "category": "character",
       "source": "arcane_journal",
-      "is_named_character": true,
+      "category": "character",
       "troop_type": "Heavy cavalry (named character)",
       "base_size": "30 x 60 mm",
       "unit_size": "1",
       "points": 275,
+      "is_named_character": true,
       "profiles": [
         {
           "name": "The Green Knight",
@@ -2529,13 +2529,13 @@
     {
       "id": "sir_cecil_gastonne",
       "name": "Sir Cecil Gastonne, The Wyrm Slayer",
-      "category": "character",
       "source": "arcane_journal",
-      "is_named_character": true,
+      "category": "character",
       "troop_type": "Regular infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
       "points": 165,
+      "is_named_character": true,
       "profiles": [
         {
           "name": "Sir Cecil Gastonne",
@@ -2587,13 +2587,19 @@
     {
       "id": "lady_elisse_duchaard",
       "name": "Lady Élisse Duchaard",
-      "category": "character",
       "source": "arcane_journal",
-      "is_named_character": true,
+      "category": "character",
       "troop_type": "Monstrous cavalry (named character)",
       "base_size": "40 x 60 mm",
       "unit_size": "1",
       "points": 225,
+      "is_named_character": true,
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "elementalism"
+        ]
+      },
       "profiles": [
         {
           "name": "Lady Élisse Duchaard",
@@ -2644,12 +2650,6 @@
         "stomp_attacks_1",
         "swiftstride"
       ],
-      "magic": {
-        "wizard_level": 3,
-        "lores": [
-          "Elementalism"
-        ]
-      },
       "notes": [
         "Lady Élisse Duchaard is a Prophetess",
         "Armour Bane (2) applies to Ariandir only",
@@ -2663,15 +2663,23 @@
     {
       "id": "outcast_wizards",
       "name": "Outcast Wizards",
-      "category": "character",
       "source": "arcane_journal",
-      "availability": [
-        "bretonnian_exiles"
-      ],
+      "category": "character",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
       "points": 45,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "daemonology",
+          "dark_magic",
+          "elementalism",
+          "illusion",
+          "necromancy"
+        ]
+      },
       "profiles": [
         {
           "name": "Outcast Wizard",
@@ -2690,6 +2698,11 @@
       ],
       "equipment": [
         "Hand weapon"
+      ],
+      "special_rules": [
+        "magical_attacks",
+        "magic_resistance_1",
+        "untutored_arcanist"
       ],
       "options": [
         {
@@ -2718,32 +2731,16 @@
           "category": "special"
         }
       ],
-      "special_rules": [
-        "magical_attacks",
-        "magic_resistance_1",
-        "untutored_arcanist"
-      ],
-      "magic": {
-        "wizard_level": 1,
-        "lores": [
-          "Battle Magic",
-          "Daemonology",
-          "Dark Magic",
-          "Elementalism",
-          "Illusion",
-          "Necromancy"
-        ]
-      }
+      "availability": [
+        "bretonnian_exiles"
+      ]
     },
     {
       "id": "yeomen_guard",
       "name": "Yeomen Guard",
+      "source": "arcane_journal",
       "category": "infantry",
       "list_category": "core",
-      "source": "arcane_journal",
-      "availability": [
-        "bretonnian_exiles"
-      ],
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "10+",
@@ -2801,6 +2798,14 @@
         "Light armour",
         "Shields"
       ],
+      "special_rules": [
+        "close_order",
+        "horde",
+        "peasantry",
+        "shieldwall",
+        "veteran",
+        "warband"
+      ],
       "options": [
         {
           "description": "Halberds (entire unit)",
@@ -2848,15 +2853,6 @@
           "cost_per_unit": 6
         }
       ],
-      "magic_standard": 25,
-      "special_rules": [
-        "close_order",
-        "horde",
-        "peasantry",
-        "shieldwall",
-        "veteran",
-        "warband"
-      ],
       "weapon_profiles": [
         {
           "name": "Halberd",
@@ -2877,17 +2873,18 @@
             "fight_in_extra_rank"
           ]
         }
+      ],
+      "magic_standard": 25,
+      "availability": [
+        "bretonnian_exiles"
       ]
     },
     {
       "id": "border_princes_brigands",
       "name": "Border Princes Brigands",
+      "source": "arcane_journal",
       "category": "infantry",
       "list_category": "rare",
-      "source": "arcane_journal",
-      "availability": [
-        "bretonnian_exiles"
-      ],
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "10+",
@@ -2927,6 +2924,14 @@
       "equipment": [
         "Hand weapons",
         "Light armour"
+      ],
+      "special_rules": [
+        "horde",
+        "impetuous",
+        "levies",
+        "motley_crew",
+        "open_order",
+        "warband"
       ],
       "options": [
         {
@@ -3008,14 +3013,6 @@
           "cost_per_unit": 5
         }
       ],
-      "special_rules": [
-        "horde",
-        "impetuous",
-        "levies",
-        "motley_crew",
-        "open_order",
-        "warband"
-      ],
       "weapon_profiles": [
         {
           "name": "Pistol",
@@ -3037,17 +3034,17 @@
             "ponderous"
           ]
         }
+      ],
+      "availability": [
+        "bretonnian_exiles"
       ]
     },
     {
       "id": "border_princes_bombard",
       "name": "Border Princes Bombard",
+      "source": "arcane_journal",
       "category": "war_machine",
       "list_category": "rare",
-      "source": "arcane_journal",
-      "availability": [
-        "bretonnian_exiles"
-      ],
       "troop_type": "War machine",
       "base_size": "50 x 50 mm (machine), 25 x 25 mm (crew)",
       "unit_size": "1",
@@ -3105,6 +3102,9 @@
           ],
           "notes": "Shoots like a cannon using the Cannon Fire special rule. Uses the Bombard Misfire table: 1=Destroyed; 2-3=Malfunction (crew loses 1 Wound, fails to shoot); 4-5=Pffft (fails to shoot); 6=Boom! (shoots as if Artillery dice rolled 2, cannot shoot next round)."
         }
+      ],
+      "availability": [
+        "bretonnian_exiles"
       ]
     }
   ],
@@ -3202,8 +3202,8 @@
     {
       "id": "dragonblade",
       "name": "Dragonblade",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
       "weapon_profile": {
         "name": "Dragonblade",
@@ -3219,8 +3219,8 @@
     {
       "id": "burning-blade",
       "name": "Burning Blade*",
-      "points": 5,
       "category": "magic_weapon",
+      "points": 5,
       "description": "Once unsheathed, the cutting edge of the Burning Blade writhes endlessly with a living flame.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Flaming AttacksMagical Attacks*Extremely Common\n*Extremely Common",
       "weapon_profile": {
         "name": "Burning Blade",
@@ -3236,8 +3236,8 @@
     {
       "id": "biting-blade",
       "name": "Biting Blade",
-      "points": 15,
       "category": "magic_weapon",
+      "points": 15,
       "description": "The serrated length of the Biting Blade cuts through armour of plate and mail with terrible ease.\nRangeStrengthArmour PiercingSpecial RulesCombatS-2Armour Bane (1)Magical Attacks",
       "weapon_profile": {
         "name": "Biting Blade",
@@ -3253,8 +3253,8 @@
     {
       "id": "sword-of-striking",
       "name": "Sword of Striking*",
-      "points": 15,
       "category": "magic_weapon",
+      "points": 15,
       "description": "Engraved with runes of accuracy and swiftness, the Sword of Striking is an elegant weapon of great precision.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksNotes: During the Combat phase, the wielder of the Sword of Striking has a +1 modifier to their rolls To Hit.*Extremely Common",
       "weapon_profile": {
         "name": "Sword of Striking",
@@ -3270,8 +3270,8 @@
     {
       "id": "berserker-blade",
       "name": "Berserker Blade",
-      "points": 20,
       "category": "magic_weapon",
+      "points": 20,
       "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
       "weapon_profile": {
         "name": "Berserker Blade",
@@ -3289,9 +3289,10 @@
       "id": "foebreaker",
       "name": "Foebreaker",
       "category": "magic_weapon",
-      "source": "arcane_journal",
       "points": 20,
+      "source": "arcane_journal",
       "description": "",
+      "rules_text": "Any enemy model that suffers one or more unsaved wounds from the Foebreaker must immediately make a Toughness test. If failed, the wounded model suffers a -1 modifier to its Weapon Skill and Attacks characteristics (to a minimum of 1) until the end of the next Combat phase.",
       "weapon_profile": {
         "name": "Foebreaker",
         "range": "Combat",
@@ -3300,14 +3301,13 @@
         "special_rules": [
           "magical_attacks"
         ]
-      },
-      "rules_text": "Any enemy model that suffers one or more unsaved wounds from the Foebreaker must immediately make a Toughness test. If failed, the wounded model suffers a -1 modifier to its Weapon Skill and Attacks characteristics (to a minimum of 1) until the end of the next Combat phase."
+      }
     },
     {
       "id": "sword-of-might",
       "name": "Sword of Might*",
-      "points": 20,
       "category": "magic_weapon",
+      "points": 20,
       "description": "Bound around with powerful runes that increase its power and enhance the strength of its bearer.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Magical Attacks*Extremely Common\n*Extremely Common",
       "weapon_profile": {
         "name": "Sword of Might",
@@ -3322,8 +3322,8 @@
     {
       "id": "sword-of-swiftness",
       "name": "Sword of Swiftness",
-      "points": 25,
       "category": "magic_weapon",
+      "points": 25,
       "description": "Crafted from magically attuned materials and ensorcelled to strike as if with a life of its own.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksStrike First",
       "weapon_profile": {
         "name": "Sword of Swiftness",
@@ -3340,8 +3340,8 @@
       "id": "sword_of_the_stout_hearted",
       "name": "Sword of the Stout Hearted",
       "category": "magic_weapon",
-      "source": "arcane_journal",
       "points": 25,
+      "source": "arcane_journal",
       "description": "Imbued with the courage of Gilles le Breton himself, this sword fills the wielder with the fortitude to face down any enemy.",
       "weapon_profile": {
         "name": "Sword of the Stout Hearted",
@@ -3360,10 +3360,11 @@
       "id": "frontier_axe",
       "name": "Frontier Axe",
       "category": "magic_weapon",
-      "source": "arcane_journal",
       "points": 30,
-      "restrictions": "Models in a Bretonnian Exiles Army of Infamy only",
+      "source": "arcane_journal",
       "description": "",
+      "rules_text": "This enchanted axe severs limbs and sunders armour in a single swing.",
+      "restrictions": "Models in a Bretonnian Exiles Army of Infamy only",
       "weapon_profile": {
         "name": "Frontier Axe",
         "range": "Combat",
@@ -3374,14 +3375,13 @@
           "multiple_wounds_2"
         ],
         "notes": "Requires Two Hands"
-      },
-      "rules_text": "This enchanted axe severs limbs and sunders armour in a single swing."
+      }
     },
     {
       "id": "giant-blade",
       "name": "Giant Blade",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "A broad and heavy blade wrought with powerful enchantments that only increase the weight of its blows, the Giant Blade is an unsubtle weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Armour Bane (2)Magical AttacksMultiple Wounds (2)",
       "weapon_profile": {
         "name": "Giant Blade",
@@ -3398,8 +3398,8 @@
     {
       "id": "hell-forged-axe",
       "name": "Hell-forged Axe",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "In the midst of battle, smoke billows and flames burst from the glowing blade of this fell weapon.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (3)Flaming AttacksMagical Attacks",
       "weapon_profile": {
         "name": "Hell-forged Axe",
@@ -3416,8 +3416,8 @@
     {
       "id": "sword-of-sorrow",
       "name": "Sword of Sorrow",
-      "points": 30,
       "category": "magic_weapon",
+      "points": 30,
       "description": "Though it possesses no special properties when wielded in combat, it is said that a gesture with the Sword of Sorrow can pierce an enemy's heart from afar.",
       "weapon_profile": {
         "name": "Sword of Sorrow",
@@ -3432,8 +3432,8 @@
     {
       "id": "spelleater-axe",
       "name": "Spelleater Axe",
-      "points": 35,
       "category": "magic_weapon",
+      "points": 35,
       "description": "Forged of rune-encrusted brass, the Spelleater Axe is anathema to the Winds of Magic.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Magical AttacksMagic Resistance (-2)",
       "weapon_profile": {
         "name": "Spelleater Axe",
@@ -3450,8 +3450,8 @@
       "id": "morning_star_of_fracasse",
       "name": "Morning Star of Fracasse",
       "category": "magic_weapon",
-      "source": "forces_of_fantasy",
       "points": 40,
+      "source": "forces_of_fantasy",
       "description": "Any magic weapon carried by an enemy model that suffers one or more unsaved wounds from the Morning Star of Fracasse is destroyed and cannot be used for the remainder of the game.",
       "weapon_profile": {
         "name": "Morning Star of Fracasse",
@@ -3466,8 +3466,8 @@
     {
       "id": "headsmans-axe",
       "name": "Headsman's Axe",
-      "points": 45,
       "category": "magic_weapon",
+      "points": 45,
       "description": "A wide bladed axe, steeped in the blood of its countless helpless victims.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Killing BlowMagical AttacksRequires Two Hands",
       "weapon_profile": {
         "name": "Headsman's Axe",
@@ -3484,8 +3484,8 @@
     {
       "id": "dragon-slaying-sword",
       "name": "Dragon Slaying Sword",
-      "points": 50,
       "category": "magic_weapon",
+      "points": 50,
       "description": "A mighty blade, wielded by many great heroes in their endless quests to slay foul monsters.\nRangeStrengthArmour PiercingSpecial RulesCombatS-Magical AttacksMonster Slayer",
       "weapon_profile": {
         "name": "Dragon Slaying Sword",
@@ -3502,10 +3502,10 @@
       "id": "heartwood_lance",
       "name": "Heartwood Lance",
       "category": "magic_weapon",
-      "source": "forces_of_fantasy",
       "points": 50,
-      "restrictions": "Models whose troop type is 'cavalry' or 'monster' only",
+      "source": "forces_of_fantasy",
       "description": "This unbreakable lance is crafted from the heart of the Major Oak, the largest tree in Bretonnia. Can only be used in a turn in which the wielder charged; otherwise use hand weapon.",
+      "restrictions": "Models whose troop type is 'cavalry' or 'monster' only",
       "weapon_profile": {
         "name": "Heartwood Lance",
         "range": "Combat",
@@ -3519,8 +3519,8 @@
     {
       "id": "meteor-hammer",
       "name": "Meteor Hammer",
-      "points": 50,
       "category": "magic_weapon",
+      "points": 50,
       "description": "No matter who wields this mighty hammer, their blows will land with the force of a meteor plummeting from the heavens.\nRangeStrengthArmour PiercingSpecial RulesCombatS-3Magical AttacksRequires Two HandsNotes: When making a roll To Wound with this weapon, a roll of a 3+ is always a success, regardless of the target's Toughness.",
       "weapon_profile": {
         "name": "Meteor Hammer",
@@ -3537,8 +3537,8 @@
     {
       "id": "duellists-blades",
       "name": "Duellist's Blades",
-      "points": 55,
       "category": "magic_weapon",
+      "points": 55,
       "description": "Fine weapons, forged by the greatest of swordsmiths and imbued with potent runes of quickening.\nRangeStrengthArmour PiercingSpecial RulesCombatS-1Extra Attacks (+2)Magical AttacksRequires Two Hands",
       "weapon_profile": {
         "name": "Duellist's Blades",
@@ -3556,10 +3556,10 @@
       "id": "crusaders_lance",
       "name": "Crusader's Lance",
       "category": "magic_weapon",
-      "source": "arcane_journal",
       "points": 60,
-      "restrictions": "Models in an Errantry Crusade Army of Infamy whose troop type is 'cavalry' or 'monster' only",
+      "source": "arcane_journal",
       "description": "The Crusader's Lance can only be used during a turn in which the wielder charged. In subsequent turns (or if the wielder did not charge), the model must use its hand weapon instead.",
+      "restrictions": "Models in an Errantry Crusade Army of Infamy whose troop type is 'cavalry' or 'monster' only",
       "weapon_profile": {
         "name": "Crusader's Lance",
         "range": "Combat",
@@ -3576,8 +3576,8 @@
     {
       "id": "sword-of-battle",
       "name": "Sword of Battle",
-      "points": 60,
       "category": "magic_weapon",
+      "points": 60,
       "description": "A simple weapon, yet finely crafted, blessed by mighty mages and revered priests.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Armour Bane (1)Extra Attacks (+1)Magical Attacks",
       "weapon_profile": {
         "name": "Sword of Battle",
@@ -3595,9 +3595,10 @@
       "id": "sword_of_heroes",
       "name": "Sword of Heroes",
       "category": "magic_weapon",
-      "source": "forces_of_fantasy",
       "points": 60,
+      "source": "forces_of_fantasy",
       "description": "",
+      "rules_text": "This mighty blade has powerful enchantments against evil bound into it. When making a roll To Wound for a hit caused with this sword, a roll of 5+ is always a success, regardless of the target's Toughness.",
       "weapon_profile": {
         "name": "Sword of Heroes",
         "range": "Combat",
@@ -3607,14 +3608,13 @@
           "magical_attacks",
           "monster_slayer"
         ]
-      },
-      "rules_text": "This mighty blade has powerful enchantments against evil bound into it. When making a roll To Wound for a hit caused with this sword, a roll of 5+ is always a success, regardless of the target's Toughness."
+      }
     },
     {
       "id": "cackling-blade",
       "name": "Cackling Blade",
-      "points": 65,
       "category": "magic_weapon",
+      "points": 65,
       "description": "Those who carry the Cackling Blade relinquish all self control until the battle has long ended - often to their peril.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-1Extra Attacks (+D6)Magical AttacksNotes: If a natural 6 is rolled for the Extra Attacks (+D6) special rule, the wielder of the Cackling Blade immediately loses a single Wound.",
       "weapon_profile": {
         "name": "Cackling Blade",
@@ -3632,8 +3632,8 @@
       "id": "sword_of_the_quest",
       "name": "Sword of the Quest",
       "category": "magic_weapon",
-      "source": "forces_of_fantasy",
       "points": 70,
+      "source": "forces_of_fantasy",
       "description": "This large hand-and-a-half sword has been passed down from knight to knight, aiding generations of heroes on their noble quests.",
       "weapon_profile": {
         "name": "Sword of the Quest",
@@ -3649,9 +3649,10 @@
     {
       "id": "ogre-blade",
       "name": "Ogre Blade",
-      "points": 75,
       "category": "magic_weapon",
+      "points": 75,
       "description": "A massive sword of terrible power, forged in the darkest mountains of the Old World.",
+      "restrictions": "",
       "weapon_profile": {
         "name": "Ogre Blade",
         "range": "Combat",
@@ -3660,81 +3661,80 @@
         "special_rules": [
           "magical_attacks"
         ]
-      },
-      "restrictions": ""
+      }
     },
     {
       "id": "charmed-shield",
       "name": "Charmed Shield*",
-      "points": 5,
       "category": "magic_armour",
+      "points": 5,
       "description": "A simple shield hung with charms and fetishes to bring the bearer good fortune. In the heat of battle, such ornamentation rarely survives intact for long.",
       "is_shield": true
     },
     {
       "id": "enchanted-shield",
       "name": "Enchanted Shield*",
-      "points": 10,
       "category": "magic_armour",
+      "points": 10,
       "description": "A finely crafted and sturdy shield that protects its bearer from harm time and time again.\nThe Enchanted Shield is a shield. In addition, its bearer has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack.*Extremely Common",
       "is_shield": true
     },
     {
       "id": "armour-of-meteoric-iron",
       "name": "Armour of Meteoric Iron",
-      "points": 20,
       "category": "magic_armour",
+      "points": 20,
       "description": "",
-      "restrictions": "",
-      "rules_text": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either."
+      "rules_text": "This heavy armour was forged of ore mined from a meteor that fell from the heavens.\nThe Armour of Meteoric Iron gives its wearer an armour value of 5+, which cannot be improved in any way. However, nor can this armour value be reduced in any way either.",
+      "restrictions": ""
     },
     {
       "id": "trailblazers-hauberk",
       "name": "Trailblazer's Hauberk",
-      "points": 20,
       "category": "magic_armour",
+      "points": 20,
       "description": "The local flora seems to shift and bend to allow the wearer to pass unimpeded through even the thickest briar.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules."
+      "rules_text": "Models whose troop type is infantry only. The Trailblazer's Hauberk is a suit of heavy armour. In addition, its wearer gains the Move Through Cover and Scouts special rules.",
+      "restrictions": ""
     },
     {
       "id": "levitating-shield",
       "name": "Levitating Shield",
-      "points": 25,
       "category": "magic_armour",
+      "points": 25,
       "description": "Born aloft by a cunning enchantment, this shield seems to place itself between its owner and the weapons of the enemy.",
+      "rules_text": "Models whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat.",
       "restrictions": "",
-      "is_shield": true,
-      "rules_text": "Models whose troop type is infantry only. The Levitating Shield is a shield. In addition, the bearer may use it alongside a weapon with the Requires Two Hands special rule during combat."
+      "is_shield": true
     },
     {
       "id": "spellshield",
       "name": "Spellshield*",
-      "points": 25,
       "category": "magic_armour",
+      "points": 25,
       "description": "The Winds of Magic lose their power when in the presence of the brass-bound Spellshield.\nThe Spellshield is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered that were caused by a Magic Missile, a Magical Vortex, or an Assailment spell.*Extremely Common",
       "is_shield": true
     },
     {
       "id": "shield-of-the-warrior-true",
       "name": "Shield of the Warrior True",
-      "points": 30,
       "category": "magic_armour",
+      "points": 30,
       "description": "A heavy shield of oak and iron that turns aside all but the most deadly of missiles.\nThe Shield of the Warrior True is a shield. In addition, its bearer has a 5+ Ward save against any wounds suffered during the Shooting phase.",
       "is_shield": true
     },
     {
       "id": "glittering-scales",
       "name": "Glittering Scales",
-      "points": 35,
       "category": "magic_armour",
+      "points": 35,
       "description": "Each and every scale of this armoured surcoat is crafted from shards of precious metal.\nThe Glittering Scales is a suit of light armour. In addition, once per turn, you may make your opponent re-roll a single roll To Hit made against the wearer."
     },
     {
       "id": "armour-of-silvered-steel",
       "name": "Armour of Silvered Steel",
-      "points": 40,
       "category": "magic_armour",
+      "points": 40,
       "description": "Polished to a mirror shine, the Armour of Silvered Steel encases its wearer from head to toe.\nThe Armour of Silvered Steel is a suit of armour that gives its wearer an armour value of 3+ which cannot be improved in any way.",
       "restrictions": ""
     },
@@ -3742,16 +3742,16 @@
       "id": "gromril_great_helm",
       "name": "Gromril Great Helm",
       "category": "magic_armour",
-      "source": "forces_of_fantasy",
       "points": 40,
+      "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "May be worn with other armour. Improves the wearer's armour value by 1 (to a maximum of 2+). In addition, the wearer may re-roll any roll of a natural 1 made when making an Armour Save roll."
     },
     {
       "id": "bedazzling-helm",
       "name": "Bedazzling Helm",
-      "points": 60,
       "category": "magic_armour",
+      "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
       "restrictions": ""
     },
@@ -3759,32 +3759,32 @@
       "id": "gilded_cuirass",
       "name": "Gilded Cuirass",
       "category": "magic_armour",
-      "source": "forces_of_fantasy",
       "points": 60,
+      "source": "forces_of_fantasy",
       "description": "Inscribed with the words of the Grail Vow. A suit of heavy armour. In addition, its wearer has the Regeneration (5+) special rule."
     },
     {
       "id": "armour-of-destiny",
       "name": "Armour of Destiny",
-      "points": 70,
       "category": "magic_armour",
+      "points": 70,
       "description": "A suit of magical armour forged at the confluence of two ley lines, the Armour of Destiny protects its wearer from harm beyond mortal ken.",
       "restrictions": "May only be worn by a model that is equipped with (or has the option to be equipped with) armour."
     },
     {
       "id": "luckstone",
       "name": "Luckstone*",
-      "points": 15,
       "category": "talisman",
+      "points": 15,
       "description": "Can luck be trapped within a dull stone pendant? Possibly.",
-      "single_use": true,
-      "rules_text": "Single use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll. *Extremely Common"
+      "rules_text": "Single use. The bearer of a Luckstone can re-roll a single failed Armour Save roll.*Extremely Common\nSingle use. The bearer of a Luckstone can re-roll a single failed Armour Save roll. *Extremely Common",
+      "single_use": true
     },
     {
       "id": "obsidian-lodestone",
       "name": "Obsidian Lodestone*",
-      "points": 20,
       "category": "talisman",
+      "points": 20,
       "description": "An air of chill hangs about obsidian, stilling the Winds of Magic in its presence.",
       "rules_text": "A model may purchase up to three Obsidian Lodestones. A model that bears a single Obsidian Lodestone has Magic Resistance (-1), a model that bears two has Magic Resistance (-2), and a model that bears three has Magic Resistance (-3).*Extremely Common"
     },
@@ -3792,162 +3792,162 @@
       "id": "mantle_of_the_damsel_elena",
       "name": "Mantle of the Damsel Elena",
       "category": "talisman",
-      "source": "forces_of_fantasy",
       "points": 25,
+      "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "The bearer is immune to the Poisoned Attacks special rule. If the bearer is wounded by an attack with this special rule, the attacker must roll To Wound as normal."
     },
     {
       "id": "paymasters-coin",
       "name": "Paymaster's Coin*",
-      "points": 25,
       "category": "talisman",
+      "points": 25,
       "description": "This heavy golden coin may not be enchanted, but its weight in its owner's pocket certainly inspires heroism.",
-      "single_use": true,
-      "rules_text": "Single use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase. *Extremely Common"
+      "rules_text": "Single use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase.*Extremely Common\nSingle use. The bearer of a Paymaster's Coin can re-roll any failed rolls To Hit made during the Combat phase. *Extremely Common",
+      "single_use": true
     },
     {
       "id": "siriennes_locket",
       "name": "Sirienne's Locket",
       "category": "talisman",
-      "source": "forces_of_fantasy",
       "points": 25,
-      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only",
+      "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound."
+      "rules_text": "The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only"
     },
     {
       "id": "ironhide-talisman",
       "name": "Ironhide Talisman",
-      "points": 30,
       "category": "talisman",
+      "points": 30,
       "description": "It is said that the one who bears this powerful heirloom can endure even the most telling blows.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6. Note that this magic item does not work against attacks that hit automatically."
+      "rules_text": "Models whose troop type is infantry only. Any enemy model that makes a successful roll To Hit against the bearer of the Ironhide Talisman during the Shooting phase or Combat phase must re-roll any rolls To Wound of a natural 6. Note that this magic item does not work against attacks that hit automatically.",
+      "restrictions": ""
     },
     {
       "id": "talisman-of-protection",
       "name": "Talisman of Protection",
-      "points": 30,
       "category": "talisman",
+      "points": 30,
       "description": "A powerful magical aura surrounds this humble talisman, protecting its wearer from harm.\nThe Talisman of Protection gives its bearer a 5+ Ward save against any wounds suffered."
     },
     {
       "id": "dawnstone",
       "name": "Dawnstone",
-      "points": 35,
       "category": "talisman",
+      "points": 35,
       "description": "Talismans are tokens of magical protection, worn by warriors to protect them from harm both physical and magical. The magic trapped within this semi-precious stone binds together shattered armour plates.",
-      "restrictions": "",
-      "rules_text": "The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1."
+      "rules_text": "The bearer of the Dawnstone may re-roll any Armour Save roll of a natural 1.",
+      "restrictions": ""
     },
     {
       "id": "icon-of-fortitude",
       "name": "Icon of Fortitude",
-      "points": 35,
       "category": "talisman",
+      "points": 35,
       "description": "Carefully woven with protective enchantments, this exquisite brooch is said to shield its bearer from the deadliest blows.",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound."
+      "rules_text": "Models whose troop type is infantry or cavalry only. The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
+      "restrictions": ""
     },
     {
       "id": "gauntlet_of_the_duel",
       "name": "Gauntlet of the Duel",
       "category": "enchanted_item",
-      "source": "forces_of_fantasy",
       "points": 5,
-      "extremely_common": true,
+      "source": "forces_of_fantasy",
       "description": "Challenges issued by the bearer of a Gauntlet of the Duel cannot be refused.",
-      "rules_text": "During a challenge, this model may re-roll any failed rolls To Hit."
+      "rules_text": "During a challenge, this model may re-roll any failed rolls To Hit.",
+      "extremely_common": true
     },
     {
       "id": "potion-of-foolhardiness",
       "name": "Potion of Foolhardiness*",
-      "points": 5,
       "category": "enchanted_item",
+      "points": 5,
       "description": "A magical brew that fills the drinker with courage… it may actually just be strong liquor.",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common"
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Foolhardiness can consume it. Until the end of that turn, the model gains the Immune To Psychology special rule.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "potion-of-speed",
       "name": "Potion of Speed*",
-      "points": 10,
       "category": "enchanted_item",
+      "points": 10,
       "description": "A powerful potion with a terrible aftertaste that sharpens the wits and speeds the reactions.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Speed can consume it. Until the end of that turn, the model has a +D3 modifier to its Initiative characteristic (to a maximum of 10).*Extremely Common"
+      "single_use": true
     },
     {
       "id": "becalming-orb",
       "name": "Becalming Orb",
-      "points": 20,
       "category": "enchanted_item",
+      "points": 20,
       "description": "This pulsing crystal orb can syphon the Winds of Magic away from its bearer's enemies.",
-      "single_use": true,
-      "rules_text": "Single Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2."
+      "rules_text": "Single Use. The bearer of the Becalming Orb may cast the following Bound spell, with a Power level of 1:TypeHexCasting Value8+RangeSelfUntil your next Start of Turn sub-phase, enemy Wizards that are within 15\" of the caster when attempting to cast a spell must increase that spell's casting value by 2.",
+      "single_use": true
     },
     {
       "id": "potion-of-toughness",
       "name": "Potion of Toughness*",
-      "points": 20,
       "category": "enchanted_item",
+      "points": 20,
       "description": "Distilled by magical means, this potion is sure to make the drinker all but invulnerable.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Toughness can consume it. Until the end of that turn, the model has a +D3 modifier to its Toughness characteristic (to a maximum of 10).*Extremely Common"
+      "single_use": true
     },
     {
       "id": "antlers_of_the_great_hunt",
       "name": "Antlers of the Great Hunt",
       "category": "enchanted_item",
-      "source": "forces_of_fantasy",
       "points": 25,
+      "source": "forces_of_fantasy",
       "description": "If the wearer of the Antlers of the Great Hunt is mounted on a Barded Warhorse or a Warhorse, they and any unit they join gains the Move through Cover special rule."
     },
     {
       "id": "potion-of-strength",
       "name": "Potion of Strength*",
-      "points": 25,
       "category": "enchanted_item",
+      "points": 25,
       "description": "A concoction of strength-giving vegetables and roots, mixed together with a touch of magic.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Potion of Strength can consume it. Until the end of that turn, the model has a +D3 modifier to its Strength characteristic (to a maximum of 10).*Extremely Common"
+      "single_use": true
     },
     {
       "id": "potion-of-fervour",
       "name": "Potion of Fervour",
-      "points": 30,
       "category": "enchanted_item",
+      "points": 30,
       "description": "This noxious brew allows those who risk drinking it a moment of godliness upon the battlefield.",
+      "rules_text": "Single Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10). Note that a model can only consume a single potion (of any type) per Command phase.",
       "restrictions": "",
-      "single_use": true,
-      "rules_text": "Single Use. During the Command sub-phase of their turn, the bearer of the Potion of Fervour can consume it. Until the end of that turn, the model has a +D3 modifier to its Attacks characteristic (to a maximum of 10). Note that a model can only consume a single potion (of any type) per Command phase."
+      "single_use": true
     },
     {
       "id": "healing-potion",
       "name": "Healing Potion*",
-      "points": 35,
       "category": "enchanted_item",
+      "points": 35,
       "description": "Purveyors of magical potions make many bold claims. Sometimes they are true, sometimes not.",
-      "single_use": true,
-      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. The model immediately recovers D3 lost Wounds."
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Healing Potion can consume it. The model immediately recovers D3 lost Wounds.*Extremely Common\nSingle use. The model immediately recovers D3 lost Wounds.",
+      "single_use": true
     },
     {
       "id": "ruby-ring-of-ruin",
       "name": "Ruby Ring of Ruin",
-      "points": 35,
       "category": "enchanted_item",
+      "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
       "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
     },
     {
       "id": "arch-lightning-rod",
       "name": "Arch-Lightning Rod",
-      "points": 40,
       "category": "enchanted_item",
+      "points": 40,
       "description": "Crackling lightning fills the heavens with peril, grounding the creatures of the sky.",
       "restrictions": ""
     },
@@ -3955,101 +3955,101 @@
       "id": "falcon_horn_of_fredemund",
       "name": "Falcon-horn of Fredemund",
       "category": "enchanted_item",
-      "source": "forces_of_fantasy",
       "points": 40,
+      "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "During the Command sub-phase of their turn, if not engaged in combat, this character may make a Leadership test (using their own unmodified Leadership). If passed, until your next Start of Turn sub-phase, enemy units cannot use the Fly (X) special rule."
     },
     {
       "id": "flying-carpet",
       "name": "Flying Carpet",
-      "points": 40,
       "category": "enchanted_item",
+      "points": 40,
       "description": "Woven from the finest silks in a far-off land, this splendid rug does more than warm the feet!",
-      "restrictions": "",
-      "rules_text": "Models whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit."
+      "rules_text": "Models whose troop type is regular infantry or heavy infantry only. The bearer of the Flying Carpet gains the Fly (8) and Swiftstride special rules. However, the bearer cannot join a unit.",
+      "restrictions": ""
     },
     {
       "id": "wizarding-hat",
       "name": "Wizarding Hat",
-      "points": 45,
       "category": "enchanted_item",
+      "points": 45,
       "description": "This splendid hat, once the property of a long dead Wizard, is still haunted by their ghost.",
       "restrictions": ""
     },
     {
       "id": "earthing-rod",
       "name": "Earthing Rod",
-      "points": 5,
       "category": "arcane_item",
+      "points": 5,
       "description": "Inert metal runs the length of the Wizard's staff, drawing magical overloads safely into the earth.",
-      "single_use": true,
-      "rules_text": "Single use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table."
+      "rules_text": "Single use. Should they miscast a spell, a Wizard can use the Earthing Rod to re-roll the result rolled on the Miscast table.",
+      "single_use": true
     },
     {
       "id": "arcane-familiar",
       "name": "Arcane Familiar",
-      "points": 15,
       "category": "arcane_item",
+      "points": 15,
       "description": "Many Wizards are accompanied by familiars gifted with arcane knowledge. These creatures constantly whisper secrets to their master."
     },
     {
       "id": "dispel-scroll",
       "name": "Dispel Scroll*",
-      "points": 20,
       "category": "arcane_item",
+      "points": 20,
       "description": "The Wizard reads aloud a charm of unbinding from an enchanted scroll.",
-      "single_use": true,
-      "rules_text": "Single use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common"
+      "rules_text": "Single use. A Wizard may use this scroll when attempting a Wizardly dispel. If they do so, roll an extra D6 when making the Dispel roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the Wizard is outclassed in the art.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "power-scroll",
       "name": "Power Scroll*",
-      "points": 20,
       "category": "arcane_item",
+      "points": 20,
       "description": "Unfurling a scroll bearing runes of power can greatly increase the spell's power.",
-      "single_use": true,
-      "rules_text": "Single use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common"
+      "rules_text": "Single use. A Wizard may use this scroll when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.*Extremely Common",
+      "single_use": true
     },
     {
       "id": "prayer_icon_of_quenelles",
       "name": "Prayer Icon of Quenelles",
       "category": "arcane_item",
-      "source": "forces_of_fantasy",
       "points": 25,
+      "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "The bearer of the Prayer Icon of Quenelles increases their Dispel range by 3\". Additionally, when attempting to dispel a Hex spell, the bearer gains a +1 modifier to their Dispel roll."
     },
     {
       "id": "lore-familiar",
       "name": "Lore Familiar",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "By creating a magical homunculus, a Wizard is able to better recall forgotten details of their studies.\nThe owner of a Lore Familiar does not randomly generate their spells. Instead, they may choose which spells they know from their chosen lore (including that lore's signature spell)."
     },
     {
       "id": "sacrament_of_the_lady",
       "name": "Sacrament of the Lady",
       "category": "arcane_item",
-      "source": "forces_of_fantasy",
       "points": 30,
-      "extremely_common": true,
+      "source": "forces_of_fantasy",
       "description": "Before making a Casting roll, the bearer may apply a +2 modifier to that Casting roll.",
-      "rules_text": "Note that this modifier does not negate a roll of a natural double 1."
+      "rules_text": "Note that this modifier does not negate a roll of a natural double 1.",
+      "extremely_common": true
     },
     {
       "id": "scroll-of-disruption",
       "name": "Scroll of Disruption",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "When spoken aloud, the words upon this ancient scroll cause the Winds of Magic to bluster and the spells of the enemy to unravel.",
       "rules_text": "Once per turn, the bearer of the Scroll of Disruption may re-roll a Dispel roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
     {
       "id": "tome-of-spellcraft",
       "name": "Tome of Spellcraft",
-      "points": 30,
       "category": "arcane_item",
+      "points": 30,
       "description": "Reading aloud from a dusty tome of great age, the Wizard enunciates their spells with unrivalled clarity and precision.",
       "rules_text": "Once per turn, the bearer of the Tome of Spellcraft may re-roll a Casting roll.*Note all dice are re-rolled, including any bonus or discard dice granted by special rules or magic items."
     },
@@ -4057,40 +4057,40 @@
       "id": "silver_mirror",
       "name": "Silver Mirror",
       "category": "arcane_item",
-      "source": "forces_of_fantasy",
       "points": 35,
+      "source": "forces_of_fantasy",
       "description": "",
-      "single_use": true,
-      "rules_text": "Single use. When making a Wizardly dispel, the bearer may use the Silver Mirror. Roll an extra D6 and discard the lowest result. If a 1 is rolled on any two of the dice, the bearer is outclassed, the dispel attempt fails, and the casting Wizard suffers a Strength 4 hit with AP -2."
+      "rules_text": "Single use. When making a Wizardly dispel, the bearer may use the Silver Mirror. Roll an extra D6 and discard the lowest result. If a 1 is rolled on any two of the dice, the bearer is outclassed, the dispel attempt fails, and the casting Wizard suffers a Strength 4 hit with AP -2.",
+      "single_use": true
     },
     {
       "id": "staff-of-quietude",
       "name": "Staff of Quietude",
-      "points": 35,
       "category": "arcane_item",
+      "points": 35,
       "description": "With a gesture, the bearer of the Staff of Quietude calms the Winds of Magic, causing spells and conjurations to dissipate into the other."
     },
     {
       "id": "wand-of-jet",
       "name": "Wand of Jet",
-      "points": 45,
       "category": "arcane_item",
+      "points": 45,
       "description": "Carved from brittle jet, this wand refines a Wizard's power, but is easily broken.",
       "restrictions": ""
     },
     {
       "id": "scroll-of-transmogrification",
       "name": "Scroll of Transmogrification*",
-      "points": 50,
       "category": "arcane_item",
+      "points": 50,
       "description": "For a Wizard, there are few things better than the rush of joy felt upon turning a rival into a frog!",
       "restrictions": ""
     },
     {
       "id": "feedback-scroll",
       "name": "Feedback Scroll",
-      "points": 60,
       "category": "arcane_item",
+      "points": 60,
       "description": "When read aloud, this charm causes ætheric energy to flood back towards the enemy Wizard.",
       "restrictions": ""
     },
@@ -4098,57 +4098,57 @@
       "id": "banner_of_chalons",
       "name": "Banner of Châlons",
       "category": "magic_standard",
-      "source": "forces_of_fantasy",
       "points": 20,
+      "source": "forces_of_fantasy",
       "description": "Enemy units cannot declare a Stand & Shoot charge reaction against a unit carrying the Banner of Châlons."
     },
     {
       "id": "monster-hunters-tapestry",
       "name": "Monster Hunter's Tapestry",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "Those who have earned the right to fight under this standard have battled some of the Old World's most dangerous beasts and lived to tell the tale.\nEnemy units may not make Stomp Attacks against a unit carrying the Monster Hunter's Tapestry.",
       "restrictions": ""
     },
     {
       "id": "the-blazing-banner",
       "name": "The Blazing Banner",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "An eternal flame flickers about the weapons of those that march beneath the Blazing Banner.",
-      "restrictions": "",
-      "rules_text": "A unit carrying the Blazing Banner gains the Flaming Attacks special rule."
+      "rules_text": "A unit carrying the Blazing Banner gains the Flaming Attacks special rule.",
+      "restrictions": ""
     },
     {
       "id": "war-banner",
       "name": "War Banner",
-      "points": 25,
       "category": "magic_standard",
+      "points": 25,
       "description": "A proud banner of great age. Those that march beneath the War Banner fight with grim resolve.\nWhen calculating its combat result, a unit carrying the War Banner may claim an additional bonus of +1 combat result point.",
       "restrictions": ""
     },
     {
       "id": "banner-of-swirling-wind",
       "name": "Banner of Swirling Wind",
-      "points": 30,
       "category": "magic_standard",
+      "points": 30,
       "description": "Gale-force winds surge around this standard so fiercely that arrows and shot are blown forcefully away from their target.",
-      "restrictions": "",
-      "rules_text": "Any enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier."
+      "rules_text": "Any enemy model that shoots at a unit carrying the Banner of Swirling Wind suffers an additional -1 To Hit modifier.",
+      "restrictions": ""
     },
     {
       "id": "errantry_banner",
       "name": "Errantry Banner",
       "category": "magic_standard",
-      "source": "forces_of_fantasy",
       "points": 30,
+      "source": "forces_of_fantasy",
       "description": "All models in a unit carrying the Errantry Banner have a +1 modifier to their Strength characteristic during a turn in which they charge. However, the unit also gains the Impetuous special rule."
     },
     {
       "id": "rampaging-banner",
       "name": "Rampaging Banner",
-      "points": 30,
       "category": "magic_standard",
+      "points": 30,
       "description": "As a matter of honour, those that fight beneath the Rampaging Banner are always first into the fray.\nWhen a unit carrying the Rampaging Banner declares a charge, it may re-roll its Charge roll.",
       "restrictions": ""
     },
@@ -4156,52 +4156,52 @@
       "id": "conquerors_tapestry",
       "name": "Conqueror's Tapestry",
       "category": "magic_standard",
-      "source": "forces_of_fantasy",
       "points": 40,
+      "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "Any enemy standard captured by a unit carrying the Conqueror's Tapestry is worth 100 Victory Points as a trophy of war."
     },
     {
       "id": "razor-standard",
       "name": "Razor Standard",
-      "points": 40,
       "category": "magic_standard",
+      "points": 40,
       "description": "Hung with hundreds of wickedly sharp blades, an air of sharpness radiates outwards from the Razor Standard.",
-      "restrictions": "",
-      "rules_text": "A unit carrying the Razor Standard gains the Armour Bane (2) special rule."
+      "rules_text": "A unit carrying the Razor Standard gains the Armour Bane (2) special rule.",
+      "restrictions": ""
     },
     {
       "id": "banner-of-iron-resolve",
       "name": "Banner of Iron Resolve",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "No regiment that stands beneath the Banner of Iron Resolve has ever fled from the foe.",
-      "restrictions": "",
-      "rules_text": "A unit carrying the Banner of Iron Resolve gains the Stubborn special rule."
+      "rules_text": "A unit carrying the Banner of Iron Resolve gains the Stubborn special rule.",
+      "restrictions": ""
     },
     {
       "id": "banner-of-the-steadfast",
       "name": "Banner of the Steadfast",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "Woven into the bright fabric of this banner is a scene of unimaginable gallantry, a scene that serves to inspire those who fight in its shadow to hold their ground no matter the odds.",
       "restrictions": ""
     },
     {
       "id": "totem-of-wrath",
       "name": "Totem of Wrath",
-      "points": 50,
       "category": "magic_standard",
+      "points": 50,
       "description": "Cruel runes etched into the surface of this icon tremble with power, causing those around it to succumb to an animalistic ferocity.",
-      "restrictions": "",
-      "rules_text": "During a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1."
+      "rules_text": "During a turn in which it charged, models within a unit carrying the Totem of Wrath improve the Armour Piercing characteristic of their weapons by 1, and may re-roll any rolls To Wound of a natural 1.",
+      "restrictions": ""
     },
     {
       "id": "valorous_standard",
       "name": "Valorous Standard",
       "category": "magic_standard",
-      "source": "forces_of_fantasy",
       "points": 60,
+      "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "A unit carrying the Valorous Standard rolls 3D6 when making a Break test and discards the highest result."
     }
@@ -4214,8 +4214,8 @@
       "casting_value": "7+/10+",
       "range": "12\"",
       "effect": "Remains in Play. Cast on 7+: target friendly unit gains Regeneration (6+). Cast on 10+: target gains Regeneration (5+). This spell may target a friendly unit engaged in combat.",
-      "remains_in_play": true,
-      "is_signature": true
+      "is_signature": true,
+      "remains_in_play": true
     },
     {
       "id": "ladys_wrath",
@@ -4224,8 +4224,8 @@
       "casting_value": "9+",
       "range": "Self",
       "effect": "Remains in Play. Whilst this spell is in play, the caster, their mount and any unit they have joined gain a +1 modifier to their Strength characteristic (to a maximum of 10), and improve the Armour Piercing characteristic of their weapons by 1.",
-      "remains_in_play": true,
-      "is_signature": true
+      "is_signature": true,
+      "remains_in_play": true
     },
     {
       "id": "burning_gaze",
@@ -4233,34 +4233,33 @@
       "type": "Magic Missile",
       "casting_value": "10+",
       "range": "5D6\"",
-      "effect": "Draw a straight line, 5D6\" in length, from the caster's base edge. Any enemy model whose base falls under this line suffers a single Strength 4 hit with no armour save permitted (Ward and Regeneration saves may be attempted as normal).",
-      "remains_in_play": false
+      "effect": "Draw a straight line, 5D6\" in length, from the caster's base edge. Any enemy model whose base falls under this line suffers a single Strength 4 hit with no armour save permitted (Ward and Regeneration saves may be attempted as normal)."
     }
   ],
   "chivalrous_vows": [
     {
       "id": "knights_vow",
       "name": "The Knight's Vow",
-      "description": "A model with this Chivalrous Vow does not have to make a Panic test when a friendly unit with the Peasantry rule is destroyed whilst within 6\" of it, or when it is fled through by a friendly unit with the Peasantry rule.",
-      "restrictions": "A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule."
+      "restrictions": "A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule.",
+      "description": "A model with this Chivalrous Vow does not have to make a Panic test when a friendly unit with the Peasantry rule is destroyed whilst within 6\" of it, or when it is fled through by a friendly unit with the Peasantry rule."
     },
     {
       "id": "questing_vow",
       "name": "The Questing Vow",
-      "description": "A model with this Chivalrous Vow has the Stubborn special rule and can re-roll any failed Fear, Panic or Terror test. It does not have to make a Panic test when a Peasantry unit is destroyed within 6\" or fled through. A model with this Vow cannot be equipped with a lance (magical or mundane).",
-      "restrictions": "A unit with this Vow cannot be joined by a character with the Knight's Vow or the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule."
+      "restrictions": "A unit with this Vow cannot be joined by a character with the Knight's Vow or the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule.",
+      "description": "A model with this Chivalrous Vow has the Stubborn special rule and can re-roll any failed Fear, Panic or Terror test. It does not have to make a Panic test when a Peasantry unit is destroyed within 6\" or fled through. A model with this Vow cannot be equipped with a lance (magical or mundane)."
     },
     {
       "id": "grail_vow",
       "name": "The Grail Vow",
-      "description": "A model with this Chivalrous Vow has the Immune to Psychology, Magical Attacks and Stubborn special rules. Models with this Vow always benefit from the Blessings of the Lady and do not have to pray at the start of the game. A model with this Vow cannot refuse a challenge.",
-      "restrictions": "A unit with this Vow can only be joined by a character with the Grail Vow or a Handmaiden of the Lady. A character with this Vow cannot join a unit with the Peasantry rule."
+      "restrictions": "A unit with this Vow can only be joined by a character with the Grail Vow or a Handmaiden of the Lady. A character with this Vow cannot join a unit with the Peasantry rule.",
+      "description": "A model with this Chivalrous Vow has the Immune to Psychology, Magical Attacks and Stubborn special rules. Models with this Vow always benefit from the Blessings of the Lady and do not have to pray at the start of the game. A model with this Vow cannot refuse a challenge."
     },
     {
       "id": "crusaders_vow",
       "name": "The Crusader's Vow",
-      "description": "A Chivalrous Vow available in Errantry Crusade armies (replaces Knight's Vow at no cost). A model with this Vow has the Veteran special rule and does not have to make a Panic test when a friendly Peasantry unit is destroyed within 6\" or fled through.",
-      "restrictions": "A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule. Available in Errantry Crusade armies only."
+      "restrictions": "A unit with this Vow cannot be joined by a character with the Peasantry rule. A character with this Vow cannot join a unit with the Peasantry rule. Available in Errantry Crusade armies only.",
+      "description": "A Chivalrous Vow available in Errantry Crusade armies (replaces Knight's Vow at no cost). A model with this Vow has the Veteran special rule and does not have to make a Panic test when a friendly Peasantry unit is destroyed within 6\" or fled through."
     }
   ],
   "publication": "forces_of_fantasy"
