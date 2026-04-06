@@ -694,9 +694,24 @@ export default function ArmyEditor() {
                           <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-text-3)' }}>Models:</span>
                           <button onClick={() => handleQtyChange(entry, unit, -1)} disabled={entry.quantity <= min}
                             style={{ width: '24px', height: '24px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text)', fontWeight: 700, cursor: 'pointer', borderRadius: '3px', opacity: entry.quantity <= min ? 0.3 : 1 }}>−</button>
-                          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '13px', fontWeight: 700, color: 'var(--f-text)', minWidth: '20px', textAlign: 'center' }}>{entry.quantity}</span>
+                          <input
+                            type="number"
+                            min={min}
+                            max={max ?? undefined}
+                            value={entry.quantity}
+                            onChange={(e) => {
+                              const val = parseInt(e.target.value);
+                              if (!isNaN(val)) {
+                                const clamped = Math.max(min, max !== null ? Math.min(max, val) : val);
+                                updateEntry(armyId, entry.id, { quantity: clamped });
+                              }
+                            }}
+                            style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '13px', fontWeight: 700, color: 'var(--f-text)', width: '48px', textAlign: 'center', background: 'var(--f-elevated)', border: '1px solid var(--f-border)', borderRadius: '3px', padding: '2px 4px' }}
+                          />
                           <button onClick={() => handleQtyChange(entry, unit, 1)} disabled={max !== null && entry.quantity >= max}
                             style={{ width: '24px', height: '24px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text)', fontWeight: 700, cursor: 'pointer', borderRadius: '3px', opacity: (max !== null && entry.quantity >= max) ? 0.3 : 1 }}>+</button>
+                          <button onClick={() => handleQtyChange(entry, unit, 5)} disabled={max !== null && entry.quantity >= max}
+                            style={{ height: '24px', padding: '0 6px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text)', fontWeight: 700, fontSize: '11px', cursor: 'pointer', borderRadius: '3px', opacity: (max !== null && entry.quantity >= max) ? 0.3 : 1 }}>+5</button>
                           <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', color: 'var(--f-text-3)' }}>× {unit.points} pts</span>
                         </div>
                       )}
