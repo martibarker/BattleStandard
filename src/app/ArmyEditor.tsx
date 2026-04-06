@@ -69,6 +69,7 @@ export default function ArmyEditor() {
     magic_standard: false,
     magic_items_section: true,
   });
+  const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
   const [toast, setToast] = useState<{ message: string; key: number } | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const toastKey = useRef(0);
@@ -575,33 +576,71 @@ export default function ArmyEditor() {
             });
             const catColor = CAT_COLORS[cat.id];
 
+            const isCollapsed = !!collapsedSections[cat.id];
             return (
               <div key={cat.id} style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
                 {/* Heraldic category divider */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
-                  <div style={{
-                    fontFamily: "'Cinzel', Georgia, serif",
-                    fontSize: '10px',
-                    fontWeight: 600,
-                    letterSpacing: '0.25em',
-                    textTransform: 'uppercase',
-                    padding: '4px 14px',
-                    border: `1px solid ${catColor}`,
-                    color: catColor,
-                    position: 'relative',
-                    flexShrink: 0,
-                  }}>
-                    <span style={{ position: 'absolute', left: '-9px', top: '50%', transform: 'translateY(-50%)', fontSize: '7px' }}>◆</span>
-                    {cat.label}
-                    <span style={{ position: 'absolute', right: '-9px', top: '50%', transform: 'translateY(-50%)', fontSize: '7px' }}>◆</span>
-                  </div>
+                  {/* Collapse toggle + label — clickable */}
+                  <button
+                    onClick={() => setCollapsedSections((prev) => ({ ...prev, [cat.id]: !prev[cat.id] }))}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: '8px',
+                      background: 'none', border: 'none', padding: 0, cursor: 'pointer', flexShrink: 0,
+                    }}
+                    aria-expanded={!isCollapsed}
+                    aria-label={`${isCollapsed ? 'Expand' : 'Collapse'} ${cat.label}`}
+                  >
+                    <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '9px', color: catColor, opacity: 0.7, userSelect: 'none', marginRight: '2px' }}>
+                      {isCollapsed ? '▸' : '▾'}
+                    </span>
+                    <div style={{
+                      fontFamily: "'Cinzel', Georgia, serif",
+                      fontSize: '10px',
+                      fontWeight: 600,
+                      letterSpacing: '0.25em',
+                      textTransform: 'uppercase',
+                      padding: '4px 14px',
+                      border: `1px solid ${catColor}`,
+                      color: catColor,
+                      position: 'relative',
+                      flexShrink: 0,
+                    }}>
+                      <span style={{ position: 'absolute', left: '-9px', top: '50%', transform: 'translateY(-50%)', fontSize: '7px' }}>◆</span>
+                      {cat.label}
+                      <span style={{ position: 'absolute', right: '-9px', top: '50%', transform: 'translateY(-50%)', fontSize: '7px' }}>◆</span>
+                    </div>
+                  </button>
                   <div style={{ flex: 1, height: '1px', opacity: 0.2, background: `linear-gradient(90deg, ${catColor}, transparent)` }} />
+                  {/* Per-section enrol button */}
+                  <button
+                    onClick={() => openDrawer(cat.id)}
+                    style={{
+                      fontFamily: "'Cinzel', Georgia, serif",
+                      fontSize: '9px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: catColor,
+                      border: `1px solid ${catColor}`,
+                      backgroundColor: 'transparent',
+                      padding: '3px 10px',
+                      cursor: 'pointer',
+                      borderRadius: '2px',
+                      opacity: 0.75,
+                      transition: 'opacity 0.15s',
+                      flexShrink: 0,
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+                    onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.75')}
+                  >
+                    + Enrol
+                  </button>
                   <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '11px', color: 'var(--f-text-3)', flexShrink: 0 }}>
                     {pts[cat.id]} pts
                   </span>
                 </div>
 
-                {entries.length === 0 && (
+                {!isCollapsed && entries.length === 0 && (
                   <button
                     onClick={() => openDrawer(cat.id)}
                     style={{
@@ -624,7 +663,7 @@ export default function ArmyEditor() {
                     ◆ Enrol a {cat.label} ◆
                   </button>
                 )}
-                {entries.map((entry) => {
+                {!isCollapsed && entries.map((entry) => {
                   const unit = faction.units.find((u) => u.id === entry.unitId);
                   if (!unit) return null;
                   const entryPts = calcEntryPoints(unit, entry, faction);
