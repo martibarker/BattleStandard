@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
-import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, flattenEquipment, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
+import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, flattenEquipment, getEffectiveListCategory, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
 
 import type { Faction, Unit, WeaponProfile, Option, OptionChoice, SubOrder } from '../types/faction';
@@ -1051,7 +1051,6 @@ function EntryOptionsPanel({
   setExpandedMagicCategories: (categories: Record<string, boolean>) => void;
 }) {
   const options = unit.options ?? [];
-  const perModel = isPerModelPoints(unit);
 
   const magicAllowanceOpt = options.find(
     (o) => o.max_points !== undefined && !o.description.toLowerCase().includes('standard')
@@ -1162,19 +1161,43 @@ function EntryOptionsPanel({
       {/* Command */}
       {command.length > 0 && (
         <OptionsSection label="Command">
-          {command.map((cmd) => {
-            const checked = cmd.role === 'champion' ? entry.includeChampion
+          {command.map((cmd, cmdIdx) => {
+            const champRank = cmd.role === 'champion'
+              ? command.filter(c => c.role === 'champion').indexOf(cmd)
+              : -1;
+            const checked = cmd.role === 'champion'
+              ? champRank === 0
+                ? entry.includeChampion
+                : entry.selectedOptions.includes(cmd.name ?? '')
               : cmd.role === 'standard_bearer' ? entry.includeStandard
               : entry.includeMusician;
             const label = cmd.role === 'champion' ? (cmd.name ?? 'Champion')
               : cmd.role === 'standard_bearer' ? 'Standard Bearer'
               : (cmd.name ?? 'Musician');
             const onChange = (v: boolean) => {
-              if (cmd.role === 'champion') updateEntry(armyId, entry.id, { includeChampion: v });
-              else if (cmd.role === 'standard_bearer') updateEntry(armyId, entry.id, { includeStandard: v });
-              else updateEntry(armyId, entry.id, { includeMusician: v });
+              if (cmd.role === 'champion') {
+                if (champRank === 0) {
+                  updateEntry(armyId, entry.id, { includeChampion: v });
+                } else {
+                  const name = cmd.name ?? '';
+                  let next = v
+                    ? [...entry.selectedOptions, name]
+                    : entry.selectedOptions.filter(o => o !== name);
+                  // If unchecking, remove any options conditioned on this champion
+                  if (!v) {
+                    const champCondition = `${name} champion only`;
+                    const conditioned = options.filter(o => o.condition === champCondition).map(o => o.description);
+                    if (conditioned.length > 0) next = next.filter(d => !conditioned.includes(d));
+                  }
+                  updateEntry(armyId, entry.id, { selectedOptions: next });
+                }
+              } else if (cmd.role === 'standard_bearer') {
+                updateEntry(armyId, entry.id, { includeStandard: v });
+              } else {
+                updateEntry(armyId, entry.id, { includeMusician: v });
+              }
             };
-            return <OptionCheckbox key={cmd.role} label={`${label} — +${cmd.cost_per_unit} pts`} checked={checked} onChange={onChange} />;
+            return <OptionCheckbox key={`${cmd.role}-${cmdIdx}`} label={`${label} — +${cmd.cost_per_unit} pts`} checked={checked} onChange={onChange} />;
           })}
         </OptionsSection>
       )}
@@ -1183,10 +1206,10 @@ function EntryOptionsPanel({
       {hasWeapons && (
         <OptionsSection label="Weapons">
           {weaponOptions.map((opt) => (
-            <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
+            <RegularOption key={opt.description} opt={opt} entry={entry} toggleOption={toggleOption} />
           ))}
           {weaponChoiceGroups.map((group) => (
-            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
+            <ChoiceGroup key={group.description} group={group} entry={entry} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
           ))}
         </OptionsSection>
       )}
@@ -1195,10 +1218,10 @@ function EntryOptionsPanel({
       {hasArmour && (
         <OptionsSection label="Armour &amp; Shields">
           {armourOptions.map((opt) => (
-            <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
+            <RegularOption key={opt.description} opt={opt} entry={entry} toggleOption={toggleOption} />
           ))}
           {armourChoiceGroups.map((group) => (
-            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
+            <ChoiceGroup key={group.description} group={group} entry={entry} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
           ))}
         </OptionsSection>
       )}
@@ -1207,7 +1230,7 @@ function EntryOptionsPanel({
       {hasSpecial && (
         <OptionsSection label="Special Upgrades">
           {specialOptions.map((opt) => (
-            <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
+            <RegularOption key={opt.description} opt={opt} entry={entry} toggleOption={toggleOption} />
           ))}
           {scaledOptions.map((opt) => {
             const maxAllowed = Math.min(Math.floor(entry.quantity / opt.per_n_models!), opt.max_count ?? 99);
@@ -1234,7 +1257,7 @@ function EntryOptionsPanel({
             );
           })}
           {specialChoiceGroups.map((group) => (
-            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
+            <ChoiceGroup key={group.description} group={group} entry={entry} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
           ))}
         </OptionsSection>
       )}
@@ -1726,19 +1749,23 @@ function OptionCheckbox({ label, checked, onChange }: { label: string; checked: 
 function RegularOption({
   opt,
   entry,
-  perModel,
   toggleOption,
 }: {
   opt: Option;
   entry: ArmyEntry;
-  perModel: boolean;
   toggleOption: (desc: string, checked: boolean) => void;
 }) {
   const checked = entry.selectedOptions.includes(opt.description);
-  const conditionMet = !opt.condition || entry.selectedOptions.includes(opt.condition);
+  const champOnlyMatch = opt.condition?.match(/^(.+) champion only$/);
+  const conditionMet = !opt.condition
+    || entry.selectedOptions.includes(opt.condition)
+    || (champOnlyMatch != null && entry.selectedOptions.includes(champOnlyMatch[1]));
   const isDisabled = !conditionMet;
-  const multiplier = opt.scope === 'per_model' && perModel ? entry.quantity : 1;
-  const costPart = opt.cost > 0 ? ` — +${opt.cost * multiplier} pts${opt.scope === 'per_model' ? '/model' : ''}` : '';
+  const costPart = opt.cost > 0
+    ? opt.scope === 'per_model'
+      ? ` — +${opt.cost} pts/model`
+      : ` — +${opt.cost} pts`
+    : '';
   return (
     <div className={`flex flex-col gap-0.5${isDisabled ? ' opacity-40' : ''}`}>
       <label className={`flex items-center gap-2 ${isDisabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
@@ -1780,12 +1807,11 @@ function RegularOption({
 function ChoiceGroup(props: {
   group: Option;
   entry: ArmyEntry;
-  perModel: boolean;
   selectChoice: (choices: OptionChoice[], choiceDesc: string | null) => void;
   toggleChoice: (choiceDesc: string) => void;
   armyId: string;
 }) {
-  const { group, entry, perModel, selectChoice, toggleChoice } = props;
+  const { group, entry, selectChoice, toggleChoice } = props;
   const choices = group.choices!;
   const isMulti = !!group.multi_select;
   // For radio: only one can be active; for checkbox: any subset
@@ -1802,8 +1828,11 @@ function ChoiceGroup(props: {
         const isActive = isMulti
           ? entry.selectedOptions.includes(choice.description)
           : selectedDesc === choice.description;
-        const multiplier = choice.scope === 'per_model' && perModel ? entry.quantity : 1;
-        const costPart = choice.cost > 0 ? ` — +${choice.cost * multiplier} pts${choice.scope === 'per_model' ? '/model' : ''}` : '';
+        const costPart = choice.cost > 0
+          ? choice.scope === 'per_model'
+            ? ` — +${choice.cost} pts/model`
+            : ` — +${choice.cost} pts`
+          : '';
         return (
           <label key={choice.description} className="flex items-center gap-2 cursor-pointer ml-2">
             {isMulti ? (

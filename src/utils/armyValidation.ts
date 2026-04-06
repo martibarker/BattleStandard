@@ -114,8 +114,11 @@ export function calcEntryPoints(unit: Unit, entry: ArmyEntry, faction?: Faction)
 
   let cmd = 0;
   if (unit.command) {
-    for (const c of unit.command) {
-      if (c.role === 'champion' && entry.includeChampion) { cmd += c.cost_per_unit; break; }
+    const champions = unit.command.filter(c => c.role === 'champion');
+    for (let i = 0; i < champions.length; i++) {
+      const c = champions[i];
+      const selected = i === 0 ? entry.includeChampion : (c.name != null && entry.selectedOptions.includes(c.name));
+      if (selected) cmd += c.cost_per_unit;
     }
     for (const c of unit.command) {
       if (c.role === 'standard_bearer' && entry.includeStandard) { cmd += c.cost_per_unit; break; }
