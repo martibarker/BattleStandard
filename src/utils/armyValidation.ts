@@ -404,7 +404,7 @@ export function validateArmy(army: ArmyList, faction: Faction): ValidationIssue[
     if (count > allowed) {
       // Strip the inline constraint annotation for a cleaner display label
       const label = desc
-        .replace(/\s*[\[(]?0-\d+(?:\s+\w+)?\s+per\s+1[,.]?000\s*(?:pts?|points)[\])]?/gi, '')
+        .replace(/\s*[[(]?0-\d+(?:\s+\w+)?\s+per\s+1[,.]?000\s*(?:pts?|points)[\])]?/gi, '')
         .replace(/\s*:\s*$/, '')
         .trim() || desc;
       issues.push({
