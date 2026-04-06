@@ -756,7 +756,7 @@ export default function ArmyEditor() {
                         </div>
                       )}
 
-                      <StatBar unit={unit} save={entrySave} />
+                      <StatBar unit={unit} save={entrySave} mount={mountUnit} />
 
                       {/* Lore selector — shown for wizards with more than one lore option */}
                       {unit.magic && unit.magic.lores.length > 1 && (() => {
@@ -927,7 +927,7 @@ export default function ArmyEditor() {
   );
 }
 
-function StatBar({ unit, save }: { unit: Unit; save?: string }) {
+function StatBar({ unit, save, mount }: { unit: Unit; save?: string; mount?: Unit | null }) {
   const main = unit.profiles[0];
   if (!main) return null;
 
@@ -936,7 +936,14 @@ function StatBar({ unit, save }: { unit: Unit; save?: string }) {
   const crewEntry = unit.category === 'war_machine'
     ? (unit.profiles.slice(1).find((pe) => !pe.is_mount && !pe.is_champion) ?? null)
     : null;
-  const extraEntry = mountEntry ?? crewEntry;
+
+  // For characters with a selected mount unit, synthesise a mount profile entry
+  const charMountEntry =
+    !mountEntry && mount?.profiles[0]
+      ? { name: mount.name, profile: mount.profiles[0].profile, is_mount: true as const }
+      : null;
+
+  const extraEntry = mountEntry ?? crewEntry ?? charMountEntry;
   const multiRow = extraEntry !== null;
 
   const cols = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld', 'Sv'] as const;
@@ -951,9 +958,11 @@ function StatBar({ unit, save }: { unit: Unit; save?: string }) {
   // Label for the extra row
   const extraLabel = mountEntry
     ? mountEntry.name
-    : crewEntry
-      ? `Crew ×${crewEntry.profile.W}`
-      : '';
+    : charMountEntry
+      ? charMountEntry.name
+      : crewEntry
+        ? `Crew ×${crewEntry.profile.W}`
+        : '';
 
   const cellStyle: React.CSSProperties = {
     border: '1px solid var(--f-border)',
