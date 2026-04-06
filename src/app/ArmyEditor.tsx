@@ -674,10 +674,15 @@ export default function ArmyEditor() {
 
                   const mountUnit = entry.selectedMountId
                     ? faction.units.find((u) => u.id === entry.selectedMountId)
-                    // Fallback: some characters have mount as a plain checkbox option (e.g. Outcast Wizards, Sergeant-at-Arms)
+                    // Fallback: some characters have mount as a plain checkbox/choice option
+                    // Match either exact name ("Warhorse") or "Mount on X" / "Mount on a X" style
                     : faction.units.find((u) =>
                         u.category === 'mount' &&
-                        entry.selectedOptions.some((o) => o.toLowerCase() === u.name.toLowerCase())
+                        entry.selectedOptions.some((o) => {
+                          const ol = o.toLowerCase();
+                          const nl = u.name.toLowerCase();
+                          return ol === nl || ol.endsWith(nl);
+                        })
                       ) ?? null;
                   const baseEquip = flattenEquipment(unit.equipment);
                   const extraEquip = [
@@ -1206,7 +1211,11 @@ function EntryOptionsPanel({
     (o) => o.max_points !== undefined && !o.description.toLowerCase().includes('standard')
   );
   const hasVirtuePicker = options.some((o) => o.description.includes('Knightly Virtue'));
-  const hasMountOption = options.some((o) => o.description === 'Mount' || o.description.includes('Mount (see Character Mounts)'));
+  const hasMountOption = options.some((o) =>
+    o.description === 'Mount' ||
+    o.description.includes('Mount (see Character Mounts)') ||
+    /^may be mounted/i.test(o.description)
+  );
   const availableMounts = hasMountOption ? getAvailableMounts(unit, faction) : [];
   const vowOptions = options.filter(
     (o) => o.max_points === undefined && o.description.startsWith('Replace') && o.description.includes('Vow')

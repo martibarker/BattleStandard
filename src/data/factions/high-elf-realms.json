@@ -427,7 +427,7 @@
           "category": "armour"
         },
         {
-          "description": "May be mounted (see character mounts)",
+          "description": "Mount (see Character Mounts)",
           "points": 0,
           "scope": "per_unit",
           "category": "special"
@@ -604,7 +604,7 @@
           "category": "armour"
         },
         {
-          "description": "May be mounted (see character mounts)",
+          "description": "Mount (see Character Mounts)",
           "points": 0,
           "scope": "per_unit",
           "category": "special"
@@ -726,7 +726,7 @@
           "category": "special"
         },
         {
-          "description": "May be mounted (see character mounts)",
+          "description": "Mount (see Character Mounts)",
           "points": 0,
           "scope": "per_unit",
           "category": "special"
@@ -792,7 +792,7 @@
           "category": "special"
         },
         {
-          "description": "May be mounted (see character mounts)",
+          "description": "Mount (see Character Mounts)",
           "points": 0,
           "scope": "per_unit",
           "category": "special"
@@ -1338,6 +1338,9 @@
       "special_rules": [
         "fast_cavalry",
         "swiftstride"
+      ],
+      "notes": [
+        "Available to: Prince, Noble, Archmage, Mage"
       ]
     },
     {
@@ -1369,6 +1372,9 @@
         "first_charge",
         "ithilmar_barding",
         "swiftstride"
+      ],
+      "notes": [
+        "Available to: Prince, Noble, Archmage, Mage"
       ]
     },
     {

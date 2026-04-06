@@ -614,7 +614,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -808,7 +808,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -938,7 +938,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -999,7 +999,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -1364,7 +1364,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -1500,7 +1500,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts. Lectors may take War Altar of Sigmar.",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -1589,7 +1589,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -1678,7 +1678,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
@@ -1767,7 +1767,7 @@
           "cost": 0,
           "scope": "per_unit",
           "notes": "See character mounts",
-          "description": "May be mounted",
+          "description": "Mount (see Character Mounts)",
           "category": "special"
         },
         {
