@@ -1,7 +1,8 @@
-import { useGameStore, type GamePhase, type PlayerSide } from '../../store/gameStore';
+import { useGameStore, type GamePhase, type PlayerSide, type PlayerGameState, type UnitGameState, type SpellSelection } from '../../store/gameStore';
 import { useArmyStore } from '../../store/armyStore';
 import { getFaction } from '../../data/factions';
-import type { Unit } from '../../types/faction';
+import type { Unit, Faction } from '../../types/faction';
+import type { ArmyEntry } from '../../types/army';
 import StartOfTurnPanel from './StartOfTurnPanel';
 
 interface Prompt {
@@ -22,7 +23,7 @@ export default function PhaseCard() {
   const armies = useArmyStore((s) => s.armies);
 
   const player = players[currentSide];
-  const faction = player.factionId ? getFaction(player.factionId) : null;
+  const faction = player.factionId ? (getFaction(player.factionId) ?? null) : null;
   const army = player.armyListId ? armies.find((a) => a.id === player.armyListId) : null;
 
   // Generate prompts for current phase
@@ -190,16 +191,16 @@ function generatePrompts(
   currentTurn: number,
   gameLengthRule: 'standard' | 'random',
   turnLimit: number,
-  player: any,
-  faction: any,
-  entries: any[]
+  player: PlayerGameState,
+  faction: Faction | null,
+  entries: ArmyEntry[]
 ): Prompt[] {
   const prompts: Prompt[] = [];
 
   // start_of_turn is handled by StartOfTurnPanel — skip prompt generation for it
   if (phase === 'start_of_turn') {
     // Ambusher arrival still shown as a generic prompt alongside the panel
-    const ambushers = player.unitStates?.filter((u: any) => u.ambushing && !u.hasArrived) ?? [];
+    const ambushers = player.unitStates?.filter((u: UnitGameState) => u.ambushing && !u.hasArrived) ?? [];
     if (ambushers.length > 0) {
       prompts.push({
         id: 'ambush',
@@ -239,7 +240,7 @@ function generatePrompts(
 
     // Ambusher reminder
     const arrivedAmbushers =
-      player.unitStates?.filter((u: any) => u.hasArrived && !u.ambushing) ?? [];
+      player.unitStates?.filter((u: UnitGameState) => u.hasArrived && !u.ambushing) ?? [];
     if (arrivedAmbushers.length > 0) {
       prompts.push({
         id: 'ambush-move',
@@ -268,8 +269,8 @@ function generatePrompts(
     }
 
     // Magic missiles
-    const missileSpells = player.spells?.filter((s: any) =>
-      s.spells.some((sp: { name: string }) => sp.name.toLowerCase().includes('missile'))
+    const missileSpells = player.spells?.filter((s: SpellSelection) =>
+      s.spells.some((sp) => sp.name.toLowerCase().includes('missile'))
     ) ?? [];
     if (missileSpells.length > 0) {
       prompts.push({
@@ -284,7 +285,7 @@ function generatePrompts(
 
   if (phase === 'combat') {
     // Combat reminder
-    const unitsInCombat = player.unitStates?.filter((u: any) => !u.hasFought) ?? [];
+    const unitsInCombat = player.unitStates?.filter((u: UnitGameState) => !u.hasFought) ?? [];
     if (unitsInCombat.length > 0) {
       prompts.push({
         id: 'combat',
@@ -321,7 +322,7 @@ function generatePrompts(
   return prompts;
 }
 
-function getUnitsWithRule(faction: any, entries: any[], ruleId: string): Unit[] {
+function getUnitsWithRule(faction: Faction, entries: ArmyEntry[], ruleId: string): Unit[] {
   return faction.units.filter((u: Unit) =>
     entries.some((e) => e.unitId === u.id) && u.special_rules.includes(ruleId)
   );

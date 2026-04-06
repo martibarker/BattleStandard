@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en" data-faction="empire">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Standard — Faction Themed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+
+/* ════════════════════════════════════════════
+   FACTION THEMES — swap data-faction on <html>
+   ════════════════════════════════════════════ */
+
+/* The Empire — Altdorf crimson & iron gold */
+[data-faction="empire"] {
+  --f-primary:        #6B1010;   /* deep imperial crimson */
+  --f-primary-mid:    #921818;   /* mid crimson for bars/accents */
+  --f-primary-bright: #B82020;   /* hover/interactive crimson */
+  --f-gold:           #B8880A;   /* old gold */
+  --f-gold-bright:    #D4A012;
+  --f-gold-dim:       rgba(184,136,10,0.18);
+  --f-gold-rule:      rgba(184,136,10,0.35);
+  --f-steel:          #556070;
+  --f-bg:             #F4EFE6;   /* warm plaster — NOT sepia */
+  --f-surface:        #F9F5EE;
+  --f-elevated:       #FFFFFF;
+  --f-card:           #FFFFFF;
+  --f-card-hover:     #FDF9F2;
+  --f-border:         #DDD5C0;
+  --f-border-mid:     #C8BC9A;
+  --f-text:           #140800;   /* near-black warm */
+  --f-text-2:         #3A1C08;
+  --f-text-3:         #7A5830;
+  --f-text-4:         #A88850;
+  --f-category-l:     #2850A0;   /* Lords — Altdorf blue */
+  --f-category-h:     #6040A0;   /* Heroes — purple */
+  --f-category-c:     #206820;   /* Core — forest green */
+  --f-category-s:     #B87010;   /* Special — amber */
+  --f-category-r:     #922020;   /* Rare — crimson */
+  --f-faction-name:   "The Empire";
+  --f-shimmer-a:      #7A5808;
+  --f-shimmer-b:      #C09020;
+  --f-shimmer-c:      #E8C050;
+  --f-watermark-opacity: 0.04;
+}
+
+/* Bretonnia — royal blue & fleur-de-lis gold */
+[data-faction="bretonnia"] {
+  --f-primary:        #0F2878;
+  --f-primary-mid:    #1A3898;
+  --f-primary-bright: #2050C0;
+  --f-gold:           #C09010;
+  --f-gold-bright:    #D8AE20;
+  --f-gold-dim:       rgba(192,144,16,0.15);
+  --f-gold-rule:      rgba(192,144,16,0.3);
+  --f-steel:          #607888;
+  --f-bg:             #EDF1F8;
+  --f-surface:        #F3F6FB;
+  --f-elevated:       #FFFFFF;
+  --f-card:           #FFFFFF;
+  --f-card-hover:     #F5F8FF;
+  --f-border:         #C8D4E4;
+  --f-border-mid:     #A0B4CC;
+  --f-text:           #04081A;
+  --f-text-2:         #141E48;
+  --f-text-3:         #485878;
+  --f-text-4:         #8898B8;
+  --f-category-l:     #0F2878;
+  --f-category-h:     #6040A0;
+  --f-category-c:     #1A6020;
+  --f-category-s:     #B07010;
+  --f-category-r:     #881818;
+  --f-faction-name:   "Bretonnia";
+  --f-shimmer-a:      #806808;
+  --f-shimmer-b:      #C09818;
+  --f-shimmer-c:      #E0BC40;
+  --f-watermark-opacity: 0.04;
+}
+
+/* High Elves — silver teal & white marble */
+[data-faction="high-elves"] {
+  --f-primary:        #087868;
+  --f-primary-mid:    #0A9880;
+  --f-primary-bright: #10B898;
+  --f-gold:           #8090A8;   /* silver instead of gold */
+  --f-gold-bright:    #A0B0C8;
+  --f-gold-dim:       rgba(128,144,168,0.15);
+  --f-gold-rule:      rgba(128,144,168,0.3);
+  --f-steel:          #708898;
+  --f-bg:             #EEF4F4;
+  --f-surface:        #F4F9F9;
+  --f-elevated:       #FFFFFF;
+  --f-card:           #FFFFFF;
+  --f-card-hover:     #F0FAFA;
+  --f-border:         #C0D4D4;
+  --f-border-mid:     #98C0C0;
+  --f-text:           #041414;
+  --f-text-2:         #103030;
+  --f-text-3:         #407070;
+  --f-text-4:         #709090;
+  --f-category-l:     #1468A0;
+  --f-category-h:     #6848B0;
+  --f-category-c:     #0A7868;
+  --f-category-s:     #888000;
+  --f-category-r:     #8A2040;
+  --f-faction-name:   "High Elves";
+  --f-shimmer-a:      #607888;
+  --f-shimmer-b:      #90A8B8;
+  --f-shimmer-c:      #C0D4E0;
+  --f-watermark-opacity: 0.04;
+}
+
+/* Wood Elves — forest green & autumn gold */
+[data-faction="wood-elves"] {
+  --f-primary:        #2A5418;
+  --f-primary-mid:    #386A20;
+  --f-primary-bright: #488428;
+  --f-gold:           #A07010;
+  --f-gold-bright:    #C09020;
+  --f-gold-dim:       rgba(160,112,16,0.15);
+  --f-gold-rule:      rgba(160,112,16,0.3);
+  --f-steel:          #607858;
+  --f-bg:             #EEF2E8;
+  --f-surface:        #F4F7EF;
+  --f-elevated:       #FFFFFF;
+  --f-card:           #FFFFFF;
+  --f-card-hover:     #F4F9F0;
+  --f-border:         #C4D0B4;
+  --f-border-mid:     #A0B888;
+  --f-text:           #0A1404;
+  --f-text-2:         #1C3010;
+  --f-text-3:         #4A6030;
+  --f-text-4:         #7A9050;
+  --f-category-l:     #1A4888;
+  --f-category-h:     #583888;
+  --f-category-c:     #2A5418;
+  --f-category-s:     #A07010;
+  --f-category-r:     #881818;
+  --f-faction-name:   "Wood Elves";
+  --f-shimmer-a:      #685808;
+  --f-shimmer-b:      #A08818;
+  --f-shimmer-c:      #C8A830;
+  --f-watermark-opacity: 0.04;
+}
+
+/* ════════════════════════════════════════════
+   GLOBAL BASE
+   ════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif 4', serif;
+  background: var(--f-bg);
+  color: var(--f-text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.55;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Subtle faction watermark — double-headed eagle area */
+.content-area {
+  position: relative;
+}
+
+.content-area::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-size='160' fill='%23000'%3E%E2%9A%94%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: var(--f-watermark-opacity);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.4s;
+}
+
+.layout { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ════════════════════════════════════════════
+   GOLD RULE (animates on theme change)
+   ════════════════════════════════════════════ */
+.gold-rule {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--f-shimmer-a) 15%,
+    var(--f-shimmer-b) 35%,
+    var(--f-shimmer-c) 50%,
+    var(--f-shimmer-b) 65%,
+    var(--f-shimmer-a) 85%,
+    transparent 100%
+  );
+  transition: background 0.4s;
+}
+
+.gold-rule.thin {
+  height: 1px;
+  opacity: 0.5;
+}
+
+/* ════════════════════════════════════════════
+   HEADER
+   ════════════════════════════════════════════ */
+header {
+  background: var(--f-surface);
+  border-bottom: 1px solid var(--f-border-mid);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  transition: background 0.4s, border-color 0.4s;
+}
+
+.header-top {
+  padding: 12px 32px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.shield-wrap {
+  width: 44px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.shield-wrap svg {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.logo-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.logo-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--f-text-3);
+  line-height: 1;
+  transition: color 0.4s;
+}
+
+.logo-wordmark {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--f-text);
+  line-height: 1;
+  transition: color 0.4s;
+}
+
+.logo-wordmark span {
+  color: var(--f-gold);
+  transition: color 0.4s;
+}
+
+/* Nav */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-item {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--f-text-3);
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item::after {
+  content: '·';
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--f-border);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.nav-item:last-child::after { display: none; }
+.nav-item:hover { color: var(--f-text-2); }
+.nav-item.active { color: var(--f-primary); border-bottom-color: var(--f-primary); }
+
+/* Faction switcher */
+.faction-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.faction-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  white-space: nowrap;
+}
+
+.faction-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.faction-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: var(--f-elevated);
+  border: 1px solid var(--f-border);
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--f-text-3);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.faction-btn:hover {
+  border-color: var(--f-border-mid);
+  color: var(--f-text-2);
+  background: var(--f-card-hover);
+}
+
+.faction-btn.active {
+  background: var(--f-gold-dim);
+  border-color: var(--f-gold);
+  color: var(--f-primary);
+}
+
+.faction-pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════
+   ARMY PROCLAMATION BAND
+   ════════════════════════════════════════════ */
+.proclamation {
+  background: var(--f-surface);
+  border-bottom: 1px solid var(--f-border);
+  padding: 18px 32px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  transition: background 0.4s;
+}
+
+.proc-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.proc-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.proc-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--f-gold-rule);
+}
+
+.proc-army-name {
+  font-family: 'Cinzel', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--f-text);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  transition: color 0.4s;
+}
+
+.proc-subtitle {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--f-text-3);
+  margin-top: 1px;
+  transition: color 0.4s;
+}
+
+.proc-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+/* Points circle */
+.points-circle-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.points-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--f-gold);
+  background: var(--f-elevated);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 0 4px var(--f-gold-dim), inset 0 1px 4px rgba(0,0,0,0.06);
+  transition: all 0.4s;
+}
+
+.points-circle::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 1px solid var(--f-gold-rule);
+}
+
+.pc-used {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--f-gold);
+  line-height: 1;
+  transition: color 0.4s;
+}
+
+.pc-denom {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  color: var(--f-text-3);
+  line-height: 1;
+  transition: color 0.4s;
+}
+
+.pc-label {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  text-align: center;
+  transition: color 0.4s;
+}
+
+/* Remaining points */
+.points-remaining {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.pr-number {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--f-primary);
+  line-height: 1;
+  transition: color 0.4s;
+}
+
+.pr-label {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  text-align: center;
+  transition: color 0.4s;
+}
+
+/* ════════════════════════════════════════════
+   VALIDATION BARS  (from #5, styled for #3)
+   ════════════════════════════════════════════ */
+.validation-strip {
+  background: var(--f-elevated);
+  border-bottom: 1px solid var(--f-border);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  transition: background 0.4s;
+}
+
+.val-cell {
+  padding: 10px 16px 10px;
+  border-right: 1px solid var(--f-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.val-cell:last-child { border-right: none; }
+
+.val-cat-name {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  transition: color 0.4s;
+}
+
+.val-pct {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.4s;
+}
+
+/* Bar track — the key element from #5 */
+.val-bar-track {
+  width: 100%;
+  height: 5px;
+  background: var(--f-bg);
+  border-radius: 2px;
+  border: 1px solid var(--f-border);
+  overflow: hidden;
+  position: relative;
+}
+
+.val-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s ease, background 0.4s;
+  position: relative;
+}
+
+/* Limit tick */
+.val-bar-limit {
+  position: absolute;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: 2px;
+  background: var(--f-text-4);
+  opacity: 0.3;
+  border-radius: 1px;
+}
+
+.val-rule {
+  font-family: 'Source Serif 4', serif;
+  font-size: 11px;
+  color: var(--f-text-4);
+  font-style: italic;
+  transition: color 0.4s;
+}
+
+/* Per-category colours — consistent across all faction themes */
+.val-lords .val-pct   { color: var(--f-category-l); }
+.val-lords .val-bar-fill { background: var(--f-category-l); }
+
+.val-heroes .val-pct  { color: var(--f-category-h); }
+.val-heroes .val-bar-fill { background: var(--f-category-h); }
+
+.val-core .val-pct    { color: var(--f-category-c); }
+.val-core .val-bar-fill { background: var(--f-category-c); }
+
+.val-special .val-pct { color: var(--f-category-s); }
+.val-special .val-bar-fill { background: var(--f-category-s); }
+
+.val-rare .val-pct    { color: var(--f-category-r); }
+.val-rare .val-bar-fill { background: var(--f-category-r); }
+
+/* ════════════════════════════════════════════
+   MAIN LAYOUT
+   ════════════════════════════════════════════ */
+.main {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* ════════════════════════════════════════════
+   SIDEBAR
+   ════════════════════════════════════════════ */
+.sidebar {
+  background: var(--f-surface);
+  border-right: 1px solid var(--f-border);
+  padding: 20px 0;
+  transition: background 0.4s;
+}
+
+.sb-section { margin-bottom: 16px; }
+
+.sb-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  padding: 0 20px 8px;
+  border-bottom: 1px solid var(--f-border);
+  margin-bottom: 4px;
+  transition: color 0.4s;
+}
+
+.sb-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--f-text-3);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+.sb-link:hover {
+  color: var(--f-text-2);
+  background: var(--f-gold-dim);
+}
+
+.sb-link.active {
+  color: var(--f-primary);
+  border-left-color: var(--f-primary);
+  background: rgba(0,0,0,0.025);
+}
+
+/* ════════════════════════════════════════════
+   ROSTER — unit list
+   ════════════════════════════════════════════ */
+.roster {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.roster-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roster-title {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.4s;
+}
+
+.roster-title::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--f-gold-rule);
+}
+
+.enrol-btn {
+  background: var(--f-primary);
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.enrol-btn:hover {
+  background: var(--f-primary-bright);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+/* ── Category section ── */
+.cat-section { display: flex; flex-direction: column; gap: 5px; }
+
+.cat-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+/* Heraldic label from #3, category colours from #5 */
+.cat-div-label {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border: 1px solid currentColor;
+  position: relative;
+  transition: color 0.4s, border-color 0.4s;
+}
+
+.cat-div-label::before, .cat-div-label::after {
+  content: '◆';
+  font-size: 7px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cat-div-label::before { left: -10px; }
+.cat-div-label::after  { right: -10px; }
+
+.cat-div-label.lords   { color: var(--f-category-l); }
+.cat-div-label.heroes  { color: var(--f-category-h); }
+.cat-div-label.core    { color: var(--f-category-c); }
+.cat-div-label.special { color: var(--f-category-s); }
+.cat-div-label.rare    { color: var(--f-category-r); }
+
+.cat-div-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, currentColor, transparent);
+  opacity: 0.2;
+  transition: background 0.4s;
+}
+
+.cat-div-pts {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  color: var(--f-text-3);
+  white-space: nowrap;
+  transition: color 0.4s;
+}
+
+/* ── Unit card ── */
+.unit-card {
+  background: var(--f-card);
+  border: 1px solid var(--f-border);
+  border-left: 4px solid transparent;
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+}
+
+.unit-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--f-gold-dim), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.unit-card:hover { border-color: var(--f-border-mid); background: var(--f-card-hover); }
+.unit-card:hover::after { opacity: 1; }
+
+.unit-card.lords   { border-left-color: var(--f-category-l); }
+.unit-card.heroes  { border-left-color: var(--f-category-h); }
+.unit-card.core    { border-left-color: var(--f-category-c); }
+.unit-card.special { border-left-color: var(--f-category-s); }
+.unit-card.rare    { border-left-color: var(--f-category-r); }
+
+.uc-left { display: flex; flex-direction: column; gap: 5px; }
+
+.uc-name {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--f-text);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  transition: color 0.4s;
+}
+
+.uc-details {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--f-text-3);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  transition: color 0.4s;
+}
+
+.uc-detail-sep {
+  margin: 0 6px;
+  color: var(--f-border-mid);
+  font-style: normal;
+}
+
+.uc-rules {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 1px;
+}
+
+.rule-badge {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--f-text-3);
+  background: var(--f-bg);
+  border: 1px solid var(--f-border);
+  padding: 2px 8px;
+  transition: all 0.4s;
+}
+
+.uc-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.uc-pts {
+  text-align: right;
+}
+
+.uc-pts-num {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--f-gold);
+  line-height: 1;
+  transition: color 0.4s;
+}
+
+.uc-pts-label {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  display: block;
+  text-align: right;
+  margin-top: 1px;
+  transition: color 0.4s;
+}
+
+.uc-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.uc-btn {
+  background: transparent;
+  border: 1px solid var(--f-border);
+  color: var(--f-text-4);
+  width: 28px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.15s;
+}
+
+.uc-btn:hover { border-color: var(--f-gold); color: var(--f-gold); }
+.uc-btn.dismiss:hover { border-color: var(--f-category-r); color: var(--f-category-r); }
+
+/* Add unit row */
+.add-unit-row {
+  border: 1px dashed var(--f-border-mid);
+  padding: 10px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--f-text-4);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-unit-row:hover {
+  border-color: var(--f-gold);
+  color: var(--f-gold);
+  background: var(--f-gold-dim);
+}
+
+/* ════════════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════════════ */
+footer {
+  background: var(--f-surface);
+  border-top: 1px solid var(--f-border-mid);
+  padding: 10px 32px;
+  transition: background 0.4s;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: var(--f-text-4);
+  transition: color 0.4s;
+}
+
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <div class="gold-rule"></div>
+    <div class="header-top">
+
+      <!-- Logo -->
+      <a class="logo" href="#">
+        <div class="shield-wrap">
+          <svg viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Shield outline -->
+            <path d="M3 3H41V32C41 42 22 50 22 50C22 50 3 42 3 32V3Z"
+              stroke="var(--f-gold)" stroke-width="1.5" fill="var(--f-elevated)"/>
+            <!-- Inner shield border -->
+            <path d="M7 7H37V30C37 38 22 45 22 45C22 45 7 38 7 30V7Z"
+              stroke="var(--f-gold-rule)" stroke-width="0.75" fill="transparent"/>
+            <!-- Faction emblem — Empire cross -->
+            <path d="M22 13 L22 32 M14 22 L30 22" stroke="var(--f-primary)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="22" cy="22" r="3" fill="var(--f-gold)" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <div class="logo-eyebrow">The Old World</div>
+          <div class="logo-wordmark">Battle <span>Standard</span></div>
+        </div>
+      </a>
+
+      <!-- Nav -->
+      <nav class="header-nav">
+        <a class="nav-item active" href="#">Army Builder</a>
+        <a class="nav-item" href="#">Rules Ref</a>
+        <a class="nav-item" href="#">Turn Tracker</a>
+        <a class="nav-item" href="#">FAQ</a>
+      </nav>
+
+      <!-- Faction Switcher -->
+      <div class="faction-switcher">
+        <span class="faction-label">Army Colours</span>
+        <div class="faction-buttons">
+          <button class="faction-btn active" onclick="setFaction('empire', this)">
+            <div class="faction-pip" style="background:#921818"></div>
+            Empire
+          </button>
+          <button class="faction-btn" onclick="setFaction('bretonnia', this)">
+            <div class="faction-pip" style="background:#1A3898"></div>
+            Bretonnia
+          </button>
+          <button class="faction-btn" onclick="setFaction('high-elves', this)">
+            <div class="faction-pip" style="background:#0A9880"></div>
+            High Elves
+          </button>
+          <button class="faction-btn" onclick="setFaction('wood-elves', this)">
+            <div class="faction-pip" style="background:#386A20"></div>
+            Wood Elves
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <div class="gold-rule thin"></div>
+  </header>
+
+  <div class="content-area">
+
+    <!-- ══ ARMY PROCLAMATION ══ -->
+    <div class="proclamation">
+      <div class="proc-left">
+        <div class="proc-eyebrow">Army Manifest · Tome I</div>
+        <div class="proc-army-name">The Empire — 2nd Altdorf</div>
+        <div class="proc-subtitle">2,000 point engagement · Regimental formation</div>
+      </div>
+      <div class="proc-right">
+        <div class="points-circle-wrap">
+          <div class="points-circle">
+            <div class="pc-used">1505</div>
+            <div class="pc-denom">/ 2000</div>
+          </div>
+          <div class="pc-label">Points Bound</div>
+        </div>
+        <div class="points-remaining">
+          <div class="pr-number">495</div>
+          <div class="pr-label">Unbound</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ VALIDATION BARS ══ -->
+    <div class="validation-strip">
+
+      <div class="val-cell val-lords">
+        <span class="val-cat-name">Lords</span>
+        <span class="val-pct">21%</span>
+        <div class="val-bar-track" title="21% of 25% limit used">
+          <div class="val-bar-fill" style="width:84%"></div>
+          <!-- limit tick at 100% since bar is normalised to limit -->
+        </div>
+        <span class="val-rule">≤ 25% ✓</span>
+      </div>
+
+      <div class="val-cell val-heroes">
+        <span class="val-cat-name">Heroes</span>
+        <span class="val-pct">11.5%</span>
+        <div class="val-bar-track" title="11.5% of 25% limit used">
+          <div class="val-bar-fill" style="width:46%"></div>
+        </div>
+        <span class="val-rule">≤ 25% ✓</span>
+      </div>
+
+      <div class="val-cell val-core">
+        <span class="val-cat-name">Core</span>
+        <span class="val-pct">29%</span>
+        <div class="val-bar-track" title="Core minimum met">
+          <div class="val-bar-fill" style="width:100%"></div>
+        </div>
+        <span class="val-rule">≥ 25% ✓</span>
+      </div>
+
+      <div class="val-cell val-special">
+        <span class="val-cat-name">Special</span>
+        <span class="val-pct">29%</span>
+        <div class="val-bar-track" title="29% of 50% limit used">
+          <div class="val-bar-fill" style="width:58%"></div>
+        </div>
+        <span class="val-rule">≤ 50% ✓</span>
+      </div>
+
+      <div class="val-cell val-rare">
+        <span class="val-cat-name">Rare</span>
+        <span class="val-pct">12.5%</span>
+        <div class="val-bar-track" title="12.5% of 25% limit used">
+          <div class="val-bar-fill" style="width:50%"></div>
+        </div>
+        <span class="val-rule">≤ 25% ✓</span>
+      </div>
+
+    </div><!-- /validation -->
+
+    <!-- ══ MAIN ══ -->
+    <div class="main">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sb-section">
+          <div class="sb-heading">My Lists</div>
+          <a class="sb-link active" href="#">2nd Altdorf Reg.</a>
+          <a class="sb-link" href="#">Ironbreakers Host</a>
+          <a class="sb-link" href="#">+ New List</a>
+        </div>
+        <div class="sb-section">
+          <div class="sb-heading">Navigation</div>
+          <a class="sb-link active" href="#">⚔ Army Builder</a>
+          <a class="sb-link" href="#">📖 Rules Ref</a>
+          <a class="sb-link" href="#">🎲 Turn Tracker</a>
+          <a class="sb-link" href="#">❓ FAQ</a>
+        </div>
+      </aside>
+
+      <!-- Roster -->
+      <div class="roster">
+
+        <div class="roster-toolbar">
+          <div class="roster-title">Deployment Roster</div>
+          <button class="enrol-btn">+ Enrol Unit</button>
+        </div>
+
+        <!-- LORDS -->
+        <div class="cat-section">
+          <div class="cat-divider">
+            <div class="cat-div-label lords">Lords</div>
+            <div class="cat-div-rule" style="color:var(--f-category-l)"></div>
+            <div class="cat-div-pts">420 pts</div>
+          </div>
+
+          <div class="unit-card lords">
+            <div class="uc-left">
+              <div class="uc-name">Karl Franz on Deathclaw</div>
+              <div class="uc-details">
+                <span>1 model</span>
+                <span class="uc-detail-sep">·</span>
+                <span>50×75mm</span>
+                <span class="uc-detail-sep">·</span>
+                <span>Griffon Mount</span>
+              </div>
+              <div class="uc-rules">
+                <span class="rule-badge">General</span>
+                <span class="rule-badge">Inspiring Presence</span>
+                <span class="rule-badge">The Hammer of Judgment</span>
+              </div>
+            </div>
+            <div class="uc-right">
+              <div class="uc-pts">
+                <div class="uc-pts-num">420</div>
+                <span class="uc-pts-label">pts</span>
+              </div>
+              <div class="uc-actions">
+                <button class="uc-btn">✎</button>
+                <button class="uc-btn dismiss">✕</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-unit-row">✦ Enrol a Lord ✦</div>
+        </div>
+
+        <!-- HEROES -->
+        <div class="cat-section">
+          <div class="cat-divider">
+            <div class="cat-div-label heroes">Heroes</div>
+            <div class="cat-div-rule" style="color:var(--f-category-h)"></div>
+            <div class="cat-div-pts">115 pts</div>
+          </div>
+
+          <div class="unit-card heroes">
+            <div class="uc-left">
+              <div class="uc-name">Battle Wizard — Level 2</div>
+              <div class="uc-details">
+                <span>1 model</span>
+                <span class="uc-detail-sep">·</span>
+                <span>25×25mm</span>
+                <span class="uc-detail-sep">·</span>
+                <span>Lore of Fire</span>
+              </div>
+              <div class="uc-rules">
+                <span class="rule-badge">Channelling Staff</span>
+                <span class="rule-badge">Fireball</span>
+              </div>
+            </div>
+            <div class="uc-right">
+              <div class="uc-pts">
+                <div class="uc-pts-num">115</div>
+                <span class="uc-pts-label">pts</span>
+              </div>
+              <div class="uc-actions">
+                <button class="uc-btn">✎</button>
+                <button class="uc-btn dismiss">✕</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-unit-row">✦ Enrol a Hero ✦</div>
+        </div>
+
+        <!-- CORE -->
+        <div class="cat-section">
+          <div class="cat-divider">
+            <div class="cat-div-label core">Core</div>
+            <div class="cat-div-rule" style="color:var(--f-category-c)"></div>
+            <div class="cat-div-pts">440 pts</div>
+          </div>
+
+          <div class="unit-card core">
+            <div class="uc-left">
+              <div class="uc-name">Swordsmen</div>
+              <div class="uc-details">
+                <span>30 models</span>
+                <span class="uc-detail-sep">·</span>
+                <span>25×25mm</span>
+              </div>
+              <div class="uc-rules">
+                <span class="rule-badge">Detachment</span>
+                <span class="rule-badge">Shields</span>
+              </div>
+            </div>
+            <div class="uc-right">
+              <div class="uc-pts">
+                <div class="uc-pts-num">240</div>
+                <span class="uc-pts-label">pts</span>
+              </div>
+              <div class="uc-actions">
+                <button class="uc-btn">✎</button>
+                <button class="uc-btn dismiss">✕</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="unit-card core">
+            <div class="uc-left">
+              <div class="uc-name">Handgunners</div>
+              <div class="uc-details">
+                <span>20 models</span>
+                <span class="uc-detail-sep">·</span>
+                <span>25×25mm</span>
+              </div>
+              <div class="uc-rules">
+                <span class="rule-badge">Handguns</span>
+                <span class="rule-badge">Marksmen</span>
+              </div>
+            </div>
+            <div class="uc-right">
+              <div class="uc-pts">
+                <div class="uc-pts-num">200</div>
+                <span class="uc-pts-label">pts</span>
+              </div>
+              <div class="uc-actions">
+                <button class="uc-btn">✎</button>
+                <button class="uc-btn dismiss">✕</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-unit-row">✦ Enrol a Core Unit ✦</div>
+        </div>
+
+        <!-- SPECIAL -->
+        <div class="cat-section">
+          <div class="cat-divider">
+            <div class="cat-div-label special">Special</div>
+            <div class="cat-div-rule" style="color:var(--f-category-s)"></div>
+            <div class="cat-div-pts">280 pts</div>
+          </div>
+
+          <div class="unit-card special">
+            <div class="uc-left">
+              <div class="uc-name">Greatswords</div>
+              <div class="uc-details">
+                <span>10 models</span>
+                <span class="uc-detail-sep">·</span>
+                <span>25×25mm</span>
+              </div>
+              <div class="uc-rules">
+                <span class="rule-badge">Stubborn</span>
+                <span class="rule-badge">Great Weapons</span>
+              </div>
+            </div>
+            <div class="uc-right">
+              <div class="uc-pts">
+                <div class="uc-pts-num">180</div>
+                <span class="uc-pts-label">pts</span>
+              </div>
+              <div class="uc-actions">
+                <button class="uc-btn">✎</button>
+                <button class="uc-btn dismiss">✕</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="unit-card special">
+            <div class="uc-left">
+              <div class="uc-name">Cannon</div>
+              <div class="uc-details">
+                <span>1 + 3 crew</span>
+                <span class="uc-detail-sep">·</span>
+                <span>60×100mm</span>
+              </div>
+              <div class="uc-rules">
+                <span class="rule-badge">War Machine</span>
+              </div>
+            </div>
+            <div class="uc-right">
+              <div class="uc-pts">
+                <div class="uc-pts-num">100</div>
+                <span class="uc-pts-label">pts</span>
+              </div>
+              <div class="uc-actions">
+                <button class="uc-btn">✎</button>
+                <button class="uc-btn dismiss">✕</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-unit-row">✦ Enrol a Special Unit ✦</div>
+        </div>
+
+        <!-- RARE -->
+        <div class="cat-section">
+          <div class="cat-divider">
+            <div class="cat-div-label rare">Rare</div>
+            <div class="cat-div-rule" style="color:var(--f-category-r)"></div>
+            <div class="cat-div-pts">250 pts</div>
+          </div>
+
+          <div class="unit-card rare">
+            <div class="uc-left">
+              <div class="uc-name">Steam Tank</div>
+              <div class="uc-details">
+                <span>1 model</span>
+                <span class="uc-detail-sep">·</span>
+                <span>60×100mm</span>
+              </div>
+              <div class="uc-rules">
+                <span class="rule-badge">Steam-powered</span>
+                <span class="rule-badge">D6 Steam Points</span>
+              </div>
+            </div>
+            <div class="uc-right">
+              <div class="uc-pts">
+                <div class="uc-pts-num">250</div>
+                <span class="uc-pts-label">pts</span>
+              </div>
+              <div class="uc-actions">
+                <button class="uc-btn">✎</button>
+                <button class="uc-btn dismiss">✕</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-unit-row">✦ Enrol a Rare Unit ✦</div>
+        </div>
+
+      </div><!-- /roster -->
+    </div><!-- /main -->
+
+  </div><!-- /content-area -->
+
+  <footer>
+    <div class="gold-rule thin" style="margin-bottom:8px"></div>
+    <div class="footer-inner">
+      <div class="footer-text">Unofficial. Not endorsed by Games Workshop Limited.</div>
+      <div class="footer-text">Rules index: tow.whfb.app · Icons: game-icons.net (CC BY 3.0)</div>
+    </div>
+  </footer>
+
+</div><!-- /layout -->
+
+<script>
+  function setFaction(faction, btn) {
+    // Update theme
+    document.documentElement.setAttribute('data-faction', faction);
+
+    // Update active button
+    document.querySelectorAll('.faction-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Update shield emblem based on faction
+    const shieldPaths = {
+      empire:      `<path d="M3 3H41V32C41 42 22 50 22 50C22 50 3 42 3 32V3Z" stroke="var(--f-gold)" stroke-width="1.5" fill="var(--f-elevated)"/>
+                    <path d="M7 7H37V30C37 38 22 45 22 45C22 45 7 38 7 30V7Z" stroke="var(--f-gold-rule)" stroke-width="0.75" fill="transparent"/>
+                    <path d="M22 13 L22 32 M14 22 L30 22" stroke="var(--f-primary)" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="22" cy="22" r="3" fill="var(--f-gold)" opacity="0.8"/>`,
+      bretonnia:   `<path d="M3 3H41V32C41 42 22 50 22 50C22 50 3 42 3 32V3Z" stroke="var(--f-gold)" stroke-width="1.5" fill="var(--f-elevated)"/>
+                    <path d="M3 26H41" stroke="var(--f-gold-rule)" stroke-width="0.75"/>
+                    <path d="M22 14 C22 14 18 18 18 22 C18 26 22 26 22 26 C22 26 26 26 26 22 C26 18 22 14 22 14Z" fill="var(--f-primary)" opacity="0.7"/>
+                    <path d="M19 18 C19 18 17 22 19 24 M25 18 C25 18 27 22 25 24" stroke="var(--f-gold)" stroke-width="0.75" fill="none"/>`,
+      'high-elves':`<path d="M3 3H41V32C41 42 22 50 22 50C22 50 3 42 3 32V3Z" stroke="var(--f-gold)" stroke-width="1.5" fill="var(--f-elevated)"/>
+                    <path d="M22 12 L25 19 L33 19 L27 24 L29 31 L22 27 L15 31 L17 24 L11 19 L19 19 Z" fill="var(--f-primary)" opacity="0.3" stroke="var(--f-primary)" stroke-width="0.75"/>`,
+      'wood-elves':`<path d="M3 3H41V32C41 42 22 50 22 50C22 50 3 42 3 32V3Z" stroke="var(--f-gold)" stroke-width="1.5" fill="var(--f-elevated)"/>
+                    <path d="M22 12 C16 16 14 22 16 28 C18 32 22 34 22 34 C22 34 26 32 28 28 C30 22 28 16 22 12Z" fill="var(--f-primary)" opacity="0.25" stroke="var(--f-primary)" stroke-width="0.75"/>
+                    <path d="M22 14 L22 34 M18 20 C18 20 22 22 26 20" stroke="var(--f-gold)" stroke-width="0.75" fill="none" stroke-linecap="round"/>`
+    };
+
+    const svg = document.querySelector('.shield-wrap svg');
+    if (svg && shieldPaths[faction]) {
+      svg.innerHTML = shieldPaths[faction];
+    }
+
+    // Update army header text based on faction
+    const armyNames = {
+      empire:      ['The Empire — 2nd Altdorf', '2,000 point engagement · Regimental formation'],
+      bretonnia:   ['Bretonnia — Knights of the Realm', '2,000 point engagement · Chivalric Host'],
+      'high-elves':['High Elves — Lothern Sea Guard', '2,000 point engagement · Shining Host'],
+      'wood-elves':['Wood Elves — Guardians of Athel Loren', '2,000 point engagement · Forest Host']
+    };
+
+    if (armyNames[faction]) {
+      document.querySelector('.proc-army-name').textContent = armyNames[faction][0];
+      document.querySelector('.proc-subtitle').textContent = armyNames[faction][1];
+    }
+  }
+</script>
+</body>
+</html>

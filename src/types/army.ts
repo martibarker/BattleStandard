@@ -48,6 +48,11 @@ export interface ArmyList {
   factionId: string;
   /** ID of the army_compositions entry (e.g. 'grand_army') */
   compositionId: string;
+  /**
+   * ID of the chosen sub-order (e.g. 'knights_of_the_white_wolf').
+   * Only applicable when the composition has sub_orders; undefined until the player selects one.
+   */
+  subOrderId?: string;
   /** Active Matched Play formats — multiple may be combined */
   matchedPlayFormats: MatchedPlayFormat[];
   pointsLimit: number;

@@ -69,6 +69,8 @@ export const armyCompositions = sqliteTable('army_compositions', {
   // JSON [{categories: string[], unit_ids: string[], rules: string[]}] | null
   // Army-wide deployment rule grants from this list selection (e.g. whole army gains Vanguard)
   grants_rules: text('grants_rules'),
+  // JSON SubOrder[] | null — knightly order / sub-list selections
+  sub_orders: text('sub_orders'),
   sort_order: integer('sort_order').notNull(),
 }, (t) => ({
   pk: primaryKey({ columns: [t.id, t.faction_id] }),
@@ -87,6 +89,7 @@ export const compositionRules = sqliteTable('composition_rules', {
   eligible_unit_ids: text('eligible_unit_ids'), // JSON string[] | null
   unit_ids: text('unit_ids'), // JSON string[] | null — specific units targeted
   character_unit_ids: text('character_unit_ids'), // JSON string[] | null
+  general_unit_ids: text('general_unit_ids'), // JSON string[] | null — for 'conditional' rules
   // JSON string[] | null — deployment/special rules granted to eligible units
   // e.g. ["ambushers"], ["scouts"], ["vanguard"]
   grants_rules: text('grants_rules'),

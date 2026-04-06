@@ -111,7 +111,7 @@ export type UnitCategory =
   | 'mount';
 
 /** Composition bucket for army list validation */
-export type ListCategory = 'characters' | 'core' | 'special' | 'rare';
+export type ListCategory = 'characters' | 'core' | 'special' | 'rare' | 'mercenaries';
 
 export type ArmyLimitType =
   | 'max_percent'
@@ -147,9 +147,10 @@ export interface Unit {
   list_category?: ListCategory;
   /**
    * Composition-specific category overrides.
-   * Key = compositionId (e.g. "errantry_crusade"), value = effective ListCategory.
+   * Key = compositionId (e.g. "errantry_crusade"), value = effective ListCategory,
+   * or null to exclude the unit from that composition entirely.
    */
-  list_category_overrides?: Partial<Record<string, ListCategory>>;
+  list_category_overrides?: Partial<Record<string, ListCategory | null>>;
   source: UnitSource;
   is_named_character?: boolean;
   /** Which army compositions can include this unit; omit for units available in all */
@@ -257,11 +258,37 @@ export interface ArmyCompositionRule {
   notes?: string;
 }
 
+export interface SubOrderUnlock {
+  unit_id: string;
+  list_category: ListCategory;
+}
+
+export interface SubOrder {
+  id: string;
+  name: string;
+  /** Points added to the character (Grand Master / Chapter Master) upgrade cost */
+  character_upgrade_pts: number;
+  /** Points per model added to knight units in this order */
+  unit_upgrade_pts_per_model: number;
+  /** Unit IDs that pay the per-model upgrade cost */
+  unit_ids: string[];
+  /** Special rules granted to ALL units belonging to this order (display only) */
+  all_units_rules: string[];
+  /** Special rules granted to Grand Master / Chapter Master / ICK only (display only) */
+  elite_rules: string[];
+  /** Units unlocked / granted a list category by this sub-order */
+  unlocks: SubOrderUnlock[];
+  /** Unit IDs excluded from the army when this sub-order is chosen */
+  restrictions: string[];
+}
+
 export interface ArmyComposition {
   id: string;
   name: string;
   source: UnitSource;
   rules: ArmyCompositionRule[];
+  /** Knightly Order sub-orders; if present, player must choose exactly one before building */
+  sub_orders?: SubOrder[];
 }
 
 export interface Faction {

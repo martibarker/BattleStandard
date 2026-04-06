@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# SQLite WAL mode temp files
+db/*.sqlite-shm
+db/*.sqlite-wal
+
+# Local Claude Code config
+.claude/launch.json

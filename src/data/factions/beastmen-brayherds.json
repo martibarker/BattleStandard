@@ -218,10 +218,28 @@
           "notes": "0-1 Tuskgor Chariot per 1,000 points"
         },
         {
+          "category": "core",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "centigor_herd"
+          ],
+          "notes": "0-1 Centigor Herd may be taken as a Core choice per Centigor Chieftain taken"
+        },
+        {
           "category": "special",
           "limit_type": "max_percent",
           "limit_value": 50,
           "notes": "0-1 unit of Dragon Ogres; Warped Gors, Bestigor Herds, Harpies, Centigor Herds, Tuskgor Chariots and Razorgor Chariots; 0-1 Cockatrice or Preyton per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max",
+          "limit_value": 1,
+          "unit_ids": [
+            "dragon_ogres"
+          ],
+          "notes": "0-1 unit of Dragon Ogres (total limit)"
         },
         {
           "category": "special",
@@ -624,7 +642,7 @@
         "M": 5,
         "WS": 4,
         "BS": 3,
-        "S": 4,
+        "S": 3,
         "T": 4,
         "W": 2,
         "I": 3,
@@ -2410,7 +2428,7 @@
       "troop_type": "Special feature",
       "base_size": "Up to 6\" at widest point",
       "unit_size": "1",
-      "points": 10,
+      "points": 100,
       "stats": {
         "M": "-",
         "WS": "-",
@@ -2682,7 +2700,7 @@
         }
       ],
       "notes": [
-        "Must contain at least ten Gors and ten Ungors. Gors always occupy the front ranks, with Ungors making up the rear ranks.",
+        "Must contain at least ten Gors and ten Ungors. Gors always occupy the front ranks, with Ungors making up the rear ranks. Gor: 7 points per model. Ungor: 6 points per model.",
         "Mixed Unit: Before rolling To Wound, hits caused by enemy shooting should be divided as evenly as possible between Gors and Ungors. In combat, enemy models must direct their attacks against models in the fighting rank of this unit.",
         "Wild Herd composition only."
       ]
@@ -2742,7 +2760,7 @@
       ],
       "notes": [
         "Wild Herd composition only.",
-        "Ungor Ravager: WS 3, BS 3, S 3, T 3, W 1, I 3, A 1, Ld 7. Regular infantry. 25 x 25 mm base. Equipment: Hand weapons, throwing spears and shields. Special Rules: Close Order, Horde, Leader of the Pack, Move through Cover, Primal Fury, Swiftstride, Warband.",
+        "Ungor Ravager: M 7, WS 3, BS 3, S 3, T 3, W 1, I 3, A 1, Ld 7. Regular infantry. 25 x 25 mm base. Equipment: Hand weapons, throwing spears and shields. Special Rules: Close Order, Horde, Leader of the Pack, Move through Cover, Primal Fury, Swiftstride, Warband.",
         "Leader of the Pack: Models with this rule are positioned at the rear rank(s) of the Primal Warhounds unit. Primal Warhounds always occupy the front rank(s)."
       ]
     },

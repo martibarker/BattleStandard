@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Standard — Tactical Command</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="dark"] {
+    --bg-base: #080e17;
+    --bg-surface: #0d1b2a;
+    --bg-elevated: #112236;
+    --bg-card: #0f1e2f;
+    --border: #1e3a5a;
+    --border-accent: #2a5080;
+    --text-primary: #e8f0f8;
+    --text-secondary: #7fa8cc;
+    --text-muted: #4a7099;
+    --accent: #d97706;
+    --accent-glow: rgba(217,119,6,0.15);
+    --accent-subtle: rgba(217,119,6,0.08);
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --red: #ef4444;
+    --grid-line: rgba(30,58,90,0.6);
+    --scan-line: rgba(217,119,6,0.03);
+  }
+  :root[data-theme="light"] {
+    --bg-base: #eef2f7;
+    --bg-surface: #f5f8fc;
+    --bg-elevated: #ffffff;
+    --bg-card: #ffffff;
+    --border: #c5d5e8;
+    --border-accent: #7aa4cc;
+    --text-primary: #0d1b2a;
+    --text-secondary: #2a5070;
+    --text-muted: #6a90b0;
+    --accent: #c06800;
+    --accent-glow: rgba(192,104,0,0.1);
+    --accent-subtle: rgba(192,104,0,0.05);
+    --blue: #1d6fbf;
+    --green: #166534;
+    --red: #b91c1c;
+    --grid-line: rgba(100,140,180,0.3);
+    --scan-line: rgba(0,0,0,0);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+
+  /* Tactical grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Scan line effect (dark only) */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      var(--scan-line) 0px,
+      var(--scan-line) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .layout { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--bg-surface);
+    border-bottom: 2px solid var(--accent);
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 2px 0 var(--accent);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .logo-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+  }
+
+  .logo-text span {
+    color: var(--accent);
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .theme-toggle {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* ── COMMAND BAR ── */
+  .command-bar {
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .army-designation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .army-id {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--accent-subtle);
+    border: 1px solid var(--accent);
+    padding: 2px 8px;
+  }
+
+  .army-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+  }
+
+  .points-display {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .points-counter {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+  }
+
+  .points-counter strong {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .points-counter span {
+    color: var(--text-muted);
+  }
+
+  /* ── VALIDATION BARS ── */
+  .validation-strip {
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .val-category {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .val-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .val-label { color: var(--text-muted); }
+
+  .val-value { color: var(--text-secondary); }
+
+  .val-bar-track {
+    height: 3px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: visible;
+  }
+
+  .val-bar-fill {
+    height: 100%;
+    transition: width 0.5s ease;
+    position: relative;
+  }
+
+  .val-bar-fill::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 3px;
+    height: 7px;
+    background: inherit;
+  }
+
+  .bar-lords { background: #60a5fa; width: 21%; }
+  .bar-heroes { background: #a78bfa; width: 11.5%; }
+  .bar-core { background: var(--green); width: 44%; }
+  .bar-special { background: var(--accent); width: 29%; }
+  .bar-rare { background: #f87171; width: 12.5%; }
+
+  .val-limit {
+    position: absolute;
+    top: -3px;
+    height: 9px;
+    width: 1px;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    flex: 1;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border);
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .sidebar-section {
+    padding: 12px 16px;
+  }
+
+  .sidebar-heading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    margin: 1px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+    text-decoration: none;
+  }
+
+  .nav-item:hover {
+    background: var(--accent-subtle);
+    color: var(--text-primary);
+    border-left-color: var(--accent);
+  }
+
+  .nav-item.active {
+    background: var(--accent-subtle);
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  .nav-icon {
+    width: 16px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* ── UNIT LIST ── */
+  .unit-panel {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .panel-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .add-unit-btn {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 6px 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: all 0.2s;
+  }
+
+  .add-unit-btn:hover { filter: brightness(1.1); }
+
+  /* Category group */
+  .cat-group { margin-bottom: 8px; }
+
+  .cat-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    margin-bottom: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border-left: 2px solid var(--border-accent);
+  }
+
+  .cat-label.lords { border-left-color: #60a5fa; color: #60a5fa; }
+  .cat-label.heroes { border-left-color: #a78bfa; color: #a78bfa; }
+  .cat-label.core { border-left-color: var(--green); color: var(--green); }
+  .cat-label.special { border-left-color: var(--accent); color: var(--accent); }
+  .cat-label.rare { border-left-color: #f87171; color: #f87171; }
+
+  /* Unit card */
+  .unit-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-accent);
+    padding: 12px 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .unit-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, var(--accent-subtle) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .unit-card:hover { border-color: var(--border-accent); }
+  .unit-card:hover::before { opacity: 1; }
+  .unit-card.lords { border-left-color: #60a5fa; }
+  .unit-card.heroes { border-left-color: #a78bfa; }
+  .unit-card.core { border-left-color: var(--green); }
+  .unit-card.special { border-left-color: var(--accent); }
+  .unit-card.rare { border-left-color: #f87171; }
+
+  .unit-main { display: flex; flex-direction: column; gap: 4px; }
+
+  .unit-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+
+  .unit-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .unit-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .unit-rule {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    letter-spacing: 0.06em;
+  }
+
+  .base-size {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+  }
+
+  .unit-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .unit-points {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .unit-pts-label {
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .unit-actions {
+    display: flex;
+    gap: 4px;
+  }
+
+  .unit-btn {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .unit-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .unit-btn.danger:hover { border-color: var(--red); color: var(--red); }
+
+  /* Mount indicator */
+  .mount-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    border: 1px solid var(--accent);
+    padding: 1px 6px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    padding: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-legal {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+  }
+
+  .footer-attribution {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+  }
+
+  /* Corner decorations */
+  .corner-decor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 200;
+    opacity: 0.4;
+  }
+
+  .corner-decor.tl { top: 0; left: 0; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+  .corner-decor.tr { top: 0; right: 0; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+  .corner-decor.bl { bottom: 0; left: 0; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+  .corner-decor.br { bottom: 0; right: 0; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+</style>
+</head>
+<body>
+<div class="corner-decor tl"></div>
+<div class="corner-decor tr"></div>
+<div class="corner-decor bl"></div>
+<div class="corner-decor br"></div>
+
+<div class="layout">
+  <header>
+    <div class="logo">
+      <div class="logo-mark">⚔</div>
+      <div class="logo-text">Battle <span>Standard</span></div>
+    </div>
+    <div class="header-right">
+      <div class="status-indicator">
+        <div class="status-dot"></div>
+        <span>OFFLINE — LOCAL</span>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()">⬛ MODE</button>
+    </div>
+  </header>
+
+  <div class="command-bar">
+    <div class="army-designation">
+      <div class="army-id">LIST-0041</div>
+      <div class="army-name">The Empire — 2nd Altdorf Regiment</div>
+    </div>
+    <div class="points-display">
+      <div class="points-counter">
+        <strong>1505</strong><span> / 2000 pts</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="validation-strip">
+    <div class="val-category">
+      <div class="val-header">
+        <span class="val-label">Lords</span>
+        <span class="val-value">420 / 500 (21%)</span>
+      </div>
+      <div class="val-bar-track">
+        <div class="val-bar-fill bar-lords"></div>
+        <div class="val-limit" style="left: 25%"></div>
+      </div>
+    </div>
+    <div class="val-category">
+      <div class="val-header">
+        <span class="val-label">Heroes</span>
+        <span class="val-value">115 / 500 (11.5%)</span>
+      </div>
+      <div class="val-bar-track">
+        <div class="val-bar-fill bar-heroes"></div>
+        <div class="val-limit" style="left: 25%"></div>
+      </div>
+    </div>
+    <div class="val-category">
+      <div class="val-header">
+        <span class="val-label">Core ✓</span>
+        <span class="val-value">440 pts (29%)</span>
+      </div>
+      <div class="val-bar-track">
+        <div class="val-bar-fill bar-core"></div>
+        <div class="val-limit" style="left: 25%"></div>
+      </div>
+    </div>
+    <div class="val-category">
+      <div class="val-header">
+        <span class="val-label">Special</span>
+        <span class="val-value">530 / 1000 (29%)</span>
+      </div>
+      <div class="val-bar-track">
+        <div class="val-bar-fill bar-special"></div>
+        <div class="val-limit" style="left: 50%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <nav class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Navigation</div>
+        <a class="nav-item active" href="#"><span class="nav-icon">⚔</span>Army Builder</a>
+        <a class="nav-item" href="#"><span class="nav-icon">📖</span>Rules Ref</a>
+        <a class="nav-item" href="#"><span class="nav-icon">🎲</span>Turn Tracker</a>
+        <a class="nav-item" href="#"><span class="nav-icon">❓</span>FAQ</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">My Lists</div>
+        <a class="nav-item active" href="#">2nd Altdorf Reg.</a>
+        <a class="nav-item" href="#">Ironbreakers Host</a>
+        <a class="nav-item" href="#">New List…</a>
+      </div>
+    </nav>
+
+    <div class="unit-panel">
+      <div class="panel-header">
+        <div class="panel-title">Deployment Roster</div>
+        <button class="add-unit-btn">+ Add Unit</button>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-label lords">Lords</div>
+        <div class="unit-card lords">
+          <div class="unit-main">
+            <div class="unit-name">Karl Franz on Deathclaw</div>
+            <div class="unit-details">
+              <span class="unit-count">1 model</span>
+              <span class="mount-tag">Griffon Mount</span>
+              <span class="unit-rule">General</span>
+              <span class="unit-rule">Inspiring Presence</span>
+              <span class="base-size">50×75mm</span>
+            </div>
+          </div>
+          <div class="unit-right">
+            <div style="text-align:right">
+              <div class="unit-points">420</div>
+              <div class="unit-pts-label">pts</div>
+            </div>
+            <div class="unit-actions">
+              <button class="unit-btn">✎</button>
+              <button class="unit-btn danger">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-label heroes">Heroes</div>
+        <div class="unit-card heroes">
+          <div class="unit-main">
+            <div class="unit-name">Battle Wizard — Level 2</div>
+            <div class="unit-details">
+              <span class="unit-count">1 model</span>
+              <span class="unit-rule">Lore of Fire</span>
+              <span class="unit-rule">Channelling Staff</span>
+              <span class="base-size">25×25mm</span>
+            </div>
+          </div>
+          <div class="unit-right">
+            <div style="text-align:right">
+              <div class="unit-points">115</div>
+              <div class="unit-pts-label">pts</div>
+            </div>
+            <div class="unit-actions">
+              <button class="unit-btn">✎</button>
+              <button class="unit-btn danger">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-label core">Core</div>
+        <div class="unit-card core">
+          <div class="unit-main">
+            <div class="unit-name">Swordsmen</div>
+            <div class="unit-details">
+              <span class="unit-count">30 models</span>
+              <span class="unit-rule">Detachment</span>
+              <span class="unit-rule">Shields</span>
+              <span class="base-size">25×25mm</span>
+            </div>
+          </div>
+          <div class="unit-right">
+            <div style="text-align:right">
+              <div class="unit-points">240</div>
+              <div class="unit-pts-label">pts</div>
+            </div>
+            <div class="unit-actions">
+              <button class="unit-btn">✎</button>
+              <button class="unit-btn danger">✕</button>
+            </div>
+          </div>
+        </div>
+        <div class="unit-card core" style="margin-top:4px">
+          <div class="unit-main">
+            <div class="unit-name">Handgunners</div>
+            <div class="unit-details">
+              <span class="unit-count">20 models</span>
+              <span class="unit-rule">Handguns</span>
+              <span class="unit-rule">Marksmen</span>
+              <span class="base-size">25×25mm</span>
+            </div>
+          </div>
+          <div class="unit-right">
+            <div style="text-align:right">
+              <div class="unit-points">200</div>
+              <div class="unit-pts-label">pts</div>
+            </div>
+            <div class="unit-actions">
+              <button class="unit-btn">✎</button>
+              <button class="unit-btn danger">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-label special">Special</div>
+        <div class="unit-card special">
+          <div class="unit-main">
+            <div class="unit-name">Greatswords</div>
+            <div class="unit-details">
+              <span class="unit-count">10 models</span>
+              <span class="unit-rule">Stubborn</span>
+              <span class="unit-rule">Great Weapons</span>
+              <span class="base-size">25×25mm</span>
+            </div>
+          </div>
+          <div class="unit-right">
+            <div style="text-align:right">
+              <div class="unit-points">180</div>
+              <div class="unit-pts-label">pts</div>
+            </div>
+            <div class="unit-actions">
+              <button class="unit-btn">✎</button>
+              <button class="unit-btn danger">✕</button>
+            </div>
+          </div>
+        </div>
+        <div class="unit-card special" style="margin-top:4px">
+          <div class="unit-main">
+            <div class="unit-name">Cannon</div>
+            <div class="unit-details">
+              <span class="unit-count">1 model + 3 crew</span>
+              <span class="unit-rule">War Machine</span>
+              <span class="base-size">60×100mm</span>
+            </div>
+          </div>
+          <div class="unit-right">
+            <div style="text-align:right">
+              <div class="unit-points">100</div>
+              <div class="unit-pts-label">pts</div>
+            </div>
+            <div class="unit-actions">
+              <button class="unit-btn">✎</button>
+              <button class="unit-btn danger">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-label rare">Rare</div>
+        <div class="unit-card rare">
+          <div class="unit-main">
+            <div class="unit-name">Steam Tank</div>
+            <div class="unit-details">
+              <span class="unit-count">1 model</span>
+              <span class="unit-rule">Steam-powered</span>
+              <span class="unit-rule">D6 Steam Points</span>
+              <span class="base-size">60×100mm</span>
+            </div>
+          </div>
+          <div class="unit-right">
+            <div style="text-align:right">
+              <div class="unit-points">250</div>
+              <div class="unit-pts-label">pts</div>
+            </div>
+            <div class="unit-actions">
+              <button class="unit-btn">✎</button>
+              <button class="unit-btn danger">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-legal">Unofficial. Not endorsed by Games Workshop Limited.</div>
+    <div class="footer-attribution">Rules index: tow.whfb.app · Icons: game-icons.net (CC BY 3.0)</div>
+  </footer>
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    document.querySelector('.theme-toggle').textContent = current === 'dark' ? '☀ MODE' : '⬛ MODE';
+  }
+</script>
+</body>
+</html>

@@ -156,7 +156,7 @@
           "limit_type": "max_per_1000_pts",
           "limit_value": 1,
           "unit_ids": [
-            "white_lions_of_chrace"
+            "white_lions_cw_core"
           ],
           "notes": "0-1 unit of White Lions of Chrace per 1,000 points (Core slot)"
         },
@@ -1449,6 +1449,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "chracian_warhost": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -1540,6 +1543,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "chracian_warhost": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -1810,7 +1816,7 @@
       "category": "infantry",
       "list_category": "special",
       "list_category_overrides": {
-        "chracian_warhost": "core"
+        "chracian_warhost": "special"
       },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
@@ -1893,6 +1899,103 @@
         }
       ],
       "magic_standard": 50
+    },
+    {
+      "id": "white_lions_cw_core",
+      "name": "White Lions of Chrace",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "chracian_warhost": "core"
+      },
+      "troop_type": "Regular infantry",
+      "base_size": "25x25mm",
+      "unit_size": "5+",
+      "points": 14,
+      "stats": {
+        "M": 5,
+        "WS": 5,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 1,
+        "I": 5,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapons",
+        "Chracian great blades",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "chracian_warriors",
+        "elven_reflexes",
+        "kings_guard",
+        "lion_cloak",
+        "move_through_cover",
+        "open_order",
+        "stubborn",
+        "valour_of_ages"
+      ],
+      "options": [
+        {
+          "description": "Replace Valour of Ages with Veteran",
+          "points": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Guardian magic items",
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        },
+        {
+          "description": "Magic standard",
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Guardian",
+          "cost_per_unit": 6,
+          "stats": {
+            "A": 2
+          }
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Chracian Great Blade",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-3",
+          "special_rules": [
+            "requires_two_hands",
+            "strike_last"
+          ]
+        }
+      ],
+      "notes": [
+        "0-1 per 1,000 points may be taken as a Core choice in a Chracian Warhost army"
+      ],
+      "magic_standard": 50,
+      "availability": [
+        "chracian_warhost"
+      ]
     },
     {
       "id": "chracian_woodsmen",
@@ -2431,6 +2534,9 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "core",
+      "list_category_overrides": {
+        "sea_guard_garrison": "rare"
+      },
       "troop_type": "Light cavalry",
       "base_size": "30x60mm",
       "unit_size": "5+",
@@ -2796,6 +2902,9 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "rare",
+      "list_category_overrides": {
+        "chracian_warhost": "special"
+      },
       "troop_type": "Heavy Chariot",
       "base_size": "50x100mm",
       "unit_size": "1",
@@ -2836,6 +2945,9 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "rare",
+      "list_category_overrides": {
+        "sea_guard_garrison": "special"
+      },
       "troop_type": "Heavy Chariot",
       "base_size": "60x100mm",
       "unit_size": "1",

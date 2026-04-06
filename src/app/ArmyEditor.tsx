@@ -4,20 +4,21 @@ import { useArmyStore } from '../store/armyStore';
 import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, flattenEquipment, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
 
-import type { Faction, Unit, WeaponProfile, Option, OptionChoice } from '../types/faction';
+import type { Faction, Unit, WeaponProfile, Option, OptionChoice, SubOrder } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
 import ValidationBars from '../components/ValidationBars';
 import { generateArmyName } from '../data/armyNames';
 
 
-type BrowserTab = 'characters' | 'core' | 'special' | 'rare';
+type BrowserTab = 'characters' | 'core' | 'special' | 'rare' | 'mercenaries';
 
 const TABS: { id: BrowserTab; label: string }[] = [
   { id: 'characters', label: 'Characters' },
   { id: 'core', label: 'Core' },
   { id: 'special', label: 'Special' },
   { id: 'rare', label: 'Rare' },
+  { id: 'mercenaries', label: 'Mercenaries' },
 ];
 
 /** Whether a unit is available in the given army composition */
@@ -29,12 +30,12 @@ function isUnitAvailable(unit: Unit, compositionId: string): boolean {
 }
 
 /** Units available to browse for the given tab and composition (excludes mounts) */
-function getUnitsForTab(faction: Faction, tab: BrowserTab, compositionId: string): Unit[] {
+function getUnitsForTab(faction: Faction, tab: BrowserTab, compositionId: string, subOrder?: SubOrder): Unit[] {
   const isAoI = faction.army_compositions.find((c) => c.id === compositionId)?.source === 'arcane_journal';
   return faction.units.filter(
     (u) =>
       u.category !== 'mount' &&
-      getEffectiveListCategory(u, compositionId, isAoI) === tab &&
+      getEffectiveListCategory(u, compositionId, isAoI, subOrder) === tab &&
       isUnitAvailable(u, compositionId)
   );
 }
@@ -48,6 +49,7 @@ export default function ArmyEditor() {
   const duplicateEntry = useArmyStore((s) => s.duplicateEntry);
   const updateEntry = useArmyStore((s) => s.updateEntry);
   const renameArmy = useArmyStore((s) => s.renameArmy);
+  const setSubOrder = useArmyStore((s) => s.setSubOrder);
 
   const army = armies.find((a) => a.id === id);
   const faction = army ? getFaction(army.factionId) : undefined;
@@ -68,6 +70,7 @@ export default function ArmyEditor() {
   });
   const [toast, setToast] = useState<{ message: string; key: number } | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const toastKey = useRef(0);
 
 
   if (!army || !faction) {
@@ -85,6 +88,9 @@ export default function ArmyEditor() {
   const issues = validateArmy(army, faction);
   const errors = issues.filter((i) => i.severity === 'error');
   const comp = faction.army_compositions.find((c) => c.id === army.compositionId);
+  const subOrder = army.subOrderId
+    ? comp?.sub_orders?.find((s) => s.id === army.subOrderId)
+    : undefined;
 
   // army is guaranteed non-null past the early return above
   const armyId = army.id;
@@ -103,7 +109,8 @@ export default function ArmyEditor() {
       selectedMountId: null,
     });
     if (toastTimer.current) clearTimeout(toastTimer.current);
-    setToast({ message: `+ ${unit.name} added`, key: Date.now() });
+    toastKey.current += 1;
+    setToast({ message: `+ ${unit.name} added`, key: toastKey.current });
     toastTimer.current = setTimeout(() => setToast(null), 2000);
   }
 
@@ -124,7 +131,7 @@ export default function ArmyEditor() {
   const isOver = pts.total > army.pointsLimit;
   const remaining = army.pointsLimit - pts.total;
 
-  const EditorHeader = () => (
+  const renderEditorHeader = () => (
     <div
       className="sticky top-0 z-30"
       style={{
@@ -274,7 +281,7 @@ export default function ArmyEditor() {
             color: 'var(--f-text-3)',
             margin: 0,
           }}>
-            {army.pointsLimit.toLocaleString()} point engagement · {comp?.name ?? 'Standard'}
+            {army.pointsLimit.toLocaleString()} point engagement · {comp?.name ?? 'Standard'}{subOrder ? ` · ${subOrder.name}` : ''}
           </p>
         </div>
 
@@ -360,7 +367,7 @@ export default function ArmyEditor() {
     </div>
   );
 
-  const ValidationBanner = () => {
+  const renderValidationBanner = () => {
     if (errors.length === 0) return null;
     return (
       <div style={{
@@ -384,8 +391,8 @@ export default function ArmyEditor() {
     );
   };
 
-  const UnitBrowserDrawer = () => {
-    const units = getUnitsForTab(faction, drawerTab, army.compositionId);
+  const renderUnitBrowserDrawer = () => {
+    const units = getUnitsForTab(faction, drawerTab, army.compositionId, subOrder);
     const tabColor = CAT_COLORS[drawerTab];
     return (
       /* Backdrop */
@@ -502,18 +509,21 @@ export default function ArmyEditor() {
   };
 
   const CAT_COLORS: Record<BrowserTab, string> = {
-    characters: 'var(--f-cat-characters)',
-    core:       'var(--f-cat-core)',
-    special:    'var(--f-cat-special)',
-    rare:       'var(--f-cat-rare)',
+    characters:  'var(--f-cat-characters)',
+    core:        'var(--f-cat-core)',
+    special:     'var(--f-cat-special)',
+    rare:        'var(--f-cat-rare)',
+    mercenaries: 'var(--f-cat-mercenaries)',
   };
 
-  const ArmyList = () => {
+  const renderArmyList = () => {
+    const hasMercsRule = comp?.rules.some((r) => r.category === 'mercenaries') ?? false;
     const categories: { id: BrowserTab; label: string }[] = [
       { id: 'characters', label: 'Characters' },
       { id: 'core', label: 'Core' },
       { id: 'special', label: 'Special' },
       { id: 'rare', label: 'Rare' },
+      ...(hasMercsRule ? [{ id: 'mercenaries' as BrowserTab, label: 'Mercenaries' }] : []),
     ];
 
     return (
@@ -750,14 +760,81 @@ export default function ArmyEditor() {
     );
   };
 
+  // Sub-order selector — mandatory before building when composition has sub_orders
+  if (comp?.sub_orders && !army.subOrderId) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+        {renderEditorHeader()}
+        <div style={{ flex: 1, overflowY: 'auto', padding: '16px' }}>
+          <h2 style={{
+            fontFamily: "'Cinzel', Georgia, serif",
+            fontSize: '18px',
+            color: 'var(--f-accent)',
+            marginBottom: '4px',
+          }}>
+            Choose Your Knightly Order
+          </h2>
+          <p style={{ fontSize: '13px', color: 'var(--f-text-3)', marginBottom: '16px' }}>
+            Select the order your army belongs to. This cannot be changed once units are added.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {comp.sub_orders.map((order) => (
+              <button
+                key={order.id}
+                onClick={() => setSubOrder(armyId, order.id)}
+                style={{
+                  background: 'var(--f-surface)',
+                  border: '1px solid var(--f-border)',
+                  borderRadius: '6px',
+                  padding: '12px 14px',
+                  textAlign: 'left',
+                  cursor: 'pointer',
+                  color: 'var(--f-text)',
+                }}
+              >
+                <div style={{
+                  fontFamily: "'Cinzel', Georgia, serif",
+                  fontSize: '14px',
+                  fontWeight: 600,
+                  color: 'var(--f-accent)',
+                  marginBottom: '6px',
+                }}>
+                  {order.name}
+                  <span style={{ fontFamily: 'inherit', fontWeight: 400, fontSize: '12px', color: 'var(--f-text-3)', marginLeft: '8px' }}>
+                    +{order.character_upgrade_pts}pts character · +{order.unit_upgrade_pts_per_model}pts/model knights
+                  </span>
+                </div>
+                {order.all_units_rules.length > 0 && (
+                  <ul style={{ margin: '0 0 4px 0', paddingLeft: '16px', fontSize: '12px', color: 'var(--f-text-2)' }}>
+                    {order.all_units_rules.map((r) => <li key={r}>{r}</li>)}
+                  </ul>
+                )}
+                {order.elite_rules.length > 0 && (
+                  <div style={{ fontSize: '12px', color: 'var(--f-text-3)', fontStyle: 'italic' }}>
+                    Grand Master / Chapter Master / Inner Circle Knights: {order.elite_rules.join('; ')}
+                  </div>
+                )}
+                {order.restrictions.length > 0 && (
+                  <div style={{ fontSize: '11px', color: '#ef4444', marginTop: '4px' }}>
+                    Excludes: {order.restrictions.join(', ')}
+                  </div>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-      <EditorHeader />
-      <ValidationBanner />
+      {renderEditorHeader()}
+      {renderValidationBanner()}
       <div style={{ flex: 1, overflowY: 'auto' }}>
-        <ArmyList />
+        {renderArmyList()}
       </div>
-      {drawerOpen && <UnitBrowserDrawer />}
+      {drawerOpen && renderUnitBrowserDrawer()}
     </div>
   );
 }

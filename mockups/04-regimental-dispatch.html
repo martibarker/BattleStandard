@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Standard — Regimental Dispatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="dark"] {
+    --bg-base: #0c0d0f;
+    --bg-surface: #141518;
+    --bg-elevated: #1c1d22;
+    --bg-card: #181920;
+    --border: #2a2c35;
+    --border-mid: #383b48;
+    --rule-line: #2a2c35;
+    --text-primary: #f0ede5;
+    --text-secondary: #b8b0a0;
+    --text-muted: #605850;
+    --text-caption: #807060;
+    --accent: #d08020;
+    --accent-muted: #8a5510;
+    --blue: #4878c0;
+    --blue-muted: #2a4870;
+    --green: #448844;
+    --red: #a83030;
+    --column-rule: rgba(255,255,255,0.04);
+    --ink-wash: rgba(0,0,0,0.3);
+  }
+  :root[data-theme="light"] {
+    --bg-base: #f2f0eb;
+    --bg-surface: #f8f6f2;
+    --bg-elevated: #ffffff;
+    --bg-card: #fdfcf9;
+    --border: #d8d4cc;
+    --border-mid: #c0bab0;
+    --rule-line: #c8c4bc;
+    --text-primary: #0f0e0c;
+    --text-secondary: #302820;
+    --text-muted: #807060;
+    --text-caption: #a09080;
+    --accent: #8a5000;
+    --accent-muted: #c08030;
+    --blue: #1a4080;
+    --blue-muted: #3060a0;
+    --green: #1e5a1e;
+    --red: #7a1a1a;
+    --column-rule: rgba(0,0,0,0.06);
+    --ink-wash: rgba(0,0,0,0.05);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .layout { display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--bg-surface);
+    border-bottom: 3px double var(--border-mid);
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule-line);
+  }
+
+  .issue-line {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--border-mid);
+    color: var(--text-muted);
+    padding: 3px 10px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+  .masthead-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 0 8px;
+  }
+
+  .masthead-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+  }
+
+  .masthead-title span {
+    color: var(--accent);
+  }
+
+  .masthead-tagline {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: right;
+    max-width: 280px;
+    line-height: 1.4;
+  }
+
+  .masthead-nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 6px 0;
+  }
+
+  .masthead-nav-item {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 4px 16px;
+    border-right: 1px solid var(--rule-line);
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+  }
+
+  .masthead-nav-item:first-child { padding-left: 0; }
+  .masthead-nav-item:hover { color: var(--text-secondary); }
+  .masthead-nav-item.active { color: var(--accent); }
+
+  /* ── ARMY HEADER ── */
+  .dispatch-header {
+    background: var(--bg-surface);
+    padding: 16px 32px;
+    border-bottom: 3px double var(--border-mid);
+  }
+
+  .dispatch-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .dispatch-label::before,
+  .dispatch-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule-line);
+  }
+
+  .dispatch-content {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .dispatch-army {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dispatch-faction {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2px;
+  }
+
+  .dispatch-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+  }
+
+  .dispatch-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .dispatch-points {
+    text-align: right;
+  }
+
+  .dispatch-pts-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .dispatch-pts-denom {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--text-muted);
+  }
+
+  .dispatch-pts-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    text-align: right;
+    margin-top: 2px;
+  }
+
+  /* ── VALIDATION TABLE ── */
+  .validation-table {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .val-col {
+    padding: 8px 16px;
+    border-right: 1px solid var(--rule-line);
+  }
+
+  .val-col:last-child { border-right: none; }
+
+  .val-col-name {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .val-col-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+  }
+
+  .val-col-rule {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .lords-col .val-col-pct { color: var(--blue-muted); }
+  .heroes-col .val-col-pct { color: #7060a0; }
+  .core-col .val-col-pct { color: var(--green); }
+  .special-col .val-col-pct { color: var(--accent); }
+  .rare-col .val-col-pct { color: var(--red); }
+
+  /* ── MAIN CONTENT ── */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    flex: 1;
+  }
+
+  .sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--rule-line);
+    padding: 20px 0;
+  }
+
+  .sidebar-sec-head {
+    font-family: 'Source Serif 4', serif;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 16px 8px;
+    border-bottom: 1px solid var(--rule-line);
+    margin-bottom: 4px;
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 8px 16px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+
+  .sidebar-link:hover { color: var(--text-secondary); background: var(--ink-wash); }
+  .sidebar-link.active { color: var(--text-primary); border-left-color: var(--accent); }
+
+  /* ── ROSTER ── */
+  .roster {
+    padding: 0;
+  }
+
+  .roster-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px 12px;
+    border-bottom: 1px solid var(--rule-line);
+    background: var(--bg-surface);
+  }
+
+  .roster-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  .add-btn {
+    background: var(--accent);
+    border: none;
+    color: var(--bg-base);
+    padding: 6px 18px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter 0.2s;
+  }
+
+  .add-btn:hover { filter: brightness(1.1); }
+
+  /* Category sections */
+  .cat-section {
+    border-bottom: 1px solid var(--rule-line);
+  }
+
+  .cat-section-head {
+    display: flex;
+    align-items: center;
+    padding: 10px 32px;
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--rule-line);
+    gap: 12px;
+  }
+
+  .cat-section-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .lords-label { color: var(--blue); }
+  .heroes-label { color: #7060a0; }
+  .core-label { color: var(--green); }
+  .special-label { color: var(--accent); }
+  .rare-label { color: var(--red); }
+
+  .cat-section-pts {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-left: auto;
+  }
+
+  /* Unit rows — newspaper table style */
+  .unit-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 80px auto;
+    gap: 0;
+    padding: 10px 32px;
+    border-bottom: 1px solid var(--rule-line);
+    align-items: center;
+    transition: background 0.1s;
+    cursor: pointer;
+    background: var(--bg-card);
+  }
+
+  .unit-row:hover { background: var(--bg-elevated); }
+
+  .unit-row:last-child { border-bottom: none; }
+
+  .unit-left-col { }
+
+  .unit-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+
+  .unit-name-details {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--text-caption);
+    margin-top: 1px;
+    display: flex;
+    gap: 6px;
+  }
+
+  .unit-name-details span::before { content: '— '; }
+  .unit-name-details span:first-child::before { content: ''; }
+
+  .unit-rules-inline {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 3px;
+  }
+
+  .unit-rules-inline em {
+    font-style: italic;
+    color: var(--text-caption);
+  }
+
+  .col-count {
+    font-family: 'Source Serif 4', serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .col-pts {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent);
+    text-align: right;
+  }
+
+  .col-pts::after {
+    content: ' pts';
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+
+  .col-actions {
+    display: flex;
+    gap: 4px;
+    margin-left: 16px;
+  }
+
+  .row-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.15s;
+  }
+
+  .row-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .row-btn.del:hover { border-color: var(--red); color: var(--red); }
+
+  .add-row {
+    padding: 10px 32px;
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.15s;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--rule-line);
+  }
+
+  .add-row:hover { color: var(--accent); }
+
+  footer {
+    background: var(--bg-surface);
+    border-top: 3px double var(--border-mid);
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-text {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <header class="masthead">
+    <div class="masthead-top">
+      <div class="issue-line">Battle Standard · The Old World Army Builder · Issue No. 41</div>
+      <button class="theme-toggle" onclick="toggleTheme()">☾ Night / ☀ Day</button>
+    </div>
+    <div class="masthead-title-row">
+      <div class="masthead-title">Battle<span>&nbsp;Standard</span></div>
+      <div class="masthead-tagline">An unofficial record-keeper for Warhammer: The Old World · Not affiliated with Games Workshop Limited</div>
+    </div>
+    <nav class="masthead-nav">
+      <a class="masthead-nav-item active" href="#">Army Builder</a>
+      <a class="masthead-nav-item" href="#">Rules Reference</a>
+      <a class="masthead-nav-item" href="#">Turn Tracker</a>
+      <a class="masthead-nav-item" href="#">FAQ Repository</a>
+    </nav>
+  </header>
+
+  <div class="dispatch-header">
+    <div class="dispatch-label">Field Dispatch</div>
+    <div class="dispatch-content">
+      <div class="dispatch-army">
+        <div class="dispatch-faction">The Empire</div>
+        <div class="dispatch-name">2nd Altdorf Regiment</div>
+        <div class="dispatch-subtitle">"The Iron Fists" — 2,000 Point Engagement List</div>
+      </div>
+      <div class="dispatch-points">
+        <div><span class="dispatch-pts-num">1,505</span><span class="dispatch-pts-denom"> / 2,000</span></div>
+        <span class="dispatch-pts-label">Points Allocated</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="validation-table">
+    <div class="val-col lords-col">
+      <span class="val-col-name">Lords</span>
+      <span class="val-col-pct">21%</span>
+      <span class="val-col-rule">max 25% ✓</span>
+    </div>
+    <div class="val-col heroes-col">
+      <span class="val-col-name">Heroes</span>
+      <span class="val-col-pct">11.5%</span>
+      <span class="val-col-rule">max 25% ✓</span>
+    </div>
+    <div class="val-col core-col">
+      <span class="val-col-name">Core</span>
+      <span class="val-col-pct">29%</span>
+      <span class="val-col-rule">min 25% ✓</span>
+    </div>
+    <div class="val-col special-col">
+      <span class="val-col-name">Special</span>
+      <span class="val-col-pct">29%</span>
+      <span class="val-col-rule">max 50% ✓</span>
+    </div>
+    <div class="val-col rare-col">
+      <span class="val-col-name">Rare</span>
+      <span class="val-col-pct">12.5%</span>
+      <span class="val-col-rule">max 25% ✓</span>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <aside class="sidebar">
+      <div style="padding:0 0 16px">
+        <div class="sidebar-sec-head">My Lists</div>
+        <a class="sidebar-link active" href="#">2nd Altdorf Reg.</a>
+        <a class="sidebar-link" href="#">Ironbreakers Host</a>
+        <a class="sidebar-link" href="#">+ New List</a>
+      </div>
+      <div>
+        <div class="sidebar-sec-head">Navigation</div>
+        <a class="sidebar-link active" href="#">Army Builder</a>
+        <a class="sidebar-link" href="#">Rules Ref</a>
+        <a class="sidebar-link" href="#">Turn Tracker</a>
+        <a class="sidebar-link" href="#">FAQ</a>
+      </div>
+    </aside>
+
+    <div class="roster">
+      <div class="roster-header">
+        <div class="roster-title">Field Roster — All Units</div>
+        <button class="add-btn">+ Enrol Unit</button>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-section-head">
+          <span class="cat-section-label lords-label">Lords</span>
+          <span class="cat-section-pts">420 pts</span>
+        </div>
+        <div class="unit-row">
+          <div class="unit-left-col">
+            <div class="unit-name">Karl Franz on Deathclaw</div>
+            <div class="unit-name-details">
+              <span>1 model</span>
+              <span>50×75mm</span>
+              <span>Griffon Mount</span>
+            </div>
+            <div class="unit-rules-inline"><em>General, Inspiring Presence, The Hammer of Judgment</em></div>
+          </div>
+          <div class="col-count">1 model</div>
+          <div class="col-pts">420</div>
+          <div class="col-actions">
+            <button class="row-btn">✎</button>
+            <button class="row-btn del">✕</button>
+          </div>
+        </div>
+        <div class="add-row">+ Enrol a Lord…</div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-section-head">
+          <span class="cat-section-label heroes-label">Heroes</span>
+          <span class="cat-section-pts">115 pts</span>
+        </div>
+        <div class="unit-row">
+          <div class="unit-left-col">
+            <div class="unit-name">Battle Wizard — Level 2</div>
+            <div class="unit-name-details">
+              <span>1 model</span>
+              <span>25×25mm</span>
+              <span>Lore of Fire</span>
+            </div>
+            <div class="unit-rules-inline"><em>Channelling Staff, Fireball</em></div>
+          </div>
+          <div class="col-count">1 model</div>
+          <div class="col-pts">115</div>
+          <div class="col-actions">
+            <button class="row-btn">✎</button>
+            <button class="row-btn del">✕</button>
+          </div>
+        </div>
+        <div class="add-row">+ Enrol a Hero…</div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-section-head">
+          <span class="cat-section-label core-label">Core</span>
+          <span class="cat-section-pts">440 pts</span>
+        </div>
+        <div class="unit-row">
+          <div class="unit-left-col">
+            <div class="unit-name">Swordsmen</div>
+            <div class="unit-name-details"><span>30 models</span><span>25×25mm</span></div>
+            <div class="unit-rules-inline"><em>Detachment, Shields</em></div>
+          </div>
+          <div class="col-count">30 models</div>
+          <div class="col-pts">240</div>
+          <div class="col-actions">
+            <button class="row-btn">✎</button>
+            <button class="row-btn del">✕</button>
+          </div>
+        </div>
+        <div class="unit-row">
+          <div class="unit-left-col">
+            <div class="unit-name">Handgunners</div>
+            <div class="unit-name-details"><span>20 models</span><span>25×25mm</span></div>
+            <div class="unit-rules-inline"><em>Handguns, Marksmen</em></div>
+          </div>
+          <div class="col-count">20 models</div>
+          <div class="col-pts">200</div>
+          <div class="col-actions">
+            <button class="row-btn">✎</button>
+            <button class="row-btn del">✕</button>
+          </div>
+        </div>
+        <div class="add-row">+ Enrol a Core unit…</div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-section-head">
+          <span class="cat-section-label special-label">Special</span>
+          <span class="cat-section-pts">280 pts</span>
+        </div>
+        <div class="unit-row">
+          <div class="unit-left-col">
+            <div class="unit-name">Greatswords</div>
+            <div class="unit-name-details"><span>10 models</span><span>25×25mm</span></div>
+            <div class="unit-rules-inline"><em>Stubborn, Great Weapons</em></div>
+          </div>
+          <div class="col-count">10 models</div>
+          <div class="col-pts">180</div>
+          <div class="col-actions">
+            <button class="row-btn">✎</button>
+            <button class="row-btn del">✕</button>
+          </div>
+        </div>
+        <div class="unit-row">
+          <div class="unit-left-col">
+            <div class="unit-name">Cannon</div>
+            <div class="unit-name-details"><span>1 + 3 crew</span><span>60×100mm</span></div>
+            <div class="unit-rules-inline"><em>War Machine</em></div>
+          </div>
+          <div class="col-count">1 + 3 crew</div>
+          <div class="col-pts">100</div>
+          <div class="col-actions">
+            <button class="row-btn">✎</button>
+            <button class="row-btn del">✕</button>
+          </div>
+        </div>
+        <div class="add-row">+ Enrol a Special unit…</div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-section-head">
+          <span class="cat-section-label rare-label">Rare</span>
+          <span class="cat-section-pts">250 pts</span>
+        </div>
+        <div class="unit-row">
+          <div class="unit-left-col">
+            <div class="unit-name">Steam Tank</div>
+            <div class="unit-name-details"><span>1 model</span><span>60×100mm</span></div>
+            <div class="unit-rules-inline"><em>Steam-powered, D6 Steam Points</em></div>
+          </div>
+          <div class="col-count">1 model</div>
+          <div class="col-pts">250</div>
+          <div class="col-actions">
+            <button class="row-btn">✎</button>
+            <button class="row-btn del">✕</button>
+          </div>
+        </div>
+        <div class="add-row">+ Enrol a Rare unit…</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-text">Unofficial. Not endorsed by Games Workshop Limited.</div>
+    <div class="footer-text">Rules index: tow.whfb.app · Icons: game-icons.net (CC BY 3.0)</div>
+  </footer>
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  }
+</script>
+</body>
+</html>

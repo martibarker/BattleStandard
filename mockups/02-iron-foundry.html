@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Standard — Iron Foundry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="dark"] {
+    --bg-base: #111111;
+    --bg-surface: #1a1a1a;
+    --bg-elevated: #222222;
+    --bg-card: #1e1e1e;
+    --border: #333333;
+    --border-light: #444444;
+    --text-primary: #e8e0d0;
+    --text-secondary: #a89880;
+    --text-muted: #665a4a;
+    --accent: #e07b00;
+    --accent-hot: #ff6600;
+    --accent-glow: rgba(224,123,0,0.2);
+    --steel: #708090;
+    --steel-light: #8fa8b8;
+    --green: #4caf50;
+    --red: #e53935;
+    --rivet: #555;
+    --plate-shadow: rgba(0,0,0,0.5);
+    --metal-sheen: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%);
+  }
+  :root[data-theme="light"] {
+    --bg-base: #d8d0c0;
+    --bg-surface: #e0d8c8;
+    --bg-elevated: #ece5d5;
+    --bg-card: #e8e0d0;
+    --border: #b0a890;
+    --border-light: #c8c0a8;
+    --text-primary: #1a1410;
+    --text-secondary: #4a3828;
+    --text-muted: #8a7860;
+    --accent: #c05800;
+    --accent-hot: #e06000;
+    --accent-glow: rgba(192,88,0,0.15);
+    --steel: #5a6870;
+    --steel-light: #78909c;
+    --green: #2e7d32;
+    --red: #c62828;
+    --rivet: #908070;
+    --plate-shadow: rgba(0,0,0,0.2);
+    --metal-sheen: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.05) 100%);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 15px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* Riveted plate texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20px 20px, var(--rivet) 2px, transparent 2px),
+      radial-gradient(circle at 60px 20px, var(--rivet) 2px, transparent 2px);
+    background-size: 80px 80px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .layout { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--bg-surface);
+    background-image: var(--metal-sheen);
+    border-bottom: 4px solid var(--accent);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .logo-bracket {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+    margin-top: -2px;
+  }
+
+  .logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.12em;
+    color: var(--text-primary);
+    line-height: 1;
+    padding: 0 4px;
+  }
+
+  .logo-subtitle {
+    font-family: 'Courier Prime', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    display: block;
+    margin-top: -4px;
+    padding-left: 2px;
+  }
+
+  .header-center {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .nav-tab {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding: 20px 18px 18px;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    margin-bottom: -4px;
+    transition: all 0.15s;
+    text-transform: uppercase;
+  }
+
+  .nav-tab:hover { color: var(--text-secondary); }
+  .nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .theme-toggle {
+    background: var(--bg-elevated);
+    background-image: var(--metal-sheen);
+    border: 2px solid var(--border);
+    border-bottom: 3px solid var(--plate-shadow);
+    color: var(--text-secondary);
+    padding: 7px 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-transform: uppercase;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* ── ARMY BAR ── */
+  .army-bar {
+    background: var(--bg-elevated);
+    background-image: var(--metal-sheen);
+    border-bottom: 2px solid var(--border);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.3);
+  }
+
+  .army-info { display: flex; align-items: center; gap: 16px; }
+
+  .forge-stamp {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--bg-base);
+    background: var(--text-muted);
+    padding: 3px 10px;
+    transform: rotate(-1deg);
+    display: inline-block;
+  }
+
+  .army-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+  }
+
+  .points-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .pts-block {
+    text-align: center;
+  }
+
+  .pts-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--accent);
+  }
+
+  .pts-label {
+    font-family: 'Courier Prime', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .pts-divider {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: var(--border);
+  }
+
+  /* ── VALIDATION BARS ── */
+  .cat-bars {
+    background: var(--bg-surface);
+    border-bottom: 2px solid var(--border);
+    padding: 12px 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .cat-bar-item { display: flex; flex-direction: column; gap: 4px; }
+
+  .cat-bar-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .cat-bar-value {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .bar-track {
+    height: 6px;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 3px,
+      rgba(0,0,0,0.2) 3px,
+      rgba(0,0,0,0.2) 6px
+    );
+    position: relative;
+  }
+
+  .bar-fill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+  }
+
+  .lords-fill { background-color: #5090d0; width: 21%; }
+  .heroes-fill { background-color: #9070c0; width: 11.5%; }
+  .core-fill { background-color: #40a040; width: 44%; }
+  .special-fill { background-color: var(--accent); width: 29%; }
+  .rare-fill { background-color: #d04040; width: 12.5%; }
+
+  /* ── CONTENT ── */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex: 1;
+    padding: 20px 24px;
+    gap: 6px;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0 4px;
+  }
+
+  .section-divider-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    padding: 4px 12px;
+    border-left: 4px solid currentColor;
+  }
+
+  .section-divider-label.lords { color: #5090d0; }
+  .section-divider-label.heroes { color: #9070c0; }
+  .section-divider-label.core { color: #40a040; }
+  .section-divider-label.special { color: var(--accent); }
+  .section-divider-label.rare { color: #d04040; }
+
+  .section-divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section-divider-pts {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  /* Unit cards */
+  .unit-row {
+    background: var(--bg-card);
+    background-image: var(--metal-sheen);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    box-shadow: 2px 3px 0 var(--plate-shadow);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 10px 14px 10px 12px;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.1s;
+    position: relative;
+  }
+
+  .unit-row::after {
+    content: '';
+    position: absolute;
+    top: 3px; right: 3px;
+    bottom: 3px; left: 3px;
+    border: 1px solid rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+
+  .unit-row:hover { box-shadow: 3px 4px 0 var(--plate-shadow); transform: translate(-1px, -1px); }
+  .unit-row:active { box-shadow: 0 0 0; transform: translate(2px, 3px); }
+
+  .unit-row.lords { border-left-color: #5090d0; }
+  .unit-row.heroes { border-left-color: #9070c0; }
+  .unit-row.core { border-left-color: #40a040; }
+  .unit-row.rare { border-left-color: #d04040; }
+
+  .unit-left { display: flex; flex-direction: column; gap: 4px; }
+
+  .unit-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 19px;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    line-height: 1.1;
+  }
+
+  .unit-meta {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .unit-count {
+    font-family: 'Courier Prime', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .rule-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+  }
+
+  .base-tag {
+    font-family: 'Courier Prime', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+
+  .unit-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .pts-stamp {
+    text-align: right;
+  }
+
+  .pts-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--accent);
+  }
+
+  .pts-word {
+    font-family: 'Courier Prime', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    text-align: right;
+    margin-top: -2px;
+  }
+
+  .row-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .row-btn {
+    background: var(--bg-elevated);
+    background-image: var(--metal-sheen);
+    border: 1px solid var(--border);
+    border-bottom: 2px solid var(--plate-shadow);
+    color: var(--text-muted);
+    width: 28px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.1s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+  }
+
+  .row-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .row-btn.del:hover { border-color: var(--red); color: var(--red); }
+  .row-btn:active { border-bottom-width: 1px; transform: translateY(1px); }
+
+  .add-unit-row {
+    border: 2px dashed var(--border);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-top: 4px;
+  }
+
+  .add-unit-row:hover { border-color: var(--accent); color: var(--accent); }
+
+  footer {
+    background: var(--bg-surface);
+    background-image: var(--metal-sheen);
+    border-top: 2px solid var(--border);
+    padding: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  .footer-text {
+    font-family: 'Courier Prime', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <header>
+    <div class="logo">
+      <span class="logo-bracket">[</span>
+      <div>
+        <div class="logo-text">Battle Standard</div>
+        <span class="logo-subtitle">Army List Compiler v2.0</span>
+      </div>
+      <span class="logo-bracket">]</span>
+    </div>
+    <div class="header-center">
+      <div class="nav-tab active">Builder</div>
+      <div class="nav-tab">Rules</div>
+      <div class="nav-tab">Tracker</div>
+      <div class="nav-tab">FAQ</div>
+    </div>
+    <div class="header-right">
+      <button class="theme-toggle" onclick="toggleTheme()">◐ THEME</button>
+    </div>
+  </header>
+
+  <div class="army-bar">
+    <div class="army-info">
+      <div class="forge-stamp">EMPIRE</div>
+      <div class="army-name">2nd Altdorf Regiment — "The Iron Fists"</div>
+    </div>
+    <div class="points-row">
+      <div class="pts-block">
+        <div class="pts-value">1505</div>
+        <div class="pts-label">Points Used</div>
+      </div>
+      <div class="pts-divider">/</div>
+      <div class="pts-block">
+        <div class="pts-value" style="color:var(--text-secondary)">2000</div>
+        <div class="pts-label">Points Limit</div>
+      </div>
+      <div class="pts-divider">·</div>
+      <div class="pts-block">
+        <div class="pts-value" style="color:var(--steel-light)">495</div>
+        <div class="pts-label">Remaining</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-bars">
+    <div class="cat-bar-item">
+      <div style="display:flex; justify-content:space-between">
+        <span class="cat-bar-name" style="color:#5090d0">Lords</span>
+        <span class="cat-bar-value">21%</span>
+      </div>
+      <div class="bar-track"><div class="bar-fill lords-fill"></div></div>
+    </div>
+    <div class="cat-bar-item">
+      <div style="display:flex; justify-content:space-between">
+        <span class="cat-bar-name" style="color:#9070c0">Heroes</span>
+        <span class="cat-bar-value">11.5%</span>
+      </div>
+      <div class="bar-track"><div class="bar-fill heroes-fill"></div></div>
+    </div>
+    <div class="cat-bar-item">
+      <div style="display:flex; justify-content:space-between">
+        <span class="cat-bar-name" style="color:#40a040">Core ✓</span>
+        <span class="cat-bar-value">29%</span>
+      </div>
+      <div class="bar-track"><div class="bar-fill core-fill"></div></div>
+    </div>
+    <div class="cat-bar-item">
+      <div style="display:flex; justify-content:space-between">
+        <span class="cat-bar-name" style="color:var(--accent)">Special</span>
+        <span class="cat-bar-value">29%</span>
+      </div>
+      <div class="bar-track"><div class="bar-fill special-fill"></div></div>
+    </div>
+    <div class="cat-bar-item">
+      <div style="display:flex; justify-content:space-between">
+        <span class="cat-bar-name" style="color:#d04040">Rare</span>
+        <span class="cat-bar-value">12.5%</span>
+      </div>
+      <div class="bar-track"><div class="bar-fill rare-fill"></div></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-divider">
+      <div class="section-divider-label lords">Lords</div>
+      <div class="section-divider-line"></div>
+      <div class="section-divider-pts">420 pts</div>
+    </div>
+    <div class="unit-row lords">
+      <div class="unit-left">
+        <div class="unit-name">Karl Franz on Deathclaw</div>
+        <div class="unit-meta">
+          <span class="unit-count">1 model</span>
+          <span class="rule-tag">General</span>
+          <span class="rule-tag">Inspiring Presence</span>
+          <span class="rule-tag">Griffon Mount</span>
+          <span class="base-tag">50×75mm</span>
+        </div>
+      </div>
+      <div class="unit-right">
+        <div class="pts-stamp">
+          <div class="pts-number">420</div>
+          <span class="pts-word">pts</span>
+        </div>
+        <div class="row-btns">
+          <button class="row-btn">✎</button>
+          <button class="row-btn del">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <div class="section-divider-label heroes">Heroes</div>
+      <div class="section-divider-line"></div>
+      <div class="section-divider-pts">115 pts</div>
+    </div>
+    <div class="unit-row heroes">
+      <div class="unit-left">
+        <div class="unit-name">Battle Wizard — Level 2</div>
+        <div class="unit-meta">
+          <span class="unit-count">1 model</span>
+          <span class="rule-tag">Lore of Fire</span>
+          <span class="rule-tag">Channelling Staff</span>
+          <span class="base-tag">25×25mm</span>
+        </div>
+      </div>
+      <div class="unit-right">
+        <div class="pts-stamp">
+          <div class="pts-number">115</div>
+          <span class="pts-word">pts</span>
+        </div>
+        <div class="row-btns">
+          <button class="row-btn">✎</button>
+          <button class="row-btn del">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <div class="section-divider-label core">Core</div>
+      <div class="section-divider-line"></div>
+      <div class="section-divider-pts">440 pts</div>
+    </div>
+    <div class="unit-row core">
+      <div class="unit-left">
+        <div class="unit-name">Swordsmen × 30</div>
+        <div class="unit-meta">
+          <span class="rule-tag">Detachment</span>
+          <span class="rule-tag">Shields</span>
+          <span class="base-tag">25×25mm</span>
+        </div>
+      </div>
+      <div class="unit-right">
+        <div class="pts-stamp">
+          <div class="pts-number">240</div>
+          <span class="pts-word">pts</span>
+        </div>
+        <div class="row-btns">
+          <button class="row-btn">✎</button>
+          <button class="row-btn del">✕</button>
+        </div>
+      </div>
+    </div>
+    <div class="unit-row core" style="margin-top:4px">
+      <div class="unit-left">
+        <div class="unit-name">Handgunners × 20</div>
+        <div class="unit-meta">
+          <span class="rule-tag">Handguns</span>
+          <span class="rule-tag">Marksmen</span>
+          <span class="base-tag">25×25mm</span>
+        </div>
+      </div>
+      <div class="unit-right">
+        <div class="pts-stamp">
+          <div class="pts-number">200</div>
+          <span class="pts-word">pts</span>
+        </div>
+        <div class="row-btns">
+          <button class="row-btn">✎</button>
+          <button class="row-btn del">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <div class="section-divider-label special">Special</div>
+      <div class="section-divider-line"></div>
+      <div class="section-divider-pts">280 pts</div>
+    </div>
+    <div class="unit-row special">
+      <div class="unit-left">
+        <div class="unit-name">Greatswords × 10</div>
+        <div class="unit-meta">
+          <span class="rule-tag">Stubborn</span>
+          <span class="rule-tag">Great Weapons</span>
+          <span class="base-tag">25×25mm</span>
+        </div>
+      </div>
+      <div class="unit-right">
+        <div class="pts-stamp">
+          <div class="pts-number">180</div>
+          <span class="pts-word">pts</span>
+        </div>
+        <div class="row-btns">
+          <button class="row-btn">✎</button>
+          <button class="row-btn del">✕</button>
+        </div>
+      </div>
+    </div>
+    <div class="unit-row special" style="margin-top:4px">
+      <div class="unit-left">
+        <div class="unit-name">Cannon</div>
+        <div class="unit-meta">
+          <span class="unit-count">1 + 3 crew</span>
+          <span class="rule-tag">War Machine</span>
+          <span class="base-tag">60×100mm</span>
+        </div>
+      </div>
+      <div class="unit-right">
+        <div class="pts-stamp">
+          <div class="pts-number">100</div>
+          <span class="pts-word">pts</span>
+        </div>
+        <div class="row-btns">
+          <button class="row-btn">✎</button>
+          <button class="row-btn del">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <div class="section-divider-label rare">Rare</div>
+      <div class="section-divider-line"></div>
+      <div class="section-divider-pts">250 pts</div>
+    </div>
+    <div class="unit-row rare">
+      <div class="unit-left">
+        <div class="unit-name">Steam Tank</div>
+        <div class="unit-meta">
+          <span class="unit-count">1 model</span>
+          <span class="rule-tag">Steam-powered</span>
+          <span class="rule-tag">D6 Steam Points</span>
+          <span class="base-tag">60×100mm</span>
+        </div>
+      </div>
+      <div class="unit-right">
+        <div class="pts-stamp">
+          <div class="pts-number">250</div>
+          <span class="pts-word">pts</span>
+        </div>
+        <div class="row-btns">
+          <button class="row-btn">✎</button>
+          <button class="row-btn del">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="add-unit-row">+ ADD UNIT TO ROSTER</div>
+  </div>
+
+  <footer>
+    <div class="footer-text">Unofficial. Not endorsed by Games Workshop Limited.</div>
+    <div class="footer-text">Rules index: tow.whfb.app · Icons: game-icons.net (CC BY 3.0)</div>
+  </footer>
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+  }
+</script>
+</body>
+</html>

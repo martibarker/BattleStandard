@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Standard — Herald's Codex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="dark"] {
+    --bg-base: #080b14;
+    --bg-surface: #0c1020;
+    --bg-elevated: #111828;
+    --bg-card: #0e1520;
+    --border: #1e2d4a;
+    --border-gold: #4a3820;
+    --text-primary: #e8d5a0;
+    --text-secondary: #b09060;
+    --text-muted: #5a4830;
+    --text-body: #c8b880;
+    --accent: #c8860a;
+    --accent-bright: #f0a020;
+    --gold-shimmer: linear-gradient(90deg, #8a6020, #d4a040, #f0c060, #d4a040, #8a6020);
+    --blue: #3060a0;
+    --blue-light: #5080c0;
+    --green: #306030;
+    --green-light: #50a050;
+    --red: #802020;
+    --red-light: #c04040;
+    --marble: rgba(255,255,255,0.02);
+    --glow: rgba(200,134,10,0.1);
+  }
+  :root[data-theme="light"] {
+    --bg-base: #e8eaf0;
+    --bg-surface: #f0f2f8;
+    --bg-elevated: #f8f9fd;
+    --bg-card: #f4f5fa;
+    --border: #c0c8dc;
+    --border-gold: #b09050;
+    --text-primary: #1a1408;
+    --text-secondary: #3a2808;
+    --text-muted: #7a6840;
+    --text-body: #2a2010;
+    --accent: #8a5a00;
+    --accent-bright: #a07010;
+    --gold-shimmer: linear-gradient(90deg, #604800, #907020, #c09030, #907020, #604800);
+    --blue: #1a3870;
+    --blue-light: #2050a0;
+    --green: #1a4020;
+    --green-light: #286030;
+    --red: #601010;
+    --red-light: #902020;
+    --marble: rgba(0,0,0,0.03);
+    --glow: rgba(138,90,0,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IM Fell English', serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* Stone texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(100,120,180,0.03) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(80,60,100,0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .layout { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; }
+
+  /* ── HERALDIC HEADER ── */
+  header {
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-gold);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-gold-bar {
+    height: 3px;
+    background: var(--gold-shimmer);
+    background-size: 200% 100%;
+    animation: shimmer 4s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+  .header-inner {
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Heraldic shield SVG mark */
+  .shield-mark {
+    width: 38px;
+    height: 46px;
+    position: relative;
+  }
+
+  .shield-mark svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-text-block { display: flex; flex-direction: column; }
+
+  .logo-main {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent-bright);
+    line-height: 1;
+  }
+
+  .logo-sub {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .nav-link {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 8px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '·';
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--border);
+    font-size: 16px;
+  }
+
+  .nav-link:last-child::after { display: none; }
+
+  .nav-link:hover { color: var(--text-secondary); }
+  .nav-link.active { color: var(--accent-bright); border-bottom-color: var(--accent); }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .toggle-btn {
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    color: var(--text-muted);
+    padding: 6px 14px;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── ARMY PROCLAMATION ── */
+  .proclamation {
+    text-align: center;
+    padding: 24px 32px 16px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .proclamation::before,
+  .proclamation::after {
+    content: '⸻⬥⸻';
+    display: block;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.3em;
+    margin: 4px 0;
+    opacity: 0.6;
+  }
+
+  .army-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .army-name {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent-bright);
+    line-height: 1.2;
+  }
+
+  .army-subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .points-tally {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .tally-num {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-bright);
+    line-height: 1;
+  }
+
+  .tally-sep {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: var(--text-muted);
+  }
+
+  .tally-total {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--text-secondary);
+  }
+
+  .tally-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  /* ── VALIDATION ── */
+  .cat-validation {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-gold);
+  }
+
+  .cat-cell {
+    flex: 1;
+    padding: 8px 12px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+
+  .cat-cell:last-child { border-right: none; }
+
+  .cat-name {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .cat-pct {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    line-height: 1.2;
+  }
+
+  .cat-check {
+    font-size: 10px;
+    display: block;
+  }
+
+  .cat-cell.lords .cat-pct { color: var(--blue-light); }
+  .cat-cell.heroes .cat-pct { color: #9070c0; }
+  .cat-cell.core .cat-pct { color: var(--green-light); }
+  .cat-cell.special .cat-pct { color: var(--accent-bright); }
+  .cat-cell.rare .cat-pct { color: var(--red-light); }
+
+  /* ── MAIN LAYOUT ── */
+  .main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    flex: 1;
+  }
+
+  /* ── HERALDIC SIDEBAR ── */
+  .sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border-gold);
+    padding: 20px 0;
+  }
+
+  .sidebar-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 16px 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .sidebar-item:hover { color: var(--text-secondary); background: var(--glow); }
+  .sidebar-item.active { color: var(--accent-bright); border-left-color: var(--accent); background: var(--glow); }
+
+  /* ── CODEX ENTRIES ── */
+  .codex {
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cat-section { margin-bottom: 20px; }
+
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .cat-heraldic-label {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    border: 1px solid currentColor;
+    position: relative;
+  }
+
+  .cat-heraldic-label::before,
+  .cat-heraldic-label::after {
+    content: '◆';
+    font-size: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .cat-heraldic-label::before { left: -12px; }
+  .cat-heraldic-label::after { right: -12px; }
+
+  .cat-heraldic-label.lords { color: var(--blue-light); }
+  .cat-heraldic-label.heroes { color: #9070c0; }
+  .cat-heraldic-label.core { color: var(--green-light); }
+  .cat-heraldic-label.special { color: var(--accent-bright); }
+  .cat-heraldic-label.rare { color: var(--red-light); }
+
+  .cat-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border-gold), transparent);
+    opacity: 0.5;
+  }
+
+  /* Unit entries */
+  .entry {
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    border-left: none;
+    border-right: none;
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  /* Gothic border corners */
+  .entry::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 0;
+    right: 0; bottom: -1px;
+    border-left: 3px solid var(--border-gold);
+    border-right: 3px solid var(--border-gold);
+    pointer-events: none;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+  }
+
+  .entry:hover::before { opacity: 0.8; }
+  .entry:hover { background: var(--bg-elevated); }
+
+  .entry-left { display: flex; flex-direction: column; gap: 5px; }
+
+  .entry-name {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+
+  .entry-details {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .entry-details span::before { content: '· '; }
+  .entry-details span:first-child::before { content: ''; }
+
+  .entry-rules {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+
+  .rule-pip {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-gold);
+    padding: 1px 8px;
+  }
+
+  .entry-right {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 2px;
+  }
+
+  .entry-pts {
+    text-align: right;
+  }
+
+  .entry-pts-num {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent-bright);
+    line-height: 1;
+  }
+
+  .entry-pts-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    text-align: right;
+  }
+
+  .entry-actions {
+    display: flex;
+    gap: 4px;
+    margin-top: 2px;
+  }
+
+  .entry-btn {
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    color: var(--text-muted);
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.2s;
+    font-family: 'Cinzel', serif;
+  }
+
+  .entry-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .entry-btn.peril:hover { border-color: var(--red-light); color: var(--red-light); }
+
+  .add-entry {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 10px;
+    border: 1px dashed var(--border-gold);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 4px;
+  }
+
+  .add-entry:hover { color: var(--accent); border-color: var(--accent); background: var(--glow); }
+
+  footer {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-gold);
+    padding: 12px 32px;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .footer-gold-bar {
+    height: 2px;
+    background: var(--gold-shimmer);
+    background-size: 200% 100%;
+    animation: shimmer 4s linear infinite;
+    margin-top: 10px;
+    opacity: 0.4;
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <header>
+    <div class="header-gold-bar"></div>
+    <div class="header-inner">
+      <div class="logo">
+        <div class="shield-mark">
+          <svg viewBox="0 0 38 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2H36V28C36 36 19 44 19 44C19 44 2 36 2 28V2Z" stroke="currentColor" stroke-width="1.5" fill="var(--bg-elevated)" style="color:var(--border-gold)"/>
+            <path d="M8 8H30V26C30 32 19 39 19 39C19 39 8 32 8 26V8Z" fill="var(--accent)" opacity="0.15"/>
+            <text x="19" y="26" text-anchor="middle" font-family="Cinzel Decorative" font-size="16" fill="var(--accent-bright)" font-weight="700">⚔</text>
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <div class="logo-main">Battle Standard</div>
+          <div class="logo-sub">Herald's Codex — Army Builder</div>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a class="nav-link active" href="#">Builder</a>
+        <a class="nav-link" href="#">Rules</a>
+        <a class="nav-link" href="#">Tracker</a>
+        <a class="nav-link" href="#">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="toggle-btn" onclick="toggleTheme()">☾ / ☀ Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="proclamation">
+    <div class="army-title">By Order of the Grand Register</div>
+    <div class="army-name">The Empire</div>
+    <div class="army-subtitle">2nd Altdorf Regiment — "The Iron Fists"</div>
+    <div class="points-tally">
+      <div>
+        <div class="tally-num">1,505</div>
+        <span class="tally-label">Points Mustered</span>
+      </div>
+      <div class="tally-sep">of</div>
+      <div>
+        <div class="tally-total">2,000</div>
+        <span class="tally-label">Points Permitted</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-validation">
+    <div class="cat-cell lords">
+      <span class="cat-name">Lords</span>
+      <span class="cat-pct">21%</span>
+      <span class="cat-check" style="color:var(--blue-light)">≤ 25% ✓</span>
+    </div>
+    <div class="cat-cell heroes">
+      <span class="cat-name">Heroes</span>
+      <span class="cat-pct">11.5%</span>
+      <span class="cat-check" style="color:#9070c0">≤ 25% ✓</span>
+    </div>
+    <div class="cat-cell core">
+      <span class="cat-name">Core</span>
+      <span class="cat-pct">29%</span>
+      <span class="cat-check" style="color:var(--green-light)">≥ 25% ✓</span>
+    </div>
+    <div class="cat-cell special">
+      <span class="cat-name">Special</span>
+      <span class="cat-pct">29%</span>
+      <span class="cat-check" style="color:var(--accent-bright)">≤ 50% ✓</span>
+    </div>
+    <div class="cat-cell rare">
+      <span class="cat-name">Rare</span>
+      <span class="cat-pct">12.5%</span>
+      <span class="cat-check" style="color:var(--red-light)">≤ 25% ✓</span>
+    </div>
+  </div>
+
+  <div class="main">
+    <nav class="sidebar">
+      <div style="padding: 0 16px 16px">
+        <div class="sidebar-heading">Current List</div>
+        <a class="sidebar-item active" href="#">2nd Altdorf Reg.</a>
+        <a class="sidebar-item" href="#">Ironbreakers Host</a>
+      </div>
+      <div style="padding: 0 16px">
+        <div class="sidebar-heading">Navigation</div>
+        <a class="sidebar-item active" href="#">⚔ Army Builder</a>
+        <a class="sidebar-item" href="#">📖 Rules Ref</a>
+        <a class="sidebar-item" href="#">🎲 Turn Tracker</a>
+        <a class="sidebar-item" href="#">❓ FAQ</a>
+      </div>
+    </nav>
+
+    <div class="codex">
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-heraldic-label lords">Lords</div>
+          <div class="cat-rule"></div>
+          <span style="font-family:'Cinzel',serif;font-size:11px;color:var(--text-muted)">420 pts</span>
+        </div>
+        <div class="entry">
+          <div class="entry-left">
+            <div class="entry-name">Karl Franz on Deathclaw</div>
+            <div class="entry-details">
+              <span>1 model</span>
+              <span>50×75mm</span>
+              <span>Griffon Mount</span>
+            </div>
+            <div class="entry-rules">
+              <span class="rule-pip">General</span>
+              <span class="rule-pip">Inspiring Presence</span>
+              <span class="rule-pip">The Hammer of Judgment</span>
+            </div>
+          </div>
+          <div class="entry-right">
+            <div class="entry-pts">
+              <div class="entry-pts-num">420</div>
+              <span class="entry-pts-label">pts</span>
+            </div>
+            <div class="entry-actions">
+              <button class="entry-btn">✎</button>
+              <button class="entry-btn peril">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-heraldic-label heroes">Heroes</div>
+          <div class="cat-rule"></div>
+          <span style="font-family:'Cinzel',serif;font-size:11px;color:var(--text-muted)">115 pts</span>
+        </div>
+        <div class="entry">
+          <div class="entry-left">
+            <div class="entry-name">Battle Wizard — Level 2</div>
+            <div class="entry-details">
+              <span>1 model</span>
+              <span>25×25mm</span>
+              <span>Lore of Fire</span>
+            </div>
+            <div class="entry-rules">
+              <span class="rule-pip">Channelling Staff</span>
+              <span class="rule-pip">Fireball</span>
+            </div>
+          </div>
+          <div class="entry-right">
+            <div class="entry-pts">
+              <div class="entry-pts-num">115</div>
+              <span class="entry-pts-label">pts</span>
+            </div>
+            <div class="entry-actions">
+              <button class="entry-btn">✎</button>
+              <button class="entry-btn peril">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-heraldic-label core">Core</div>
+          <div class="cat-rule"></div>
+          <span style="font-family:'Cinzel',serif;font-size:11px;color:var(--text-muted)">440 pts</span>
+        </div>
+        <div class="entry">
+          <div class="entry-left">
+            <div class="entry-name">Swordsmen</div>
+            <div class="entry-details">
+              <span>30 models</span>
+              <span>25×25mm</span>
+            </div>
+            <div class="entry-rules">
+              <span class="rule-pip">Detachment</span>
+              <span class="rule-pip">Shields</span>
+            </div>
+          </div>
+          <div class="entry-right">
+            <div class="entry-pts">
+              <div class="entry-pts-num">240</div>
+              <span class="entry-pts-label">pts</span>
+            </div>
+            <div class="entry-actions">
+              <button class="entry-btn">✎</button>
+              <button class="entry-btn peril">✕</button>
+            </div>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-left">
+            <div class="entry-name">Handgunners</div>
+            <div class="entry-details">
+              <span>20 models</span>
+              <span>25×25mm</span>
+            </div>
+            <div class="entry-rules">
+              <span class="rule-pip">Handguns</span>
+              <span class="rule-pip">Marksmen</span>
+            </div>
+          </div>
+          <div class="entry-right">
+            <div class="entry-pts">
+              <div class="entry-pts-num">200</div>
+              <span class="entry-pts-label">pts</span>
+            </div>
+            <div class="entry-actions">
+              <button class="entry-btn">✎</button>
+              <button class="entry-btn peril">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-heraldic-label special">Special</div>
+          <div class="cat-rule"></div>
+          <span style="font-family:'Cinzel',serif;font-size:11px;color:var(--text-muted)">280 pts</span>
+        </div>
+        <div class="entry">
+          <div class="entry-left">
+            <div class="entry-name">Greatswords</div>
+            <div class="entry-details">
+              <span>10 models</span>
+              <span>25×25mm</span>
+            </div>
+            <div class="entry-rules">
+              <span class="rule-pip">Stubborn</span>
+              <span class="rule-pip">Great Weapons</span>
+            </div>
+          </div>
+          <div class="entry-right">
+            <div class="entry-pts">
+              <div class="entry-pts-num">180</div>
+              <span class="entry-pts-label">pts</span>
+            </div>
+            <div class="entry-actions">
+              <button class="entry-btn">✎</button>
+              <button class="entry-btn peril">✕</button>
+            </div>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-left">
+            <div class="entry-name">Cannon</div>
+            <div class="entry-details">
+              <span>1 model + 3 crew</span>
+              <span>60×100mm</span>
+            </div>
+            <div class="entry-rules">
+              <span class="rule-pip">War Machine</span>
+            </div>
+          </div>
+          <div class="entry-right">
+            <div class="entry-pts">
+              <div class="entry-pts-num">100</div>
+              <span class="entry-pts-label">pts</span>
+            </div>
+            <div class="entry-actions">
+              <button class="entry-btn">✎</button>
+              <button class="entry-btn peril">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-heraldic-label rare">Rare</div>
+          <div class="cat-rule"></div>
+          <span style="font-family:'Cinzel',serif;font-size:11px;color:var(--text-muted)">250 pts</span>
+        </div>
+        <div class="entry">
+          <div class="entry-left">
+            <div class="entry-name">Steam Tank</div>
+            <div class="entry-details">
+              <span>1 model</span>
+              <span>60×100mm</span>
+            </div>
+            <div class="entry-rules">
+              <span class="rule-pip">Steam-powered</span>
+              <span class="rule-pip">D6 Steam Points</span>
+            </div>
+          </div>
+          <div class="entry-right">
+            <div class="entry-pts">
+              <div class="entry-pts-num">250</div>
+              <span class="entry-pts-label">pts</span>
+            </div>
+            <div class="entry-actions">
+              <button class="entry-btn">✎</button>
+              <button class="entry-btn peril">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="add-entry">✦ Enrol a New Unit ✦</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-text">Unofficial. Not endorsed by Games Workshop Limited.</div>
+      <div class="footer-text">Rules index: tow.whfb.app · Icons: game-icons.net (CC BY 3.0)</div>
+    </div>
+    <div class="footer-gold-bar"></div>
+  </footer>
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  }
+</script>
+</body>
+</html>

@@ -1024,7 +1024,7 @@
         "name": "Strangleroot",
         "number": 5,
         "is_signature": false,
-        "casting_value": "8+",
+        "casting_value": "9+",
         "range": "4D6\"",
         "type": "Magic Missile",
         "duration": "",

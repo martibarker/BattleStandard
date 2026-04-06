@@ -1,7 +1,8 @@
 import { useGameStore, type PlayerSide } from '../../store/gameStore';
 import { useArmyStore } from '../../store/armyStore';
 import { getFaction } from '../../data/factions';
-import type { Unit } from '../../types/faction';
+import type { Unit, Faction } from '../../types/faction';
+import type { ArmyEntry } from '../../types/army';
 
 interface UnitChecklistProps {
   mode: 'shooting' | 'combat';
@@ -168,7 +169,7 @@ export default function UnitChecklist({ mode, side }: UnitChecklistProps) {
   );
 }
 
-function getChecklistUnits(mode: 'shooting' | 'combat', faction: any, entries: any[]): Unit[] {
+function getChecklistUnits(mode: 'shooting' | 'combat', faction: Faction, entries: ArmyEntry[]): Unit[] {
   if (mode === 'shooting') {
     // Return units with ranged weapon profiles
     return faction.units.filter((u: Unit) =>

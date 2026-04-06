@@ -168,6 +168,7 @@ function buildComposition(
     if (r.eligible_unit_ids != null) rule.eligible_unit_ids = parseJ(r.eligible_unit_ids as string, null);
     if (r.unit_ids != null) rule.unit_ids = parseJ(r.unit_ids as string, null);
     if (r.character_unit_ids != null) rule.character_unit_ids = parseJ(r.character_unit_ids as string, null);
+    if (r.general_unit_ids != null) rule.general_unit_ids = parseJ(r.general_unit_ids as string, null);
     if (r.grants_rules != null) rule.grants_rules = parseJ(r.grants_rules as string, null);
     if (r.notes != null) rule.notes = r.notes;
     return rule;
@@ -180,6 +181,7 @@ function buildComposition(
   if (compRow.source != null) comp.source = compRow.source;
   if (compRow.special_abilities != null) comp.special_abilities = parseJ(compRow.special_abilities as string, []);
   if (compRow.grants_rules != null) comp.grants_rules = parseJ(compRow.grants_rules as string, null);
+  if ((compRow as Record<string, unknown>).sub_orders != null) comp.sub_orders = parseJ((compRow as Record<string, unknown>).sub_orders as string, null);
   comp.rules = rules;
   return omitNulls(comp) as Record<string, unknown>;
 }

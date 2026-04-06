@@ -250,6 +250,7 @@ const importAll = sqlite.transaction(() => {
         source: comp.source as string | null ?? null,
         special_abilities: j(comp.special_abilities),
         grants_rules: j(comp.grants_rules),
+        sub_orders: j(comp.sub_orders),
         sort_order: ci,
       }).run();
 
@@ -265,6 +266,7 @@ const importAll = sqlite.transaction(() => {
           eligible_unit_ids: j(rule.eligible_unit_ids),
           unit_ids: j(rule.unit_ids),
           character_unit_ids: j(rule.character_unit_ids),
+          general_unit_ids: j(rule.general_unit_ids),
           grants_rules: j(rule.grants_rules),
           notes: rule.notes as string | null ?? null,
           sort_order: ri,

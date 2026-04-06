@@ -10,19 +10,310 @@
       "id": "grand_army",
       "name": "Grand Army",
       "source": "forces_of_fantasy",
-      "rules": []
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Glade Lord or Spellweaver per 1,000 points; 0-1 Treeman Ancient per 1,000 points; Glade Captains, Spellsingers, Shadowdancers, Waystalkers and Branchwraiths"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "glade-lord",
+            "spellweaver"
+          ],
+          "notes": "0-1 Glade Lord or Spellweaver per 1,000 points"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "treeman-ancient"
+          ],
+          "notes": "0-1 Treeman Ancient per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "glade-guard",
+            "eternal-guard",
+            "dryads",
+            "glade-riders",
+            "deepwood-scouts"
+          ],
+          "notes": "1+ units of Glade Guard; Eternal Guard, Dryads and Glade Riders; 0-1 unit of Deepwood Scouts may be taken as a Core choice per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "deepwood-scouts"
+          ],
+          "notes": "0-1 unit of Deepwood Scouts may be taken as a Core choice per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "eligible_unit_ids": [
+            "deepwood-scouts",
+            "wildwood-rangers",
+            "wardancers",
+            "sisters-of-the-thorn",
+            "wild-riders",
+            "warhawk-riders",
+            "tree-kin"
+          ],
+          "notes": "Deepwood Scouts, Wildwood Rangers, Wardancers, Sisters of the Thorn, Wild Riders and Warhawk Riders; 0-2 units of Tree Kin per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "tree-kin"
+          ],
+          "notes": "0-2 units of Tree Kin per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "treeman",
+            "waywatchers",
+            "great-eagles",
+            "wood-elf-beast-pack"
+          ],
+          "notes": "Treemen; 0-1 unit of Waywatchers per Waystalker taken; 0-3 Great Eagles per 1,000 points; Wood Elf Beast Pack"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 3,
+          "unit_ids": [
+            "great-eagles"
+          ],
+          "notes": "0-3 Great Eagles per 1,000 points"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20
+        },
+        {
+          "category": "allies",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Any Wood Elf Realms Army of Infamy composition list; or one of: Empire of Man (Uneasy), Kingdom of Bretonnia, High Elf Realms"
+        }
+      ]
     },
     {
       "id": "orions_wild_hunt",
       "name": "Orion's Wild Hunt",
       "source": "arcane_journal",
-      "rules": []
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Glade Lord per 1,000 points; 0-1 Shadowdancer, Spellsinger or Waystalker per 1,000 points; Glade Captains"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "glade-lord"
+          ],
+          "notes": "0-1 Glade Lord per 1,000 points"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "shadowdancer",
+            "spellsinger",
+            "waystalker"
+          ],
+          "notes": "0-1 Shadowdancer, Spellsinger or Waystalker per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "wild-riders",
+            "glade-riders"
+          ],
+          "notes": "0-1 unit of Wild Riders per 1,000 points; Glade Riders"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "wild-riders"
+          ],
+          "notes": "0-1 unit of Wild Riders per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "eligible_unit_ids": [
+            "sisters-of-the-thorn",
+            "wardancers",
+            "warhawk-riders",
+            "wild-riders",
+            "wood-elf-beast-pack"
+          ],
+          "notes": "0-1 unit of Sisters of the Thorn per 1,000 points; Wardancers, Warhawk Riders, Wild Riders and Wood Elf Beast Packs"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "sisters-of-the-thorn"
+          ],
+          "notes": "0-1 unit of Sisters of the Thorn per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "waywatchers",
+            "great-eagles",
+            "deepwood-scouts",
+            "wildwood-rangers"
+          ],
+          "notes": "0-1 unit of Waywatchers per Waystalker taken; 0-3 Great Eagles per 1,000 points; Deepwood Scouts and Wildwood Rangers"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 3,
+          "unit_ids": [
+            "great-eagles"
+          ],
+          "notes": "0-3 Great Eagles per 1,000 points"
+        }
+      ]
     },
     {
       "id": "host_of_talsyn",
       "name": "Host of Talsyn",
       "source": "arcane_journal",
-      "rules": []
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Glade Lord or Spellweaver per 1,000 points; 0-1 Treeman Ancient per 1,000 points; 0-1 Warden of Talsyn per 1,000 points; 0-1 Shadowdancer per unit of Wardancers taken; Glade Captains, Spellsingers and Branchwraiths"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "glade-lord",
+            "spellweaver"
+          ],
+          "notes": "0-1 Glade Lord or Spellweaver per 1,000 points"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "treeman-ancient"
+          ],
+          "notes": "0-1 Treeman Ancient per 1,000 points"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "warden-of-talsyn"
+          ],
+          "notes": "0-1 Warden of Talsyn per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "eligible_unit_ids": [
+            "eternal-guard",
+            "dryads",
+            "glade-guard",
+            "deepwood-scouts"
+          ],
+          "notes": "1+ units of Eternal Guard; Dryads; 0-1 unit of Glade Guard per 1,000 points; 0-1 unit of Deepwood Scouts may be taken as a Core choice"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "glade-guard"
+          ],
+          "notes": "0-1 unit of Glade Guard per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "eligible_unit_ids": [
+            "deepwood-scouts",
+            "guardians-of-talsyn",
+            "wildwood-rangers",
+            "sisters-of-the-thorn",
+            "tree-kin"
+          ],
+          "notes": "Deepwood Scouts, Guardians of Talsyn, Wildwood Rangers and Sisters of the Thorn; 0-2 units of Tree Kin per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "tree-kin"
+          ],
+          "notes": "0-2 units of Tree Kin per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 33,
+          "eligible_unit_ids": [
+            "treeman",
+            "wardancers",
+            "great-eagles"
+          ],
+          "notes": "Treemen and Wardancers; 0-3 Great Eagles per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 3,
+          "unit_ids": [
+            "great-eagles"
+          ],
+          "notes": "0-3 Great Eagles per 1,000 points"
+        }
+      ]
     }
   ],
   "units": [
@@ -703,7 +994,7 @@
         "magical_attacks",
         "move_through_cover",
         "regeneration_5plus",
-        "stamp_attacks_d3",
+        "stomp_attacks_d3",
         "stubborn",
         "terror",
         "timmm_berr",
@@ -1115,7 +1406,7 @@
       ],
       "special_rules": [
         "armour_bane_2",
-        "armoured_hide_2",
+        "armoured_hide_1",
         "beguiling_aura",
         "counter_charge",
         "magical_attacks",
@@ -2258,7 +2549,7 @@
       "notes": [
         "Elven Steeds included in unit profile: M9, WS3, BS-, S3, T-, W-, I4, A1, Ld-. Hooves counts as a hand weapon."
       ],
-      "magic_standard": 25
+      "magic_standard": 50
     },
     {
       "id": "sisters-of-the-thorn",
@@ -2518,8 +2809,7 @@
       ],
       "notes": [
         "Warhawks: M2, WS3, BS-, S4, T2, W-, I4, A2, Ld-. Wicked claws: R Combat, S S, AP -2."
-      ],
-      "magic_standard": 25
+      ]
     },
     {
       "id": "treeman",
@@ -3645,7 +3935,7 @@
         "special_rules": [
           "flaming_attacks",
           "magical_attacks",
-          "multiple_wounds_d3"
+          "multiple_wounds_2"
         ]
       }
     },

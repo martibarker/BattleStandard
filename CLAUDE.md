@@ -16,6 +16,10 @@ It is entirely unofficial and not affiliated with Games Workshop.
 - Hosted on Cloudflare Pages
 - Backend (Phase 4+): Cloudflare Workers + D1
 
+## Hard Rules — Never Break These
+- **Never use the Agent tool.** Do all work directly. Agents produce unverified assumptions and waste time.
+- **Never assume game data.** Always read the source PDF before drawing any conclusion about which units are available in a composition, what stats a unit has, or what rules apply. If the PDF hasn't been read, read it.
+
 ## Key Conventions
 - All components: functional, typed props, no `any`
 - State: Zustand stores in `src/store/`; no prop drilling

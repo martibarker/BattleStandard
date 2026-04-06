@@ -278,6 +278,154 @@
       "name": "Empire of Man — Knightly Order",
       "source": "arcane_journal",
       "special_abilities": [],
+      "sub_orders": [
+        {
+          "id": "knights_panther",
+          "name": "Order of the Knights Panther",
+          "character_upgrade_pts": 10,
+          "unit_upgrade_pts_per_model": 2,
+          "unit_ids": [
+            "empire_knights",
+            "inner_circle_knights",
+            "inner_circle_knights_ko_core",
+            "demigryph_knights"
+          ],
+          "all_units_rules": [
+            "Must be armed with lances",
+            "May re-roll a single natural 1 on a Charge roll",
+            "Hatred (Warriors of Chaos, Beastmen Brayherds & Daemonic models)"
+          ],
+          "elite_rules": [
+            "Magic Resistance (-1)"
+          ],
+          "unlocks": [],
+          "restrictions": []
+        },
+        {
+          "id": "knights_of_the_white_wolf",
+          "name": "Order of the White Wolf",
+          "character_upgrade_pts": 15,
+          "unit_upgrade_pts_per_model": 3,
+          "unit_ids": [
+            "empire_knights",
+            "inner_circle_knights",
+            "inner_circle_knights_ko_core",
+            "demigryph_knights"
+          ],
+          "all_units_rules": [
+            "Must be equipped with great weapons or halberds (may replace with wolf hammers for free)",
+            "Furious Charge"
+          ],
+          "elite_rules": [
+            "5+ Ward save against wounds from attacks with Flaming Attacks"
+          ],
+          "unlocks": [
+            {
+              "unit_id": "teutogen_guard",
+              "list_category": "special"
+            },
+            {
+              "unit_id": "free_company_militia",
+              "list_category": "core"
+            }
+          ],
+          "restrictions": [
+            "lector_of_sigmar",
+            "priest_of_sigmar",
+            "witch_hunter"
+          ]
+        },
+        {
+          "id": "knights_of_the_blazing_sun",
+          "name": "Order of the Blazing Sun",
+          "character_upgrade_pts": 10,
+          "unit_upgrade_pts_per_model": 2,
+          "unit_ids": [
+            "empire_knights",
+            "inner_circle_knights",
+            "inner_circle_knights_ko_core",
+            "demigryph_knights"
+          ],
+          "all_units_rules": [
+            "Evasive",
+            "Flaming Attacks"
+          ],
+          "elite_rules": [
+            "+1 combat result point when charging (not cumulative)"
+          ],
+          "unlocks": [
+            {
+              "unit_id": "great_cannon",
+              "list_category": "special"
+            },
+            {
+              "unit_id": "mortar",
+              "list_category": "special"
+            }
+          ],
+          "restrictions": [
+            "lector_of_sigmar",
+            "high_priest_of_ulric"
+          ]
+        },
+        {
+          "id": "knights_of_morr",
+          "name": "Order of the Knights of Morr",
+          "character_upgrade_pts": 15,
+          "unit_upgrade_pts_per_model": 3,
+          "unit_ids": [
+            "empire_knights",
+            "inner_circle_knights",
+            "inner_circle_knights_ko_core",
+            "demigryph_knights"
+          ],
+          "all_units_rules": [
+            "Hatred (Undead models)",
+            "6+ Ward save against wounds from non-magical attacks"
+          ],
+          "elite_rules": [
+            "Fear",
+            "Magical Attacks"
+          ],
+          "unlocks": [],
+          "restrictions": [
+            "lector_of_sigmar",
+            "priest_of_sigmar",
+            "priest_of_ulric",
+            "high_priest_of_ulric"
+          ]
+        },
+        {
+          "id": "knights_of_the_fiery_heart",
+          "name": "Order of the Fiery Heart",
+          "character_upgrade_pts": 15,
+          "unit_upgrade_pts_per_model": 3,
+          "unit_ids": [
+            "empire_knights",
+            "inner_circle_knights",
+            "inner_circle_knights_ko_core",
+            "demigryph_knights"
+          ],
+          "all_units_rules": [
+            "Can only be joined by a Fiery Heart Grand Master/Chapter Master, a Lector of Sigmar or a Priest of Sigmar",
+            "Hatred (enemy Wizards, Orcs & Goblins)",
+            "+1 Initiative during the first round of combat"
+          ],
+          "elite_rules": [
+            "May re-roll any natural 1 To Hit or To Wound in the Combat phase"
+          ],
+          "unlocks": [
+            {
+              "unit_id": "flagellants",
+              "list_category": "rare"
+            }
+          ],
+          "restrictions": [
+            "high_priest_of_ulric",
+            "priest_of_ulric"
+          ]
+        }
+      ],
       "rules": [
         {
           "category": "characters",
@@ -290,7 +438,7 @@
           "limit_type": "min_percent",
           "limit_value": 25,
           "eligible_unit_ids": [
-            "inner_circle_knights",
+            "inner_circle_knights_ko_core",
             "empire_knights",
             "empire_archers"
           ],
@@ -335,6 +483,15 @@
             "pistoliers"
           ],
           "notes": "Pistoliers"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "inner_circle_knights_ko_core"
+          ],
+          "notes": "0-1 Inner Circle Knights may be taken as a Core choice"
         }
       ]
     }
@@ -2637,7 +2794,8 @@
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
-        "city_state_of_nuln": "core"
+        "city_state_of_nuln": "core",
+        "bretonnian_exiles": "mercenaries"
       },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
@@ -2700,7 +2858,8 @@
       "list_category": "core",
       "list_category_overrides": {
         "city_state_of_nuln": "core",
-        "knightly_order": "core"
+        "knightly_order": "core",
+        "bretonnian_exiles": "mercenaries"
       },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
@@ -3453,7 +3612,8 @@
       "list_category": "core",
       "list_category_overrides": {
         "city_state_of_nuln": "special",
-        "knightly_order": "core"
+        "knightly_order": "core",
+        "errantry_crusade": "mercenaries"
       },
       "troop_type": "Heavy cavalry",
       "base_size": "30x60mm",
@@ -3597,7 +3757,8 @@
       "category": "cavalry",
       "list_category": "special",
       "list_category_overrides": {
-        "knightly_order": "core"
+        "knightly_order": "special",
+        "errantry_crusade": "mercenaries"
       },
       "troop_type": "Heavy cavalry",
       "base_size": "30x60mm",
@@ -3726,6 +3887,146 @@
         "An Inner Circle Preceptor may purchase magic items up to a total of 50 points."
       ],
       "magic_standard": 50
+    },
+    {
+      "id": "inner_circle_knights_ko_core",
+      "name": "Inner Circle Knights (Core)",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "knightly_order": "core"
+      },
+      "troop_type": "Heavy cavalry",
+      "base_size": "30x60mm",
+      "unit_size": "4+",
+      "points": 29,
+      "profiles": [
+        {
+          "name": "Inner Circle Knight",
+          "profile": {
+            "M": "7",
+            "WS": "4",
+            "BS": "3",
+            "S": "4",
+            "T": "3",
+            "W": "1",
+            "I": "4",
+            "A": "1",
+            "Ld": "9"
+          }
+        },
+        {
+          "name": "Barded Warhorse",
+          "profile": {
+            "M": "7",
+            "WS": "3",
+            "BS": "-",
+            "S": "3",
+            "T": "-",
+            "W": "-",
+            "I": "3",
+            "A": "1",
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Full plate armour",
+        "Shields"
+      ],
+      "special_rules": [
+        "close_order",
+        "counter_charge",
+        "drilled",
+        "first_charge",
+        "inner_circle",
+        "swiftstride",
+        "veteran"
+      ],
+      "options": [
+        {
+          "description": "The entire unit must take one of the following:",
+          "choices": [
+            {
+              "cost": 1,
+              "scope": "per_model",
+              "description": "Great weapons",
+              "category": "special"
+            },
+            {
+              "cost": 1,
+              "scope": "per_model",
+              "description": "Lances",
+              "category": "special"
+            }
+          ],
+          "category": "special"
+        },
+        {
+          "cost": 0,
+          "scope": "per_unit",
+          "description": "Or: May replace shields with great weapons",
+          "category": "special"
+        },
+        {
+          "cost": 2,
+          "scope": "per_model",
+          "description": "Stubborn special rule",
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Inner Circle Preceptor",
+          "cost_per_unit": 7,
+          "champion_stats": {
+            "A": "2"
+          }
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Lance",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1"
+          ]
+        }
+      ],
+      "notes": [
+        "0-1 unit may be taken as a Core choice in a Knightly Order army.",
+        "Inner Circle: When engaged in combat, a model with this special rule (but not its mount) may re-roll any rolls To Hit of a natural 1.",
+        "An Inner Circle Preceptor may purchase magic items up to a total of 50 points."
+      ],
+      "magic_standard": 50,
+      "availability": [
+        "knightly_order"
+      ]
     },
     {
       "id": "empire_road_wardens",
@@ -4503,7 +4804,7 @@
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
-      "points": 5,
+      "points": 6,
       "stats": {
         "M": "4",
         "WS": "3",
@@ -4517,6 +4818,7 @@
       },
       "equipment": [
         "Hand weapons",
+        "Halberds",
         "Light armour"
       ],
       "special_rules": [
@@ -4525,24 +4827,6 @@
         "regimental_unit"
       ],
       "options": [
-        {
-          "description": "The entire unit may take one of the following:",
-          "choices": [
-            {
-              "cost": 1,
-              "scope": "per_model",
-              "description": "Halberds",
-              "category": "special"
-            },
-            {
-              "cost": 1,
-              "scope": "per_model",
-              "description": "Thrusting spears",
-              "category": "special"
-            }
-          ],
-          "category": "special"
-        },
         {
           "cost": 1,
           "scope": "per_model",
@@ -4622,20 +4906,13 @@
       },
       "equipment": [
         "Hand weapons",
-        "Crossbows"
+        "Handguns"
       ],
       "special_rules": [
         "close_order",
-        "detachment",
-        "regimental_unit"
+        "detachment"
       ],
       "options": [
-        {
-          "cost": 1,
-          "scope": "per_model",
-          "description": "Replace crossbows with handguns",
-          "category": "special"
-        },
         {
           "cost": 1,
           "scope": "per_model",
@@ -4706,16 +4983,6 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Crossbow",
-          "range": "30\"",
-          "S": "4",
-          "AP": "—",
-          "special_rules": [
-            "armour_bane_2",
-            "ponderous"
-          ]
-        },
-        {
           "name": "Handgun",
           "range": "24\"",
           "S": "4",
@@ -4765,8 +5032,7 @@
       ],
       "special_rules": [
         "close_order",
-        "detachment",
-        "regimental_unit"
+        "detachment"
       ],
       "command": [
         {
@@ -4803,7 +5069,7 @@
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
-      "points": 7,
+      "points": 8,
       "stats": {
         "M": "4",
         "WS": "4",
@@ -4817,6 +5083,7 @@
       },
       "equipment": [
         "Hand weapons",
+        "Halberds",
         "Light armour"
       ],
       "special_rules": [
@@ -4826,24 +5093,6 @@
         "veteran"
       ],
       "options": [
-        {
-          "description": "The entire unit may take one of the following:",
-          "choices": [
-            {
-              "cost": 1,
-              "scope": "per_model",
-              "description": "Halberds",
-              "category": "special"
-            },
-            {
-              "cost": 1,
-              "scope": "per_model",
-              "description": "Thrusting spears",
-              "category": "special"
-            }
-          ],
-          "category": "special"
-        },
         {
           "cost": 1,
           "scope": "per_model",

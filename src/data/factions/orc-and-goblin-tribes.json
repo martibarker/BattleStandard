@@ -161,6 +161,29 @@
           "limit_type": "max_percent",
           "limit_value": 25,
           "notes": "Any Orc & Goblin Tribes Army of Infamy composition list; Warriors of Chaos (Uneasy); Beastmen Brayherds (Uneasy); Tomb Kings of Khemri (Suspicious)"
+        },
+        {
+          "limit_type": "conditional",
+          "unit_ids": [
+            "black_orc_mobs_grand_core"
+          ],
+          "general_unit_ids": [
+            "black_orc_warboss",
+            "black_orc_bigboss"
+          ],
+          "notes": "Da Boyz: If your General is a Black Orc Boss, Black Orc Mobs may be taken as Core choices"
+        },
+        {
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "black_orc_mobs_grand_core"
+          ],
+          "character_unit_ids": [
+            "black_orc_warboss",
+            "black_orc_bigboss"
+          ],
+          "notes": "Da Boyz: 0-1 Black Orc Mob per Black Orc Boss (special rule)"
         }
       ]
     },
@@ -253,6 +276,28 @@
             "bonegrinder_giants"
           ],
           "notes": "Badlands Ogre Bulls; 0-1 Bonegrinder Giant"
+        },
+        {
+          "limit_type": "conditional",
+          "unit_ids": [
+            "orc_boar_boy_mobs_nomadic_core"
+          ],
+          "general_unit_ids": [
+            "orc_warboss",
+            "orc_bigboss"
+          ],
+          "notes": "If your General is an Orc Boss, 0-1 Orc Boar Boy Mob may be taken as a Core choice"
+        },
+        {
+          "limit_type": "conditional",
+          "unit_ids": [
+            "black_orc_boar_chariots_nomadic_core"
+          ],
+          "general_unit_ids": [
+            "black_orc_warboss",
+            "black_orc_bigboss"
+          ],
+          "notes": "If your General is a Black Orc Boss, 0-1 Black Orc Boar Chariot may be taken as a Core choice"
         }
       ]
     },
@@ -374,6 +419,10 @@
       "name": "Black Orc Warboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": null
+      },
       "troop_type": "Heavy infantry (character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -481,6 +530,10 @@
       "name": "Black Orc Bigboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": null
+      },
       "troop_type": "Heavy infantry (character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -589,6 +642,10 @@
       "name": "Orc Warboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -718,6 +775,10 @@
       "name": "Orc Bigboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -848,6 +909,10 @@
       "name": "Orc Weirdnob",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -927,6 +992,10 @@
       "name": "Orc Weirdboy",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -1006,6 +1075,10 @@
       "name": "Goblin Warboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1115,6 +1188,10 @@
       "name": "Goblin Bigboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1224,6 +1301,10 @@
       "name": "Goblin Oddnob",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1281,6 +1362,10 @@
       "name": "Goblin Oddgit",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1338,6 +1423,10 @@
       "name": "Night Goblin Warboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1446,6 +1535,10 @@
       "name": "Night Goblin Bigboss",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1554,6 +1647,10 @@
       "name": "Night Goblin Oddnob",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1605,6 +1702,10 @@
       "name": "Night Goblin Oddgit",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1656,6 +1757,10 @@
       "name": "Orc Bully",
       "source": "ravening_hordes",
       "category": "character",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -1700,6 +1805,11 @@
       "name": "Troll Hag",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "rare",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": "characters"
+      },
       "troop_type": "Behemoth (character)",
       "base_size": "60x100mm",
       "unit_size": "1",
@@ -1768,13 +1878,18 @@
       "name": "Kiknik Toofsnatcha",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
+      "list_category_overrides": {
+        "nomadic_waaagh": "characters",
+        "troll_horde": "characters"
+      },
       "troop_type": "Light Cavalry (named character)",
       "base_size": "25x50mm",
       "unit_size": "1",
       "points": 105,
       "is_named_character": true,
       "stats": {
-        "M": 4,
+        "M": 9,
         "WS": 5,
         "BS": 3,
         "S": 4,
@@ -1844,6 +1959,11 @@
       "name": "Ogdruz Swampdigga",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": "characters"
+      },
       "troop_type": "Regular Infantry (named character)",
       "base_size": "30x30mm",
       "unit_size": "1",
@@ -2030,6 +2150,119 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
+      "troop_type": "Heavy infantry",
+      "base_size": "30x30mm",
+      "unit_size": "5+",
+      "points": 12,
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 4,
+        "T": 4,
+        "W": 1,
+        "I": 3,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapons",
+        "Full plate armour"
+      ],
+      "special_rules": [
+        "choppas",
+        "close_order",
+        "da_boyz",
+        "furious_charge",
+        "ignore_panic",
+        "motley_crew",
+        "quell_impetuosity"
+      ],
+      "options": [
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Additional hand weapon",
+          "category": "weapon"
+        },
+        {
+          "cost": 2,
+          "scope": "per_model",
+          "description": "Great weapon",
+          "category": "weapon"
+        },
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Shield",
+          "category": "armour"
+        },
+        {
+          "cost": 0,
+          "scope": "per_unit",
+          "description": "Magic standard worth up to 50 pts (0-1 per army)",
+          "category": "special"
+        },
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Stubborn special rule (0-1 per army)",
+          "category": "special"
+        },
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Veteran special rule (0-1 per army)",
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "cost_per_unit": 6,
+          "name": "Boss"
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        }
+      ],
+      "notes": [
+        "Boss may purchase magic items up to 25 pts",
+        "Da Boyz: army must include one Black Orc Boss for every Black Orc Mob and vice versa"
+      ]
+    },
+    {
+      "id": "black_orc_mobs_grand_core",
+      "name": "Black Orc Mobs",
+      "source": "ravening_hordes",
+      "category": "infantry",
+      "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Heavy infantry",
       "base_size": "30x30mm",
       "unit_size": "5+",
@@ -2135,6 +2368,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "30x30mm",
       "unit_size": "5+",
@@ -2270,6 +2507,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
@@ -2370,6 +2611,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
@@ -2469,6 +2714,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Swarms",
       "base_size": "40x40mm",
       "unit_size": "2+",
@@ -2506,6 +2755,10 @@
       "name": "Nasty Skulkers",
       "source": "ravening_hordes",
       "category": "infantry",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -2542,6 +2795,10 @@
       "name": "Fanatics",
       "source": "ravening_hordes",
       "category": "infantry",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry",
       "base_size": "25mm (round base)",
       "unit_size": "1",
@@ -2587,6 +2844,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "1+/5+*",
@@ -2678,6 +2939,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": "core"
+      },
       "troop_type": "Monstrous infantry",
       "base_size": "40x40mm",
       "unit_size": "1-9",
@@ -2804,6 +3069,10 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": "special",
+        "troll_horde": "special"
+      },
       "troop_type": "Heavy cavalry",
       "base_size": "30x60mm",
       "unit_size": "4+",
@@ -2811,7 +3080,7 @@
       "stats_by_model": [
         {
           "model": "Boar Boy",
-          "M": "-",
+          "M": 7,
           "WS": 3,
           "BS": 3,
           "S": 3,
@@ -2824,7 +3093,175 @@
         },
         {
           "model": "Boss",
-          "M": "-",
+          "M": 7,
+          "WS": 3,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 3,
+          "A": 2,
+          "Ld": 7,
+          "points_bonus": 8
+        },
+        {
+          "model": "War Boar",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": [
+        {
+          "model": "Boar Boys",
+          "equipment": [
+            "Hand weapons",
+            "Light armour"
+          ]
+        },
+        {
+          "model": "War Boars",
+          "equipment": [
+            "Tusks (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "armoured_hide_1",
+        "choppas",
+        "close_order",
+        "counter_charge",
+        "furious_charge",
+        "ignore_goblin_panic",
+        "impetuous",
+        "swiftstride",
+        "tusker_charge",
+        "warband"
+      ],
+      "options": [
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Cavalry spears",
+          "category": "weapon"
+        },
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Shields",
+          "category": "armour"
+        },
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Replace light armour with heavy armour",
+          "category": "armour"
+        },
+        {
+          "cost": 2,
+          "scope": "per_model",
+          "description": "Big 'Uns special rule (0-1 per army)",
+          "category": "special"
+        },
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Replace light armour with Frenzy (0-1 per 1,000 pts)",
+          "category": "special",
+          "grants_rules": [
+            "frenzy"
+          ]
+        },
+        {
+          "cost": 0,
+          "scope": "per_unit",
+          "description": "Magic standard worth up to 50 pts (0-1 per 1,000 pts)",
+          "category": "special"
+        },
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Warpaint (Frenzied unit only)",
+          "category": "special",
+          "condition": "Replace light armour with Frenzy (0-1 per 1,000 pts)"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "cost_per_unit": 8,
+          "name": "Boss"
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spear",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": [
+            "fight_in_extra_rank"
+          ]
+        },
+        {
+          "name": "Cavalry spear",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": [
+            "fight_in_extra_rank"
+          ]
+        }
+      ],
+      "notes": [
+        "Furious Charge applies to Orc Boar Boys & Boss only; Boss may purchase magic items up to 25 pts"
+      ]
+    },
+    {
+      "id": "orc_boar_boy_mobs_nomadic_core",
+      "name": "Orc Boar Boy Mobs",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category_overrides": {
+        "nomadic_waaagh": "core",
+        "troll_horde": null
+      },
+      "troop_type": "Heavy cavalry",
+      "base_size": "30x60mm",
+      "unit_size": "4+",
+      "points": 15,
+      "stats_by_model": [
+        {
+          "model": "Boar Boy",
+          "M": 7,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 4,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 6,
+          "points": 15
+        },
+        {
+          "model": "Boss",
+          "M": 7,
           "WS": 3,
           "BS": 3,
           "S": 4,
@@ -2969,6 +3406,10 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": "core"
+      },
       "troop_type": "Light cavalry",
       "base_size": "25x50mm",
       "unit_size": "5+",
@@ -2976,7 +3417,7 @@
       "stats_by_model": [
         {
           "model": "Spider Rider",
-          "M": "-",
+          "M": 7,
           "WS": 2,
           "BS": 3,
           "S": 3,
@@ -2989,7 +3430,7 @@
         },
         {
           "model": "Boss",
-          "M": "-",
+          "M": 7,
           "WS": 2,
           "BS": 3,
           "S": 3,
@@ -3107,6 +3548,10 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "core",
+      "list_category_overrides": {
+        "nomadic_waaagh": "core",
+        "troll_horde": "core"
+      },
       "troop_type": "Light cavalry",
       "base_size": "25x50mm",
       "unit_size": "5+",
@@ -3114,7 +3559,7 @@
       "stats_by_model": [
         {
           "model": "Wolf Rider",
-          "M": "-",
+          "M": 9,
           "WS": 2,
           "BS": 3,
           "S": 3,
@@ -3127,7 +3572,7 @@
         },
         {
           "model": "Boss",
-          "M": "-",
+          "M": 9,
           "WS": 2,
           "BS": 3,
           "S": 3,
@@ -3258,6 +3703,10 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Light cavalry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -3265,7 +3714,7 @@
       "stats_by_model": [
         {
           "model": "Squig Hopper",
-          "M": "-",
+          "M": "3D6",
           "WS": 2,
           "BS": 3,
           "S": 3,
@@ -3278,7 +3727,7 @@
         },
         {
           "model": "Boss",
-          "M": "-",
+          "M": "3D6",
           "WS": 2,
           "BS": 3,
           "S": 3,
@@ -3373,6 +3822,10 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": "special",
+        "troll_horde": "special"
+      },
       "troop_type": "Heavy chariot",
       "base_size": "50x100mm",
       "unit_size": "1",
@@ -3381,7 +3834,7 @@
       "stats_by_model": [
         {
           "model": "Chariot",
-          "M": "-",
+          "M": 7,
           "WS": "-",
           "BS": "-",
           "S": 5,
@@ -3476,6 +3929,10 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": "core",
+        "troll_horde": "special"
+      },
       "troop_type": "Light chariot",
       "base_size": "50x100mm (two wolves), 60x100mm (three wolves)",
       "unit_size": "1-5",
@@ -3484,7 +3941,7 @@
       "stats_by_model": [
         {
           "model": "Chariot",
-          "M": "-",
+          "M": 9,
           "WS": "-",
           "BS": "-",
           "S": 5,
@@ -3568,6 +4025,10 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": "special",
+        "troll_horde": null
+      },
       "troop_type": "Light chariot",
       "base_size": "50x75mm (min), 50x100mm (max)",
       "unit_size": "1-6",
@@ -3624,12 +4085,10 @@
       "source": "arcane_journal",
       "category": "cavalry",
       "list_category": "rare",
-      "list_category_overrides": [
-        {
-          "composition_id": "nomadic_waaagh",
-          "list_category": "rare"
-        }
-      ],
+      "list_category_overrides": {
+        "nomadic_waaagh": "rare",
+        "troll_horde": null
+      },
       "troop_type": "Heavy Chariot",
       "base_size": "50x100mm",
       "unit_size": "1",
@@ -3638,7 +4097,7 @@
       "stats_by_model": [
         {
           "model": "Chariot",
-          "M": "-",
+          "M": 7,
           "WS": "-",
           "BS": "-",
           "S": 5,
@@ -3654,7 +4113,121 @@
           "WS": 4,
           "BS": 3,
           "S": 4,
+          "T": 4,
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        },
+        {
+          "model": "War Boars (x2)",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
           "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": [
+        {
+          "model": "Black Orc Crew",
+          "equipment": [
+            "Hand weapons"
+          ]
+        },
+        {
+          "model": "War Boars",
+          "equipment": [
+            "Tusks (hand weapons)"
+          ]
+        }
+      ],
+      "special_rules": [
+        "choppas",
+        "close_order",
+        "first_charge",
+        "furious_charge",
+        "ignore_panic",
+        "impact_hits_d6_plus_1",
+        "tusker_charge"
+      ],
+      "options": [
+        {
+          "cost": 1,
+          "scope": "per_model",
+          "description": "Each Black Orc Crew: additional hand weapon",
+          "category": "weapon"
+        },
+        {
+          "cost": 2,
+          "scope": "per_model",
+          "description": "Each Black Orc Crew: great weapon",
+          "category": "weapon"
+        },
+        {
+          "cost": 10,
+          "scope": "per_unit",
+          "description": "Standard bearer",
+          "category": "special"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        }
+      ],
+      "notes": [
+        "Character mount: Black Orc Warboss or Bigboss may be mounted on a Black Orc Boar Chariot for +130 pts",
+        "Furious Charge applies to Black Orc Crew only"
+      ]
+    },
+    {
+      "id": "black_orc_boar_chariots_nomadic_core",
+      "name": "Black Orc Boar Chariots",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category_overrides": {
+        "nomadic_waaagh": "core",
+        "troll_horde": null
+      },
+      "troop_type": "Heavy Chariot",
+      "base_size": "50x100mm",
+      "unit_size": "1",
+      "points": 130,
+      "armour_value": "3+",
+      "stats_by_model": [
+        {
+          "model": "Chariot",
+          "M": 7,
+          "WS": "-",
+          "BS": "-",
+          "S": 5,
+          "T": 5,
+          "W": 4,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "model": "Black Orc Crew (x2)",
+          "M": "-",
+          "WS": 4,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
           "W": "-",
           "I": 3,
           "A": 1,
@@ -3800,6 +4373,10 @@
       "source": "ravening_hordes",
       "category": "monster",
       "list_category": "rare",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Behemoth",
       "base_size": "100x150mm",
       "unit_size": "1",
@@ -3881,6 +4458,10 @@
       "source": "ravening_hordes",
       "category": "monster",
       "list_category": "rare",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "Behemoth",
       "base_size": "50x75mm",
       "unit_size": "1",
@@ -3926,6 +4507,10 @@
       "source": "ravening_hordes",
       "category": "monster",
       "list_category": "rare",
+      "list_category_overrides": {
+        "nomadic_waaagh": "rare",
+        "troll_horde": "rare"
+      },
       "troop_type": "Behemoth",
       "base_size": "50x50mm (min), 50x75mm (max)",
       "unit_size": "1",
@@ -3967,6 +4552,10 @@
       "source": "ravening_hordes",
       "category": "war_machine",
       "list_category": "special",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "War machine",
       "base_size": "50x50mm (machine), 25x25mm (crew)",
       "unit_size": "1",
@@ -4037,6 +4626,10 @@
       "source": "ravening_hordes",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "War machine",
       "base_size": "50x75mm (machine), 25x25mm (crew)",
       "unit_size": "1",
@@ -4110,6 +4703,10 @@
       "source": "ravening_hordes",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "nomadic_waaagh": null,
+        "troll_horde": null
+      },
       "troop_type": "War machine",
       "base_size": "60x100mm (machine), 25x25mm (crew)",
       "unit_size": "1",
@@ -4179,7 +4776,11 @@
       "name": "Badlands Ogre Bulls",
       "source": "arcane_journal",
       "category": "infantry",
-      "list_category": "core",
+      "list_category": "mercenaries",
+      "list_category_overrides": {
+        "nomadic_waaagh": "mercenaries",
+        "troll_horde": "mercenaries"
+      },
       "troop_type": "Monstrous infantry",
       "base_size": "40x40mm",
       "unit_size": "3+",
@@ -4297,7 +4898,11 @@
       "name": "Bonegrinder Giants",
       "source": "arcane_journal",
       "category": "monster",
-      "list_category": "rare",
+      "list_category": "mercenaries",
+      "list_category_overrides": {
+        "nomadic_waaagh": "mercenaries",
+        "troll_horde": "mercenaries"
+      },
       "troop_type": "Behemoth",
       "base_size": "50x100mm (min), 100x150mm (max)",
       "unit_size": "1",

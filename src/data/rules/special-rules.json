@@ -356,10 +356,22 @@
       "description": "Refer to the Warhammer: The Old World rulebook."
     },
     {
+      "id": "armour_bane_3_pump_wagon_impact_hits_only",
+      "name": "Armour Bane (3) — Impact Hits only",
+      "source": "ravening_hordes",
+      "description": "This model's Impact Hits have the Armour Bane (3) special rule. Refer to the Warhammer: The Old World rulebook for the Armour Bane special rule."
+    },
+    {
       "id": "armoured_hide_1",
       "name": "Armoured Hide (1)",
       "source": "rulebook",
       "description": "Refer to the Warhammer: The Old World rulebook."
+    },
+    {
+      "id": "armoured_hide_1_chompa",
+      "name": "Armoured Hide (1) — Chompa",
+      "source": "ravening_hordes",
+      "description": "Chompa has Armoured Hide (1). Refer to the Warhammer: The Old World rulebook for the Armoured Hide special rule."
     },
     {
       "id": "magical_attacks",

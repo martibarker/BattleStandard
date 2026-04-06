@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Standard — Arcane Slate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="dark"] {
+    --bg-base: #07090f;
+    --bg-surface: #0b0e18;
+    --bg-elevated: #10141f;
+    --bg-card: #0d1119;
+    --bg-card-hover: #121828;
+    --border: #1a2238;
+    --border-bright: #243050;
+    --text-primary: #dce8f8;
+    --text-secondary: #8090b0;
+    --text-muted: #3a4860;
+    --accent: #e08020;
+    --accent-dim: #8a4a10;
+    --accent-glow: rgba(224,128,32,0.12);
+    --accent-glow-strong: rgba(224,128,32,0.25);
+    --blue: #4070d0;
+    --blue-dim: rgba(64,112,208,0.15);
+    --blue-bright: #6090e0;
+    --rune-blue: rgba(100,150,255,0.08);
+    --green: #30a860;
+    --red: #d04040;
+    --sigil-opacity: 0.06;
+    --glow-col: rgba(100,150,255,0.05);
+  }
+  :root[data-theme="light"] {
+    --bg-base: #f0f4fa;
+    --bg-surface: #f8faff;
+    --bg-elevated: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f4f8ff;
+    --border: #c8d4e8;
+    --border-bright: #a0b4d0;
+    --text-primary: #0a1020;
+    --text-secondary: #3050a0;
+    --text-muted: #8090b0;
+    --accent: #c05c00;
+    --accent-dim: #d0800a;
+    --accent-glow: rgba(192,92,0,0.08);
+    --accent-glow-strong: rgba(192,92,0,0.15);
+    --blue: #1a50c0;
+    --blue-dim: rgba(26,80,192,0.06);
+    --blue-bright: #2060d0;
+    --rune-blue: rgba(50,100,200,0.05);
+    --green: #1a8040;
+    --red: #b02020;
+    --sigil-opacity: 0.04;
+    --glow-col: rgba(50,100,200,0.03);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+
+  /* Arcane background sigil */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 50%, var(--glow-col) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Rune grid */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--rune-blue) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rune-blue) 1px, transparent 1px),
+      linear-gradient(var(--rune-blue) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, var(--rune-blue) 0.5px, transparent 0.5px);
+    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .layout { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* ── ARCANE HEADER ── */
+  header {
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-bright);
+    padding: 0 28px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  /* Arcane circle logo */
+  .arcane-mark {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .arcane-mark svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-wordmark {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .logo-upper {
+    font-family: 'Philosopher', serif;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1;
+  }
+
+  .logo-lower {
+    font-family: 'Philosopher', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+
+  .logo-lower span { color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 2px;
+  }
+
+  .hn-item {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+  }
+
+  .hn-item:hover { color: var(--text-secondary); }
+  .hn-item.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .header-right { display: flex; align-items: center; gap: 12px; }
+
+  .theme-btn {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-bright);
+    color: var(--text-muted);
+    padding: 7px 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── SPELLBOOK HEADER ── */
+  .spellbook-header {
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .sb-left { display: flex; flex-direction: column; gap: 3px; }
+
+  .sb-incantation {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .sb-army-name {
+    font-family: 'Philosopher', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+
+  .sb-detail {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .sb-right { display: flex; align-items: center; gap: 24px; }
+
+  .mana-pool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Arcane mana circle */
+  .mana-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid var(--border-bright);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--bg-elevated);
+    box-shadow: inset 0 0 16px var(--accent-glow), 0 0 8px var(--accent-glow);
+  }
+
+  .mana-circle::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-dim);
+    opacity: 0.4;
+  }
+
+  .mana-num {
+    font-family: 'Philosopher', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .mana-denom {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    line-height: 1;
+  }
+
+  .mana-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* Remaining points */
+  .pts-remaining {
+    text-align: center;
+  }
+
+  .pts-rem-num {
+    font-family: 'Philosopher', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--blue-bright);
+    line-height: 1;
+  }
+
+  .pts-rem-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── RUNE VALIDATION ── */
+  .rune-bar {
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 28px;
+    display: flex;
+    gap: 0;
+    align-items: center;
+  }
+
+  .rune-cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px;
+    border-right: 1px solid var(--border);
+  }
+
+  .rune-cell:last-child { border-right: none; }
+
+  .rune-name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .rune-pct {
+    font-family: 'Philosopher', serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .rune-bound {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  .rune-arc { width: 32px; height: 4px; border-radius: 2px; }
+
+  .lords-rune .rune-pct { color: var(--blue-bright); }
+  .lords-rune .rune-arc { background: var(--blue); }
+  .heroes-rune .rune-pct { color: #a080e0; }
+  .heroes-rune .rune-arc { background: #8060c0; }
+  .core-rune .rune-pct { color: var(--green); }
+  .core-rune .rune-arc { background: var(--green); }
+  .special-rune .rune-pct { color: var(--accent); }
+  .special-rune .rune-arc { background: var(--accent); }
+  .rare-rune .rune-pct { color: var(--red); }
+  .rare-rune .rune-arc { background: var(--red); }
+
+  /* ── MAIN ── */
+  .main {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    flex: 1;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border);
+    padding: 16px 0;
+  }
+
+  .sb-sect-head {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 4px 16px 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  .sb-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+
+  .sb-link:hover { color: var(--text-secondary); background: var(--blue-dim); }
+  .sb-link.active { color: var(--text-primary); border-left-color: var(--accent); background: var(--accent-glow); }
+
+  .sb-rune {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid var(--border-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    color: var(--text-muted);
+    font-family: 'Philosopher', serif;
+  }
+
+  /* ── GRIMOIRE ── */
+  .grimoire {
+    padding: 20px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .grimoire-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .grimoire-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .summon-btn {
+    background: var(--accent);
+    border: none;
+    color: var(--bg-base);
+    padding: 7px 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+    box-shadow: 0 0 12px var(--accent-glow-strong);
+  }
+
+  .summon-btn:hover { filter: brightness(1.1); box-shadow: 0 0 20px var(--accent-glow-strong); }
+
+  /* Cat blocks */
+  .cat-block { display: flex; flex-direction: column; gap: 4px; }
+
+  .cat-rune-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+  }
+
+  .cat-rune-symbol {
+    width: 28px;
+    height: 28px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Philosopher', serif;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .cat-rune-name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .cat-rune-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, currentColor, transparent);
+    opacity: 0.2;
+  }
+
+  .cat-rune-pts {
+    font-family: 'Philosopher', serif;
+    font-size: 13px;
+  }
+
+  .lords-head { color: var(--blue-bright); }
+  .heroes-head { color: #a080e0; }
+  .core-head { color: var(--green); }
+  .special-head { color: var(--accent); }
+  .rare-head { color: var(--red); }
+
+  /* Unit cards */
+  .arcane-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .arcane-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: currentColor;
+    opacity: 0.5;
+  }
+
+  .arcane-card.lords { color: var(--blue-bright); }
+  .arcane-card.heroes { color: #a080e0; }
+  .arcane-card.core { color: var(--green); }
+  .arcane-card.special { color: var(--accent); }
+  .arcane-card.rare { color: var(--red); }
+
+  .arcane-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-bright);
+    box-shadow: 0 0 16px var(--accent-glow);
+  }
+
+  .card-left { display: flex; flex-direction: column; gap: 5px; }
+
+  .card-name {
+    font-family: 'Philosopher', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+
+  .card-sub {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .card-sub span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .card-sub span::before {
+    content: '◦';
+    color: var(--border-bright);
+    font-size: 8px;
+  }
+
+  .card-sub span:first-child::before { display: none; }
+
+  .card-rules {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+
+  .arcane-chip {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    background: var(--blue-dim);
+    border: 1px solid var(--border-bright);
+    border-radius: 2px;
+    padding: 1px 7px;
+  }
+
+  .card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .card-pts {
+    text-align: right;
+  }
+
+  .card-pts-num {
+    font-family: 'Philosopher', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .card-pts-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    text-align: right;
+    margin-top: 1px;
+  }
+
+  .card-btns {
+    display: flex;
+    gap: 4px;
+  }
+
+  .card-btn {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-bright);
+    border-radius: 2px;
+    color: var(--text-muted);
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.15s;
+  }
+
+  .card-btn:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 0 6px var(--accent-glow); }
+  .card-btn.banish:hover { border-color: var(--red); color: var(--red); }
+
+  .summon-row {
+    border: 1px dashed var(--border-bright);
+    border-radius: 2px;
+    padding: 9px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 2px;
+  }
+
+  .summon-row:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-glow);
+  }
+
+  footer {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    padding: 10px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Floating mana particle effect */
+  .particle {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 200;
+    animation: float-up 3s ease-out infinite;
+  }
+
+  @keyframes float-up {
+    0% { opacity: 0; transform: translateY(0) scale(1); }
+    20% { opacity: 0.6; }
+    100% { opacity: 0; transform: translateY(-80px) scale(0); }
+  }
+</style>
+</head>
+<body>
+<!-- Floating mana particles (decorative) -->
+<div class="particle" style="left:15%; bottom:30%; animation-delay:0s; animation-duration:4s"></div>
+<div class="particle" style="left:35%; bottom:20%; animation-delay:1.2s; animation-duration:3.5s; background:var(--blue-bright)"></div>
+<div class="particle" style="left:65%; bottom:40%; animation-delay:0.6s; animation-duration:5s"></div>
+<div class="particle" style="left:80%; bottom:25%; animation-delay:2s; animation-duration:3.8s; background:var(--blue-bright)"></div>
+<div class="particle" style="left:50%; bottom:15%; animation-delay:1.8s; animation-duration:4.2s"></div>
+
+<div class="layout">
+  <header>
+    <div class="logo">
+      <div class="arcane-mark">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="16" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+          <circle cx="18" cy="18" r="11" stroke="var(--border-bright)" stroke-width="0.5" stroke-dasharray="2 3"/>
+          <polygon points="18,6 22,14 30,14 24,20 26,28 18,23 10,28 12,20 6,14 14,14" fill="var(--accent)" opacity="0.15" stroke="var(--accent)" stroke-width="0.5"/>
+          <circle cx="18" cy="18" r="3" fill="var(--accent)" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="logo-wordmark">
+        <div class="logo-upper">The</div>
+        <div class="logo-lower">Battle <span>Standard</span></div>
+      </div>
+    </div>
+
+    <nav class="header-nav">
+      <a class="hn-item active" href="#">Grimoire</a>
+      <a class="hn-item" href="#">Lore Index</a>
+      <a class="hn-item" href="#">Ritual Tracker</a>
+      <a class="hn-item" href="#">Divinations</a>
+    </nav>
+
+    <div class="header-right">
+      <button class="theme-btn" onclick="toggleTheme()">◑ Veil</button>
+    </div>
+  </header>
+
+  <div class="spellbook-header">
+    <div class="sb-left">
+      <div class="sb-incantation">Army Manifest · Tome I</div>
+      <div class="sb-army-name">The Empire — 2nd Altdorf</div>
+      <div class="sb-detail">2,000 point engagement · Regimental formation</div>
+    </div>
+    <div class="sb-right">
+      <div class="mana-pool">
+        <div class="mana-circle">
+          <div class="mana-num">1505</div>
+          <div class="mana-denom">/ 2000</div>
+        </div>
+        <span class="mana-label">Points Bound</span>
+      </div>
+      <div class="pts-remaining">
+        <div class="pts-rem-num">495</div>
+        <span class="pts-rem-label">Unbound</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rune-bar">
+    <div class="rune-cell lords-rune">
+      <span class="rune-name">Lords</span>
+      <div class="rune-arc" style="width:21%"></div>
+      <span class="rune-pct">21%</span>
+      <span class="rune-bound">≤ 25% ✓</span>
+    </div>
+    <div class="rune-cell heroes-rune">
+      <span class="rune-name">Heroes</span>
+      <div class="rune-arc" style="width:46%"></div>
+      <span class="rune-pct">11.5%</span>
+      <span class="rune-bound">≤ 25% ✓</span>
+    </div>
+    <div class="rune-cell core-rune">
+      <span class="rune-name">Core</span>
+      <div class="rune-arc" style="width:58%"></div>
+      <span class="rune-pct">29%</span>
+      <span class="rune-bound">≥ 25% ✓</span>
+    </div>
+    <div class="rune-cell special-rune">
+      <span class="rune-name">Special</span>
+      <div class="rune-arc" style="width:58%"></div>
+      <span class="rune-pct">29%</span>
+      <span class="rune-bound">≤ 50% ✓</span>
+    </div>
+    <div class="rune-cell rare-rune">
+      <span class="rune-name">Rare</span>
+      <div class="rune-arc" style="width:50%"></div>
+      <span class="rune-pct">12.5%</span>
+      <span class="rune-bound">≤ 25% ✓</span>
+    </div>
+  </div>
+
+  <div class="main">
+    <aside class="sidebar">
+      <div style="padding: 0 0 16px">
+        <div class="sb-sect-head">Tomes</div>
+        <a class="sb-link active" href="#"><div class="sb-rune">I</div>2nd Altdorf</a>
+        <a class="sb-link" href="#"><div class="sb-rune">II</div>Ironbreakers</a>
+        <a class="sb-link" href="#"><div class="sb-rune">+</div>New Tome</a>
+      </div>
+      <div>
+        <div class="sb-sect-head">Sanctum</div>
+        <a class="sb-link active" href="#"><div class="sb-rune">⚔</div>Grimoire</a>
+        <a class="sb-link" href="#"><div class="sb-rune">📖</div>Lore</a>
+        <a class="sb-link" href="#"><div class="sb-rune">⏳</div>Ritual</a>
+        <a class="sb-link" href="#"><div class="sb-rune">?</div>Oracle</a>
+      </div>
+    </aside>
+
+    <div class="grimoire">
+      <div class="grimoire-toolbar">
+        <div class="grimoire-title">Bound Entities · Army Manifest</div>
+        <button class="summon-btn">+ Summon Unit</button>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-rune-head lords-head">
+          <div class="cat-rune-symbol">L</div>
+          <span class="cat-rune-name">Lords</span>
+          <div class="cat-rune-line"></div>
+          <span class="cat-rune-pts">420 pts</span>
+        </div>
+        <div class="arcane-card lords">
+          <div class="card-left">
+            <div class="card-name">Karl Franz on Deathclaw</div>
+            <div class="card-sub">
+              <span>1 model</span>
+              <span>50×75mm</span>
+              <span>Griffon Mount</span>
+            </div>
+            <div class="card-rules">
+              <span class="arcane-chip">General</span>
+              <span class="arcane-chip">Inspiring Presence</span>
+              <span class="arcane-chip">The Hammer of Judgment</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-pts">
+              <div class="card-pts-num">420</div>
+              <span class="card-pts-label">pts</span>
+            </div>
+            <div class="card-btns">
+              <button class="card-btn">✎</button>
+              <button class="card-btn banish">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-rune-head heroes-head">
+          <div class="cat-rune-symbol">H</div>
+          <span class="cat-rune-name">Heroes</span>
+          <div class="cat-rune-line"></div>
+          <span class="cat-rune-pts">115 pts</span>
+        </div>
+        <div class="arcane-card heroes">
+          <div class="card-left">
+            <div class="card-name">Battle Wizard — Level 2</div>
+            <div class="card-sub">
+              <span>1 model</span>
+              <span>25×25mm</span>
+              <span>Lore of Fire</span>
+            </div>
+            <div class="card-rules">
+              <span class="arcane-chip">Channelling Staff</span>
+              <span class="arcane-chip">Fireball</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-pts">
+              <div class="card-pts-num">115</div>
+              <span class="card-pts-label">pts</span>
+            </div>
+            <div class="card-btns">
+              <button class="card-btn">✎</button>
+              <button class="card-btn banish">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-rune-head core-head">
+          <div class="cat-rune-symbol">C</div>
+          <span class="cat-rune-name">Core</span>
+          <div class="cat-rune-line"></div>
+          <span class="cat-rune-pts">440 pts</span>
+        </div>
+        <div class="arcane-card core">
+          <div class="card-left">
+            <div class="card-name">Swordsmen</div>
+            <div class="card-sub"><span>30 models</span><span>25×25mm</span></div>
+            <div class="card-rules">
+              <span class="arcane-chip">Detachment</span>
+              <span class="arcane-chip">Shields</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-pts">
+              <div class="card-pts-num">240</div>
+              <span class="card-pts-label">pts</span>
+            </div>
+            <div class="card-btns">
+              <button class="card-btn">✎</button>
+              <button class="card-btn banish">✕</button>
+            </div>
+          </div>
+        </div>
+        <div class="arcane-card core">
+          <div class="card-left">
+            <div class="card-name">Handgunners</div>
+            <div class="card-sub"><span>20 models</span><span>25×25mm</span></div>
+            <div class="card-rules">
+              <span class="arcane-chip">Handguns</span>
+              <span class="arcane-chip">Marksmen</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-pts">
+              <div class="card-pts-num">200</div>
+              <span class="card-pts-label">pts</span>
+            </div>
+            <div class="card-btns">
+              <button class="card-btn">✎</button>
+              <button class="card-btn banish">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-rune-head special-head">
+          <div class="cat-rune-symbol">S</div>
+          <span class="cat-rune-name">Special</span>
+          <div class="cat-rune-line"></div>
+          <span class="cat-rune-pts">280 pts</span>
+        </div>
+        <div class="arcane-card special">
+          <div class="card-left">
+            <div class="card-name">Greatswords</div>
+            <div class="card-sub"><span>10 models</span><span>25×25mm</span></div>
+            <div class="card-rules">
+              <span class="arcane-chip">Stubborn</span>
+              <span class="arcane-chip">Great Weapons</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-pts">
+              <div class="card-pts-num">180</div>
+              <span class="card-pts-label">pts</span>
+            </div>
+            <div class="card-btns">
+              <button class="card-btn">✎</button>
+              <button class="card-btn banish">✕</button>
+            </div>
+          </div>
+        </div>
+        <div class="arcane-card special">
+          <div class="card-left">
+            <div class="card-name">Cannon</div>
+            <div class="card-sub"><span>1 + 3 crew</span><span>60×100mm</span></div>
+            <div class="card-rules">
+              <span class="arcane-chip">War Machine</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-pts">
+              <div class="card-pts-num">100</div>
+              <span class="card-pts-label">pts</span>
+            </div>
+            <div class="card-btns">
+              <button class="card-btn">✎</button>
+              <button class="card-btn banish">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block">
+        <div class="cat-rune-head rare-head">
+          <div class="cat-rune-symbol">R</div>
+          <span class="cat-rune-name">Rare</span>
+          <div class="cat-rune-line"></div>
+          <span class="cat-rune-pts">250 pts</span>
+        </div>
+        <div class="arcane-card rare">
+          <div class="card-left">
+            <div class="card-name">Steam Tank</div>
+            <div class="card-sub"><span>1 model</span><span>60×100mm</span></div>
+            <div class="card-rules">
+              <span class="arcane-chip">Steam-powered</span>
+              <span class="arcane-chip">D6 Steam Points</span>
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card-pts">
+              <div class="card-pts-num">250</div>
+              <span class="card-pts-label">pts</span>
+            </div>
+            <div class="card-btns">
+              <button class="card-btn">✎</button>
+              <button class="card-btn banish">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="summon-row">✦ Summon a New Entity ✦</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-text">Unofficial. Not endorsed by Games Workshop Limited.</div>
+    <div class="footer-text">Rules index: tow.whfb.app · Icons: game-icons.net (CC BY 3.0)</div>
+  </footer>
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  }
+</script>
+</body>
+</html>

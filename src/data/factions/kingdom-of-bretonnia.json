@@ -141,12 +141,21 @@
           "limit_value": 33,
           "eligible_unit_ids": [
             "knights_errant",
-            "battle_pilgrims",
+            "battle_pilgrims_ec_core",
             "knights_of_the_realm_on_foot",
             "squires",
             "mounted_knights_of_the_realm"
           ],
           "notes": "1+ Knights Errant per 1,000 points; 0-1 Battle Pilgrims as Core; Knights of the Realm on Foot, Squires and Mounted Knights of the Realm"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "battle_pilgrims_ec_core"
+          ],
+          "notes": "0-1 unit of Battle Pilgrims may be taken as a Core choice"
         },
         {
           "category": "core",
@@ -1720,6 +1729,80 @@
         "Grail Reliquae additionally has: Blessings of the Lady, Grail Reliquae (special rule), Retinue of the Saints",
         "Base size of Grail Reliquae: 50 x 75 mm",
         "Your army may include one Grail Reliquae per character or unit with the Grail Vow"
+      ]
+    },
+    {
+      "id": "battle_pilgrims_ec_core",
+      "name": "Battle Pilgrims & Grail Reliquae",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "errantry_crusade": "core"
+      },
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5-30",
+      "points": 8,
+      "profiles": [
+        {
+          "name": "Battle Pilgrim",
+          "profile": {
+            "M": 4,
+            "WS": 2,
+            "BS": 2,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Grail Reliquae",
+          "profile": {
+            "M": 4,
+            "WS": 2,
+            "BS": 2,
+            "S": 3,
+            "T": 3,
+            "W": 6,
+            "I": 3,
+            "A": 6,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Light armour",
+        "Shields"
+      ],
+      "special_rules": [
+        "close_order",
+        "hatred_all_enemies",
+        "levies",
+        "peasantry",
+        "stubborn"
+      ],
+      "options": [
+        {
+          "description": "Include a Grail Reliquae (counts as standard bearer and musician; grants Immune to Psychology and Unbreakable when within 12\" of a Grail Vow model)",
+          "cost": 65,
+          "scope": "per_unit",
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "0-1 may be taken as a Core choice in an Errantry Crusade army",
+        "Battle Pilgrims: Close Order, Hatred (All Enemies), Levies, Peasantry, Stubborn",
+        "Grail Reliquae additionally has: Blessings of the Lady, Grail Reliquae (special rule), Retinue of the Saints",
+        "Base size of Grail Reliquae: 50 x 75 mm",
+        "Your army may include one Grail Reliquae per character or unit with the Grail Vow"
+      ],
+      "availability": [
+        "errantry_crusade"
       ]
     },
     {

@@ -11,10 +11,8 @@ import {
   BOUND_SPELL_ITEMS,
   type BoundSpellItem,
 } from '../../utils/magic';
-import WizardSpellSetup, {
-  initWizardSetup,
-  type WizardSetup,
-} from './WizardSpellSetup';
+import WizardSpellSetup from './WizardSpellSetup';
+import { initWizardSetup, type WizardSetup } from './wizardSetupTypes';
 import type { Faction } from '../../types/faction';
 
 // ---------------------------------------------------------------------------

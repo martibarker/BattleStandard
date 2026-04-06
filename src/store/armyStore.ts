@@ -23,6 +23,7 @@ interface ArmyStore {
   removeEntry: (armyId: string, entryId: string) => void;
   duplicateEntry: (armyId: string, entryId: string) => string;
   updateEntry: (armyId: string, entryId: string, patch: Partial<Omit<ArmyEntry, 'id'>>) => void;
+  setSubOrder: (armyId: string, subOrderId: string) => void;
 }
 
 export const useArmyStore = create<ArmyStore>()(
@@ -112,6 +113,15 @@ export const useArmyStore = create<ArmyStore>()(
                   ),
                   updatedAt: new Date().toISOString(),
                 }
+              : a
+          ),
+        })),
+
+      setSubOrder: (armyId, subOrderId) =>
+        set((s) => ({
+          armies: s.armies.map((a) =>
+            a.id === armyId
+              ? { ...a, subOrderId, updatedAt: new Date().toISOString() }
               : a
           ),
         })),

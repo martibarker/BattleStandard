@@ -1,6 +1,75 @@
 import { useState } from 'react';
-import { useGameStore } from '../../store/gameStore';
+import { useGameStore, type PlayerGameState } from '../../store/gameStore';
 import { SECONDARY_OBJECTIVES } from '../../data/secondary-objectives';
+
+interface PlayerColProps {
+  side: 'p1' | 'p2';
+  player: PlayerGameState;
+  accentColor: string;
+  battle: number;
+  secondary: number;
+  showSecondary: boolean;
+  onBattleScoreChange: (side: 'p1' | 'p2', value: string) => void;
+}
+
+function PlayerCol({ side, player, accentColor, battle, secondary, showSecondary, onBattleScoreChange }: PlayerColProps) {
+  const total = battle + secondary;
+
+  return (
+    <div
+      className="rounded p-3"
+      style={{
+        backgroundColor: 'var(--color-bg-dark)',
+        borderLeft: `3px solid ${accentColor}`,
+      }}
+    >
+      <div className="text-sm mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+        {player.name}
+        {player.isAttacker && ' (Attacker)'}
+      </div>
+
+      {/* Total — prominent */}
+      <div className="flex items-baseline gap-1 mb-3">
+        <span className="font-bold" style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem' }}>
+          {total}
+        </span>
+        <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+          VP total
+        </span>
+      </div>
+
+      {/* Battle sub-score */}
+      <div className="mb-2">
+        <label className="text-xs block mb-1" style={{ color: 'var(--color-text-secondary)' }}>
+          Battle VP
+        </label>
+        <input
+          type="number"
+          min="0"
+          value={battle}
+          onChange={(e) => onBattleScoreChange(side, e.target.value)}
+          className="w-full px-2 py-1 rounded text-sm"
+          style={{
+            backgroundColor: 'var(--color-bg-elevated)',
+            border: '1px solid var(--color-border)',
+            color: 'var(--color-text-primary)',
+          }}
+        />
+      </div>
+
+      {/* Secondary sub-score */}
+      {showSecondary && (
+        <div
+          className="text-xs px-2 py-1 rounded flex justify-between"
+          style={{ backgroundColor: 'var(--color-bg-elevated)' }}
+        >
+          <span style={{ color: 'var(--color-text-secondary)' }}>Secondary VP</span>
+          <span style={{ color: 'var(--color-accent-amber)', fontWeight: 600 }}>{secondary}</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
 const SCORING_RULES = {
   unitDestroyed: 'Unit destroyed: 100 × (unit cost / 1,000) VP',
@@ -29,74 +98,7 @@ export default function ScorePanel() {
     setBattleScores((s) => ({ ...s, [side]: Math.max(0, num) }));
   };
 
-  const PlayerCol = ({
-    side,
-    player,
-    accentColor,
-  }: {
-    side: 'p1' | 'p2';
-    player: typeof p1;
-    accentColor: string;
-  }) => {
-    const battle = battleScores[side];
-    const secondary = secondaryScores[side];
-    const total = battle + secondary;
-
-    return (
-      <div
-        className="rounded p-3"
-        style={{
-          backgroundColor: 'var(--color-bg-dark)',
-          borderLeft: `3px solid ${accentColor}`,
-        }}
-      >
-        <div className="text-sm mb-3" style={{ color: 'var(--color-text-secondary)' }}>
-          {player.name}
-          {player.isAttacker && ' (Attacker)'}
-        </div>
-
-        {/* Total — prominent */}
-        <div className="flex items-baseline gap-1 mb-3">
-          <span className="font-bold" style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem' }}>
-            {total}
-          </span>
-          <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-            VP total
-          </span>
-        </div>
-
-        {/* Battle sub-score */}
-        <div className="mb-2">
-          <label className="text-xs block mb-1" style={{ color: 'var(--color-text-secondary)' }}>
-            Battle VP
-          </label>
-          <input
-            type="number"
-            min="0"
-            value={battle}
-            onChange={(e) => handleBattleScoreChange(side, e.target.value)}
-            className="w-full px-2 py-1 rounded text-sm"
-            style={{
-              backgroundColor: 'var(--color-bg-elevated)',
-              border: '1px solid var(--color-border)',
-              color: 'var(--color-text-primary)',
-            }}
-          />
-        </div>
-
-        {/* Secondary sub-score */}
-        {activeSecondaries.length > 0 && (
-          <div
-            className="text-xs px-2 py-1 rounded flex justify-between"
-            style={{ backgroundColor: 'var(--color-bg-elevated)' }}
-          >
-            <span style={{ color: 'var(--color-text-secondary)' }}>Secondary VP</span>
-            <span style={{ color: 'var(--color-accent-amber)', fontWeight: 600 }}>{secondary}</span>
-          </div>
-        )}
-      </div>
-    );
-  };
+  const showSecondary = activeSecondaries.length > 0;
 
   return (
     <div
@@ -133,8 +135,8 @@ export default function ScorePanel() {
       )}
 
       <div className="grid grid-cols-2 gap-4">
-        <PlayerCol side="p1" player={p1} accentColor="var(--color-accent-amber)" />
-        <PlayerCol side="p2" player={p2} accentColor="var(--color-accent-blue)" />
+        <PlayerCol side="p1" player={p1} accentColor="var(--color-accent-amber)" battle={battleScores.p1} secondary={secondaryScores.p1} showSecondary={showSecondary} onBattleScoreChange={handleBattleScoreChange} />
+        <PlayerCol side="p2" player={p2} accentColor="var(--color-accent-blue)" battle={battleScores.p2} secondary={secondaryScores.p2} showSecondary={showSecondary} onBattleScoreChange={handleBattleScoreChange} />
       </div>
 
       {/* Difference */}
