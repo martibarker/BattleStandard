@@ -930,19 +930,77 @@ export default function ArmyEditor() {
 function StatBar({ unit, save }: { unit: Unit; save?: string }) {
   const main = unit.profiles[0];
   if (!main) return null;
-  const p = main.profile;
+
+  // Find mount profile (cavalry) or crew profile (war machine)
+  const mountEntry = unit.profiles.find((pe) => pe.is_mount) ?? null;
+  const crewEntry = unit.category === 'war_machine'
+    ? (unit.profiles.slice(1).find((pe) => !pe.is_mount && !pe.is_champion) ?? null)
+    : null;
+  const extraEntry = mountEntry ?? crewEntry;
+  const multiRow = extraEntry !== null;
+
   const cols = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld', 'Sv'] as const;
   const displaySave = save ?? calcArmourSave(unit.equipment, unit.special_rules ?? []);
+
+  // War machines move at crew speed — show crew M in the machine row
+  const mainStats = { ...main.profile };
+  if (crewEntry && String(mainStats.M) === '-') {
+    mainStats.M = crewEntry.profile.M;
+  }
+
+  // Label for the extra row
+  const extraLabel = mountEntry
+    ? mountEntry.name
+    : crewEntry
+      ? `Crew ×${crewEntry.profile.W}`
+      : '';
+
   const cellStyle: React.CSSProperties = {
     border: '1px solid var(--f-border)',
     textAlign: 'center',
-    minWidth: '28px',
     padding: '3px 4px',
   };
+  const nameCellStyle: React.CSSProperties = {
+    ...cellStyle,
+    fontFamily: "'Cinzel', Georgia, serif",
+    fontSize: '8px',
+    letterSpacing: '0.04em',
+    textTransform: 'uppercase',
+    color: 'var(--f-text-3)',
+    textAlign: 'left',
+    paddingLeft: '5px',
+    width: '62px',
+    maxWidth: '62px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  };
+
+  const renderRow = (stats: typeof main.profile, rowSave: string, label: string) => (
+    <tr>
+      {multiRow && <td style={nameCellStyle} title={label}>{label}</td>}
+      {cols.map((s) => {
+        const val = s === 'Sv' ? rowSave : String(stats[s as keyof typeof stats] ?? '-');
+        return (
+          <td key={s} style={{
+            ...cellStyle,
+            fontFamily: "'Cinzel', Georgia, serif",
+            fontSize: '13px',
+            fontWeight: 700,
+            color: s === 'Sv' && val === '-' ? 'var(--f-text-4)' : 'var(--f-text)',
+          }}>
+            {val}
+          </td>
+        );
+      })}
+    </tr>
+  );
+
   return (
     <table style={{ borderCollapse: 'collapse', marginTop: '8px', width: '100%', tableLayout: 'fixed' }}>
       <thead>
         <tr>
+          {multiRow && <th style={{ ...cellStyle, width: '62px', backgroundColor: 'var(--f-bg)' }} />}
           {cols.map((s) => (
             <th key={s} style={{
               ...cellStyle,
@@ -959,22 +1017,8 @@ function StatBar({ unit, save }: { unit: Unit; save?: string }) {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          {cols.map((s) => {
-            const val = s === 'Sv' ? displaySave : String(p[s as keyof typeof p] ?? '-');
-            return (
-              <td key={s} style={{
-                ...cellStyle,
-                fontFamily: "'Cinzel', Georgia, serif",
-                fontSize: '13px',
-                fontWeight: 700,
-                color: s === 'Sv' && val === '-' ? 'var(--f-text-4)' : 'var(--f-text)',
-              }}>
-                {val}
-              </td>
-            );
-          })}
-        </tr>
+        {renderRow(mainStats, displaySave, main.name)}
+        {extraEntry && renderRow(extraEntry.profile, '-', extraLabel)}
       </tbody>
     </table>
   );
