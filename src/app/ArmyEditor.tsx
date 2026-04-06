@@ -1,11 +1,14 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
 import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, flattenEquipment, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
+import { FACTION_THEMES } from '../components/Layout';
 import type { Faction, Unit, WeaponProfile, Option, OptionChoice } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
+import ValidationBars from '../components/ValidationBars';
+import { generateArmyName } from '../data/armyNames';
 
 
 type BrowserTab = 'characters' | 'core' | 'special' | 'rare';
@@ -48,8 +51,8 @@ export default function ArmyEditor() {
   const army = armies.find((a) => a.id === id);
   const faction = army ? getFaction(army.factionId) : undefined;
 
-  const [browserTab, setBrowserTab] = useState<BrowserTab>('characters');
-  const [mobileView, setMobileView] = useState<'browse' | 'list'>('browse');
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerTab, setDrawerTab] = useState<BrowserTab>('characters');
   const [editingName, setEditingName] = useState(false);
   const [nameInput, setNameInput] = useState('');
   const [expandedEntryId, setExpandedEntryId] = useState<string | null>(null);
@@ -59,15 +62,24 @@ export default function ArmyEditor() {
     talisman: true,
     enchanted_item: true,
     arcane_item: true,
+    magic_standard: false,
+    magic_items_section: true,
   });
   const [toast, setToast] = useState<{ message: string; key: number } | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Apply faction theme to whole page when editing an army
+  useEffect(() => {
+    const html = document.documentElement;
+    const theme = army ? FACTION_THEMES[army.factionId] : undefined;
+    if (theme) html.setAttribute('data-faction', theme);
+  }, [army?.factionId]);
+
   if (!army || !faction) {
     return (
       <div className="p-6">
-        <p style={{ color: 'var(--color-text-secondary)' }}>{!army ? 'Army not found.' : 'Faction data not found.'}</p>
-        <button onClick={() => navigate('/army-builder')} className="mt-3 text-sm underline" style={{ color: 'var(--color-accent-blue)' }}>
+        <p style={{ color: 'var(--f-text-3)' }}>{!army ? 'Army not found.' : 'Faction data not found.'}</p>
+        <button onClick={() => navigate('/army-builder')} className="mt-3 text-sm underline" style={{ color: 'var(--f-primary)' }}>
           Back to My Armies
         </button>
       </div>
@@ -107,77 +119,269 @@ export default function ArmyEditor() {
     updateEntry(armyId, entry.id, { quantity: next });
   }
 
-  const pctColor = (pct: number, rule: 'min' | 'max', threshold: number) => {
-    if (rule === 'max' && pct > threshold) return 'var(--color-accent-amber)';
-    if (rule === 'min' && pct < threshold && pts.total > 0) return 'var(--color-accent-amber)';
-    return 'var(--color-accent-blue)';
-  };
+  function openDrawer(tab: BrowserTab) {
+    setDrawerTab(tab);
+    setDrawerOpen(true);
+  }
 
   // ---- sub-components ----
 
+  const isOver = pts.total > army.pointsLimit;
+  const remaining = army.pointsLimit - pts.total;
+
   const EditorHeader = () => (
     <div
-      className="sticky top-0 z-30 flex items-center gap-3 px-4 py-3 border-b"
-      style={{ backgroundColor: 'var(--color-bg-surface)', borderColor: 'var(--color-border)' }}
+      className="sticky top-0 z-30"
+      style={{
+        backgroundColor: 'var(--f-surface)',
+        borderBottom: '1px solid var(--f-border)',
+        transition: 'background 0.4s',
+      }}
     >
-      <button onClick={() => navigate('/army-builder')} className="text-sm shrink-0" style={{ color: 'var(--color-text-secondary)' }}>
-        ← Back
-      </button>
+      {/* Proclamation band */}
+      <div style={{
+        padding: '14px 24px 12px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: '20px',
+        borderBottom: '1px solid var(--f-border)',
+      }}>
+        {/* Left: back + army name */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', flex: 1, minWidth: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '2px' }}>
+            <button
+              onClick={() => navigate('/army-builder')}
+              style={{
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '9px',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'var(--f-text-4)',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0,
+                flexShrink: 0,
+              }}
+            >
+              ← Armies
+            </button>
+            <span style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: '8px',
+              letterSpacing: '0.5em',
+              textTransform: 'uppercase',
+              color: 'var(--f-text-4)',
+            }}>
+              <span style={{ width: '20px', height: '1px', backgroundColor: 'var(--f-gold-rule)', display: 'inline-block' }} />
+              Army Manifest
+            </span>
+          </div>
 
-      <div className="flex-1 min-w-0">
-        {editingName ? (
-          <input
-            autoFocus
-            value={nameInput}
-            onChange={(e) => setNameInput(e.target.value)}
-            onBlur={() => {
-              if (nameInput.trim()) renameArmy(army.id, nameInput.trim());
-              setEditingName(false);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
-              if (e.key === 'Escape') { setEditingName(false); }
-            }}
-            className="rounded px-2 py-0.5 text-base font-semibold w-full"
-            style={{ backgroundColor: 'var(--color-bg-elevated)', color: 'var(--color-text-primary)', border: '1px solid var(--color-accent-amber)' }}
-          />
-        ) : (
-          <button
-            className="text-base font-semibold truncate text-left w-full"
-            style={{ color: 'var(--color-text-primary)' }}
-            onClick={() => { setNameInput(army.name); setEditingName(true); }}
-            title="Click to rename"
-          >
-            {army.name}
-          </button>
-        )}
-        <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-          {comp?.name} · {army.pointsLimit} pts limit
-        </p>
-      </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
+            {editingName ? (
+              <input
+                autoFocus
+                value={nameInput}
+                onChange={(e) => setNameInput(e.target.value)}
+                onBlur={() => {
+                  if (nameInput.trim()) renameArmy(army.id, nameInput.trim());
+                  setEditingName(false);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
+                  if (e.key === 'Escape') { setEditingName(false); }
+                }}
+                style={{
+                  fontFamily: "'Cinzel', Georgia, serif",
+                  fontSize: '22px',
+                  fontWeight: 700,
+                  letterSpacing: '0.02em',
+                  backgroundColor: 'var(--f-elevated)',
+                  color: 'var(--f-text)',
+                  border: '1px solid var(--f-gold)',
+                  borderRadius: '3px',
+                  padding: '2px 8px',
+                  flex: 1,
+                  minWidth: 0,
+                  outline: 'none',
+                }}
+              />
+            ) : (
+              <button
+                onClick={() => { setNameInput(army.name); setEditingName(true); }}
+                title="Click to rename"
+                style={{
+                  fontFamily: "'Cinzel', Georgia, serif",
+                  fontSize: '22px',
+                  fontWeight: 700,
+                  letterSpacing: '0.02em',
+                  color: 'var(--f-text)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: 0,
+                  textAlign: 'left',
+                  lineHeight: 1.1,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                  flex: 1,
+                  minWidth: 0,
+                }}
+              >
+                {army.name}
+              </button>
+            )}
+            <button
+              onClick={() => {
+                const name = generateArmyName(army.factionId);
+                renameArmy(army.id, name);
+                setNameInput(name);
+              }}
+              title="Generate a random name"
+              style={{
+                flexShrink: 0,
+                width: '28px',
+                height: '28px',
+                border: '1px solid var(--f-border-mid)',
+                borderRadius: '3px',
+                backgroundColor: 'var(--f-elevated)',
+                color: 'var(--f-gold)',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '16px',
+                transition: 'border-color 0.15s, color 0.15s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--f-gold)';
+                e.currentTarget.style.color = 'var(--f-primary)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'var(--f-border-mid)';
+                e.currentTarget.style.color = 'var(--f-gold)';
+              }}
+            >
+              ⚄
+            </button>
+          </div>
 
-      <div className="text-right shrink-0">
-        <p
-          className="text-base font-bold"
-          style={{ color: pts.total > army.pointsLimit ? 'var(--color-accent-amber)' : 'var(--color-accent-blue)' }}
-        >
-          {pts.total} / {army.pointsLimit}
-        </p>
-        {errors.length > 0 && (
-          <p className="text-xs" style={{ color: 'var(--color-accent-amber)' }}>
-            {errors.length} issue{errors.length > 1 ? 's' : ''}
+          <p style={{
+            fontFamily: "'Source Serif 4', Georgia, serif",
+            fontStyle: 'italic',
+            fontSize: '12px',
+            color: 'var(--f-text-3)',
+            margin: 0,
+          }}>
+            {army.pointsLimit.toLocaleString()} point engagement · {comp?.name ?? 'Standard'}
           </p>
-        )}
+        </div>
+
+        {/* Right: points circle + unbound */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexShrink: 0 }}>
+          {/* Points circle */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3px' }}>
+            <div style={{
+              width: '80px',
+              height: '80px',
+              borderRadius: '50%',
+              border: '2px solid var(--f-gold)',
+              backgroundColor: 'var(--f-elevated)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              boxShadow: '0 0 0 4px var(--f-gold-dim), inset 0 1px 4px rgba(0,0,0,0.06)',
+              transition: 'all 0.4s',
+            }}>
+              {/* Inner ring */}
+              <div style={{
+                position: 'absolute',
+                inset: '4px',
+                borderRadius: '50%',
+                border: '1px solid var(--f-gold-rule)',
+                pointerEvents: 'none',
+              }} />
+              <span style={{
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '20px',
+                fontWeight: 700,
+                lineHeight: 1,
+                color: isOver ? '#C0392B' : 'var(--f-gold)',
+                transition: 'color 0.4s',
+              }}>{pts.total}</span>
+              <span style={{
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '10px',
+                color: 'var(--f-text-3)',
+                lineHeight: 1,
+              }}>/ {army.pointsLimit}</span>
+            </div>
+            <span style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: '7px',
+              letterSpacing: '0.25em',
+              textTransform: 'uppercase',
+              color: 'var(--f-text-4)',
+            }}>Points Bound</span>
+          </div>
+
+          {/* Remaining / over */}
+          <div style={{ textAlign: 'center' }}>
+            <p style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: '36px',
+              fontWeight: 700,
+              lineHeight: 1,
+              color: isOver ? '#C0392B' : 'var(--f-primary)',
+              margin: 0,
+              transition: 'color 0.4s',
+            }}>
+              {isOver ? `-${Math.abs(remaining)}` : remaining}
+            </p>
+            <p style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: '7px',
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              color: isOver ? '#C0392B' : 'var(--f-text-4)',
+              margin: 0,
+            }}>
+              {isOver ? 'Over Limit' : 'Unbound'}
+            </p>
+          </div>
+        </div>
       </div>
+
+      {/* Validation bars */}
+      <ValidationBars pts={pts} army={army} faction={faction} />
     </div>
   );
 
   const ValidationBanner = () => {
     if (errors.length === 0) return null;
     return (
-      <div className="px-4 py-2 border-b" style={{ backgroundColor: '#2a1a00', borderColor: 'var(--color-accent-amber)' }}>
+      <div style={{
+        padding: '8px 24px',
+        borderBottom: '1px solid var(--f-border)',
+        borderLeft: '4px solid #C0392B',
+        backgroundColor: 'var(--f-elevated)',
+      }}>
         {errors.map((e, i) => (
-          <p key={i} className="text-xs" style={{ color: 'var(--color-accent-amber)' }}>
+          <p key={i} style={{
+            fontSize: '12px',
+            color: '#C0392B',
+            fontFamily: "'Source Serif 4', Georgia, serif",
+            fontStyle: 'italic',
+            margin: '2px 0',
+          }}>
             ⚠ {e.message}
           </p>
         ))}
@@ -185,100 +389,128 @@ export default function ArmyEditor() {
     );
   };
 
-  const UnitBrowser = () => {
-    const units = getUnitsForTab(faction, browserTab, army.compositionId);
+  const UnitBrowserDrawer = () => {
+    const units = getUnitsForTab(faction, drawerTab, army.compositionId);
+    const tabColor = CAT_COLORS[drawerTab];
     return (
-      <div className="flex flex-col h-full overflow-hidden relative">
-        {/* Tabs */}
-        <div className="flex border-b shrink-0" style={{ borderColor: 'var(--color-border)' }}>
-          {TABS.map((tab) => (
+      /* Backdrop */
+      <div
+        onClick={() => setDrawerOpen(false)}
+        style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.45)', zIndex: 300, display: 'flex', justifyContent: 'flex-end' }}
+      >
+        {/* Drawer panel */}
+        <div
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            width: 'min(440px, 100vw)',
+            backgroundColor: 'var(--f-surface)',
+            borderLeft: '1px solid var(--f-border-mid)',
+            boxShadow: '-8px 0 40px rgba(0,0,0,0.2)',
+            display: 'flex',
+            flexDirection: 'column',
+            zIndex: 301,
+            animation: 'drawer-slide-in 0.25s ease',
+            position: 'relative',
+          }}
+        >
+          {/* Drawer header */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 20px 12px', borderBottom: '1px solid var(--f-border)', flexShrink: 0 }}>
+            <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--f-text-4)', margin: 0 }}>
+              Enrol a Unit
+            </p>
             <button
-              key={tab.id}
-              onClick={() => setBrowserTab(tab.id)}
-              className="flex-1 py-2 text-xs font-semibold transition-colors"
-              style={{
-                color: browserTab === tab.id ? 'var(--color-accent-amber)' : 'var(--color-text-secondary)',
-                borderBottom: browserTab === tab.id ? '2px solid var(--color-accent-amber)' : '2px solid transparent',
-                backgroundColor: 'transparent',
-              }}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+              onClick={() => setDrawerOpen(false)}
+              style={{ background: 'none', border: '1px solid var(--f-border)', color: 'var(--f-text-3)', width: '28px', height: '28px', cursor: 'pointer', borderRadius: '3px', fontSize: '14px' }}
+            >✕</button>
+          </div>
 
-        {/* Unit list */}
-        <div className="flex-1 overflow-y-auto p-3 flex flex-col gap-2">
-          {units.map((unit) => {
-            const { min } = parseUnitSize(unit.unit_size);
-            const isFixed = unit.unit_size === '1';
-            const minCost = isFixed ? unit.points : unit.points * min;
-            const inListCount = army.entries.filter((e) => e.unitId === unit.id).length;
-            return (
-              <div
-                key={unit.id}
-                className="rounded border p-3"
-                style={{ backgroundColor: 'var(--color-bg-elevated)', borderColor: 'var(--color-border)' }}
+          {/* Category tabs */}
+          <div style={{ display: 'flex', borderBottom: '1px solid var(--f-border)', flexShrink: 0 }}>
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setDrawerTab(tab.id)}
+                style={{
+                  flex: 1,
+                  padding: '10px 4px',
+                  fontFamily: "'Cinzel', Georgia, serif",
+                  fontSize: '10px',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: drawerTab === tab.id ? CAT_COLORS[tab.id] : 'var(--f-text-4)',
+                  borderBottom: drawerTab === tab.id ? `2px solid ${CAT_COLORS[tab.id]}` : '2px solid transparent',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer',
+                  border: 'none',
+                }}
               >
-                <div className="flex items-start justify-between gap-2">
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold leading-tight" style={{ color: 'var(--color-text-primary)' }}>
-                      {unit.name}
-                    </p>
-                    <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-secondary)' }}>
-                      {unit.troop_type} · {unit.base_size}
-                    </p>
-                    <p className="text-xs mt-0.5" style={{ color: 'var(--color-accent-amber)' }}>
-                      {isFixed ? `${unit.points} pts` : `${unit.points} pts/model · min ${min}${unit.unit_size !== `${min}+` && unit.unit_size !== `${min}` ? ` (${unit.unit_size})` : '+'}`}
-                      {minCost !== unit.points && !isFixed ? ` · from ${minCost} pts` : ''}
-                    </p>
-                    <StatBar unit={unit} />
-                    <SpecialRulesList ruleIds={unit.special_rules} />
-                  </div>
-                  <div className="flex flex-col items-end gap-1.5 shrink-0">
-                    <button
-                      onClick={() => handleAddUnit(unit)}
-                      className="rounded px-3 py-1.5 text-xs font-bold"
-                      style={{ backgroundColor: 'var(--color-accent-amber)', color: '#0f1117' }}
-                    >
-                      + Add
-                    </button>
-                    {inListCount > 0 && (
-                      <span
-                        className="text-xs font-semibold rounded px-1.5 py-0.5"
-                        style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-accent-amber)' }}
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Unit list */}
+          <div style={{ flex: 1, overflowY: 'auto', padding: '12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {units.map((unit) => {
+              const { min } = parseUnitSize(unit.unit_size);
+              const isFixed = unit.unit_size === '1';
+              const minCost = isFixed ? unit.points : unit.points * min;
+              const inListCount = army.entries.filter((e) => e.unitId === unit.id).length;
+              return (
+                <div key={unit.id} style={{ backgroundColor: 'var(--f-card)', border: '1px solid var(--f-border)', borderLeft: `3px solid ${tabColor}`, padding: '10px 14px' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '8px' }}>
+                    <div style={{ minWidth: 0 }}>
+                      <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '13px', fontWeight: 700, color: 'var(--f-text)', margin: '0 0 2px', letterSpacing: '0.02em' }}>{unit.name}</p>
+                      <p style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-text-3)', margin: '0 0 4px' }}>{unit.troop_type} · {unit.base_size}</p>
+                      <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '11px', color: 'var(--f-gold)', margin: '0 0 4px' }}>
+                        {isFixed ? `${unit.points} pts` : `${unit.points} pts/model · min ${min}${unit.unit_size !== `${min}+` && unit.unit_size !== `${min}` ? ` (${unit.unit_size})` : '+'}`}
+                        {minCost !== unit.points && !isFixed ? ` · from ${minCost} pts` : ''}
+                      </p>
+                      <StatBar unit={unit} />
+                      <SpecialRulesList ruleIds={unit.special_rules} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px', flexShrink: 0 }}>
+                      <button
+                        onClick={() => handleAddUnit(unit)}
+                        style={{ backgroundColor: 'var(--f-primary)', color: '#fff', border: 'none', padding: '6px 14px', fontFamily: "'Cinzel', Georgia, serif", fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'pointer' }}
                       >
-                        ×{inListCount} in list
-                      </span>
-                    )}
+                        + Enrol
+                      </button>
+                      {inListCount > 0 && (
+                        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '10px', color: 'var(--f-gold)', backgroundColor: 'var(--f-gold-dim)', padding: '2px 8px', border: '1px solid var(--f-gold-rule)' }}>
+                          ×{inListCount} in list
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
+              );
+            })}
+            {units.length === 0 && (
+              <p style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontStyle: 'italic', fontSize: '13px', textAlign: 'center', padding: '32px 0', color: 'var(--f-text-4)' }}>
+                No units in this category
+              </p>
+            )}
+          </div>
+
+          {/* Toast */}
+          {toast && (
+            <div key={toast.key} style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, display: 'flex', justifyContent: 'center', pointerEvents: 'none', zIndex: 10, padding: '0 16px' }}>
+              <div style={{ backgroundColor: 'var(--f-primary)', color: '#fff', padding: '8px 20px', fontFamily: "'Cinzel', Georgia, serif", fontSize: '12px', letterSpacing: '0.05em', animation: 'toast-pop 2s ease forwards', boxShadow: '0 4px 16px rgba(0,0,0,0.2)' }}>
+                {toast.message}
               </div>
-            );
-          })}
-          {units.length === 0 && (
-            <p className="text-sm text-center py-6" style={{ color: 'var(--color-text-secondary)' }}>
-              No units in this category
-            </p>
+            </div>
           )}
         </div>
-
-        {/* Add confirmation toast */}
-        {toast && (
-          <div
-            key={toast.key}
-            className="absolute bottom-16 left-0 right-0 flex justify-center pointer-events-none z-50 px-4"
-          >
-            <div
-              className="px-4 py-2 rounded-full text-sm font-bold"
-              style={{ backgroundColor: 'var(--color-accent-amber)', color: '#0f1117', animation: 'toast-pop 2s ease forwards' }}
-            >
-              {toast.message}
-            </div>
-          </div>
-        )}
       </div>
     );
+  };
+
+  const CAT_COLORS: Record<BrowserTab, string> = {
+    characters: 'var(--f-cat-characters)',
+    core:       'var(--f-cat-core)',
+    special:    'var(--f-cat-special)',
+    rare:       'var(--f-cat-rare)',
   };
 
   const ArmyList = () => {
@@ -290,56 +522,102 @@ export default function ArmyEditor() {
     ];
 
     return (
-      <div className="overflow-y-auto flex flex-col gap-4 p-3">
-        {/* Category summaries */}
-        <div className="grid grid-cols-2 gap-2">
-          {categories.map((cat) => {
-            const catPts = pts[cat.id];
-            const pct = army.pointsLimit > 0 ? (catPts / army.pointsLimit) * 100 : 0;
-            const rule = comp?.rules.find((r) => r.category === cat.id);
-            return (
-              <div
-                key={cat.id}
-                className="rounded border p-2 text-center"
-                style={{ backgroundColor: 'var(--color-bg-elevated)', borderColor: 'var(--color-border)' }}
-              >
-                <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{cat.label}</p>
-                <p
-                  className="text-sm font-bold"
-                  style={{
-                    color: rule
-                      ? pctColor(pct, rule.limit_type === 'min_percent' ? 'min' : 'max', rule.limit_value)
-                      : 'var(--color-text-primary)',
-                  }}
-                >
-                  {catPts} pts
-                </p>
-                <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-                  {pct.toFixed(0)}%{rule ? ` / ${rule.limit_type === 'min_percent' ? '≥' : '≤'}${rule.limit_value}%` : ''}
-                </p>
-              </div>
-            );
-          })}
+      <div style={{ overflowY: 'auto', display: 'flex', flexDirection: 'column' }}>
+        {/* Toolbar */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 24px 10px', borderBottom: '1px solid var(--f-border)' }}>
+          <p style={{
+            fontFamily: "'Cinzel', Georgia, serif",
+            fontSize: '10px',
+            letterSpacing: '0.25em',
+            textTransform: 'uppercase',
+            color: 'var(--f-text-4)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            margin: 0,
+          }}>
+            <span style={{ width: '20px', height: '1px', backgroundColor: 'var(--f-gold-rule)', display: 'inline-block' }} />
+            Deployment Roster
+          </p>
+          <button
+            onClick={() => openDrawer('characters')}
+            style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: '10px',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: 'var(--f-primary)',
+              border: '1px solid var(--f-primary)',
+              backgroundColor: 'transparent',
+              padding: '5px 14px',
+              cursor: 'pointer',
+              borderRadius: '2px',
+              transition: 'all 0.15s',
+            }}
+          >
+            + Enrol Unit
+          </button>
         </div>
 
-        {/* Entries grouped by category */}
-        {categories.map((cat) => {
-          const entries = army.entries.filter((entry) => {
-            const unit = faction.units.find((u) => u.id === entry.unitId);
-            if (!unit) return false;
-            return getEffectiveListCategory(unit, army.compositionId) === cat.id;
-          });
-          if (entries.length === 0) return null;
+        <div style={{ padding: '16px 24px 24px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          {/* Entries grouped by category */}
+          {categories.map((cat) => {
+            const entries = army.entries.filter((entry) => {
+              const unit = faction.units.find((u) => u.id === entry.unitId);
+              if (!unit) return false;
+              return getEffectiveListCategory(unit, army.compositionId) === cat.id;
+            });
+            const catColor = CAT_COLORS[cat.id];
 
-          return (
-            <div key={cat.id}>
-              <p
-                className="text-xs font-semibold uppercase tracking-wide mb-1.5 px-1"
-                style={{ color: 'var(--color-text-secondary)' }}
-              >
-                {cat.label} — {pts[cat.id]} pts
-              </p>
-              <div className="flex flex-col gap-1.5">
+            return (
+              <div key={cat.id} style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                {/* Heraldic category divider */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
+                  <div style={{
+                    fontFamily: "'Cinzel', Georgia, serif",
+                    fontSize: '10px',
+                    fontWeight: 600,
+                    letterSpacing: '0.25em',
+                    textTransform: 'uppercase',
+                    padding: '4px 14px',
+                    border: `1px solid ${catColor}`,
+                    color: catColor,
+                    position: 'relative',
+                    flexShrink: 0,
+                  }}>
+                    <span style={{ position: 'absolute', left: '-9px', top: '50%', transform: 'translateY(-50%)', fontSize: '7px' }}>◆</span>
+                    {cat.label}
+                    <span style={{ position: 'absolute', right: '-9px', top: '50%', transform: 'translateY(-50%)', fontSize: '7px' }}>◆</span>
+                  </div>
+                  <div style={{ flex: 1, height: '1px', opacity: 0.2, background: `linear-gradient(90deg, ${catColor}, transparent)` }} />
+                  <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '11px', color: 'var(--f-text-3)', flexShrink: 0 }}>
+                    {pts[cat.id]} pts
+                  </span>
+                </div>
+
+                {entries.length === 0 && (
+                  <button
+                    onClick={() => openDrawer(cat.id)}
+                    style={{
+                      width: '100%',
+                      padding: '14px 16px',
+                      border: `1px dashed ${catColor}`,
+                      backgroundColor: 'transparent',
+                      cursor: 'pointer',
+                      fontFamily: "'Cinzel', Georgia, serif",
+                      fontSize: '10px',
+                      letterSpacing: '0.3em',
+                      textTransform: 'uppercase',
+                      color: catColor,
+                      opacity: 0.6,
+                      transition: 'opacity 0.2s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+                    onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.6')}
+                  >
+                    ◆ Enrol a {cat.label} ◆
+                  </button>
+                )}
                 {entries.map((entry) => {
                   const unit = faction.units.find((u) => u.id === entry.unitId);
                   if (!unit) return null;
@@ -349,15 +627,10 @@ export default function ArmyEditor() {
                   const showOptions = !!(unit.options && unit.options.length > 0) || !!(unit.command && unit.command.length > 0);
                   const { min, max } = parseUnitSize(unit.unit_size);
 
-                  // Armour save: combine unit equipment + selected option shields + mount barding
-                  const mountUnit = entry.selectedMountId
-                    ? faction.units.find((u) => u.id === entry.selectedMountId)
-                    : null;
+                  const mountUnit = entry.selectedMountId ? faction.units.find((u) => u.id === entry.selectedMountId) : null;
                   const baseEquip = flattenEquipment(unit.equipment);
                   const extraEquip = [
-                    ...entry.selectedOptions.filter(
-                      (o) => /\bshield\b/i.test(o) && !baseEquip.some((e) => /\bshield\b/i.test(e))
-                    ),
+                    ...entry.selectedOptions.filter((o) => /\bshield\b/i.test(o) && !baseEquip.some((e) => /\bshield\b/i.test(e))),
                     ...flattenEquipment(mountUnit?.equipment),
                   ];
                   const entrySave = calcArmourSave([...baseEquip, ...extraEquip], unit.special_rules ?? []);
@@ -365,67 +638,61 @@ export default function ArmyEditor() {
                   return (
                     <div
                       key={entry.id}
-                      className="rounded border p-2.5"
-                      style={{ backgroundColor: 'var(--color-bg-elevated)', borderColor: 'var(--color-border)' }}
+                      style={{
+                        backgroundColor: 'var(--f-card)',
+                        border: '1px solid var(--f-border)',
+                        borderLeft: `4px solid ${catColor}`,
+                        padding: '12px 16px',
+                      }}
                     >
-                      <div className="flex items-center justify-between gap-2 mb-1.5">
-                        <p className="text-sm font-semibold leading-tight" style={{ color: 'var(--color-text-primary)' }}>
-                          {entry.customName || unit.name}
-                        </p>
-                        <div className="flex items-center gap-2 shrink-0">
-                          <span className="text-sm font-bold" style={{ color: 'var(--color-accent-amber)' }}>
-                            {entryPts} pts
+                      {/* Unit header row */}
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '12px', alignItems: 'start', marginBottom: '6px' }}>
+                        <div>
+                          <p style={{
+                            fontFamily: "'Cinzel', Georgia, serif",
+                            fontSize: '14px',
+                            fontWeight: 700,
+                            color: 'var(--f-text)',
+                            margin: '0 0 2px',
+                            letterSpacing: '0.02em',
+                          }}>{entry.customName || unit.name}</p>
+                          <p style={{
+                            fontFamily: "'Source Serif 4', Georgia, serif",
+                            fontSize: '11px',
+                            fontStyle: 'italic',
+                            color: 'var(--f-text-3)',
+                            margin: 0,
+                          }}>
+                            {unit.troop_type} · {unit.base_size}
+                            {!isFixed ? ` · ${entry.quantity} models` : ''}
+                            {entrySave !== '-' ? ` · Sv ${entrySave}` : ''}
+                          </p>
+                        </div>
+                        <div style={{ textAlign: 'right', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
+                          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '22px', fontWeight: 700, lineHeight: 1, color: 'var(--f-gold)' }}>
+                            {entryPts}
                           </span>
-                          {entrySave !== '-' && (
-                            <span className="text-xs font-semibold px-1 rounded" style={{ color: 'var(--color-text-secondary)', backgroundColor: 'var(--color-bg-dark)' }}>
-                              Sv {entrySave}
-                            </span>
-                          )}
-                          <button
-                            onClick={() => duplicateEntry(armyId, entry.id)}
-                            className="text-xs px-1.5 py-0.5 rounded"
-                            style={{ color: 'var(--color-text-secondary)', backgroundColor: 'var(--color-bg-dark)' }}
-                            aria-label="Duplicate unit"
-                            title="Duplicate"
-                          >
-                            ⧉
-                          </button>
-                          <button
-                            onClick={() => removeEntry(army.id, entry.id)}
-                            className="text-xs px-1.5 py-0.5 rounded"
-                            style={{ color: 'var(--color-text-secondary)', backgroundColor: 'var(--color-bg-dark)' }}
-                            aria-label="Remove unit"
-                          >
-                            ✕
-                          </button>
+                          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '8px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--f-text-4)' }}>
+                            pts
+                          </span>
+                          <div style={{ display: 'flex', gap: '4px', marginTop: '4px' }}>
+                            <button onClick={() => duplicateEntry(armyId, entry.id)} title="Duplicate"
+                              style={{ width: '26px', height: '26px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text-3)', fontSize: '13px', cursor: 'pointer', borderRadius: '3px' }}>⧉</button>
+                            <button onClick={() => removeEntry(army.id, entry.id)} aria-label="Remove"
+                              style={{ width: '26px', height: '26px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: '#C0392B', fontSize: '13px', cursor: 'pointer', borderRadius: '3px' }}>✕</button>
+                          </div>
                         </div>
                       </div>
 
                       {!isFixed && (
-                        <div className="flex items-center gap-2 mb-1.5">
-                          <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>Models:</span>
-                          <button
-                            onClick={() => handleQtyChange(entry, unit, -1)}
-                            disabled={entry.quantity <= min}
-                            className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30"
-                            style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}
-                          >
-                            −
-                          </button>
-                          <span className="text-sm font-semibold w-6 text-center" style={{ color: 'var(--color-text-primary)' }}>
-                            {entry.quantity}
-                          </span>
-                          <button
-                            onClick={() => handleQtyChange(entry, unit, 1)}
-                            disabled={max !== null && entry.quantity >= max}
-                            className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30"
-                            style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}
-                          >
-                            +
-                          </button>
-                          <span className="text-xs ml-1" style={{ color: 'var(--color-text-secondary)' }}>
-                            × {unit.points} pts
-                          </span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                          <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-text-3)' }}>Models:</span>
+                          <button onClick={() => handleQtyChange(entry, unit, -1)} disabled={entry.quantity <= min}
+                            style={{ width: '24px', height: '24px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text)', fontWeight: 700, cursor: 'pointer', borderRadius: '3px', opacity: entry.quantity <= min ? 0.3 : 1 }}>−</button>
+                          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '13px', fontWeight: 700, color: 'var(--f-text)', minWidth: '20px', textAlign: 'center' }}>{entry.quantity}</span>
+                          <button onClick={() => handleQtyChange(entry, unit, 1)} disabled={max !== null && entry.quantity >= max}
+                            style={{ width: '24px', height: '24px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text)', fontWeight: 700, cursor: 'pointer', borderRadius: '3px', opacity: (max !== null && entry.quantity >= max) ? 0.3 : 1 }}>+</button>
+                          <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', color: 'var(--f-text-3)' }}>× {unit.points} pts</span>
                         </div>
                       )}
 
@@ -458,8 +725,7 @@ export default function ArmyEditor() {
                         <>
                           <button
                             onClick={() => setExpandedEntryId(expandedEntryId === entry.id ? null : entry.id)}
-                            className="text-xs mt-1.5 w-full text-left"
-                            style={{ color: 'var(--color-accent-blue)' }}
+                            style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-primary)', marginTop: '6px', background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '100%', textAlign: 'left' }}
                           >
                             {expandedEntryId === entry.id ? '▲ Options' : '▼ Options'}
                             {optsCost > 0 && ` (+${optsCost} pts)`}
@@ -481,65 +747,22 @@ export default function ArmyEditor() {
                   );
                 })}
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
 
-        {army.entries.length === 0 && (
-          <p className="text-sm text-center py-8" style={{ color: 'var(--color-text-secondary)' }}>
-            Add units from the browser to build your list.
-          </p>
-        )}
+        </div>
       </div>
     );
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ minHeight: 0 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
       <EditorHeader />
       <ValidationBanner />
-
-      {/* Mobile toggle */}
-      <div className="flex border-b md:hidden shrink-0" style={{ borderColor: 'var(--color-border)' }}>
-        <button
-          onClick={() => setMobileView('browse')}
-          className="flex-1 py-2 text-sm font-semibold"
-          style={{
-            color: mobileView === 'browse' ? 'var(--color-accent-amber)' : 'var(--color-text-secondary)',
-            borderBottom: mobileView === 'browse' ? '2px solid var(--color-accent-amber)' : '2px solid transparent',
-          }}
-        >
-          Browse Units
-        </button>
-        <button
-          onClick={() => setMobileView('list')}
-          className="flex-1 py-2 text-sm font-semibold"
-          style={{
-            color: mobileView === 'list' ? 'var(--color-accent-amber)' : 'var(--color-text-secondary)',
-            borderBottom: mobileView === 'list' ? '2px solid var(--color-accent-amber)' : '2px solid transparent',
-          }}
-        >
-          My List {army.entries.length > 0 ? `(${army.entries.length})` : ''}
-        </button>
+      <div style={{ flex: 1, overflowY: 'auto' }}>
+        <ArmyList />
       </div>
-
-      {/* Desktop two-column / Mobile single-column */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Browser panel */}
-        <div
-          className={`flex flex-col border-r overflow-hidden ${mobileView === 'browse' ? 'flex' : 'hidden'} md:flex md:w-1/2`}
-          style={{ borderColor: 'var(--color-border)' }}
-        >
-          <UnitBrowser />
-        </div>
-
-        {/* List panel */}
-        <div
-          className={`flex-1 overflow-hidden ${mobileView === 'list' ? 'flex flex-col' : 'hidden'} md:flex md:flex-col md:w-1/2`}
-        >
-          <ArmyList />
-        </div>
-      </div>
+      {drawerOpen && <UnitBrowserDrawer />}
     </div>
   );
 }
@@ -548,21 +771,52 @@ function StatBar({ unit, save }: { unit: Unit; save?: string }) {
   const main = unit.profiles[0];
   if (!main) return null;
   const p = main.profile;
-  const stats = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld'] as const;
+  const cols = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld', 'Sv'] as const;
   const displaySave = save ?? calcArmourSave(unit.equipment, unit.special_rules ?? []);
+  const cellStyle: React.CSSProperties = {
+    border: '1px solid var(--f-border)',
+    textAlign: 'center',
+    minWidth: '28px',
+    padding: '3px 4px',
+  };
   return (
-    <div className="flex gap-1 mt-1.5 flex-wrap">
-      {stats.map((s) => (
-        <span key={s} className="text-xs leading-none" style={{ color: 'var(--color-text-secondary)' }}>
-          <span className="mr-0.5">{s}</span>
-          <span style={{ color: 'var(--color-text-primary)' }}>{String(p[s])}</span>
-        </span>
-      ))}
-      <span className="text-xs leading-none" style={{ color: 'var(--color-text-secondary)' }}>
-        <span className="mr-0.5">Sv</span>
-        <span style={{ color: displaySave === '-' ? 'var(--color-text-secondary)' : 'var(--color-text-primary)' }}>{displaySave}</span>
-      </span>
-    </div>
+    <table style={{ borderCollapse: 'collapse', marginTop: '8px', width: '100%', tableLayout: 'fixed' }}>
+      <thead>
+        <tr>
+          {cols.map((s) => (
+            <th key={s} style={{
+              ...cellStyle,
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: '9px',
+              letterSpacing: '0.05em',
+              color: 'var(--f-text-4)',
+              fontWeight: 600,
+              backgroundColor: 'var(--f-bg)',
+            }}>
+              {s}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {cols.map((s) => {
+            const val = s === 'Sv' ? displaySave : String(p[s as keyof typeof p] ?? '-');
+            return (
+              <td key={s} style={{
+                ...cellStyle,
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '13px',
+                fontWeight: 700,
+                color: s === 'Sv' && val === '-' ? 'var(--f-text-4)' : 'var(--f-text)',
+              }}>
+                {val}
+              </td>
+            );
+          })}
+        </tr>
+      </tbody>
+    </table>
   );
 }
 
@@ -576,7 +830,7 @@ function WeaponProfileTable({ profiles }: { profiles: WeaponProfile[] }) {
     <div className="mt-1.5 overflow-x-auto">
       <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
         <thead>
-          <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+          <tr style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
             <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Weapon</th>
             <th className="text-center pr-2 pb-0.5 font-medium whitespace-nowrap">Rng</th>
             <th className="text-center pr-2 pb-0.5 font-medium">S</th>
@@ -587,11 +841,11 @@ function WeaponProfileTable({ profiles }: { profiles: WeaponProfile[] }) {
         <tbody>
           {profiles.map((wp, i) => (
             <tr key={i}>
-              <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{wp.name}</td>
-              <td className="text-center pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{wp.range}</td>
-              <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{wp.S}</td>
-              <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{wp.AP}</td>
-              <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>
+              <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--f-text)' }}>{wp.name}</td>
+              <td className="text-center pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--f-text)' }}>{wp.range}</td>
+              <td className="text-center pr-2 py-0.5" style={{ color: 'var(--f-text)' }}>{wp.S}</td>
+              <td className="text-center pr-2 py-0.5" style={{ color: 'var(--f-text)' }}>{wp.AP}</td>
+              <td className="py-0.5" style={{ color: 'var(--f-text-3)' }}>
                 {wp.special_rules.map(formatRuleName).join(', ')}
                 {wp.notes && <span className="italic opacity-70"> — {wp.notes}</span>}
               </td>
@@ -625,9 +879,9 @@ function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
               onClick={() => setActiveRule({ name, url })}
               className="text-xs px-1.5 py-0.5 rounded"
               style={{
-                backgroundColor: 'var(--color-bg-dark)',
-                color: 'var(--color-accent-blue)',
-                border: '1px solid var(--color-border)',
+                backgroundColor: 'var(--f-bg)',
+                color: 'var(--f-primary)',
+                border: '1px solid var(--f-border)',
                 cursor: 'pointer',
               }}
             >
@@ -645,14 +899,14 @@ function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
         >
           <div
             className="flex flex-col rounded-lg overflow-hidden w-full max-w-2xl shadow-2xl"
-            style={{ height: '80vh', backgroundColor: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)' }}
+            style={{ height: '80vh', backgroundColor: 'var(--f-elevated)', border: '1px solid var(--f-border)' }}
             onClick={(e) => e.stopPropagation()}
           >
             <div
               className="flex items-center justify-between px-4 py-2 shrink-0 border-b"
-              style={{ borderColor: 'var(--color-border)' }}
+              style={{ borderColor: 'var(--f-border)' }}
             >
-              <span className="text-sm font-semibold" style={{ color: 'var(--color-text-primary)' }}>
+              <span className="text-sm font-semibold" style={{ color: 'var(--f-text)' }}>
                 {activeRule.name}
               </span>
               <div className="flex items-center gap-3">
@@ -661,14 +915,14 @@ function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
                   target="_blank"
                   rel="noreferrer"
                   className="text-xs"
-                  style={{ color: 'var(--color-text-secondary)' }}
+                  style={{ color: 'var(--f-text-3)' }}
                 >
                   Open in browser ↗
                 </a>
                 <button
                   onClick={() => setActiveRule(null)}
                   className="text-sm font-bold px-2 py-0.5 rounded"
-                  style={{ color: 'var(--color-text-primary)', backgroundColor: 'var(--color-bg-dark)' }}
+                  style={{ color: 'var(--f-text)', backgroundColor: 'var(--f-bg)' }}
                 >
                   ✕
                 </button>
@@ -790,6 +1044,14 @@ function EntryOptionsPanel({
     updateEntry(armyId, entry.id, { selectedOptions: next });
   }
 
+  function toggleChoice(choiceDesc: string) {
+    const already = entry.selectedOptions.includes(choiceDesc);
+    const next = already
+      ? entry.selectedOptions.filter((d) => d !== choiceDesc)
+      : [...entry.selectedOptions, choiceDesc];
+    updateEntry(armyId, entry.id, { selectedOptions: next });
+  }
+
   function selectVow(desc: string | null) {
     const without = entry.selectedOptions.filter((d) => !vowOptions.some((v) => v.description === d));
     updateEntry(armyId, entry.id, { selectedOptions: desc ? [...without, desc] : without });
@@ -820,10 +1082,10 @@ function EntryOptionsPanel({
     ? faction.magic_items.find((i) => i.category === 'magic_standard' && selectedItems.includes(i.id))
     : null;
 
-  const divider = <div className="border-t" style={{ borderColor: 'var(--color-border)' }} />;
+  const divider = <div className="border-t" style={{ borderColor: 'var(--f-border)' }} />;
 
   return (
-    <div className="mt-1.5 pt-2 flex flex-col gap-2.5 border-t" style={{ borderColor: 'var(--color-border)' }}>
+    <div className="mt-1.5 pt-2 flex flex-col gap-2.5 border-t" style={{ borderColor: 'var(--f-border)' }}>
 
       {/* Command */}
       {command.length > 0 && (
@@ -852,7 +1114,7 @@ function EntryOptionsPanel({
             <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
           ))}
           {weaponChoiceGroups.map((group) => (
-            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} armyId={armyId} />
+            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
           ))}
         </OptionsSection>
       )}
@@ -864,7 +1126,7 @@ function EntryOptionsPanel({
             <RegularOption key={opt.description} opt={opt} entry={entry} perModel={perModel} toggleOption={toggleOption} />
           ))}
           {armourChoiceGroups.map((group) => (
-            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} armyId={armyId} />
+            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
           ))}
         </OptionsSection>
       )}
@@ -887,20 +1149,20 @@ function EntryOptionsPanel({
             return (
               <div key={opt.description} className="flex flex-col gap-0.5">
                 <div className="flex items-center gap-2">
-                  <button onClick={() => setQty(Math.max(0, qty - 1))} disabled={qty <= 0} className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}>−</button>
-                  <span className="text-sm font-semibold w-4 text-center" style={{ color: 'var(--color-text-primary)' }}>{qty}</span>
-                  <button onClick={() => setQty(Math.min(maxAllowed, qty + 1))} disabled={qty >= maxAllowed} className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)' }}>+</button>
-                  <span className="text-xs" style={{ color: qty > 0 ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                  <button onClick={() => setQty(Math.max(0, qty - 1))} disabled={qty <= 0} className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30" style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text)' }}>−</button>
+                  <span className="text-sm font-semibold w-4 text-center" style={{ color: 'var(--f-text)' }}>{qty}</span>
+                  <button onClick={() => setQty(Math.min(maxAllowed, qty + 1))} disabled={qty >= maxAllowed} className="w-6 h-6 rounded text-sm font-bold disabled:opacity-30" style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text)' }}>+</button>
+                  <span className="text-xs" style={{ color: qty > 0 ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                     {opt.description}{totalCost > 0 ? ` — +${totalCost} pts` : ''}
                   </span>
-                  <span className="text-xs ml-auto" style={{ color: 'var(--color-text-secondary)' }}>max {maxAllowed}</span>
+                  <span className="text-xs ml-auto" style={{ color: 'var(--f-text-3)' }}>max {maxAllowed}</span>
                 </div>
-                {opt.notes && <span className="text-xs italic ml-8" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{opt.notes}</span>}
+                {opt.notes && <span className="text-xs italic ml-8" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>{opt.notes}</span>}
               </div>
             );
           })}
           {specialChoiceGroups.map((group) => (
-            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} armyId={armyId} />
+            <ChoiceGroup key={group.description} group={group} entry={entry} perModel={perModel} selectChoice={selectChoice} toggleChoice={toggleChoice} armyId={armyId} />
           ))}
         </OptionsSection>
       )}
@@ -910,21 +1172,21 @@ function EntryOptionsPanel({
         <>
           {divider}
           <div className="flex flex-col gap-1.5">
-            <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Vow</p>
+            <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>Vow</p>
             <div className="flex flex-col gap-1">
               {/* Default vow */}
               <label className="flex items-center gap-2 cursor-pointer">
                 <span
                   className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
                   style={{
-                    borderColor: !selectedVow ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                    backgroundColor: !selectedVow ? 'var(--color-accent-blue)' : 'transparent',
+                    borderColor: !selectedVow ? 'var(--f-primary)' : 'var(--f-border)',
+                    backgroundColor: !selectedVow ? 'var(--f-primary)' : 'transparent',
                   }}
                 >
                   {!selectedVow && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
                 </span>
                 <input type="radio" name={`vow-${entry.id}`} checked={!selectedVow} onChange={() => selectVow(null)} className="sr-only" />
-                <span className="text-xs" style={{ color: !selectedVow ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                <span className="text-xs" style={{ color: !selectedVow ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                   Knight's Vow
                 </span>
               </label>
@@ -936,14 +1198,14 @@ function EntryOptionsPanel({
                     <span
                       className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
                       style={{
-                        borderColor: isActive ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                        backgroundColor: isActive ? 'var(--color-accent-blue)' : 'transparent',
+                        borderColor: isActive ? 'var(--f-primary)' : 'var(--f-border)',
+                        backgroundColor: isActive ? 'var(--f-primary)' : 'transparent',
                       }}
                     >
                       {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
                     </span>
                     <input type="radio" name={`vow-${entry.id}`} checked={isActive} onChange={() => selectVow(opt.description)} className="sr-only" />
-                    <span className="text-xs" style={{ color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                    <span className="text-xs" style={{ color: isActive ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                       {vowName} — +{opt.cost} pts
                     </span>
                   </label>
@@ -959,20 +1221,20 @@ function EntryOptionsPanel({
         <>
           {divider}
           <div className="flex flex-col gap-1.5">
-            <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Mount</p>
+            <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>Mount</p>
             <div className="flex flex-col gap-1.5">
               <label className="flex items-center gap-2 cursor-pointer">
                 <span
                   className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
                   style={{
-                    borderColor: !entry.selectedMountId ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                    backgroundColor: !entry.selectedMountId ? 'var(--color-accent-blue)' : 'transparent',
+                    borderColor: !entry.selectedMountId ? 'var(--f-primary)' : 'var(--f-border)',
+                    backgroundColor: !entry.selectedMountId ? 'var(--f-primary)' : 'transparent',
                   }}
                 >
                   {!entry.selectedMountId && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
                 </span>
                 <input type="radio" name={`mount-${entry.id}`} checked={!entry.selectedMountId} onChange={() => updateEntry(armyId, entry.id, { selectedMountId: null })} className="sr-only" />
-                <span className="text-xs" style={{ color: !entry.selectedMountId ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                <span className="text-xs" style={{ color: !entry.selectedMountId ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                   On foot
                 </span>
               </label>
@@ -985,24 +1247,24 @@ function EntryOptionsPanel({
                       <span
                         className="shrink-0 w-4 h-4 mt-0.5 rounded-full border flex items-center justify-center"
                         style={{
-                          borderColor: isActive ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                          backgroundColor: isActive ? 'var(--color-accent-blue)' : 'transparent',
+                          borderColor: isActive ? 'var(--f-primary)' : 'var(--f-border)',
+                          backgroundColor: isActive ? 'var(--f-primary)' : 'transparent',
                         }}
                       >
                         {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
                       </span>
                       <input type="radio" name={`mount-${entry.id}`} checked={isActive} onChange={() => updateEntry(armyId, entry.id, { selectedMountId: mount.id })} className="sr-only" />
                       <span className="flex flex-col min-w-0 gap-0.5">
-                        <span className="text-xs leading-snug" style={{ color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                        <span className="text-xs leading-snug" style={{ color: isActive ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                           {mount.name} — +{mount.points} pts
                         </span>
                         {mp && (
-                          <span className="text-xs" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                          <span className="text-xs" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
                             M{mp.M} WS{mp.WS} S{mp.S} T{String(mp.T) === '-' ? '—' : mp.T} W{String(mp.W) === '-' ? '—' : mp.W} I{mp.I} A{mp.A}
                           </span>
                         )}
                         {mount.profiles[0]?.mount_grants && (
-                          <span className="text-xs italic" style={{ color: 'var(--color-accent-blue)', opacity: 0.8 }}>
+                          <span className="text-xs italic" style={{ color: 'var(--f-primary)', opacity: 0.8 }}>
                             Grants: {mount.profiles[0].mount_grants}
                           </span>
                         )}
@@ -1012,7 +1274,7 @@ function EntryOptionsPanel({
                       <div className="ml-6 mt-1 overflow-x-auto">
                         <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
                           <thead>
-                            <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                            <tr style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
                               <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Weapon</th>
                               <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Rng</th>
                               <th className="text-center pr-2 pb-0.5 font-medium">S</th>
@@ -1023,11 +1285,11 @@ function EntryOptionsPanel({
                           <tbody>
                             {mount.weapon_profiles.map((wp) => (
                               <tr key={wp.name}>
-                                <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)', fontSize: '0.65rem' }}>{wp.name}</td>
-                                <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{wp.range}</td>
-                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{wp.S}</td>
-                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{wp.AP}</td>
-                                <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>
+                                <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--f-text)', fontSize: '0.65rem' }}>{wp.name}</td>
+                                <td className="text-left pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--f-text)' }}>{wp.range}</td>
+                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--f-text)' }}>{wp.S}</td>
+                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--f-text)' }}>{wp.AP}</td>
+                                <td className="py-0.5" style={{ color: 'var(--f-text-3)' }}>
                                   <span className="text-xs">{wp.special_rules?.map(formatRuleName).join(', ') || '—'}</span>
                                   {wp.notes && <span className="text-xs italic opacity-70 ml-1"> — {wp.notes}</span>}
                                 </td>
@@ -1042,7 +1304,7 @@ function EntryOptionsPanel({
               })}
             </div>
             {selectedMount?.notes && selectedMount.notes.filter(n => !n.startsWith('Available')).map((note, i) => (
-              <p key={i} className="text-xs italic" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{note}</p>
+              <p key={i} className="text-xs italic" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>{note}</p>
             ))}
           </div>
         </>
@@ -1053,12 +1315,12 @@ function EntryOptionsPanel({
         <>
           {divider}
           <div className="flex flex-col gap-1.5">
-            <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Knightly Virtue</p>
+            <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>Knightly Virtue</p>
             <select
               value={entry.selectedVirtueId ?? ''}
               onChange={(e) => updateEntry(armyId, entry.id, { selectedVirtueId: e.target.value || null })}
               className="text-xs rounded px-2 py-1"
-              style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-primary)', border: '1px solid var(--color-border)' }}
+              style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text)', border: '1px solid var(--f-border)' }}
             >
               <option value="">None</option>
               {(faction.knightly_virtues ?? [])
@@ -1070,31 +1332,36 @@ function EntryOptionsPanel({
             </select>
             {entry.selectedVirtueId && (() => {
               const v = faction.knightly_virtues?.find((vv) => vv.id === entry.selectedVirtueId);
-              return v ? <p className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)' }}>{v.description}</p> : null;
+              return v ? <p className="text-xs italic leading-snug" style={{ color: 'var(--f-text-3)' }}>{v.description}</p> : null;
             })()}
           </div>
         </>
       )}
 
-      {/* Personal magic items (characters) */}
-      {magicAllowanceOpt && (
+      {/* Personal magic items (characters and unit champions) */}
+      {magicAllowanceOpt && (!unit.command?.some((c) => c.role === 'champion') || entry.includeChampion) && (
         <>
           {divider}
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Magic Items</p>
-              <p className="text-xs" style={{ color: totalItemPts > (magicAllowanceOpt.max_points ?? 0) ? 'var(--color-accent-amber)' : 'var(--color-text-secondary)' }}>
+            <button
+              className="flex items-center justify-between w-full text-left"
+              onClick={() => setExpandedMagicCategories({ ...expandedMagicCategories, magic_items_section: !(expandedMagicCategories.magic_items_section ?? true) })}
+            >
+              <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>
+                Magic Items {!(expandedMagicCategories.magic_items_section ?? true) ? '▸' : '▾'}
+              </p>
+              <p className="text-xs" style={{ color: totalItemPts > (magicAllowanceOpt.max_points ?? 0) ? 'var(--f-gold)' : 'var(--f-text-3)' }}>
                 {totalItemPts} / {magicAllowanceOpt.max_points} pts
               </p>
-            </div>
-            {!isWizard(unit) && (
-              <p className="text-xs italic" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>Arcane items require a Wizard</p>
+            </button>
+            {(expandedMagicCategories.magic_items_section ?? true) && !isWizard(unit) && (
+              <p className="text-xs italic" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>Arcane items require a Wizard</p>
             )}
-            {characterItemCategories.map((cat) => {
+            {(expandedMagicCategories.magic_items_section ?? true) && characterItemCategories.map((cat) => {
               // Filter items available to this unit (check unit_restriction text against unit name/troop type)
               const allCatItems = faction.magic_items.filter((i) => i.category === cat);
               const items = allCatItems.filter((i) => {
-                const r = (i as typeof i & { restrictions?: string }).restrictions ?? '';
+                const r = i.restrictions ?? '';
                 if (!r) return true;
                 const rl = r.toLowerCase();
                 return rl.includes(unit.name.toLowerCase()) || rl.includes(unit.troop_type.toLowerCase());
@@ -1118,14 +1385,14 @@ function EntryOptionsPanel({
                   <label
                     key={item.id}
                     className={`flex items-start gap-2 pt-1.5 border-t ${isDisabled ? 'opacity-40' : 'cursor-pointer'}`}
-                    style={{ borderColor: 'var(--color-border)' }}
+                    style={{ borderColor: 'var(--f-border)' }}
                   >
                     {inputType === 'checkbox' ? (
                       <span
                         className="shrink-0 w-4 h-4 mt-0.5 rounded border flex items-center justify-center text-xs"
                         style={{
-                          borderColor: isSelected ? 'var(--color-accent-amber)' : 'var(--color-border)',
-                          backgroundColor: isSelected ? 'var(--color-accent-amber)' : 'transparent',
+                          borderColor: isSelected ? 'var(--f-gold)' : 'var(--f-border)',
+                          backgroundColor: isSelected ? 'var(--f-gold)' : 'transparent',
                           color: '#0f1117',
                         }}
                       >
@@ -1135,8 +1402,8 @@ function EntryOptionsPanel({
                       <span
                         className="shrink-0 w-4 h-4 mt-0.5 rounded-full border flex items-center justify-center"
                         style={{
-                          borderColor: isSelected ? 'var(--color-accent-amber)' : 'var(--color-border)',
-                          backgroundColor: isSelected ? 'var(--color-accent-amber)' : 'transparent',
+                          borderColor: isSelected ? 'var(--f-gold)' : 'var(--f-border)',
+                          backgroundColor: isSelected ? 'var(--f-gold)' : 'transparent',
                         }}
                       >
                         {isSelected && <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#0f1117' }} />}
@@ -1153,22 +1420,22 @@ function EntryOptionsPanel({
                     <span className="flex flex-col min-w-0 gap-0.5 flex-1">
                       {/* Name + pts + badges */}
                       <span className="flex items-center gap-1.5 flex-wrap">
-                        <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                        <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                           {item.name} — {item.points} pts
                         </span>
                         {itemExt.single_use && (
-                          <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--color-bg-dark)', color: 'var(--color-text-secondary)', fontSize: '0.6rem' }}>Single Use</span>
+                          <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text-3)', fontSize: '0.6rem' }}>Single Use</span>
                         )}
                       </span>
                       {/* Flavour text — italic */}
                       {item.description && (
-                        <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.8 }}>
+                        <span className="text-xs italic leading-snug" style={{ color: 'var(--f-text-3)', opacity: 0.8 }}>
                           {item.description}
                         </span>
                       )}
                       {/* Rules text — non-italic */}
                       {(item as typeof item & { rules_text?: string }).rules_text && (
-                        <span className="text-xs leading-snug" style={{ color: 'var(--color-text-secondary)' }}>
+                        <span className="text-xs leading-snug" style={{ color: 'var(--f-text-3)' }}>
                           {(item as typeof item & { rules_text?: string }).rules_text}
                         </span>
                       )}
@@ -1177,7 +1444,7 @@ function EntryOptionsPanel({
                         <div className="mt-0.5 overflow-x-auto">
                           <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
                             <thead>
-                              <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                              <tr style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
                                 <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Rng</th>
                                 <th className="text-center pr-2 pb-0.5 font-medium">S</th>
                                 <th className="text-center pr-2 pb-0.5 font-medium">AP</th>
@@ -1186,15 +1453,15 @@ function EntryOptionsPanel({
                             </thead>
                             <tbody>
                               <tr>
-                                <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.range}</td>
-                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.S}</td>
-                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--color-text-primary)' }}>{item.weapon_profile.AP}</td>
-                                <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{item.weapon_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
+                                <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--f-text)' }}>{item.weapon_profile.range}</td>
+                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--f-text)' }}>{item.weapon_profile.S}</td>
+                                <td className="text-center pr-2 py-0.5" style={{ color: 'var(--f-text)' }}>{item.weapon_profile.AP}</td>
+                                <td className="py-0.5" style={{ color: 'var(--f-text-3)' }}>{item.weapon_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
                               </tr>
                             </tbody>
                           </table>
                           {item.weapon_profile.notes && (
-                            <p className="text-xs italic mt-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{item.weapon_profile.notes}</p>
+                            <p className="text-xs italic mt-0.5" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>{item.weapon_profile.notes}</p>
                           )}
                         </div>
                       )}
@@ -1203,20 +1470,20 @@ function EntryOptionsPanel({
                         <div className="mt-0.5 overflow-x-auto">
                           <table className="text-xs w-full" style={{ borderCollapse: 'collapse' }}>
                             <thead>
-                              <tr style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+                              <tr style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
                                 <th className="text-left pr-2 pb-0.5 font-medium whitespace-nowrap">Armour</th>
                                 <th className="text-left pb-0.5 font-medium">Special</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--color-text-primary)' }}>{item.armour_profile.armour_value}</td>
-                                <td className="py-0.5" style={{ color: 'var(--color-text-secondary)' }}>{item.armour_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
+                                <td className="pr-2 py-0.5 whitespace-nowrap" style={{ color: 'var(--f-text)' }}>{item.armour_profile.armour_value}</td>
+                                <td className="py-0.5" style={{ color: 'var(--f-text-3)' }}>{item.armour_profile.special_rules?.map(formatRuleName).join(', ') || '—'}</td>
                               </tr>
                             </tbody>
                           </table>
                           {item.armour_profile.notes && (
-                            <p className="text-xs italic mt-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>{item.armour_profile.notes}</p>
+                            <p className="text-xs italic mt-0.5" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>{item.armour_profile.notes}</p>
                           )}
                         </div>
                       )}
@@ -1230,7 +1497,7 @@ function EntryOptionsPanel({
                   <button
                     onClick={() => setExpandedMagicCategories({ ...expandedMagicCategories, [cat]: !expandedMagicCategories[cat] })}
                     className="text-xs uppercase tracking-wide text-left py-1 px-1.5 rounded hover:opacity-80 transition-opacity"
-                    style={{ color: 'var(--color-text-secondary)', opacity: 0.6, fontSize: '0.65rem' }}
+                    style={{ color: 'var(--f-text-3)', opacity: 0.6, fontSize: '0.65rem' }}
                   >
                     {isExpanded ? '▼' : '▶'} {MAGIC_ITEM_CATEGORY_LABELS[cat]}
                   </button>
@@ -1238,13 +1505,13 @@ function EntryOptionsPanel({
                     <>
                       {armourItems && armourItems.length > 0 && (
                         <div className="flex flex-col">
-                          <p className="text-xs px-1 mb-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.5, fontSize: '0.6rem' }}>ARMOUR</p>
+                          <p className="text-xs px-1 mb-0.5" style={{ color: 'var(--f-text-3)', opacity: 0.5, fontSize: '0.6rem' }}>ARMOUR</p>
                           {armourItems.map((item) => renderItem(item))}
                         </div>
                       )}
                       {shieldItems && shieldItems.length > 0 && (
                         <div className="flex flex-col mt-1.5">
-                          <p className="text-xs px-1 mb-0.5" style={{ color: 'var(--color-text-secondary)', opacity: 0.5, fontSize: '0.6rem' }}>SHIELDS</p>
+                          <p className="text-xs px-1 mb-0.5" style={{ color: 'var(--f-text-3)', opacity: 0.5, fontSize: '0.6rem' }}>SHIELDS</p>
                           {shieldItems.map((item) => renderItem(item))}
                         </div>
                       )}
@@ -1264,77 +1531,89 @@ function EntryOptionsPanel({
         <>
           {divider}
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Magic Standard</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+            <button
+              className="flex items-center justify-between w-full text-left"
+              onClick={() => setExpandedMagicCategories({ ...expandedMagicCategories, magic_standard: !expandedMagicCategories.magic_standard })}
+            >
+              <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>
+                Magic Standard {expandedMagicCategories.magic_standard ? '▾' : '▸'}
+                {!expandedMagicCategories.magic_standard && selectedStandardItem && (
+                  <span className="font-normal ml-1" style={{ color: 'var(--f-text)' }}>— {selectedStandardItem.name}</span>
+                )}
+              </p>
+              <p className="text-xs" style={{ color: 'var(--f-text-3)' }}>
                 {selectedStandardItem ? `${selectedStandardItem.points}` : '0'} / {unit.magic_standard} pts
               </p>
-            </div>
-            <label className="flex items-center gap-2 cursor-pointer">
-              <span
-                className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
-                style={{
-                  borderColor: !selectedStandardItem ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                  backgroundColor: !selectedStandardItem ? 'var(--color-accent-blue)' : 'transparent',
-                }}
-              >
-                {!selectedStandardItem && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
-              </span>
-              <input
-                type="radio"
-                name={`std-${entry.id}`}
-                checked={!selectedStandardItem}
-                onChange={() => {
-                  const without = selectedItems.filter((id) => !faction.magic_items.find((i) => i.id === id && i.category === 'magic_standard'));
-                  updateEntry(armyId, entry.id, { selectedMagicItemIds: without });
-                }}
-                className="sr-only"
-              />
-              <span className="text-xs" style={{ color: !selectedStandardItem ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>No magic standard</span>
-            </label>
-            {faction.magic_items
-              .filter((i) => i.category === 'magic_standard' && i.points <= (unit.magic_standard ?? 0))
-              .map((item) => {
-                const isSelected = selectedItems.includes(item.id);
-                return (
-                  <label key={item.id} className="flex items-start gap-2 pt-1.5 border-t cursor-pointer" style={{ borderColor: 'var(--color-border)' }}>
-                    <span
-                      className="shrink-0 w-4 h-4 mt-0.5 rounded-full border flex items-center justify-center"
-                      style={{
-                        borderColor: isSelected ? 'var(--color-accent-amber)' : 'var(--color-border)',
-                        backgroundColor: isSelected ? 'var(--color-accent-amber)' : 'transparent',
-                      }}
-                    >
-                      {isSelected && <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#0f1117' }} />}
-                    </span>
-                    <input
-                      type="radio"
-                      name={`std-${entry.id}`}
-                      checked={isSelected}
-                      onChange={() => {
-                        const without = selectedItems.filter((id) => !faction.magic_items.find((i) => i.id === id && i.category === 'magic_standard'));
-                        updateEntry(armyId, entry.id, { selectedMagicItemIds: [...without, item.id] });
-                      }}
-                      className="sr-only"
-                    />
-                    <span className="flex flex-col min-w-0 gap-0.5">
-                      <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
-                        {item.name} — {item.points} pts
-                      </span>
-                      {item.description && (
-                        <span className="text-xs italic leading-snug" style={{ color: 'var(--color-text-secondary)', opacity: 0.8 }}>
-                          {item.description}
+            </button>
+            {expandedMagicCategories.magic_standard && (
+              <>
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <span
+                    className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
+                    style={{
+                      borderColor: !selectedStandardItem ? 'var(--f-primary)' : 'var(--f-border)',
+                      backgroundColor: !selectedStandardItem ? 'var(--f-primary)' : 'transparent',
+                    }}
+                  >
+                    {!selectedStandardItem && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                  </span>
+                  <input
+                    type="radio"
+                    name={`std-${entry.id}`}
+                    checked={!selectedStandardItem}
+                    onChange={() => {
+                      const without = selectedItems.filter((id) => !faction.magic_items.find((i) => i.id === id && i.category === 'magic_standard'));
+                      updateEntry(armyId, entry.id, { selectedMagicItemIds: without });
+                    }}
+                    className="sr-only"
+                  />
+                  <span className="text-xs" style={{ color: !selectedStandardItem ? 'var(--f-text)' : 'var(--f-text-3)' }}>No magic standard</span>
+                </label>
+                {faction.magic_items
+                  .filter((i) => i.category === 'magic_standard' && i.points <= (unit.magic_standard ?? 0))
+                  .map((item) => {
+                    const isSelected = selectedItems.includes(item.id);
+                    return (
+                      <label key={item.id} className="flex items-start gap-2 pt-1.5 border-t cursor-pointer" style={{ borderColor: 'var(--f-border)' }}>
+                        <span
+                          className="shrink-0 w-4 h-4 mt-0.5 rounded-full border flex items-center justify-center"
+                          style={{
+                            borderColor: isSelected ? 'var(--f-gold)' : 'var(--f-border)',
+                            backgroundColor: isSelected ? 'var(--f-gold)' : 'transparent',
+                          }}
+                        >
+                          {isSelected && <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#0f1117' }} />}
                         </span>
-                      )}
-                      {(item as typeof item & { rules_text?: string }).rules_text && (
-                        <span className="text-xs leading-snug" style={{ color: 'var(--color-text-secondary)' }}>
-                          {(item as typeof item & { rules_text?: string }).rules_text}
+                        <input
+                          type="radio"
+                          name={`std-${entry.id}`}
+                          checked={isSelected}
+                          onChange={() => {
+                            const without = selectedItems.filter((id) => !faction.magic_items.find((i) => i.id === id && i.category === 'magic_standard'));
+                            updateEntry(armyId, entry.id, { selectedMagicItemIds: [...without, item.id] });
+                          }}
+                          className="sr-only"
+                        />
+                        <span className="flex flex-col min-w-0 gap-0.5">
+                          <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--f-text)' : 'var(--f-text-3)' }}>
+                            {item.name} — {item.points} pts
+                          </span>
+                          {item.description && (
+                            <span className="text-xs italic leading-snug" style={{ color: 'var(--f-text-3)', opacity: 0.8 }}>
+                              {item.description}
+                            </span>
+                          )}
+                          {(item as typeof item & { rules_text?: string }).rules_text && (
+                            <span className="text-xs leading-snug" style={{ color: 'var(--f-text-3)' }}>
+                              {(item as typeof item & { rules_text?: string }).rules_text}
+                            </span>
+                          )}
                         </span>
-                      )}
-                    </span>
-                  </label>
-                );
-              })}
+                      </label>
+                    );
+                  })}
+              </>
+            )}
           </div>
         </>
       )}
@@ -1345,7 +1624,7 @@ function EntryOptionsPanel({
 function OptionsSection({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <p className="text-xs font-semibold" style={{ color: 'var(--color-text-secondary)' }}>{label}</p>
+      <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>{label}</p>
       <div className="flex flex-col gap-1">{children}</div>
     </div>
   );
@@ -1357,15 +1636,15 @@ function OptionCheckbox({ label, checked, onChange }: { label: string; checked: 
       <span
         className="shrink-0 w-4 h-4 rounded border flex items-center justify-center text-xs"
         style={{
-          borderColor: checked ? 'var(--color-accent-amber)' : 'var(--color-border)',
-          backgroundColor: checked ? 'var(--color-accent-amber)' : 'transparent',
+          borderColor: checked ? 'var(--f-gold)' : 'var(--f-border)',
+          backgroundColor: checked ? 'var(--f-gold)' : 'transparent',
           color: '#0f1117',
         }}
       >
         {checked ? '✓' : ''}
       </span>
       <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="sr-only" />
-      <span className="text-xs" style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+      <span className="text-xs" style={{ color: checked ? 'var(--f-text)' : 'var(--f-text-3)' }}>
         {label}
       </span>
     </label>
@@ -1394,8 +1673,8 @@ function RegularOption({
         <span
           className="shrink-0 w-4 h-4 rounded border flex items-center justify-center text-xs"
           style={{
-            borderColor: checked ? 'var(--color-accent-amber)' : 'var(--color-border)',
-            backgroundColor: checked ? 'var(--color-accent-amber)' : 'transparent',
+            borderColor: checked ? 'var(--f-gold)' : 'var(--f-border)',
+            backgroundColor: checked ? 'var(--f-gold)' : 'transparent',
             color: '#0f1117',
           }}
         >
@@ -1408,17 +1687,17 @@ function RegularOption({
           onChange={(e) => !isDisabled && toggleOption(opt.description, e.target.checked)}
           className="sr-only"
         />
-        <span className="text-xs" style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+        <span className="text-xs" style={{ color: checked ? 'var(--f-text)' : 'var(--f-text-3)' }}>
           {opt.description}{costPart}
         </span>
       </label>
       {opt.replaces && (
-        <span className="text-xs italic ml-6" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+        <span className="text-xs italic ml-6" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
           Replaces: {opt.replaces}
         </span>
       )}
       {opt.notes && (
-        <span className="text-xs italic ml-6" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+        <span className="text-xs italic ml-6" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
           {opt.notes}
         </span>
       )}
@@ -1431,42 +1710,63 @@ function ChoiceGroup(props: {
   entry: ArmyEntry;
   perModel: boolean;
   selectChoice: (choices: OptionChoice[], choiceDesc: string | null) => void;
+  toggleChoice: (choiceDesc: string) => void;
   armyId: string;
 }) {
-  const { group, entry, perModel, selectChoice } = props;
+  const { group, entry, perModel, selectChoice, toggleChoice } = props;
   const choices = group.choices!;
-  const selectedDesc = choices.find((c) => entry.selectedOptions.includes(c.description))?.description ?? null;
+  const isMulti = !!group.multi_select;
+  // For radio: only one can be active; for checkbox: any subset
+  const selectedDesc = !isMulti
+    ? (choices.find((c) => entry.selectedOptions.includes(c.description))?.description ?? null)
+    : null;
+
   return (
     <div className="flex flex-col gap-0.5">
       {group.description && (
-        <p className="text-xs font-medium" style={{ color: 'var(--color-text-secondary)' }}>{group.description}</p>
+        <p className="text-xs font-medium" style={{ color: 'var(--f-text-3)' }}>{group.description}</p>
       )}
       {choices.map((choice) => {
-        const isActive = selectedDesc === choice.description;
+        const isActive = isMulti
+          ? entry.selectedOptions.includes(choice.description)
+          : selectedDesc === choice.description;
         const multiplier = choice.scope === 'per_model' && perModel ? entry.quantity : 1;
         const costPart = choice.cost > 0 ? ` — +${choice.cost * multiplier} pts${choice.scope === 'per_model' ? '/model' : ''}` : '';
         return (
           <label key={choice.description} className="flex items-center gap-2 cursor-pointer ml-2">
-            <span
-              className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
-              style={{
-                borderColor: isActive ? 'var(--color-accent-blue)' : 'var(--color-border)',
-                backgroundColor: isActive ? 'var(--color-accent-blue)' : 'transparent',
-              }}
-            >
-              {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
-            </span>
+            {isMulti ? (
+              <span
+                className="shrink-0 w-4 h-4 border flex items-center justify-center"
+                style={{
+                  borderColor: isActive ? 'var(--f-primary)' : 'var(--f-border)',
+                  backgroundColor: isActive ? 'var(--f-primary)' : 'transparent',
+                  borderRadius: '2px',
+                }}
+              >
+                {isActive && <span style={{ color: '#fff', fontSize: '10px', lineHeight: 1 }}>✓</span>}
+              </span>
+            ) : (
+              <span
+                className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
+                style={{
+                  borderColor: isActive ? 'var(--f-primary)' : 'var(--f-border)',
+                  backgroundColor: isActive ? 'var(--f-primary)' : 'transparent',
+                }}
+              >
+                {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+              </span>
+            )}
             <input
-              type="radio"
+              type={isMulti ? 'checkbox' : 'radio'}
               checked={isActive}
-              onChange={() => selectChoice(choices, choice.description)}
+              onChange={() => isMulti ? toggleChoice(choice.description) : selectChoice(choices, choice.description)}
               className="sr-only"
             />
-            <span className="text-xs" style={{ color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+            <span className="text-xs" style={{ color: isActive ? 'var(--f-text)' : 'var(--f-text-3)' }}>
               {choice.description}{costPart}
             </span>
             {choice.notes && (
-              <span className="text-xs italic ml-6" style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}>
+              <span className="text-xs italic ml-6" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>
                 {choice.notes}
               </span>
             )}

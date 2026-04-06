@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
 import { FACTIONS } from '../data/factions/index';
+import { generateArmyName } from '../data/armyNames';
 import type { MatchedPlayFormat } from '../types/army';
 import type { Faction } from '../types/faction';
 
@@ -107,18 +108,45 @@ export default function NewArmy() {
       <div className="flex flex-col gap-5">
         {/* Army name */}
         <Field label="Army name">
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="e.g. Couronne Host"
-            className="w-full rounded px-3 py-2 text-base"
-            style={{
-              backgroundColor: 'var(--color-bg-elevated)',
-              color: 'var(--color-text-primary)',
-              border: '1px solid var(--color-border)',
-            }}
-          />
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="e.g. Couronne Host"
+              className="rounded px-3 py-2 text-base"
+              style={{
+                flex: 1,
+                backgroundColor: 'var(--color-bg-elevated)',
+                color: 'var(--color-text-primary)',
+                border: '1px solid var(--color-border)',
+              }}
+            />
+            <button
+              type="button"
+              onClick={() => setName(generateArmyName(selectedFaction.id))}
+              title="Generate a random name"
+              style={{
+                flexShrink: 0,
+                width: '38px',
+                height: '38px',
+                border: '1px solid var(--color-border)',
+                borderRadius: '4px',
+                backgroundColor: 'var(--color-bg-elevated)',
+                color: 'var(--color-accent-amber)',
+                cursor: 'pointer',
+                fontSize: '18px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'border-color 0.15s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'var(--color-accent-amber)')}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--color-border)')}
+            >
+              ⚄
+            </button>
+          </div>
         </Field>
 
         {/* Faction — grouped by publication */}

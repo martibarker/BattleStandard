@@ -87,6 +87,10 @@ export interface Option {
   category?: OptionCategory;
   /** Mutually-exclusive sub-options — rendered as a radio group (pick one) */
   choices?: OptionChoice[];
+  /** When true, choices are independent checkboxes (multiple may be selected) */
+  multi_select?: boolean;
+  /** Max number of units in the army that may have any of these choices — per 1,000 pts */
+  max_per_1000_pts?: number;
   /** Special rule IDs this option grants when selected (e.g. ['frenzy']) */
   grants_rules?: string[];
 }

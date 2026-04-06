@@ -340,6 +340,36 @@ export function validateArmy(army: ArmyList, faction: Faction): ValidationIssue[
     }
   }
 
+  // --- Option-level max_per_1000_pts constraints ---
+  // Collect all (unit, option) pairs that carry this constraint, keyed by option description
+  const optionConstraints = new Map<string, { max: number; unitNames: Set<string> }>();
+  for (const entry of army.entries) {
+    const unit = faction.units.find((u) => u.id === entry.unitId);
+    if (!unit) continue;
+    for (const opt of unit.options ?? []) {
+      if (!opt.max_per_1000_pts || !opt.choices) continue;
+      const choiceDescs = opt.choices.map((c) => c.description);
+      const hasAnyChoice = choiceDescs.some((d) => entry.selectedOptions.includes(d));
+      if (!hasAnyChoice) continue;
+      const key = opt.description;
+      if (!optionConstraints.has(key)) {
+        optionConstraints.set(key, { max: opt.max_per_1000_pts, unitNames: new Set() });
+      }
+      optionConstraints.get(key)!.unitNames.add(unit.name);
+    }
+  }
+  for (const [desc, { max, unitNames }] of optionConstraints) {
+    const count = unitNames.size;
+    const allowed = Math.floor(limit / 1000) * max;
+    if (count > allowed) {
+      issues.push({
+        category: 'Unit limit',
+        message: `"${desc}" — ${count} unit${count !== 1 ? 's' : ''} have this option, max ${max} per 1,000 pts (${allowed} at ${limit} pts)`,
+        severity: 'error',
+      });
+    }
+  }
+
   // --- Matched Play: Grand Melee — no single unit/character > 25% of army ---
   if (army.matchedPlayFormats.includes('grand_melee')) {
     for (const entry of army.entries) {

@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drawer-slide-in {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
 @keyframes toast-pop {
   0%   { opacity: 0; transform: translateY(6px); }
   12%  { opacity: 1; transform: translateY(0); }
@@ -21,21 +31,49 @@
     --color-border: #2E3650;
     --font-heading: 'Cinzel', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
+
+    /* Dark theme --f-* base (fallback when no faction is active) */
+    --f-primary:        #D97706;
+    --f-primary-mid:    #F59E0B;
+    --f-primary-bright: #FCD34D;
+    --f-gold:           #D97706;
+    --f-gold-bright:    #F59E0B;
+    --f-gold-dim:       rgba(217,119,6,0.12);
+    --f-gold-rule:      rgba(217,119,6,0.25);
+    --f-bg:             #0f1117;
+    --f-surface:        #1a1f2e;
+    --f-elevated:       #232940;
+    --f-card:           #232940;
+    --f-border:         #2E3650;
+    --f-border-mid:     #3A4570;
+    --f-text:           #F3F4F6;
+    --f-text-2:         #E5E7EB;
+    --f-text-3:         #9CA3AF;
+    --f-text-4:         #6B7280;
+    --f-cat-characters: #60A5FA;
+    --f-cat-core:       #34D399;
+    --f-cat-special:    #FBBF24;
+    --f-cat-rare:       #F87171;
+    --f-shimmer-a:      #5C3D00;
+    --f-shimmer-b:      #B87A00;
+    --f-shimmer-c:      #D4A012;
   }
 
   html {
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-primary);
+    background-color: var(--f-bg);
+    color: var(--f-text);
     font-family: var(--font-body);
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.4s, color 0.4s;
   }
 
   body {
     margin: 0;
     min-height: 100svh;
-    background-color: var(--color-bg-dark);
+    background-color: var(--f-bg);
+    transition: background-color 0.4s;
   }
 
   #root {
@@ -48,4 +86,107 @@
     font-family: var(--font-heading);
     color: var(--color-text-primary);
   }
+}
+
+/* ═══════════════════════════════════════════════
+   EMPIRE FACTION THEME
+   Applied when html[data-faction="empire"]
+   Overrides the dark --color-* variables with
+   Empire light values so all existing components adapt.
+   ═══════════════════════════════════════════════ */
+@layer base {
+  [data-faction="empire"] {
+    color-scheme: light;
+
+    /* Override app base variables → Empire light palette */
+    --color-bg-dark:            #F4EFE6;  /* warm plaster — page bg */
+    --color-bg-surface:         #F9F5EE;
+    --color-bg-elevated:        #FFFFFF;
+    --color-accent-amber:       #B8880A;  /* old gold */
+    --color-accent-amber-light: #D4A012;
+    --color-accent-blue:        #6B1010;  /* crimson replaces blue for primary actions */
+    --color-accent-blue-light:  #921818;
+    --color-text-primary:       #140800;
+    --color-text-secondary:     #4A2810;
+    --color-border:             #DDD5C0;
+
+    /* Empire --f-* variables — full set */
+    --f-primary:        #6B1010;
+    --f-primary-mid:    #921818;
+    --f-primary-bright: #B82020;
+    --f-gold:           #B8880A;
+    --f-gold-bright:    #D4A012;
+    --f-gold-dim:       rgba(184,136,10,0.15);
+    --f-gold-rule:      rgba(184,136,10,0.3);
+    --f-bg:             #F4EFE6;
+    --f-surface:        #F9F5EE;
+    --f-elevated:       #FFFFFF;
+    --f-card:           #FFFFFF;
+    --f-card-hover:     #FDF9F2;
+    --f-border:         #DDD5C0;
+    --f-border-mid:     #C8BC9A;
+    --f-text:           #140800;
+    --f-text-2:         #3A1C08;
+    --f-text-3:         #7A5830;
+    --f-text-4:         #A88850;
+
+    /* Category accent colours */
+    --f-cat-characters: #2850A0;
+    --f-cat-core:       #206820;
+    --f-cat-special:    #B87010;
+    --f-cat-rare:       #922020;
+
+    --f-shimmer-a:      #7A5808;
+    --f-shimmer-b:      #C09020;
+    --f-shimmer-c:      #E8C050;
+
+    /* Gold shimmer gradient for rule lines */
+    --f-shimmer: linear-gradient(
+      90deg,
+      transparent 0%,
+      #7A5808 15%,
+      #C09020 35%,
+      #E8C050 50%,
+      #C09020 65%,
+      #7A5808 85%,
+      transparent 100%
+    );
+  }
+
+  [data-faction="empire"] body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Utility classes for the gold shimmer rule line */
+.faction-gold-rule {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--f-shimmer-a) 15%,
+    var(--f-shimmer-b) 35%,
+    var(--f-shimmer-c) 50%,
+    var(--f-shimmer-b) 65%,
+    var(--f-shimmer-a) 85%,
+    transparent 100%
+  );
+  transition: background 0.4s;
+}
+
+.faction-gold-rule-thin {
+  height: 1px;
+  opacity: 0.5;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--f-shimmer-a) 15%,
+    var(--f-shimmer-b) 35%,
+    var(--f-shimmer-c) 50%,
+    var(--f-shimmer-b) 65%,
+    var(--f-shimmer-a) 85%,
+    transparent 100%
+  );
+  transition: background 0.4s;
 }
