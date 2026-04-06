@@ -346,6 +346,9 @@
       "name": "Duke",
       "source": "forces_of_fantasy",
       "category": "character",
+      "list_category_overrides": {
+        "bretonnian_exiles": null
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -715,6 +718,9 @@
       "name": "Prophetess",
       "source": "forces_of_fantasy",
       "category": "character",
+      "list_category_overrides": {
+        "bretonnian_exiles": null
+      },
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -1229,6 +1235,10 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "errantry_crusade": "core",
+        "bretonnian_exiles": "core"
+      },
       "troop_type": "Heavy infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5+",
@@ -1335,7 +1345,8 @@
       "category": "infantry",
       "list_category": "special",
       "list_category_overrides": {
-        "errantry_crusade": "core"
+        "errantry_crusade": "core",
+        "bretonnian_exiles": "special"
       },
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
@@ -1421,7 +1432,8 @@
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
-        "errantry_crusade": "special"
+        "errantry_crusade": "special",
+        "bretonnian_exiles": "core"
       },
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
@@ -1548,7 +1560,8 @@
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
-        "errantry_crusade": "special"
+        "errantry_crusade": "special",
+        "bretonnian_exiles": "core"
       },
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
@@ -1644,6 +1657,10 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "errantry_crusade": "special",
+        "bretonnian_exiles": "special"
+      },
       "troop_type": "Heavy infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5-30",
@@ -1711,6 +1728,10 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "core",
+      "list_category_overrides": {
+        "errantry_crusade": "core",
+        "bretonnian_exiles": "core"
+      },
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
@@ -1810,6 +1831,10 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "core",
+      "list_category_overrides": {
+        "errantry_crusade": "core",
+        "bretonnian_exiles": "core"
+      },
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
@@ -1919,7 +1944,8 @@
       "category": "cavalry",
       "list_category": "special",
       "list_category_overrides": {
-        "bretonnian_exiles": "rare"
+        "bretonnian_exiles": "rare",
+        "errantry_crusade": "special"
       },
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
@@ -2037,6 +2063,10 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "rare",
+      "list_category_overrides": {
+        "bretonnian_exiles": null,
+        "errantry_crusade": "rare"
+      },
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "3+",
@@ -2153,6 +2183,10 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "errantry_crusade": "special",
+        "bretonnian_exiles": "special"
+      },
       "troop_type": "Monstrous cavalry",
       "base_size": "40 x 60 mm",
       "unit_size": "3+",
@@ -2258,7 +2292,8 @@
       "category": "cavalry",
       "list_category": "special",
       "list_category_overrides": {
-        "errantry_crusade": "rare"
+        "errantry_crusade": "rare",
+        "bretonnian_exiles": "core"
       },
       "troop_type": "Light cavalry",
       "base_size": "25 x 50 mm",
@@ -2378,6 +2413,10 @@
       "source": "forces_of_fantasy",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "errantry_crusade": "rare",
+        "bretonnian_exiles": "rare"
+      },
       "troop_type": "War machine",
       "base_size": "60 x 100 mm (machine), 25 x 25 mm (crew)",
       "unit_size": "1",
@@ -2443,6 +2482,9 @@
       "name": "The Green Knight",
       "source": "arcane_journal",
       "category": "character",
+      "list_category_overrides": {
+        "bretonnian_exiles": null
+      },
       "troop_type": "Heavy cavalry (named character)",
       "base_size": "30 x 60 mm",
       "unit_size": "1",
@@ -2531,6 +2573,9 @@
       "name": "Sir Cecil Gastonne, The Wyrm Slayer",
       "source": "arcane_journal",
       "category": "character",
+      "list_category_overrides": {
+        "bretonnian_exiles": null
+      },
       "troop_type": "Regular infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -2589,6 +2634,9 @@
       "name": "Lady Élisse Duchaard",
       "source": "arcane_journal",
       "category": "character",
+      "list_category_overrides": {
+        "bretonnian_exiles": null
+      },
       "troop_type": "Monstrous cavalry (named character)",
       "base_size": "40 x 60 mm",
       "unit_size": "1",

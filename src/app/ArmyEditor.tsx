@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
 import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, flattenEquipment, getEffectiveListCategory, isPerModelPoints, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
-import { FACTION_THEMES } from '../components/Layout';
+
 import type { Faction, Unit, WeaponProfile, Option, OptionChoice } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
@@ -30,10 +30,11 @@ function isUnitAvailable(unit: Unit, compositionId: string): boolean {
 
 /** Units available to browse for the given tab and composition (excludes mounts) */
 function getUnitsForTab(faction: Faction, tab: BrowserTab, compositionId: string): Unit[] {
+  const isAoI = faction.army_compositions.find((c) => c.id === compositionId)?.source === 'arcane_journal';
   return faction.units.filter(
     (u) =>
       u.category !== 'mount' &&
-      getEffectiveListCategory(u, compositionId) === tab &&
+      getEffectiveListCategory(u, compositionId, isAoI) === tab &&
       isUnitAvailable(u, compositionId)
   );
 }
@@ -68,12 +69,6 @@ export default function ArmyEditor() {
   const [toast, setToast] = useState<{ message: string; key: number } | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Apply faction theme to whole page when editing an army
-  useEffect(() => {
-    const html = document.documentElement;
-    const theme = army ? FACTION_THEMES[army.factionId] : undefined;
-    if (theme) html.setAttribute('data-faction', theme);
-  }, [army?.factionId]);
 
   if (!army || !faction) {
     return (

@@ -324,6 +324,9 @@
       "name": "Prince",
       "source": "forces_of_fantasy",
       "category": "character",
+      "list_category_overrides": {
+        "sea_guard_garrison": null
+      },
       "troop_type": "Regular Infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -678,6 +681,9 @@
       "name": "Archmage",
       "source": "forces_of_fantasy",
       "category": "character",
+      "list_category_overrides": {
+        "sea_guard_garrison": null
+      },
       "troop_type": "Regular Infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -810,6 +816,9 @@
       "name": "Dragon Mage",
       "source": "forces_of_fantasy",
       "category": "character",
+      "list_category_overrides": {
+        "chracian_warhost": null
+      },
       "troop_type": "Behemoth (character)",
       "base_size": "60x100mm",
       "unit_size": "1",
@@ -876,6 +885,10 @@
       "name": "Handmaiden of the Everqueen",
       "source": "forces_of_fantasy",
       "category": "character",
+      "list_category_overrides": {
+        "chracian_warhost": null,
+        "sea_guard_garrison": null
+      },
       "troop_type": "Regular Infantry (character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1193,6 +1206,9 @@
       "name": "Korhil Lionmane, Captain of the White Lions",
       "source": "arcane_journal",
       "category": "character",
+      "list_category_overrides": {
+        "sea_guard_garrison": null
+      },
       "troop_type": "Heavy Infantry (named character)",
       "base_size": "25x25mm",
       "unit_size": "1",
@@ -1595,6 +1611,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "sea_guard_garrison": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -1687,6 +1706,9 @@
       "source": "arcane_journal",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "sea_guard_garrison": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -1787,6 +1809,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "chracian_warhost": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -1875,6 +1900,9 @@
       "source": "arcane_journal",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "chracian_warhost": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -1974,6 +2002,9 @@
       "source": "arcane_journal",
       "category": "infantry",
       "list_category": "rare",
+      "list_category_overrides": {
+        "chracian_warhost": "rare"
+      },
       "troop_type": "Heavy infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -2233,6 +2264,10 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "chracian_warhost": "rare",
+        "sea_guard_garrison": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -2308,6 +2343,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "rare",
+      "list_category_overrides": {
+        "chracian_warhost": "rare"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -3007,6 +3045,9 @@
       "source": "forces_of_fantasy",
       "category": "monster",
       "list_category": "rare",
+      "list_category_overrides": {
+        "sea_guard_garrison": "rare"
+      },
       "troop_type": "Monstrous creature",
       "base_size": "50x100mm",
       "unit_size": "1",
@@ -3050,6 +3091,9 @@
       "source": "forces_of_fantasy",
       "category": "monster",
       "list_category": "rare",
+      "list_category_overrides": {
+        "sea_guard_garrison": "rare"
+      },
       "troop_type": "Monstrous creature",
       "base_size": "50x100mm",
       "unit_size": "1",
@@ -3091,6 +3135,10 @@
       "source": "forces_of_fantasy",
       "category": "monster",
       "list_category": "rare",
+      "list_category_overrides": {
+        "chracian_warhost": "rare",
+        "sea_guard_garrison": "special"
+      },
       "troop_type": "Monstrous creature",
       "base_size": "50x50mm",
       "unit_size": "1",
@@ -3130,6 +3178,9 @@
       "source": "arcane_journal",
       "category": "monster",
       "list_category": "rare",
+      "list_category_overrides": {
+        "sea_guard_garrison": "rare"
+      },
       "troop_type": "Behemoth",
       "base_size": "60x100mm",
       "unit_size": "1",
@@ -3179,6 +3230,10 @@
       "source": "forces_of_fantasy",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "chracian_warhost": "rare",
+        "sea_guard_garrison": "special"
+      },
       "troop_type": "War machine",
       "base_size": "50x50mm (war machine), 25x25mm (crew)",
       "unit_size": "1",

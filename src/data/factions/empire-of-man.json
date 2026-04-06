@@ -2253,6 +2253,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "knightly_order": "special"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
@@ -2468,6 +2471,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "knightly_order": "special"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
@@ -2630,6 +2636,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "city_state_of_nuln": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
@@ -2689,6 +2698,10 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "city_state_of_nuln": "core",
+        "knightly_order": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -2752,6 +2765,9 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "city_state_of_nuln": "special"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -3113,6 +3129,10 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "city_state_of_nuln": "special",
+        "knightly_order": "rare"
+      },
       "troop_type": "Light cavalry",
       "base_size": "30x60mm",
       "unit_size": "5+",
@@ -3269,6 +3289,9 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "city_state_of_nuln": "core"
+      },
       "troop_type": "Light cavalry",
       "base_size": "30x60mm",
       "unit_size": "4+",
@@ -3428,6 +3451,10 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "core",
+      "list_category_overrides": {
+        "city_state_of_nuln": "special",
+        "knightly_order": "core"
+      },
       "troop_type": "Heavy cavalry",
       "base_size": "30x60mm",
       "unit_size": "4+",
@@ -3569,6 +3596,9 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "knightly_order": "core"
+      },
       "troop_type": "Heavy cavalry",
       "base_size": "30x60mm",
       "unit_size": "4+",
@@ -3704,7 +3734,8 @@
       "category": "cavalry",
       "list_category": "rare",
       "list_category_overrides": {
-        "grand_army": "special"
+        "grand_army": "special",
+        "city_state_of_nuln": "rare"
       },
       "troop_type": "Light cavalry",
       "base_size": "30x60mm",
@@ -3872,6 +3903,9 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "knightly_order": "special"
+      },
       "troop_type": "Monstrous cavalry",
       "base_size": "50x75mm",
       "unit_size": "2-12",
@@ -4128,6 +4162,10 @@
       "source": "forces_of_fantasy",
       "category": "cavalry",
       "list_category": "rare",
+      "list_category_overrides": {
+        "city_state_of_nuln": "rare",
+        "knightly_order": null
+      },
       "troop_type": "Heavy chariot",
       "base_size": "60x100mm",
       "unit_size": "1",
@@ -4245,6 +4283,9 @@
       "source": "forces_of_fantasy",
       "category": "war_machine",
       "list_category": "special",
+      "list_category_overrides": {
+        "city_state_of_nuln": "special"
+      },
       "troop_type": "War machine",
       "base_size": "50x75mm (war machine), 25x25mm (crew)",
       "unit_size": "1",
@@ -4296,6 +4337,9 @@
       "source": "forces_of_fantasy",
       "category": "war_machine",
       "list_category": "special",
+      "list_category_overrides": {
+        "city_state_of_nuln": "special"
+      },
       "troop_type": "War machine",
       "base_size": "50x75mm (war machine), 25x25mm (crew)",
       "unit_size": "1",
@@ -4351,6 +4395,10 @@
       "source": "forces_of_fantasy",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "city_state_of_nuln": "rare",
+        "knightly_order": null
+      },
       "troop_type": "War machine",
       "base_size": "50x75mm (war machine), 25x25mm (crew)",
       "unit_size": "1",
@@ -4399,6 +4447,10 @@
       "source": "forces_of_fantasy",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "city_state_of_nuln": "rare",
+        "knightly_order": null
+      },
       "troop_type": "War machine",
       "base_size": "50x75mm (war machine), 25x25mm (crew)",
       "unit_size": "1",
@@ -4445,6 +4497,9 @@
       "source": "arcane_journal",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "city_state_of_nuln": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
@@ -4547,6 +4602,9 @@
       "source": "arcane_journal",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "city_state_of_nuln": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",
@@ -4682,6 +4740,9 @@
       "source": "arcane_journal",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "city_state_of_nuln": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "5+",
@@ -4736,6 +4797,9 @@
       "source": "arcane_journal",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "city_state_of_nuln": "core"
+      },
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
       "unit_size": "10+",

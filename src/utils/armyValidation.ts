@@ -135,13 +135,17 @@ export function calcEntryPoints(unit: Unit, entry: ArmyEntry, faction?: Faction)
  */
 export function getEffectiveListCategory(
   unit: Unit,
-  compositionId: string
+  compositionId: string,
+  isAoI = false
 ): ListCategory | null {
-  if (unit.category === 'character') return 'characters';
   if (unit.category === 'mount') return null;
-  // Apply composition-specific override if present
-  const override = unit.list_category_overrides?.[compositionId];
-  if (override) return override;
+  // Apply composition-specific override if present (null = explicitly excluded)
+  if (unit.list_category_overrides && compositionId in unit.list_category_overrides) {
+    return unit.list_category_overrides[compositionId] ?? null;
+  }
+  // AoI compositions require an explicit override — no implicit fallback for non-character units
+  if (isAoI && unit.category !== 'character') return null;
+  if (unit.category === 'character') return 'characters';
   return unit.list_category ?? null;
 }
 
@@ -156,11 +160,12 @@ export interface CategoryPoints {
 /** Compute points per category, using composition-aware slot assignments */
 export function calcCategoryPoints(army: ArmyList, faction: Faction): CategoryPoints {
   const result: CategoryPoints = { characters: 0, core: 0, special: 0, rare: 0, total: 0 };
+  const isAoI = faction.army_compositions.find((c) => c.id === army.compositionId)?.source === 'arcane_journal';
   for (const entry of army.entries) {
     const unit = faction.units.find((u) => u.id === entry.unitId);
     if (!unit) continue;
     const pts = calcEntryPoints(unit, entry, faction);
-    const cat = getEffectiveListCategory(unit, army.compositionId);
+    const cat = getEffectiveListCategory(unit, army.compositionId, isAoI);
     if (cat) result[cat] += pts;
     result.total += pts;
   }
@@ -393,10 +398,11 @@ export function validateArmy(army: ArmyList, faction: Faction): ValidationIssue[
     for (const entry of army.entries) {
       unitCounts.set(entry.unitId, (unitCounts.get(entry.unitId) ?? 0) + 1);
     }
+    const isAoI = faction.army_compositions.find((c) => c.id === army.compositionId)?.source === 'arcane_journal';
     for (const [unitId, count] of unitCounts) {
       const unit = faction.units.find((u) => u.id === unitId);
       if (!unit) continue;
-      const cat = getEffectiveListCategory(unit, army.compositionId);
+      const cat = getEffectiveListCategory(unit, army.compositionId, isAoI);
       const maxAllowed =
         cat === 'characters' ? 3
         : cat === 'core' ? 4
