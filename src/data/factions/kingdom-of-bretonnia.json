@@ -954,7 +954,7 @@
           ]
         },
         {
-          "name": "Cavalry spear",
+          "name": "Cavalry Spear",
           "range": "Combat",
           "S": "S+1",
           "AP": "-1",
@@ -1215,14 +1215,14 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Wicked claws",
+          "name": "Wicked Claws",
           "range": "Combat",
           "S": "S",
           "AP": "-2",
           "special_rules": []
         },
         {
-          "name": "Serrated maw",
+          "name": "Serrated Maw",
           "range": "Combat",
           "S": "S",
           "AP": "—",

@@ -1,179 +1,397 @@
 {
+  "_source": "tow.whfb.app/weapons-of-war — verified via Puppeteer scrape",
+  "_note": "Reference file only. Per-unit weapon_profiles in faction JSONs are the source of truth for display.",
   "weapons": [
+    {
+      "name": "Asrai Longbow",
+      "range": "32\"",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Armour Bane (1)", "Volley Fire"],
+      "faction": "Wood Elf Realms"
+    },
+    {
+      "name": "Blunderbuss",
+      "range": "12\"",
+      "strength": "3",
+      "ap": "-1",
+      "special_rules": ["Multiple Shots (D3)", "Volley Fire"],
+      "faction": "Kingdom of Bretonnia / Empire of Man"
+    },
+    {
+      "name": "Bombard",
+      "range": "48\"",
+      "strength": "8",
+      "ap": "-3",
+      "special_rules": ["Armour Bane (2)", "Cannon Fire", "Cumbersome", "Move or Shoot", "Multiple Wounds (D3+1)"],
+      "faction": "Kingdom of Bretonnia (Arcane Journal)"
+    },
+    {
+      "name": "Bow of Avelorn",
+      "range": "30\"",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Armour Bane (1)", "Magical Attacks", "Volley Fire"],
+      "faction": "High Elf Realms"
+    },
     {
       "name": "Brace of Pistols",
       "range": "12\"",
       "strength": "4",
       "ap": "-1",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Multiple Shots (2)",
-        "Quick Shot",
-        "Extra Attacks (+1)",
-        "Requires Two Hands"
-      ]
+      "special_rules": ["Armour Bane (1)", "Multiple Shots (2)", "Quick Shot"]
     },
     {
-      "name": "Crossbow",
-      "range": "30\"",
-      "strength": "4",
-      "ap": "—",
-      "special_rules": [
-        "Armour Bane (2)",
-        "Ponderous"
-      ]
-    },
-    {
-      "name": "Flail",
-      "range": "Combat",
-      "strength": "S+2",
+      "name": "Brimstone Gun",
+      "range": "18\"",
+      "strength": "5",
       "ap": "-2",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Requires Two Hands"
-      ]
-    },
-    {
-      "name": "Great Cannon",
-      "range": "48\"",
-      "strength": "8",
-      "ap": "-2",
-      "special_rules": [
-        "Armour Bane (2)"
-      ]
-    },
-    {
-      "name": "Great Weapon",
-      "range": "Combat",
-      "strength": "S+2",
-      "ap": "-2",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Requires Two Hands",
-        "Strike Last"
-      ]
-    },
-    {
-      "name": "Halberd",
-      "range": "Combat",
-      "strength": "S+1",
-      "ap": "-1(-2)",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Requires Two Hands"
-      ]
-    },
-    {
-      "name": "Handgun",
-      "range": "24\"",
-      "strength": "4",
-      "ap": "-1",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Ponderous"
-      ]
-    },
-    {
-      "name": "Lance",
-      "range": "Combat",
-      "strength": "S+2",
-      "ap": "-2",
-      "special_rules": [
-        "Armour Bane (1)"
-      ]
-    },
-    {
-      "name": "Morning Star",
-      "range": "Combat",
-      "strength": "S+1",
-      "ap": "-1",
-      "special_rules": [
-        "Armour Bane (1)"
-      ]
-    },
-    {
-      "name": "Mortar",
-      "range": "12-48\"",
-      "strength": "2(6)",
-      "ap": "-2(-3)",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Bombardment",
-        "Cumbersome",
-        "Move or Shoot",
-        "Multiple Wounds (D3)"
-      ]
-    },
-    {
-      "name": "Pistol",
-      "range": "12\"",
-      "strength": "4",
-      "ap": "-1",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Quick Shot"
-      ]
-    },
-    {
-      "name": "Repeater Handgun",
-      "range": "24\"",
-      "strength": "4",
-      "ap": "-1",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Multiple Shots (3)",
-        "Ponderous"
-      ]
-    },
-    {
-      "name": "Repeater Pistol",
-      "range": "12\"",
-      "strength": "4",
-      "ap": "-1",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Multiple Shots (3)",
-        "Quick Shot"
-      ]
+      "special_rules": ["Dwarf Crafted", "Flaming Attacks", "Multiple Shots (D3+1)", "Quick Shot"],
+      "faction": "Dwarfen Mountain Holds"
     },
     {
       "name": "Cavalry Spear",
       "range": "Combat",
       "strength": "S+1",
       "ap": "-1",
-      "special_rules": [
-        "Fight In Extra Rank"
-      ],
+      "special_rules": ["Fight In Extra Rank"],
       "notes": "Cavalry/monster/chariot only. S+1 and AP-1 apply only during a turn in which the wielder charged. Cannot make a supporting attack on a charge."
+    },
+    {
+      "name": "Chracian Great Blade",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-3",
+      "special_rules": ["Requires Two Hands", "Strike Last"],
+      "faction": "High Elf Realms"
+    },
+    {
+      "name": "Clattergun",
+      "range": "24\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (1)", "Dwarf Crafted", "Move & Shoot", "Multiple Shots (D6)", "Quick Shot"],
+      "faction": "Dwarfen Mountain Holds"
+    },
+    {
+      "name": "Crossbow",
+      "range": "30\"",
+      "strength": "4",
+      "ap": "—",
+      "special_rules": ["Armour Bane (2)", "Ponderous"]
+    },
+    {
+      "name": "Dark Fire of Chaos",
+      "range": "N/A",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": ["Breath Weapon", "Flaming Attacks", "Magical Attacks"],
+      "faction": "Warriors of Chaos"
+    },
+    {
+      "name": "Decapitating Claws",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-2",
+      "special_rules": ["Killing Blow", "Monster Slayer"],
+      "faction": "Tomb Kings of Khemri"
+    },
+    {
+      "name": "Drakegun",
+      "range": "18\"",
+      "strength": "5",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (2)", "Dwarf Crafted", "Flaming Attacks", "Quick Shot"],
+      "faction": "Dwarfen Mountain Holds"
+    },
+    {
+      "name": "Field Trebuchet",
+      "range": "12-72\"",
+      "strength": "5(10)",
+      "ap": "-1(-4)",
+      "special_rules": ["Bombardment", "Cumbersome", "Immovable Object", "Move or Shoot", "Multiple Wounds (D3+1)"],
+      "faction": "Kingdom of Bretonnia"
+    },
+    {
+      "name": "Flail",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": ["Armour Bane (1)", "Requires Two Hands"]
+    },
+    {
+      "name": "Fumes of Contagion",
+      "range": "N/A",
+      "strength": "2",
+      "ap": "N/A",
+      "special_rules": ["Breath Weapon", "Magical Attacks"],
+      "faction": "Warriors of Chaos"
+    },
+    {
+      "name": "Great Hammer",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": ["Armour Bane (2)", "Magical Attacks", "Requires Two Hands"],
+      "faction": "Dwarfen Mountain Holds"
+    },
+    {
+      "name": "Great Weapon",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": ["Armour Bane (1)", "Requires Two Hands", "Strike Last"]
+    },
+    {
+      "name": "Halberd",
+      "range": "Combat",
+      "strength": "S+1",
+      "ap": "-1(-2)",
+      "special_rules": ["Armour Bane (1)", "Requires Two Hands"]
+    },
+    {
+      "name": "Handgun",
+      "range": "24\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (1)", "Ponderous"]
+    },
+    {
+      "name": "Handmaiden's Spear",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-1",
+      "special_rules": [],
+      "faction": "High Elf Realms"
+    },
+    {
+      "name": "Helblaster Volley Gun",
+      "range": "24\"",
+      "strength": "5",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (2)", "Cumbersome", "Helblaster", "Move or Shoot"],
+      "faction": "Empire of Man"
+    },
+    {
+      "name": "Helstorm Rocket Battery",
+      "range": "12-48\"",
+      "strength": "3",
+      "ap": "-1",
+      "special_rules": ["Cumbersome", "Helstorm", "Move or Shoot"],
+      "faction": "Empire of Man"
+    },
+    {
+      "name": "Hochland Long Rifle",
+      "range": "36\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (1)", "Cumbersome", "Ponderous"],
+      "faction": "Empire of Man"
+    },
+    {
+      "name": "Javelin",
+      "range": "12\"",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Move & Shoot", "Quick Shot"]
+    },
+    {
+      "name": "Lance",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": ["Armour Bane (1)"]
     },
     {
       "name": "Longbow",
       "range": "30\"",
       "strength": "3",
       "ap": "-",
-      "special_rules": [
-        "Armour Bane (1)",
-        "Volley Fire"
-      ]
+      "special_rules": ["Armour Bane (1)", "Volley Fire"]
+    },
+    {
+      "name": "Morning Star",
+      "range": "Combat",
+      "strength": "S+1",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (1)"]
+    },
+    {
+      "name": "Mortar",
+      "range": "12-48\"",
+      "strength": "2(6)",
+      "ap": "-2(-3)",
+      "special_rules": ["Armour Bane (1)", "Bombardment", "Cumbersome", "Move or Shoot", "Multiple Wounds (D3)"],
+      "faction": "Empire of Man"
+    },
+    {
+      "name": "Pistol",
+      "range": "12\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (1)", "Quick Shot"]
+    },
+    {
+      "name": "Polearm",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Fight In Extra Rank"],
+      "notes": "Bretonnia uses two profiles: single-handed (S, Fight in Extra Rank) and double-handed (S+1, -1, Requires Two Hands)."
+    },
+    {
+      "name": "Ranger's Glaive",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": ["Requires Two Hands"],
+      "faction": "Wood Elf Realms"
+    },
+    {
+      "name": "Repeater Crossbow",
+      "range": "24\"",
+      "strength": "3",
+      "ap": "-",
+      "special_rules": ["Armour Bane (1)", "Multiple Shots (2)"]
+    },
+    {
+      "name": "Repeater Handgun",
+      "range": "24\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (1)", "Multiple Shots (3)", "Ponderous"]
+    },
+    {
+      "name": "Repeater Pistol",
+      "range": "12\"",
+      "strength": "4",
+      "ap": "-1",
+      "special_rules": ["Armour Bane (1)", "Multiple Shots (3)", "Quick Shot"]
+    },
+    {
+      "name": "Screaming Skull Catapult",
+      "range": "12-60\"",
+      "strength": "4(8)",
+      "ap": "-1(-3)",
+      "special_rules": ["Bombardment", "Cumbersome", "Flaming Attacks", "Magical Attacks", "Move or Shoot", "Multiple Wounds (D3+1)", "Screaming Skulls"],
+      "faction": "Tomb Kings of Khemri"
+    },
+    {
+      "name": "Serrated Maw",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Armour Bane (2)", "Multiple Wounds (2)"]
     },
     {
       "name": "Shortbow",
       "range": "18\"",
       "strength": "3",
       "ap": "-",
-      "special_rules": [
-        "Quick Shot",
-        "Volley Fire"
-      ]
+      "special_rules": ["Quick Shot", "Volley Fire"]
+    },
+    {
+      "name": "Sling",
+      "range": "18\"",
+      "strength": "3",
+      "ap": "-",
+      "special_rules": ["Multiple Shots (2)"]
     },
     {
       "name": "Spear",
       "range": "Combat",
       "strength": "S",
       "ap": "—",
-      "special_rules": [
-        "Fight In Extra Rank"
-      ]
+      "special_rules": ["Fight In Extra Rank"]
+    },
+    {
+      "name": "Steam Cannon",
+      "range": "24\"",
+      "strength": "8",
+      "ap": "-2",
+      "special_rules": ["Armour Bane (2)", "Cannon Fire", "Cumbersome", "Multiple Wounds (D3)"],
+      "faction": "Empire of Man"
+    },
+    {
+      "name": "Steam Drill",
+      "range": "Combat",
+      "strength": "S+3",
+      "ap": "-3",
+      "special_rules": ["Furious Charge", "Requires Two Hands", "Strike Last"],
+      "faction": "Dwarfen Mountain Holds"
+    },
+    {
+      "name": "Sword of Hoeth",
+      "range": "Combat",
+      "strength": "S+2",
+      "ap": "-2",
+      "special_rules": ["Magical Attacks", "Requires Two Hands"],
+      "faction": "High Elf Realms"
+    },
+    {
+      "name": "Throwing Axe",
+      "range": "9\"",
+      "strength": "S+1",
+      "ap": "-",
+      "special_rules": ["Quick Shot"]
+    },
+    {
+      "name": "Throwing Spear",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Fight In Extra Rank"]
+    },
+    {
+      "name": "Thrusting Spear",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Fight In Extra Rank"]
+    },
+    {
+      "name": "Trollhammer Torpedo",
+      "range": "24\"",
+      "strength": "5",
+      "ap": "-3",
+      "special_rules": ["Cumbersome", "Flaming Attacks", "Multiple Wounds (D3)"],
+      "faction": "Dwarfen Mountain Holds"
+    },
+    {
+      "name": "Venomous Tail",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Poisoned Attacks", "Strike First"]
+    },
+    {
+      "name": "Warbow",
+      "range": "24\"",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Volley Fire"]
+    },
+    {
+      "name": "Whip",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-",
+      "special_rules": ["Fight In Extra Rank", "Strike First"]
+    },
+    {
+      "name": "Wicked Claws",
+      "range": "Combat",
+      "strength": "S",
+      "ap": "-2",
+      "special_rules": []
+    },
+    {
+      "name": "Wolf Hammer",
+      "range": "Combat",
+      "strength": "S+1",
+      "ap": "-2",
+      "special_rules": ["Requires Two Hands"],
+      "faction": "Empire of Man"
     }
   ]
 }

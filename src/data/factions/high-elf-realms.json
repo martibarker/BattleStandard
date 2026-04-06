@@ -486,7 +486,7 @@
           ]
         },
         {
-          "name": "Cavalry spear",
+          "name": "Cavalry Spear",
           "range": "Combat",
           "S": "S+1",
           "AP": "-1",
@@ -663,7 +663,7 @@
           ]
         },
         {
-          "name": "Cavalry spear",
+          "name": "Cavalry Spear",
           "range": "Combat",
           "S": "S+1",
           "AP": "-1",
@@ -1113,7 +1113,7 @@
           ]
         },
         {
-          "name": "Cavalry spear",
+          "name": "Cavalry Spear",
           "range": "Combat",
           "S": "S+1",
           "AP": "-1",
@@ -2632,7 +2632,7 @@
           ]
         },
         {
-          "name": "Cavalry spear",
+          "name": "Cavalry Spear",
           "range": "Combat",
           "S": "S+1",
           "AP": "-1",

@@ -1697,7 +1697,7 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Great hammers",
+          "name": "Great Hammer",
           "range": "Combat",
           "S": "S+2",
           "AP": "-2",
@@ -2274,7 +2274,7 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Steam gun",
+          "name": "Steam Gun",
           "range": "N/A",
           "S": "3",
           "AP": "-1",
@@ -2283,7 +2283,7 @@
           ]
         },
         {
-          "name": "Brimstone gun",
+          "name": "Brimstone Gun",
           "range": "18\"",
           "S": "5",
           "AP": "-2",
@@ -2364,7 +2364,7 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Steam gun",
+          "name": "Steam Gun",
           "range": "N/A",
           "S": "3",
           "AP": "-1",
@@ -2373,7 +2373,7 @@
           ]
         },
         {
-          "name": "Brimstone gun",
+          "name": "Brimstone Gun",
           "range": "18\"",
           "S": "5",
           "AP": "-2",
