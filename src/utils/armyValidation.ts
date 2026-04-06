@@ -370,31 +370,46 @@ export function validateArmy(army: ArmyList, faction: Faction): ValidationIssue[
     }
   }
 
-  // --- Option-level max_per_1000_pts constraints ---
-  // Collect all (unit, option) pairs that carry this constraint, keyed by option description
-  const optionConstraints = new Map<string, { max: number; unitNames: Set<string> }>();
+  // --- Option-level 0-N per 1,000 pts constraints (parsed from description text) ---
+  // The constraint lives in the description string, e.g.:
+  //   "Replace Open Order with Skirmishers (0-1 unit per 1,000 pts)"
+  //   "0-1 unit per 1,000 points may have the Drilled special rule"
+  //   "0-1 unit per 1,000 points may: ..." (choice group header)
+  // We count how many army entries have each such option selected and compare
+  // against floor(limit / 1000) * N.
+  const PER_1000_RE = /\b0-(\d+)\b.*?\bper\s+1[,.]?000\b/i;
+
+  const optionPer1000 = new Map<string, { max: number; count: number }>();
   for (const entry of army.entries) {
     const unit = faction.units.find((u) => u.id === entry.unitId);
     if (!unit) continue;
     for (const opt of unit.options ?? []) {
-      if (!opt.max_per_1000_pts || !opt.choices) continue;
-      const choiceDescs = opt.choices.map((c) => c.description);
-      const hasAnyChoice = choiceDescs.some((d) => entry.selectedOptions.includes(d));
-      if (!hasAnyChoice) continue;
-      const key = opt.description;
-      if (!optionConstraints.has(key)) {
-        optionConstraints.set(key, { max: opt.max_per_1000_pts, unitNames: new Set() });
-      }
-      optionConstraints.get(key)!.unitNames.add(unit.name);
+      const m = PER_1000_RE.exec(opt.description ?? '');
+      if (!m) continue;
+      const maxPer1000 = parseInt(m[1], 10);
+
+      // Determine whether this entry has the option active
+      const isSelected = opt.choices
+        ? opt.choices.some((c) => entry.selectedOptions.includes(c.description))
+        : entry.selectedOptions.includes(opt.description);
+      if (!isSelected) continue;
+
+      const rec = optionPer1000.get(opt.description) ?? { max: maxPer1000, count: 0 };
+      rec.count += 1;
+      optionPer1000.set(opt.description, rec);
     }
   }
-  for (const [desc, { max, unitNames }] of optionConstraints) {
-    const count = unitNames.size;
+  for (const [desc, { max, count }] of optionPer1000) {
     const allowed = Math.floor(limit / 1000) * max;
     if (count > allowed) {
+      // Strip the inline constraint annotation for a cleaner display label
+      const label = desc
+        .replace(/\s*[\[(]?0-\d+(?:\s+\w+)?\s+per\s+1[,.]?000\s*(?:pts?|points)[\])]?/gi, '')
+        .replace(/\s*:\s*$/, '')
+        .trim() || desc;
       issues.push({
         category: 'Unit limit',
-        message: `"${desc}" — ${count} unit${count !== 1 ? 's' : ''} have this option, max ${max} per 1,000 pts (${allowed} at ${limit} pts)`,
+        message: `"${label}": ${count} unit${count !== 1 ? 's' : ''} — max ${max} per 1,000 pts (${allowed} at ${limit} pts)`,
         severity: 'error',
       });
     }

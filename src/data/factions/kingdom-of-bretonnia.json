@@ -1658,6 +1658,18 @@
           "role": "musician",
           "cost_per_unit": 5
         }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Longbow",
+          "range": "30\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "volley_fire"
+          ]
+        }
       ]
     },
     {
@@ -2480,12 +2492,23 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Spear",
+          "name": "Cavalry Spear",
           "range": "Combat",
           "S": "S+1",
           "AP": "-1",
           "special_rules": [
             "fight_in_extra_rank"
+          ],
+          "notes": "Cavalry/monster/chariot only. S+1 and AP-1 apply only during a turn in which the wielder charged. Cannot make a supporting attack on a charge."
+        },
+        {
+          "name": "Shortbow",
+          "range": "18\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "quick_shot",
+            "volley_fire"
           ]
         }
       ]

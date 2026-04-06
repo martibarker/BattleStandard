@@ -137,6 +137,36 @@
       ]
     },
     {
+      "name": "Cavalry Spear",
+      "range": "Combat",
+      "strength": "S+1",
+      "ap": "-1",
+      "special_rules": [
+        "Fight In Extra Rank"
+      ],
+      "notes": "Cavalry/monster/chariot only. S+1 and AP-1 apply only during a turn in which the wielder charged. Cannot make a supporting attack on a charge."
+    },
+    {
+      "name": "Longbow",
+      "range": "30\"",
+      "strength": "3",
+      "ap": "-",
+      "special_rules": [
+        "Armour Bane (1)",
+        "Volley Fire"
+      ]
+    },
+    {
+      "name": "Shortbow",
+      "range": "18\"",
+      "strength": "3",
+      "ap": "-",
+      "special_rules": [
+        "Quick Shot",
+        "Volley Fire"
+      ]
+    },
+    {
       "name": "Spear",
       "range": "Combat",
       "strength": "S",

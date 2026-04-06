@@ -794,9 +794,12 @@ export default function ArmyEditor() {
                           ...flattenEquipment(unit.equipment),
                           ...entry.selectedOptions,
                         ].map(e => e.toLowerCase());
-                        const relevantProfiles = unit.weapon_profiles.filter(wp =>
-                          equipped.some(eq => eq.includes(wp.name.toLowerCase()))
-                        );
+                        const relevantProfiles = unit.weapon_profiles.filter(wp => {
+                          // Strip parenthetical qualifiers before matching so that e.g.
+                          // "Polearm (single-handed)" matches equipment "Polearms (see weapon profiles)"
+                          const wpRoot = wp.name.toLowerCase().replace(/\s*\(.*?\)/g, '').trim();
+                          return equipped.some(eq => eq.includes(wpRoot));
+                        });
                         return relevantProfiles.length > 0 ? <WeaponProfileTable profiles={relevantProfiles} /> : null;
                       })()}
 
