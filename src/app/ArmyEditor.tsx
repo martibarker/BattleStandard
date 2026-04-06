@@ -7,7 +7,7 @@ import { getFaction } from '../data/factions/index';
 import type { Faction, Unit, WeaponProfile, Option, OptionChoice, SubOrder } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
-import { getLore } from '../utils/magic';
+import { getLore, unitLoreToId } from '../utils/magic';
 import ValidationBars from '../components/ValidationBars';
 import { generateArmyName } from '../data/armyNames';
 
@@ -720,22 +720,34 @@ export default function ArmyEditor() {
                       <StatBar unit={unit} save={entrySave} />
 
                       {/* Lore selector — shown for wizards with more than one lore option */}
-                      {unit.magic && unit.magic.lores.length > 1 && (
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-                          <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-text-3)', flexShrink: 0 }}>Lore:</span>
-                          <select
-                            value={entry.selectedLoreKey ?? unit.magic.lores[0]}
-                            onChange={(e) => updateEntry(armyId, entry.id, { selectedLoreKey: e.target.value })}
-                            style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '12px', color: 'var(--f-text)', background: 'var(--f-elevated)', border: '1px solid var(--f-border)', borderRadius: '3px', padding: '2px 6px', cursor: 'pointer' }}
-                          >
-                            {unit.magic.lores.map((loreKey) => (
-                              <option key={loreKey} value={loreKey}>
-                                {getLore(loreKey)?.name ?? loreKey}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                      )}
+                      {unit.magic && unit.magic.lores.length > 1 && (() => {
+                        const activeLoreKey = entry.selectedLoreKey ?? unit.magic.lores[0];
+                        const activeLoreId = unitLoreToId(activeLoreKey);
+                        const loreUrl = `https://tow.whfb.app/the-lores-of-magic/${activeLoreId}`;
+                        return (
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
+                            <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-text-3)', flexShrink: 0 }}>Lore:</span>
+                            <select
+                              value={activeLoreKey}
+                              onChange={(e) => updateEntry(armyId, entry.id, { selectedLoreKey: e.target.value })}
+                              style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '12px', color: 'var(--f-text)', background: 'var(--f-elevated)', border: '1px solid var(--f-border)', borderRadius: '3px', padding: '2px 6px', cursor: 'pointer' }}
+                            >
+                              {unit.magic.lores.map((loreKey) => (
+                                <option key={loreKey} value={loreKey}>
+                                  {getLore(loreKey)?.name ?? loreKey}
+                                </option>
+                              ))}
+                            </select>
+                            <a
+                              href={loreUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="View lore on tow.whfb.app"
+                              style={{ color: 'var(--f-blue)', fontSize: '13px', lineHeight: 1, textDecoration: 'none', flexShrink: 0 }}
+                            >↗</a>
+                          </div>
+                        );
+                      })()}
 
                       {unit.weapon_profiles && unit.weapon_profiles.length > 0 && (() => {
                         // Show profiles matching base equipment OR currently selected weapon options
