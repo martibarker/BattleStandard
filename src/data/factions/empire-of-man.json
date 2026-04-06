@@ -81,11 +81,12 @@
           "limit_value": 25,
           "eligible_unit_ids": [
             "flagellants",
+            "empire_war_wagon",
             "helblaster_volley_gun",
             "helstorm_rocket_battery",
             "empire_steam_tank"
           ],
-          "notes": "Flagellants; 0-1 war machine per 1,000 points (Helblaster Volley Gun, Helstorm Rocket Battery); 0-1 Steam Tank per 1,000 points"
+          "notes": "Flagellants; 0-1 War Wagon per 1,000 points; 0-1 war machine per 1,000 points (Helblaster Volley Gun, Helstorm Rocket Battery); 0-1 Steam Tank per 1,000 points"
         },
         {
           "category": "rare",
@@ -96,6 +97,15 @@
             "helstorm_rocket_battery"
           ],
           "notes": "0-1 war machine chosen from Helblaster Volley Gun and Helstorm Rocket Battery per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "empire_war_wagon"
+          ],
+          "notes": "0-1 War Wagon per 1,000 points"
         },
         {
           "category": "rare",
@@ -2203,6 +2213,7 @@
       "base_size": "60x100mm",
       "unit_size": "1",
       "points": 135,
+      "armour_value": "4+",
       "stats": {
         "M": "-",
         "WS": "-",
@@ -2296,7 +2307,10 @@
         {
           "role": "champion",
           "name": "Sergeant",
-          "cost_per_unit": 5
+          "cost_per_unit": 5,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -2407,7 +2421,10 @@
         {
           "role": "champion",
           "name": "Veteran Sergeant",
-          "cost_per_unit": 5
+          "cost_per_unit": 5,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -2458,7 +2475,7 @@
       "stats": {
         "M": "4",
         "WS": "3",
-        "BS": "5",
+        "BS": "3",
         "S": "3",
         "T": "3",
         "W": "1",
@@ -2536,7 +2553,10 @@
         {
           "role": "champion",
           "name": "Sergeant",
-          "cost_per_unit": 5
+          "cost_per_unit": 5,
+          "champion_stats": {
+            "BS": "4"
+          }
         },
         {
           "role": "standard_bearer",
@@ -2640,7 +2660,11 @@
         {
           "role": "champion",
           "name": "Militia Leader",
-          "cost_per_unit": 7
+          "cost_per_unit": 7,
+          "champion_stats": {
+            "A": "2",
+            "Ld": "7"
+          }
         }
       ],
       "weapon_profiles": [
@@ -2715,7 +2739,10 @@
         {
           "role": "champion",
           "name": "Marksman",
-          "cost_per_unit": 5
+          "cost_per_unit": 5,
+          "champion_stats": {
+            "BS": "4"
+          }
         }
       ]
     },
@@ -2781,7 +2808,11 @@
         {
           "role": "champion",
           "name": "Count's Champion",
-          "cost_per_unit": 8
+          "cost_per_unit": 8,
+          "champion_stats": {
+            "WS": "5",
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -2849,7 +2880,10 @@
         {
           "role": "champion",
           "name": "Prophet of Doom",
-          "cost_per_unit": 7
+          "cost_per_unit": 7,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -2919,7 +2953,11 @@
         {
           "role": "champion",
           "name": "First Knight",
-          "cost_per_unit": 8
+          "cost_per_unit": 8,
+          "champion_stats": {
+            "WS": "5",
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -3025,7 +3063,11 @@
         {
           "role": "champion",
           "name": "Ogre Captain",
-          "cost_per_unit": 7
+          "cost_per_unit": 7,
+          "champion_stats": {
+            "BS": "4",
+            "A": "4"
+          }
         }
       ],
       "weapon_profiles": [
@@ -3075,17 +3117,37 @@
       "base_size": "30x60mm",
       "unit_size": "5+",
       "points": 16,
-      "stats": {
-        "M": "-",
-        "WS": "3",
-        "BS": "3",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "I": "3",
-        "A": "1",
-        "Ld": "6"
-      },
+      "profiles": [
+        {
+          "name": "Pistolier",
+          "profile": {
+            "M": "8",
+            "WS": "3",
+            "BS": "3",
+            "S": "3",
+            "T": "3",
+            "W": "1",
+            "I": "3",
+            "A": "1",
+            "Ld": "6"
+          }
+        },
+        {
+          "name": "Empire Warhorse",
+          "profile": {
+            "M": "8",
+            "WS": "3",
+            "BS": "-",
+            "S": "3",
+            "T": "-",
+            "W": "-",
+            "I": "3",
+            "A": "1",
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
       "equipment": [
         "Hand weapons",
         "Brace of pistols",
@@ -3137,7 +3199,11 @@
         {
           "role": "champion",
           "name": "Veteran",
-          "cost_per_unit": 8
+          "cost_per_unit": 8,
+          "champion_stats": {
+            "BS": "4",
+            "Ld": "7"
+          }
         },
         {
           "role": "musician",
@@ -3207,17 +3273,37 @@
       "base_size": "30x60mm",
       "unit_size": "4+",
       "points": 19,
-      "stats": {
-        "M": "-",
-        "WS": "3",
-        "BS": "4",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "I": "3",
-        "A": "1",
-        "Ld": "7"
-      },
+      "profiles": [
+        {
+          "name": "Outrider",
+          "profile": {
+            "M": "8",
+            "WS": "3",
+            "BS": "4",
+            "S": "3",
+            "T": "3",
+            "W": "1",
+            "I": "3",
+            "A": "1",
+            "Ld": "7"
+          }
+        },
+        {
+          "name": "Empire Warhorse",
+          "profile": {
+            "M": "8",
+            "WS": "3",
+            "BS": "-",
+            "S": "3",
+            "T": "-",
+            "W": "-",
+            "I": "3",
+            "A": "1",
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
       "equipment": [
         "Hand weapons",
         "Pistols",
@@ -3262,7 +3348,10 @@
         {
           "role": "champion",
           "name": "Sharpshooter",
-          "cost_per_unit": 6
+          "cost_per_unit": 6,
+          "champion_stats": {
+            "BS": "5"
+          }
         },
         {
           "role": "musician",
@@ -3343,17 +3432,37 @@
       "base_size": "30x60mm",
       "unit_size": "4+",
       "points": 21,
-      "stats": {
-        "M": "-",
-        "WS": "3",
-        "BS": "3",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "I": "3",
-        "A": "1",
-        "Ld": "8"
-      },
+      "profiles": [
+        {
+          "name": "Empire Knight",
+          "profile": {
+            "M": "7",
+            "WS": "4",
+            "BS": "3",
+            "S": "3",
+            "T": "3",
+            "W": "1",
+            "I": "3",
+            "A": "1",
+            "Ld": "8"
+          }
+        },
+        {
+          "name": "Barded Warhorse",
+          "profile": {
+            "M": "7",
+            "WS": "3",
+            "BS": "-",
+            "S": "3",
+            "T": "-",
+            "W": "-",
+            "I": "3",
+            "A": "1",
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
       "equipment": [
         "Hand weapons",
         "Heavy armour",
@@ -3413,7 +3522,10 @@
         {
           "role": "champion",
           "name": "Preceptor",
-          "cost_per_unit": 6
+          "cost_per_unit": 6,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -3461,17 +3573,37 @@
       "base_size": "30x60mm",
       "unit_size": "4+",
       "points": 29,
-      "stats": {
-        "M": "-",
-        "WS": "4",
-        "BS": "3",
-        "S": "4",
-        "T": "3",
-        "W": "1",
-        "I": "4",
-        "A": "1",
-        "Ld": "9"
-      },
+      "profiles": [
+        {
+          "name": "Inner Circle Knight",
+          "profile": {
+            "M": "7",
+            "WS": "4",
+            "BS": "3",
+            "S": "4",
+            "T": "3",
+            "W": "1",
+            "I": "4",
+            "A": "1",
+            "Ld": "9"
+          }
+        },
+        {
+          "name": "Barded Warhorse",
+          "profile": {
+            "M": "7",
+            "WS": "3",
+            "BS": "-",
+            "S": "3",
+            "T": "-",
+            "W": "-",
+            "I": "3",
+            "A": "1",
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
       "equipment": [
         "Hand weapons",
         "Full plate armour",
@@ -3522,7 +3654,10 @@
         {
           "role": "champion",
           "name": "Inner Circle Preceptor",
-          "cost_per_unit": 7
+          "cost_per_unit": 7,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -3575,17 +3710,37 @@
       "base_size": "30x60mm",
       "unit_size": "4+",
       "points": 18,
-      "stats": {
-        "M": "-",
-        "WS": "3",
-        "BS": "4",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "I": "3",
-        "A": "1",
-        "Ld": "7"
-      },
+      "profiles": [
+        {
+          "name": "Road Warden",
+          "profile": {
+            "M": "8",
+            "WS": "3",
+            "BS": "4",
+            "S": "3",
+            "T": "3",
+            "W": "1",
+            "I": "3",
+            "A": "1",
+            "Ld": "7"
+          }
+        },
+        {
+          "name": "Warhorse",
+          "profile": {
+            "M": "8",
+            "WS": "3",
+            "BS": "-",
+            "S": "3",
+            "T": "-",
+            "W": "-",
+            "I": "3",
+            "A": "1",
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
       "equipment": [
         "Hand weapons",
         "Crossbows",
@@ -3653,7 +3808,10 @@
         {
           "role": "champion",
           "name": "Captain",
-          "cost_per_unit": 6
+          "cost_per_unit": 6,
+          "champion_stats": {
+            "BS": "5"
+          }
         },
         {
           "role": "musician",
@@ -3718,17 +3876,37 @@
       "base_size": "50x75mm",
       "unit_size": "2-12",
       "points": 58,
-      "stats": {
-        "M": "-",
-        "WS": "4",
-        "BS": "3",
-        "S": "4",
-        "T": "4",
-        "W": "3",
-        "I": "4",
-        "A": "1",
-        "Ld": "8"
-      },
+      "profiles": [
+        {
+          "name": "Demigryph Knight",
+          "profile": {
+            "M": "7",
+            "WS": "4",
+            "BS": "3",
+            "S": "4",
+            "T": "4",
+            "W": "3",
+            "I": "4",
+            "A": "1",
+            "Ld": "8"
+          }
+        },
+        {
+          "name": "Demigryph",
+          "profile": {
+            "M": "7",
+            "WS": "4",
+            "BS": "-",
+            "S": "4",
+            "T": "-",
+            "W": "-",
+            "I": "4",
+            "A": "2",
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
       "equipment": [
         "Hand weapons",
         "Heavy armour",
@@ -3771,7 +3949,10 @@
         {
           "role": "champion",
           "name": "Demigryph Preceptor",
-          "cost_per_unit": 7
+          "cost_per_unit": 7,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -3852,13 +4033,12 @@
       "name": "War Altar of Sigmar",
       "source": "forces_of_fantasy",
       "category": "cavalry",
-      "list_category": "core",
       "troop_type": "Heavy chariot",
       "base_size": "60x100mm",
       "unit_size": "1",
       "points": 135,
       "stats": {
-        "M": "-",
+        "M": "7",
         "WS": "-",
         "BS": "-",
         "S": "5",
@@ -3890,7 +4070,7 @@
       "name": "Empire War Wagon",
       "source": "arcane_journal",
       "category": "cavalry",
-      "list_category": "special",
+      "list_category": "rare",
       "list_category_overrides": {
         "city_state_of_nuln": "special"
       },
@@ -3898,8 +4078,9 @@
       "base_size": "60x100mm",
       "unit_size": "1",
       "points": 140,
+      "armour_value": "3+",
       "stats": {
-        "M": "-",
+        "M": "7",
         "WS": "-",
         "BS": "-",
         "S": "5",
@@ -3951,6 +4132,7 @@
       "base_size": "60x100mm",
       "unit_size": "1",
       "points": 265,
+      "armour_value": "3+",
       "stats": {
         "M": "4",
         "WS": "-",
@@ -4071,9 +4253,9 @@
         "M": "-",
         "WS": "-",
         "BS": "-",
-        "S": "6",
-        "T": "3",
-        "W": "-",
+        "S": "-",
+        "T": "6",
+        "W": "3",
         "I": "-",
         "A": "-",
         "Ld": "-"
@@ -4122,9 +4304,9 @@
         "M": "-",
         "WS": "-",
         "BS": "-",
-        "S": "6",
-        "T": "3",
-        "W": "-",
+        "S": "-",
+        "T": "6",
+        "W": "3",
         "I": "-",
         "A": "-",
         "Ld": "-"
@@ -4177,9 +4359,9 @@
         "M": "-",
         "WS": "-",
         "BS": "-",
-        "S": "6",
-        "T": "3",
-        "W": "-",
+        "S": "-",
+        "T": "6",
+        "W": "3",
         "I": "-",
         "A": "-",
         "Ld": "-"
@@ -4225,9 +4407,9 @@
         "M": "-",
         "WS": "-",
         "BS": "-",
-        "S": "6",
-        "T": "3",
-        "W": "-",
+        "S": "-",
+        "T": "6",
+        "W": "3",
         "I": "-",
         "A": "-",
         "Ld": "-"
@@ -4317,7 +4499,10 @@
         {
           "role": "champion",
           "name": "Sergeant",
-          "cost_per_unit": 5
+          "cost_per_unit": 5,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -4369,7 +4554,7 @@
       "stats": {
         "M": "4",
         "WS": "3",
-        "BS": "5",
+        "BS": "3",
         "S": "3",
         "T": "3",
         "W": "1",
@@ -4447,7 +4632,10 @@
         {
           "role": "champion",
           "name": "Sergeant",
-          "cost_per_unit": 5
+          "cost_per_unit": 5,
+          "champion_stats": {
+            "BS": "4"
+          }
         },
         {
           "role": "standard_bearer",
@@ -4496,7 +4684,7 @@
       "list_category": "core",
       "troop_type": "Regular infantry",
       "base_size": "25x25mm",
-      "unit_size": "10+",
+      "unit_size": "5+",
       "points": 5,
       "stats": {
         "M": "4",
@@ -4506,43 +4694,18 @@
         "T": "3",
         "W": "1",
         "I": "3",
-        "A": "2",
+        "A": "1",
         "Ld": "7"
       },
       "equipment": [
         "Hand weapons",
-        "Light armour"
+        "Light armour",
+        "Shields"
       ],
       "special_rules": [
         "close_order",
         "detachment",
         "regimental_unit"
-      ],
-      "options": [
-        {
-          "description": "The entire unit may take one of the following:",
-          "choices": [
-            {
-              "cost": 1,
-              "scope": "per_model",
-              "description": "Halberds",
-              "category": "special"
-            },
-            {
-              "cost": 1,
-              "scope": "per_model",
-              "description": "Thrusting spears",
-              "category": "special"
-            }
-          ],
-          "category": "special"
-        },
-        {
-          "cost": 1,
-          "scope": "per_model",
-          "description": "Shields",
-          "category": "special"
-        }
       ],
       "command": [
         {
@@ -4559,31 +4722,10 @@
           "cost_per_unit": 5
         }
       ],
-      "weapon_profiles": [
-        {
-          "name": "Halberd",
-          "range": "Combat",
-          "S": "S+1",
-          "AP": "-1(-2)",
-          "special_rules": [
-            "armour_bane_1",
-            "requires_two_hands"
-          ]
-        },
-        {
-          "name": "Spear",
-          "range": "Combat",
-          "S": "S+1",
-          "AP": "-1",
-          "special_rules": [
-            "fight_in_extra_rank"
-          ]
-        }
-      ],
       "notes": [
-        "Nuln Swordsmen may be 5+ if a detachment."
+        "Detachment only. Consists of State Troops equipped with hand weapons and shields.",
+        "Nuln Swordsmen may be 5+ as a detachment."
       ],
-      "magic_standard": 50,
       "availability": [
         "city_state_of_nuln"
       ]
@@ -4663,7 +4805,10 @@
         {
           "role": "champion",
           "name": "Veteran Sergeant",
-          "cost_per_unit": 5
+          "cost_per_unit": 5,
+          "champion_stats": {
+            "A": "2"
+          }
         },
         {
           "role": "standard_bearer",
@@ -4706,23 +4851,6 @@
     }
   ],
   "magic_items": [
-    {
-      "id": "dragonblade",
-      "name": "Dragonblade",
-      "category": "magic_weapon",
-      "points": 30,
-      "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
-      "weapon_profile": {
-        "name": "Dragonblade",
-        "range": "Combat",
-        "S": "S+2",
-        "AP": "-2",
-        "special_rules": [
-          "armour_bane_1",
-          "magical_attacks"
-        ]
-      }
-    },
     {
       "id": "burning-blade",
       "name": "Burning Blade*",
@@ -5166,7 +5294,7 @@
       "weapon_profile": {
         "name": "Runefang",
         "range": "Combat",
-        "S": "5",
+        "S": "S",
         "AP": "-2",
         "special_rules": [
           "strike_first",
