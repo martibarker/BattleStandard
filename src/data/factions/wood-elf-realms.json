@@ -92,7 +92,7 @@
             "great-eagles",
             "wood-elf-beast-pack"
           ],
-          "notes": "Treemen; 0-1 unit of Waywatchers per Waystalker taken; 0-3 Great Eagles per 1,000 points; Wood Elf Beast Pack"
+          "notes": "Treemen; 0-1 unit of Waywatchers per Waystalker taken; 0-3 Great Eagles per 1,000 points; Wood Elf Beast Packs (Beasts of the Forest rule)"
         },
         {
           "category": "rare",
@@ -660,12 +660,6 @@
           "max_points": 100,
           "scope": "per_unit",
           "category": "special"
-        },
-        {
-          "description": "May purchase magic items up to a total of (as Level 3)",
-          "max_points": 50,
-          "scope": "per_unit",
-          "category": "special"
         }
       ],
       "notes": [
@@ -739,12 +733,6 @@
         {
           "description": "May purchase magic items up to a total of (as Level 2)",
           "max_points": 50,
-          "scope": "per_unit",
-          "category": "special"
-        },
-        {
-          "description": "May purchase magic items up to a total of (as Level 1)",
-          "max_points": 25,
           "scope": "per_unit",
           "category": "special"
         }
@@ -1354,11 +1342,11 @@
         "M": "8",
         "WS": "4",
         "BS": "-",
-        "S": "5 (+1)",
-        "T": "5 (+1)",
-        "W": "4",
-        "I": "2",
-        "A": "-",
+        "S": "5",
+        "T": "(+1)",
+        "W": "(+1)",
+        "I": "4",
+        "A": "2",
         "Ld": "-"
       },
       "equipment": [
@@ -1395,8 +1383,8 @@
         "WS": "4",
         "BS": "-",
         "S": "4",
-        "T": "4 (+1)",
-        "W": "2",
+        "T": "-",
+        "W": "(+1)",
         "I": "5",
         "A": "2",
         "Ld": "-"
@@ -1433,9 +1421,9 @@
         "M": "2",
         "WS": "3",
         "BS": "-",
-        "S": "4 (+1)",
-        "T": "4",
-        "W": "2",
+        "S": "4",
+        "T": "(+1)",
+        "W": "-",
         "I": "4",
         "A": "2",
         "Ld": "-"
@@ -1469,11 +1457,11 @@
         "M": "6",
         "WS": "6",
         "BS": "-",
-        "S": "7 (+3)",
-        "T": "7 (+6)",
-        "W": "4",
-        "I": "6",
-        "A": "-",
+        "S": "7",
+        "T": "(+3)",
+        "W": "(+6)",
+        "I": "4",
+        "A": "6",
         "Ld": "-"
       },
       "equipment": [
@@ -1514,9 +1502,9 @@
         "WS": "5",
         "BS": "-",
         "S": "4",
-        "T": "4 (+1)",
-        "W": "4",
-        "I": "3",
+        "T": "(+1)",
+        "W": "(+1)",
+        "I": "4",
         "A": "3",
         "Ld": "-"
       },
@@ -2635,8 +2623,8 @@
         "M": "-",
         "WS": "5",
         "BS": "4",
-        "S": "3",
-        "T": "1",
+        "S": "4",
+        "T": "3",
         "W": "1",
         "I": "5",
         "A": "1",
@@ -2722,7 +2710,7 @@
       "stats": {
         "M": "-",
         "WS": "4",
-        "BS": "5",
+        "BS": "4",
         "S": "3",
         "T": "4",
         "W": "2",
@@ -2808,7 +2796,7 @@
         }
       ],
       "notes": [
-        "Warhawks: M2, WS3, BS-, S4, T2, W-, I4, A2, Ld-. Wicked claws: R Combat, S S, AP -2."
+        "Warhawks: M2, WS3, BS-, S4, T-, W-, I4, A2, Ld-. Wicked claws: R Combat, S S, AP -2."
       ]
     },
     {
