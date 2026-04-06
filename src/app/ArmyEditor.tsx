@@ -672,7 +672,13 @@ export default function ArmyEditor() {
                   const showOptions = !!(unit.options && unit.options.length > 0) || !!(unit.command && unit.command.length > 0);
                   const { min, max } = parseUnitSize(unit.unit_size);
 
-                  const mountUnit = entry.selectedMountId ? faction.units.find((u) => u.id === entry.selectedMountId) : null;
+                  const mountUnit = entry.selectedMountId
+                    ? faction.units.find((u) => u.id === entry.selectedMountId)
+                    // Fallback: some characters have mount as a plain checkbox option (e.g. Outcast Wizards, Sergeant-at-Arms)
+                    : faction.units.find((u) =>
+                        u.category === 'mount' &&
+                        entry.selectedOptions.some((o) => o.toLowerCase() === u.name.toLowerCase())
+                      ) ?? null;
                   const baseEquip = flattenEquipment(unit.equipment);
                   const extraEquip = [
                     ...entry.selectedOptions.filter((o) => /\bshield\b/i.test(o) && !baseEquip.some((e) => /\bshield\b/i.test(e))),
