@@ -7,6 +7,7 @@ import { getFaction } from '../data/factions/index';
 import type { Faction, Unit, WeaponProfile, Option, OptionChoice, SubOrder } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
+import { getLore } from '../utils/magic';
 import ValidationBars from '../components/ValidationBars';
 import { generateArmyName } from '../data/armyNames';
 
@@ -718,6 +719,24 @@ export default function ArmyEditor() {
 
                       <StatBar unit={unit} save={entrySave} />
 
+                      {/* Lore selector — shown for wizards with more than one lore option */}
+                      {unit.magic && unit.magic.lores.length > 1 && (
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
+                          <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-text-3)', flexShrink: 0 }}>Lore:</span>
+                          <select
+                            value={entry.selectedLoreKey ?? unit.magic.lores[0]}
+                            onChange={(e) => updateEntry(armyId, entry.id, { selectedLoreKey: e.target.value })}
+                            style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '12px', color: 'var(--f-text)', background: 'var(--f-elevated)', border: '1px solid var(--f-border)', borderRadius: '3px', padding: '2px 6px', cursor: 'pointer' }}
+                          >
+                            {unit.magic.lores.map((loreKey) => (
+                              <option key={loreKey} value={loreKey}>
+                                {getLore(loreKey)?.name ?? loreKey}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      )}
+
                       {unit.weapon_profiles && unit.weapon_profiles.length > 0 && (() => {
                         // Show profiles matching base equipment OR currently selected weapon options
                         const equipped = [
@@ -948,18 +967,21 @@ function WeaponProfileTable({ profiles }: { profiles: WeaponProfile[] }) {
 function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
   const [activeRule, setActiveRule] = useState<{ name: string; url: string } | null>(null);
   if (!ruleIds || ruleIds.length === 0) return null;
-  const rulesData = (specialRulesData as { rules: { id: string; name: string }[] }).rules;
+  const rulesData = (specialRulesData as { rules: { id: string; name: string; url?: string }[] }).rules;
   return (
     <>
       <div className="flex flex-wrap gap-1 mt-1.5">
         {ruleIds.map((id) => {
           const rule = rulesData.find((r) => r.id === id);
           const name = rule?.name ?? formatRuleName(id);
-          // Strip parenthetical qualifier (e.g. "Hatred (Dwarfs)" → "hatred") so variants
-          // resolve to the single base rule page on tow.whfb.app
-          const baseName = name.replace(/\s*\(.*\)\s*$/, '').trim();
-          const slug = baseName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-          const url = `https://tow.whfb.app/special-rules/${slug}`;
+          // Use explicit url override if present, otherwise derive from name
+          const url = rule?.url ?? (() => {
+            // Strip parenthetical qualifier (e.g. "Hatred (Dwarfs)" → "hatred") so variants
+            // resolve to the single base rule page on tow.whfb.app
+            const baseName = name.replace(/\s*\(.*\)\s*$/, '').trim();
+            const slug = baseName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+            return `https://tow.whfb.app/special-rules/${slug}`;
+          })();
           return (
             <button
               key={id}

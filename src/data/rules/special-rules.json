@@ -77,6 +77,7 @@
       "id": "lore_of_the_lady",
       "name": "Lore of the Lady",
       "source": "army",
+      "url": "https://tow.whfb.app/the-lores-of-magic/lore-of-the-lady",
       "description": "A Wizard with this rule may discard one randomly generated spell and instead select the signature spell of their chosen Lore of Magic, or one of the Lore of the Lady spells (The Lady's Gift or The Lady's Wrath)."
     },
     {
@@ -677,12 +678,14 @@
       "id": "lore_of_gork",
       "name": "Lore of Gork",
       "source": "army",
+      "url": "https://tow.whfb.app/the-lores-of-magic/lore-of-gork",
       "description": "A Wizard with this rule may discard one randomly generated spell and instead select the signature spell of their chosen Lore of Magic, or one of the Lore of Gork spells (Brain Bursta or Gaze of Gork)."
     },
     {
       "id": "lore_of_mork",
       "name": "Lore of Mork",
       "source": "army",
+      "url": "https://tow.whfb.app/the-lores-of-magic/lore-of-mork",
       "description": "A Wizard with this rule may discard one randomly generated spell and instead select the signature spell of their chosen Lore of Magic, or one of the Lore of Mork spells (Mork's Curse or Itchy Nuisance)."
     },
     {

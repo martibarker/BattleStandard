@@ -40,6 +40,12 @@ export interface ArmyEntry {
    */
   selectedMountId: string | null;
   customName?: string;
+  /**
+   * Selected lore key (snake_case, e.g. 'battle_magic') for wizard units with a choice of lore.
+   * Undefined means the first lore in unit.magic.lores is assumed.
+   * Carried through to General's Adjutant to pre-populate spell setup.
+   */
+  selectedLoreKey?: string;
 }
 
 export interface ArmyList {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useGameStore, type PlayerGameState, type SpellEntry } from '../../store/gameStore';
 import { useArmyStore } from '../../store/armyStore';
+import type { ArmyEntry } from '../../types/army';
 import { getFaction } from '../../data/factions';
 import { isWizard } from '../../utils/armyValidation';
 import { SECONDARY_OBJECTIVES } from '../../data/secondary-objectives';
@@ -58,8 +59,15 @@ interface Props {
 // Helpers
 // ---------------------------------------------------------------------------
 
-function initWizardSetups(faction: Faction): WizardSetup[] {
-  return faction.units.filter(isWizard).map(initWizardSetup);
+function initWizardSetups(faction: Faction, entries: ArmyEntry[] = []): WizardSetup[] {
+  return faction.units.filter(isWizard).map((unit) => {
+    const setup = initWizardSetup(unit);
+    const entry = entries.find((e) => e.unitId === unit.id);
+    if (entry?.selectedLoreKey) {
+      setup.selectedLore = entry.selectedLoreKey;
+    }
+    return setup;
+  });
 }
 
 function boundItemsForFaction(factionId: string | null): BoundSpellItem[] {
@@ -317,7 +325,7 @@ export default function Setup({ onCancel }: Props) {
                     const faction = army ? getFaction(army.factionId) : null;
                     const factionKey = side === 'p1' ? 'p1Faction' : 'p2Faction';
                     const setupsKey = side === 'p1' ? 'p1WizardSetups' : 'p2WizardSetups';
-                    const wizardSetups = faction ? initWizardSetups(faction) : [];
+                    const wizardSetups = faction ? initWizardSetups(faction, army?.entries ?? []) : [];
                     setState((s) => ({
                       ...s,
                       [armyIdKey]: id,
