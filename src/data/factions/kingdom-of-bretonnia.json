@@ -1041,10 +1041,10 @@
             "WS": 3,
             "BS": "-",
             "S": 4,
-            "T": "(+1)",
-            "W": 4,
-            "I": 2,
-            "A": "-",
+            "T": "-",
+            "W": "(+1)",
+            "I": 4,
+            "A": 2,
             "Ld": "-"
           },
           "mount_grants": "+1 Wound to rider"
@@ -1137,7 +1137,7 @@
         "Hooves and horn (counts as a hand weapon)"
       ],
       "special_rules": [
-        "armour_bane_1",
+        "armour_bane_2",
         "armoured_hide_1",
         "beguiling_aura",
         "counter_charge",
@@ -1146,7 +1146,7 @@
         "swiftstride"
       ],
       "notes": [
-        "Armour Bane (1) applies to Unicorn only, not the rider",
+        "Armour Bane (2) applies to Unicorn only, not the rider",
         "Available to Prophetess only"
       ]
     },
@@ -1449,7 +1449,7 @@
           "profile": {
             "M": 4,
             "WS": 2,
-            "BS": 3,
+            "BS": 2,
             "S": 3,
             "T": 3,
             "W": 1,
@@ -1719,7 +1719,7 @@
         {
           "name": "Knight Errant",
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 3,
             "BS": 2,
             "S": 3,
@@ -1735,7 +1735,7 @@
           "is_champion": true,
           "champion_cost": 6,
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 3,
             "BS": 2,
             "S": 3,
@@ -1818,7 +1818,7 @@
         {
           "name": "Knight of the Realm",
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 4,
             "BS": 2,
             "S": 3,
@@ -1834,7 +1834,7 @@
           "is_champion": true,
           "champion_cost": 7,
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 4,
             "BS": 2,
             "S": 3,
@@ -1929,7 +1929,7 @@
         {
           "name": "Questing Knight",
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 5,
             "BS": 2,
             "S": 4,
@@ -1945,7 +1945,7 @@
           "is_champion": true,
           "champion_cost": 7,
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 5,
             "BS": 2,
             "S": 4,
@@ -2045,7 +2045,7 @@
         {
           "name": "Grail Knight",
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 6,
             "BS": 2,
             "S": 4,
@@ -2061,7 +2061,7 @@
           "is_champion": true,
           "champion_cost": 7,
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 6,
             "BS": 2,
             "S": 4,
@@ -2161,7 +2161,7 @@
         {
           "name": "Pegasus Knight",
           "profile": {
-            "M": "-",
+            "M": 7,
             "WS": 4,
             "BS": 2,
             "S": 4,
@@ -2177,7 +2177,7 @@
           "is_champion": true,
           "champion_cost": 7,
           "profile": {
-            "M": "-",
+            "M": 7,
             "WS": 4,
             "BS": 2,
             "S": 4,
@@ -2268,7 +2268,7 @@
         {
           "name": "Mounted Yeoman",
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 3,
             "BS": 3,
             "S": 3,
@@ -2284,7 +2284,7 @@
           "is_champion": true,
           "champion_cost": 5,
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 3,
             "BS": 3,
             "S": 3,
@@ -2452,14 +2452,14 @@
         {
           "name": "The Green Knight",
           "profile": {
-            "M": "-",
+            "M": 8,
             "WS": 7,
             "BS": 3,
             "S": 4,
             "T": 4,
-            "W": 6,
-            "I": 4,
-            "A": 9,
+            "W": 4,
+            "I": 6,
+            "A": 4,
             "Ld": 9
           }
         },
@@ -2604,7 +2604,7 @@
         {
           "name": "Lady Élisse Duchaard",
           "profile": {
-            "M": "-",
+            "M": 10,
             "WS": 4,
             "BS": 3,
             "S": 3,
@@ -3025,6 +3025,17 @@
           ]
         },
         {
+          "name": "Blunderbuss",
+          "range": "12\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "multiple_shots_d3",
+            "volley_fire"
+          ],
+          "notes": "No negative modifiers for firing at long range, for using Multiple Shots (D3), or whilst making a Stand & Shoot charge reaction"
+        },
+        {
           "name": "Crossbow",
           "range": "30\"",
           "S": "4",
@@ -3145,7 +3156,7 @@
       "id": "virtue_of_the_impetuous_knight",
       "name": "Virtue of the Impetuous Knight",
       "points": 40,
-      "description": "A model with this Virtue gains the Impetuous special rule. In addition, this model (and its unit) increases its maximum possible charge range by 5\". Finally, when this model (and its unit) makes a Charge roll, you may apply a +D3 modifier to the result."
+      "description": "A model with this Virtue gains the Impetuous special rule. In addition, this model (and its unit) increases its maximum possible charge range by 3\". Finally, when this model (and its unit) makes a Charge roll, you may apply a +D3 modifier to the result."
     },
     {
       "id": "virtue_of_audacity",
@@ -3164,7 +3175,7 @@
       "name": "Virtue of Duty",
       "points": 25,
       "restrictions": "Duke, Baron or Paladin only",
-      "description": "Unless the character has been removed from play as a casualty, when calculating its combat result, this character may claim a bonus of +1 combat result point. This character cannot be your army's General or join a friendly unit."
+      "description": "Unless the General of their army has been removed from play as a casualty, when calculating its combat result, this character may claim a bonus of +1 combat result point. This character cannot be your army's General or join a friendly unit."
     },
     {
       "id": "virtue_of_the_joust",
@@ -3199,23 +3210,6 @@
     }
   ],
   "magic_items": [
-    {
-      "id": "dragonblade",
-      "name": "Dragonblade",
-      "category": "magic_weapon",
-      "points": 30,
-      "description": "Dragonblade is inscribed with a Rune of Fury and a Grudge Rune, as described in Forces of Fantasy.",
-      "weapon_profile": {
-        "name": "Dragonblade",
-        "range": "Combat",
-        "S": "S+2",
-        "AP": "-2",
-        "special_rules": [
-          "armour_bane_1",
-          "magical_attacks"
-        ]
-      }
-    },
     {
       "id": "burning-blade",
       "name": "Burning Blade*",
@@ -4204,6 +4198,133 @@
       "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "A unit carrying the Valorous Standard rolls 3D6 when making a Break test and discards the highest result."
+    },
+    {
+      "id": "seal_of_parravon",
+      "name": "Seal of Parravon",
+      "category": "talisman",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "Bearer always hits on a 3+ regardless of Weapon Skill."
+    },
+    {
+      "id": "anointed_armour",
+      "name": "Anointed Armour",
+      "category": "magic_armour",
+      "points": 45,
+      "source": "arcane_journal",
+      "description": "Counts as heavy armour. Whilst the bearer is blessed by the Lady, they are immune to the Killing Blow and Multiple Wounds special rules.",
+      "restrictions": "Models with the Grail Vow whose troop type is 'infantry' or 'cavalry' only"
+    },
+    {
+      "id": "ironspike_shield",
+      "name": "Ironspike Shield",
+      "category": "magic_armour",
+      "points": 20,
+      "source": "arcane_journal",
+      "description": "Counts as a shield. Any attacker who rolls a natural 1 to hit the bearer in close combat suffers a Strength 3 hit with AP -1 in return.",
+      "restrictions": "Models in a Bretonnian Exiles Army of Infamy only",
+      "is_shield": true
+    },
+    {
+      "id": "grail_pendant",
+      "name": "Grail Pendant",
+      "category": "talisman",
+      "points": 40,
+      "source": "arcane_journal",
+      "description": "Single use. When the bearer would lose their last wound, roll a D6; on a 2+ the wound is not lost.",
+      "restrictions": "Models with the Grail Vow only",
+      "single_use": true
+    },
+    {
+      "id": "lucky_heirloom",
+      "name": "Lucky Heirloom",
+      "category": "enchanted_item",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "Once per round, the bearer may re-roll one failed To Hit, To Wound, Armour Save or Ward Save roll.",
+      "restrictions": "Models in a Bretonnian Exiles Army of Infamy only"
+    },
+    {
+      "id": "crusaders_clarion",
+      "name": "Crusader's Clarion",
+      "category": "enchanted_item",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "On the turn the bearer charges, the bearer's mount and all friendly mounts in the same unit gain +1 Strength until end of phase.",
+      "restrictions": "Models in an Errantry Crusade Army of Infamy mounted on a Bretonnian Warhorse only"
+    },
+    {
+      "id": "wyrmbrath_vial",
+      "name": "Wyrmbrath Vial",
+      "category": "enchanted_item",
+      "points": 20,
+      "source": "arcane_journal",
+      "description": "Single use. Breath weapon: Strength 4, AP -1, Flaming Attacks, Magical Attacks.",
+      "restrictions": "Models in a Bretonnian Exiles Army of Infamy only",
+      "single_use": true
+    },
+    {
+      "id": "heart_of_the_wilds",
+      "name": "Heart of the Wilds",
+      "category": "arcane_item",
+      "points": 40,
+      "source": "arcane_journal",
+      "description": "The wizard gains +1 to all Casting rolls whilst within or in base contact with a natural terrain feature.",
+      "restrictions": "Wizard only"
+    },
+    {
+      "id": "diadem_of_power",
+      "name": "Diadem of Power",
+      "category": "arcane_item",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "The wizard gains +1 to Casting rolls when casting Magic Vortex, Magic Missile or Assailment spells.",
+      "restrictions": "Models in an Errantry Crusade Army of Infamy. Wizard only"
+    },
+    {
+      "id": "flamestrike_wand",
+      "name": "Flamestrike Wand",
+      "category": "arcane_item",
+      "points": 15,
+      "source": "arcane_journal",
+      "description": "Single use bound spell (Power Level 3): Fireball.",
+      "restrictions": "Models in a Bretonnian Exiles Army of Infamy. Wizard only",
+      "single_use": true
+    },
+    {
+      "id": "banner_of_the_ladys_grace",
+      "name": "Banner of the Lady's Grace",
+      "category": "magic_standard",
+      "points": 75,
+      "source": "arcane_journal",
+      "description": "The unit bearing this standard ignores all negative Leadership modifiers."
+    },
+    {
+      "id": "crusaders_tapestry",
+      "name": "Crusader's Tapestry",
+      "category": "magic_standard",
+      "points": 40,
+      "source": "arcane_journal",
+      "description": "The unit bearing this standard gains the Frenzy special rule.",
+      "restrictions": "Models in an Errantry Crusade Army of Infamy only"
+    },
+    {
+      "id": "banner_of_the_zealous_knight",
+      "name": "Banner of the Zealous Knight",
+      "category": "magic_standard",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "The unit bearing this standard gains the Vanguard special rule.",
+      "restrictions": "Models in a Bretonnian Exiles Army of Infamy only"
+    },
+    {
+      "id": "banner_of_honourable_warfare",
+      "name": "Banner of Honourable Warfare",
+      "category": "magic_standard",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "The unit bearing this standard must re-roll any failed To Hit rolls in the first round of close combat against an enemy unit that contains any models with missile weapons."
     }
   ],
   "lore_of_the_lady": [
