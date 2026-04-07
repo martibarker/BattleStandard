@@ -345,15 +345,37 @@ function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
       </>}
 
       {type === 'encirclement' && <>
-        {/* Zone A: top band, 12″ short of right edge */}
+        {/* Zone A: top band, 12″ short of right short edge */}
         <rect x={0} y={0} width={150} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {/* Zone B: bottom band, starts 12″ from left edge */}
+        {/* Zone B: bottom band, starts 12″ from left short edge */}
         <rect x={30} y={90} width={150} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {centreLine()}
         {lbl(75, 15, 'ZONE A', 8)}
         {lbl(105, 105, 'ZONE B', 8)}
-        {/* 12″ offset indicators */}
-        {lbl(165, 44, '12″', 6)}
-        {lbl(15, 76, '12″', 6)}
+
+        {/* Horizontal 12″: Zone A stops 12″ from right short edge (top-right corner) */}
+        <line x1={151} y1={15} x2={179} y2={15} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={151} y1={11} x2={151} y2={19} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={179} y1={11} x2={179} y2={19} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(165, 24, '12″', 6)}
+
+        {/* Horizontal 12″: Zone B starts 12″ from left short edge (bottom-left corner) */}
+        <line x1={1} y1={105} x2={29} y2={105} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={1} y1={101} x2={1} y2={109} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={29} y1={101} x2={29} y2={109} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(15, 96, '12″', 6)}
+
+        {/* Vertical 12″: Zone A bottom (y=30) to centreline (y=60), measured on right side */}
+        <line x1={167} y1={31} x2={167} y2={59} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={163} y1={31} x2={171} y2={31} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={163} y1={59} x2={171} y2={59} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(167, 45, '12″', 6)}
+
+        {/* Vertical 12″: centreline (y=60) to Zone B top (y=90), measured on right side */}
+        <line x1={167} y1={61} x2={167} y2={89} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={163} y1={61} x2={171} y2={61} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={163} y1={89} x2={171} y2={89} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(167, 75, '12″', 6)}
       </>}
     </svg>
   );
