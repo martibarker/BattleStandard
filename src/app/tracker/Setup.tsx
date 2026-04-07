@@ -252,11 +252,18 @@ function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
       </>}
 
       {type === 'diagonal' && <>
-        <polygon points={`0,0 ${w},0 ${w},${h}`} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        <polygon points={`0,0 0,${h} ${w},${h}`} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        <line x1={0} y1={0} x2={w} y2={h} stroke="rgba(0,0,0,0.3)" strokeWidth={1.5} />
-        {lbl(130, 22, 'ZONE A', 8)}
-        {lbl(50, 98, 'ZONE B', 8)}
+        {/* Zone A: upper-right triangle — top-left corner → top-right corner → mid-right (y=60) */}
+        <polygon points={`0,0 ${w},0 ${w},${h/2}`} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* Zone B: lower-left triangle — mid-left (y=60) → bottom-left corner → bottom-right corner */}
+        <polygon points={`0,${h/2} 0,${h} ${w},${h}`} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* No-man's land = grey field showing through the parallelogram between the two triangles */}
+        {/* Zone boundary lines */}
+        <line x1={0} y1={0} x2={w} y2={h/2} stroke="rgba(0,0,0,0.28)" strokeWidth={1.5} />
+        <line x1={0} y1={h/2} x2={w} y2={h} stroke="rgba(0,0,0,0.28)" strokeWidth={1.5} />
+        {/* Dashed centre lengthways divider at y=60 */}
+        {centreLine(h/2)}
+        {lbl(125, 18, 'ZONE A', 8)}
+        {lbl(55, 102, 'ZONE B', 8)}
       </>}
 
       {type === 'close_quarters' && <>
