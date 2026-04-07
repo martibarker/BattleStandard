@@ -60,12 +60,11 @@ export default function ArmyBuilder() {
                     const shared = await shareNative(`${army.name} — Battle Standard`, text);
                     if (!shared) await copyToClipboard(text);
                   }}
-                  className="text-sm px-2 py-1 rounded"
-                  style={{ color: 'var(--color-text-secondary)' }}
-                  title="Share army list"
+                  className="text-sm px-3 py-1 rounded flex items-center gap-1"
+                  style={{ color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}
                   aria-label="Share army"
                 >
-                  ↑
+                  Share ↑
                 </button>
                 <button
                   onClick={(e) => {

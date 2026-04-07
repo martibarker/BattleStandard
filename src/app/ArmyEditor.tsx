@@ -281,11 +281,10 @@ export default function ArmyEditor() {
                 const shared = await shareNative(`${army.name} — Battle Standard`, text);
                 if (!shared) await copyToClipboard(text);
               }}
-              title="Share army list"
               style={{
                 flexShrink: 0,
-                width: '28px',
                 height: '28px',
+                padding: '0 10px',
                 border: '1px solid var(--f-border-mid)',
                 borderRadius: '3px',
                 backgroundColor: 'var(--f-elevated)',
@@ -293,8 +292,11 @@ export default function ArmyEditor() {
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '14px',
+                gap: '5px',
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '9.5px',
+                letterSpacing: '0.08em',
+                whiteSpace: 'nowrap',
                 transition: 'border-color 0.15s, color 0.15s',
               }}
               onMouseEnter={(e) => {
@@ -306,7 +308,7 @@ export default function ArmyEditor() {
                 e.currentTarget.style.color = 'var(--f-gold)';
               }}
             >
-              ↑
+              Share ↑
             </button>
           </div>
 
