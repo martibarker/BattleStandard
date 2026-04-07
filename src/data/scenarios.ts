@@ -41,9 +41,8 @@ export const SCENARIOS: ScenarioData[] = [
       'If the players are setting up the terrain, place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses their deployment zone (A or B). Winner deploys their first unit first. ' +
-      'Players deploy using the alternating units method (Matched Play Guide, p.17). ' +
-      'Deployment zone A: full-width band, 12″ deep along the top long edge. ' +
-      'Deployment zone B: full-width band, 12″ deep along the bottom long edge.',
+      'Zone A is a full-width band along the top long edge, 12″ from the centre line of the board. ' +
+      'Zone B is a full-width band along the bottom long edge, 12″ from the centre line of the board.',
     gameLengths: ['standard', 'random', 'break_point'],
     specialRules: [],
     mandatorySecondaries: [],
@@ -68,8 +67,8 @@ export const SCENARIOS: ScenarioData[] = [
       'Once placed, this hill does not scatter.',
     deployment:
       'Winner of a roll-off chooses their deployment zone (A or B). Winner deploys their first unit first. ' +
-      'Zone A: 10″ deep band along the top long edge, with 8″ gaps at each short edge. ' +
-      'Zone B: 10″ deep band along the bottom long edge, with 8″ gaps at each short edge.',
+      'Zone A is a band along the top long edge, starting 8″ from each short edge and stopping 10″ from the centre line of the board. ' +
+      'Zone B is a band along the bottom long edge, starting 8″ from each short edge and stopping 10″ from the centre line of the board.',
     gameLengths: ['random', 'break_point'],
     specialRules: [
       {
@@ -134,8 +133,9 @@ export const SCENARIOS: ScenarioData[] = [
       'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses their deployment zone (A or B). Winner deploys their first unit first. ' +
-      'Zone A: 12″ deep band along the top long edge, with 6″ gaps at each short edge. ' +
-      'Zone B: 12″ deep band along the bottom long edge, with 6″ gaps at each short edge.',
+      'Zone A is a band along the top long edge, starting 6″ from each short edge and stopping 12″ from the centre line of the board. ' +
+      'Zone B is a band along the bottom long edge, starting 6″ from each short edge and stopping 12″ from the centre line of the board. ' +
+      'The short edges are impassable cliff faces — see Bottleneck special rule.',
     gameLengths: ['standard', 'break_point'],
     specialRules: [
       {
@@ -163,8 +163,8 @@ export const SCENARIOS: ScenarioData[] = [
       'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses from zones A1, A2, B1 or B2. ' +
-      'If they choose an A zone, their opponent uses the opposite A zone. If they choose a B zone, their opponent uses the opposite B zone. ' +
-      'Winner deploys their first unit first. No units may deploy within 9″ of the centre of the battlefield (18″ diameter exclusion zone).',
+      'If they choose an A zone, their opponent uses the opposite A zone; if they choose a B zone, their opponent uses the opposite B zone. ' +
+      'Winner deploys their first unit first. No units may deploy within 9″ of the centre point of the battlefield.',
     gameLengths: ['random', 'break_point'],
     specialRules: [],
     mandatorySecondaries: ['special_feature'],
@@ -183,8 +183,8 @@ export const SCENARIOS: ScenarioData[] = [
       'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses their deployment zone (A or B). Winner deploys their first unit first. ' +
-      'Zones are offset: Zone A is a 12″ deep band along the top long edge, stopping 12″ from the right short edge. ' +
-      'Zone B is a 12″ deep band along the bottom long edge, starting 12″ from the left short edge.',
+      'Zones are offset: Zone A is a band along the top long edge, stopping 12″ from the right short edge and 12″ from the centre line of the board. ' +
+      'Zone B is a band along the bottom long edge, starting 12″ from the left short edge and stopping 12″ from the centre line of the board.',
     gameLengths: ['standard', 'random'],
     specialRules: [],
     mandatorySecondaries: ['strategic_locations_4'],
