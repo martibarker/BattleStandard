@@ -3806,7 +3806,7 @@
       "points": 35,
       "source": "arcane_journal",
       "description": "Combat, S, AP -1; Magical Attacks, Requires Two Hands.",
-      "rules_text": "Models whose troop type is 'infantry' only. Phakth's Blades of Justice grant the wielder +1 Attack for each enemy unit the wielder is engaged with."
+      "rules_text": "Models whose troop type is 'infantry' only. Phakth's Blades of Justice grant the wielder +1 Attack for each rank an enemy unit the wielder is engaged with has."
     },
     {
       "id": "tapestry_of_conquered_lands",
@@ -3821,7 +3821,7 @@
       "name": "Warding Splint",
       "points": 35,
       "source": "arcane_journal",
-      "description": "A suit of heavy armour which may be purchased and worn by a Liche Priest, even if they do not have the option to be equipped with armour, without penalty. In addition, its wearer has a 5+ Ward save against any wounds suffered."
+      "description": "A suit of heavy armour which may be purchased and worn by a Liche Priest, even if they do not have the option to be equipped with armour, a shield or barding, without penalty. In addition, its wearer has a 5+ Ward save against any wounds suffered."
     },
     {
       "id": "icon_of_rakaph",
