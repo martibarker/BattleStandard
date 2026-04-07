@@ -10,6 +10,7 @@ import specialRulesData from '../data/rules/special-rules.json';
 import { getLore, unitLoreToId } from '../utils/magic';
 import ValidationBars from '../components/ValidationBars';
 import { generateArmyName } from '../data/armyNames';
+import { generateArmyText, copyToClipboard, shareNative } from '../utils/dataTransfer';
 
 
 type BrowserTab = 'characters' | 'core' | 'special' | 'rare' | 'mercenaries';
@@ -273,6 +274,39 @@ export default function ArmyEditor() {
               }}
             >
               ⚄
+            </button>
+            <button
+              onClick={async () => {
+                const text = generateArmyText(army, 'social');
+                const shared = await shareNative(`${army.name} — Battle Standard`, text);
+                if (!shared) await copyToClipboard(text);
+              }}
+              title="Share army list"
+              style={{
+                flexShrink: 0,
+                width: '28px',
+                height: '28px',
+                border: '1px solid var(--f-border-mid)',
+                borderRadius: '3px',
+                backgroundColor: 'var(--f-elevated)',
+                color: 'var(--f-gold)',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '14px',
+                transition: 'border-color 0.15s, color 0.15s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--f-gold)';
+                e.currentTarget.style.color = 'var(--f-primary)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'var(--f-border-mid)';
+                e.currentTarget.style.color = 'var(--f-gold)';
+              }}
+            >
+              ↑
             </button>
           </div>
 

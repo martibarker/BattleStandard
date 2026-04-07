@@ -164,11 +164,14 @@ function TransferSection({ compact }: { compact: boolean }) {
 
 function ShareSection() {
   const armies = useArmyStore((s) => s.armies);
-  const [selectedArmyId, setSelectedArmyId] = useState<string>(armies[0]?.id ?? '');
+  const [selectedArmyId, setSelectedArmyId] = useState<string>('');
   const [format, setFormat] = useState<ShareFormat>('social');
   const { status, flash } = useFlash();
 
-  const selectedArmy = armies.find((a) => a.id === selectedArmyId);
+  // Resolve effective ID — handles async store hydration where armies may load
+  // after useState initialises, leaving selectedArmyId as ''.
+  const effectiveId = selectedArmyId || armies[0]?.id || '';
+  const selectedArmy = armies.find((a) => a.id === effectiveId);
   const canShare = !!selectedArmy;
 
   function getText() {

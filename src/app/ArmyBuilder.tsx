@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
+import { generateArmyText, copyToClipboard, shareNative } from '../utils/dataTransfer';
 
 /** Army Builder dashboard — lists all saved armies */
 export default function ArmyBuilder() {
@@ -52,6 +53,20 @@ export default function ArmyBuilder() {
                 <span className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
                   {army.entries.length} {army.entries.length === 1 ? 'unit' : 'units'}
                 </span>
+                <button
+                  onClick={async (e) => {
+                    e.stopPropagation();
+                    const text = generateArmyText(army, 'social');
+                    const shared = await shareNative(`${army.name} — Battle Standard`, text);
+                    if (!shared) await copyToClipboard(text);
+                  }}
+                  className="text-sm px-2 py-1 rounded"
+                  style={{ color: 'var(--color-text-secondary)' }}
+                  title="Share army list"
+                  aria-label="Share army"
+                >
+                  ↑
+                </button>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
