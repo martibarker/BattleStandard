@@ -466,8 +466,14 @@ export default function Layout() {
       </footer>
 
       {/* Mobile bottom ad + tab bar */}
-      <div className="fixed bottom-0 inset-x-0 md:hidden z-40" style={{ backgroundColor: 'var(--f-surface)' }}>
-        <div style={{ borderBottom: '1px solid var(--f-border)', padding: '4px 8px' }}>
+      <div className="fixed bottom-0 inset-x-0 md:hidden z-40">
+        <div style={{
+          borderBottom: '1px solid var(--f-border)',
+          padding: '4px 8px',
+          backgroundColor: 'var(--f-surface)',
+          maxHeight: '60px',
+          overflow: 'hidden',
+        }}>
           <AdUnit slot="2336535285" format="horizontal" />
         </div>
         <nav className="flex items-center border-t" style={{
