@@ -16,6 +16,8 @@ interface Props {
   factionId: string;
   setup: WizardSetup;
   onChange: (setup: WizardSetup) => void;
+  /** When true, magic item modifiers were auto-detected from the army list — show read-only instead of checkboxes */
+  fromList?: boolean;
 }
 
 const ITEM_LABELS: Record<SpellModItem, string> = {
@@ -32,7 +34,7 @@ const ITEM_EXTRA_LORE: Partial<Record<SpellModItem, string>> = {
   goretooth:         'lore_of_primal_magic',
 };
 
-export default function WizardSpellSetup({ unit, factionId, setup, onChange }: Props) {
+export default function WizardSpellSetup({ unit, factionId, setup, onChange, fromList = false }: Props) {
   const effectiveLores = [...setup.availableLores, ...setup.extraLores];
   const spells = getLoreSpells(setup.selectedLore);
   const loreName = getLore(setup.selectedLore)?.name ?? setup.selectedLore;
@@ -217,31 +219,64 @@ export default function WizardSpellSetup({ unit, factionId, setup, onChange }: P
           className="pt-2 space-y-1.5"
           style={{ borderTop: '1px solid var(--color-border)' }}
         >
-          <p className="text-xs mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>
-            Magic items (tick if equipped):
-          </p>
-          {factionItems.map((item) => {
-            const isExtraLore = item === 'heartwood_pendant' || item === 'goretooth';
-            const isExtraSpell = item === 'spell_familiar' || item === 'tome_of_midnight';
-            const checked =
-              item === 'lore_familiar'     ? setup.hasLoreFamiliar :
-              isExtraSpell                  ? setup.hasExtraSpell :
-              item === 'grimoire_of_ogvold' ? setup.hasGrimoire :
-              isExtraLore
-                ? setup.extraLores.includes(ITEM_EXTRA_LORE[item]!)
-                : false;
-            return (
-              <label key={item} className="flex items-center gap-2 text-xs cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={checked}
-                  onChange={(e) => handleItemToggle(item, e.target.checked)}
-                  style={{ accentColor: 'var(--color-accent-amber)', flexShrink: 0 }}
-                />
-                <span style={{ color: 'var(--color-text-primary)' }}>{ITEM_LABELS[item]}</span>
-              </label>
-            );
-          })}
+          {fromList ? (
+            // List mode: show which items were auto-detected, read-only
+            (() => {
+              const equippedItems = factionItems.filter((item) => {
+                const isExtraLore = item === 'heartwood_pendant' || item === 'goretooth';
+                const isExtraSpell = item === 'spell_familiar' || item === 'tome_of_midnight';
+                return (
+                  item === 'lore_familiar'     ? setup.hasLoreFamiliar :
+                  isExtraSpell                  ? setup.hasExtraSpell :
+                  item === 'grimoire_of_ogvold' ? setup.hasGrimoire :
+                  isExtraLore ? setup.extraLores.includes(ITEM_EXTRA_LORE[item]!) : false
+                );
+              });
+              if (equippedItems.length === 0) return null;
+              return (
+                <>
+                  <p className="text-xs mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>
+                    Magic items (from list):
+                  </p>
+                  {equippedItems.map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-xs">
+                      <span style={{ color: 'var(--color-accent-amber)', flexShrink: 0 }}>✓</span>
+                      <span style={{ color: 'var(--color-text-primary)' }}>{ITEM_LABELS[item]}</span>
+                    </div>
+                  ))}
+                </>
+              );
+            })()
+          ) : (
+            // Manual mode: interactive checkboxes
+            <>
+              <p className="text-xs mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>
+                Magic items (tick if equipped):
+              </p>
+              {factionItems.map((item) => {
+                const isExtraLore = item === 'heartwood_pendant' || item === 'goretooth';
+                const isExtraSpell = item === 'spell_familiar' || item === 'tome_of_midnight';
+                const checked =
+                  item === 'lore_familiar'     ? setup.hasLoreFamiliar :
+                  isExtraSpell                  ? setup.hasExtraSpell :
+                  item === 'grimoire_of_ogvold' ? setup.hasGrimoire :
+                  isExtraLore
+                    ? setup.extraLores.includes(ITEM_EXTRA_LORE[item]!)
+                    : false;
+                return (
+                  <label key={item} className="flex items-center gap-2 text-xs cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={(e) => handleItemToggle(item, e.target.checked)}
+                      style={{ accentColor: 'var(--color-accent-amber)', flexShrink: 0 }}
+                    />
+                    <span style={{ color: 'var(--color-text-primary)' }}>{ITEM_LABELS[item]}</span>
+                  </label>
+                );
+              })}
+            </>
+          )}
         </div>
       )}
     </div>

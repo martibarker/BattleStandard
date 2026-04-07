@@ -748,6 +748,7 @@ export default function Setup({ onCancel }: Props) {
                       unit={unit}
                       factionId={state.p1Faction!.id}
                       setup={wizardSetup}
+                      fromList={!!state.p1ArmyId}
                       onChange={(updated) =>
                         setState((s) => ({
                           ...s,
@@ -813,6 +814,7 @@ export default function Setup({ onCancel }: Props) {
                       unit={unit}
                       factionId={state.p2Faction!.id}
                       setup={wizardSetup}
+                      fromList={!!state.p2ArmyId}
                       onChange={(updated) =>
                         setState((s) => ({
                           ...s,
