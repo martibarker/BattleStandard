@@ -551,49 +551,79 @@ export default function Setup({ onCancel }: Props) {
     };
 
     const renderBoundSpells = (side: 'p1' | 'p2', factionId: string | null, playerName: string) => {
+      const armyIdKey = side === 'p1' ? 'p1ArmyId' : 'p2ArmyId';
+      const hasList = !!state[armyIdKey];
       const key = side === 'p1' ? 'p1BoundSpells' : 'p2BoundSpells';
       const selected = state[key];
-      const items = boundItemsForFaction(factionId);
-      if (items.length === 0) return null;
+
+      // With a list loaded: auto-detected — show summary only if any were found, no manual UI
+      if (hasList) {
+        if (selected.length === 0) return null;
+        return (
+          <div className="rounded border p-4 mt-4" style={cardStyle}>
+            <h4 className="text-sm font-semibold mb-2" style={{ color: 'var(--color-text-primary)' }}>
+              {playerName} — Bound Spell Items
+            </h4>
+            <div className="space-y-1">
+              {selected.map((itemId) => {
+                const item = BOUND_SPELL_ITEMS.find((b) => b.itemId === itemId);
+                if (!item) return null;
+                return (
+                  <div key={itemId} className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+                    {item.itemName} → {item.spellName} ({item.castingValue}) Power {item.powerLevel}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      }
+
+      // Without a list: searchable dropdown to add items manually
+      const allItems = boundItemsForFaction(factionId);
+      if (allItems.length === 0) return null;
+      const unselected = allItems.filter((b) => !selected.includes(b.itemId));
 
       return (
         <div className="rounded border p-4 mt-4" style={cardStyle}>
-          <h4 className="text-sm font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+          <h4 className="text-sm font-semibold mb-2" style={{ color: 'var(--color-text-primary)' }}>
             {playerName} — Bound Spell Items
           </h4>
-          <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
-            Tick any bound spell items your characters are carrying.
-          </p>
-          <div className="space-y-2">
-            {items.map((item) => {
-              const checked = selected.includes(item.itemId);
-              return (
-                <label key={item.itemId} className="flex items-start gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={checked}
-                    onChange={() => {
-                      setState((s) => ({
-                        ...s,
-                        [key]: checked
-                          ? s[key].filter((id) => id !== item.itemId)
-                          : [...s[key], item.itemId],
-                      }));
-                    }}
-                    style={{ accentColor: 'var(--color-accent-amber)', marginTop: '2px', flexShrink: 0 }}
-                  />
-                  <div>
-                    <span className="text-sm" style={{ color: 'var(--color-text-primary)' }}>
-                      {item.itemName}
-                    </span>
-                    <span className="text-xs ml-2" style={{ color: 'var(--color-text-secondary)' }}>
-                      → {item.spellName} ({item.castingValue}) Power {item.powerLevel}
-                    </span>
+          {selected.length > 0 && (
+            <div className="space-y-1 mb-3">
+              {selected.map((itemId) => {
+                const item = BOUND_SPELL_ITEMS.find((b) => b.itemId === itemId);
+                if (!item) return null;
+                return (
+                  <div key={itemId} className="flex items-center justify-between text-xs py-1 px-2 rounded" style={{ background: 'var(--color-surface)', color: 'var(--color-text-primary)' }}>
+                    <span>{item.itemName} <span style={{ color: 'var(--color-text-secondary)' }}>→ {item.spellName} ({item.castingValue})</span></span>
+                    <button
+                      onClick={() => setState((s) => ({ ...s, [key]: s[key].filter((id) => id !== itemId) }))}
+                      style={{ color: 'var(--color-text-secondary)', fontSize: '14px', lineHeight: 1, marginLeft: '8px' }}
+                    >×</button>
                   </div>
-                </label>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          )}
+          {unselected.length > 0 && (
+            <select
+              value=""
+              onChange={(e) => {
+                const id = e.target.value;
+                if (id) setState((s) => ({ ...s, [key]: [...s[key], id] }));
+              }}
+              className="w-full px-3 py-2 rounded text-sm"
+              style={inputStyle}
+            >
+              <option value="">+ Add bound spell item…</option>
+              {unselected.map((item) => (
+                <option key={item.itemId} value={item.itemId}>
+                  {item.itemName} — {item.spellName} ({item.castingValue}) Power {item.powerLevel}
+                </option>
+              ))}
+            </select>
+          )}
         </div>
       );
     };
