@@ -14,7 +14,7 @@ import {
 } from '../../utils/magic';
 import WizardSpellSetup from './WizardSpellSetup';
 import { initWizardSetup, type WizardSetup } from './wizardSetupTypes';
-import type { Faction } from '../../types/faction';
+import type { Faction, Unit } from '../../types/faction';
 
 // ---------------------------------------------------------------------------
 // Local types
@@ -59,6 +59,21 @@ interface Props {
 // Helpers
 // ---------------------------------------------------------------------------
 
+function resolveWizardLevel(unit: Unit, entry: ArmyEntry | undefined): number {
+  const base = unit.magic?.wizard_level ?? 1;
+  if (!entry) return base;
+  for (const opt of entry.selectedOptions) {
+    const m = opt.match(/\bLevel\s+(\d+)\s+Wizard\b/i);
+    if (m) return parseInt(m[1], 10);
+  }
+  return base;
+}
+
+function boundSpellsFromEntries(entries: ArmyEntry[]): string[] {
+  const allItemIds = new Set(entries.flatMap((e) => e.selectedMagicItemIds ?? []));
+  return BOUND_SPELL_ITEMS.filter((b) => allItemIds.has(b.itemId)).map((b) => b.itemId);
+}
+
 function initWizardSetups(faction: Faction, entries: ArmyEntry[] = []): WizardSetup[] {
   // When a pre-built list is provided, only include wizards enrolled in that list.
   // When building manually (no entries), fall back to all faction wizards.
@@ -70,6 +85,9 @@ function initWizardSetups(faction: Faction, entries: ArmyEntry[] = []): WizardSe
   return unitPool.map((unit) => {
     const setup = initWizardSetup(unit);
     const entry = entries.find((e) => e.unitId === unit.id);
+    // Apply level upgrade from selected options (e.g. "Upgrade to Level 3 Wizard")
+    setup.wizardLevel = resolveWizardLevel(unit, entry);
+    // Apply pre-selected lore from army builder
     if (entry?.selectedLoreKey) {
       setup.selectedLore = entry.selectedLoreKey;
     }
@@ -332,12 +350,16 @@ export default function Setup({ onCancel }: Props) {
                     const faction = army ? getFaction(army.factionId) : null;
                     const factionKey = side === 'p1' ? 'p1Faction' : 'p2Faction';
                     const setupsKey = side === 'p1' ? 'p1WizardSetups' : 'p2WizardSetups';
-                    const wizardSetups = faction ? initWizardSetups(faction, army?.entries ?? []) : [];
+                    const entries = army?.entries ?? [];
+                    const wizardSetups = faction ? initWizardSetups(faction, entries) : [];
+                    const boundKey = side === 'p1' ? 'p1BoundSpells' : 'p2BoundSpells';
+                    const autobound = entries.length > 0 ? boundSpellsFromEntries(entries) : [];
                     setState((s) => ({
                       ...s,
                       [armyIdKey]: id,
                       [factionKey]: faction ?? null,
                       [setupsKey]: wizardSetups,
+                      [boundKey]: autobound,
                     }));
                   }}
                   className="w-full px-3 py-2 rounded text-sm"
