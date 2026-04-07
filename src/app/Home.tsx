@@ -25,7 +25,7 @@ const FEATURES = [
     subtitle: 'Command the battlefield',
     description:
       'Track turns, phases, and game state during your battles. ' +
-      'Record spell casts, power dice, and special rule triggers so nothing is forgotten ' +
+      'Record spell casts and special rule triggers so nothing is forgotten ' +
       'in the heat of combat. A loyal aide-de-camp for every engagement.',
     cta: 'Open Adjutant',
     accent: 'var(--f-cat-core)',
