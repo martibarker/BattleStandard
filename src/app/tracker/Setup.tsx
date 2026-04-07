@@ -241,17 +241,17 @@ function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
           stroke="rgba(255,255,255,0.9)" strokeWidth="2.5" strokeLinejoin="round" paintOrder="stroke"
           style={{ fontSize: '7px', fill: '#6b4c10', fontFamily: 'Cinzel,serif', fontWeight: '700' }}>HILL</text>
 
-        {/* 10″ zone-depth dimension lines on left side strip (clear of hill) */}
-        {/* Zone A: y=0 to y=25 */}
-        <line x1={9} y1={1} x2={9} y2={24} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
-        <line x1={5} y1={1} x2={13} y2={1} stroke={CENTRE_DASH} strokeWidth={1} />
-        <line x1={5} y1={24} x2={13} y2={24} stroke={CENTRE_DASH} strokeWidth={1} />
-        {lbl(9, 37, '10″', 6)}
-        {/* Zone B: y=95 to y=120 */}
-        <line x1={9} y1={96} x2={9} y2={119} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
-        <line x1={5} y1={96} x2={13} y2={96} stroke={CENTRE_DASH} strokeWidth={1} />
-        <line x1={5} y1={119} x2={13} y2={119} stroke={CENTRE_DASH} strokeWidth={1} />
-        {lbl(9, 83, '10″', 6)}
+        {/* 10″ dimension lines: zone edge to centreline, on left side strip (clear of hill) */}
+        {/* Zone A bottom (y=25) to centreline (y=60) */}
+        <line x1={9} y1={26} x2={9} y2={59} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={5} y1={26} x2={13} y2={26} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={5} y1={59} x2={13} y2={59} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(9, 42, '10″', 6)}
+        {/* Centreline (y=60) to Zone B top (y=95) */}
+        <line x1={9} y1={61} x2={9} y2={94} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={5} y1={61} x2={13} y2={61} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={5} y1={94} x2={13} y2={94} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(9, 77, '10″', 6)}
 
         {/* 8″ gap dimension lines — horizontal in side strips at Zone A level */}
         <line x1={1} y1={16} x2={18} y2={16} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
