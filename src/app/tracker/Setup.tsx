@@ -50,6 +50,13 @@ interface SetupState {
   p2GoesFirst: boolean;
   gameLengthRule: 'standard' | 'random';
   selectedSecondaries: string[];
+  // Pre-game checklist
+  p1ScoutsDone: boolean;
+  p2ScoutsDone: boolean;
+  p1VanguardDone: boolean;
+  p2VanguardDone: boolean;
+  /** Which player finished deploying first and earns +1 on the first-turn roll-off */
+  deploymentBonusPlayer: 'p1' | 'p2' | null;
 }
 
 interface Props {
@@ -192,6 +199,11 @@ export default function Setup({ onCancel }: Props) {
     p2GoesFirst: false,
     gameLengthRule: 'standard',
     selectedSecondaries: [],
+    p1ScoutsDone: false,
+    p2ScoutsDone: false,
+    p1VanguardDone: false,
+    p2VanguardDone: false,
+    deploymentBonusPlayer: null,
   });
 
   const handleNext = (): void => {
@@ -882,6 +894,9 @@ export default function Setup({ onCancel }: Props) {
   // Step 3: Initiative & Setup
   // ---------------------------------------------------------------------------
   if (state.step === 3) {
+    const attacker = state.p1IsAttacker ? state.p1Name : state.p2Name;
+    const defender = state.p1IsAttacker ? state.p2Name : state.p1Name;
+
     return (
       <div className="max-w-2xl mx-auto p-6">
         <h2 className="text-2xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -889,56 +904,38 @@ export default function Setup({ onCancel }: Props) {
         </h2>
 
         <div className="space-y-6">
+
+          {/* Attacker / Defender — two dropdowns that mirror each other */}
           <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-4 text-sm font-semibold">Attacker / Defender</label>
-            <div className="flex gap-4 flex-wrap">
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="attacker"
-                  checked={state.p1IsAttacker}
-                  onChange={() => setState((s) => ({ ...s, p1IsAttacker: true }))}
-                />
-                <span className="text-sm">{state.p1Name} is Attacker</span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="attacker"
-                  checked={!state.p1IsAttacker}
-                  onChange={() => setState((s) => ({ ...s, p1IsAttacker: false }))}
-                />
-                <span className="text-sm">{state.p1Name} is Defender</span>
-              </label>
+            <label className="block mb-3 text-sm font-semibold">Attacker / Defender</label>
+            <div className="flex flex-col gap-3">
+              {(['p1', 'p2'] as const).map((side) => {
+                const name = side === 'p1' ? state.p1Name : state.p2Name;
+                const isAttacker = side === 'p1' ? state.p1IsAttacker : !state.p1IsAttacker;
+                return (
+                  <div key={side} className="flex items-center gap-3">
+                    <span className="text-sm w-24 shrink-0" style={{ color: 'var(--color-text-secondary)' }}>{name}</span>
+                    <select
+                      value={isAttacker ? 'attacker' : 'defender'}
+                      onChange={(e) => {
+                        const setAsAttacker = e.target.value === 'attacker';
+                        setState((s) => ({ ...s, p1IsAttacker: side === 'p1' ? setAsAttacker : !setAsAttacker }));
+                      }}
+                      className="flex-1 px-3 py-2 rounded text-sm"
+                      style={inputStyle}
+                    >
+                      <option value="attacker">Attacker</option>
+                      <option value="defender">Defender</option>
+                    </select>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
+          {/* Game Length */}
           <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-4 text-sm font-semibold">Who goes first?</label>
-            <div className="flex gap-4 flex-wrap">
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="first"
-                  checked={!state.p2GoesFirst}
-                  onChange={() => setState((s) => ({ ...s, p2GoesFirst: false }))}
-                />
-                <span className="text-sm">{state.p1Name}</span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="first"
-                  checked={state.p2GoesFirst}
-                  onChange={() => setState((s) => ({ ...s, p2GoesFirst: true }))}
-                />
-                <span className="text-sm">{state.p2Name}</span>
-              </label>
-            </div>
-          </div>
-
-          <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-4 text-sm font-semibold">Game Length</label>
+            <label className="block mb-3 text-sm font-semibold">Game Length</label>
             <div className="space-y-2">
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
@@ -971,44 +968,135 @@ export default function Setup({ onCancel }: Props) {
             </div>
           </div>
 
+          {/* Pre-game Checklist */}
           <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-3 text-sm font-semibold">Pre-game Checklist</label>
-            <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
-              After deployment is complete, resolve these before Turn 1 begins.
-              If both players have pre-game special rules, roll off for order; then alternate.
+            <label className="block mb-1 text-sm font-semibold">Pre-game Checklist</label>
+            <p className="text-xs mb-4" style={{ color: 'var(--color-text-secondary)' }}>
+              After deployment, resolve these before Turn 1. If both players have pre-game special rules, roll off for order; then alternate.
             </p>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-start gap-2" style={{ color: 'var(--color-text-secondary)' }}>
-                <span className="shrink-0 mt-0.5">→</span>
-                <span>
-                  <strong style={{ color: 'var(--color-text-primary)' }}>Scouts:</strong>{' '}
-                  Deploy any units with Scouts now (they count as part of your deployment for the first-turn roll-off).
-                </span>
+
+            {/* Scouts */}
+            <div className="mb-4">
+              <p className="text-sm font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>Scouts</p>
+              <p className="text-xs mb-2" style={{ color: 'var(--color-text-secondary)' }}>
+                Deploy units with Scouts now — they count as part of your deployment for the first-turn roll-off.
+              </p>
+              <div className="flex gap-6">
+                {(['p1', 'p2'] as const).map((side) => {
+                  const name = side === 'p1' ? state.p1Name : state.p2Name;
+                  const checked = side === 'p1' ? state.p1ScoutsDone : state.p2ScoutsDone;
+                  const key = side === 'p1' ? 'p1ScoutsDone' : 'p2ScoutsDone';
+                  return (
+                    <label key={side} className="flex items-center gap-2 text-sm cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={(e) => setState((s) => ({ ...s, [key]: e.target.checked }))}
+                        style={{ accentColor: 'var(--color-accent-amber)' }}
+                      />
+                      <span style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                        {name}
+                      </span>
+                    </label>
+                  );
+                })}
               </div>
-              <div className="flex items-start gap-2" style={{ color: 'var(--color-text-secondary)' }}>
-                <span className="shrink-0 mt-0.5">→</span>
-                <span>
-                  <strong style={{ color: 'var(--color-text-primary)' }}>Vanguard:</strong>{' '}
-                  Units with Vanguard may make a free move now, before Turn 1.
-                </span>
+            </div>
+
+            {/* Vanguard */}
+            <div className="mb-4">
+              <p className="text-sm font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>Vanguard</p>
+              <p className="text-xs mb-2" style={{ color: 'var(--color-text-secondary)' }}>
+                Units with Vanguard may make a free move now, before Turn 1.
+              </p>
+              <div className="flex gap-6">
+                {(['p1', 'p2'] as const).map((side) => {
+                  const name = side === 'p1' ? state.p1Name : state.p2Name;
+                  const checked = side === 'p1' ? state.p1VanguardDone : state.p2VanguardDone;
+                  const key = side === 'p1' ? 'p1VanguardDone' : 'p2VanguardDone';
+                  return (
+                    <label key={side} className="flex items-center gap-2 text-sm cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={(e) => setState((s) => ({ ...s, [key]: e.target.checked }))}
+                        style={{ accentColor: 'var(--color-accent-amber)' }}
+                      />
+                      <span style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                        {name}
+                      </span>
+                    </label>
+                  );
+                })}
               </div>
-              <div className="flex items-start gap-2" style={{ color: 'var(--color-text-secondary)' }}>
-                <span className="shrink-0 mt-0.5">→</span>
-                <span>
-                  <strong style={{ color: 'var(--color-text-primary)' }}>First Turn Roll-off:</strong>{' '}
-                  Winner chooses who goes first. The player who finished deploying first (including Scouts) adds +1 to their roll.
-                </span>
+            </div>
+
+            {/* First Turn Roll-off +1 */}
+            <div className="pt-3" style={{ borderTop: '1px solid var(--color-border)' }}>
+              <p className="text-sm font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>First Turn Roll-off</p>
+              <p className="text-xs mb-2" style={{ color: 'var(--color-text-secondary)' }}>
+                Winner chooses who goes first. The player who finished deploying first (including Scouts) adds +1 to their roll.
+              </p>
+              <p className="text-xs mb-2" style={{ color: 'var(--color-text-secondary)' }}>Who finished deploying first?</p>
+              <div className="flex gap-6">
+                {(['p1', 'p2', null] as const).map((side) => {
+                  const label = side === null ? 'Neither / Same time' : (side === 'p1' ? state.p1Name : state.p2Name);
+                  return (
+                    <label key={String(side)} className="flex items-center gap-2 text-sm cursor-pointer">
+                      <input
+                        type="radio"
+                        name="deployment-bonus"
+                        checked={state.deploymentBonusPlayer === side}
+                        onChange={() => setState((s) => ({ ...s, deploymentBonusPlayer: side }))}
+                        style={{ accentColor: 'var(--color-accent-amber)' }}
+                      />
+                      <span style={{ color: state.deploymentBonusPlayer === side ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                        {label}
+                      </span>
+                    </label>
+                  );
+                })}
               </div>
             </div>
           </div>
 
+          {/* Who goes first — resolved after roll-off */}
+          <div className="rounded border p-4" style={cardStyle}>
+            <label className="block mb-3 text-sm font-semibold">Who goes first?</label>
+            <div className="flex gap-4 flex-wrap">
+              {(['p1', 'p2'] as const).map((side) => {
+                const name = side === 'p1' ? state.p1Name : state.p2Name;
+                const isFirst = side === 'p1' ? !state.p2GoesFirst : state.p2GoesFirst;
+                return (
+                  <label key={side} className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="first"
+                      checked={isFirst}
+                      onChange={() => setState((s) => ({ ...s, p2GoesFirst: side === 'p2' }))}
+                      style={{ accentColor: 'var(--color-accent-amber)' }}
+                    />
+                    <span className="text-sm" style={{ color: isFirst ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                      {name}
+                      {state.deploymentBonusPlayer === side && (
+                        <span style={{ color: 'var(--color-accent-amber)', marginLeft: '6px', fontSize: '0.85em' }}>+1 to roll</span>
+                      )}
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Summary */}
           <div className="rounded border p-4" style={{ ...cardStyle, color: 'var(--color-text-secondary)' }}>
             <p className="text-sm">
-              <strong>Turn 1:</strong> {state.p2GoesFirst ? state.p2Name : state.p1Name} moves first
+              <strong style={{ color: 'var(--color-text-primary)' }}>Turn 1:</strong>{' '}
+              {state.p2GoesFirst ? state.p2Name : state.p1Name} moves first
             </p>
-            <p className="text-sm mt-2">
-              <strong>Roles:</strong> {state.p1IsAttacker ? state.p1Name : state.p2Name} (Attacker),{' '}
-              {state.p1IsAttacker ? state.p2Name : state.p1Name} (Defender)
+            <p className="text-sm mt-1">
+              <strong style={{ color: 'var(--color-text-primary)' }}>Roles:</strong>{' '}
+              {attacker} (Attacker), {defender} (Defender)
             </p>
           </div>
 
