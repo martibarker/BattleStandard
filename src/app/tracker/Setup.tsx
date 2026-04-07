@@ -10,7 +10,6 @@ import {
   getLoreSpells,
   getAllPlayableLores,
   BOUND_SPELL_ITEMS,
-  type BoundSpellItem,
   type SpellModItem,
 } from '../../utils/magic';
 import WizardSpellSetup from './WizardSpellSetup';
@@ -136,11 +135,6 @@ function initWizardSetups(faction: Faction, entries: ArmyEntry[] = []): WizardSe
   });
 }
 
-function boundItemsForFaction(factionId: string | null): BoundSpellItem[] {
-  return BOUND_SPELL_ITEMS.filter(
-    (b) => b.factionId === undefined || b.factionId === factionId,
-  );
-}
 
 function buildSpellEntries(setup: WizardSetup): SpellEntry[] {
   const loreData = getLore(setup.selectedLore);
@@ -604,7 +598,7 @@ export default function Setup({ onCancel }: Props) {
       );
     };
 
-    const renderBoundSpells = (side: 'p1' | 'p2', factionId: string | null, playerName: string) => {
+    const renderBoundSpells = (side: 'p1' | 'p2', _factionId: string | null, playerName: string) => {
       const armyIdKey = side === 'p1' ? 'p1ArmyId' : 'p2ArmyId';
       const hasList = !!state[armyIdKey];
       const key = side === 'p1' ? 'p1BoundSpells' : 'p2BoundSpells';
@@ -633,10 +627,33 @@ export default function Setup({ onCancel }: Props) {
         );
       }
 
-      // Without a list: searchable dropdown to add items manually
-      const allItems = boundItemsForFaction(factionId);
-      if (allItems.length === 0) return null;
+      // Without a list: show all items from all factions, grouped by army/AJ
+      const FACTION_LABELS: Record<string, string> = {
+        'empire-of-man':       'Empire of Man',
+        'high-elf-realms':     'High Elf Realms',
+        'wood-elf-realms':     'Wood Elf Realms',
+        'kingdom-of-bretonnia':'Kingdom of Bretonnia',
+        'dwarfen-mountain-holds': 'Dwarfen Mountain Holds',
+        'orc-goblin-tribes':   'Orc & Goblin Tribes',
+        'warriors-of-chaos':   'Warriors of Chaos',
+        'beastmen-brayherds':  'Beastmen Brayherds',
+        'tomb-kings-of-khemri':'Tomb Kings of Khemri',
+      };
+
+      const allItems = [...BOUND_SPELL_ITEMS];
       const unselected = allItems.filter((b) => !selected.includes(b.itemId));
+
+      // Group into Universal + per-faction buckets
+      const universalItems = unselected.filter((b) => !b.factionId);
+      const factionGroups = Object.entries(
+        unselected
+          .filter((b) => !!b.factionId)
+          .reduce<Record<string, typeof allItems>>((acc, b) => {
+            const key = b.factionId!;
+            (acc[key] ??= []).push(b);
+            return acc;
+          }, {})
+      );
 
       return (
         <div className="rounded border p-4 mt-4" style={cardStyle}>
@@ -671,10 +688,23 @@ export default function Setup({ onCancel }: Props) {
               style={inputStyle}
             >
               <option value="">+ Add bound spell item…</option>
-              {unselected.map((item) => (
-                <option key={item.itemId} value={item.itemId}>
-                  {item.itemName} — {item.spellName} ({item.castingValue}) Power {item.powerLevel}
-                </option>
+              {universalItems.length > 0 && (
+                <optgroup label="Universal">
+                  {universalItems.map((item) => (
+                    <option key={item.itemId} value={item.itemId}>
+                      {item.itemName} — {item.spellName} ({item.castingValue}) Power {item.powerLevel}
+                    </option>
+                  ))}
+                </optgroup>
+              )}
+              {factionGroups.map(([fId, items]) => (
+                <optgroup key={fId} label={FACTION_LABELS[fId] ?? fId}>
+                  {items.map((item) => (
+                    <option key={item.itemId} value={item.itemId}>
+                      {item.itemName} — {item.spellName} ({item.castingValue}) Power {item.powerLevel}
+                    </option>
+                  ))}
+                </optgroup>
               ))}
             </select>
           )}
