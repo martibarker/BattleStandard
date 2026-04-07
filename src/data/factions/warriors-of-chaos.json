@@ -398,7 +398,7 @@
         "M": "4",
         "WS": "6",
         "BS": "3",
-        "S": "4",
+        "S": "5",
         "T": "4",
         "W": "3",
         "I": "5",
@@ -1969,6 +1969,7 @@
         "ensorcelled_weapons",
         "furious_charge",
         "immune_to_psychology",
+        "impetuous",
         "loner",
         "open_order",
         "rampant_mutation",
@@ -2263,18 +2264,6 @@
             }
           ],
           "category": "special"
-        }
-      ],
-      "weapon_profiles": [
-        {
-          "name": "Flail",
-          "range": "Combat",
-          "S": "S+2",
-          "AP": "-2",
-          "special_rules": [
-            "armour_bane_1",
-            "requires_two_hands"
-          ]
         }
       ],
       "notes": [
@@ -4412,6 +4401,7 @@
     {
       "id": "favour_of_the_gods",
       "name": "Favour of the Gods",
+      "category": "talisman",
       "points": 5,
       "source": "ravening_hordes",
       "description": "",
@@ -4422,6 +4412,7 @@
     {
       "id": "spell_familiar",
       "name": "Spell Familiar",
+      "category": "arcane_item",
       "points": 15,
       "source": "ravening_hordes",
       "description": "The owner of a Spell Familiar knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry.",
@@ -4432,6 +4423,7 @@
     {
       "id": "brazen_collar",
       "name": "Brazen Collar",
+      "category": "talisman",
       "points": 20,
       "source": "ravening_hordes",
       "description": "",
@@ -4441,6 +4433,7 @@
     {
       "id": "helm_of_many_eyes",
       "name": "Helm of Many Eyes",
+      "category": "enchanted_item",
       "points": 20,
       "source": "ravening_hordes",
       "description": "",
@@ -4449,6 +4442,7 @@
     {
       "id": "icon_of_darkness",
       "name": "Icon of Darkness",
+      "category": "magic_standard",
       "points": 20,
       "source": "arcane_journal",
       "description": "",
@@ -4457,14 +4451,25 @@
     {
       "id": "spellthieving_sword",
       "name": "Spellthieving Sword",
+      "category": "magic_weapon",
       "points": 20,
       "source": "ravening_hordes",
       "description": "Combat, S, AP -1; Magical Attacks.",
-      "rules_text": "Any enemy Wizard that suffers one or more unsaved wounds from the Spellthieving Sword immediately forgets a single spell (determined at random) for the remainder of the game."
+      "rules_text": "Any enemy Wizard that suffers one or more unsaved wounds from the Spellthieving Sword immediately forgets a single spell (determined at random) for the remainder of the game.",
+      "weapon_profile": {
+        "name": "Spellthieving Sword",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "banner_of_the_baying_hound",
       "name": "Banner of the Baying Hound",
+      "category": "magic_standard",
       "points": 25,
       "source": "arcane_journal",
       "description": "",
@@ -4474,6 +4479,7 @@
     {
       "id": "sea_raiders_crest",
       "name": "Sea Raider's Crest",
+      "category": "magic_standard",
       "points": 25,
       "source": "arcane_journal",
       "description": "",
@@ -4483,23 +4489,47 @@
     {
       "id": "taskmasters_scourge",
       "name": "Taskmaster's Scourge",
+      "category": "magic_weapon",
       "points": 25,
       "source": "arcane_journal",
       "description": "Combat, S, AP -1; Extra Attacks (1), Magical Attacks.",
       "rules_text": "During the Command sub-phase of their turn, the wielder of the Taskmaster's Scourge may attempt to urge those around them into battle with a lash of their whip by making a Leadership test (using their own Leadership). If the test is passed, until your next Start of Turn sub-phase, this character and any unit they have joined gain a +D3 modifier to their Movement characteristic (to a maximum of 10).",
-      "restrictions": "Models whose troop type is 'infantry' only."
+      "restrictions": "Models whose troop type is 'infantry' only.",
+      "weapon_profile": {
+        "name": "Taskmaster's Scourge",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "extra_attacks_1",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "chieftains_blade",
       "name": "Chieftain's Blade",
+      "category": "magic_weapon",
       "points": 30,
       "source": "arcane_journal",
       "description": "Combat, S+1, AP -1; Armour Bane (1), Magical Attacks.",
-      "restrictions": "May only be taken by a model in a Wolves of the Sea Army of Infamy. Whilst engaged in a challenge, the wielder has a +1 modifier to their rolls To Hit."
+      "rules_text": "Wolves of the Sea Army of Infamy only. Whilst engaged in a challenge, the wielder has a +1 modifier to their rolls To Hit.",
+      "restrictions": "May only be taken by a model in a Wolves of the Sea Army of Infamy. Whilst engaged in a challenge, the wielder has a +1 modifier to their rolls To Hit.",
+      "weapon_profile": {
+        "name": "Chieftain's Blade",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "pendant_of_damnation",
       "name": "Pendant of Damnation",
+      "category": "enchanted_item",
       "points": 30,
       "source": "ravening_hordes",
       "description": "",
@@ -4509,6 +4539,7 @@
     {
       "id": "banner_of_rage",
       "name": "Banner of Rage",
+      "category": "magic_standard",
       "points": 35,
       "source": "ravening_hordes",
       "description": "",
@@ -4517,21 +4548,35 @@
     {
       "id": "daemon_forged_barding",
       "name": "Daemon-Forged Barding",
+      "category": "enchanted_item",
       "points": 35,
       "source": "arcane_journal",
       "description": "On a turn in which the bearer charged, their mount and all mounts in any unit they have joined have a +1 modifier to their Attacks characteristics.",
+      "rules_text": "Cavalry models in a Heralds of Darkness Army of Infamy only. On a turn in which the bearer charged, their mount and all mounts in any unit they have joined have a +1 modifier to their Attacks characteristics.",
       "restrictions": "May only be taken by a model whose troop type is 'cavalry' in a Heralds of Darkness Army of Infamy."
     },
     {
       "id": "dagger_of_the_dark_pantheon",
       "name": "Dagger of the Dark Pantheon",
+      "category": "magic_weapon",
       "points": 35,
       "source": "arcane_journal",
-      "description": "Combat, S, AP -2; Magical Attacks. For each Wound an enemy unit loses as a result of an attack made with the Dagger of the Dark Pantheon, its wielder may apply a +1 modifier to their next Casting or Dispel roll."
+      "description": "Combat, S, AP -2; Magical Attacks. For each Wound an enemy unit loses as a result of an attack made with the Dagger of the Dark Pantheon, its wielder may apply a +1 modifier to their next Casting or Dispel roll.",
+      "rules_text": "For each Wound an enemy unit loses as a result of an attack made with the Dagger of the Dark Pantheon, its wielder may apply a +1 modifier to their next Casting or Dispel roll.",
+      "weapon_profile": {
+        "name": "Dagger of the Dark Pantheon",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-2",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "talisman_of_the_soaring_eagle",
       "name": "Talisman of the Soaring Eagle",
+      "category": "talisman",
       "points": 35,
       "source": "arcane_journal",
       "description": "",
@@ -4540,14 +4585,17 @@
     {
       "id": "tome_of_the_dark_gods",
       "name": "Tome of the Dark Gods",
+      "category": "arcane_item",
       "points": 35,
       "source": "arcane_journal",
       "description": "When generating their spells, the bearer of the Tome of the Dark Gods may discard any number of their randomly generated spells. For each spell they discard, they may select any spell from the Lore of Chaos as if they had the corresponding Mark of Chaos.",
+      "rules_text": "Mark of Chaos Undivided only. When generating spells, the bearer may discard any quantity of randomly generated spells. For each spell discarded, they may choose any spell from the Lore of Chaos as though they had the corresponding Mark of Chaos.",
       "restrictions": "Models with the Mark of Chaos Undivided only."
     },
     {
       "id": "blasted_standard",
       "name": "Blasted Standard",
+      "category": "magic_standard",
       "points": 40,
       "source": "ravening_hordes",
       "description": "",
@@ -4556,14 +4604,17 @@
     {
       "id": "crimson_armour_of_dargan",
       "name": "Crimson Armour of Dargan",
+      "category": "magic_armour",
       "points": 40,
       "source": "ravening_hordes",
       "description": "Heavy armour. In addition, the wearer is immune to the Multiple Wounds (X) special rule. If the wearer suffers an unsaved wound from an attack with this special rule, they lose a single Wound.",
+      "rules_text": "The Crimson Armour of Dargan is a suit of heavy armour. The wearer is immune to the Multiple Wounds (X) special rule. If the wearer suffers an unsaved wound from an attack with this special rule, they lose a single Wound.",
       "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only."
     },
     {
       "id": "crown_of_everlasting_conquest",
       "name": "Crown of Everlasting Conquest",
+      "category": "talisman",
       "points": 40,
       "source": "ravening_hordes",
       "description": "",
@@ -4572,22 +4623,35 @@
     {
       "id": "filth_mace",
       "name": "Filth Mace",
+      "category": "magic_weapon",
       "points": 40,
       "source": "ravening_hordes",
       "description": "Combat, S+1, AP -1; Magical Attacks.",
-      "rules_text": "Any enemy model that suffers one or more unsaved wounds from the Filth Mace must immediately make a Toughness test. If this test is failed, the wounded model suffers a -1 modifier to its Toughness characteristic (to a minimum of 1) until the end of the turn."
+      "rules_text": "Any enemy model that suffers one or more unsaved wounds from the Filth Mace must immediately make a Toughness test. If this test is failed, the wounded model suffers a -1 modifier to its Toughness characteristic (to a minimum of 1) until the end of the turn.",
+      "weapon_profile": {
+        "name": "Filth Mace",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "mighty_serpents_scalemail",
       "name": "Mighty Serpent's Scalemail",
+      "category": "magic_armour",
       "points": 40,
       "source": "arcane_journal",
       "description": "Heavy armour. In addition, its wearer gains the Strike First special rule.",
+      "rules_text": "The Mighty Serpent's Scalemail is a suit of heavy armour. May only be taken by models in a Wolves of the Sea Army of Infamy. The wearer gains the Strike First special rule.",
       "restrictions": "May only be taken by models in a Wolves of the Sea Army of Infamy."
     },
     {
       "id": "rod_of_the_damned",
       "name": "Rod of the Damned",
+      "category": "enchanted_item",
       "points": 40,
       "source": "arcane_journal",
       "description": "",
@@ -4596,22 +4660,35 @@
     {
       "id": "bloodskull_pendant",
       "name": "Bloodskull Pendant",
+      "category": "enchanted_item",
       "points": 45,
       "source": "arcane_journal",
       "description": "Instead of attacking normally, the bearer of the Bloodskull Pendant may choose to inflict a single Strength 8 hit on every enemy model it is in base contact with, each with an AP of -1. These hits have the Killing Blow special rule.",
+      "rules_text": "Infantry models only. Instead of making normal attacks, the bearer may choose to inflict a single Strength 8 hit with Armour Piercing -1 and the Killing Blow special rule against every enemy model in base contact.",
       "restrictions": "Models whose troop type is 'infantry' only."
     },
     {
       "id": "chaos_runesword",
       "name": "Chaos Runesword",
+      "category": "magic_weapon",
       "points": 45,
       "source": "ravening_hordes",
       "description": "Combat, S+1, AP -1; Magical Attacks.",
-      "rules_text": "The wielder of the Chaos Runesword has a +1 modifier to their Weapon Skill and Initiative characteristics."
+      "rules_text": "The wielder of the Chaos Runesword has a +1 modifier to their Weapon Skill and Initiative characteristics.",
+      "weapon_profile": {
+        "name": "Chaos Runesword",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
     },
     {
       "id": "talisman_of_the_carrion_crow",
       "name": "Talisman of the Carrion Crow",
+      "category": "talisman",
       "points": 45,
       "source": "arcane_journal",
       "description": "",
@@ -4620,6 +4697,7 @@
     {
       "id": "banner_of_the_dark_powers",
       "name": "Banner of the Dark Powers",
+      "category": "magic_standard",
       "points": 50,
       "source": "arcane_journal",
       "description": "",
@@ -4628,36 +4706,58 @@
     {
       "id": "daemonic_platemail",
       "name": "Daemonic Platemail",
+      "category": "magic_armour",
       "points": 50,
       "source": "arcane_journal",
       "description": "Full plate armour. In addition, its wearer improves their Toughness and Initiative characteristics by 1.",
+      "rules_text": "The Daemonic Platemail is a suit of full plate armour. Infantry or cavalry models only. In addition, the wearer improves their Toughness and Initiative characteristics by 1.",
       "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only."
     },
     {
       "id": "grimoire_of_ogvold",
       "name": "Grimoire of Ogvold",
+      "category": "arcane_item",
       "points": 50,
       "source": "arcane_journal",
-      "description": "Rather than randomly generating the spells they know, and regardless of their Level of Wizardry, the bearer of the Grimoire of Ogvold knows all seven spells from their chosen Lore of Magic (including the signature spell). However, they can only cast a number of spells equal to their Level of Wizardry per turn."
+      "description": "Rather than randomly generating the spells they know, and regardless of their Level of Wizardry, the bearer of the Grimoire of Ogvold knows all seven spells from their chosen Lore of Magic (including the signature spell). However, they can only cast a number of spells equal to their Level of Wizardry per turn.",
+      "rules_text": "The bearer knows all seven spells from a chosen Lore of Magic, including the signature spell. They may only cast a number of spells per turn equal to their Level of Wizardry."
     },
     {
       "id": "infernal_puppet",
       "name": "Infernal Puppet",
+      "category": "arcane_item",
       "points": 50,
       "source": "ravening_hordes",
-      "description": "Unless the owner of the Infernal Puppet is fleeing or engaged in combat, they may use it whenever an enemy Wizard that is within 24\" of them makes a Casting roll. If they do so, the enemy Wizard must roll an extra D6 and discard the highest result."
+      "description": "Unless the owner of the Infernal Puppet is fleeing or engaged in combat, they may use it whenever an enemy Wizard that is within 24\" of them makes a Casting roll. If they do so, the enemy Wizard must roll an extra D6 and discard the highest result.",
+      "rules_text": "The owner may activate this item whenever an enemy Wizard within 15\" makes a casting roll, provided the owner is neither fleeing nor engaged in combat. When activated, the enemy Wizard must roll an additional D6 and discard the highest result from their casting roll."
     },
     {
       "id": "obsidian_dread_glaive",
       "name": "Obsidian Dread-Glaive",
+      "category": "magic_weapon",
       "points": 55,
       "source": "arcane_journal",
       "description": "Combat, S+2, AP -1; Armour Bane (1), Killing Blow, Magical Attacks, Requires Two Hands, Strikes Last.",
-      "restrictions": "May only be taken by a model in a Heralds of Darkness Army of Infamy."
+      "rules_text": "Heralds of Darkness Army of Infamy only.",
+      "restrictions": "May only be taken by a model in a Heralds of Darkness Army of Infamy.",
+      "weapon_profile": {
+        "name": "Obsidian Dread-Glaive",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-1",
+        "special_rules": [
+          "armour_bane_1",
+          "killing_blow",
+          "magical_attacks",
+          "requires_two_hands",
+          "strike_last"
+        ]
+      }
     },
     {
       "id": "sceptre_of_power",
       "name": "Sceptre of Power",
+      "category": "arcane_item",
       "points": 55,
       "source": "arcane_journal",
       "description": "",
@@ -4666,6 +4766,7 @@
     {
       "id": "skull_of_katam",
       "name": "Skull of Katam",
+      "category": "arcane_item",
       "points": 60,
       "source": "ravening_hordes",
       "description": "",
@@ -4674,20 +4775,25 @@
     {
       "id": "doom_totem",
       "name": "Doom Totem",
+      "category": "magic_standard",
       "points": 65,
       "source": "ravening_hordes",
-      "description": "All enemy units that can draw a line of sight to the model carrying the Doom Totem suffer a -1 modifier to their Leadership characteristic."
+      "description": "All enemy units that can draw a line of sight to the model carrying the Doom Totem suffer a -1 modifier to their Leadership characteristic.",
+      "rules_text": "All enemy units that can draw a line of sight to the model carrying the Doom Totem suffer a -1 modifier to their Leadership characteristic."
     },
     {
       "id": "armour_of_the_damned",
       "name": "Armour of the Damned",
+      "category": "magic_armour",
       "points": 70,
       "source": "ravening_hordes",
-      "description": "Full plate armour. In addition, during the Combat phase, enemy models must re-roll successful rolls To Hit made against the wearer."
+      "description": "Full plate armour. In addition, during the Combat phase, enemy models must re-roll successful rolls To Hit made against the wearer.",
+      "rules_text": "The Armour of the Damned is a suit of full plate armour. In addition, during the Combat phase, enemy models must reroll successful rolls To Hit made against the wearer."
     },
     {
       "id": "banner_of_the_gods",
       "name": "Banner of the Gods",
+      "category": "magic_standard",
       "points": 75,
       "source": "ravening_hordes",
       "description": "",
@@ -4696,9 +4802,22 @@
     {
       "id": "daemonsword",
       "name": "Daemonsword",
+      "category": "magic_weapon",
       "points": 75,
       "source": "ravening_hordes",
-      "description": "Combat, S+D3, AP -2; Extra Attacks (+D3), Magical Attacks, Strike First. Every roll of a natural 1 made when rolling To Hit with this weapon results in a hit which must be resolved against the unit the wielder has joined, rather than the enemy. If the wielder has not joined a unit, this hit must be resolved against the wielder."
+      "description": "Combat, S+D3, AP -2; Extra Attacks (+D3), Magical Attacks, Strike First. Every roll of a natural 1 made when rolling To Hit with this weapon results in a hit which must be resolved against the unit the wielder has joined, rather than the enemy. If the wielder has not joined a unit, this hit must be resolved against the wielder.",
+      "rules_text": "Every roll of a natural 1 made when rolling To Hit with this weapon results in a hit which must be resolved against the unit the wielder has joined, rather than the enemy. If the wielder has not joined a unit, this hit must be resolved against the wielder.",
+      "weapon_profile": {
+        "name": "Daemonsword",
+        "range": "Combat",
+        "S": "S+D3",
+        "AP": "-2",
+        "special_rules": [
+          "extra_attacks_d3",
+          "magical_attacks",
+          "strike_first"
+        ]
+      }
     }
   ],
   "lore_of_chaos": [
