@@ -1318,14 +1318,16 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Flail",
+          "name": "Storm's Wrath",
           "range": "Combat",
           "S": "S+2",
-          "AP": "-2",
+          "AP": "-1",
           "special_rules": [
-            "armour_bane_1",
+            "extra_attacks_d3",
+            "magical_attacks",
             "requires_two_hands"
-          ]
+          ],
+          "notes": "Strength modifier applies only during the first round of combat."
         }
       ],
       "notes": [
@@ -1344,7 +1346,7 @@
       "troop_type": "Behemoth (named character)",
       "base_size": "60 x 100 mm",
       "unit_size": "1",
-      "points": 465,
+      "points": 665,
       "magic": {
         "wizard_level": 4,
         "lores": [
@@ -1371,7 +1373,7 @@
       "special_rules": [
         "armoured_hide_1",
         "breath_of_change",
-        "close_order",
+        "clone_order",
         "fly_10",
         "large_target",
         "mark_of_tzeentch",
