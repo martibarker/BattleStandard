@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useGameStore, type PlayerGameState, type SpellEntry } from '../../store/gameStore';
 import { useArmyStore } from '../../store/armyStore';
-import type { ArmyEntry } from '../../types/army';
+import type { ArmyEntry, ArmyList } from '../../types/army';
 import { getFaction } from '../../data/factions';
 import { isWizard } from '../../utils/armyValidation';
 import { SECONDARY_OBJECTIVES } from '../../data/secondary-objectives';
@@ -16,6 +16,7 @@ import {
 import WizardSpellSetup from './WizardSpellSetup';
 import { initWizardSetup, type WizardSetup } from './wizardSetupTypes';
 import type { Faction, Unit } from '../../types/faction';
+import QRScannerModal from '../../components/QRScannerModal';
 
 // ---------------------------------------------------------------------------
 // Local types
@@ -387,6 +388,10 @@ export default function Setup({ onCancel }: Props) {
   const startGame = useGameStore((s) => s.startGame);
   const addSpellsToWizard = useGameStore((s) => s.addSpellsToWizard);
   const armies = useArmyStore((s) => s.armies);
+  const importArmies = useArmyStore((s) => s.importArmies);
+
+  // QR scanner — tracks which player's slot is being scanned
+  const [scanningFor, setScanningFor] = useState<'p1' | 'p2' | null>(null);
 
   const [d6Result, setD6Result] = useState<number | null>(null);
 
@@ -633,6 +638,18 @@ export default function Setup({ onCancel }: Props) {
                     </option>
                   ))}
                 </select>
+
+                <button
+                  onClick={() => setScanningFor(side)}
+                  className="mt-2 w-full px-3 py-2 rounded text-sm"
+                  style={{
+                    backgroundColor: 'var(--color-bg-dark)',
+                    color: 'var(--color-accent-blue)',
+                    border: '1px solid var(--color-border)',
+                  }}
+                >
+                  📷 Scan opponent's QR code
+                </button>
               </div>
             );
           })}
@@ -643,6 +660,34 @@ export default function Setup({ onCancel }: Props) {
             </button>
           </div>
         </div>
+
+        {scanningFor && (
+          <QRScannerModal
+            onScanned={(scannedArmy: ArmyList) => {
+              // Save permanently to army store (deduplicates by ID)
+              importArmies([scannedArmy]);
+              // Wire into this player's setup slot
+              const side = scanningFor;
+              const armyIdKey = side === 'p1' ? 'p1ArmyId' : 'p2ArmyId';
+              const factionKey = side === 'p1' ? 'p1Faction' : 'p2Faction';
+              const setupsKey = side === 'p1' ? 'p1WizardSetups' : 'p2WizardSetups';
+              const boundKey = side === 'p1' ? 'p1BoundSpells' : 'p2BoundSpells';
+              const faction = getFaction(scannedArmy.factionId);
+              const entries = scannedArmy.entries ?? [];
+              const wizardSetups = faction ? initWizardSetups(faction, entries) : [];
+              const autobound = entries.length > 0 ? boundSpellsFromEntries(entries) : [];
+              setState((s) => ({
+                ...s,
+                [armyIdKey]: scannedArmy.id,
+                [factionKey]: faction ?? null,
+                [setupsKey]: wizardSetups,
+                [boundKey]: autobound,
+              }));
+              setScanningFor(null);
+            }}
+            onClose={() => setScanningFor(null)}
+          />
+        )}
       </div>
     );
   }

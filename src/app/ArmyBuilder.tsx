@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useArmyStore } from '../store/armyStore';
 import { generateArmyText, copyToClipboard, shareNative } from '../utils/dataTransfer';
+import QRCodeModal from '../components/QRCodeModal';
+import type { ArmyList } from '../types/army';
 
 /** Army Builder dashboard — lists all saved armies */
 export default function ArmyBuilder() {
   const armies = useArmyStore((s) => s.armies);
   const deleteArmy = useArmyStore((s) => s.deleteArmy);
   const navigate = useNavigate();
+  const [qrArmy, setQrArmy] = useState<ArmyList | null>(null);
 
   return (
     <div className="p-6 max-w-2xl mx-auto">
@@ -67,6 +71,14 @@ export default function ArmyBuilder() {
                   Share ↑
                 </button>
                 <button
+                  onClick={(e) => { e.stopPropagation(); setQrArmy(army); }}
+                  className="text-sm px-3 py-1 rounded flex items-center gap-1"
+                  style={{ color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}
+                  aria-label="Show QR code"
+                >
+                  QR
+                </button>
+                <button
                   onClick={(e) => {
                     e.stopPropagation();
                     if (confirm(`Delete "${army.name}"?`)) deleteArmy(army.id);
@@ -82,6 +94,7 @@ export default function ArmyBuilder() {
           ))}
         </ul>
       )}
+      {qrArmy && <QRCodeModal army={qrArmy} onClose={() => setQrArmy(null)} />}
     </div>
   );
 }

@@ -11,6 +11,7 @@ import { getLore, unitLoreToId } from '../utils/magic';
 import ValidationBars from '../components/ValidationBars';
 import { generateArmyName } from '../data/armyNames';
 import { generateArmyText, copyToClipboard, shareNative } from '../utils/dataTransfer';
+import QRCodeModal from '../components/QRCodeModal';
 
 
 type BrowserTab = 'characters' | 'core' | 'special' | 'rare' | 'mercenaries';
@@ -56,6 +57,7 @@ export default function ArmyEditor() {
   const army = armies.find((a) => a.id === id);
   const faction = army ? getFaction(army.factionId) : undefined;
 
+  const [showQR, setShowQR] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerTab, setDrawerTab] = useState<BrowserTab>('characters');
   const [editingName, setEditingName] = useState(false);
@@ -309,6 +311,17 @@ export default function ArmyEditor() {
               }}
             >
               Share ↑
+            </button>
+            <button
+              onClick={() => setShowQR(true)}
+              style={{
+                padding: '6px 12px', borderRadius: '4px', fontSize: '13px',
+                fontFamily: "'Cinzel', serif", cursor: 'pointer',
+                border: '1px solid var(--f-border-mid)', color: 'var(--f-gold)',
+                background: 'transparent',
+              }}
+            >
+              QR
             </button>
           </div>
 
@@ -970,6 +983,7 @@ export default function ArmyEditor() {
         {renderArmyList()}
       </div>
       {drawerOpen && renderUnitBrowserDrawer()}
+      {showQR && <QRCodeModal army={army} onClose={() => setShowQR(false)} />}
     </div>
   );
 }
