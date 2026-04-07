@@ -12,7 +12,7 @@ const FEATURES = [
     subtitle: 'Forge your force',
     description:
       'Construct, validate, and refine army lists for Warhammer: The Old World. ' +
-      'Browse every unit, option, and magic item for your faction. ' +
+      'Browse every unit, option, and magic items for your faction. ' +
       'Live points tracking and composition rules keep your list battle-legal at a glance.',
     cta: 'Open Army Builder',
     accent: 'var(--f-cat-characters)',
