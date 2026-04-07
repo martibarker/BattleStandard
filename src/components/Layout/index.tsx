@@ -134,6 +134,7 @@ function ThemePicker() {
           transition: 'all 0.2s',
         }}
       >
+        <span style={{ color: 'var(--f-text-4)', fontSize: '9px', letterSpacing: '0.08em' }}>Theme:</span>
         {/* Faction colour pip */}
         <span style={{
           width: '8px',
