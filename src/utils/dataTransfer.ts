@@ -121,7 +121,7 @@ export function generateArmyText(army: ArmyList, format: ShareFormat): string {
   } else {
     lines.push(`Total: ${total.toLocaleString()} / ${army.pointsLimit.toLocaleString()} pts`);
     lines.push('');
-    lines.push('Built with Battle Standard — battlestandard.app');
+    lines.push('Built with Battle Standard — https://battlestandard.app');
     lines.push('#WarhammerOldWorld #WHTOW');
   }
 

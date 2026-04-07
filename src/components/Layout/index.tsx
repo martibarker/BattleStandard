@@ -4,6 +4,7 @@ import { useThemeStore, THEME_OPTIONS } from '../../store/themeStore';
 import { useArmyStore } from '../../store/armyStore';
 import bannerNoTextImg from '../../assets/banner-no-text.png';
 import DataTransfer from '../DataTransfer';
+import AdUnit from '../AdUnit';
 
 interface NavItem {
   to: string;
@@ -432,11 +433,14 @@ export default function Layout() {
               </p>
               <DataTransfer compact />
             </div>
+            <div style={{ padding: '12px 8px 8px' }}>
+              <AdUnit slot="4962698622" format="vertical" />
+            </div>
           </aside>
         )}
 
         {/* Page content */}
-        <main style={{ flex: 1, overflowY: 'auto', paddingBottom: '80px' }} className="md:pb-0">
+        <main style={{ flex: 1, overflowY: 'auto', paddingBottom: '140px' }} className="md:pb-0">
           <Outlet />
         </main>
       </div>
@@ -461,15 +465,20 @@ export default function Layout() {
         </a>
       </footer>
 
-      {/* Mobile bottom tab bar */}
-      <nav className="fixed bottom-0 inset-x-0 flex items-center border-t md:hidden z-40" style={{
-        backgroundColor: 'var(--f-surface)',
-        borderColor: 'var(--f-border)',
-      }}>
-        {mobileTabItems.map((item) => (
-          <TabItem key={item.to} item={item} />
-        ))}
-      </nav>
+      {/* Mobile bottom ad + tab bar */}
+      <div className="fixed bottom-0 inset-x-0 md:hidden z-40" style={{ backgroundColor: 'var(--f-surface)' }}>
+        <div style={{ borderBottom: '1px solid var(--f-border)', padding: '4px 8px' }}>
+          <AdUnit slot="2336535285" format="horizontal" />
+        </div>
+        <nav className="flex items-center border-t" style={{
+          backgroundColor: 'var(--f-surface)',
+          borderColor: 'var(--f-border)',
+        }}>
+          {mobileTabItems.map((item) => (
+            <TabItem key={item.to} item={item} />
+          ))}
+        </nav>
+      </div>
     </div>
   );
 }
