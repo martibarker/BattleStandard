@@ -227,28 +227,50 @@ function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
       </>}
 
       {type === 'king_of_hill' && <>
-        {/* Grey side strips (8″ = 20px) are left bare; coloured zones sit inside them */}
+        {/* Grey side strips (8″ = 20px) left bare; coloured zones sit inside them */}
         <rect x={20} y={0} width={140} height={25} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         <rect x={20} y={95} width={140} height={25} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         {/* Hill at centre */}
         <ellipse cx={90} cy={60} rx={22} ry={16} fill="rgba(180,140,80,0.42)" stroke="rgba(130,90,30,0.7)" strokeWidth={1.5} />
         {centreLine()}
-        {/* Zone names — no measurement numbers inside coloured areas */}
+        {/* Zone names */}
         {lbl(90, 12, 'ZONE A', 8)}
         {lbl(90, 108, 'ZONE B', 8)}
-        {/* Hill name */}
+        {/* Hill label */}
         <text x={90} y={61} textAnchor="middle" dominantBaseline="middle"
           stroke="rgba(255,255,255,0.9)" strokeWidth="2.5" strokeLinejoin="round" paintOrder="stroke"
           style={{ fontSize: '7px', fill: '#6b4c10', fontFamily: 'Cinzel,serif', fontWeight: '700' }}>HILL</text>
-        {/* 10″ zone-depth measurement: in neutral grey space between each zone edge and the centre line */}
-        {lbl(90, 41, '10″', 7)}
-        {lbl(90, 79, '10″', 7)}
-        {/* 8″ gap indicators: left and right of Zone A */}
-        {lbl(10, 12, '8″', 6)}
-        {lbl(170, 12, '8″', 6)}
-        {/* 8″ gap indicators: left and right of Zone B */}
-        {lbl(10, 108, '8″', 6)}
-        {lbl(170, 108, '8″', 6)}
+
+        {/* 10″ zone-depth dimension lines on left side strip (clear of hill) */}
+        {/* Zone A: y=0 to y=25 */}
+        <line x1={9} y1={1} x2={9} y2={24} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={5} y1={1} x2={13} y2={1} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={5} y1={24} x2={13} y2={24} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(9, 37, '10″', 6)}
+        {/* Zone B: y=95 to y=120 */}
+        <line x1={9} y1={96} x2={9} y2={119} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={5} y1={96} x2={13} y2={96} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={5} y1={119} x2={13} y2={119} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(9, 83, '10″', 6)}
+
+        {/* 8″ gap dimension lines — horizontal in side strips at Zone A level */}
+        <line x1={1} y1={16} x2={18} y2={16} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={1} y1={12} x2={1} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={18} y1={12} x2={18} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(10, 24, '8″', 6)}
+        <line x1={162} y1={16} x2={179} y2={16} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={162} y1={12} x2={162} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={179} y1={12} x2={179} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(170, 24, '8″', 6)}
+        {/* 8″ gap dimension lines at Zone B level */}
+        <line x1={1} y1={104} x2={18} y2={104} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={1} y1={100} x2={1} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={18} y1={100} x2={18} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(10, 96, '8″', 6)}
+        <line x1={162} y1={104} x2={179} y2={104} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={162} y1={100} x2={162} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={179} y1={100} x2={179} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(170, 96, '8″', 6)}
       </>}
 
       {type === 'diagonal' && <>
@@ -267,9 +289,7 @@ function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
       </>}
 
       {type === 'close_quarters' && <>
-        {/* Impassable cliff strips (6″ = 15px) */}
-        <rect x={0} y={0} width={15} height={h} fill="rgba(200,50,50,0.18)" stroke="rgba(180,40,40,0.4)" strokeWidth={1} strokeDasharray="3,3" />
-        <rect x={165} y={0} width={15} height={h} fill="rgba(200,50,50,0.18)" stroke="rgba(180,40,40,0.4)" strokeWidth={1} strokeDasharray="3,3" />
+        {/* Full playing field — 6″ side strips ARE part of the battlefield, just no deployment there */}
         <rect x={15} y={0} width={150} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         <rect x={15} y={90} width={150} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         {centreLine()}
@@ -277,16 +297,33 @@ function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
         {lbl(90, 105, 'ZONE B', 8)}
         {lbl(90, 44, '12″', 7)}
         {lbl(90, 76, '12″', 7)}
-        {/* Cliff labels rotated in side strips */}
-        <text x={7.5} y={62} textAnchor="middle" dominantBaseline="middle"
-          stroke="rgba(255,255,255,0.9)" strokeWidth="2.5" paintOrder="stroke"
-          style={{ fontSize: '6px', fill: '#b91c1c', fontFamily: 'sans-serif', fontWeight: '700', writingMode: 'vertical-lr' }}>CLIFF</text>
-        <text x={172.5} y={62} textAnchor="middle" dominantBaseline="middle"
-          stroke="rgba(255,255,255,0.9)" strokeWidth="2.5" paintOrder="stroke"
-          style={{ fontSize: '6px', fill: '#b91c1c', fontFamily: 'sans-serif', fontWeight: '700', writingMode: 'vertical-lr' }}>CLIFF</text>
-        {/* 6″ gap labels */}
-        {lbl(7.5, 15, '6″', 6)}
-        {lbl(172.5, 15, '6″', 6)}
+        {/* 6″ gap dimension lines at Zone A and Zone B level */}
+        <line x1={1} y1={16} x2={14} y2={16} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={1} y1={12} x2={1} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={14} y1={12} x2={14} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(7.5, 24, '6″', 6)}
+        <line x1={166} y1={16} x2={179} y2={16} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={166} y1={12} x2={166} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={179} y1={12} x2={179} y2={20} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(172.5, 24, '6″', 6)}
+        <line x1={1} y1={104} x2={14} y2={104} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={1} y1={100} x2={1} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={14} y1={100} x2={14} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(7.5, 96, '6″', 6)}
+        <line x1={166} y1={104} x2={179} y2={104} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <line x1={166} y1={100} x2={166} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        <line x1={179} y1={100} x2={179} y2={108} stroke={CENTRE_DASH} strokeWidth={1} />
+        {lbl(172.5, 96, '6″', 6)}
+        {/* Thick red border on short edges = impassable cliff OUTSIDE the battlefield */}
+        <line x1={1.5} y1={0} x2={1.5} y2={h} stroke="rgba(185,28,28,0.9)" strokeWidth={4} strokeLinecap="square" />
+        <line x1={178.5} y1={0} x2={178.5} y2={h} stroke="rgba(185,28,28,0.9)" strokeWidth={4} strokeLinecap="square" />
+        {/* CLIFF labels on the red edges */}
+        <text x={1.5} y={60} textAnchor="middle" dominantBaseline="middle"
+          stroke="rgba(255,255,255,0.85)" strokeWidth="2" paintOrder="stroke"
+          style={{ fontSize: '6px', fill: '#991b1b', fontFamily: 'sans-serif', fontWeight: '700', writingMode: 'vertical-rl' }}>CLIFF</text>
+        <text x={178.5} y={60} textAnchor="middle" dominantBaseline="middle"
+          stroke="rgba(255,255,255,0.85)" strokeWidth="2" paintOrder="stroke"
+          style={{ fontSize: '6px', fill: '#991b1b', fontFamily: 'sans-serif', fontWeight: '700', writingMode: 'vertical-rl' }}>CLIFF</text>
       </>}
 
       {type === 'chance_encounter' && <>
@@ -295,13 +332,16 @@ function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
         <rect x={90} y={0} width={90} height={60} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         <rect x={0} y={0} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         <rect x={90} y={60} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {/* 18″ exclusion circle — field fill to blank out the zone colour underneath */}
-        <circle cx={90} cy={60} r={22} fill="rgba(200,205,215,0.7)" stroke="rgba(60,80,140,0.45)" strokeWidth={1.5} strokeDasharray="4,3" />
+        {/* 9″-radius exclusion circle (18″ diameter no-deploy zone) — fully opaque to mask zones underneath */}
+        <circle cx={90} cy={60} r={22} fill="#c8cdd8" stroke={CENTRE_DASH} strokeWidth={1.5} strokeDasharray="4,3" />
+        {/* Radius indicator line from centre to circle edge */}
+        <line x1={90} y1={60} x2={112} y2={60} stroke={CENTRE_DASH} strokeWidth={1} strokeDasharray="3,2" />
+        <circle cx={90} cy={60} r={2} fill={CENTRE_DASH} />
         {lbl(45, 90, 'A1', 9)}
         {lbl(135, 30, 'A2', 9)}
         {lbl(45, 30, 'B1', 9)}
         {lbl(135, 90, 'B2', 9)}
-        {lbl(90, 60, '18″', 7)}
+        {lbl(103, 54, '9″', 6)}
       </>}
 
       {type === 'encirclement' && <>

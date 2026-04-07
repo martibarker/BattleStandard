@@ -164,7 +164,7 @@ export const SCENARIOS: ScenarioData[] = [
     deployment:
       'Winner of a roll-off chooses from zones A1, A2, B1 or B2. ' +
       'If they choose an A zone, their opponent uses the opposite A zone. If they choose a B zone, their opponent uses the opposite B zone. ' +
-      'Winner deploys their first unit first. No units may deploy within 18″ of the centre of the battlefield.',
+      'Winner deploys their first unit first. No units may deploy within 9″ of the centre of the battlefield (18″ diameter exclusion zone).',
     gameLengths: ['random', 'break_point'],
     specialRules: [],
     mandatorySecondaries: ['special_feature'],
