@@ -1638,8 +1638,8 @@ export default function Setup({ onCancel }: Props) {
               </p>
               <p className="text-xs mb-2" style={{ color: 'var(--color-text-secondary)' }}>Who finished deploying first?</p>
               <div className="flex gap-6">
-                {(['p1', 'p2', null] as const).map((side) => {
-                  const label = side === null ? 'Neither / Same time' : (side === 'p1' ? state.p1Name : state.p2Name);
+                {(['p1', 'p2'] as const).map((side) => {
+                  const label = side === 'p1' ? state.p1Name : state.p2Name;
                   return (
                     <label key={String(side)} className="flex items-center gap-2 text-sm cursor-pointer">
                       <input
