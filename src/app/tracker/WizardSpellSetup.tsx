@@ -22,11 +22,20 @@ interface Props {
 
 const ITEM_LABELS: Record<SpellModItem, string> = {
   lore_familiar:     'Lore Familiar',
-  spell_familiar:    'Spell Familiar (+1 spell)',
-  tome_of_midnight:  'Tome of Midnight (+1 spell)',
-  grimoire_of_ogvold:'Grimoire of Ogvold (all spells)',
-  heartwood_pendant: 'Heartwood Pendant (+Lore of the Wilds)',
-  goretooth:         'Goretooth (+Lore of Primal Magic)',
+  spell_familiar:    'Spell Familiar',
+  tome_of_midnight:  'Tome of Midnight',
+  grimoire_of_ogvold:'Grimoire of Ogvold',
+  heartwood_pendant: 'Heartwood Pendant',
+  goretooth:         'Goretooth',
+};
+
+const ITEM_DESCRIPTIONS: Record<SpellModItem, string> = {
+  lore_familiar:     'The wizard may choose their spells freely rather than generating them randomly.',
+  spell_familiar:    'The wizard generates one additional spell beyond their normal allowance.',
+  tome_of_midnight:  'The wizard generates one additional spell beyond their normal allowance.',
+  grimoire_of_ogvold:'The wizard knows every spell in their chosen lore.',
+  heartwood_pendant: 'The wizard may also generate spells from the Lore of the Wilds.',
+  goretooth:         'The wizard may also generate spells from the Lore of Primal Magic.',
 };
 
 const ITEM_EXTRA_LORE: Partial<Record<SpellModItem, string>> = {
@@ -239,9 +248,12 @@ export default function WizardSpellSetup({ unit, factionId, setup, onChange, fro
                     Magic items (from list):
                   </p>
                   {equippedItems.map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-xs">
-                      <span style={{ color: 'var(--color-accent-amber)', flexShrink: 0 }}>✓</span>
-                      <span style={{ color: 'var(--color-text-primary)' }}>{ITEM_LABELS[item]}</span>
+                    <div key={item} className="flex items-start gap-2 text-xs">
+                      <span style={{ color: 'var(--color-accent-amber)', flexShrink: 0, marginTop: '1px' }}>✓</span>
+                      <div>
+                        <span style={{ color: 'var(--color-text-primary)', fontWeight: 600 }}>{ITEM_LABELS[item]}</span>
+                        <span style={{ color: 'var(--color-text-secondary)', marginLeft: '6px' }}>{ITEM_DESCRIPTIONS[item]}</span>
+                      </div>
                     </div>
                   ))}
                 </>
@@ -264,14 +276,17 @@ export default function WizardSpellSetup({ unit, factionId, setup, onChange, fro
                     ? setup.extraLores.includes(ITEM_EXTRA_LORE[item]!)
                     : false;
                 return (
-                  <label key={item} className="flex items-center gap-2 text-xs cursor-pointer">
+                  <label key={item} className="flex items-start gap-2 text-xs cursor-pointer">
                     <input
                       type="checkbox"
                       checked={checked}
                       onChange={(e) => handleItemToggle(item, e.target.checked)}
-                      style={{ accentColor: 'var(--color-accent-amber)', flexShrink: 0 }}
+                      style={{ accentColor: 'var(--color-accent-amber)', flexShrink: 0, marginTop: '2px' }}
                     />
-                    <span style={{ color: 'var(--color-text-primary)' }}>{ITEM_LABELS[item]}</span>
+                    <div>
+                      <span style={{ color: 'var(--color-text-primary)', fontWeight: 600 }}>{ITEM_LABELS[item]}</span>
+                      <span style={{ color: 'var(--color-text-secondary)', marginLeft: '6px' }}>{ITEM_DESCRIPTIONS[item]}</span>
+                    </div>
                   </label>
                 );
               })}
