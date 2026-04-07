@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import bannerImg from '../assets/banner.png';
+import DataTransfer from '../components/DataTransfer';
 
 const FEATURES = [
   {
@@ -191,7 +192,7 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Login scaffold */}
+        {/* Data management */}
         <div
           ref={loginRef}
           style={{
@@ -201,9 +202,9 @@ export default function Home() {
             backgroundColor: 'var(--f-elevated)',
             border: '1px solid var(--f-border)',
             padding: '28px 32px',
-            textAlign: 'center',
           }}
         >
+          {/* Export / Import */}
           <p style={{
             fontFamily: "'Cinzel', Georgia, serif",
             fontSize: '8px',
@@ -212,7 +213,7 @@ export default function Home() {
             color: 'var(--f-text-4)',
             marginBottom: '8px',
           }}>
-            Your Account
+            My Data
           </p>
           <h3 style={{
             fontFamily: "'Cinzel', Georgia, serif",
@@ -221,7 +222,7 @@ export default function Home() {
             color: 'var(--f-text)',
             margin: '0 0 8px',
           }}>
-            Sync Across Devices
+            Export &amp; Import
           </h3>
           <p style={{
             fontFamily: "'Source Serif 4', Georgia, serif",
@@ -229,49 +230,74 @@ export default function Home() {
             fontSize: '13px',
             color: 'var(--f-text-3)',
             lineHeight: 1.6,
-            margin: '0 0 20px',
+            margin: '0 0 16px',
           }}>
-            Sign in to keep your armies safe in the cloud and access them from any device.
+            Back up your armies and game history, or transfer them to another device. No account required.
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginBottom: '14px' }}>
-            <button disabled style={{
-              padding: '9px 22px',
-              backgroundColor: 'var(--f-primary)',
-              color: '#fff',
+          <DataTransfer />
+
+          {/* Cloud sync scaffold */}
+          <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid var(--f-border)', textAlign: 'center' }}>
+            <p style={{
               fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: '10px',
-              letterSpacing: '0.15em',
+              fontSize: '8px',
+              letterSpacing: '0.45em',
               textTransform: 'uppercase',
-              border: 'none',
-              cursor: 'not-allowed',
-              opacity: 0.45,
+              color: 'var(--f-text-4)',
+              marginBottom: '8px',
             }}>
-              Sign In
-            </button>
-            <button disabled style={{
-              padding: '9px 22px',
-              backgroundColor: 'transparent',
-              color: 'var(--f-primary)',
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: '10px',
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              border: '1px solid var(--f-primary)',
-              cursor: 'not-allowed',
-              opacity: 0.45,
+              Your Account
+            </p>
+            <p style={{
+              fontFamily: "'Source Serif 4', Georgia, serif",
+              fontStyle: 'italic',
+              fontSize: '13px',
+              color: 'var(--f-text-3)',
+              lineHeight: 1.6,
+              margin: '0 0 14px',
             }}>
-              Create Account
-            </button>
+              Sign in to sync your armies automatically across all devices.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginBottom: '10px' }}>
+              <button disabled style={{
+                padding: '9px 22px',
+                backgroundColor: 'var(--f-primary)',
+                color: '#fff',
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '10px',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                border: 'none',
+                cursor: 'not-allowed',
+                opacity: 0.45,
+              }}>
+                Sign In
+              </button>
+              <button disabled style={{
+                padding: '9px 22px',
+                backgroundColor: 'transparent',
+                color: 'var(--f-primary)',
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '10px',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                border: '1px solid var(--f-primary)',
+                cursor: 'not-allowed',
+                opacity: 0.45,
+              }}>
+                Create Account
+              </button>
+            </div>
+            <p style={{
+              fontFamily: "'Source Serif 4', Georgia, serif",
+              fontStyle: 'italic',
+              fontSize: '11px',
+              color: 'var(--f-text-4)',
+              margin: 0,
+            }}>
+              ⚔ Cloud sync coming in a future update.
+            </p>
           </div>
-          <p style={{
-            fontFamily: "'Source Serif 4', Georgia, serif",
-            fontStyle: 'italic',
-            fontSize: '11px',
-            color: 'var(--f-text-4)',
-            margin: 0,
-          }}>
-            ⚔ Cloud sync coming in a future update. Your armies are saved locally in the meantime.
-          </p>
         </div>
 
         {/* Attribution footer */}

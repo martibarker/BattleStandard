@@ -10,6 +10,8 @@ function uid() {
 
 interface ArmyStore {
   armies: ArmyList[];
+  /** Merge imported armies — skips any whose ID already exists */
+  importArmies: (incoming: ArmyList[]) => number;
   createArmy: (config: {
     name: string;
     factionId: string;
@@ -28,8 +30,15 @@ interface ArmyStore {
 
 export const useArmyStore = create<ArmyStore>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       armies: [],
+
+      importArmies: (incoming) => {
+        const existing = new Set(get().armies.map((a) => a.id));
+        const toAdd = incoming.filter((a) => !existing.has(a.id));
+        if (toAdd.length > 0) set((s) => ({ armies: [...s.armies, ...toAdd] }));
+        return toAdd.length;
+      },
 
       createArmy: (config) => {
         const id = uid();

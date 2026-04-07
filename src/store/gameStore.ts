@@ -109,6 +109,8 @@ export interface GameState {
   /** Persisted saved games list */
   savedGames: SavedGame[];
 
+  /** Merge imported saved games — skips any whose gameId already exists */
+  importSavedGames: (incoming: SavedGame[]) => number;
   // Actions
   startGame: (p1: Partial<PlayerGameState>, p2: Partial<PlayerGameState>, gameLengthRule?: 'standard' | 'random', activeSecondaries?: string[], gameName?: string) => void;
   resetGame: () => void;
@@ -157,6 +159,13 @@ const initialPlayerState = (side: PlayerSide): PlayerGameState => ({
 export const useGameStore = create<GameState>()(
   persist(
     (set, get) => ({
+      importSavedGames: (incoming) => {
+        const existing = new Set(get().savedGames.map((g) => g.gameId));
+        const toAdd = incoming.filter((g) => !existing.has(g.gameId));
+        if (toAdd.length > 0) set((s) => ({ savedGames: [...s.savedGames, ...toAdd] }));
+        return toAdd.length;
+      },
+
       gameId: null,
       gameName: '',
       currentTurn: 1,

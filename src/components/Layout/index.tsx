@@ -3,6 +3,7 @@ import { NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { useThemeStore, THEME_OPTIONS } from '../../store/themeStore';
 import { useArmyStore } from '../../store/armyStore';
 import bannerNoTextImg from '../../assets/banner-no-text.png';
+import DataTransfer from '../DataTransfer';
 
 interface NavItem {
   to: string;
@@ -417,6 +418,19 @@ export default function Layout() {
           }}>
             <MyListsSection />
             <SidebarSection title="General's Adjutant" items={companionItems} />
+            <div style={{ marginTop: 'auto', padding: '16px 20px 0', borderTop: '1px solid var(--f-border)' }}>
+              <p style={{
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: '8.5px',
+                letterSpacing: '0.35em',
+                textTransform: 'uppercase',
+                color: 'var(--f-text-4)',
+                marginBottom: '10px',
+              }}>
+                My Data
+              </p>
+              <DataTransfer compact />
+            </div>
           </aside>
         )}
 

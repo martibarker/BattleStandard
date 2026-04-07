@@ -61,13 +61,13 @@ export default function ArmyEditor() {
   const [nameInput, setNameInput] = useState('');
   const [expandedEntryId, setExpandedEntryId] = useState<string | null>(null);
   const [expandedMagicCategories, setExpandedMagicCategories] = useState<Record<string, boolean>>({
-    magic_weapon: true,
-    magic_armour: true,
-    talisman: true,
-    enchanted_item: true,
-    arcane_item: true,
+    magic_weapon: false,
+    magic_armour: false,
+    talisman: false,
+    enchanted_item: false,
+    arcane_item: false,
     magic_standard: false,
-    magic_items_section: true,
+    magic_items_section: false,
   });
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
   const [toast, setToast] = useState<{ message: string; key: number } | null>(null);
@@ -1599,19 +1599,19 @@ function EntryOptionsPanel({
           <div className="flex flex-col gap-1.5">
             <button
               className="flex items-center justify-between w-full text-left"
-              onClick={() => setExpandedMagicCategories({ ...expandedMagicCategories, magic_items_section: !(expandedMagicCategories.magic_items_section ?? true) })}
+              onClick={() => setExpandedMagicCategories({ ...expandedMagicCategories, magic_items_section: !(expandedMagicCategories.magic_items_section ?? false) })}
             >
               <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>
-                Magic Items {!(expandedMagicCategories.magic_items_section ?? true) ? '▸' : '▾'}
+                Magic Items {!(expandedMagicCategories.magic_items_section ?? false) ? '▸' : '▾'}
               </p>
               <p className="text-xs" style={{ color: totalItemPts > (magicAllowanceOpt.max_points ?? 0) ? 'var(--f-gold)' : 'var(--f-text-3)' }}>
                 {totalItemPts} / {magicAllowanceOpt.max_points} pts
               </p>
             </button>
-            {(expandedMagicCategories.magic_items_section ?? true) && !isWizard(unit) && (
+            {(expandedMagicCategories.magic_items_section ?? false) && !isWizard(unit) && (
               <p className="text-xs italic" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>Arcane items require a Wizard</p>
             )}
-            {(expandedMagicCategories.magic_items_section ?? true) && characterItemCategories.map((cat) => {
+            {(expandedMagicCategories.magic_items_section ?? false) && characterItemCategories.map((cat) => {
               // Filter items available to this unit (check unit_restriction text against unit name/troop type)
               const allCatItems = faction.magic_items.filter((i) => i.category === cat);
               const items = allCatItems.filter((i) => {
@@ -1622,7 +1622,7 @@ function EntryOptionsPanel({
               });
               if (items.length === 0) return null;
               if (cat === 'arcane_item' && !isWizard(unit)) return null;
-              const isExpanded = expandedMagicCategories[cat] ?? true;
+              const isExpanded = expandedMagicCategories[cat] ?? false;
 
               // For magic_armour: split into armour suits vs shields
               const armourItems = cat === 'magic_armour' ? items.filter((i) => !(i as typeof i & { is_shield?: boolean }).is_shield) : null;
