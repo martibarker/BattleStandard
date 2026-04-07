@@ -11,6 +11,7 @@ import {
   getAllPlayableLores,
   BOUND_SPELL_ITEMS,
   type BoundSpellItem,
+  type SpellModItem,
 } from '../../utils/magic';
 import WizardSpellSetup from './WizardSpellSetup';
 import { initWizardSetup, type WizardSetup } from './wizardSetupTypes';
@@ -26,6 +27,8 @@ interface ManualCaster {
   /** kebab-case lore id from getAllPlayableLores() */
   selectedLore: string;
   selectedSpellIds: string[];
+  /** Override spell limit — allows selecting more spells than wizard level */
+  unlockExtraSpells: boolean;
 }
 
 interface SetupState {
@@ -59,6 +62,40 @@ interface Props {
 // Helpers
 // ---------------------------------------------------------------------------
 
+/** Maps magic item IDs (as stored in faction data) to their SpellModItem key */
+const ITEM_ID_TO_MOD: Record<string, SpellModItem> = {
+  'lore-familiar':      'lore_familiar',
+  'lore_familiar':      'lore_familiar',
+  'spell_familiar':     'spell_familiar',
+  'tome_of_midnight':   'tome_of_midnight',
+  'grimoire_of_ogvold': 'grimoire_of_ogvold',
+  'heartwood-pendant':  'heartwood_pendant',
+  'heartwood_pendant':  'heartwood_pendant',
+  'goretooth':          'goretooth',
+};
+
+const EXTRA_LORE_MAP: Partial<Record<SpellModItem, string>> = {
+  heartwood_pendant: 'lore_of_the_wilds',
+  goretooth:         'lore_of_primal_magic',
+};
+
+function applySpellModItems(setup: WizardSetup, itemIds: string[]): void {
+  for (const id of itemIds) {
+    const mod = ITEM_ID_TO_MOD[id];
+    if (!mod) continue;
+    if (mod === 'lore_familiar')     setup.hasLoreFamiliar = true;
+    if (mod === 'spell_familiar' || mod === 'tome_of_midnight') setup.hasExtraSpell = true;
+    if (mod === 'grimoire_of_ogvold') {
+      setup.hasGrimoire = true;
+      setup.selectedSpellIds = getLoreSpells(setup.selectedLore).map((s) => s.id);
+    }
+    const extraLore = EXTRA_LORE_MAP[mod];
+    if (extraLore && !setup.extraLores.includes(extraLore)) {
+      setup.extraLores.push(extraLore);
+    }
+  }
+}
+
 function resolveWizardLevel(unit: Unit, entry: ArmyEntry | undefined): number {
   const base = unit.magic?.wizard_level ?? 1;
   if (!entry) return base;
@@ -90,6 +127,10 @@ function initWizardSetups(faction: Faction, entries: ArmyEntry[] = []): WizardSe
     // Apply pre-selected lore from army builder
     if (entry?.selectedLoreKey) {
       setup.selectedLore = entry.selectedLoreKey;
+    }
+    // Apply spell-modifier magic items (Lore Familiar, Grimoire, extra lores, etc.)
+    if (entry?.selectedMagicItemIds?.length) {
+      applySpellModItems(setup, entry.selectedMagicItemIds);
     }
     return setup;
   });
@@ -396,7 +437,7 @@ export default function Setup({ onCancel }: Props) {
       const castersKey = side === 'p1' ? 'p1ManualCasters' : 'p2ManualCasters';
       const caster = state[castersKey][idx];
       const casterSpells = getLoreSpells(caster.selectedLore);
-      const atLimit = caster.selectedSpellIds.length >= caster.wizardLevel;
+      const atLimit = !caster.unlockExtraSpells && caster.selectedSpellIds.length >= caster.wizardLevel;
 
       const updateCaster = (patch: Partial<ManualCaster>) => {
         setState((s) => ({
@@ -489,6 +530,19 @@ export default function Setup({ onCancel }: Props) {
             </select>
           </div>
 
+          {/* Unlock extra spells override */}
+          <label className="flex items-center gap-2 text-xs cursor-pointer">
+            <input
+              type="checkbox"
+              checked={caster.unlockExtraSpells}
+              onChange={(e) => updateCaster({ unlockExtraSpells: e.target.checked })}
+              style={{ accentColor: 'var(--color-accent-amber)', flexShrink: 0 }}
+            />
+            <span style={{ color: 'var(--color-text-primary)' }}>
+              Allow additional spells (magic item / override)
+            </span>
+          </label>
+
           {/* Spells */}
           {caster.selectedLore && casterSpells.length > 0 && (
             <div>
@@ -500,12 +554,12 @@ export default function Setup({ onCancel }: Props) {
                   className="text-xs font-semibold"
                   style={{
                     color:
-                      caster.selectedSpellIds.length === caster.wizardLevel
+                      caster.selectedSpellIds.length >= caster.wizardLevel
                         ? 'var(--color-accent-amber)'
                         : 'var(--color-text-secondary)',
                   }}
                 >
-                  {caster.selectedSpellIds.length} / {caster.wizardLevel}
+                  {caster.selectedSpellIds.length}{caster.unlockExtraSpells ? '' : ` / ${caster.wizardLevel}`}
                 </span>
               </div>
               <div className="space-y-1">
@@ -696,7 +750,7 @@ export default function Setup({ onCancel }: Props) {
                     ...s,
                     p1ManualCasters: [
                       ...s.p1ManualCasters,
-                      { casterName: '', wizardLevel: 2, selectedLore: '', selectedSpellIds: [] },
+                      { casterName: '', wizardLevel: 2, selectedLore: '', selectedSpellIds: [], unlockExtraSpells: false },
                     ],
                   }))
                 }
@@ -761,7 +815,7 @@ export default function Setup({ onCancel }: Props) {
                     ...s,
                     p2ManualCasters: [
                       ...s.p2ManualCasters,
-                      { casterName: '', wizardLevel: 2, selectedLore: '', selectedSpellIds: [] },
+                      { casterName: '', wizardLevel: 2, selectedLore: '', selectedSpellIds: [], unlockExtraSpells: false },
                     ],
                   }))
                 }
