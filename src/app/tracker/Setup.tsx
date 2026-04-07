@@ -5,6 +5,7 @@ import type { ArmyEntry } from '../../types/army';
 import { getFaction } from '../../data/factions';
 import { isWizard } from '../../utils/armyValidation';
 import { SECONDARY_OBJECTIVES } from '../../data/secondary-objectives';
+import { SCENARIOS, type ScenarioData } from '../../data/scenarios';
 import {
   getLore,
   getLoreSpells,
@@ -31,7 +32,8 @@ interface ManualCaster {
 }
 
 interface SetupState {
-  step: 1 | 2 | 3 | 4;
+  step: 1 | 2 | 3 | 4 | 5;
+  scenarioId: string | null;
   gameName: string;
   p1Name: string;
   p2Name: string;
@@ -179,14 +181,121 @@ function buildManualEntries(caster: ManualCaster): SpellEntry[] {
 // ---------------------------------------------------------------------------
 // Setup component
 // ---------------------------------------------------------------------------
+// Deployment Zone Diagrams
+// ---------------------------------------------------------------------------
+
+const ZONE_A_COLOR = 'rgba(96,165,250,0.25)';
+const ZONE_B_COLOR = 'rgba(217,119,6,0.22)';
+const ZONE_STROKE = 'rgba(255,255,255,0.25)';
+const FIELD_FILL = 'rgba(0,0,0,0.12)';
+const LABEL_COLOR = '#e2d5b0';
+
+function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
+  // ViewBox: 180×120 representing a 72″×48″ table (scale 2.5px per inch)
+  const w = 180; const h = 120;
+  const label = (x: number, y: number, text: string) => (
+    <text x={x} y={y} textAnchor="middle" dominantBaseline="middle"
+      style={{ fontSize: '8px', fill: LABEL_COLOR, fontFamily: 'Cinzel,serif', letterSpacing: '0.04em' }}>
+      {text}
+    </text>
+  );
+
+  return (
+    <svg viewBox={`0 0 ${w} ${h}`} style={{ width: '100%', maxWidth: '320px', display: 'block', margin: '0 auto' }}
+      aria-label="Deployment zone diagram">
+      {/* Battlefield border */}
+      <rect x={0} y={0} width={w} height={h} fill={FIELD_FILL} stroke={ZONE_STROKE} strokeWidth={1.5} />
+
+      {type === 'standard' && <>
+        <rect x={0} y={0} width={w} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        <rect x={0} y={90} width={w} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {label(90, 15, 'ZONE A  12″')}
+        {label(90, 105, 'ZONE B  12″')}
+      </>}
+
+      {type === 'king_of_hill' && <>
+        {/* Zones inset 8″ = 20px from short edges */}
+        <rect x={20} y={0} width={140} height={25} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        <rect x={20} y={95} width={140} height={25} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* Hill at centre */}
+        <ellipse cx={90} cy={60} rx={22} ry={16} fill="rgba(180,140,80,0.35)" stroke="rgba(180,140,80,0.6)" strokeWidth={1} />
+        {label(90, 13, 'ZONE A  10″')}
+        {label(90, 107, 'ZONE B  10″')}
+        <text x={90} y={61} textAnchor="middle" dominantBaseline="middle"
+          style={{ fontSize: '7px', fill: '#c9a84c', fontFamily: 'Cinzel,serif' }}>HILL</text>
+      </>}
+
+      {type === 'diagonal' && <>
+        {/* Zone A: upper-right triangle (diagonal from top-left to bottom-right) */}
+        <polygon points={`0,0 ${w},0 ${w},${h}`} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* Zone B: lower-left triangle */}
+        <polygon points={`0,0 0,${h} ${w},${h}`} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* Diagonal line */}
+        <line x1={0} y1={0} x2={w} y2={h} stroke={ZONE_STROKE} strokeWidth={1.5} />
+        {label(135, 22, 'ZONE A')}
+        {label(45, 98, 'ZONE B')}
+        <text x={18} y={70} textAnchor="start" style={{ fontSize: '7px', fill: LABEL_COLOR }}>24″</text>
+        <text x={138} y={55} textAnchor="start" style={{ fontSize: '7px', fill: LABEL_COLOR }}>24″</text>
+      </>}
+
+      {type === 'close_quarters' && <>
+        {/* Zones inset 6″ = 15px from short edges */}
+        <rect x={15} y={0} width={150} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        <rect x={15} y={90} width={150} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* Impassable short edges hatching */}
+        <rect x={0} y={0} width={15} height={h} fill="rgba(200,50,50,0.12)" stroke="rgba(200,50,50,0.3)" strokeWidth={1} strokeDasharray="3,3" />
+        <rect x={165} y={0} width={15} height={h} fill="rgba(200,50,50,0.12)" stroke="rgba(200,50,50,0.3)" strokeWidth={1} strokeDasharray="3,3" />
+        {label(90, 15, 'ZONE A  12″')}
+        {label(90, 105, 'ZONE B  12″')}
+        <text x={7.5} y={62} textAnchor="middle" dominantBaseline="middle"
+          style={{ fontSize: '6px', fill: 'rgba(220,80,80,0.9)', fontFamily: 'sans-serif', writingMode: 'vertical-lr' }}>CLIFF</text>
+        <text x={172.5} y={62} textAnchor="middle" dominantBaseline="middle"
+          style={{ fontSize: '6px', fill: 'rgba(220,80,80,0.9)', fontFamily: 'sans-serif', writingMode: 'vertical-lr' }}>CLIFF</text>
+      </>}
+
+      {type === 'chance_encounter' && <>
+        {/* 4 quadrants — A1 bottom-left, A2 top-right, B1 top-left, B2 bottom-right */}
+        <rect x={0} y={60} width={90} height={60} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* A1 */}
+        <rect x={90} y={0} width={90} height={60} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* A2 */}
+        <rect x={0} y={0} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* B1 */}
+        <rect x={90} y={60} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* B2 */}
+        {/* 18″ exclusion circle at centre (18/72×180 = 45 → r=22.5) */}
+        <circle cx={90} cy={60} r={22} fill={FIELD_FILL} stroke="rgba(255,255,255,0.4)" strokeWidth={1.5} />
+        {label(45, 90, 'A1')}
+        {label(135, 30, 'A2')}
+        {label(45, 30, 'B1')}
+        {label(135, 90, 'B2')}
+        <text x={90} y={61} textAnchor="middle" dominantBaseline="middle"
+          style={{ fontSize: '7px', fill: LABEL_COLOR }}>18″</text>
+      </>}
+
+      {type === 'encirclement' && <>
+        {/* Zone A: top band, stops 12″=30px from right edge (width 150) */}
+        <rect x={0} y={0} width={150} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* Zone B: bottom band, starts 12″=30px from left edge */}
+        <rect x={30} y={90} width={150} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {label(75, 15, 'ZONE A')}
+        {label(105, 105, 'ZONE B')}
+        {/* 12″ dimension arrows */}
+        <text x={160} y={35} style={{ fontSize: '7px', fill: LABEL_COLOR }}>12″</text>
+        <text x={4} y={85} style={{ fontSize: '7px', fill: LABEL_COLOR }}>12″</text>
+      </>}
+    </svg>
+  );
+}
+
+// ---------------------------------------------------------------------------
 
 export default function Setup({ onCancel }: Props) {
   const startGame = useGameStore((s) => s.startGame);
   const addSpellsToWizard = useGameStore((s) => s.addSpellsToWizard);
   const armies = useArmyStore((s) => s.armies);
 
+  const [d6Result, setD6Result] = useState<number | null>(null);
+
   const [state, setState] = useState<SetupState>({
     step: 1,
+    scenarioId: null,
     gameName: '',
     p1Name: 'Player 1',
     p2Name: 'Player 2',
@@ -215,14 +324,14 @@ export default function Setup({ onCancel }: Props) {
   });
 
   const handleNext = (): void => {
-    if (state.step < 4) {
-      setState((s) => ({ ...s, step: (s.step + 1) as 1 | 2 | 3 | 4 }));
+    if (state.step < 5) {
+      setState((s) => ({ ...s, step: (s.step + 1) as 1 | 2 | 3 | 4 | 5 }));
     }
   };
 
   const handlePrev = (): void => {
     if (state.step > 1) {
-      setState((s) => ({ ...s, step: (s.step - 1) as 1 | 2 | 3 | 4 }));
+      setState((s) => ({ ...s, step: (s.step - 1) as 1 | 2 | 3 | 4 | 5 }));
     }
   };
 
@@ -899,14 +1008,197 @@ export default function Setup({ onCancel }: Props) {
   }
 
   // ---------------------------------------------------------------------------
-  // Step 3: Secondary Objectives
+  // Step 3: Scenario Selection
   // ---------------------------------------------------------------------------
   if (state.step === 3) {
-    const nonStrategicObjectives = SECONDARY_OBJECTIVES.filter(
-      (o) => !['strategic_locations_2', 'strategic_locations_3', 'strategic_locations_4'].includes(o.id)
+    const selectScenario = (id: string) => {
+      const scenario = SCENARIOS.find((s) => s.id === id);
+      if (!scenario) return;
+      // Auto-select mandatory secondaries; keep any existing optional ones that are still allowed
+      const allowed = new Set([...scenario.mandatorySecondaries, ...scenario.optionalSecondaries]);
+      const keptOptionals = state.selectedSecondaries.filter((x) => allowed.has(x));
+      const newSelected = Array.from(new Set([...scenario.mandatorySecondaries, ...keptOptionals]));
+      // Pre-select the first recommended game length if not already set
+      const firstLength = scenario.gameLengths[0] ?? 'standard';
+      setState((s) => ({
+        ...s,
+        scenarioId: id,
+        selectedSecondaries: newSelected,
+        gameLengthRule: scenario.gameLengths.includes(s.gameLengthRule) ? s.gameLengthRule : firstLength,
+      }));
+    };
+
+    const rollD6 = () => {
+      const roll = Math.ceil(Math.random() * 6);
+      setD6Result(roll);
+      selectScenario(SCENARIOS[roll - 1].id);
+    };
+
+    const gameLengthLabel: Record<string, string> = {
+      standard: 'Fixed Turn Limit',
+      random: 'Random Game Length',
+      break_point: 'Break Point',
+    };
+
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        <h2 className="text-2xl mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+          Step 3: Scenario
+        </h2>
+        <p className="text-sm mb-6" style={{ color: 'var(--color-text-secondary)' }}>
+          Choose your scenario, or roll the D6 to pick one randomly.
+        </p>
+
+        {/* D6 roller */}
+        <div className="flex items-center gap-4 mb-6">
+          <button
+            onClick={rollD6}
+            className="px-4 py-2 rounded font-semibold text-sm"
+            style={{ backgroundColor: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', color: 'var(--color-accent-amber)', fontSize: '18px' }}
+          >
+            ⚄ Roll D6
+          </button>
+          {d6Result !== null && (
+            <span className="text-sm" style={{ color: 'var(--color-accent-amber)' }}>
+              Rolled <strong>{d6Result}</strong> — {SCENARIOS[d6Result - 1].name}
+            </span>
+          )}
+        </div>
+
+        {/* Scenario cards */}
+        <div className="space-y-3 mb-6">
+          {SCENARIOS.map((scenario) => {
+            const isSelected = state.scenarioId === scenario.id;
+            return (
+              <div
+                key={scenario.id}
+                className="rounded border cursor-pointer"
+                style={{
+                  borderColor: isSelected ? 'var(--color-accent-amber)' : 'var(--color-border)',
+                  backgroundColor: isSelected ? 'rgba(217,119,6,0.06)' : 'var(--color-bg-elevated)',
+                }}
+                onClick={() => selectScenario(scenario.id)}
+              >
+                {/* Radio row */}
+                <div className="flex items-center gap-3 p-3">
+                  <input
+                    type="radio"
+                    name="scenario"
+                    checked={isSelected}
+                    onChange={() => selectScenario(scenario.id)}
+                    style={{ accentColor: 'var(--color-accent-amber)', flexShrink: 0 }}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <span className="text-xs font-mono" style={{ color: 'var(--color-text-secondary)' }}>
+                      Scenario {scenario.number}
+                    </span>
+                    <span className="font-semibold text-sm ml-2" style={{ color: 'var(--color-text-primary)' }}>
+                      {scenario.name}
+                    </span>
+                    {scenario.mandatorySecondaries.length > 0 && (
+                      <span className="ml-2 text-xs" style={{ color: 'var(--color-accent-amber)' }}>
+                        · {scenario.mandatorySecondaries.map((id) => SECONDARY_OBJECTIVES.find((o) => o.id === id)?.name ?? id).join(', ')} required
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-xs shrink-0" style={{ color: 'var(--color-text-secondary)' }}>
+                    {scenario.gameLengths.map((g) => gameLengthLabel[g]).join(' / ')}
+                  </span>
+                </div>
+
+                {/* Expandable details */}
+                <details style={{ borderTop: '1px solid var(--color-border)' }}>
+                  <summary
+                    className="px-3 py-2 text-xs cursor-pointer"
+                    style={{ color: 'var(--color-accent-amber)' }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Rules & deployment ▾
+                  </summary>
+                  <div className="p-3 space-y-4">
+                    {/* Flavour */}
+                    <p className="text-xs italic" style={{ color: 'var(--color-text-secondary)' }}>
+                      {scenario.flavour}
+                    </p>
+
+                    {/* Deployment diagram */}
+                    <DeploymentDiagram type={scenario.diagramType} />
+
+                    {/* Deployment text */}
+                    <div>
+                      <p className="text-xs font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>Deployment</p>
+                      <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{scenario.deployment}</p>
+                    </div>
+
+                    {/* Set-up */}
+                    <div>
+                      <p className="text-xs font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>Set-up</p>
+                      <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{scenario.setup}</p>
+                    </div>
+
+                    {/* Special rules */}
+                    {scenario.specialRules.length > 0 && (
+                      <div>
+                        <p className="text-xs font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>Scenario Special Rules</p>
+                        <div className="space-y-2">
+                          {scenario.specialRules.map((rule) => (
+                            <div key={rule.name}>
+                              <span className="text-xs font-semibold" style={{ color: 'var(--color-text-primary)' }}>{rule.name}: </span>
+                              <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{rule.description}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Secondary objectives summary */}
+                    <div>
+                      <p className="text-xs font-semibold mb-1" style={{ color: 'var(--color-text-primary)' }}>Secondary Objectives</p>
+                      <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+                        {scenario.mandatorySecondaries.length > 0 && (
+                          <>Must include: {scenario.mandatorySecondaries.map((id) => SECONDARY_OBJECTIVES.find((o) => o.id === id)?.name ?? id).join(', ')}. </>
+                        )}
+                        {scenario.optionalSecondaries.length > 0 && (
+                          <>May include: {scenario.optionalSecondaries.map((id) => SECONDARY_OBJECTIVES.find((o) => o.id === id)?.name ?? id).join(', ')}.</>
+                        )}
+                        {scenario.mandatorySecondaries.length === 0 && scenario.optionalSecondaries.length === 0 && 'None.'}
+                      </p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="flex gap-3 mt-6 justify-between">
+          <button onClick={handlePrev} className="px-4 py-2 rounded text-sm font-semibold" style={btnSecondary}>
+            Back
+          </button>
+          <button onClick={handleNext} className="px-4 py-2 rounded text-sm font-semibold" style={btnPrimary}>
+            Next
+          </button>
+        </div>
+      </div>
     );
+  }
+
+  // ---------------------------------------------------------------------------
+  // Step 4: Secondary Objectives
+  // ---------------------------------------------------------------------------
+  if (state.step === 4) {
+    const scenario = SCENARIOS.find((s) => s.id === state.scenarioId);
+    const allowedIds = scenario
+      ? new Set([...scenario.mandatorySecondaries, ...scenario.optionalSecondaries])
+      : null; // null = show all
+    const mandatoryIds = new Set(scenario?.mandatorySecondaries ?? []);
+    // Determine which objectives to show based on selected scenario
+    const visibleObjectives = allowedIds
+      ? SECONDARY_OBJECTIVES.filter((o) => allowedIds.has(o.id))
+      : SECONDARY_OBJECTIVES;
 
     const toggleObjective = (id: string) => {
+      if (mandatoryIds.has(id)) return; // mandatory ones cannot be deselected
       setState((s) => ({
         ...s,
         selectedSecondaries: s.selectedSecondaries.includes(id)
@@ -918,63 +1210,74 @@ export default function Setup({ onCancel }: Props) {
     return (
       <div className="max-w-2xl mx-auto p-6">
         <h2 className="text-2xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-          Step 3: Secondary Objectives
+          Step 4: Secondary Objectives
         </h2>
 
         <div className="space-y-6">
-          <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-            Secondary objectives are chosen by the organiser and may be applied to any scenario.
-            Tick whichever objectives are in use for this game.
-          </p>
+          {scenario ? (
+            <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+              Objectives available for <strong style={{ color: 'var(--color-text-primary)' }}>{scenario.name}</strong>.
+              Mandatory objectives are pre-selected and cannot be removed.
+            </p>
+          ) : (
+            <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+              No scenario selected — all objectives shown. Tick whichever are in use for this game.
+            </p>
+          )}
 
-          <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-3 text-sm font-semibold">Objectives</label>
-            <div className="space-y-3">
-              {nonStrategicObjectives.map((obj) => {
-                const active = state.selectedSecondaries.includes(obj.id);
-                return (
-                  <label
-                    key={obj.id}
-                    className="block p-3 rounded cursor-pointer"
-                    style={{
-                      backgroundColor: 'var(--color-bg-dark)',
-                      borderLeft: active ? '3px solid var(--color-accent-amber)' : '3px solid transparent',
-                    }}
-                  >
-                    <div className="flex items-start gap-3">
-                      <input
-                        type="checkbox"
-                        checked={active}
-                        onChange={() => toggleObjective(obj.id)}
-                        className="mt-1"
-                        style={{ accentColor: 'var(--color-accent-amber)' }}
-                      />
-                      <div className="flex-1">
-                        <div className="font-semibold text-sm">{obj.name}</div>
-                        <div className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>
-                          {obj.description}
-                        </div>
-                        <div className="text-xs font-semibold mt-2" style={{ color: 'var(--color-accent-amber)' }}>
-                          {obj.vpSummary}
+          {visibleObjectives.length === 0 ? (
+            <div className="rounded border p-4" style={{ ...cardStyle, color: 'var(--color-text-secondary)' }}>
+              <p className="text-sm">No secondary objectives for this scenario.</p>
+            </div>
+          ) : (
+            <div className="rounded border p-4" style={cardStyle}>
+              <label className="block mb-3 text-sm font-semibold">Objectives</label>
+              <div className="space-y-3">
+                {visibleObjectives.map((obj) => {
+                  const active = state.selectedSecondaries.includes(obj.id);
+                  const mandatory = mandatoryIds.has(obj.id);
+                  return (
+                    <label
+                      key={obj.id}
+                      className="block p-3 rounded"
+                      style={{
+                        backgroundColor: 'var(--color-bg-dark)',
+                        borderLeft: active ? '3px solid var(--color-accent-amber)' : '3px solid transparent',
+                        cursor: mandatory ? 'default' : 'pointer',
+                      }}
+                    >
+                      <div className="flex items-start gap-3">
+                        <input
+                          type="checkbox"
+                          checked={active}
+                          disabled={mandatory}
+                          onChange={() => toggleObjective(obj.id)}
+                          className="mt-1"
+                          style={{ accentColor: 'var(--color-accent-amber)' }}
+                        />
+                        <div className="flex-1">
+                          <div className="font-semibold text-sm">
+                            {obj.name}
+                            {mandatory && (
+                              <span className="ml-2 text-xs font-normal" style={{ color: 'var(--color-accent-amber)' }}>
+                                required
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>
+                            {obj.description}
+                          </div>
+                          <div className="text-xs font-semibold mt-2" style={{ color: 'var(--color-accent-amber)' }}>
+                            {obj.vpSummary}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </label>
-                );
-              })}
+                    </label>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-
-          {/* Strategic Locations — determined by mission */}
-          <div
-            className="rounded border p-3"
-            style={{ backgroundColor: 'var(--color-bg-dark)', borderColor: 'var(--color-border)' }}
-          >
-            <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-              <strong style={{ color: 'var(--color-text-primary)' }}>Strategic Locations</strong>
-              {' '}— the number of objective markers is determined by your mission. Mission selection is coming soon.
-            </p>
-          </div>
+          )}
 
           <div
             className="rounded border p-4"
@@ -1004,9 +1307,9 @@ export default function Setup({ onCancel }: Props) {
   }
 
   // ---------------------------------------------------------------------------
-  // Step 4: Deployment & Setup
+  // Step 5: Deployment & Setup
   // ---------------------------------------------------------------------------
-  if (state.step === 4) {
+  if (state.step === 5) {
     const zoneAPlayer = state.p1IsAttacker ? state.p1Name : state.p2Name;
     const zoneBPlayer = state.p1IsAttacker ? state.p2Name : state.p1Name;
     const hasBaggageTrains = state.selectedSecondaries.includes('baggage_trains');
@@ -1014,7 +1317,7 @@ export default function Setup({ onCancel }: Props) {
     return (
       <div className="max-w-2xl mx-auto p-6">
         <h2 className="text-2xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-          Step 4: Deployment & Setup
+          Step 5: Deployment & Setup
         </h2>
 
         <div className="space-y-6">
