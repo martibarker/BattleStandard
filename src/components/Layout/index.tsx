@@ -15,16 +15,14 @@ interface NavItem {
 
 const companionItems: NavItem[] = [
   { to: '/turn-tracker', label: "General's Adjutant", icon: '⏱' },
-  { to: '/rules', label: 'Rules', icon: '📖' },
-  { to: '/documents', label: 'Documents', icon: '📄' },
+  // { to: '/documents', label: 'Documents', icon: '📄' },  // hidden until FAQs are ready
 ];
 
 const mobileTabItems: NavItem[] = [
   { to: '/', label: 'Home', icon: '⚔', end: true },
   { to: '/army-builder', label: 'My Lists', icon: '🛡', end: true },
   { to: '/turn-tracker', label: 'Adjutant', icon: '⏱' },
-  { to: '/rules', label: 'Rules', icon: '📖' },
-  { to: '/documents', label: 'Docs', icon: '📄' },
+  // { to: '/documents', label: 'Docs', icon: '📄' },  // hidden until FAQs are ready
 ];
 
 
@@ -365,8 +363,7 @@ export default function Layout() {
             {[
               { to: '/army-builder', label: 'My Lists', end: true },
               { to: '/turn-tracker', label: "General's Adjutant" },
-              { to: '/rules', label: 'Rules' },
-              { to: '/documents', label: 'Documents' },
+              // { to: '/documents', label: 'Documents' },  // hidden until FAQs are ready
             ].map((item, idx, arr) => (
               <span key={item.to} style={{ display: 'flex', alignItems: 'center' }}>
                 <NavLink
