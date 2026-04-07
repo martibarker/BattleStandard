@@ -189,7 +189,7 @@ function generatePrompts(
   phase: GamePhase,
   _side: PlayerSide,
   currentTurn: number,
-  gameLengthRule: 'standard' | 'random',
+  gameLengthRule: 'standard' | 'random' | 'break_point',
   turnLimit: number,
   player: PlayerGameState,
   faction: Faction | null,

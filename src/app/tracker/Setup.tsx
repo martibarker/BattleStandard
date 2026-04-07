@@ -48,9 +48,14 @@ interface SetupState {
   p2BoundSpells: string[];
   p1IsAttacker: boolean;
   p2GoesFirst: boolean;
-  gameLengthRule: 'standard' | 'random';
+  gameLengthRule: 'standard' | 'random' | 'break_point';
   selectedSecondaries: string[];
+  // Deployment roll-off and zones
+  /** Who won the deployment zone roll-off (they choose Zone A or B and deploy first unit first) */
+  deploymentRollOffWinner: 'p1' | 'p2' | null;
   // Pre-game checklist
+  p1BaggageTrainPlaced: boolean;
+  p2BaggageTrainPlaced: boolean;
   p1ScoutsDone: boolean;
   p2ScoutsDone: boolean;
   p1VanguardDone: boolean;
@@ -199,6 +204,9 @@ export default function Setup({ onCancel }: Props) {
     p2GoesFirst: false,
     gameLengthRule: 'standard',
     selectedSecondaries: [],
+    deploymentRollOffWinner: null,
+    p1BaggageTrainPlaced: false,
+    p2BaggageTrainPlaced: false,
     p1ScoutsDone: false,
     p2ScoutsDone: false,
     p1VanguardDone: false,
@@ -891,41 +899,237 @@ export default function Setup({ onCancel }: Props) {
   }
 
   // ---------------------------------------------------------------------------
-  // Step 3: Initiative & Setup
+  // Step 3: Secondary Objectives
   // ---------------------------------------------------------------------------
   if (state.step === 3) {
-    const attacker = state.p1IsAttacker ? state.p1Name : state.p2Name;
-    const defender = state.p1IsAttacker ? state.p2Name : state.p1Name;
+    const nonStrategicObjectives = SECONDARY_OBJECTIVES.filter(
+      (o) => !['strategic_locations_2', 'strategic_locations_3', 'strategic_locations_4'].includes(o.id)
+    );
+
+    const toggleObjective = (id: string) => {
+      setState((s) => ({
+        ...s,
+        selectedSecondaries: s.selectedSecondaries.includes(id)
+          ? s.selectedSecondaries.filter((x) => x !== id)
+          : [...s.selectedSecondaries, id],
+      }));
+    };
 
     return (
       <div className="max-w-2xl mx-auto p-6">
         <h2 className="text-2xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-          Step 3: Initiative & Setup
+          Step 3: Secondary Objectives
+        </h2>
+
+        <div className="space-y-6">
+          <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+            Secondary objectives are chosen by the organiser and may be applied to any scenario.
+            Tick whichever objectives are in use for this game.
+          </p>
+
+          <div className="rounded border p-4" style={cardStyle}>
+            <label className="block mb-3 text-sm font-semibold">Objectives</label>
+            <div className="space-y-3">
+              {nonStrategicObjectives.map((obj) => {
+                const active = state.selectedSecondaries.includes(obj.id);
+                return (
+                  <label
+                    key={obj.id}
+                    className="block p-3 rounded cursor-pointer"
+                    style={{
+                      backgroundColor: 'var(--color-bg-dark)',
+                      borderLeft: active ? '3px solid var(--color-accent-amber)' : '3px solid transparent',
+                    }}
+                  >
+                    <div className="flex items-start gap-3">
+                      <input
+                        type="checkbox"
+                        checked={active}
+                        onChange={() => toggleObjective(obj.id)}
+                        className="mt-1"
+                        style={{ accentColor: 'var(--color-accent-amber)' }}
+                      />
+                      <div className="flex-1">
+                        <div className="font-semibold text-sm">{obj.name}</div>
+                        <div className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>
+                          {obj.description}
+                        </div>
+                        <div className="text-xs font-semibold mt-2" style={{ color: 'var(--color-accent-amber)' }}>
+                          {obj.vpSummary}
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Strategic Locations — determined by mission */}
+          <div
+            className="rounded border p-3"
+            style={{ backgroundColor: 'var(--color-bg-dark)', borderColor: 'var(--color-border)' }}
+          >
+            <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+              <strong style={{ color: 'var(--color-text-primary)' }}>Strategic Locations</strong>
+              {' '}— the number of objective markers is determined by your mission. Mission selection is coming soon.
+            </p>
+          </div>
+
+          <div
+            className="rounded border p-4"
+            style={{ backgroundColor: 'var(--color-bg-dark)', borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}
+          >
+            <p className="text-sm">
+              <strong style={{ color: 'var(--color-text-primary)' }}>Active objectives:</strong>{' '}
+              {state.selectedSecondaries.length === 0
+                ? 'None (standard VP only)'
+                : state.selectedSecondaries
+                    .map((id) => SECONDARY_OBJECTIVES.find((o) => o.id === id)?.name ?? id)
+                    .join(', ')}
+            </p>
+          </div>
+
+          <div className="flex gap-3 mt-6 justify-between">
+            <button onClick={handlePrev} className="px-4 py-2 rounded text-sm font-semibold" style={btnSecondary}>
+              Back
+            </button>
+            <button onClick={handleNext} className="px-4 py-2 rounded text-sm font-semibold" style={btnPrimary}>
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // Step 4: Deployment & Setup
+  // ---------------------------------------------------------------------------
+  if (state.step === 4) {
+    const zoneAPlayer = state.p1IsAttacker ? state.p1Name : state.p2Name;
+    const zoneBPlayer = state.p1IsAttacker ? state.p2Name : state.p1Name;
+    const hasBaggageTrains = state.selectedSecondaries.includes('baggage_trains');
+
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        <h2 className="text-2xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+          Step 4: Deployment & Setup
         </h2>
 
         <div className="space-y-6">
 
-          {/* Attacker / Defender — two dropdowns that mirror each other */}
+          {/* Game Length */}
           <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-3 text-sm font-semibold">Attacker / Defender</label>
+            <label className="block mb-3 text-sm font-semibold">Game Length</label>
+            <div className="space-y-3">
+              <label className="flex items-start gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="game-length"
+                  checked={state.gameLengthRule === 'standard'}
+                  onChange={() => setState((s) => ({ ...s, gameLengthRule: 'standard' }))}
+                  className="mt-0.5"
+                />
+                <span className="text-sm">
+                  <strong>Standard (6 turns)</strong>
+                  <span style={{ color: 'var(--color-text-secondary)', marginLeft: '4px' }}>
+                    — The game lasts for exactly six battle rounds.
+                  </span>
+                </span>
+              </label>
+              <label className="flex items-start gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="game-length"
+                  checked={state.gameLengthRule === 'random'}
+                  onChange={() => setState((s) => ({ ...s, gameLengthRule: 'random' }))}
+                  className="mt-0.5"
+                />
+                <span className="text-sm">
+                  <strong>Random Game Length</strong>
+                  <span style={{ color: 'var(--color-text-secondary)', marginLeft: '4px' }}>
+                    — Starting at the end of round 5, roll D6 and add the round number. On 10+, the battle ends immediately.
+                  </span>
+                </span>
+              </label>
+              <label className="flex items-start gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="game-length"
+                  checked={state.gameLengthRule === 'break_point'}
+                  onChange={() => setState((s) => ({ ...s, gameLengthRule: 'break_point' }))}
+                  className="mt-0.5"
+                />
+                <div className="flex-1">
+                  <span className="text-sm">
+                    <strong>Break Point</strong>
+                    <span style={{ color: 'var(--color-text-secondary)', marginLeft: '4px' }}>
+                      — Battle ends when one or both armies reach their break point.
+                    </span>
+                  </span>
+                  <details className="mt-1">
+                    <summary className="text-xs cursor-pointer" style={{ color: 'var(--color-accent-amber)' }}>
+                      How break point works ▾
+                    </summary>
+                    <div className="text-xs mt-2 space-y-2" style={{ color: 'var(--color-text-secondary)' }}>
+                      <p>An army's break point equals 25% of its total Unit Strength at the start of the game (add Unit Strength of every unit including characters, divide by 4, round down).</p>
+                      <p>At the beginning of any Start of Turn sub-phase, if either army's remaining Unit Strength has fallen below its break point, that army is Broken and the game ends.</p>
+                      <p>If both armies fall below their break point simultaneously, the game ends and VPs are totalled as normal — however the best either player can achieve is a Marginal Victory, and the worst is a Marginal Loss.</p>
+                    </div>
+                  </details>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          {/* Deployment Zone Roll-off */}
+          <div className="rounded border p-4" style={cardStyle}>
+            <label className="block mb-1 text-sm font-semibold">Deployment Zone Roll-off</label>
+            <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+              Both players roll off. The winner chooses their deployment zone (A or B) and deploys their first unit first.
+            </p>
+            {/* Who won the roll-off */}
+            <p className="text-xs mb-2 font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Who won the roll-off?</p>
+            <div className="flex gap-6 mb-4">
+              {(['p1', 'p2'] as const).map((side) => {
+                const name = side === 'p1' ? state.p1Name : state.p2Name;
+                return (
+                  <label key={side} className="flex items-center gap-2 text-sm cursor-pointer">
+                    <input
+                      type="radio"
+                      name="deployment-roll-off"
+                      checked={state.deploymentRollOffWinner === side}
+                      onChange={() => setState((s) => ({ ...s, deploymentRollOffWinner: side }))}
+                      style={{ accentColor: 'var(--color-accent-amber)' }}
+                    />
+                    <span style={{ color: state.deploymentRollOffWinner === side ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                      {name}
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
+            {/* Zone assignment — mirrored dropdowns */}
+            <p className="text-xs mb-2 font-semibold" style={{ color: 'var(--color-text-secondary)' }}>Deployment zones</p>
             <div className="flex flex-col gap-3">
               {(['p1', 'p2'] as const).map((side) => {
                 const name = side === 'p1' ? state.p1Name : state.p2Name;
-                const isAttacker = side === 'p1' ? state.p1IsAttacker : !state.p1IsAttacker;
+                const isZoneA = side === 'p1' ? state.p1IsAttacker : !state.p1IsAttacker;
                 return (
                   <div key={side} className="flex items-center gap-3">
-                    <span className="text-sm w-24 shrink-0" style={{ color: 'var(--color-text-secondary)' }}>{name}</span>
+                    <span className="text-sm shrink-0" style={{ width: '7rem', color: 'var(--color-text-secondary)' }}>{name}</span>
                     <select
-                      value={isAttacker ? 'attacker' : 'defender'}
+                      value={isZoneA ? 'A' : 'B'}
                       onChange={(e) => {
-                        const setAsAttacker = e.target.value === 'attacker';
-                        setState((s) => ({ ...s, p1IsAttacker: side === 'p1' ? setAsAttacker : !setAsAttacker }));
+                        const chooseA = e.target.value === 'A';
+                        setState((s) => ({ ...s, p1IsAttacker: side === 'p1' ? chooseA : !chooseA }));
                       }}
                       className="flex-1 px-3 py-2 rounded text-sm"
                       style={inputStyle}
                     >
-                      <option value="attacker">Attacker</option>
-                      <option value="defender">Defender</option>
+                      <option value="A">Zone A</option>
+                      <option value="B">Zone B</option>
                     </select>
                   </div>
                 );
@@ -933,40 +1137,35 @@ export default function Setup({ onCancel }: Props) {
             </div>
           </div>
 
-          {/* Game Length */}
-          <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-3 text-sm font-semibold">Game Length</label>
-            <div className="space-y-2">
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="game-length"
-                  checked={state.gameLengthRule === 'standard'}
-                  onChange={() => setState((s) => ({ ...s, gameLengthRule: 'standard' }))}
-                />
-                <span className="text-sm">
-                  Standard (6 turns)
-                  <span style={{ color: 'var(--color-text-secondary)', fontSize: '0.85em', marginLeft: '4px' }}>
-                    — Fixed game length
-                  </span>
-                </span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="game-length"
-                  checked={state.gameLengthRule === 'random'}
-                  onChange={() => setState((s) => ({ ...s, gameLengthRule: 'random' }))}
-                />
-                <span className="text-sm">
-                  Random Game Length
-                  <span style={{ color: 'var(--color-text-secondary)', fontSize: '0.85em', marginLeft: '4px' }}>
-                    — From end of round 5, roll D6 + round number; 10+ ends the battle
-                  </span>
-                </span>
-              </label>
+          {/* Baggage Train placement — only shown if objective is active */}
+          {hasBaggageTrains && (
+            <div className="rounded border p-4" style={cardStyle}>
+              <label className="block mb-1 text-sm font-semibold">Baggage Train Placement</label>
+              <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+                Place before deployment begins. Each baggage train must be wholly within the player's deployment zone, at least 3″ from any battlefield edge, not on terrain and not straddling a low linear obstacle. Once placed it cannot be moved.
+              </p>
+              <div className="flex gap-6">
+                {(['p1', 'p2'] as const).map((side) => {
+                  const name = side === 'p1' ? state.p1Name : state.p2Name;
+                  const checked = side === 'p1' ? state.p1BaggageTrainPlaced : state.p2BaggageTrainPlaced;
+                  const key = side === 'p1' ? 'p1BaggageTrainPlaced' : 'p2BaggageTrainPlaced';
+                  return (
+                    <label key={side} className="flex items-center gap-2 text-sm cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={(e) => setState((s) => ({ ...s, [key]: e.target.checked }))}
+                        style={{ accentColor: 'var(--color-accent-amber)' }}
+                      />
+                      <span style={{ color: checked ? 'var(--color-text-primary)' : 'var(--color-text-secondary)' }}>
+                        {name} placed
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Pre-game Checklist */}
           <div className="rounded border p-4" style={cardStyle}>
@@ -1095,173 +1294,9 @@ export default function Setup({ onCancel }: Props) {
               {state.p2GoesFirst ? state.p2Name : state.p1Name} moves first
             </p>
             <p className="text-sm mt-1">
-              <strong style={{ color: 'var(--color-text-primary)' }}>Roles:</strong>{' '}
-              {attacker} (Attacker), {defender} (Defender)
+              <strong style={{ color: 'var(--color-text-primary)' }}>Zones:</strong>{' '}
+              {zoneAPlayer} (Zone A), {zoneBPlayer} (Zone B)
             </p>
-          </div>
-
-          <div className="flex gap-3 mt-6 justify-between">
-            <button onClick={handlePrev} className="px-4 py-2 rounded text-sm font-semibold" style={btnSecondary}>
-              Back
-            </button>
-            <button onClick={handleNext} className="px-4 py-2 rounded text-sm font-semibold" style={btnPrimary}>
-              Next
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // Step 4: Secondary Objectives
-  // ---------------------------------------------------------------------------
-  if (state.step === 4) {
-    // Strategic Locations are mutually exclusive (only one marker count at a time).
-    // All other objectives can be combined freely.
-    const strategicIds = ['strategic_locations_2', 'strategic_locations_3', 'strategic_locations_4'];
-    const isStrategicSelected = (id: string) => strategicIds.includes(id) && state.selectedSecondaries.includes(id);
-    const anyStrategicSelected = strategicIds.some((id) => state.selectedSecondaries.includes(id));
-
-    const toggleObjective = (id: string) => {
-      setState((s) => {
-        if (strategicIds.includes(id)) {
-          // Radio-style for Strategic Locations: deselect others, toggle this one
-          const alreadySelected = s.selectedSecondaries.includes(id);
-          const withoutStrategic = s.selectedSecondaries.filter((x) => !strategicIds.includes(x));
-          return {
-            ...s,
-            selectedSecondaries: alreadySelected ? withoutStrategic : [...withoutStrategic, id],
-          };
-        }
-        // Checkbox for all others
-        return {
-          ...s,
-          selectedSecondaries: s.selectedSecondaries.includes(id)
-            ? s.selectedSecondaries.filter((x) => x !== id)
-            : [...s.selectedSecondaries, id],
-        };
-      });
-    };
-
-    const nonStrategicObjectives = SECONDARY_OBJECTIVES.filter((o) => !strategicIds.includes(o.id));
-    const strategicObjectives = SECONDARY_OBJECTIVES.filter((o) => strategicIds.includes(o.id));
-
-    return (
-      <div className="max-w-2xl mx-auto p-6">
-        <h2 className="text-2xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-          Step 4: Secondary Objectives
-        </h2>
-
-        <div className="space-y-6">
-          <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-            Secondary objectives are chosen by the organiser and may be applied to any scenario.
-            Tick whichever objectives are in use for this game.
-          </p>
-
-          {/* Baggage Trains, Special Feature, Domination — checkboxes */}
-          <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-3 text-sm font-semibold">Objectives</label>
-            <div className="space-y-3">
-              {nonStrategicObjectives.map((obj) => {
-                const active = state.selectedSecondaries.includes(obj.id);
-                return (
-                  <label
-                    key={obj.id}
-                    className="block p-3 rounded cursor-pointer"
-                    style={{
-                      backgroundColor: 'var(--color-bg-dark)',
-                      borderLeft: active ? '3px solid var(--color-accent-amber)' : '3px solid transparent',
-                    }}
-                  >
-                    <div className="flex items-start gap-3">
-                      <input
-                        type="checkbox"
-                        checked={active}
-                        onChange={() => toggleObjective(obj.id)}
-                        className="mt-1"
-                        style={{ accentColor: 'var(--color-accent-amber)' }}
-                      />
-                      <div className="flex-1">
-                        <div className="font-semibold text-sm">{obj.name}</div>
-                        <div className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>
-                          {obj.description}
-                        </div>
-                        <div className="text-xs font-semibold mt-2" style={{ color: 'var(--color-accent-amber)' }}>
-                          {obj.vpSummary}
-                        </div>
-                      </div>
-                    </div>
-                  </label>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Strategic Locations — radio (mutually exclusive marker count) */}
-          <div className="rounded border p-4" style={cardStyle}>
-            <label className="block mb-1 text-sm font-semibold">Strategic Locations</label>
-            <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
-              Choose one marker count, or none.
-            </p>
-            <div className="space-y-3">
-              {strategicObjectives.map((obj) => {
-                const active = isStrategicSelected(obj.id);
-                return (
-                  <label
-                    key={obj.id}
-                    className="block p-3 rounded cursor-pointer"
-                    style={{
-                      backgroundColor: 'var(--color-bg-dark)',
-                      borderLeft: active ? '3px solid var(--color-accent-amber)' : '3px solid transparent',
-                    }}
-                  >
-                    <div className="flex items-start gap-3">
-                      <input
-                        type="radio"
-                        name="strategic-locations"
-                        checked={active}
-                        onChange={() => toggleObjective(obj.id)}
-                        onClick={() => {
-                          // Allow deselecting by clicking the already-selected radio
-                          if (active) toggleObjective(obj.id);
-                        }}
-                        className="mt-1"
-                        style={{ accentColor: 'var(--color-accent-amber)' }}
-                      />
-                      <div className="flex-1">
-                        <div className="font-semibold text-sm">{obj.name}</div>
-                        <div className="text-xs mt-1" style={{ color: 'var(--color-text-secondary)' }}>
-                          {obj.description}
-                        </div>
-                        <div className="text-xs font-semibold mt-2" style={{ color: 'var(--color-accent-amber)' }}>
-                          {obj.vpSummary}
-                        </div>
-                      </div>
-                    </div>
-                  </label>
-                );
-              })}
-            </div>
-          </div>
-
-          <div
-            className="rounded border p-4"
-            style={{ backgroundColor: 'var(--color-bg-dark)', borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}
-          >
-            <p className="text-sm">
-              <strong style={{ color: 'var(--color-text-primary)' }}>Active objectives:</strong>{' '}
-              {state.selectedSecondaries.length === 0
-                ? 'None (standard VP only)'
-                : state.selectedSecondaries
-                    .map((id) => SECONDARY_OBJECTIVES.find((o) => o.id === id)?.name ?? id)
-                    .join(', ')}
-            </p>
-            {anyStrategicSelected && (
-              <p className="text-xs mt-2">
-                Strategic Locations VP is scored at the end of each player's turn throughout the game.
-              </p>
-            )}
           </div>
 
           <div className="flex gap-3 mt-6 justify-between">

@@ -11,7 +11,7 @@ export interface SavedGame {
   currentSide: PlayerSide;
   players: { p1: PlayerGameState; p2: PlayerGameState };
   log: GameEvent[];
-  gameLengthRule: 'standard' | 'random';
+  gameLengthRule: 'standard' | 'random' | 'break_point';
   turnLimit: number;
   activeSecondaries: string[];
   secondaryScores: { p1: number; p2: number };
@@ -99,7 +99,7 @@ export interface GameState {
   log: GameEvent[];
   isGameActive: boolean;
   /** 'standard' = 6 turns, 'random' = 5-7 turns determined by d6 roll at turn 5 */
-  gameLengthRule: 'standard' | 'random';
+  gameLengthRule: 'standard' | 'random' | 'break_point';
   /** Maximum number of turns for this game (6 by default, or determined by random roll) */
   turnLimit: number;
   /** Secondary objectives for this game (e.g. ['open_war_first_blood', 'open_war_breakthrough']) */
@@ -112,7 +112,7 @@ export interface GameState {
   /** Merge imported saved games — skips any whose gameId already exists */
   importSavedGames: (incoming: SavedGame[]) => number;
   // Actions
-  startGame: (p1: Partial<PlayerGameState>, p2: Partial<PlayerGameState>, gameLengthRule?: 'standard' | 'random', activeSecondaries?: string[], gameName?: string) => void;
+  startGame: (p1: Partial<PlayerGameState>, p2: Partial<PlayerGameState>, gameLengthRule?: 'standard' | 'random' | 'break_point', activeSecondaries?: string[], gameName?: string) => void;
   resetGame: () => void;
   /** Save current game state to the saved games list and return to hub */
   exitGame: () => void;
@@ -183,7 +183,7 @@ export const useGameStore = create<GameState>()(
       secondaryScores: { p1: 0, p2: 0 },
       savedGames: [],
 
-      startGame: (p1Setup: Partial<PlayerGameState>, p2Setup: Partial<PlayerGameState>, gameLengthRule: 'standard' | 'random' = 'standard', activeSecondaries: string[] = [], gameName = ''): void => {
+      startGame: (p1Setup: Partial<PlayerGameState>, p2Setup: Partial<PlayerGameState>, gameLengthRule: 'standard' | 'random' | 'break_point' = 'standard', activeSecondaries: string[] = [], gameName = ''): void => {
         const p1State = { ...initialPlayerState('p1'), ...p1Setup };
         const p2State = { ...initialPlayerState('p2'), ...p2Setup };
         const resolvedName = gameName.trim() || `${p1State.name} vs ${p2State.name}`;

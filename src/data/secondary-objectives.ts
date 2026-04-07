@@ -41,7 +41,7 @@ export const SECONDARY_OBJECTIVES: SecondaryObjective[] = [
     id: 'special_feature',
     name: 'Special Feature',
     description:
-      'A single terrain piece (max 6″ wide) placed in the centre of the battlefield. ' +
+      'Place a single terrain piece (max 6″ wide) in the centre of the battlefield before deployment begins (Matched Play Guide, p.16). ' +
       'Controlled each Start of Turn by the closest Core unit (US 10+, not fleeing, not Stupid) within 6″. ' +
       'The controlling player rolls D6 for an Unusual Property that lasts until end of turn: ' +
       '1–2 Magic Resistance (−3); 3–4 Hatred (all enemies); 5–6 Unbreakable.',
