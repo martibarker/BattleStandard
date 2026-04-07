@@ -638,9 +638,9 @@
         "WS": "3",
         "BS": "3",
         "S": "3",
-        "T": "2",
+        "T": "3",
         "W": "2",
-        "I": "1",
+        "I": "2",
         "A": "1",
         "Ld": "7"
       },
@@ -2617,7 +2617,7 @@
         "Screaming Skulls: Any unit that suffers one or more unsaved wounds from this weapon must make a Panic test as if it had taken heavy casualties.",
         "Skulls of the Foe: Until your next Start of Turn sub-phase, any enemy unit that was within 2D6\" of the central hole of the blast template after scattering suffers a -1 modifier to its Leadership characteristic (to a minimum of 2).",
         "Uses the stone thrower rules: 3\" blast template and Stone Thrower Misfire table. Multiple Wounds (D3+1) applies only to a single model whose base lies underneath the central hole.",
-        "Skeleton Crew: M4, WS2, BS2, S3, T3, W2, I3, A1, Ld5."
+        "Skeleton Crew: M4, WS2, BS2, S3, T3, W3, I2, A3, Ld5."
       ]
     },
     {
@@ -2782,6 +2782,7 @@
       "notes": [
         "Nehekharan Royal Host Army of Infamy only.",
         "A Skeleton Infantry Cohort must contain at least ten Royal Host Warriors and ten Royal Host Archers. Royal Host Warriors always occupy the front ranks of the unit.",
+        "Royal Host Archer stats: M4, WS2, BS3, S3, T3, W1, I2, A1, Ld5.",
         "Master of Arms stats: M4, WS2, BS2, S3, T3, W1, I3, A2, Ld5."
       ]
     },
@@ -2946,7 +2947,7 @@
       "notes": [
         "Nehekharan Royal Host Army of Infamy only.",
         "A Skeleton Cavalry Cohort must contain at least five Royal Host Horsemen and five Royal Host Horse Archers. Royal Host Horsemen always occupy the front ranks of the unit.",
-        "Royal Host Horse Archer: M-, WS2, BS2, S3, T3, W1, I2, A1, Ld5. Master of Horse: M-, WS2, BS2, S3, T3, W1, I3, A2, Ld5.",
+        "Royal Host Horse Archer: M-, WS2, BS3, S3, T3, W1, I2, A1, Ld5. Master of Horse: M-, WS2, BS2, S3, T3, W1, I3, A2, Ld5.",
         "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
       ]
     },
