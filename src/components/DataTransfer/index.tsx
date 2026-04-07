@@ -324,11 +324,26 @@ function ShareSection() {
 
 // ── Main component ────────────────────────────────────────────────────────────
 
+const card: React.CSSProperties = {
+  border: '1px solid var(--f-border)',
+  borderRadius: '4px',
+  padding: '20px',
+  backgroundColor: 'var(--f-elevated)',
+};
+
 export default function DataTransfer({ compact = false }: DataTransferProps) {
+  if (compact) {
+    return <TransferSection compact />;
+  }
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: compact ? '0' : '28px' }}>
-      <TransferSection compact={compact} />
-      {!compact && <ShareSection />}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div style={card}>
+        <ShareSection />
+      </div>
+      <div style={card}>
+        <TransferSection compact={false} />
+      </div>
     </div>
   );
 }
