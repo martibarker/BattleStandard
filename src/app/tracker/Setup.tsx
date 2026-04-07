@@ -184,101 +184,129 @@ function buildManualEntries(caster: ManualCaster): SpellEntry[] {
 // Deployment Zone Diagrams
 // ---------------------------------------------------------------------------
 
-const ZONE_A_COLOR = 'rgba(96,165,250,0.25)';
-const ZONE_B_COLOR = 'rgba(217,119,6,0.22)';
-const ZONE_STROKE = 'rgba(255,255,255,0.25)';
-const FIELD_FILL = 'rgba(0,0,0,0.12)';
-const LABEL_COLOR = '#e2d5b0';
+const ZONE_A_COLOR = 'rgba(96,165,250,0.55)';
+const ZONE_B_COLOR = 'rgba(217,119,6,0.48)';
+const ZONE_STROKE = 'rgba(0,0,0,0.18)';
+const FIELD_FILL = 'rgba(200,205,215,0.28)';
+const CENTRE_DASH = 'rgba(60,80,140,0.55)';
 
 function DeploymentDiagram({ type }: { type: ScenarioData['diagramType'] }) {
   // ViewBox: 180×120 representing a 72″×48″ table (scale 2.5px per inch)
   const w = 180; const h = 120;
-  const label = (x: number, y: number, text: string) => (
+
+  // High-contrast label: dark fill + white halo so it reads on any background colour
+  const lbl = (x: number, y: number, text: string, sz = 8) => (
     <text x={x} y={y} textAnchor="middle" dominantBaseline="middle"
-      style={{ fontSize: '8px', fill: LABEL_COLOR, fontFamily: 'Cinzel,serif', letterSpacing: '0.04em' }}>
+      stroke="rgba(255,255,255,0.95)" strokeWidth="3" strokeLinejoin="round" paintOrder="stroke"
+      style={{ fontSize: `${sz}px`, fill: '#1a1a2e', fontFamily: 'Cinzel,serif', letterSpacing: '0.04em', fontWeight: '700' }}>
       {text}
     </text>
+  );
+
+  // Dashed horizontal centre line
+  const centreLine = (y = 60) => (
+    <line x1={4} y1={y} x2={w - 4} y2={y} stroke={CENTRE_DASH} strokeWidth={1.5} strokeDasharray="7,4" />
   );
 
   return (
     <svg viewBox={`0 0 ${w} ${h}`} style={{ width: '100%', maxWidth: '320px', display: 'block', margin: '0 auto' }}
       aria-label="Deployment zone diagram">
-      {/* Battlefield border */}
+      {/* Battlefield */}
       <rect x={0} y={0} width={w} height={h} fill={FIELD_FILL} stroke={ZONE_STROKE} strokeWidth={1.5} />
 
       {type === 'standard' && <>
         <rect x={0} y={0} width={w} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         <rect x={0} y={90} width={w} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {label(90, 15, 'ZONE A  12″')}
-        {label(90, 105, 'ZONE B  12″')}
+        {centreLine()}
+        {/* Zone names inside coloured bands */}
+        {lbl(90, 15, 'ZONE A', 8)}
+        {lbl(90, 105, 'ZONE B', 8)}
+        {/* 12″ measurements in the neutral grey space between each zone and the centre */}
+        {lbl(90, 44, '12″', 7)}
+        {lbl(90, 76, '12″', 7)}
       </>}
 
       {type === 'king_of_hill' && <>
-        {/* Zones inset 8″ = 20px from short edges */}
+        {/* Grey side strips (8″ = 20px) are left bare; coloured zones sit inside them */}
         <rect x={20} y={0} width={140} height={25} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         <rect x={20} y={95} width={140} height={25} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         {/* Hill at centre */}
-        <ellipse cx={90} cy={60} rx={22} ry={16} fill="rgba(180,140,80,0.35)" stroke="rgba(180,140,80,0.6)" strokeWidth={1} />
-        {label(90, 13, 'ZONE A  10″')}
-        {label(90, 107, 'ZONE B  10″')}
+        <ellipse cx={90} cy={60} rx={22} ry={16} fill="rgba(180,140,80,0.42)" stroke="rgba(130,90,30,0.7)" strokeWidth={1.5} />
+        {centreLine()}
+        {/* Zone names — no measurement numbers inside coloured areas */}
+        {lbl(90, 12, 'ZONE A', 8)}
+        {lbl(90, 108, 'ZONE B', 8)}
+        {/* Hill name */}
         <text x={90} y={61} textAnchor="middle" dominantBaseline="middle"
-          style={{ fontSize: '7px', fill: '#c9a84c', fontFamily: 'Cinzel,serif' }}>HILL</text>
+          stroke="rgba(255,255,255,0.9)" strokeWidth="2.5" strokeLinejoin="round" paintOrder="stroke"
+          style={{ fontSize: '7px', fill: '#6b4c10', fontFamily: 'Cinzel,serif', fontWeight: '700' }}>HILL</text>
+        {/* 10″ zone-depth measurement: in neutral grey space between each zone edge and the centre line */}
+        {lbl(90, 41, '10″', 7)}
+        {lbl(90, 79, '10″', 7)}
+        {/* 8″ gap indicators: left and right of Zone A */}
+        {lbl(10, 12, '8″', 6)}
+        {lbl(170, 12, '8″', 6)}
+        {/* 8″ gap indicators: left and right of Zone B */}
+        {lbl(10, 108, '8″', 6)}
+        {lbl(170, 108, '8″', 6)}
       </>}
 
       {type === 'diagonal' && <>
-        {/* Zone A: upper-right triangle (diagonal from top-left to bottom-right) */}
         <polygon points={`0,0 ${w},0 ${w},${h}`} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {/* Zone B: lower-left triangle */}
         <polygon points={`0,0 0,${h} ${w},${h}`} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {/* Diagonal line */}
-        <line x1={0} y1={0} x2={w} y2={h} stroke={ZONE_STROKE} strokeWidth={1.5} />
-        {label(135, 22, 'ZONE A')}
-        {label(45, 98, 'ZONE B')}
-        <text x={18} y={70} textAnchor="start" style={{ fontSize: '7px', fill: LABEL_COLOR }}>24″</text>
-        <text x={138} y={55} textAnchor="start" style={{ fontSize: '7px', fill: LABEL_COLOR }}>24″</text>
+        <line x1={0} y1={0} x2={w} y2={h} stroke="rgba(0,0,0,0.3)" strokeWidth={1.5} />
+        {lbl(130, 22, 'ZONE A', 8)}
+        {lbl(50, 98, 'ZONE B', 8)}
       </>}
 
       {type === 'close_quarters' && <>
-        {/* Zones inset 6″ = 15px from short edges */}
+        {/* Impassable cliff strips (6″ = 15px) */}
+        <rect x={0} y={0} width={15} height={h} fill="rgba(200,50,50,0.18)" stroke="rgba(180,40,40,0.4)" strokeWidth={1} strokeDasharray="3,3" />
+        <rect x={165} y={0} width={15} height={h} fill="rgba(200,50,50,0.18)" stroke="rgba(180,40,40,0.4)" strokeWidth={1} strokeDasharray="3,3" />
         <rect x={15} y={0} width={150} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
         <rect x={15} y={90} width={150} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {/* Impassable short edges hatching */}
-        <rect x={0} y={0} width={15} height={h} fill="rgba(200,50,50,0.12)" stroke="rgba(200,50,50,0.3)" strokeWidth={1} strokeDasharray="3,3" />
-        <rect x={165} y={0} width={15} height={h} fill="rgba(200,50,50,0.12)" stroke="rgba(200,50,50,0.3)" strokeWidth={1} strokeDasharray="3,3" />
-        {label(90, 15, 'ZONE A  12″')}
-        {label(90, 105, 'ZONE B  12″')}
+        {centreLine()}
+        {lbl(90, 15, 'ZONE A', 8)}
+        {lbl(90, 105, 'ZONE B', 8)}
+        {lbl(90, 44, '12″', 7)}
+        {lbl(90, 76, '12″', 7)}
+        {/* Cliff labels rotated in side strips */}
         <text x={7.5} y={62} textAnchor="middle" dominantBaseline="middle"
-          style={{ fontSize: '6px', fill: 'rgba(220,80,80,0.9)', fontFamily: 'sans-serif', writingMode: 'vertical-lr' }}>CLIFF</text>
+          stroke="rgba(255,255,255,0.9)" strokeWidth="2.5" paintOrder="stroke"
+          style={{ fontSize: '6px', fill: '#b91c1c', fontFamily: 'sans-serif', fontWeight: '700', writingMode: 'vertical-lr' }}>CLIFF</text>
         <text x={172.5} y={62} textAnchor="middle" dominantBaseline="middle"
-          style={{ fontSize: '6px', fill: 'rgba(220,80,80,0.9)', fontFamily: 'sans-serif', writingMode: 'vertical-lr' }}>CLIFF</text>
+          stroke="rgba(255,255,255,0.9)" strokeWidth="2.5" paintOrder="stroke"
+          style={{ fontSize: '6px', fill: '#b91c1c', fontFamily: 'sans-serif', fontWeight: '700', writingMode: 'vertical-lr' }}>CLIFF</text>
+        {/* 6″ gap labels */}
+        {lbl(7.5, 15, '6″', 6)}
+        {lbl(172.5, 15, '6″', 6)}
       </>}
 
       {type === 'chance_encounter' && <>
-        {/* 4 quadrants — A1 bottom-left, A2 top-right, B1 top-left, B2 bottom-right */}
-        <rect x={0} y={60} width={90} height={60} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* A1 */}
-        <rect x={90} y={0} width={90} height={60} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* A2 */}
-        <rect x={0} y={0} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* B1 */}
-        <rect x={90} y={60} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />  {/* B2 */}
-        {/* 18″ exclusion circle at centre (18/72×180 = 45 → r=22.5) */}
-        <circle cx={90} cy={60} r={22} fill={FIELD_FILL} stroke="rgba(255,255,255,0.4)" strokeWidth={1.5} />
-        {label(45, 90, 'A1')}
-        {label(135, 30, 'A2')}
-        {label(45, 30, 'B1')}
-        {label(135, 90, 'B2')}
-        <text x={90} y={61} textAnchor="middle" dominantBaseline="middle"
-          style={{ fontSize: '7px', fill: LABEL_COLOR }}>18″</text>
+        {/* A1 = bottom-left, A2 = top-right, B1 = top-left, B2 = bottom-right */}
+        <rect x={0} y={60} width={90} height={60} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        <rect x={90} y={0} width={90} height={60} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        <rect x={0} y={0} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        <rect x={90} y={60} width={90} height={60} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
+        {/* 18″ exclusion circle — field fill to blank out the zone colour underneath */}
+        <circle cx={90} cy={60} r={22} fill="rgba(200,205,215,0.7)" stroke="rgba(60,80,140,0.45)" strokeWidth={1.5} strokeDasharray="4,3" />
+        {lbl(45, 90, 'A1', 9)}
+        {lbl(135, 30, 'A2', 9)}
+        {lbl(45, 30, 'B1', 9)}
+        {lbl(135, 90, 'B2', 9)}
+        {lbl(90, 60, '18″', 7)}
       </>}
 
       {type === 'encirclement' && <>
-        {/* Zone A: top band, stops 12″=30px from right edge (width 150) */}
+        {/* Zone A: top band, 12″ short of right edge */}
         <rect x={0} y={0} width={150} height={30} fill={ZONE_A_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {/* Zone B: bottom band, starts 12″=30px from left edge */}
+        {/* Zone B: bottom band, starts 12″ from left edge */}
         <rect x={30} y={90} width={150} height={30} fill={ZONE_B_COLOR} stroke={ZONE_STROKE} strokeWidth={1} />
-        {label(75, 15, 'ZONE A')}
-        {label(105, 105, 'ZONE B')}
-        {/* 12″ dimension arrows */}
-        <text x={160} y={35} style={{ fontSize: '7px', fill: LABEL_COLOR }}>12″</text>
-        <text x={4} y={85} style={{ fontSize: '7px', fill: LABEL_COLOR }}>12″</text>
+        {lbl(75, 15, 'ZONE A', 8)}
+        {lbl(105, 105, 'ZONE B', 8)}
+        {/* 12″ offset indicators */}
+        {lbl(165, 44, '12″', 6)}
+        {lbl(15, 76, '12″', 6)}
       </>}
     </svg>
   );

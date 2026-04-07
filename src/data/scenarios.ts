@@ -38,7 +38,7 @@ export const SCENARIOS: ScenarioData[] = [
       'unyielding courage and the wit of cunning Generals.',
     setup:
       'If the tables have been set up by the organiser, move straight to deployment. ' +
-      'If the players are setting up the terrain, place and scatter terrain as described on p.16 of the Matched Play Guide.',
+      'If the players are setting up the terrain, place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses their deployment zone (A or B). Winner deploys their first unit first. ' +
       'Players deploy using the alternating units method (Matched Play Guide, p.17). ' +
@@ -63,7 +63,7 @@ export const SCENARIOS: ScenarioData[] = [
       'one that can become an all but unassailable position.',
     setup:
       'If the tables have been set up by the organiser, move straight to deployment. ' +
-      'Otherwise place and scatter terrain as described on p.16. ' +
+      'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide. ' +
       'In either case, place a single large hill (no more than 12″×18″) in the centre of the battlefield. ' +
       'Once placed, this hill does not scatter.',
     deployment:
@@ -102,7 +102,7 @@ export const SCENARIOS: ScenarioData[] = [
       'Those committed to battle must hope reinforcements arrive in a timely manner.',
     setup:
       'If the tables have been set up by the organiser, move straight to deployment. ' +
-      'Otherwise place and scatter terrain as described on p.16.',
+      'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses their diagonal deployment zone (A or B). ' +
       'Before deploying, each player rolls a D6 — if either player rolls a 1, both players must choose one unit ' +
@@ -131,7 +131,7 @@ export const SCENARIOS: ScenarioData[] = [
       'option, grim-faced warriors clash to the ringing of steel and echoing battlecries.',
     setup:
       'If the tables have been set up by the organiser, move straight to deployment. ' +
-      'Otherwise place and scatter terrain as described on p.16.',
+      'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses their deployment zone (A or B). Winner deploys their first unit first. ' +
       'Zone A: 12″ deep band along the top long edge, with 6″ gaps at each short edge. ' +
@@ -160,7 +160,7 @@ export const SCENARIOS: ScenarioData[] = [
       'deal a significant blow if they can marshal their forces in time.',
     setup:
       'If the tables have been set up by the organiser, move straight to deployment. ' +
-      'Otherwise place and scatter terrain as described on p.16.',
+      'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses from zones A1, A2, B1 or B2. ' +
       'If they choose an A zone, their opponent uses the opposite A zone. If they choose a B zone, their opponent uses the opposite B zone. ' +
@@ -180,7 +180,7 @@ export const SCENARIOS: ScenarioData[] = [
       'attempt to outflank and encircle their foes, crushing the flanks of the enemy beneath the relentless advance of their army.',
     setup:
       'If the tables have been set up by the organiser, move straight to deployment. ' +
-      'Otherwise place and scatter terrain as described on p.16.',
+      'Otherwise place and scatter terrain as described in the Warhammer: The Old World Matched Play Guide.',
     deployment:
       'Winner of a roll-off chooses their deployment zone (A or B). Winner deploys their first unit first. ' +
       'Zones are offset: Zone A is a 12″ deep band along the top long edge, stopping 12″ from the right short edge. ' +
