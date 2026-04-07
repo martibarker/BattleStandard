@@ -60,7 +60,14 @@ interface Props {
 // ---------------------------------------------------------------------------
 
 function initWizardSetups(faction: Faction, entries: ArmyEntry[] = []): WizardSetup[] {
-  return faction.units.filter(isWizard).map((unit) => {
+  // When a pre-built list is provided, only include wizards enrolled in that list.
+  // When building manually (no entries), fall back to all faction wizards.
+  const enrolledIds = new Set(entries.map((e) => e.unitId));
+  const unitPool = entries.length > 0
+    ? faction.units.filter((u) => enrolledIds.has(u.id) && isWizard(u))
+    : faction.units.filter(isWizard);
+
+  return unitPool.map((unit) => {
     const setup = initWizardSetup(unit);
     const entry = entries.find((e) => e.unitId === unit.id);
     if (entry?.selectedLoreKey) {
