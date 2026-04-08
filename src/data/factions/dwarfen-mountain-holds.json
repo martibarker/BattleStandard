@@ -79,13 +79,175 @@
         {
           "category": "mercenaries",
           "limit_type": "max_percent",
-          "limit_value": 20
+          "limit_value": 20,
+          "notes": "Imperial Dwarf Mercenaries (0-1 unit); Doomseekers (0-3 per army)"
         },
         {
           "category": "allies",
           "limit_type": "max_percent",
           "limit_value": 25,
           "notes": "Any Dwarfen Mountain Holds Army of Infamy composition list; or one of the following Grand Army composition lists: Empire of Man, Kingdom of Bretonnia (Uneasy), High Elf Realms (Suspicious)"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_army",
+          "limit_value": 4,
+          "unit_ids": [
+            "dwarf_carts"
+          ],
+          "notes": "0-4 Dwarf Carts (Rare choice)"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "goblin_hewers"
+          ],
+          "notes": "0-1 Goblin-Hewer per 1,000 points (only if army includes one or more Slayers of Legend)"
+        }
+      ]
+    },
+    {
+      "id": "royal_clan",
+      "name": "Dwarfen Mountain Holds – Royal Clan",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "1+ King or Thane; 0-1 Anvil of Doom or Runelord per 1,000 points; Runesmiths; 0-1 Goblin-Hewer per 1,000 points"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "king",
+            "thane"
+          ],
+          "notes": "1+ King or Thane required"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "anvil_of_doom",
+            "runelord"
+          ],
+          "notes": "0-1 Anvil of Doom or Runelord per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Royal Clan Warriors, Longbeards and Quarrellers"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Hammerers and Dwarf Carts (not Miner's Carts); 0-3 war machines chosen from Bolt Thrower, Grudge Thrower"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 3,
+          "unit_ids": [
+            "bolt_thrower",
+            "grudge_thrower"
+          ],
+          "notes": "0-3 war machines chosen from Bolt Thrower, Grudge Thrower"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Rangers, Ironbreakers and Irondrakes"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Imperial Dwarf Mercenaries; 0-4 Doomseekers"
+        }
+      ]
+    },
+    {
+      "id": "expeditionary_force",
+      "name": "Dwarfen Mountain Holds – Expeditionary Force",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "1+ Engineer or Engineer Sapper; 0-1 Daemon Slayer or Dragon Slayer; Thanes and Runesmiths; 0-1 Goblin-Hewer per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Dwarf Warriors, Thunderers and Dwarf Carts; 0-1 unit of Rangers per 1,000 points; 0-1 unit of Scout Gyrocopters may be taken as a Core choice per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "scout_gyrocopters"
+          ],
+          "notes": "0-1 unit of Scout Gyrocopters as Core per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Miners, Scout Gyrocopters and Gyrocopters; 0-3 war machines chosen from Bolt Thrower, Grudge Thrower and Cannon"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 3,
+          "unit_ids": [
+            "bolt_thrower",
+            "grudge_thrower",
+            "cannon"
+          ],
+          "notes": "0-3 war machines chosen from Bolt Thrower, Grudge Thrower and Cannon"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 33,
+          "notes": "Gyrobombers; 0-1 unit of Slayers; 0-2 war machines chosen from Organ Gun and Flame Cannon"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "organ_gun",
+            "flame_cannon"
+          ],
+          "notes": "0-2 war machines chosen from Organ Gun and Flame Cannon"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Imperial Dwarf Mercenaries; 0-2 Doomseekers per 1,000 points"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "doomseekers"
+          ],
+          "notes": "0-2 Doomseekers per 1,000 points"
         }
       ]
     }
@@ -228,7 +390,8 @@
         "A King may take 0-1 unit of Longbeards as a Core choice",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction",
         "Shieldbearers: character has a split profile and follows the Split Profile (Cavalry) rule; +3 Wounds; base size 50 x 50 mm when mounted on Shieldbearers"
-      ]
+      ],
+      "source_page": 12
     },
     {
       "id": "thane",
@@ -367,7 +530,8 @@
         "A single Thane in your army may be upgraded to Battle Standard Bearer for +25 points; in addition to their usual runic allowance, a Battle Standard Bearer may purchase Standard runes with no points limit",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction",
         "Shieldbearers: character has a split profile and follows the Split Profile (Cavalry) rule; +3 Wounds; base size 50 x 50 mm when mounted on Shieldbearers"
-      ]
+      ],
+      "source_page": 12
     },
     {
       "id": "shieldbearers",
@@ -384,12 +548,12 @@
           "profile": {
             "M": 3,
             "WS": 5,
-            "BS": 4,
-            "S": "-",
-            "T": "(+3)",
-            "W": 2,
-            "I": 3,
-            "A": "-",
+            "BS": "-",
+            "S": 4,
+            "T": "-",
+            "W": "(+3)",
+            "I": 2,
+            "A": 3,
             "Ld": "-"
           }
         }
@@ -399,7 +563,6 @@
       ],
       "special_rules": [
         "borne_aloft",
-        "gromril_armour",
         "gromril_weapons",
         "hatred_orcs_and_goblins",
         "resolute"
@@ -408,7 +571,8 @@
         "A character with Shieldbearers has +3 Wounds",
         "A model with Shieldbearers consists of not one, but four models — the character and three loyal retainers — occupying a single base and acting together as a single entity; follows the Split Profile (Cavalry) rule; in all other respects this model is heavy infantry",
         "Available to King and Thane"
-      ]
+      ],
+      "source_page": 13
     },
     {
       "id": "anvil_of_doom",
@@ -442,7 +606,7 @@
             "BS": 4,
             "S": 4,
             "T": 5,
-            "W": 1,
+            "W": 4,
             "I": 3,
             "A": 5,
             "Ld": 9
@@ -479,7 +643,8 @@
         "Immovable Object: once placed on the battlefield during deployment, the Anvil of Doom cannot be moved by its crew during the Remaining Moves sub-phase; it can still pivot freely and make a follow up move",
         "Strike the Runes: can cast the following Bound spells with Power Level 3 — Rune of Oath & Steel, Rune of Hearth & Home, Rune of Haste & Urgency, Rune of Wrath & Ruin",
         "Counts as a level 3 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)"
-      ]
+      ],
+      "source_page": 14
     },
     {
       "id": "runelord",
@@ -568,9 +733,10 @@
       ],
       "notes": [
         "Counts as a level 2 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)",
-        "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (1) and Flaming Attacks special rules; lost if the character leaves the unit",
+        "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (2) and Flaming Attacks special rules; lost if the character leaves the unit",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction"
-      ]
+      ],
+      "source_page": 16
     },
     {
       "id": "runesmith",
@@ -659,9 +825,10 @@
       ],
       "notes": [
         "Counts as a level 1 Wizard for the purposes of Wizardly Dispel attempts (via Rune Lore)",
-        "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (1) and Flaming Attacks special rules; lost if the character leaves the unit",
+        "Forgefire: if this character joins a unit, that unit will gain the Armour Bane (2) and Flaming Attacks special rules; lost if the character leaves the unit",
         "Oathstone: challenges cannot be refused; character and any unit joined automatically pass Panic tests but cannot choose to Flee as a charge reaction"
-      ]
+      ],
+      "source_page": 16
     },
     {
       "id": "daemon_slayer",
@@ -746,7 +913,8 @@
       ],
       "notes": [
         "Slayer of Daemons: when making a roll To Wound, a roll of 4+ is always a success regardless of the target's Toughness; each unsaved wound inflicted against an enemy model with the Warp-spawned special rule, or whose troop type is 'behemoth', has the Multiple Wounds (D3) special rule"
-      ]
+      ],
+      "source_page": 17
     },
     {
       "id": "dragon_slayer",
@@ -825,7 +993,8 @@
       ],
       "notes": [
         "Slayer of Dragons: when making a roll To Wound, a roll of 4+ is always a success regardless of the target's Toughness; each unsaved wound inflicted by this character against an enemy model whose troop type is 'behemoth' has the Multiple Wounds (D3) special rule"
-      ]
+      ],
+      "source_page": 17
     },
     {
       "id": "dwarf_engineer",
@@ -946,7 +1115,8 @@
         "Artillery Master: unless fleeing or in combat, once per turn during the Shooting phase a friendly unit of Quarrellers, Thunderers or Dwarf war machine within Command range may either re-roll any rolls To Hit of a natural 1, or re-roll a single Artillery dice",
         "Entrenchment: during deployment, may 'Entrench' a single non-character model whose troop type is 'war machine'; an Entrenched war machine is considered to be behind partial cover and behind a low linear obstacle; lost if the war machine moves",
         "Stand Back Chief: cannot be targeted by enemy shooting or enemy spells whilst within 3\" of a friendly unit whose troop type is 'war machine'"
-      ]
+      ],
+      "source_page": 12
     },
     {
       "id": "dwarf_warriors",
@@ -963,7 +1133,7 @@
           "name": "Warrior",
           "profile": {
             "M": 3,
-            "WS": 3,
+            "WS": 4,
             "BS": 3,
             "S": 3,
             "T": 4,
@@ -1054,7 +1224,8 @@
         "0-1 unit per 1,000 points may have the Veteran special rule (+1 point per model)",
         "Standard runes may be purchased up to a total of 50 points"
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 19
     },
     {
       "id": "longbeards",
@@ -1173,7 +1344,8 @@
         "Venerable: unless this unit is fleeing, friendly units within 6\" of it can re-roll any failed Panic test",
         "Standard runes may be purchased up to a total of 50 points"
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 20
     },
     {
       "id": "quarrellers",
@@ -1304,7 +1476,8 @@
             "quick_shot"
           ]
         }
-      ]
+      ],
+      "source_page": 21
     },
     {
       "id": "thunderers",
@@ -1434,7 +1607,8 @@
             "quick_shot"
           ]
         }
-      ]
+      ],
+      "source_page": 21
     },
     {
       "id": "rangers",
@@ -1447,7 +1621,7 @@
       },
       "troop_type": "Heavy infantry",
       "base_size": "25 x 25 mm",
-      "unit_size": "5+",
+      "unit_size": "5-20",
       "points": 11,
       "profiles": [
         {
@@ -1588,7 +1762,15 @@
         "0-1 unit of Rangers may be taken as a Core choice in the Grand Army composition",
         "Standard runes may be purchased up to a total of 25 points"
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 22,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Unit size corrected 5+→5-20 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "hammerers",
@@ -1713,7 +1895,8 @@
         "Royal Guard: your army may include one unit of Hammerers for every King or Thane it includes; any model in the unit that has been joined by a King or Thane can issue and accept challenges in the same manner as a character; should the King or Thane leave the unit for any reason that unit loses this ability",
         "Standard runes may be purchased up to a total of 75 points"
       ],
-      "magic_standard": 75
+      "magic_standard": 75,
+      "source_page": 23
     },
     {
       "id": "ironbreakers",
@@ -1823,13 +2006,27 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Pistol",
+          "name": "Brace of Drakefire Pistols (Shooting)",
           "range": "12\"",
-          "S": "4",
+          "S": "5",
           "AP": "-1",
           "special_rules": [
-            "armour_bane_1",
+            "armour_bane_2",
+            "dwarf_crafted",
+            "flaming_attacks",
+            "multiple_shots_2",
             "quick_shot"
+          ]
+        },
+        {
+          "name": "Brace of Drakefire Pistols (Combat)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "extra_attacks_1",
+            "flaming_attacks",
+            "requires_two_hands"
           ]
         },
         {
@@ -1848,7 +2045,8 @@
       "notes": [
         "Runes of Protection: this unit has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack"
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 24
     },
     {
       "id": "irondrakes",
@@ -1949,13 +2147,27 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Pistol",
+          "name": "Brace of Drakefire Pistols (Shooting)",
           "range": "12\"",
-          "S": "4",
+          "S": "5",
           "AP": "-1",
           "special_rules": [
-            "armour_bane_1",
+            "armour_bane_2",
+            "dwarf_crafted",
+            "flaming_attacks",
+            "multiple_shots_2",
             "quick_shot"
+          ]
+        },
+        {
+          "name": "Brace of Drakefire Pistols (Combat)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "extra_attacks_1",
+            "flaming_attacks",
+            "requires_two_hands"
           ]
         },
         {
@@ -1973,10 +2185,10 @@
         {
           "name": "Trollhammer Torpedo",
           "range": "24\"",
-          "S": "5",
+          "S": "8",
           "AP": "-3",
           "special_rules": [
-            "cumbersome",
+            "dwarf_crafted",
             "flaming_attacks",
             "multiple_wounds_d3"
           ]
@@ -1986,7 +2198,8 @@
         "Runes of Warding: this unit has a 5+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule",
         "Standard runes may be purchased up to a total of 50 points"
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 25
     },
     {
       "id": "miners",
@@ -2113,7 +2326,8 @@
           ]
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 26
     },
     {
       "id": "slayers",
@@ -2130,8 +2344,8 @@
           "name": "Troll Slayer",
           "profile": {
             "M": 3,
-            "WS": 3,
-            "BS": 4,
+            "WS": 4,
+            "BS": 3,
             "S": 3,
             "T": 4,
             "W": 1,
@@ -2218,7 +2432,8 @@
         "Slayer: when this model makes a roll To Wound, a roll of 4+ is always a success, regardless of the target's Toughness",
         "Standard runes may be purchased up to a total of 50 points"
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 27
     },
     {
       "id": "gyrocopters",
@@ -2310,7 +2525,8 @@
       ],
       "notes": [
         "Dive Bomb: once per game, a unit with this special rule may perform a 'Dive Bomb' attack against a single enemy unit that is not engaged in combat; the unit must move (by flying) over the unit during the Remaining Moves sub-phase; once movement is complete the enemy unit suffers D6 Strength 3 hits, each with AP of -1, for each model in this unit that moved over it; for each natural 1 rolled when determining number of hits, a bomb has misfired and this unit loses a single Wound"
-      ]
+      ],
+      "source_page": 28
     },
     {
       "id": "gyrobombers",
@@ -2459,7 +2675,8 @@
           "max_points": 100,
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 30
     },
     {
       "id": "grudge_thrower",
@@ -2518,7 +2735,8 @@
           "max_points": 100,
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 30
     },
     {
       "id": "cannon",
@@ -2577,7 +2795,8 @@
           "max_points": 100,
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 31
     },
     {
       "id": "organ_gun",
@@ -2597,8 +2816,8 @@
             "WS": "-",
             "BS": "-",
             "S": "-",
-            "T": "-",
-            "W": "-",
+            "T": 7,
+            "W": 3,
             "I": "-",
             "A": "-",
             "Ld": "-"
@@ -2627,7 +2846,8 @@
         "magic_resistance_1",
         "skirmishers",
         "stubborn"
-      ]
+      ],
+      "source_page": 31
     },
     {
       "id": "flame_cannon",
@@ -2677,7 +2897,926 @@
         "magic_resistance_1",
         "skirmishers",
         "stubborn"
-      ]
+      ],
+      "source_page": 31
+    },
+    {
+      "id": "thorgrim_ulleksson",
+      "name": "Thorgrim Ulleksson, Kharl of the Dammaz Kron",
+      "source": "arcane_journal",
+      "category": "character",
+      "troop_type": "Heavy infantry (named character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 250,
+      "is_named_character": true,
+      "profiles": [
+        {
+          "name": "Thorgrim Ulleksson",
+          "profile": {
+            "M": 3,
+            "WS": 6,
+            "BS": 4,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 3,
+            "A": 3,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon, Grudge-settler, the Grudgestone, the Armour of Skaldour and shield"
+      ],
+      "special_rules": [
+        "gromril_armour",
+        "grudgelore",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "rallying_cry",
+        "resolute",
+        "stubborn"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Grudge-settler",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "magical_attacks"
+          ],
+          "notes": "Inscribed with Master Rune of Smiting and Rune of Parrying"
+        }
+      ],
+      "notes": [
+        "Grudgelore: once Thorgrim sets the Grudgestone, he and any unit he joins replaces Hatred (Orcs & Goblins) with Hatred (all enemies)",
+        "Grudgestone: during any Start of Turn sub-phase, Thorgrim may set the Grudgestone; once set, he and any unit he joined gains Unbreakable and automatically passes Panic tests, but cannot Flee as a charge reaction and cannot move other than to Give Ground, follow up or reform",
+        "Armour of Skaldour: counts as heavy armour; wearer has a 4+ Ward save against Killing Blow or against any wounds caused by an attack with Multiple Wounds (X)"
+      ],
+      "source_page": 37
+    },
+    {
+      "id": "ungrim_ironfist",
+      "name": "Ungrim Ironfist, Slayer King of Karak Kadrin",
+      "source": "arcane_journal",
+      "category": "character",
+      "troop_type": "Heavy infantry (named character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 315,
+      "is_named_character": true,
+      "profiles": [
+        {
+          "name": "Ungrim Ironfist",
+          "profile": {
+            "M": 3,
+            "WS": 9,
+            "BS": 4,
+            "S": 4,
+            "T": 6,
+            "W": 3,
+            "I": 5,
+            "A": 4,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon, the Axe of Dargo, the Slayer Crown and light armour"
+      ],
+      "special_rules": [
+        "deathblow",
+        "gromril_armour",
+        "hatred_orcs_and_goblins",
+        "immune_to_psychology",
+        "king_of_the_slayer_hold",
+        "magic_resistance_2",
+        "rallying_cry",
+        "resolute",
+        "slayer",
+        "unbreakable"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "The Axe of Dargo",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-3",
+          "special_rules": [
+            "magical_attacks",
+            "monster_slayer"
+          ]
+        }
+      ],
+      "notes": [
+        "King of the Slayer Hold: Ungrim may join a unit of Hammerers or Slayers (even without the Loner rule); a unit of Hammerers joined by Ungrim gains Immune to Psychology and Unbreakable for as long as he remains",
+        "Slayer Crown: improves armour value by 2; wearer has a 5+ Ward save against any wounds suffered",
+        "Slayer: when this model makes a roll To Wound, a roll of 4+ is always a success regardless of Toughness",
+        "When Ungrim is General of a Royal Clan army: Daemon Slayers and Dragon Slayers may be taken as Character choices; 0-1 unit of Slayers per 1,000 pts as Core; 0-4 Doomseekers per 1,000 pts as Special"
+      ],
+      "source_page": 39
+    },
+    {
+      "id": "burlok_damminson",
+      "name": "Burlok Damminson",
+      "source": "arcane_journal",
+      "category": "character",
+      "troop_type": "Heavy infantry (named character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 85,
+      "is_named_character": true,
+      "profiles": [
+        {
+          "name": "Burlok Damminson",
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 5,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "I": 2,
+            "A": 3,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Furnace hammer, rivet gun and heavy armour"
+      ],
+      "special_rules": [
+        "dwarf_crafted",
+        "gromril_armour",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "prepared_positions",
+        "range_finding_optics",
+        "resolute",
+        "stand_back_chief",
+        "stubborn"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Furnace Hammer",
+          "range": "Combat",
+          "S": "*",
+          "AP": "-2",
+          "special_rules": [
+            "flaming_attacks"
+          ],
+          "notes": "Before Burlok makes attacks, roll an Artillery dice for Strength; on Misfire, Burlok loses 1 Wound and makes no attacks"
+        },
+        {
+          "name": "Rivet Gun",
+          "range": "10\"",
+          "S": "3",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1"
+          ],
+          "notes": "If roll To Hit is successful, causes D3 hits to the target enemy unit"
+        }
+      ],
+      "notes": [
+        "Prepared Positions: during deployment, may Entrench one non-character war machine and one unit of Quarrellers or Thunderers; Entrenched = behind partial cover and defending a low linear obstacle; lost if unit moves",
+        "Range Finding Optics: once per turn during Shooting phase, a friendly unit of Quarrellers, Thunderers or Dwarf war machine within Command range may re-roll rolls To Hit of a natural 1, or re-roll a single Artillery dice; Burlok and any joined unit do not suffer the -1 To Hit penalty for Long Range",
+        "Stand Back Chief: cannot be targeted by enemy shooting or enemy spells whilst within 3\" of a friendly unit whose troop type is 'war machine'"
+      ],
+      "source_page": 41
+    },
+    {
+      "id": "dwarf_engineer_sappers",
+      "name": "Dwarf Engineer Sappers",
+      "source": "arcane_journal",
+      "category": "character",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 70,
+      "is_named_character": false,
+      "profiles": [
+        {
+          "name": "Engineer Sapper",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 5,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon and heavy armour"
+      ],
+      "special_rules": [
+        "dig_in",
+        "dwarf_crafted",
+        "gromril_armour",
+        "hatred_orcs_and_goblins",
+        "hostile_terrain",
+        "magic_resistance_1",
+        "resolute",
+        "stubborn"
+      ],
+      "options": [
+        {
+          "description": "Pistol",
+          "cost": 6,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Brace of pistols",
+          "cost": 10,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Great weapon",
+          "cost": 4,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Handgun",
+          "cost": 8,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "May purchase Weapon, Armour and Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 50,
+          "category": "weapon"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "quick_shot"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "quick_shot"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "ponderous"
+          ]
+        }
+      ],
+      "notes": [
+        "Dig In!: during any Command sub-phase, if not engaged in combat, this character may attempt to lead their unit in digging fieldworks by making a Leadership test; if passed, this character and any unit joined becomes Entrenched (behind partial cover and defending a low linear obstacle); lost if the unit moves",
+        "Hostile Terrain: any enemy model that ends its movement within the Command range of one or more characters with this special rule (not fleeing or engaged in combat) must make a Dangerous Terrain test"
+      ],
+      "source_page": 42
+    },
+    {
+      "id": "doomseekers",
+      "name": "Doomseekers",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "mercenaries",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 50,
+      "is_named_character": false,
+      "profiles": [
+        {
+          "name": "Doomseeker",
+          "profile": {
+            "M": 3,
+            "WS": 5,
+            "BS": 0,
+            "S": 5,
+            "T": 4,
+            "W": 2,
+            "I": 3,
+            "A": "2D3",
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Whirling blades of death (counts as a hand weapon)"
+      ],
+      "special_rules": [
+        "deathblow",
+        "doomseeker",
+        "first_to_the_fray",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "immune_to_psychology",
+        "impact_hits_d3_plus_1",
+        "loner",
+        "magic_resistance_2",
+        "random_attacks",
+        "resolute",
+        "unbreakable",
+        "vanguard",
+        "whirlwind_of_death"
+      ],
+      "options": [
+        {
+          "description": "May purchase Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_model",
+          "max_points": 50,
+          "category": "weapon"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Whirling Blades of Death",
+          "range": "Combat",
+          "S": "5",
+          "AP": "—",
+          "special_rules": [
+            "magical_attacks"
+          ],
+          "notes": "Impact Hits caused by this model are resolved using the Whirling Blades profile; when making a roll To Wound, 4+ is always a success"
+        }
+      ],
+      "notes": [
+        "Doomseeker: at the end of the battle, a Doomseeker that has been slain is worth no Victory Points; if still alive, the enemy player wins bonus Victory Points equal to 100% of its points cost",
+        "First to the Fray: this model increases its maximum possible charge range by 3\" and, when it makes a Charge roll, may apply a +D3 modifier",
+        "Whirlwind of Death: Impact Hits caused by this model are resolved using the Whirling Blades of Death profile; when making a roll To Wound, a roll of 4+ is always a success regardless of the target's Toughness",
+        "Dogs of War: 0-3 Doomseekers may be taken as Mercenaries in the Dwarfen Mountain Holds Grand Army composition list"
+      ],
+      "source_page": 43
+    },
+    {
+      "id": "royal_clan_warriors",
+      "name": "Royal Clan Warriors",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 10,
+      "is_named_character": false,
+      "profiles": [
+        {
+          "name": "Royal Clan Warrior",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Royal Clan Veteran",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, shields and heavy armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "gromril_armour",
+        "gromril_weapons",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "shieldwall"
+      ],
+      "options": [
+        {
+          "description": "Replace shields with gromril great axes",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "A Royal Clan Veteran may purchase Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "weapon"
+        },
+        {
+          "description": "A Royal Clan Veteran may purchase Talismanic runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Stubborn special rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Veteran special rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Royal Clan Veteran",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Gromril Great Axe",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-3",
+          "special_rules": [
+            "requires_two_hands",
+            "strike_last"
+          ]
+        }
+      ],
+      "notes": [
+        "Standard runes may be purchased up to a total of 75 points"
+      ],
+      "magic_standard": 75,
+      "source_page": 44
+    },
+    {
+      "id": "imperial_dwarf_mercenaries",
+      "name": "Imperial Dwarf Mercenaries",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "mercenaries",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 8,
+      "is_named_character": false,
+      "profiles": [
+        {
+          "name": "Warrior",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Veteran",
+          "is_champion": true,
+          "champion_cost": 5,
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons and light armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "resolute",
+        "shieldwall"
+      ],
+      "options": [
+        {
+          "description": "Great weapons",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Thrusting spears",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Crossbows",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Handguns",
+          "cost": 3,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "Replace light armour with heavy armour",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "An Imperial Veteran may purchase Weapon runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "weapon"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "0-1 unit per 1,000 points may have the Veteran special rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Veteran",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Thrusting Spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "—",
+          "special_rules": [
+            "cavalry_bane",
+            "fight_in_extra_rank",
+            "not_on_own_turn"
+          ]
+        },
+        {
+          "name": "Crossbow",
+          "range": "30\"",
+          "S": "4",
+          "AP": "—",
+          "special_rules": [
+            "armour_bane_2",
+            "ponderous"
+          ]
+        },
+        {
+          "name": "Handgun",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "ponderous"
+          ]
+        }
+      ],
+      "notes": [
+        "Standard runes may be purchased up to a total of 50 points",
+        "Dogs of War: 0-1 unit may be taken as a Mercenary in the Dwarfen Mountain Holds Grand Army composition list"
+      ],
+      "magic_standard": 50,
+      "source_page": 45
+    },
+    {
+      "id": "scout_gyrocopters",
+      "name": "Scout Gyrocopters",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "expeditionary_force_core": "core"
+      },
+      "troop_type": "Monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1-2",
+      "points": 60,
+      "is_named_character": false,
+      "profiles": [
+        {
+          "name": "Scout Gyrocopter",
+          "profile": {
+            "M": 1,
+            "WS": 4,
+            "BS": 4,
+            "S": 4,
+            "T": 4,
+            "W": 3,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon, clattergun and lightly armoured fuselage (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "extended_formation",
+        "fire_and_flee",
+        "fly_10",
+        "hatred_orcs_and_goblins",
+        "hit_and_run",
+        "impact_hits_d3",
+        "magic_resistance_1",
+        "skirmishers",
+        "swiftstride",
+        "vanguard"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Clattergun",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "dwarf_crafted",
+            "move_and_shoot",
+            "multiple_shots_d6",
+            "quick_shot"
+          ]
+        }
+      ],
+      "notes": [
+        "Extended Formation: whilst in Skirmish formation, every model in a unit of Scout Gyrocopters must be within 3\" of another model in the same unit (rather than the usual 1\")",
+        "Hit & Run: should it win a round of combat, a unit with this special rule may choose to Fall Back in Good Order rather than making a follow up or pursuit move"
+      ],
+      "source_page": 46
+    },
+    {
+      "id": "dwarf_carts",
+      "name": "Dwarf Carts",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "rare",
+      "list_category_overrides": {
+        "royal_clan": "special",
+        "expeditionary_force": "core"
+      },
+      "troop_type": "Light chariot",
+      "base_size": "50 x 75 mm",
+      "unit_size": "1",
+      "points": 65,
+      "armour_value": "5+",
+      "is_named_character": false,
+      "profiles": [
+        {
+          "name": "Dwarf Cart",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Dwarf Crew (x1)",
+          "profile": {
+            "M": "-",
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 2,
+            "A": 1,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Draft Pony",
+          "profile": {
+            "M": 6,
+            "WS": 3,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 3,
+            "A": 1,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [
+        "Dwarf Crew: hand weapons; Draft Pony: iron-shod hooves (counts as hand weapon)"
+      ],
+      "special_rules": [
+        "hatred_orcs_and_goblins",
+        "impact_hits_d3",
+        "magic_resistance_1",
+        "open_order",
+        "resolute"
+      ],
+      "options": [
+        {
+          "description": "Must take one of the following upgrades: Bugman's Cart (Free) or Miner's Cart (Free)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "Bugman's Cart: during the Command sub-phase of their turn, any Dwarf unit not fleeing or engaged in combat and within 6\" of a friendly Bugman's Cart gains +1 Movement until end of turn (not cumulative)",
+        "Miner's Cart: any Dwarf unit within 3\" of a friendly Miner's Cart not fleeing or engaged may make a Stand & Shoot charge reaction and/or a shooting attack as if equipped with Blasting Charges; additionally, when a Miner's Cart loses its last Wound to an enemy during the Combat phase, roll D6: on a 4+ it explodes and every unit within 3\" suffers D6 Strength 3 hits with AP -1 and Flaming Attacks"
+      ],
+      "source_page": 47
+    },
+    {
+      "id": "goblin_hewers",
+      "name": "Goblin-Hewers",
+      "source": "arcane_journal",
+      "category": "war_machine",
+      "list_category": "rare",
+      "troop_type": "War machine",
+      "base_size": "50 x 50 mm (war machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 120,
+      "is_named_character": false,
+      "profiles": [
+        {
+          "name": "Goblin-Hewer",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": 6,
+            "W": 3,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Slayer Crew",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Goblin-hewer and hand weapons"
+      ],
+      "special_rules": [
+        "hatred_orcs_and_goblins",
+        "immune_to_psychology",
+        "magic_resistance_1",
+        "skirmishers",
+        "unbreakable"
+      ],
+      "options": [
+        {
+          "description": "May purchase Engineering runes up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Goblin-Hewer",
+          "range": "36\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "cumbersome",
+            "move_or_shoot",
+            "whirling_doom"
+          ],
+          "notes": "Uses Stone Thrower Misfire table. Before shooting, roll Artillery dice; shots fired = dice result + D3. If Misfire, no shots fired — use Misfire table. Shots per rank (front/rear arc) or per file (flank arc)."
+        }
+      ],
+      "notes": [
+        "Innovative Engineers: any army using the Dwarfen Mountain Holds Grand Army composition list that includes one or more Slayers of Legend may include 0-1 Goblin-Hewer per 1,000 points as a Rare choice"
+      ],
+      "source_page": 48
     }
   ],
   "runic_items": [
@@ -3048,6 +4187,151 @@
       "category": "runic_engineering",
       "source": "forces_of_fantasy",
       "description": "When calculating its combat result, a war machine inscribed with a Stalwart Rune may claim a bonus of +1 combat result point."
+    },
+    {
+      "id": "rune_of_the_dishonoured",
+      "name": "Rune of the Dishonoured",
+      "points": 50,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "restrictions": "Daemon Slayers and Dragon Slayers only.",
+      "description": "Daemon Slayers and Dragon Slayers only. Once a model with this runic tattoo is reduced to their last Wound, they gain a 3+ Ward save against any further wounds suffered. However, at the end of the battle, a model with this runic tattoo that has been slain is worth no Victory Points. If it is still alive, the enemy player wins bonus Victory Points equal to 100% of its points cost."
+    },
+    {
+      "id": "rune_of_endless_battle",
+      "name": "Rune of Endless Battle",
+      "points": 40,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "During the Combat phase of any turn in which a model with this runic tattoo charged, every attack it makes that causes an unsaved wound allows it to immediately make one additional attack. Note that any additional attacks that cause unsaved wounds, and any unsaved wounds caused by the Impact Hits (X) special rule, do not benefit from this special rule."
+    },
+    {
+      "id": "rune_of_the_reckless",
+      "name": "Rune of the Reckless",
+      "points": 35,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "A model with this runic tattoo gains the Frenzy special rule and, during the Combat phase, has a +1 modifier to their rolls To Hit. However, enemy models that target this model during the Combat phase also have a +1 modifier to their rolls To Hit."
+    },
+    {
+      "id": "rune_of_the_hateful",
+      "name": "Rune of the Hateful",
+      "points": 30,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "A model with this runic tattoo gains the Hatred (all enemies) special rule."
+    },
+    {
+      "id": "rune_of_grit",
+      "name": "Rune of Grit",
+      "points": 25,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "A model with this runic tattoo has a +1 modifier to its Toughness characteristic."
+    },
+    {
+      "id": "rune_of_the_dauntless",
+      "name": "Rune of the Dauntless",
+      "points": 15,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "A model with this runic tattoo must always issue and accept challenges (if possible). During a challenge, this model may re-roll any failed rolls To Hit."
+    },
+    {
+      "id": "rune_of_wrath_tattoo",
+      "name": "Rune of Wrath (Tattoo)",
+      "points": 15,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "A model with this runic tattoo has a +1 modifier to its Attacks characteristic."
+    },
+    {
+      "id": "warriors_rune",
+      "name": "Warrior's Rune",
+      "points": 10,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "A model with this runic tattoo has a +1 modifier to its Weapon Skill characteristic."
+    },
+    {
+      "id": "rune_of_blazing_fury",
+      "name": "Rune of Blazing Fury",
+      "points": 5,
+      "category": "runic_tattoo",
+      "source": "arcane_journal",
+      "description": "A model with this runic tattoo has the Flaming Attacks special rule."
+    },
+    {
+      "id": "master_rune_of_slaying_eng",
+      "name": "Master Rune of Slaying",
+      "points": 50,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. When making a roll To Wound against an enemy whose troop type is \"behemoth\" with a weapon inscribed with this rune, a roll of 3+ is always a success regardless of Toughness. In addition, a weapon inscribed with this rune gains the Multiple Wounds (D3) special rule."
+    },
+    {
+      "id": "master_rune_of_piercing",
+      "name": "Master Rune of Piercing",
+      "points": 40,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. A weapon inscribed with this rune has a +1 modifier to its Strength. In addition, a weapon inscribed with this rune shoots like a bolt thrower, using the \"Through & Through\" special rule (see Warhammer: the Old World rulebook p.223)."
+    },
+    {
+      "id": "master_rune_of_bursting_flame",
+      "name": "Master Rune of Bursting Flame",
+      "points": 35,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. If the roll To Hit is successful, a weapon inscribed with this rune causes 2D3 hits to the target enemy unit, rather than the usual one hit."
+    },
+    {
+      "id": "rune_of_concussive_force",
+      "name": "Rune of Concussive Force",
+      "points": 30,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. A unit hit with an attack made by a weapon inscribed with this rune gains the Stupidity special rule until your next Start of Turn sub-phase."
+    },
+    {
+      "id": "rune_of_accuracy",
+      "name": "Rune of Accuracy",
+      "points": 20,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. A weapon inscribed with this rune does not suffer any negative To Hit modifiers."
+    },
+    {
+      "id": "rune_of_rapid_fire",
+      "name": "Rune of Rapid Fire",
+      "points": 15,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. A weapon inscribed with this rune gains the Multiple Shots (2) and Quick Shot special rules."
+    },
+    {
+      "id": "rune_of_molten_steel",
+      "name": "Rune of Molten Steel",
+      "points": 10,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. A weapon inscribed with this rune gains the Flaming Attacks special rule."
+    },
+    {
+      "id": "enchanted_rune",
+      "name": "Enchanted Rune",
+      "points": 5,
+      "category": "runic_weapon",
+      "source": "arcane_journal",
+      "restrictions": "Crossbow or handgun only",
+      "description": "Crossbow or handgun only. A weapon inscribed with this rune gains the Magical Attacks special rule."
     }
   ],
   "magic_items": [

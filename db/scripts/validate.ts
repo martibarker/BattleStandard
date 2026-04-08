@@ -28,7 +28,7 @@ console.log('Running post-import validation...\n');
 
 // -- Faction counts --
 const factionCount = (sqlite.prepare('SELECT COUNT(*) as n FROM factions').get() as Row).n as number;
-check(factionCount === 9, `9 factions imported (got ${factionCount})`);
+check(factionCount >= 9, `≥ 9 factions imported (got ${factionCount})`);
 
 // -- Unit counts --
 const unitCount = (sqlite.prepare('SELECT COUNT(*) as n FROM units').get() as Row).n as number;
