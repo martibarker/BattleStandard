@@ -607,7 +607,6 @@ export const useGameStore = create<GameState>()(
 
           // Determine which combats are resolved (units separate)
           const separates = outcome === 'fall_back' || outcome === 'flee' ||
-            (outcome === 'flee' && pursuitDecision === 'pursue') ||
             pursuitDecision === 'restrain';
 
           // Clear inCombat for loser on flee/fall_back; keep for drawn/give_ground

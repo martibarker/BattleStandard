@@ -1,4 +1,4 @@
-import { useGameStore, type CombatRecord, type CombatScore, type PlayerSide, emptyCombatScore, totalCombatScore } from '../../store/gameStore';
+import { useGameStore, type CombatRecord, type CombatScore, type PlayerSide, totalCombatScore } from '../../store/gameStore';
 import { useArmyStore } from '../../store/armyStore';
 import { getFaction } from '../../data/factions';
 
@@ -46,7 +46,7 @@ function CombatCard({ combat }: { combat: CombatRecord }) {
     const faction = side === 'p1' ? p1Faction : p2Faction;
     return entryIds.map((id) => {
       const entry = army?.entries.find((e) => e.id === id);
-      return faction?.units.find((u) => u.id === entry?.unitId)?.name ?? entry?.unitName ?? id;
+      return faction?.units.find((u) => u.id === entry?.unitId)?.name ?? entry?.customName ?? id;
     }).join(', ');
   };
 

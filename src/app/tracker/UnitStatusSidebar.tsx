@@ -36,7 +36,7 @@ export default function UnitStatusSidebar({ side }: Props) {
         {player.name}
       </div>
       {entries.map((entry) => {
-        const unitName = faction?.units.find((u) => u.id === entry.unitId)?.name ?? entry.unitName ?? entry.unitId;
+        const unitName = faction?.units.find((u) => u.id === entry.unitId)?.name ?? entry.customName ?? entry.unitId;
         const us = player.unitStates.find((u) => u.entryId === entry.id);
         const destroyed = us?.destroyed ?? false;
         const fled = us?.fled ?? false;

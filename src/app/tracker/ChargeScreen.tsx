@@ -15,10 +15,6 @@ interface DeclaredCharge {
   result?: 'success' | 'failed';
 }
 
-function getUnitName(entryId: string, entries: ArmyEntry[], armyEntries: ArmyEntry[]): string {
-  const all = [...entries, ...armyEntries];
-  return all.find((e) => e.id === entryId)?.unitName ?? entryId;
-}
 
 export default function ChargeScreen() {
   const players = useGameStore((s) => s.players);
@@ -55,7 +51,7 @@ export default function ChargeScreen() {
     const faction = side === 'attacker' ? attackerFaction : defenderFaction;
     const entry = entries.find((e) => e.id === entryId);
     if (!entry) return entryId;
-    return faction?.units.find((u) => u.id === entry.unitId)?.name ?? entry.unitName ?? entryId;
+    return faction?.units.find((u) => u.id === entry.unitId)?.name ?? entry.customName ?? entryId;
   };
 
   // Local charge declaration state
