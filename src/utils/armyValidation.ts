@@ -170,7 +170,9 @@ export function getEffectiveListCategory(
   }
   // AoI compositions require an explicit override — no implicit fallback for non-character units
   if (isAoI && unit.category !== 'character') return null;
-  if (unit.category === 'character') return 'characters';
+  // Characters default to 'characters' slot but respect an explicit list_category
+  // (e.g. Doomseekers are character-typed but live in mercenaries)
+  if (unit.category === 'character') return (unit.list_category as ListCategory | null) ?? 'characters';
   return unit.list_category ?? null;
 }
 
