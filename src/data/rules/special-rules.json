@@ -150,7 +150,7 @@
       "id": "arcane_backlash",
       "name": "Arcane Backlash",
       "source": "army",
-      "description": "Lady Élisse may apply a +1 modifier to any of her Dispel rolls. In addition, should she roll any natural double when making a Dispel roll (not including a natural double 1), the spell is unbound and the casting Wizard immediately loses a single Wound."
+      "description": "Lady \u00c9lisse may apply a +1 modifier to any of her Dispel rolls. In addition, should she roll any natural double when making a Dispel roll (not including a natural double 1), the spell is unbound and the casting Wizard immediately loses a single Wound."
     },
     {
       "id": "untutored_arcanist",
@@ -370,7 +370,7 @@
     },
     {
       "id": "armour_bane_3_pump_wagon_impact_hits_only",
-      "name": "Armour Bane (3) — Impact Hits only",
+      "name": "Armour Bane (3) \u2014 Impact Hits only",
       "source": "ravening_hordes",
       "description": "This model's Impact Hits have the Armour Bane (3) special rule. Refer to the Warhammer: The Old World rulebook for the Armour Bane special rule."
     },
@@ -382,7 +382,7 @@
     },
     {
       "id": "armoured_hide_1_chompa",
-      "name": "Armoured Hide (1) — Chompa",
+      "name": "Armoured Hide (1) \u2014 Chompa",
       "source": "ravening_hordes",
       "description": "Chompa has Armoured Hide (1). Refer to the Warhammer: The Old World rulebook for the Armoured Hide special rule."
     },
@@ -741,7 +741,7 @@
       "id": "skulking_menace",
       "name": "Skulking Menace",
       "source": "army",
-      "description": "Nasty Skulkers are not placed on the battlefield at the start of the game. Instead, make a note of which Goblin Mobs include Nasty Skulkers. These units are referred to as 'concealing' units. At the start of its first round of combat, during Step 1.1 of the Choose Combat & Fight sub-phase, a concealing unit must reveal its Nasty Skulkers — they cannot be revealed at any other time. Position each revealed Nasty Skulker as you would a character that has joined the unit. Once placed, Nasty Skulkers cannot leave their concealing unit. If a concealing unit is destroyed or flees the battlefield before its Nasty Skulkers are revealed, they are removed as casualties."
+      "description": "Nasty Skulkers are not placed on the battlefield at the start of the game. Instead, make a note of which Goblin Mobs include Nasty Skulkers. These units are referred to as 'concealing' units. At the start of its first round of combat, during Step 1.1 of the Choose Combat & Fight sub-phase, a concealing unit must reveal its Nasty Skulkers \u2014 they cannot be revealed at any other time. Position each revealed Nasty Skulker as you would a character that has joined the unit. Once placed, Nasty Skulkers cannot leave their concealing unit. If a concealing unit is destroyed or flees the battlefield before its Nasty Skulkers are revealed, they are removed as casualties."
     },
     {
       "id": "release_the_fanatics",
@@ -1176,6 +1176,138 @@
       "name": "Infested",
       "source": "army",
       "description": "This Corpse Cart is overrun with rats and vermin that hamper nearby enemies. Refer to the Vampire Counts Legends army list for full details."
+    },
+    {
+      "id": "will_of_the_dragons",
+      "name": "Will of the Dragons",
+      "source": "army",
+      "description": "Grand Cathay army rule. All Cathayan Dragons in the army may use their Leadership value for any Panic or Battleshock tests taken by friendly units within 12\". Refer to tow.whfb.app/special-rules/will-of-the-dragons for full details."
+    },
+    {
+      "id": "mastery_of_the_elemental_winds",
+      "name": "Mastery of the Elemental Winds",
+      "source": "army",
+      "description": "Grand Cathay army rule. At the start of each turn, roll a D6: on a 1-2 the Winds grow still and nothing happens; on a 3-4 the Winds of Yang blow strongest; on a 5-6 the Winds of Yin blow strongest. Certain abilities and spells are enhanced depending on the result. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "harmony_of_stone_and_steel",
+      "name": "Harmony of Stone and Steel",
+      "source": "army",
+      "description": "When a Jade Warriors unit is within 6\" of a Jade Lancers unit (or vice versa), both units gain a bonus to their combat resolution. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "grand_strategist",
+      "name": "Grand Strategist",
+      "source": "army",
+      "description": "The Lord Magistrate may redeploy D3 friendly units at the start of the game after all forces have been deployed but before any Scouts are placed. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "defensive_stance",
+      "name": "Defensive Stance",
+      "source": "army",
+      "description": "A unit with this rule may elect to stand and shoot as a charge reaction even if the chargers are within the unit's short range (or have no ranged weapons, in which case they form a defensive line). Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "detachment",
+      "name": "Detachment",
+      "source": "army",
+      "description": "Detachment units may perform a Supporting Charge when a Parent unit is charged or charges. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "regimental_unit",
+      "name": "Regimental Unit",
+      "source": "army",
+      "description": "This unit may have Detachments. Each Regimental Unit may have up to two Detachments. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "cathayan_cataphracts",
+      "name": "Cathayan Cataphracts",
+      "source": "army",
+      "description": "Jade Lancers gain +1 to their Armour save when they make a successful charge and make combat with an enemy unit in the same turn. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "implacable",
+      "name": "Implacable",
+      "source": "army",
+      "description": "A unit with this rule never flees as a result of a failed Panic test \u2014 instead, it suffers D6 Wounds with no saves allowed. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "celestial_forged_armour_5",
+      "name": "Celestial Forged Armour (5+)",
+      "source": "army",
+      "description": "This unit's Armour Value is 5+, representing the signature celestial-forged plate armour worn by the Jade Warriors of Grand Cathay."
+    },
+    {
+      "id": "eye_of_the_dragon",
+      "name": "Eye of the Dragon",
+      "source": "army",
+      "description": "Cathayan Dragons have supernaturally keen sight. They may re-roll failed To Hit rolls when using Missile attacks, and are never affected by Obscured penalties. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "transformation_of_the_dragon",
+      "name": "Transformation of the Dragon",
+      "source": "army",
+      "description": "At the start of any turn, this character may choose to transform between Human and Dragon form (or back). The character uses the appropriate profile for the form chosen. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "disdain_of_the_dragons",
+      "name": "Disdain of the Dragons",
+      "source": "army",
+      "description": "Cathayan Dragons view non-Dragon characters with cool disdain. Enemy characters within 6\" suffer -1 to their Leadership value (to a minimum of 2). Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "supreme_matriarch_of_nan_gau",
+      "name": "Supreme Matriarch of Nan-Gau",
+      "source": "army",
+      "description": "Miao Ying is the Storm Dragon and Supreme Matriarch of Nan-Gau. She grants the Stubborn special rule to all friendly Grand Cathay units within 12\". In addition, 0-1 unit of Jade Warriors or 0-1 unit of Jade Lancers in her army may be upgraded to Celestial Dragon Guard for +2 points per model."
+    },
+    {
+      "id": "mastery_of_the_storm_winds",
+      "name": "Mastery of the Storm Winds",
+      "source": "army",
+      "description": "Miao Ying may use the Lore of Yang and Lore of Yin as a Level 4 Wizard. She may also channel power/dispel dice on a 5+ rather than the normal 6+. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "wrath_of_the_storm",
+      "name": "Wrath of the Storm",
+      "source": "army",
+      "description": "In Dragon form, Miao Ying's attacks cause D3 Wounds and have the Magical Attacks and Multiple Wounds (D3) special rules. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "heavenly_beacon",
+      "name": "Heavenly Beacon",
+      "source": "army",
+      "description": "Sky Lanterns act as Arcane Conductors \u2014 friendly Wizards within 12\" of a Sky Lantern may add +1 to their casting attempts. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "disengage_sky_lantern",
+      "name": "Disengage (Sky Lantern)",
+      "source": "army",
+      "description": "Should this model lose a round of combat and Give Ground, it may choose to Fall Back in Good Order instead. Enemy units can follow up as if this model had given ground, moving 2\" directly towards it, but cannot pursue it. In addition, should it win a round of combat and choose to restrain and reform, this model may choose to Fall Back in Good Order rather than remaining where it is."
+    },
+    {
+      "id": "enough_for_everyone",
+      "name": "Enough for Everyone",
+      "source": "army",
+      "description": "Ogre Artillery Crew are mercenaries who fight for pay and plunder. If the war machine they crew is destroyed, they may join another friendly war machine crew for the remainder of the battle. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "mercenary_crew",
+      "name": "Mercenary Crew",
+      "source": "army",
+      "description": "This crew is composed of mercenary Ogres. They follow the rules for Mercenaries as defined in the Grand Cathay army list, but are not subject to the Misbehaving Mercenaries special rule."
+    },
+    {
+      "id": "tinmen_borri",
+      "name": "Tinmen Borri",
+      "source": "army",
+      "description": "Ogre Artillery Crew members equipped with Tinmen Borri (the celestial-forged armour) have an Armour Value of 5+. Refer to the Grand Cathay army list for full details."
+    },
+    {
+      "id": "feat_fly_9",
+      "name": "Fly (9)",
+      "source": "army",
+      "description": "This model can fly with a Movement value of 9\". Refer to tow.whfb.app/special-rules/fly for full details."
     }
   ]
 }

@@ -30,6 +30,7 @@ const LORE_KEYS = new Set([
   'lore_of_the_lady',
   'lore_of_undeath',
   'lore_of_naggaroth',
+  'lore_of_yang', 'lore_of_yin',
 ]);
 
 const UPGRADE_KEYS = new Set([

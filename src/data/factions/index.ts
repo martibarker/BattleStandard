@@ -12,6 +12,7 @@ import beastmenRaw from './beastmen-brayherds.json';
 import tombKingsRaw from './tomb-kings-of-khemri.json';
 import vampireCountsRaw from './vampire-counts.json';
 import darkElvesRaw from './dark-elves.json';
+import grandCathayRaw from './grand-cathay.json';
 import globalMagicItemsRaw from '../magic-items.json';
 
 /**
@@ -156,6 +157,8 @@ export const FACTIONS: Faction[] = [
   // Legends
   normalizeFaction(vampireCountsRaw),
   normalizeFaction(darkElvesRaw),
+  // Arcane Journals (FoF)
+  normalizeFaction(grandCathayRaw),
 ];
 
 export function getFaction(id: string): Faction | undefined {

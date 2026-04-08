@@ -2127,27 +2127,27 @@ function RunicItemsPicker({
     updateEntry(armyId, entry.id, { runicItems: { ...ri, ...patch } });
   }
 
-  function toggleRune(listKey: RuneListKey, runeId: string) {
+  function addRune(listKey: RuneListKey, runeId: string) {
     const current = ri[listKey] as string[];
-    if (current.includes(runeId)) {
-      patchRi({ [listKey]: current.filter((id) => id !== runeId) });
-    } else {
-      patchRi({ [listKey]: [...current, runeId] });
-    }
+    patchRi({ [listKey]: [...current, runeId] });
   }
 
+  function removeRune(listKey: RuneListKey, runeId: string) {
+    const current = ri[listKey] as string[];
+    const lastIdx = current.lastIndexOf(runeId);
+    if (lastIdx === -1) return;
+    patchRi({ [listKey]: [...current.slice(0, lastIdx), ...current.slice(lastIdx + 1)] });
+  }
+
+  // Returns whether adding one more instance of `rune` to `currentList` is permitted.
   function isRuneDisabled(
     listKey: RuneListKey,
     rune: NonNullable<typeof faction.runic_items>[0],
     currentList: string[]
   ): { disabled: boolean; reason?: string } {
-    const isSelected = currentList.includes(rune.id);
-    if (isSelected) return { disabled: false };
-
     // Tattoos: unit-specific limit (not Rule of Three)
     if (listKey === 'tattooRunes') {
       if (currentList.length >= tattooLimit) return { disabled: true, reason: `Max ${tattooLimit} tattoo${tattooLimit === 1 ? '' : 's'} for this unit` };
-      // Tattoos also cannot be duplicated across characters in the same army (Rule of Pride equivalent)
       return { disabled: false };
     }
 
@@ -2159,16 +2159,10 @@ function RunicItemsPicker({
       return { disabled: true, reason: 'Master Rune already in army' };
     }
 
-    // Rule of Jealousy: only one Master Rune per item
+    // Rule of Jealousy: only one Master Rune per item; Master Runes cannot be duplicated
     if (rune.name.startsWith('Master Rune')) {
       const hasMaster = currentList.some((id) => allRunes.find((r) => r.id === id)?.name.startsWith('Master Rune'));
       if (hasMaster) return { disabled: true, reason: 'One Master Rune per item' };
-    }
-
-    // Rule of Duplication: non-* runes cannot be duplicated on same item
-    const isDuplicable = rune.name.endsWith('*') || rune.id.endsWith('_dup');
-    if (!isDuplicable && currentList.includes(rune.id)) {
-      return { disabled: true, reason: 'Cannot duplicate this rune' };
     }
 
     // Points cap
@@ -2208,38 +2202,52 @@ function RunicItemsPicker({
           )}
         </button>
         {isExpanded && runes.map((rune) => {
-          const isSelected = currentList.includes(rune.id);
-          const { disabled, reason } = isRuneDisabled(listKey, rune, currentList);
-          const isDuplicable = rune.name.includes('*');
+          const count = currentList.filter((id) => id === rune.id).length;
+          const hasAny = count > 0;
+          const { disabled: addDisabled, reason } = isRuneDisabled(listKey, rune, currentList);
           return (
-            <label
+            <div
               key={rune.id}
-              className={`flex items-start gap-2 pt-1.5 border-t ${disabled && !isSelected ? 'opacity-40' : 'cursor-pointer'}`}
+              className={`flex items-start gap-2 pt-1.5 border-t ${addDisabled && !hasAny ? 'opacity-40' : ''}`}
               style={{ borderColor: 'var(--f-border)' }}
             >
-              <span
-                className="shrink-0 w-4 h-4 mt-0.5 rounded border flex items-center justify-center text-xs"
-                style={{
-                  borderColor: isSelected ? 'var(--f-gold)' : 'var(--f-border)',
-                  backgroundColor: isSelected ? 'var(--f-gold)' : 'transparent',
-                  color: '#0f1117',
-                }}
-              >
-                {isSelected ? '✓' : ''}
-              </span>
-              <input
-                type="checkbox"
-                checked={isSelected}
-                disabled={disabled && !isSelected}
-                onChange={() => toggleRune(listKey, rune.id)}
-                className="sr-only"
-              />
+              {/* −/count/+ stepper */}
+              <div className="flex items-center shrink-0 mt-0.5" style={{ gap: '2px' }}>
+                <button
+                  className="w-5 h-5 rounded text-xs flex items-center justify-center leading-none"
+                  style={{
+                    border: `1px solid ${hasAny ? 'var(--f-gold)' : 'var(--f-border)'}`,
+                    color: hasAny ? 'var(--f-gold)' : 'var(--f-text-3)',
+                    opacity: hasAny ? 1 : 0.4,
+                    backgroundColor: 'transparent',
+                    cursor: hasAny ? 'pointer' : 'default',
+                  }}
+                  disabled={!hasAny}
+                  onClick={() => removeRune(listKey, rune.id)}
+                >−</button>
+                <span
+                  className="w-5 text-center text-xs font-medium"
+                  style={{ color: hasAny ? 'var(--f-gold)' : 'var(--f-text-3)', opacity: hasAny ? 1 : 0.4 }}
+                >{count}</span>
+                <button
+                  className="w-5 h-5 rounded text-xs flex items-center justify-center leading-none"
+                  style={{
+                    border: `1px solid ${addDisabled ? 'var(--f-border)' : 'var(--f-gold)'}`,
+                    color: addDisabled ? 'var(--f-text-3)' : 'var(--f-gold)',
+                    opacity: addDisabled ? 0.4 : 1,
+                    backgroundColor: 'transparent',
+                    cursor: addDisabled ? 'default' : 'pointer',
+                  }}
+                  disabled={addDisabled}
+                  onClick={() => addRune(listKey, rune.id)}
+                >+</button>
+              </div>
               <span className="flex flex-col min-w-0 gap-0.5 flex-1">
                 <span className="flex items-center gap-1.5 flex-wrap">
-                  <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--f-text)' : 'var(--f-text-3)' }}>
-                    {rune.name}{isDuplicable ? '' : ''} — {rune.points} pts
+                  <span className="text-xs font-medium leading-snug" style={{ color: hasAny ? 'var(--f-text)' : 'var(--f-text-3)' }}>
+                    {rune.name} — {rune.points} pts
                   </span>
-                  {isDuplicable && (
+                  {rune.name.includes('*') && (
                     <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text-3)', fontSize: '0.6rem' }}>stackable</span>
                   )}
                   {rune.name.startsWith('Master Rune') && (
@@ -2249,11 +2257,11 @@ function RunicItemsPicker({
                 {rune.description && (
                   <span className="text-xs leading-snug" style={{ color: 'var(--f-text-3)' }}>{rune.description}</span>
                 )}
-                {disabled && !isSelected && reason && (
+                {addDisabled && !hasAny && reason && (
                   <span className="text-xs italic" style={{ color: 'var(--f-text-3)', opacity: 0.5 }}>{reason}</span>
                 )}
               </span>
-            </label>
+            </div>
           );
         })}
       </div>

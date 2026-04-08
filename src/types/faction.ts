@@ -345,4 +345,7 @@ export interface Faction {
   lore_of_beasts?: Spell[];             // Beastmen
   lore_of_nehekhara?: Spell[];          // Tomb Kings
   lore_of_naggaroth?: Spell[];          // Dark Elves
+  /** Faction-specific spell lores (Arcane Journals — FoF) */
+  lore_of_yang?: Spell[];              // Grand Cathay
+  lore_of_yin?: Spell[];               // Grand Cathay
 }

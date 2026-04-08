@@ -1,0 +1,2649 @@
+{
+  "id": "grand-cathay",
+  "name": "Grand Cathay",
+  "sources": [
+    "Arcane Journal — Armies of Grand Cathay",
+    "Arcane Journal — Dawn of the Storm Dragon",
+    "Arcane Journal — The Breaching of the Great Bastion"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army_gc",
+      "name": "Grand Cathay — Grand Army",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Cathayan Dragon per 1,000 pts; 0-1 Shugengan Lord, Gate Master, Lord Magistrate or Supreme Astromancer per 1,000 pts; Shugengan, Gate Keepers, Strategists and Astromancers as desired"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "miao_ying_gc"
+          ],
+          "notes": "0-1 Cathayan Dragon per 1,000 pts"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "shugengan_lord_gc",
+            "gate_master_gc",
+            "lord_magistrate_gc",
+            "astromancers_gc"
+          ],
+          "notes": "0-1 Shugengan Lord, Gate Master, Lord Magistrate or Supreme Astromancer per 1,000 pts"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Jade Warriors and Peasant Levy"
+        },
+        {
+          "category": "core",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "jade_lancers_gc"
+          ],
+          "general_unit_ids": [
+            "gate_master_gc",
+            "gate_keeper_gc"
+          ],
+          "notes": "If your General is a Gate Master or Gate Keeper, 0-1 unit of Jade Lancers may be taken as a Core choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Jade Lancers, Crane Gunner Teams and Iron Hail Gunners; 0-2 war machines per 1,000 pts"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "cathayan_grand_cannon_gc",
+            "fire_rain_rocket_battery_gc"
+          ],
+          "notes": "0-2 war machines (Cathayan Grand Cannon and Fire Rain Rocket Batteries combined) per 1,000 pts"
+        },
+        {
+          "category": "special",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "cathayan_sentinel_gc"
+          ],
+          "general_unit_ids": [
+            "shugengan_lord_gc",
+            "shugengan_general_gc"
+          ],
+          "notes": "If your General is a Shugengan Lord or Shugengan, 0-1 Cathayan Sentinel may be taken as a Special choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "sky_lanterns_gc"
+          ],
+          "general_unit_ids": [
+            "lord_magistrate_gc",
+            "strategist_gc"
+          ],
+          "notes": "If your General is a Lord Magistrate or Strategist, 0-1 Sky Lantern may be taken as a Special choice"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Sky Lanterns and Cathayan Sentinels"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "cathayan_sentinel_gc"
+          ],
+          "notes": "0-1 Cathayan Sentinel per 1,000 pts"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20
+        },
+        {
+          "category": "allies",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "A single allied contingent from: any Grand Cathay Army of Infamy; Dwarfen Mountain Holds; Empire of Man; Kingdom of Bretonnia (Uneasy); Wood Elf Realms (Uneasy); High Elf Realms (Uneasy). A Gate Keeper may be upgraded to Battle Standard Bearer for +25 pts (magic standard: no points limit)."
+        }
+      ]
+    },
+    {
+      "id": "dawn_storm_dragon_gc",
+      "name": "Jade Fleet — Army of Infamy",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Miao Ying the Storm Dragon; 0-1 Shugengan Lord or Lord Magistrate per 1,000 pts; Shugengan, Gate Masters, Gate Keepers and Strategists as desired"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "shugengan_lord_gc",
+            "lord_magistrate_gc"
+          ],
+          "notes": "0-1 Shugengan Lord or Lord Magistrate per 1,000 pts"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Jade Warriors"
+        },
+        {
+          "category": "core",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "jade_lancers_gc"
+          ],
+          "notes": "0-1 unit of Jade Lancers per 1,000 pts may be taken as a Core choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Jade Lancers; 0-3 war machines per 1,000 pts"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 3,
+          "unit_ids": [
+            "cathayan_grand_cannon_gc",
+            "fire_rain_rocket_battery_gc"
+          ],
+          "notes": "0-3 war machines (Cathayan Grand Cannon and Fire Rain Rocket Batteries combined) per 1,000 pts"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Sky Lanterns and Cathayan Sentinels"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "cathayan_sentinel_gc"
+          ],
+          "notes": "0-1 Cathayan Sentinel per 1,000 pts"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 35,
+          "notes": "Empire of Man mercenaries only (Captain of the Empire, Master Mage, Priest of Sigmar/Ulric; State Troops, State Missile Troops, Free Company Militia, Empire Archers; 0-1 Pistoliers or Outriders per 1,000 pts). Not subject to the Misbehaving Mercenaries rules."
+        }
+      ]
+    },
+    {
+      "id": "warriors_wind_field_gc",
+      "name": "Warriors of Wind & Field — Army of Infamy",
+      "source": "arcane_journal",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Lord Magistrate, Gate Master or Supreme Astromancer per 1,000 pts; Shugengan, Gate Keepers, Strategists and Astromancers as desired"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "lord_magistrate_gc",
+            "gate_master_gc",
+            "astromancers_gc"
+          ],
+          "notes": "0-1 Lord Magistrate, Gate Master or Supreme Astromancer per 1,000 pts"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "1+ unit of Peasant Levy; Iron Hail Gunners; 0-1 unit of Jade Warriors per 1,000 pts may be taken as a Core choice"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "jade_warriors_gc"
+          ],
+          "notes": "0-1 unit of Jade Warriors per 1,000 pts may be taken as a Core choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Jade Warriors (Special), Crane Gunner Teams and Sky Lanterns; 0-2 war machines per 1,000 pts; 0-1 Jade Lancers as a Special choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "cathayan_grand_cannon_gc",
+            "fire_rain_rocket_battery_gc"
+          ],
+          "notes": "0-2 war machines per 1,000 pts"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "jade_lancers_gc"
+          ],
+          "notes": "0-1 unit of Jade Lancers may be taken as a Special choice"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Cathayan Sentinels"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "cathayan_sentinel_gc"
+          ],
+          "notes": "0-1 Cathayan Sentinel per 1,000 pts"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20,
+          "notes": "Includes Badlands Ogre Bulls (see Arcane Journal — Orc & Goblin Tribes)"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "miao_ying_gc",
+      "name": "Miao Ying, the Storm Dragon",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "list_category_overrides": {
+        "warriors_wind_field_gc": null
+      },
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "50 x 50 mm (Human Form), 100 x 150 mm (Dragon Form)",
+      "unit_size": "1",
+      "points": 465,
+      "is_named_character": true,
+      "magic": {
+        "wizard_level": 4,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "high_magic"
+        ]
+      },
+      "profiles": [
+        {
+          "name": "Human Form",
+          "profile": {
+            "M": 4,
+            "WS": 7,
+            "BS": 5,
+            "S": 4,
+            "T": 4,
+            "W": 3,
+            "I": 7,
+            "A": 4,
+            "Ld": 10
+          }
+        },
+        {
+          "name": "Dragon Form",
+          "profile": {
+            "M": 8,
+            "WS": 8,
+            "BS": 3,
+            "S": 7,
+            "T": 8,
+            "W": 7,
+            "I": 1,
+            "A": 6,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Human Form: Talons of the Storm, heavy armour",
+        "Dragon Form: Draconic scales (counts as full plate armour)"
+      ],
+      "special_rules": [
+        "celestial_forged_armour_5",
+        "disdain_of_the_dragons",
+        "hatred_all_enemies",
+        "mastery_of_the_storm_winds",
+        "mastery_of_the_elemental_winds",
+        "stubborn",
+        "supreme_matriarch_of_nan_gau",
+        "transformation_of_the_dragon",
+        "will_of_the_dragons",
+        "wrath_of_the_storm"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Talons of the Storm (Human)",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "strike_first"
+          ]
+        },
+        {
+          "name": "Dragon Fire",
+          "range": "N/A",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "breath_weapon",
+            "flaming_attacks"
+          ]
+        }
+      ],
+      "notes": [
+        "In Human Form: Rallying Cry; Fly (9), Large Target, Stomp Attacks (D6), Swiftstride, Terror apply in Dragon Form only.",
+        "In Dragon Form Miao Ying is a Level 2 Wizard equal to her current Level of Wizardry per turn.",
+        "Miao Ying knows 4 spells from Battle Magic, Elementalism, or High Magic. In her Dragon Form she may also replace them with spells from the Lore of Yang or Lore of Yin.",
+        "Talons of the Storm (Human Form): Combat, S, AP-1, Strike First. Dragon Fire: N/A, S4, AP-1, Breath Weapon, Flaming Attacks.",
+        "Supreme Matriarch of Nan-Gau: Miao Ying is the army General if included. 0-1 unit of Jade Warriors and 0-1 unit of Jade Lancers in her army may be upgraded to Celestial Guard with +4 pts/model modifier.",
+        "Disdain of the Dragons: Enemy models that wish to issue a challenge within Miao Ying's Command range must first make a Leadership test using their own Leadership. +1 modifier to die if Miao Ying is in Human Form, +2 if Dragon Form. Challenges from Miao Ying cannot be refused.",
+        "Wrath of the Storm: All units of Jade Warriors and Jade Lancers included in an army led by Miao Ying gain the Hatred (Warriors of Chaos models) special rule."
+      ],
+      "source_page": 26
+    },
+    {
+      "id": "shugengan_lord_gc",
+      "name": "Shugengan Lord",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Monstrous creature (character)",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 220,
+      "magic": {
+        "wizard_level": 2,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "illusion",
+          "high_magic"
+        ]
+      },
+      "profiles": [
+        {
+          "name": "Shugengan Lord",
+          "profile": {
+            "M": "-",
+            "WS": 6,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 6,
+            "A": 4,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Great Spirit Longma",
+          "profile": {
+            "M": 8,
+            "WS": 5,
+            "BS": "-",
+            "S": 5,
+            "T": 4,
+            "W": 4,
+            "I": 3,
+            "A": 3,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "rider": [
+          "Hand weapon",
+          "Iron talons",
+          "Light armour"
+        ],
+        "mount": [
+          "Crown of horns"
+        ]
+      },
+      "special_rules": [
+        "armoured_hide_1",
+        "celestial_forged_armour_5",
+        "counter_charge",
+        "feat_fly_9",
+        "impact_hits_d3_plus_1",
+        "mastery_of_the_elemental_winds",
+        "swiftstride",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Must choose one of the following special rules",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Lore of Yang",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lore of Yin",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Celestial Blade (see p.48)",
+          "cost": 6,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Cathayan lance (see p.48)",
+          "cost": 4,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Dragon fire pistol (see p.48)",
+          "cost": 4,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Replace light armour with heavy armour",
+          "cost": 4,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Be a Level 3 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Be a Level 4 Wizard",
+          "cost": 60,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Iron talons",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "strike_first"
+          ]
+        },
+        {
+          "name": "Crown of horns",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1"
+          ]
+        }
+      ],
+      "notes": [
+        "Iron talons: Combat, S, AP-1, Strike First. Crown of horns: Combat, S, AP-1, Armour Bane (1).",
+        "Armoured Hide: counts as 5+ Celestial Forged Armour (included in sr). Great Spirit Longma grants the Shugengan will of the Dragon, Mastery of the Elemental Winds, Swiftstride.",
+        "Fly (9) applies in Dragon Form only — not applicable to Shugengan Lords."
+      ],
+      "source_page": 25
+    },
+    {
+      "id": "shugengan_general_gc",
+      "name": "Shugengan General",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Monstrous creature (character)",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 145,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "illusion",
+          "high_magic"
+        ]
+      },
+      "profiles": [
+        {
+          "name": "Shugengan General",
+          "profile": {
+            "M": "-",
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 2,
+            "I": 5,
+            "A": 3,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Great Spirit Longma",
+          "profile": {
+            "M": 8,
+            "WS": 5,
+            "BS": "-",
+            "S": 5,
+            "T": 4,
+            "W": 4,
+            "I": 3,
+            "A": 3,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "rider": [
+          "Hand weapon",
+          "Iron talons",
+          "Light armour"
+        ],
+        "mount": [
+          "Crown of horns"
+        ]
+      },
+      "special_rules": [
+        "armoured_hide_1",
+        "celestial_forged_armour_5",
+        "counter_charge",
+        "impact_hits_d3_plus_1",
+        "mastery_of_the_elemental_winds",
+        "swiftstride",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Must choose one of the following special rules",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Lore of Yang",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lore of Yin",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Be a Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Iron talons",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "strike_first"
+          ]
+        },
+        {
+          "name": "Crown of horns",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1"
+          ]
+        }
+      ],
+      "notes": [
+        "Iron talons: Combat, S, AP-1, Strike First. Crown of horns: Combat, S, AP-1, Armour Bane (1)."
+      ],
+      "source_page": 25
+    },
+    {
+      "id": "gate_master_gc",
+      "name": "Gate Master",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 80,
+      "stats": {
+        "M": 4,
+        "WS": 7,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 4,
+        "A": 3,
+        "Ld": 9
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour",
+        "Shield"
+      ],
+      "special_rules": [
+        "harmony_of_stone_and_steel",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Celestial Blade (see p.48)",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cathayan lance (if appropriately mounted, see p.48)",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Mount on a Cathayan Warhorse (+16 pts)",
+          "cost": 16,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Battle Standard Bearer (+25 pts, one per army)",
+          "cost": 25,
+          "scope": "per_unit",
+          "category": "special",
+          "notes": "In addition to their usual magic item allowance, a Battle Standard Bearer may purchase a single magic standard with no points limit."
+        },
+        {
+          "description": "Purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "Harmony of Stone & Steel: A unit joined by a character with this special rule may re-roll any failed Leadership test when attempting to reform after running down a foe, when attempting to redirect a charge, or when making a Restraint test."
+      ],
+      "source_page": 26
+    },
+    {
+      "id": "gate_keeper_gc",
+      "name": "Gate Keeper",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Heavy infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 45,
+      "stats": {
+        "M": 4,
+        "WS": 6,
+        "BS": 4,
+        "S": 4,
+        "T": 3,
+        "W": 2,
+        "I": 4,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour",
+        "Shield"
+      ],
+      "special_rules": [
+        "harmony_of_stone_and_steel",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "source_page": 26
+    },
+    {
+      "id": "lord_magistrate_gc",
+      "name": "Lord Magistrate",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 65,
+      "stats": {
+        "M": 4,
+        "WS": 5,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 4,
+        "A": 2,
+        "Ld": 9
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "special_rules": [
+        "grand_strategist",
+        "harmony_of_stone_and_steel",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Gunpowder bombs (see p.48)",
+          "cost": 5,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Dragon fire bombs (see p.48)",
+          "cost": 10,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Mount on a Sky Lantern (see p.30)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "notes": "See Sky Lantern page for details."
+        },
+        {
+          "description": "Purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "Grand Strategist: Magistrates are adept at outwitting their enemies, both across the negotiating table and on the battlefield. Unless this character is fleeing, all friendly units within their Command range, except your General, can use this character's Leadership characteristic instead of their own. In addition, once per turn a friendly unit that wins a round of combat whilst within this character's Command range may choose to Fall Back in Good Order rather than making a follow up or pursuit move."
+      ],
+      "source_page": 27
+    },
+    {
+      "id": "strategist_gc",
+      "name": "Strategist",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 40,
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 3,
+        "A": 1,
+        "Ld": 9
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "special_rules": [
+        "grand_strategist",
+        "harmony_of_stone_and_steel",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Gunpowder bombs (see p.48)",
+          "cost": 5,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Mount on a Sky Lantern (see p.30)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "notes": "See Sky Lantern page for details."
+        },
+        {
+          "description": "Purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "source_page": 27
+    },
+    {
+      "id": "astromancers_gc",
+      "name": "Astromancers of the Celestial Court",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "characters",
+      "list_category_overrides": {
+        "dawn_storm_dragon_gc": null
+      },
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 125,
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "battle_magic",
+          "elementalism",
+          "high_magic",
+          "illusion"
+        ]
+      },
+      "profiles": [
+        {
+          "name": "Supreme Astromancer",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 3,
+            "I": 3,
+            "A": 2,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Astromancer",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 2,
+            "I": 3,
+            "A": 1,
+            "Ld": 8
+          },
+          "champion_cost": 0
+        }
+      ],
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "magical_attacks"
+      ],
+      "options": [
+        {
+          "description": "Must choose one of the following special rules",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Lore of Yang",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lore of Yin",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Mount on a Cathayan horse",
+          "cost": 16,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Supreme Astromancer: Upgrade to Level 4 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Supreme Astromancer: Purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        },
+        {
+          "description": "Astromancer: Points cost 65 pts (use as a hero-tier Wizard)",
+          "cost": -60,
+          "scope": "per_unit",
+          "category": "special",
+          "notes": "An Astromancer is a Level 1 Wizard for 65 pts. Upgrade to Level 2 for +30 pts. Magic items up to 50 pts."
+        }
+      ],
+      "notes": [
+        "Supreme Astromancer: Level 3 Wizard, 125 pts. Upgrade to Level 4 for +30 pts. Purchase magic items up to 100 pts.",
+        "Astromancer: Level 1 Wizard, 65 pts. Upgrade to Level 2 for +30 pts. Purchase magic items up to 50 pts."
+      ],
+      "source_page": 44
+    },
+    {
+      "id": "jade_warriors_gc",
+      "name": "Jade Warriors",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "core",
+      "list_category_overrides": {
+        "warriors_wind_field_gc": "special"
+      },
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 8,
+      "profiles": [
+        {
+          "name": "Jade Warrior",
+          "profile": {
+            "M": 4,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Jade Officer",
+          "profile": {
+            "M": 4,
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 8
+          },
+          "is_champion": true,
+          "champion_cost": 6
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "defensive_stance",
+        "detachment",
+        "regimental_unit",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Halberds",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Shields",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Have the Stubborn special rule",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Jade Officer may purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        },
+        {
+          "description": "Purchase a magic standard worth up to",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        },
+        {
+          "description": "0-1 unit per 1,000 pts may be upgraded to Celestial Guard (if led by Miao Ying)",
+          "cost": 4,
+          "scope": "per_model",
+          "category": "special",
+          "notes": "Celestial Guard option only available if Miao Ying is the army's General."
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Jade Officer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 4
+        }
+      ],
+      "notes": [
+        "Defensive Stance: Unless it charged during the preceding Movement phase or counts as having charged this turn, a unit with this special rule may re-roll any Armour Save rolls of a natural 1 made during the Combat phase.",
+        "Regimental Unit: A Jade Warriors unit may form a Detachment as long as the unit does not have the Skirmishers special rule."
+      ],
+      "source_page": 28
+    },
+    {
+      "id": "jade_lancers_gc",
+      "name": "Jade Lancers",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "special",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 20,
+      "profiles": [
+        {
+          "name": "Jade Lancer",
+          "profile": {
+            "M": "-",
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Jade Lancer Officer",
+          "profile": {
+            "M": "-",
+            "WS": 4,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 8
+          },
+          "is_champion": true,
+          "champion_cost": 6
+        },
+        {
+          "name": "Cathayan Warhorse",
+          "profile": {
+            "M": 7,
+            "WS": 3,
+            "BS": "-",
+            "S": 3,
+            "T": 4,
+            "W": "-",
+            "I": 3,
+            "A": 1,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "rider": [
+          "Hand weapons",
+          "Cathayan lance (see p.48)",
+          "Heavy armour",
+          "Shield"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as a hand weapon)",
+          "Barding"
+        ]
+      },
+      "special_rules": [
+        "cathayan_cataphracts",
+        "close_order",
+        "counter_charge",
+        "horde",
+        "swiftstride",
+        "will_of_the_dragons"
+      ],
+      "options": [
+        {
+          "description": "Have the Ambushers special rule (0-1 per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Have the Drilled special rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Have the Stubborn special rule",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Jade Lancer Officer may purchase magic items up to a total of",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        },
+        {
+          "description": "Purchase a magic standard worth up to",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        },
+        {
+          "description": "0-1 unit per 1,000 pts may be upgraded to Celestial Guard (if led by Miao Ying)",
+          "cost": 4,
+          "scope": "per_model",
+          "category": "special",
+          "notes": "Celestial Guard option only available if Miao Ying is the army's General."
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Jade Lancer Officer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Cathayan lance",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "fight_in_extra_rank"
+          ],
+          "notes": "Cavalry, monster or chariot troop types only. Strength and Armour Piercing modifiers apply only against enemy models the wielder charged that turn."
+        },
+        {
+          "name": "Iron-shod hooves",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": []
+        }
+      ],
+      "notes": [
+        "Cathayan Cataphracts: Jade Lancers are trained to fight with long cavalry spears, bringing the heavily armoured bulk of their warhorses and the weight of their numbers to bear in crushing charges that grind the enemy underfoot. When a unit in which the majority of models have this special rule makes a follow up move, the unit counts as having charged during the next turn."
+      ],
+      "source_page": 29
+    },
+    {
+      "id": "peasant_levy_gc",
+      "name": "Peasant Levy",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "core",
+      "list_category_overrides": {
+        "dawn_storm_dragon_gc": null
+      },
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 4,
+      "profiles": [
+        {
+          "name": "Peasant Soldier",
+          "profile": {
+            "M": 4,
+            "WS": 2,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Peasant Elder",
+          "profile": {
+            "M": 4,
+            "WS": 2,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 6
+          },
+          "is_champion": true,
+          "champion_cost": 8
+        }
+      ],
+      "equipment": [
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "close_order",
+        "horde",
+        "warband"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade (entire unit)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Long spears",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Warbows",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Light armour",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "Replace Close Order with Skirmishers",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Ambushers (0-1 unit per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Peasant Elder",
+          "cost_per_unit": 8
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Long spear",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "fight_in_extra_rank",
+            "strike_first"
+          ],
+          "notes": "Infantry only. Cannot support-attack in a turn it charged. Strike First applies only against chargers."
+        },
+        {
+          "name": "Warbow",
+          "range": "30\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": []
+        }
+      ],
+      "notes": [
+        "Long spear: Combat, S, -, Fight in Extra Rank, Strike First. Models whose troop type is \"infantry\" only. A model wielding a long spear cannot make a supporting attack during a turn in which it charged. Strike First applies only against charging enemy units."
+      ],
+      "source_page": 48
+    },
+    {
+      "id": "crane_gunner_teams_gc",
+      "name": "Crane Gunner Teams",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "dawn_storm_dragon_gc": null
+      },
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 50 mm",
+      "unit_size": "3-8",
+      "points": 16,
+      "profiles": [
+        {
+          "name": "Crane Gunner Team",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 2,
+            "I": 3,
+            "A": 2,
+            "Ld": 7
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Crane gun (see below)",
+        "Light armour",
+        "Tower shield (see below)"
+      ],
+      "special_rules": [
+        "open_order"
+      ],
+      "options": [
+        {
+          "description": "Ambushers (0-1 unit per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Reserve Move",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "special"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Crane gun",
+          "range": "36\"",
+          "S": "6",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_2",
+            "move_or_shoot"
+          ],
+          "notes": "Cumbersome."
+        }
+      ],
+      "notes": [
+        "Tower Shield: A tower shield improves its wielder's armour value by 3 (rather than the usual 1) against attacks made by enemy models within the wielder's front arc. However, a tower shield offers no protection against attacks from the wielder's flank or rear arcs.",
+        "Crane gun: 36\", S6, AP-2, Armour Bane (2), Cumbersome, Move or Shoot."
+      ],
+      "source_page": 49
+    },
+    {
+      "id": "iron_hail_gunners_gc",
+      "name": "Iron Hail Gunners",
+      "source": "arcane_journal",
+      "category": "infantry",
+      "list_category": "special",
+      "list_category_overrides": {
+        "dawn_storm_dragon_gc": null,
+        "warriors_wind_field_gc": "core"
+      },
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "4-12",
+      "points": 12,
+      "profiles": [
+        {
+          "name": "Iron Hail Gunner",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Marksman",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 7
+          },
+          "is_champion": true,
+          "champion_cost": 6
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Iron hail gun (see below)",
+        "Light armour"
+      ],
+      "special_rules": [
+        "open_order",
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "description": "Gunpowder bombs",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "weapon"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Marksman",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Iron hail gun",
+          "range": "12\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "move_or_shoot",
+            "multiple_shots_d3"
+          ],
+          "notes": "No negative modifiers for long range, Multiple Shots, or Stand & Shoot."
+        },
+        {
+          "name": "Gunpowder bombs",
+          "range": "9\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "move_or_shoot",
+            "quick_shot"
+          ],
+          "notes": "Causes D3 hits on successful roll To Hit."
+        }
+      ],
+      "notes": [
+        "Iron hail gun: 12\", S3, AP-1, Move & Shoot, Multiple Shots (D3). A model armed with an iron hail gun suffers no negative modifiers for firing at long range, for using the Multiple Shots (D3) special rule, or whilst making a Stand & Shoot charge reaction.",
+        "Gunpowder bombs: 9\", S3, AP-, Armour Bane (1), Move & Shoot, Quick Shot. If the roll To Hit is successful, a gunpowder bomb causes D3 hits to the target enemy unit, rather than the usual one."
+      ],
+      "source_page": 50
+    },
+    {
+      "id": "sky_lanterns_gc",
+      "name": "Sky Lanterns",
+      "source": "arcane_journal",
+      "category": "war_machine",
+      "list_category": "rare",
+      "troop_type": "Heavy chariot",
+      "base_size": "100 x 100 mm",
+      "unit_size": "1",
+      "points": 135,
+      "armour_value": "4+",
+      "profiles": [
+        {
+          "name": "Sky Lantern",
+          "profile": {
+            "M": 1,
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": 4,
+            "W": 7,
+            "I": "-",
+            "A": "-",
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Lantern Gunners (x4)",
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 5,
+            "S": "-",
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Commander",
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 5,
+            "S": "-",
+            "T": "-",
+            "W": "-",
+            "I": 3,
+            "A": 2,
+            "Ld": 8
+          },
+          "is_champion": true,
+          "champion_cost": 15
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Hand weapons"
+        ],
+        "mount": []
+      },
+      "special_rules": [
+        "close_order",
+        "disengage_sky_lantern",
+        "eye_of_the_dragon",
+        "feigned_flight",
+        "fire_and_flee",
+        "flammable",
+        "fly_8",
+        "heavenly_beacon",
+        "large_target",
+        "reserve_move",
+        "scouts"
+      ],
+      "options": [
+        {
+          "description": "Lantern Gunners and Commander must take one of the following weapons",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Sky Lantern Crane Guns (see below)",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Iron hail guns and gunpowder bombs (see opposite)",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Dragon fire bombs (see p.48)",
+          "cost": 20,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Sky Lantern bombs (see opposite)",
+          "cost": 15,
+          "scope": "per_unit",
+          "category": "weapon"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Sky Lantern crane gun",
+          "range": "12\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "move_or_shoot",
+            "multiple_shots_d3"
+          ],
+          "notes": "Cumbersome."
+        },
+        {
+          "name": "Sky Lantern iron hail gun",
+          "range": "12\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "move_or_shoot",
+            "multiple_shots_d3"
+          ]
+        },
+        {
+          "name": "Sky Lantern gun bombs",
+          "range": "9\"",
+          "S": "3",
+          "AP": "-",
+          "special_rules": [
+            "armour_bane_1",
+            "move_or_shoot",
+            "quick_shot"
+          ],
+          "notes": "Causes D3 hits."
+        },
+        {
+          "name": "Dragon fire bombs",
+          "range": "9\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "flaming_attacks",
+            "move_or_shoot",
+            "quick_shot"
+          ]
+        },
+        {
+          "name": "Sky Lantern bombs",
+          "range": "Bombardment",
+          "S": "5",
+          "AP": "-3",
+          "special_rules": [
+            "bombardment",
+            "multiple_wounds_d3_plus_1"
+          ],
+          "notes": "d3+1 blast templates."
+        }
+      ],
+      "notes": [
+        "Crane gun: 12\", S3, AP-, Move & Shoot, Multiple Shots (D3). Cumbersome.",
+        "Sky Lantern crane gun: 12\", S?, AP-, Move & Shoot, Multiple Shots (D3).",
+        "Sky Lantern bomb: Bombardment, d3+1 templates; see rules.",
+        "Eye of the Dragon: Friendly models whose weapons shoot using the Bombardment special rule can shoot using this model's line of sight rather than their own.",
+        "Disengage: In the face of overwhelming aggression, a Sky Lantern can easily disengage, climbing to the heavens before attacking once more. Should this model lose a round of combat it may attempt to disengage by making a Leadership test. If passed, this model may Fall Back in Good Order rather than Give Ground. Enemy units can follow up as if this model had given ground, moving 2\" directly towards this model, but cannot pursue it. However, if this test is failed, this model is unable to disengage and must Give Ground as normal. In addition, should it win a round of combat, this model may choose to Fall Back in Good Order rather than making a follow up or pursuit move.",
+        "Heavenly Beacon: Brightly coloured and illuminated from within, Sky Lanterns act as both a beacon and a rallying point for the forces of the Celestial Dragon. Unless this model is fleeing, friendly units within 12\" of it may re-roll any failed Panic or Rally test. Whilst this model is on the battlefield, unless it is fleeing, a friendly unit with the Ambushers special rule that is held in reserve arrives this turn as reinforcements or is delayed. A Lord Magistrate or Strategist mounted on a Sky Lantern has a Command range of 15\".",
+        "Character Mount: A Sky Lantern may be included in your army as a character's mount. If so, its points are added to that of its rider."
+      ],
+      "source_page": 30
+    },
+    {
+      "id": "cathayan_sentinel_gc",
+      "name": "Cathayan Sentinel",
+      "source": "arcane_journal",
+      "category": "monster",
+      "list_category": "rare",
+      "troop_type": "Behemoth",
+      "base_size": "100 x 150 mm",
+      "unit_size": "1",
+      "points": 230,
+      "profiles": [
+        {
+          "name": "Cathayan Sentinel",
+          "profile": {
+            "M": 6,
+            "WS": 5,
+            "BS": 1,
+            "S": 6,
+            "T": 6,
+            "W": 6,
+            "I": 3,
+            "A": 3,
+            "Ld": 10
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon",
+        "Great blade (see below)",
+        "Terracotta armour (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "immune_to_psychology",
+        "implacable",
+        "large_target",
+        "stomp_attacks_d3_plus_1",
+        "terror",
+        "tinmen_borri",
+        "unbreakable"
+      ],
+      "options": [
+        {
+          "description": "Sentinel upgrade (choose one)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Terracotta Sentinel (free — Regeneration (6+))",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Jade Sentinel (+20 pts — knows a single spell)",
+              "cost": 20,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Obsidian Sentinel (+25 pts — Magic Resistance (-2))",
+              "cost": 25,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Granite Sentinel (+35 pts — Immune to Multiple Wounds; 5+ Ward vs unsaved wounds)",
+              "cost": 35,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Warpstone Sentinel (+40 pts — Magical Attacks; Toughness -1 on Warpstone contact)",
+              "cost": 40,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Scything blow",
+          "range": "Combat",
+          "S": "5",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "extra_attacks_d6",
+            "strike_last"
+          ],
+          "notes": "Extra Attacks: +2D3. Each round choose this or Deadly Strike."
+        },
+        {
+          "name": "Deadly strike",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-4",
+          "special_rules": [
+            "killing_blow",
+            "monster_slayer",
+            "multiple_wounds_d3_plus_1"
+          ]
+        }
+      ],
+      "notes": [
+        "Implacable: Once given orders, a Cathayan Sentinel will not falter in its duty, relentlessly carrying out its last commands until the task is complete. Once per game during a turn in which it was charged, this model may choose not to Give Ground should it lose a round of combat. In addition, once per game this model may re-roll its Charge roll.",
+        "Great Blade: This weapon has two profiles. The wielder must choose which profile the soldier will use at the start of each round of combat. Scything blow: Combat, S5, AP-2, Armour Bane (1), Extra Attacks (+2D3), Strike Last. Deadly strike: Combat, S+1, AP-4, Killing Blow, Monster Slayer, Multiple Wounds (D3).",
+        "Terracotta Sentinel: Regeneration (6+). Jade Sentinel: knows a single spell (chosen by controlling player) before armies are deployed from Battle Magic or Elementalism Lore of Magic; may cast as a Bound spell with a Power Level of 3. Obsidian Sentinel: Magic Resistance (-2); any enemy Wizard that wishes to cast a spell within 12\" of one or more Obsidian Sentinels must first make a Leadership test; if failed, Wizard's Casting roll suffers a -3 modifier. Granite Sentinel: Immune to Multiple Wounds; if a Granite Sentinel suffers an unsaved wound from an attack with this special rule, it loses a single Wound. Warpstone Sentinel: Magical Attacks; whilst in base contact with one or more Warpstone Sentinels, enemy units suffer a -1 modifier to their Toughness characteristic (to minimum of 1)."
+      ],
+      "source_page": 32
+    },
+    {
+      "id": "cathayan_grand_cannon_gc",
+      "name": "Cathayan Grand Cannon",
+      "source": "arcane_journal",
+      "category": "war_machine",
+      "list_category": "special",
+      "troop_type": "War machine",
+      "base_size": "60 x 100 mm (war machine); 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 130,
+      "profiles": [
+        {
+          "name": "Grand Cannon",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": "-",
+            "W": 7,
+            "I": "-",
+            "A": "-",
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Cathayan Artillery Crew (x3)",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 7
+          }
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Hand weapons",
+          "Light armour"
+        ],
+        "mount": [
+          "Grand cannon (see below)"
+        ]
+      },
+      "special_rules": [
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "description": "Ogre Loader upgrade (see Ogre Artillery Crew)",
+          "cost": 35,
+          "scope": "per_unit",
+          "category": "special",
+          "notes": "See Ogre Artillery Crew entry. Crew of any war machine joined by an Ogre Loader gains +1 to Movement and the Stubborn special rule."
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Grand cannon",
+          "range": "48\"",
+          "S": "10",
+          "AP": "-5",
+          "special_rules": [
+            "armour_bane_3_pump_wagon_impact_hits_only",
+            "cannon_fire",
+            "move_or_shoot",
+            "multiple_wounds_d3_plus_1",
+            "thunderous_impact"
+          ],
+          "notes": "Cumbersome. Uses Black Powder Misfire table. Armour Bane (3)."
+        }
+      ],
+      "notes": [
+        "Grand cannon: 48\", S10, AP-5, Armour Bane (3), Cannon Fire, Cumbersome, Move or Shoot; Multiple Wounds (D3+1), Thunderous Impact.",
+        "Thunderous Impact: Until your next Start of Turn sub-phase, any unit (friend or foe) that was within 5\" of the model struck when a Cathayan grand cannon shoots suffers a D10 modifier to its Movement characteristic and cannot use the Swiftstride special rule.",
+        "This weapon uses the Black Powder Misfire table."
+      ],
+      "source_page": 34
+    },
+    {
+      "id": "fire_rain_rocket_battery_gc",
+      "name": "Fire Rain Rocket Battery",
+      "source": "arcane_journal",
+      "category": "war_machine",
+      "list_category": "special",
+      "troop_type": "War machine",
+      "base_size": "60 x 100 mm (war machine); 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 100,
+      "profiles": [
+        {
+          "name": "Fire Rain Rocket",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": "-",
+            "T": "-",
+            "W": 5,
+            "I": "-",
+            "A": "-",
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Cathayan Artillery Crew (x3)",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 7
+          }
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Hand weapons",
+          "Light armour"
+        ],
+        "mount": [
+          "Fire rain rocket launcher (see below)"
+        ]
+      },
+      "special_rules": [
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "description": "Ogre Loader upgrade (see Ogre Artillery Crew)",
+          "cost": 35,
+          "scope": "per_unit",
+          "category": "special"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Bastion rockets",
+          "range": "12-48\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "bombardment",
+            "multiple_wounds_d3_plus_1"
+          ],
+          "notes": "Additionally AP-3 and Armour Bane (+2) bonus. Scatter 6\" as stone thrower. Harrowing Attack."
+        },
+        {
+          "name": "Rocket battery",
+          "range": "12-48\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "bombardment",
+            "move_or_shoot"
+          ],
+          "notes": "Cumbersome. Scatter 6\" as stone thrower. Wailing Spirits."
+        }
+      ],
+      "notes": [
+        "Bastion rockets: 12-48\", S4, AP-1+3, Armour Bane (1+3), Bombardment, Harrowing Attack, Multiple Wounds (D3). Uses Black Powder Misfire table. Scatter d6\" as a stone thrower.",
+        "Rocket battery: 12-48\", S4, AP-1, Armour Bane (1), Bombardment, Cumbersome, Move or Shoot, Wailing Spirits. Uses Black Powder Misfire table. Scatter d6\" as stone thrower.",
+        "Each turn, a Fire Rain Rocket Battery can fire one of these two different types of rocket. Roll before firing which type is launched.",
+        "Rocket Battery special rules — Wailing Spirits: Any unit that suffers one or more unsaved wounds from this weapon must make a Panic test as if it had taken heavy casualties.",
+        "Harrowing Attack: Any unit that suffers one or more wounds from Bastion rockets must make a Dangerous Terrain test."
+      ],
+      "source_page": 35
+    },
+    {
+      "id": "ogre_artillery_crew_gc",
+      "name": "Ogre Artillery Crew",
+      "source": "arcane_journal",
+      "category": "character",
+      "list_category": "mercenaries",
+      "troop_type": "Monstrous infantry",
+      "base_size": "40 x 40 mm",
+      "unit_size": "1",
+      "points": 35,
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 4,
+        "S": 4,
+        "T": 4,
+        "W": 2,
+        "I": 3,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon",
+        "Light armour"
+      ],
+      "special_rules": [
+        "enough_for_everyone",
+        "mercenary_crew",
+        "stubborn"
+      ],
+      "options": [
+        {
+          "description": "Gunpowder bombs (see p.48)",
+          "cost": 8,
+          "scope": "per_unit",
+          "category": "weapon"
+        }
+      ],
+      "notes": [
+        "Enough for Everyone: Ogres are used to sharing their weapons and, when they make gunpowder bombs for themselves, they make sure to bring enough for their friends. If an Ogre Loader is equipped with gunpowder bombs, the crew of the war machine that the Ogre Loader has joined is also equipped with gunpowder bombs.",
+        "Mercenary Crew: An Ogre Loader is a special type of character that can be taken as an upgrade to accompany a Cathayan war machine. During deployment, position an Ogre Loader with its war machine, as you would a character that has joined a unit. Once placed, an Ogre Loader cannot leave its war machine.",
+        "The crew of any war machine joined by an Ogre Loader gains a +1 modifier to its Movement characteristic and the Stubborn special rule. Once per game, a Fire Rain Rocket Battery or Cathayan Grand Cannon that includes an Ogre Loader may fire twice during the Shooting phase, or re-roll a single Artillery dice."
+      ],
+      "source_page": 36
+    }
+  ],
+  "magic_items": [
+    {
+      "id": "monkey_kings_wisdom",
+      "name": "The Monkey King's Wisdom",
+      "category": "magic_weapon",
+      "points": 75,
+      "source": "arcane_journal",
+      "description": "A huge and ornate club, studded with jewels and wrapped with precious metals, the Monkey King's Wisdom is a huge and brutal weapon.",
+      "rules_text": "Combat, S10, AP-4, Magical Attacks, Multiple Wounds (D3), Requires Two Hands, Strike Last.",
+      "weapon_profile": {
+        "name": "The Monkey King's Wisdom",
+        "range": "Combat",
+        "S": "10",
+        "AP": "-4",
+        "special_rules": [
+          "magical_attacks",
+          "multiple_wounds_d3_plus_1",
+          "strike_last"
+        ],
+        "notes": "Requires Two Hands."
+      }
+    },
+    {
+      "id": "jade_blade_great_fleet",
+      "name": "Jade Blade of the Great Fleet",
+      "category": "magic_weapon",
+      "points": 70,
+      "source": "arcane_journal",
+      "description": "The Jade Blade is an ancient weapon fashioned from the fang of a Lumbrean sea monster. Imbued with the monster's regenerative powers, it continually heals its wielder.",
+      "rules_text": "Combat, S+2, AP-2, Armour Bane (1), Magical Attacks. The wielder of the Jade Blade of the Great Fleet gains the Regeneration (5+) special rule.",
+      "weapon_profile": {
+        "name": "Jade Blade of the Great Fleet",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks",
+          "regeneration_5"
+        ],
+        "notes": "Wielder gains Regeneration (5+)."
+      }
+    },
+    {
+      "id": "spirit_longma_spear",
+      "name": "Spirit Longma Spear",
+      "category": "magic_weapon",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "Made from the horn of the Great Spirit Longma Tian Wu and able to pierce any armour, heroes of Cathay carry this spear into battle with pride.",
+      "rules_text": "Combat, S+1, AP-3, Armour Bane (1), Magical Attacks. Models whose troop type is \"cavalry\", \"monster\" or \"chariot\" only. The Spirit Longma Spear's Strength and Armour Piercing modifiers apply only during a turn in which the wielder charged.",
+      "restrictions": "Cavalry, monster or chariot troop types only",
+      "weapon_profile": {
+        "name": "Spirit Longma Spear",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-3",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ],
+        "notes": "S and AP bonuses apply only in a turn the wielder charged."
+      }
+    },
+    {
+      "id": "sun_and_moon_blades",
+      "name": "Sun & Moon Blades",
+      "category": "magic_weapon",
+      "points": 20,
+      "source": "arcane_journal",
+      "description": "According to legend, the blade of the Sun brings enlightenment, whilst the blade of the Moon brings only death.",
+      "rules_text": "Combat, S+1, AP-1, Extra Attacks (1), Magical Attacks, Requires Two Hands. Notes: If the wielder of the Sun & Moon Blades is struck with a Killing Blow, roll a Die. On a roll of 4+, the Killing Blow is parried and the Killing Rune is discarded with no further effect.",
+      "weapon_profile": {
+        "name": "Sun & Moon Blades",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ],
+        "notes": "Extra Attacks (+1). Requires Two Hands. On a KB roll, roll a Die: 4+ parries the KB."
+      }
+    },
+    {
+      "id": "armour_of_the_warbird",
+      "name": "The Armour of the Warbird",
+      "category": "magic_armour",
+      "points": 45,
+      "source": "arcane_journal",
+      "description": "The wearer of the Armour of the Warbird takes to the skies to strike at their enemies from above.",
+      "rules_text": "The bearer gains a suit of heavy armour. In addition, the bearer gains the Counter Charge, Fly (9), and Swiftstride special rules. However, the bearer cannot join a unit.",
+      "restrictions": "Regular infantry or heavy cavalry troop types only",
+      "grants_rules": [
+        "counter_charge",
+        "fly_9",
+        "swiftstride"
+      ],
+      "armour_profile": {
+        "armour_value": "Heavy armour (5+)",
+        "special_rules": [
+          "counter_charge",
+          "fly_9",
+          "swiftstride"
+        ]
+      }
+    },
+    {
+      "id": "shield_of_nan_gau",
+      "name": "Shield of Nan-Gau",
+      "category": "magic_armour",
+      "points": 20,
+      "source": "arcane_journal",
+      "description": "Carved from a section of the Great Bastion, the Shield of Nan-Gau is a massive stone and iron shield.",
+      "rules_text": "The Shield of Nan-Gau is a shield. In addition, during a turn in which its bearer was charged, the Shield of Nan-Gau improves its bearer's armour value by 2 (to a maximum of 2+).",
+      "is_shield": true,
+      "armour_profile": {
+        "armour_value": "Shield",
+        "special_rules": [],
+        "notes": "Armour value improves by 2 (max 2+) during the turn the bearer was charged."
+      }
+    },
+    {
+      "id": "crystal_of_kunlan",
+      "name": "Crystal of Kunlan",
+      "category": "talisman",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "The crystals that grow in the peaks of Kunlan unleash enormous energy when struck.",
+      "rules_text": "The bearer of this talisman is given a 5+ Ward save against any wounds suffered. In addition, if a natural 6 is rolled when the Ward save is made, every model in base contact with the bearer suffers a Strength 3 hit with an AP of \"-\". These attacks have the Flaming Attacks special rule."
+    },
+    {
+      "id": "crown_of_jade",
+      "name": "Crown of Jade",
+      "category": "talisman",
+      "points": 20,
+      "source": "arcane_journal",
+      "description": "Hostile magic recoils from the wearer of this gleaming crown of office.",
+      "rules_text": "The Crown of Jade gives its bearer a 4+ Ward save against any wounds suffered that were caused by a Magic Missile, Magical Vortex, or an Assailment spell."
+    },
+    {
+      "id": "maw_shard",
+      "name": "Maw Shard",
+      "category": "enchanted_item",
+      "points": 50,
+      "source": "arcane_journal",
+      "description": "Some have travelled to the broken lands around the Great Maw and brought back strange objects — among them the Maw Shard, an extra-worldly artefact.",
+      "rules_text": "If an enemy Wizard rolls a natural double when making a Casting roll whilst within 18\" of the bearer of the Maw Shard, the spell is miscast, regardless of the casting result."
+    },
+    {
+      "id": "alchemists_mask",
+      "name": "Alchemist's Mask",
+      "category": "enchanted_item",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "Created in the House of Secrets of Shang Yang, this mysterious mask gifts the wearer with the alchemical secrets of the Iron Dragon.",
+      "rules_text": "The wearer of the Alchemist's Mask can cast the Plague of Rust spell (from the Lore of Elementalism, page 327 of the Warhammer: the Old World rulebook) as a Bound spell, with a Power Level of 1."
+    },
+    {
+      "id": "spirit_lantern",
+      "name": "Spirit Lantern",
+      "category": "enchanted_item",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "The ghostly light of a Spirit Lantern reveals the denizens of the underworld and lays bare their weaknesses.",
+      "rules_text": "A model carrying a Spirit Lantern causes Terror. In addition, a model carrying a Spirit Lantern may re-roll any natural 6 to Wound of a natural 1 against enemy models that are Daemonic or Undead.",
+      "grants_rules": [
+        "terror"
+      ]
+    },
+    {
+      "id": "cloak_of_po_mei",
+      "name": "Cloak of Po Mei",
+      "category": "arcane_item",
+      "points": 50,
+      "source": "arcane_journal",
+      "description": "This enchanted cloak grants its wearer exceptional magical strength and mastery over one of the Elemental Winds.",
+      "rules_text": "In addition to their randomly generated spells, the wearer of the Cloak of Po Mei knows all three spells from the Lore of Yin or the Lore of Yang (chosen by their controlling player). However, they can only cast a number of spells equal to their Level of Wizardry per turn."
+    },
+    {
+      "id": "guardian_feng_shi_bo",
+      "name": "Guardian Feng Shi Bo",
+      "category": "arcane_item",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "Feng Shi Bo are elemental familiars summoned by Cathayan Wizards. Most often, these earthbound spirits guard their masters, protecting them from harm.",
+      "rules_text": "Any enemy model that directs its attacks against the owner of a Guardian Feng Shi Bo during the Combat phase suffers a -1 modifier to its rolls To Hit."
+    },
+    {
+      "id": "learned_feng_shi_bo",
+      "name": "Learned Feng Shi Bo",
+      "category": "arcane_item",
+      "points": 15,
+      "source": "arcane_journal",
+      "description": "Some Wizards create Feng Shi Bo to aid them with their scholarly studies, tasking the spirits with remembering obscure lore.",
+      "rules_text": "The owner of a Learned Feng Shi Bo knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry. Note that this does not increase the Wizard's Level. However, they can only cast a number of spells equal to their Level of Wizardry per turn."
+    },
+    {
+      "id": "standard_of_wei_jin",
+      "name": "Standard of Wei-Jin",
+      "category": "magic_standard",
+      "points": 60,
+      "source": "arcane_journal",
+      "description": "The banner of the Dragon Emperor inspires all Cathayan soldiers who gaze upon it, while spreading disorder and panic in their foes.",
+      "rules_text": "A unit carrying the Standard of Wei-Jin suffers a -1 modifier to the Leadership characteristic of all enemy units within 12\" of the model carrying the standard when making a Feat, Panic or Terror test."
+    },
+    {
+      "id": "icon_of_heavenly_fury",
+      "name": "Icon of Heavenly Fury",
+      "category": "magic_standard",
+      "points": 45,
+      "source": "arcane_journal",
+      "description": "The banners are the realm of the Celestial Dragon, and those that would encroach upon his domain must face his wrath.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, if they are not engaged in combat, the bearer of this banner may attempt to use it by making a Leadership test (using their own unmodified Leadership). If this test is passed, until your next Start of Turn sub-phase enemy units cannot use the Fly (X) special rule.",
+      "single_use": true
+    },
+    {
+      "id": "dragons_eye_runner",
+      "name": "Dragon's Eye Runner",
+      "category": "magic_standard",
+      "points": 30,
+      "source": "arcane_journal",
+      "description": "Under the scrutiny of the Celestial Dragons, enemy Wizards falter.",
+      "rules_text": "When an enemy Wizard chooses a unit carrying the Dragon's Eye Runner as the target of a spell, roll a D6. On a 4+, the Wizard's controlling player must choose another target. If there is no other visible target in range, the spell cannot be cast."
+    },
+    {
+      "id": "banner_of_the_bastion",
+      "name": "Banner of the Bastion",
+      "category": "magic_standard",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "Those fortunate enough to fight beneath this venerable banner must be as solid and unwavering as the Great Bastion itself.",
+      "rules_text": "A unit carrying the Banner of the Bastion gains the Shieldwall special rule.",
+      "grants_rules": [
+        "shieldwall"
+      ]
+    },
+    {
+      "id": "sword_of_reason",
+      "name": "The Sword of Reason",
+      "category": "magic_weapon",
+      "points": 65,
+      "source": "arcane_journal",
+      "description": "This great blade is sometimes wielded by Yuan Bo when his duties require him to enforce the Celestial Dragon's will upon the unruly.",
+      "rules_text": "Combat, S+2, AP-, Killing Blow, Magical Attacks. Notes: The wielder of the Sword of Reason strikes a Killing Blow if they roll a natural 5 or 6 when making a roll To Wound, rather than the usual 6.",
+      "weapon_profile": {
+        "name": "The Sword of Reason",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-",
+        "special_rules": [
+          "killing_blow",
+          "magical_attacks"
+        ],
+        "notes": "KB on 5 or 6 To Wound (not the usual 6 only)."
+      }
+    },
+    {
+      "id": "brazen_blade",
+      "name": "The Brazen Blade",
+      "category": "magic_weapon",
+      "points": 50,
+      "source": "arcane_journal",
+      "description": "Crafted in the forges of Nan-Gau, this unusual weapon carves deep wounds that no magic can heal.",
+      "rules_text": "Combat, S+4, AP-1, Magical Attacks, Multiple Wounds (2). Enemy models cannot make Regeneration saves against an attack made with the Brazen Blade. If the wielder rolls a natural 6 when making a Ward save or Regeneration save, they roll again.",
+      "weapon_profile": {
+        "name": "The Brazen Blade",
+        "range": "Combat",
+        "S": "S+4",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks",
+          "multiple_wounds_2"
+        ],
+        "notes": "Enemy cannot make Regeneration saves. Wielder must re-roll natural 6s on Ward/Regen saves."
+      }
+    },
+    {
+      "id": "wrath_of_xen_yang",
+      "name": "The Wrath of Xen Yang",
+      "category": "magic_weapon",
+      "points": 45,
+      "source": "arcane_journal",
+      "description": "Supposedly once wielded by the Celestial Dragon himself, this long and elegant spear burns with Dragon fire.",
+      "rules_text": "Combat, S+1, AP-, Flaming Attacks, Magical Attacks. Enemy models cannot make Regeneration saves against an attack made with this weapon.",
+      "weapon_profile": {
+        "name": "The Wrath of Xen Yang",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-",
+        "special_rules": [
+          "flaming_attacks",
+          "magical_attacks"
+        ],
+        "notes": "Enemy cannot make Regeneration saves against this weapon."
+      }
+    },
+    {
+      "id": "sword_of_nan_gau",
+      "name": "The Sword of Nan-Gau",
+      "category": "magic_weapon",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "This shimmering blade strikes with a life of its own, seeking any weakness in the armour of those that serve the Ruinous Powers.",
+      "rules_text": "Combat, S, AP-, Hatred (Warriors of Chaos), Magical Attacks.",
+      "weapon_profile": {
+        "name": "The Sword of Nan-Gau",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "magical_attacks"
+        ],
+        "notes": "Hatred (Warriors of Chaos)."
+      }
+    },
+    {
+      "id": "jade_armour_of_beichai",
+      "name": "Jade Armour of Beichai",
+      "category": "magic_armour",
+      "points": 40,
+      "source": "arcane_journal",
+      "description": "Crafted in secret in the city of Beichai, this jade armour flows from within with unwholesome power.",
+      "rules_text": "The Jade Armour of Beichai is a suit of full plate armour. In addition, the bearer of the Jade Armour has a 5+ Ward save against any wound suffered, and gains the Magic Resistance (-2) special rule.",
+      "armour_profile": {
+        "armour_value": "4+ (full plate)",
+        "special_rules": [
+          "magic_resistance_2"
+        ]
+      }
+    },
+    {
+      "id": "mantle_of_heaven",
+      "name": "The Mantle of Heaven",
+      "category": "magic_armour",
+      "points": 20,
+      "source": "arcane_journal",
+      "description": "Woven from silk harvested from the slopes of Kunlan, the wearer of these robes is filled with a measure of the Celestial Dragon's essence.",
+      "rules_text": "Models whose troop type is \"cavalry\" or \"monster\" only. The Mantle of Heaven may be worn with other armour. The wearer of the Mantle of Heaven improves their armour value by 2 (to a maximum of 2+) against non-magical shooting attacks.",
+      "restrictions": "Cavalry or monster troop types only"
+    },
+    {
+      "id": "sigil_of_smoke_and_powder",
+      "name": "Sigil of Smoke & Powder",
+      "category": "talisman",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "Clouds of gunpowder smoke hang about the bearer of this blackened sigil, obscuring them from the enemy's sight.",
+      "rules_text": "Any enemy model that targets this character or any unit they have joined during the Shooting phase suffers an additional -1 To Hit modifier."
+    },
+    {
+      "id": "vermilion_quills",
+      "name": "Vermilion Quills",
+      "category": "talisman",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "Great heroes of Grand Cathay are awarded tokens of favour in the form of a Vermilion warlord's tail feather, tokens which are said to bless the bearer with unrivalled fortune.",
+      "rules_text": "0-1 per model. Single Use. The bearer of a Vermilion Quill (but not any failed role To Hit or To Wound) made during the Combat phase can re-roll once per game, any natural double when making a Casting roll.",
+      "single_use": true
+    },
+    {
+      "id": "banner_of_dragons_wrath",
+      "name": "Banner of the Dragon's Wrath",
+      "category": "magic_standard",
+      "points": 45,
+      "source": "arcane_journal",
+      "description": "Those that march to war beneath the Banner of the Dragon's Wrath descend upon the foe with the fury of Li Dao, the Fire Dragon.",
+      "rules_text": "A unit carrying a Banner of the Dragon's Wrath gains the Flaming Attacks and Impact Hits (1) special rules.",
+      "grants_rules": [
+        "flaming_attacks",
+        "impact_hits_1"
+      ]
+    },
+    {
+      "id": "jade_banner",
+      "name": "The Jade Banner",
+      "category": "magic_standard",
+      "points": 40,
+      "source": "arcane_journal",
+      "description": "Carved from pure jade by Cathay's finest artisans, this ancient banner fills the heart of a Jade Warrior with pride.",
+      "rules_text": "When calculating combat resolution, a unit carrying the Grand Banner of Supremacy may claim an additional honour of +2 combat result points."
+    },
+    {
+      "id": "shroud_of_shiyama",
+      "name": "Shroud of Shiyama",
+      "category": "magic_standard",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "The spectral presence of Shiyama, the Spirit Dragon, lingers about those that fight beneath this silken standard crafted in her memory.",
+      "rules_text": "A unit carrying the Shroud of Shiyama gains the Fear special rule. If they already have Fear, they instead gain the Terror special rule.",
+      "grants_rules": [
+        "fear"
+      ]
+    },
+    {
+      "id": "banner_of_xen_wun",
+      "name": "The Banner of Xen Wun",
+      "category": "magic_standard",
+      "points": 15,
+      "source": "arcane_journal",
+      "description": "Those that would fight beneath this venerable banner must be as solid and unwavering as the Great Bastion itself.",
+      "rules_text": "Enemy units that wish to declare a Stand & Shoot or Fire & Flee charge reaction against a unit carrying the Banner of Xen Wun must first make a Leadership test. If this test is failed, they must Hold instead."
+    },
+    {
+      "id": "ring_of_jet",
+      "name": "Ring of Jet",
+      "category": "enchanted_item",
+      "points": 30,
+      "source": "arcane_journal",
+      "description": "Carved from jasjet jet quarried from the banks of the Dragon River, the Ring of Jet is infused with the power of Shiyama, allowing its wielder to summon ancestral spirits.",
+      "rules_text": "0-1 per model. The wielder of the Ring of Jet can cast the Unquiet Spirits spell from the Lore of Necromancy (page 333 of the Warhammer: the Old World rulebook) as a Bound spell, with a Power Level of 1.",
+      "restrictions": "0-1 per model"
+    },
+    {
+      "id": "golden_lion",
+      "name": "Golden Lion",
+      "category": "enchanted_item",
+      "points": 25,
+      "source": "arcane_journal",
+      "description": "Jade Lions are revered in Cathay for their bravery, and golden amulets carved into their likeness inspire great courage.",
+      "rules_text": "The bearer of the Golden Lion and their unit may re-roll any failed Fear, Panic, Rally or Terror test."
+    },
+    {
+      "id": "fires_of_nan_gau",
+      "name": "The Fires of Nan-Gau",
+      "category": "enchanted_item",
+      "points": 20,
+      "source": "arcane_journal",
+      "description": "Cunningly crafted by the artificers of Nan-Gau, these earthenware jars contain the fiery of the city's forges, ready to be unleashed upon Cathay's enemies.",
+      "rules_text": "0-1 per model. Single Use. The Fires of Nan-Gau is a breath weapon with the following profile: N/A, S4, AP-2, Breath Weapon, Flaming Attacks, Magical Attacks.",
+      "restrictions": "0-1 per model",
+      "single_use": true
+    },
+    {
+      "id": "clockwork_compass",
+      "name": "Clockwork Compass",
+      "category": "arcane_item",
+      "points": 50,
+      "source": "arcane_journal",
+      "description": "This finely wrought clockwork mechanism emulates the properties of the Wu Xing compass in Wei-Jin. When correctly used, it can temporarily still the Winds of Magic.",
+      "rules_text": "Single use. The bearer may use this item instead of making a Wizardly dispel attempt. If they do so, the spell is automatically dispelled with no Dispel roll required. In addition, all Remains in Play spells currently in play are dispelled, including spells cast by friendly Wizards.",
+      "single_use": true
+    },
+    {
+      "id": "seal_of_xing_po",
+      "name": "Seal of Xing Po",
+      "category": "arcane_item",
+      "points": 35,
+      "source": "arcane_journal",
+      "description": "The bearer of a Seal of Xing Po has studied the elemental winds for decades, mastering the Winds of Yin and Yang.",
+      "rules_text": "0-1 per model. If you wish, the bearer of a Seal of Xing Po may discard two of their randomly generated spells (rather than the usual one) and instead select two signature spells from either the Lore of Yang or the Lore of Yin (determined by which of those two special rules they have).",
+      "restrictions": "0-1 per model"
+    },
+    {
+      "id": "scrolls_of_wei_jin",
+      "name": "Scrolls of Wei-Jin",
+      "category": "arcane_item",
+      "points": 10,
+      "source": "arcane_journal",
+      "description": "Fortunate enough to study in the Elemental Winds in the heart of the Celestial City, these scholars carry with them many arcane scrolls, heavy with knowledge.",
+      "rules_text": "The bearer of the Scrolls of Wei-Jin knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry. However, they can only cast a number of spells equal to their Level of Wizardry per turn."
+    }
+  ],
+  "lore_of_yang": [
+    {
+      "id": "yang_constellation_dragon",
+      "name": "Constellation of the Dragon",
+      "type": "Magic Missile",
+      "casting_value": "7/11+",
+      "range": "18\"",
+      "effect": "If cast with 7+: target enemy unit suffers D3 Strength 3 hits, each with AP of -1. If cast with 11+: the target enemy unit suffers 2D6+2 Strength 4 hits, each with an AP of -1.",
+      "is_signature": true
+    },
+    {
+      "id": "yang_great_bastion",
+      "name": "Great Bastion",
+      "type": "Enchantment",
+      "casting_value": "9+",
+      "range": "12\"",
+      "effect": "Remains in Play. The target friendly unit gains D6 Wounds. In addition, every model within the front rank of an enemy unit that ends its move in base contact with the target unit whilst this spell is in play must make a Dangerous Terrain test. Any Wounds lost are counted as unsaved wounds inflicted by the enchantment when calculating combat resolution. Any Wounds lost due to this spell are removed from the target unit when this spell ends.",
+      "is_signature": false,
+      "remains_in_play": true
+    },
+    {
+      "id": "yang_might_heaven_earth",
+      "name": "Might of Heaven & Earth",
+      "type": "Enchantment",
+      "casting_value": "9/12+",
+      "range": "Self",
+      "effect": "If cast with 9+: the caster and any unit they have joined gain +1 modifier to their Weapon Skill and Strength characteristics (to a maximum of 10), and gain the Flaming Attacks special rule. If cast with 12+: all friendly units within the caster's Command range that are within the caster's unit also gain this modifier (to a maximum of 10) and gain the Flaming Attacks special rule. This spell lasts until the end of the turn.",
+      "is_signature": false
+    }
+  ],
+  "lore_of_yin": [
+    {
+      "id": "yin_spirits_wind_shadow",
+      "name": "Spirits of Wind & Shadow",
+      "type": "Hex",
+      "casting_value": "10+",
+      "range": "15\"",
+      "effect": "Until your next Start of Turn sub-phase, the target enemy unit becomes subject to the Random Movement (D6) special rule.",
+      "is_signature": true
+    },
+    {
+      "id": "yin_accursed_mirror",
+      "name": "Accursed Mirror",
+      "type": "Hex",
+      "casting_value": "9+",
+      "range": "15\"",
+      "effect": "Until your next Start of Turn sub-phase, any rolls To Hit of a natural 1 made by the target enemy unit during either the Shooting phase or the Combat phase result in a Strength 3 hit with an AP of -1, which must be resolved against the target enemy unit. This spell may target any enemy unit not engaged in combat.",
+      "is_signature": false
+    },
+    {
+      "id": "yin_ancestral_warriors",
+      "name": "Ancestral Warriors",
+      "type": "Assailment",
+      "casting_value": "7/11+",
+      "range": "Combat",
+      "effect": "If cast with 7+: a single enemy unit engaged in combat suffers 2D3 Strength 2 hits, each with an AP of -1. If cast with 11+: the target enemy unit suffers 2D6 Strength 4 hits, each with an AP of -1. This spell has the Armour Bane (2) special rule.",
+      "is_signature": false
+    }
+  ],
+  "publication": "forces_of_fantasy"
+}
