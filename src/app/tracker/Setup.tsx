@@ -161,6 +161,7 @@ function buildSpellEntries(setup: WizardSetup): SpellEntry[] {
       spellId,
       castingValue: spell?.casting_value,
       spellType: spell?.type,
+      effect: spell?.effect,
     };
   });
 }
@@ -175,6 +176,7 @@ function buildManualEntries(caster: ManualCaster): SpellEntry[] {
       spellId,
       castingValue: spell?.casting_value,
       spellType: spell?.type,
+      effect: spell?.effect,
     };
   });
 }

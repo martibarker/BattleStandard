@@ -35,7 +35,7 @@ export default function UnitChecklist({ mode, side }: UnitChecklistProps) {
   }
 
   // Get units that should appear in the checklist
-  const checklistUnits = getChecklistUnits(mode, faction, army.entries);
+  const checklistUnits = getChecklistUnits(mode, faction, army.entries, player.unitStates ?? []);
 
   const title = mode === 'shooting' ? 'Ranged Attacks' : 'Close Combat';
   const toggle = mode === 'shooting' ? toggleUnitShot : toggleUnitFought;
@@ -169,15 +169,22 @@ export default function UnitChecklist({ mode, side }: UnitChecklistProps) {
   );
 }
 
-function getChecklistUnits(mode: 'shooting' | 'combat', faction: Faction, entries: ArmyEntry[]): Unit[] {
+function getChecklistUnits(
+  mode: 'shooting' | 'combat',
+  faction: Faction,
+  entries: ArmyEntry[],
+  unitStates: import('../../store/gameStore').UnitGameState[],
+): Unit[] {
   if (mode === 'shooting') {
-    // Return units with ranged weapon profiles
-    return faction.units.filter((u: Unit) =>
-      entries.some((e) => e.unitId === u.id) &&
-      u.weapon_profiles?.some((wp) => wp.range !== 'Combat')
-    );
+    return faction.units.filter((u: Unit) => {
+      const entry = entries.find((e) => e.unitId === u.id);
+      if (!entry) return false;
+      const us = unitStates.find((s) => s.entryId === entry.id);
+      // Exclude units in combat, fleeing, or destroyed
+      if (us?.inCombat || us?.fled || us?.destroyed) return false;
+      return u.weapon_profiles?.some((wp) => wp.range !== 'Combat');
+    });
   } else {
-    // For combat, return all units (they may have melee weapons)
     return faction.units.filter((u: Unit) =>
       entries.some((e) => e.unitId === u.id) && u.category !== 'mount'
     );

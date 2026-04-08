@@ -4,6 +4,10 @@ import { getFaction } from '../../data/factions';
 import type { Unit, Faction } from '../../types/faction';
 import type { ArmyEntry } from '../../types/army';
 import StartOfTurnPanel from './StartOfTurnPanel';
+import ChargeScreen from './ChargeScreen';
+import CombatResolution from './CombatResolution';
+import UnitChecklist from './UnitChecklist';
+import FleeingTracker from './FleeingTracker';
 
 interface Prompt {
   id: string;
@@ -76,10 +80,38 @@ export default function PhaseCard() {
         </div>
       </div>
 
+      {/* Phase-specific interactive panels */}
+      {currentPhase === 'movement' && (
+        <div className="mb-6">
+          <h2 className="text-base font-semibold mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text-secondary)' }}>
+            Charge Declarations
+          </h2>
+          <ChargeScreen />
+        </div>
+      )}
+
+      {currentPhase === 'shooting' && (
+        <div className="mb-4">
+          <UnitChecklist mode="shooting" side={currentSide} />
+        </div>
+      )}
+
+      {(currentPhase === 'shooting' || currentPhase === 'end_of_turn') && (
+        <div className="mb-4">
+          <FleeingTracker />
+        </div>
+      )}
+
+      {currentPhase === 'combat' && (
+        <div className="mb-6">
+          <CombatResolution />
+        </div>
+      )}
+
       {/* Start of Turn: interactive checklist replaces generic prompts */}
       {currentPhase === 'start_of_turn' ? (
         <StartOfTurnPanel />
-      ) : prompts.length > 0 ? (
+      ) : currentPhase !== 'movement' && currentPhase !== 'combat' && prompts.length > 0 ? (
         <div className="space-y-4 mb-6">
           {prompts.map((prompt) => (
             <div
@@ -118,7 +150,7 @@ export default function PhaseCard() {
             </div>
           ))}
         </div>
-      ) : (
+      ) : currentPhase !== 'movement' && currentPhase !== 'combat' && currentPhase !== 'shooting' ? (
         <div
           className="rounded border p-4 mb-6"
           style={{
@@ -129,7 +161,7 @@ export default function PhaseCard() {
         >
           <p className="text-sm">No phase actions required.</p>
         </div>
-      )}
+      ) : null}
 
       {/* Phase Description */}
       <div

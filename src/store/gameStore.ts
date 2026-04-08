@@ -36,6 +36,10 @@ export interface SpellEntry {
   castingValue?: string;
   /** e.g. 'Assailment', 'Magic Missile', 'Hex', 'Enchantment' */
   spellType?: string;
+  /** Spell effect summary text from lores.json */
+  effect?: string;
+  /** Per-turn cast outcome — null/undefined = not yet resolved */
+  castState?: 'cast' | 'failed' | 'dispelled';
   /** True for spells granted by a bound spell item */
   isBound?: boolean;
   /** Power level for bound spells */
@@ -60,6 +64,47 @@ export interface UnitGameState {
   hasFought: boolean;
   ambushing: boolean;
   hasArrived: boolean;
+  /** Unit is currently locked in close combat */
+  inCombat?: boolean;
+  /** Charge was declared but dice failed this turn */
+  chargeFailed?: boolean;
+  /** Rally roll result this turn (cleared at turn start) */
+  rallyAttempt?: 'passed' | 'failed';
+}
+
+export interface CombatScore {
+  wounds: number;
+  ranks: number;
+  banner: number;
+  closeOrder: number;
+  highGround: number;
+  flank: number;
+  rear: number;
+}
+
+export function emptyCombatScore(): CombatScore {
+  return { wounds: 0, ranks: 0, banner: 0, closeOrder: 0, highGround: 0, flank: 0, rear: 0 };
+}
+
+export function totalCombatScore(s: CombatScore): number {
+  return s.wounds + s.ranks + s.banner + s.closeOrder + s.highGround + s.flank + s.rear;
+}
+
+export interface CombatRecord {
+  id: string;
+  /** Turn this combat was created / last updated */
+  turn: number;
+  /** entry IDs of P1 units in this combat */
+  p1EntryIds: string[];
+  /** entry IDs of P2 units in this combat */
+  p2EntryIds: string[];
+  p1Score: CombatScore;
+  p2Score: CombatScore;
+  outcome?: 'drawn' | 'give_ground' | 'fall_back' | 'flee';
+  loserSide?: PlayerSide;
+  pursuitDecision?: 'follow_up' | 'pursue' | 'restrain';
+  /** false = combat ongoing, true = resolved and units separated */
+  resolved: boolean;
 }
 
 export interface PlayerGameState {
@@ -108,6 +153,8 @@ export interface GameState {
   secondaryScores: { p1: number; p2: number };
   /** Persisted saved games list */
   savedGames: SavedGame[];
+  /** All combat records for the current game */
+  combats: CombatRecord[];
 
   /** Merge imported saved games — skips any whose gameId already exists */
   importSavedGames: (incoming: SavedGame[]) => number;
@@ -129,9 +176,20 @@ export interface GameState {
   addSpellsToWizard: (side: PlayerSide, unitId: string, unitName: string, lore: string, spells: SpellEntry[]) => void;
   addSecondaryVP: (side: PlayerSide, vp: number, objectiveName: string) => void;
   toggleSpellAssailment: (side: PlayerSide, unitId: string, lore: string, spellIndex: number) => void;
+  setSpellCastState: (side: PlayerSide, unitId: string, lore: string, spellIndex: number, state: 'cast' | 'failed' | 'dispelled') => void;
   /** Record a Gaze of the Gods result for a Warriors of Chaos character */
   recordGazeResult: (side: PlayerSide, unitId: string, result: string) => void;
   addEvent: (side: PlayerSide, message: string) => void;
+  /** Set / clear a unit's inCombat flag */
+  markUnitInCombat: (side: PlayerSide, entryId: string, value: boolean) => void;
+  /** Mark a unit's charge as failed this turn */
+  markChargeFailed: (side: PlayerSide, entryId: string) => void;
+  /** Record a rally attempt; passing clears the fled flag */
+  recordRallyAttempt: (side: PlayerSide, entryId: string, result: 'passed' | 'failed') => void;
+  /** Create or replace a CombatRecord */
+  upsertCombat: (record: CombatRecord) => void;
+  /** Resolve a combat: set outcome, update unit inCombat flags based on result */
+  resolveCombat: (combatId: string, outcome: CombatRecord['outcome'], loserSide?: PlayerSide, pursuitDecision?: CombatRecord['pursuitDecision']) => void;
 }
 
 const PHASE_ORDER: GamePhase[] = [
@@ -182,6 +240,7 @@ export const useGameStore = create<GameState>()(
       activeSecondaries: [],
       secondaryScores: { p1: 0, p2: 0 },
       savedGames: [],
+      combats: [],
 
       startGame: (p1Setup: Partial<PlayerGameState>, p2Setup: Partial<PlayerGameState>, gameLengthRule: 'standard' | 'random' | 'break_point' = 'standard', activeSecondaries: string[] = [], gameName = ''): void => {
         const p1State = { ...initialPlayerState('p1'), ...p1Setup };
@@ -201,6 +260,7 @@ export const useGameStore = create<GameState>()(
           turnLimit: 6,
           activeSecondaries,
           secondaryScores: { p1: 0, p2: 0 },
+          combats: [],
         });
       },
 
@@ -221,6 +281,7 @@ export const useGameStore = create<GameState>()(
           turnLimit: 6,
           activeSecondaries: [],
           secondaryScores: { p1: 0, p2: 0 },
+          combats: [],
         });
       },
 
@@ -284,61 +345,73 @@ export const useGameStore = create<GameState>()(
         if (currentIdx === -1) {
           // Starting from setup
           const nextSide = state.players.p1.goesFirst ? 'p1' : 'p2';
-          set({
-            currentPhase: PHASE_ORDER[0],
-            currentSide: nextSide,
-            currentTurn: 1,
-          });
+          set({ currentPhase: PHASE_ORDER[0], currentSide: nextSide, currentTurn: 1 });
           return;
         }
 
         if (currentIdx < PHASE_ORDER.length - 1) {
-          // Move to next phase, same side
           set({ currentPhase: PHASE_ORDER[currentIdx + 1] });
         } else {
-          // End of this side's turn, switch sides
-          const nextSide = state.currentSide === 'p1' ? 'p2' : 'p1';
+          // End of this side's turn — clear per-turn flags for the side that just finished
+          const finishingSide = state.currentSide;
+          const clearPerTurn = (player: PlayerGameState): PlayerGameState => ({
+            ...player,
+            unitStates: player.unitStates.map((u) => ({
+              ...u,
+              hasShot: false,
+              hasFought: false,
+              chargeFailed: false,
+              rallyAttempt: undefined,
+            })),
+            spells: player.spells.map((sel) => ({
+              ...sel,
+              spells: sel.spells.map((sp) => ({ ...sp, castState: undefined })),
+            })),
+          });
+
+          const nextSide = finishingSide === 'p1' ? 'p2' : 'p1';
           const nextTurn = nextSide === 'p1' ? state.currentTurn + 1 : state.currentTurn;
 
           if (nextTurn > state.turnLimit) {
-            // Game ends
             set({ isGameActive: false });
           } else {
             set({
               currentPhase: PHASE_ORDER[0],
               currentSide: nextSide,
               currentTurn: nextTurn,
+              players: {
+                ...state.players,
+                [finishingSide]: clearPerTurn(state.players[finishingSide]),
+              },
             });
           }
         }
       },
 
       toggleUnitShot: (side: PlayerSide, entryId: string): void => {
-        set((state: GameState) => ({
-          players: {
-            ...state.players,
-            [side]: {
-              ...state.players[side],
-              unitStates: state.players[side].unitStates.map((u: UnitGameState) =>
+        set((state: GameState) => {
+          const states = state.players[side].unitStates;
+          const exists = states.some((u: UnitGameState) => u.entryId === entryId);
+          const unitStates = exists
+            ? states.map((u: UnitGameState) =>
                 u.entryId === entryId ? { ...u, hasShot: !u.hasShot } : u
-              ),
-            },
-          },
-        }));
+              )
+            : [...states, { entryId, hasShot: true, hasFought: false }];
+          return { players: { ...state.players, [side]: { ...state.players[side], unitStates } } };
+        });
       },
 
       toggleUnitFought: (side: PlayerSide, entryId: string): void => {
-        set((state: GameState) => ({
-          players: {
-            ...state.players,
-            [side]: {
-              ...state.players[side],
-              unitStates: state.players[side].unitStates.map((u) =>
+        set((state: GameState) => {
+          const states = state.players[side].unitStates;
+          const exists = states.some((u) => u.entryId === entryId);
+          const unitStates = exists
+            ? states.map((u) =>
                 u.entryId === entryId ? { ...u, hasFought: !u.hasFought } : u
-              ),
-            },
-          },
-        }));
+              )
+            : [...states, { entryId, hasShot: false, hasFought: true }];
+          return { players: { ...state.players, [side]: { ...state.players[side], unitStates } } };
+        });
       },
 
       markUnitDestroyed: (side: PlayerSide, entryId: string): void => {
@@ -475,6 +548,120 @@ export const useGameStore = create<GameState>()(
                   ...sel,
                   spells: sel.spells.map((sp: SpellEntry, i: number) =>
                     i === spellIndex ? { ...sp, isAssailment: !sp.isAssailment } : sp
+                  ),
+                };
+              }),
+            },
+          },
+        }));
+      },
+
+      markUnitInCombat: (side: PlayerSide, entryId: string, value: boolean): void => {
+        set((state: GameState) => {
+          const states = state.players[side].unitStates;
+          const exists = states.some((u) => u.entryId === entryId);
+          const unitStates = exists
+            ? states.map((u) => u.entryId === entryId ? { ...u, inCombat: value } : u)
+            : [...states, { entryId, unitId: '', unitName: '', destroyed: false, fled: false, stunned: false, hasShot: false, hasFought: false, ambushing: false, hasArrived: false, inCombat: value }];
+          return { players: { ...state.players, [side]: { ...state.players[side], unitStates } } };
+        });
+      },
+
+      markChargeFailed: (side: PlayerSide, entryId: string): void => {
+        set((state: GameState) => {
+          const states = state.players[side].unitStates;
+          const exists = states.some((u) => u.entryId === entryId);
+          const unitStates = exists
+            ? states.map((u) => u.entryId === entryId ? { ...u, chargeFailed: true } : u)
+            : [...states, { entryId, unitId: '', unitName: '', destroyed: false, fled: false, stunned: false, hasShot: false, hasFought: false, ambushing: false, hasArrived: false, chargeFailed: true }];
+          return { players: { ...state.players, [side]: { ...state.players[side], unitStates } } };
+        });
+      },
+
+      recordRallyAttempt: (side: PlayerSide, entryId: string, result: 'passed' | 'failed'): void => {
+        set((state: GameState) => {
+          const states = state.players[side].unitStates;
+          const unitStates = states.map((u) =>
+            u.entryId === entryId
+              ? { ...u, rallyAttempt: result, fled: result === 'failed' ? true : false }
+              : u
+          );
+          return { players: { ...state.players, [side]: { ...state.players[side], unitStates } } };
+        });
+      },
+
+      upsertCombat: (record: CombatRecord): void => {
+        set((state: GameState) => {
+          const existing = state.combats.findIndex((c) => c.id === record.id);
+          const combats = existing === -1
+            ? [...state.combats, record]
+            : state.combats.map((c) => c.id === record.id ? record : c);
+          return { combats };
+        });
+      },
+
+      resolveCombat: (combatId: string, outcome: CombatRecord['outcome'], loserSide?: PlayerSide, pursuitDecision?: CombatRecord['pursuitDecision']): void => {
+        set((state: GameState) => {
+          const combat = state.combats.find((c) => c.id === combatId);
+          if (!combat) return {};
+
+          // Determine which combats are resolved (units separate)
+          const separates = outcome === 'fall_back' || outcome === 'flee' ||
+            (outcome === 'flee' && pursuitDecision === 'pursue') ||
+            pursuitDecision === 'restrain';
+
+          // Clear inCombat for loser on flee/fall_back; keep for drawn/give_ground
+          const clearLoserCombat = outcome === 'fall_back' || outcome === 'flee';
+          const clearWinnerCombat = separates && pursuitDecision === 'restrain';
+          const winnerSide = loserSide === 'p1' ? 'p2' : 'p1';
+
+          const updateSideUnits = (player: PlayerGameState, side: PlayerSide) => ({
+            ...player,
+            unitStates: player.unitStates.map((u) => {
+              const isLoserUnit = loserSide === side && (
+                (side === 'p1' ? combat.p1EntryIds : combat.p2EntryIds).includes(u.entryId)
+              );
+              const isWinnerUnit = winnerSide === side && (
+                (side === 'p1' ? combat.p1EntryIds : combat.p2EntryIds).includes(u.entryId)
+              );
+              if (isLoserUnit && clearLoserCombat) {
+                return { ...u, inCombat: false, fled: outcome === 'flee' ? true : u.fled };
+              }
+              if (isWinnerUnit && clearWinnerCombat) {
+                return { ...u, inCombat: false };
+              }
+              return u;
+            }),
+          });
+
+          return {
+            combats: state.combats.map((c) =>
+              c.id === combatId
+                ? { ...c, outcome, loserSide, pursuitDecision, resolved: separates }
+                : c
+            ),
+            players: {
+              p1: updateSideUnits(state.players.p1, 'p1'),
+              p2: updateSideUnits(state.players.p2, 'p2'),
+            },
+          };
+        });
+      },
+
+      setSpellCastState: (side: PlayerSide, unitId: string, lore: string, spellIndex: number, castState: 'cast' | 'failed' | 'dispelled'): void => {
+        set((state: GameState) => ({
+          players: {
+            ...state.players,
+            [side]: {
+              ...state.players[side],
+              spells: state.players[side].spells.map((sel: SpellSelection) => {
+                if (sel.unitId !== unitId || sel.lore !== lore) return sel;
+                return {
+                  ...sel,
+                  spells: sel.spells.map((sp: SpellEntry, i: number) =>
+                    i === spellIndex
+                      ? { ...sp, castState: sp.castState === castState ? undefined : castState }
+                      : sp
                   ),
                 };
               }),
