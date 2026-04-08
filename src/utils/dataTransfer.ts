@@ -106,6 +106,31 @@ export function generateArmyText(army: ArmyList, format: ShareFormat): string {
         lines.push(`    Magic: ${items.join(', ')}`);
       }
 
+      // Runic items (Dwarfs)
+      const ri = entry.runicItems;
+      if (ri && faction.runic_items) {
+        const allRunes = faction.runic_items;
+        const resolveRune = (id: string) => {
+          const r = allRunes.find((x) => x.id === id);
+          return r ? `${r.name} (${r.points} pts)` : id;
+        };
+        if (ri.weaponRunes.length > 0) {
+          lines.push(`    Weapon (${ri.weaponSlot?.replace('_', ' ') ?? '?'}): ${ri.weaponRunes.map(resolveRune).join(', ')}`);
+        }
+        if (ri.armourRunes.length > 0) {
+          lines.push(`    Armour: ${ri.armourRunes.map(resolveRune).join(', ')}`);
+        }
+        if (ri.talismanRunes.length > 0) {
+          lines.push(`    Talisman: ${ri.talismanRunes.map(resolveRune).join(', ')}`);
+        }
+        if (ri.engineeringRunes.length > 0) {
+          lines.push(`    Engineering: ${ri.engineeringRunes.map(resolveRune).join(', ')}`);
+        }
+        if (ri.tattooRunes.length > 0) {
+          lines.push(`    Tattoos: ${ri.tattooRunes.map(resolveRune).join(', ')}`);
+        }
+      }
+
       // Mount
       if (entry.selectedMountId) {
         const mount = faction.units.find((u) => u.id === entry.selectedMountId);

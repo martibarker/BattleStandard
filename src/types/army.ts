@@ -46,6 +46,36 @@ export interface ArmyEntry {
    * Carried through to General's Adjutant to pre-populate spell setup.
    */
   selectedLoreKey?: string;
+  /**
+   * Dwarfs only — runic items inscribed on this character or war machine.
+   * Characters: weapon/armour/talisman runes. War machines: engineering runes only.
+   */
+  runicItems?: RunicItemState;
+}
+
+/**
+ * Dwarfs-specific runic item selections for a single army entry.
+ *
+ * Characters pick a weapon slot (the physical item the runes go on), then
+ * stack up to 3 runes on it (from runic_weapon). Armour, talisman and
+ * engineering rune lists work the same way but have no slot choice.
+ *
+ * Tattoos are separate: the model itself is the "item" and the slot is
+ * implicit (always the flesh).
+ */
+export interface RunicItemState {
+  /** Which physical weapon the weapon-runes are inscribed on */
+  weaponSlot?: 'hand_weapon' | 'great_weapon' | 'crossbow' | 'handgun';
+  /** IDs of runic_weapon runes inscribed on weaponSlot (max 3) */
+  weaponRunes: string[];
+  /** IDs of runic_armour runes (max 3) */
+  armourRunes: string[];
+  /** IDs of runic_talisman runes (max 3) */
+  talismanRunes: string[];
+  /** IDs of runic_engineering runes on this war machine (max 3) */
+  engineeringRunes: string[];
+  /** IDs of runic_tattoo runes (AJ Slayer characters only) */
+  tattooRunes: string[];
 }
 
 export interface ArmyList {

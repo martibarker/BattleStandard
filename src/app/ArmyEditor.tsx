@@ -5,7 +5,7 @@ import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, f
 import { getFaction } from '../data/factions/index';
 
 import type { ErrataNote, Faction, Unit, WeaponProfile, Option, OptionChoice, SubOrder } from '../types/faction';
-import type { ArmyEntry } from '../types/army';
+import type { ArmyEntry, RunicItemState } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
 import { getLore, unitLoreToId } from '../utils/magic';
 import ValidationBars from '../components/ValidationBars';
@@ -974,6 +974,7 @@ export default function ArmyEditor() {
                               entry={entry}
                               faction={faction}
                               armyId={armyId}
+                              allEntries={army.entries}
                               updateEntry={updateEntry}
                               expandedMagicCategories={expandedMagicCategories}
                               setExpandedMagicCategories={setExpandedMagicCategories}
@@ -1350,6 +1351,7 @@ function EntryOptionsPanel({
   entry,
   faction,
   armyId,
+  allEntries,
   updateEntry,
   expandedMagicCategories,
   setExpandedMagicCategories,
@@ -1358,6 +1360,7 @@ function EntryOptionsPanel({
   entry: ArmyEntry;
   faction: Faction;
   armyId: string;
+  allEntries: import('../types/army').ArmyEntry[];
   updateEntry: (armyId: string, entryId: string, patch: Partial<Omit<ArmyEntry, 'id'>>) => void;
   expandedMagicCategories: Record<string, boolean>;
   setExpandedMagicCategories: (categories: Record<string, boolean>) => void;
@@ -2018,7 +2021,373 @@ function EntryOptionsPanel({
           </div>
         </>
       )}
+
+      {/* Runic Items (Dwarfs only) */}
+      {faction.runic_items && (faction.runic_items.length > 0) && (
+        <RunicItemsPicker
+          unit={unit}
+          entry={entry}
+          faction={faction}
+          armyId={armyId}
+          allEntries={allEntries}
+          updateEntry={updateEntry}
+        />
+      )}
     </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Runic Items Picker (Dwarfs only)
+// ---------------------------------------------------------------------------
+
+const EMPTY_RUNIC: RunicItemState = {
+  weaponSlot: undefined,
+  weaponRunes: [],
+  armourRunes: [],
+  talismanRunes: [],
+  engineeringRunes: [],
+  tattooRunes: [],
+};
+
+const WEAPON_SLOT_LABELS: Record<string, string> = {
+  hand_weapon: 'Hand Weapon',
+  great_weapon: 'Great Weapon',
+  crossbow: 'Crossbow',
+  handgun: 'Handgun',
+};
+
+/** Units that can take tattoos, and their limits */
+const TATTOO_LIMITS: Record<string, number> = {
+  doomseekers: 3,
+  daemon_slayer: 2,
+  dragon_slayer: 1,
+};
+
+type RuneListKey = 'weaponRunes' | 'armourRunes' | 'talismanRunes' | 'engineeringRunes' | 'tattooRunes';
+
+function RunicItemsPicker({
+  unit,
+  entry,
+  faction,
+  armyId,
+  allEntries,
+  updateEntry,
+}: {
+  unit: Unit;
+  entry: ArmyEntry;
+  faction: Faction;
+  armyId: string;
+  allEntries: ArmyEntry[];
+  updateEntry: (armyId: string, entryId: string, patch: Partial<Omit<ArmyEntry, 'id'>>) => void;
+}) {
+  const allRunes = faction.runic_items ?? [];
+  const ri: RunicItemState = entry.runicItems ?? { ...EMPTY_RUNIC, weaponRunes: [], armourRunes: [], talismanRunes: [], engineeringRunes: [], tattooRunes: [] };
+  const isWarMachine = unit.category === 'war_machine';
+  const tattooLimit = TATTOO_LIMITS[unit.id] ?? 0;
+  const hasTattoos = tattooLimit > 0;
+
+  // Points allowance — from the "May purchase Runic Items" option
+  const runicAllowanceOpt = (unit.options ?? []).find(
+    (o) => o.max_points !== undefined && (
+      o.description.toLowerCase().includes('runic') ||
+      o.description.toLowerCase().includes('engineering rune')
+    )
+  );
+  const allowance = runicAllowanceOpt?.max_points ?? null;
+
+  // Total runic pts on this entry
+  const totalRunicPts = [
+    ...ri.weaponRunes,
+    ...ri.armourRunes,
+    ...ri.talismanRunes,
+    ...ri.engineeringRunes,
+    ...ri.tattooRunes,
+  ].reduce((sum, id) => {
+    const r = allRunes.find((x) => x.id === id);
+    return sum + (r?.points ?? 0);
+  }, 0);
+
+  // Master Rune IDs used across the entire army (excluding this entry)
+  const otherEntryRuneIds = allEntries
+    .filter((e) => e.id !== entry.id)
+    .flatMap((e) => {
+      const r = e.runicItems;
+      if (!r) return [];
+      return [...r.weaponRunes, ...r.armourRunes, ...r.talismanRunes, ...r.engineeringRunes, ...r.tattooRunes];
+    });
+  const armyMasterRunes = new Set(
+    otherEntryRuneIds.filter((id) => {
+      const r = allRunes.find((x) => x.id === id);
+      return r?.name.startsWith('Master Rune');
+    })
+  );
+
+  function patchRi(patch: Partial<RunicItemState>) {
+    updateEntry(armyId, entry.id, { runicItems: { ...ri, ...patch } });
+  }
+
+  function toggleRune(listKey: RuneListKey, runeId: string) {
+    const current = ri[listKey] as string[];
+    if (current.includes(runeId)) {
+      patchRi({ [listKey]: current.filter((id) => id !== runeId) });
+    } else {
+      patchRi({ [listKey]: [...current, runeId] });
+    }
+  }
+
+  function isRuneDisabled(
+    listKey: RuneListKey,
+    rune: NonNullable<typeof faction.runic_items>[0],
+    currentList: string[]
+  ): { disabled: boolean; reason?: string } {
+    const isSelected = currentList.includes(rune.id);
+    if (isSelected) return { disabled: false };
+
+    // Tattoos: unit-specific limit (not Rule of Three)
+    if (listKey === 'tattooRunes') {
+      if (currentList.length >= tattooLimit) return { disabled: true, reason: `Max ${tattooLimit} tattoo${tattooLimit === 1 ? '' : 's'} for this unit` };
+      // Tattoos also cannot be duplicated across characters in the same army (Rule of Pride equivalent)
+      return { disabled: false };
+    }
+
+    // Rule of Three: max 3 runes per item
+    if (currentList.length >= 3) return { disabled: true, reason: 'Max 3 runes per item' };
+
+    // Rule of Jealousy: each Master Rune once per army
+    if (rune.name.startsWith('Master Rune') && armyMasterRunes.has(rune.id)) {
+      return { disabled: true, reason: 'Master Rune already in army' };
+    }
+
+    // Rule of Jealousy: only one Master Rune per item
+    if (rune.name.startsWith('Master Rune')) {
+      const hasMaster = currentList.some((id) => allRunes.find((r) => r.id === id)?.name.startsWith('Master Rune'));
+      if (hasMaster) return { disabled: true, reason: 'One Master Rune per item' };
+    }
+
+    // Rule of Duplication: non-* runes cannot be duplicated on same item
+    const isDuplicable = rune.name.endsWith('*') || rune.id.endsWith('_dup');
+    if (!isDuplicable && currentList.includes(rune.id)) {
+      return { disabled: true, reason: 'Cannot duplicate this rune' };
+    }
+
+    // Points cap
+    if (allowance !== null) {
+      const remaining = allowance - totalRunicPts;
+      if (rune.points > remaining) return { disabled: true, reason: 'Exceeds points allowance' };
+    }
+
+    return { disabled: false };
+  }
+
+  function renderRuneList(
+    label: string,
+    listKey: RuneListKey,
+    filterFn: (r: NonNullable<typeof faction.runic_items>[0]) => boolean,
+    expandKey: string,
+    expandedMap: Record<string, boolean>,
+    setExpanded: (m: Record<string, boolean>) => void,
+  ) {
+    const runes = allRunes.filter(filterFn);
+    if (runes.length === 0) return null;
+    const currentList = ri[listKey] as string[];
+    const isExpanded = expandedMap[expandKey] ?? false;
+    const selectedPts = currentList.reduce((s, id) => s + (allRunes.find((r) => r.id === id)?.points ?? 0), 0);
+
+    return (
+      <div key={listKey} className="flex flex-col">
+        <button
+          className="flex items-center justify-between w-full text-left py-1"
+          onClick={() => setExpanded({ ...expandedMap, [expandKey]: !isExpanded })}
+        >
+          <span className="text-xs uppercase tracking-wide" style={{ color: 'var(--f-text-3)', opacity: 0.6, fontSize: '0.65rem' }}>
+            {isExpanded ? '▼' : '▶'} {label}
+          </span>
+          {selectedPts > 0 && (
+            <span className="text-xs" style={{ color: 'var(--f-text-3)' }}>{selectedPts} pts</span>
+          )}
+        </button>
+        {isExpanded && runes.map((rune) => {
+          const isSelected = currentList.includes(rune.id);
+          const { disabled, reason } = isRuneDisabled(listKey, rune, currentList);
+          const isDuplicable = rune.name.includes('*');
+          return (
+            <label
+              key={rune.id}
+              className={`flex items-start gap-2 pt-1.5 border-t ${disabled && !isSelected ? 'opacity-40' : 'cursor-pointer'}`}
+              style={{ borderColor: 'var(--f-border)' }}
+            >
+              <span
+                className="shrink-0 w-4 h-4 mt-0.5 rounded border flex items-center justify-center text-xs"
+                style={{
+                  borderColor: isSelected ? 'var(--f-gold)' : 'var(--f-border)',
+                  backgroundColor: isSelected ? 'var(--f-gold)' : 'transparent',
+                  color: '#0f1117',
+                }}
+              >
+                {isSelected ? '✓' : ''}
+              </span>
+              <input
+                type="checkbox"
+                checked={isSelected}
+                disabled={disabled && !isSelected}
+                onChange={() => toggleRune(listKey, rune.id)}
+                className="sr-only"
+              />
+              <span className="flex flex-col min-w-0 gap-0.5 flex-1">
+                <span className="flex items-center gap-1.5 flex-wrap">
+                  <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--f-text)' : 'var(--f-text-3)' }}>
+                    {rune.name}{isDuplicable ? '' : ''} — {rune.points} pts
+                  </span>
+                  {isDuplicable && (
+                    <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text-3)', fontSize: '0.6rem' }}>stackable</span>
+                  )}
+                  {rune.name.startsWith('Master Rune') && (
+                    <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text-3)', fontSize: '0.6rem' }}>Master</span>
+                  )}
+                </span>
+                {rune.description && (
+                  <span className="text-xs leading-snug" style={{ color: 'var(--f-text-3)' }}>{rune.description}</span>
+                )}
+                {disabled && !isSelected && reason && (
+                  <span className="text-xs italic" style={{ color: 'var(--f-text-3)', opacity: 0.5 }}>{reason}</span>
+                )}
+              </span>
+            </label>
+          );
+        })}
+      </div>
+    );
+  }
+
+  // Weapon slot options: melee vs ranged
+  const hasAnyWeaponRunes = allRunes.some((r) => r.category === 'runic_weapon');
+  const hasMeleeSlot = !isWarMachine && hasAnyWeaponRunes;
+
+  // Which weapon runes are available based on selected slot
+  function weaponRuneFilter(r: NonNullable<typeof faction.runic_items>[0]) {
+    if (r.category !== 'runic_weapon') return false;
+    if (!ri.weaponSlot) return false;
+    const isRangedSlot = ri.weaponSlot === 'crossbow' || ri.weaponSlot === 'handgun';
+    const isRangedRune = r.source === 'arcane_journal';
+    return isRangedSlot ? isRangedRune : !isRangedRune;
+  }
+
+  // State for expand/collapse — reuse expandedMagicCategories but with runic_ prefix would be cleaner;
+  // since we can't easily thread a separate state here, we use a local useState.
+  // Actually EntryOptionsPanel already has access via closure — but RunicItemsPicker is separate.
+  // We use a local state here.
+  const [expandedRunes, setExpandedRunes] = React.useState<Record<string, boolean>>({});
+
+  if (!allRunes.length) return null;
+  if (isWarMachine && !allRunes.some((r) => r.category === 'runic_engineering')) return null;
+  if (!isWarMachine && !hasTattoos && !allRunes.some((r) => ['runic_weapon', 'runic_armour', 'runic_talisman'].includes(r.category))) return null;
+
+  const overBudget = allowance !== null && totalRunicPts > allowance;
+
+  return (
+    <>
+      <div className="border-t" style={{ borderColor: 'var(--f-border)' }} />
+      <div className="flex flex-col gap-1.5">
+        <div className="flex items-center justify-between">
+          <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>Runic Items</p>
+          {allowance !== null && (
+            <p className="text-xs" style={{ color: overBudget ? 'var(--f-gold)' : 'var(--f-text-3)' }}>
+              {totalRunicPts} / {allowance} pts
+            </p>
+          )}
+        </div>
+
+        {/* Weapon slot picker (characters only) */}
+        {hasMeleeSlot && (
+          <div className="flex flex-col gap-1">
+            <p className="text-xs" style={{ color: 'var(--f-text-3)', opacity: 0.7 }}>Inscribe weapon runes on:</p>
+            <div className="flex flex-wrap gap-1.5">
+              {(Object.keys(WEAPON_SLOT_LABELS) as (keyof RunicItemState['weaponSlot'] & string)[]).map((slot) => {
+                const isActive = ri.weaponSlot === slot;
+                return (
+                  <button
+                    key={slot}
+                    onClick={() => {
+                      if (isActive) {
+                        patchRi({ weaponSlot: undefined, weaponRunes: [] });
+                      } else {
+                        patchRi({ weaponSlot: slot as RunicItemState['weaponSlot'], weaponRunes: [] });
+                      }
+                    }}
+                    className="text-xs px-2 py-1 rounded border"
+                    style={{
+                      borderColor: isActive ? 'var(--f-gold)' : 'var(--f-border)',
+                      backgroundColor: isActive ? 'var(--f-gold)' : 'transparent',
+                      color: isActive ? '#0f1117' : 'var(--f-text-3)',
+                    }}
+                  >
+                    {WEAPON_SLOT_LABELS[slot]}
+                  </button>
+                );
+              })}
+            </div>
+            {ri.weaponSlot && (
+              <p className="text-xs italic" style={{ color: 'var(--f-text-3)', opacity: 0.6 }}>
+                {ri.weaponSlot === 'crossbow' || ri.weaponSlot === 'handgun'
+                  ? 'Showing Engineers\' Weapon Runes (crossbow/handgun only)'
+                  : 'Showing Weapon Runes (hand weapon or great weapon)'}
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Weapon runes */}
+        {ri.weaponSlot && renderRuneList(
+          'Weapon Runes',
+          'weaponRunes',
+          weaponRuneFilter,
+          'runic_weapon',
+          expandedRunes,
+          setExpandedRunes,
+        )}
+
+        {/* Armour runes (characters only) */}
+        {!isWarMachine && renderRuneList(
+          'Armour Runes',
+          'armourRunes',
+          (r) => r.category === 'runic_armour',
+          'runic_armour',
+          expandedRunes,
+          setExpandedRunes,
+        )}
+
+        {/* Talisman runes (characters only) */}
+        {!isWarMachine && renderRuneList(
+          'Talisman Runes',
+          'talismanRunes',
+          (r) => r.category === 'runic_talisman',
+          'runic_talisman',
+          expandedRunes,
+          setExpandedRunes,
+        )}
+
+        {/* Engineering runes (war machines only) */}
+        {isWarMachine && renderRuneList(
+          'Engineering Runes',
+          'engineeringRunes',
+          (r) => r.category === 'runic_engineering',
+          'runic_engineering',
+          expandedRunes,
+          setExpandedRunes,
+        )}
+
+        {/* Tattoos (Slayer characters) */}
+        {hasTattoos && renderRuneList(
+          `Runic Tattoos (max ${tattooLimit})`,
+          'tattooRunes',
+          (r) => r.category === 'runic_tattoo',
+          'runic_tattoo',
+          expandedRunes,
+          setExpandedRunes,
+        )}
+      </div>
+    </>
   );
 }
 

@@ -103,6 +103,22 @@ export function calcOptionsCost(unit: Unit, entry: ArmyEntry, faction: Faction):
     if (item) cost += item.points;
   }
 
+  // Runic items (Dwarfs only)
+  const ri = entry.runicItems;
+  if (ri && faction.runic_items) {
+    const allRuneIds = [
+      ...ri.weaponRunes,
+      ...ri.armourRunes,
+      ...ri.talismanRunes,
+      ...ri.engineeringRunes,
+      ...ri.tattooRunes,
+    ];
+    for (const runeId of allRuneIds) {
+      const rune = faction.runic_items.find((r) => r.id === runeId);
+      if (rune) cost += rune.points;
+    }
+  }
+
   return cost;
 }
 

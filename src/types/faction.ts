@@ -194,7 +194,14 @@ export type MagicItemCategory =
   | 'talisman'
   | 'enchanted_item'
   | 'arcane_item'
-  | 'magic_standard';
+  | 'magic_standard'
+  // Dwarf runic item categories (stored in runic_items array)
+  | 'runic_weapon'
+  | 'runic_armour'
+  | 'runic_talisman'
+  | 'runic_standard'
+  | 'runic_engineering'
+  | 'runic_tattoo';
 
 export interface MagicItem {
   id: string;
