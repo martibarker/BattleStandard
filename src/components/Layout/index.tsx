@@ -231,7 +231,6 @@ function ThemePicker() {
 
 function MyListsSection() {
   const armies = useArmyStore((s) => s.armies);
-  const createArmy = useArmyStore((s) => s.createArmy);
   const navigate = useNavigate();
 
   return (
@@ -286,14 +285,7 @@ function MyListsSection() {
         ))}
         <button
           onClick={() => {
-            const id = createArmy({
-              name: 'New Army',
-              factionId: 'empire-of-man',
-              compositionId: 'standard',
-              matchedPlayFormats: [],
-              pointsLimit: 2000,
-            });
-            navigate(`/army-builder/${id}`);
+            navigate('/army-builder/new');
           }}
           style={{
             display: 'flex',

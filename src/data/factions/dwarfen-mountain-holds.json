@@ -2905,6 +2905,7 @@
       "name": "Thorgrim Ulleksson, Kharl of the Dammaz Kron",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
       "troop_type": "Heavy infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -2963,6 +2964,7 @@
       "name": "Ungrim Ironfist, Slayer King of Karak Kadrin",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
       "troop_type": "Heavy infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -3024,6 +3026,7 @@
       "name": "Burlok Damminson",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
       "troop_type": "Heavy infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -3093,6 +3096,7 @@
       "name": "Dwarf Engineer Sappers",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
       "troop_type": "Heavy infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -3206,6 +3210,9 @@
       "notes": [
         "Dig In!: during any Command sub-phase, if not engaged in combat, this character may attempt to lead their unit in digging fieldworks by making a Leadership test; if passed, this character and any unit joined becomes Entrenched (behind partial cover and defending a low linear obstacle); lost if the unit moves",
         "Hostile Terrain: any enemy model that ends its movement within the Command range of one or more characters with this special rule (not fleeing or engaged in combat) must make a Dangerous Terrain test"
+      ],
+      "availability": [
+        "expeditionary_force"
       ],
       "source_page": 42
     },
@@ -3410,6 +3417,9 @@
         "Standard runes may be purchased up to a total of 75 points"
       ],
       "magic_standard": 75,
+      "availability": [
+        "royal_clan"
+      ],
       "source_page": 44
     },
     {
@@ -3594,9 +3604,6 @@
       "source": "arcane_journal",
       "category": "cavalry",
       "list_category": "special",
-      "list_category_overrides": {
-        "expeditionary_force_core": "core"
-      },
       "troop_type": "Monstrous cavalry",
       "base_size": "50 x 50 mm",
       "unit_size": "1-2",
@@ -3651,6 +3658,9 @@
       "notes": [
         "Extended Formation: whilst in Skirmish formation, every model in a unit of Scout Gyrocopters must be within 3\" of another model in the same unit (rather than the usual 1\")",
         "Hit & Run: should it win a round of combat, a unit with this special rule may choose to Fall Back in Good Order rather than making a follow up or pursuit move"
+      ],
+      "availability": [
+        "expeditionary_force"
       ],
       "source_page": 46
     },
@@ -3744,6 +3754,10 @@
       "source": "arcane_journal",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "royal_clan": "mercenaries",
+        "expeditionary_force": "mercenaries"
+      },
       "troop_type": "War machine",
       "base_size": "50 x 50 mm (war machine), 25 x 25 mm (crew)",
       "unit_size": "1",
