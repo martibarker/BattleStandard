@@ -4,7 +4,7 @@ import { useArmyStore } from '../store/armyStore';
 import { calcArmourSave, calcCategoryPoints, calcEntryPoints, calcOptionsCost, flattenEquipment, getEffectiveListCategory, isWizard, parseUnitSize, validateArmy } from '../utils/armyValidation';
 import { getFaction } from '../data/factions/index';
 
-import type { Faction, Unit, WeaponProfile, Option, OptionChoice, SubOrder } from '../types/faction';
+import type { ErrataNote, Faction, Unit, WeaponProfile, Option, OptionChoice, SubOrder } from '../types/faction';
 import type { ArmyEntry } from '../types/army';
 import specialRulesData from '../data/rules/special-rules.json';
 import { getLore, unitLoreToId } from '../utils/magic';
@@ -15,6 +15,83 @@ import QRCodeModal from '../components/QRCodeModal';
 
 
 type BrowserTab = 'characters' | 'core' | 'special' | 'rare' | 'mercenaries';
+
+const SOURCE_ABBREV: Record<string, string> = {
+  forces_of_fantasy: 'FoF',
+  ravening_hordes: 'RH',
+  arcane_journal: 'AJ',
+  legends: 'Leg',
+};
+
+function SourceRef({ source, page }: { source: string; page?: number }) {
+  if (!page) return null;
+  return (
+    <span style={{
+      fontFamily: "'Cinzel', Georgia, serif",
+      fontSize: '9px',
+      letterSpacing: '0.06em',
+      color: 'var(--f-text-4)',
+      backgroundColor: 'var(--f-bg)',
+      border: '1px solid var(--f-border)',
+      borderRadius: '3px',
+      padding: '1px 5px',
+      whiteSpace: 'nowrap',
+    }}>
+      {SOURCE_ABBREV[source] ?? source} p.{page}
+    </span>
+  );
+}
+
+/** Errata badge — amber pill for stat/points changes, muted "FAQ" tag for rule changes */
+function ErrataIndicator({ errata }: { errata?: ErrataNote[] }) {
+  if (!errata || errata.length === 0) return null;
+
+  const hasStatChange = errata.some((e) => e.type === 'stat' || e.type === 'points');
+  const hasRuleChange = errata.some((e) => e.type === 'rule');
+  const faqUrl = errata[0].faq_url;
+  const tooltipLines = errata.map((e) => e.note).join('\n');
+
+  return (
+    <a
+      href={faqUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={tooltipLines}
+      style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', textDecoration: 'none' }}
+    >
+      {hasStatChange && (
+        <span style={{
+          fontFamily: "'Cinzel', Georgia, serif",
+          fontSize: '8px',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: '#92400e',
+          backgroundColor: '#fef3c7',
+          border: '1px solid #f59e0b',
+          borderRadius: '3px',
+          padding: '1px 5px',
+          whiteSpace: 'nowrap',
+        }}>
+          FAQ ↗
+        </span>
+      )}
+      {hasRuleChange && !hasStatChange && (
+        <span style={{
+          fontFamily: "'Cinzel', Georgia, serif",
+          fontSize: '8px',
+          letterSpacing: '0.06em',
+          color: 'var(--f-text-4)',
+          border: '1px solid var(--f-border)',
+          borderRadius: '3px',
+          padding: '1px 4px',
+          whiteSpace: 'nowrap',
+        }}>
+          FAQ ↗
+        </span>
+      )}
+    </a>
+  );
+}
 
 const TABS: { id: BrowserTab; label: string }[] = [
   { id: 'characters', label: 'Characters' },
@@ -513,7 +590,11 @@ export default function ArmyEditor() {
                 <div key={unit.id} style={{ backgroundColor: 'var(--f-card)', border: '1px solid var(--f-border)', borderLeft: `3px solid ${tabColor}`, padding: '10px 14px' }}>
                   <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '8px' }}>
                     <div style={{ minWidth: 0 }}>
-                      <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '13px', fontWeight: 700, color: 'var(--f-text)', margin: '0 0 2px', letterSpacing: '0.02em' }}>{unit.name}</p>
+                      <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', flexWrap: 'wrap', marginBottom: '2px' }}>
+                        <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '13px', fontWeight: 700, color: 'var(--f-text)', margin: 0, letterSpacing: '0.02em' }}>{unit.name}</p>
+                        <SourceRef source={unit.source} page={unit.source_page} />
+                        <ErrataIndicator errata={unit.errata} />
+                      </div>
                       <p style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: '11px', fontStyle: 'italic', color: 'var(--f-text-3)', margin: '0 0 4px' }}>{unit.troop_type} · {unit.base_size}</p>
                       <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '11px', color: 'var(--f-gold)', margin: '0 0 4px' }}>
                         {isFixed ? `${unit.points} pts` : `${unit.points} pts/model · min ${min}${unit.unit_size !== `${min}+` && unit.unit_size !== `${min}` ? ` (${unit.unit_size})` : '+'}`}
@@ -753,14 +834,18 @@ export default function ArmyEditor() {
                       {/* Unit header row */}
                       <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '12px', alignItems: 'start', marginBottom: '6px' }}>
                         <div>
-                          <p style={{
-                            fontFamily: "'Cinzel', Georgia, serif",
-                            fontSize: '14px',
-                            fontWeight: 700,
-                            color: 'var(--f-text)',
-                            margin: '0 0 2px',
-                            letterSpacing: '0.02em',
-                          }}>{entry.customName || unit.name}</p>
+                          <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', flexWrap: 'wrap', marginBottom: '2px' }}>
+                            <p style={{
+                              fontFamily: "'Cinzel', Georgia, serif",
+                              fontSize: '14px',
+                              fontWeight: 700,
+                              color: 'var(--f-text)',
+                              margin: 0,
+                              letterSpacing: '0.02em',
+                            }}>{entry.customName || unit.name}</p>
+                            <SourceRef source={unit.source} page={unit.source_page} />
+                            <ErrataIndicator errata={unit.errata} />
+                          </div>
                           <p style={{
                             fontFamily: "'Source Serif 4', Georgia, serif",
                             fontSize: '11px',
@@ -1133,15 +1218,16 @@ function WeaponProfileTable({ profiles }: { profiles: WeaponProfile[] }) {
 
 
 function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
-  const [activeRule, setActiveRule] = useState<{ name: string; url: string } | null>(null);
+  const [activeRule, setActiveRule] = useState<{ name: string; url: string; faqUrl?: string } | null>(null);
   if (!ruleIds || ruleIds.length === 0) return null;
-  const rulesData = (specialRulesData as { rules: { id: string; name: string; url?: string }[] }).rules;
+  const rulesData = (specialRulesData as { rules: { id: string; name: string; url?: string; faq_url?: string }[] }).rules;
   return (
     <>
       <div className="flex flex-wrap gap-1 mt-1.5">
         {ruleIds.map((id) => {
           const rule = rulesData.find((r) => r.id === id);
           const name = rule?.name ?? formatRuleName(id);
+          const faqUrl = rule?.faq_url;
           // Use explicit url override if present, otherwise derive from name
           const url = rule?.url ?? (() => {
             // Strip parenthetical qualifier (e.g. "Hatred (Dwarfs)" → "hatred") so variants
@@ -1153,8 +1239,8 @@ function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
           return (
             <button
               key={id}
-              onClick={() => setActiveRule({ name, url })}
-              className="text-xs px-1.5 py-0.5 rounded"
+              onClick={() => setActiveRule({ name, url, faqUrl })}
+              className="text-xs px-1.5 py-0.5 rounded inline-flex items-center gap-1"
               style={{
                 backgroundColor: 'var(--f-bg)',
                 color: 'var(--f-primary)',
@@ -1163,6 +1249,15 @@ function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
               }}
             >
               {name}
+              {faqUrl && (
+                <span
+                  className="text-xs font-bold px-0.5 rounded"
+                  style={{ backgroundColor: '#92400e', color: '#fef3c7', fontSize: '0.6rem', lineHeight: '1rem' }}
+                  title="Rule text updated in FAQ"
+                >
+                  FAQ
+                </span>
+              )}
             </button>
           );
         })}
@@ -1187,6 +1282,18 @@ function SpecialRulesList({ ruleIds }: { ruleIds: string[] }) {
                 {activeRule.name}
               </span>
               <div className="flex items-center gap-3">
+                {activeRule.faqUrl && (
+                  <a
+                    href={activeRule.faqUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-semibold px-1.5 py-0.5 rounded"
+                    style={{ backgroundColor: '#92400e', color: '#fef3c7' }}
+                    title="This rule was updated in the Jan 2026 FAQ"
+                  >
+                    FAQ updated ↗
+                  </a>
+                )}
                 <a
                   href={activeRule.url}
                   target="_blank"
@@ -1727,17 +1834,12 @@ function EntryOptionsPanel({
                         <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                           {item.name} — {item.points} pts
                         </span>
+                        <ErrataIndicator errata={item.errata} />
                         {itemExt.single_use && (
                           <span className="text-xs px-1 rounded" style={{ backgroundColor: 'var(--f-bg)', color: 'var(--f-text-3)', fontSize: '0.6rem' }}>Single Use</span>
                         )}
                       </span>
-                      {/* Flavour text — italic */}
-                      {item.description && (
-                        <span className="text-xs italic leading-snug" style={{ color: 'var(--f-text-3)', opacity: 0.8 }}>
-                          {item.description}
-                        </span>
-                      )}
-                      {/* Rules text — non-italic */}
+                      {/* Rules text */}
                       {(item as typeof item & { rules_text?: string }).rules_text && (
                         <span className="text-xs leading-snug" style={{ color: 'var(--f-text-3)' }}>
                           {(item as typeof item & { rules_text?: string }).rules_text}
@@ -1902,11 +2004,6 @@ function EntryOptionsPanel({
                           <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--f-text)' : 'var(--f-text-3)' }}>
                             {item.name} — {item.points} pts
                           </span>
-                          {item.description && (
-                            <span className="text-xs italic leading-snug" style={{ color: 'var(--f-text-3)', opacity: 0.8 }}>
-                              {item.description}
-                            </span>
-                          )}
                           {(item as typeof item & { rules_text?: string }).rules_text && (
                             <span className="text-xs leading-snug" style={{ color: 'var(--f-text-3)' }}>
                               {(item as typeof item & { rules_text?: string }).rules_text}

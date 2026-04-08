@@ -135,9 +135,15 @@ export type ArmyLimitType =
    */
   | 'conditional';
 
-export type UnitSource = 'forces_of_fantasy' | 'arcane_journal' | 'ravening_hordes';
+export type UnitSource = 'forces_of_fantasy' | 'arcane_journal' | 'ravening_hordes' | 'legends';
 
-export type FactionPublication = 'forces_of_fantasy' | 'ravening_hordes';
+export type FactionPublication = 'forces_of_fantasy' | 'ravening_hordes' | 'legends';
+
+export interface ErrataNote {
+  type: 'stat' | 'points' | 'rule';
+  note: string;
+  faq_url: string;
+}
 
 export interface Unit {
   id: string;
@@ -152,6 +158,7 @@ export interface Unit {
    */
   list_category_overrides?: Partial<Record<string, ListCategory | null>>;
   source: UnitSource;
+  source_page?: number;
   is_named_character?: boolean;
   /** Which army compositions can include this unit; omit for units available in all */
   availability?: string[];
@@ -177,6 +184,8 @@ export interface Unit {
   weapon_profiles?: WeaponProfile[];
   magic?: MagicDetails;
   notes?: string[];
+  /** Structured errata notes from official FAQ/Errata documents */
+  errata?: ErrataNote[];
 }
 
 export type MagicItemCategory =
@@ -208,6 +217,8 @@ export interface MagicItem {
   grants_rules?: string[];
   weapon_profile?: WeaponProfile;
   armour_profile?: ArmourProfile;
+  /** Structured errata notes from official FAQ/Errata documents */
+  errata?: ErrataNote[];
 }
 
 export interface KnightlyVirtue {
@@ -316,10 +327,15 @@ export interface Faction {
   forest_sprites?: unknown[];            // Wood Elves
   gifts_of_chaos?: KnightlyVirtue[];     // Warriors of Chaos
   chaos_mutations?: KnightlyVirtue[];    // Beastmen Brayherds
+  /** Faction-specific upgrades (Legends) */
+  vampiric_powers?: KnightlyVirtue[];   // Vampire Counts
+  /** Faction-specific spell lores (Legends) */
+  lore_of_undeath?: Spell[];            // Vampire Counts
   /** Faction-specific spell lores (Ravening Hordes) */
   lore_of_gork?: Spell[];               // Orcs & Goblins
   lore_of_mork?: Spell[];               // Orcs & Goblins
   lore_of_chaos?: Spell[];              // Warriors of Chaos
   lore_of_beasts?: Spell[];             // Beastmen
   lore_of_nehekhara?: Spell[];          // Tomb Kings
+  lore_of_naggaroth?: Spell[];          // Dark Elves
 }

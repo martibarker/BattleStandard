@@ -1,0 +1,2870 @@
+{
+  "id": "vampire-counts",
+  "name": "Vampire Counts",
+  "sources": [
+    "Vampire Counts Legacy Army List"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army_vc",
+      "name": "Vampire Counts — Grand Army",
+      "source": "legends",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "1+ Wizard; 0-1 Vampire Count/Master Necromancer/Strigoi Ghoul King per 1,000 pts; 0-1 Wight King/Tomb Banshee per 1,000 pts; Vampire Thralls, Necromantic Acolytes, Wight Lords and Cairn Wraiths as desired"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "vampire_count",
+            "master_necromancer",
+            "strigoi_ghoul_king"
+          ],
+          "notes": "0-1 Vampire Count, Master Necromancer or Strigoi Ghoul King per 1,000 pts"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "wight_king",
+            "tomb_banshee"
+          ],
+          "notes": "0-1 Wight King or Banshee per 1,000 pts"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Skeleton Warriors, Zombies, Crypt Ghouls, Bat Swarms and Dire Wolves; If army includes 1+ Wights, 0-1 unit of Grave Guard or Black Knights may be taken as a Core choice"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "grave_guard",
+            "black_knights_vc"
+          ],
+          "character_unit_ids": [
+            "wight_king",
+            "wight_lord"
+          ],
+          "notes": "0-1 unit of Grave Guard or Black Knights as a Core choice per Wight King or Wight Lord in the army"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Grave Guard/Black Knights per 1,000 pts; 0-1 Crypt Horrors/Fell Bats per 1,000 pts; 0-3 Corpse Carts; 0-1 Spirit Hosts per Cairn Wraith or Tomb Banshee taken"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "grave_guard"
+          ],
+          "notes": "0-1 unit of Grave Guard per 1,000 pts"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "black_knights_vc"
+          ],
+          "notes": "0-1 unit of Black Knights per 1,000 pts"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "crypt_horrors",
+            "fell_bats"
+          ],
+          "notes": "0-1 unit of Crypt Horrors or Fell Bats per 1,000 pts"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_count",
+          "limit_value": 3,
+          "unit_ids": [
+            "corpse_cart"
+          ],
+          "notes": "0-3 Corpse Carts"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "spirit_hosts"
+          ],
+          "character_unit_ids": [
+            "cairn_wraith",
+            "tomb_banshee"
+          ],
+          "notes": "0-1 unit of Spirit Hosts per Cairn Wraith or Tomb Banshee taken"
+        },
+        {
+          "category": "special",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "vargheists"
+          ],
+          "general_unit_ids": [
+            "strigoi_ghoul_king"
+          ],
+          "notes": "If your General is a Strigoi Ghoul King, 0-1 unit of Vargheists may be taken as a Special choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "terrorgheist"
+          ],
+          "general_unit_ids": [
+            "strigoi_ghoul_king"
+          ],
+          "notes": "If your General is a Strigoi Ghoul King, 0-1 Terrorgheist may be taken as a Special choice"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "0-1 Vargheists per 1,000 pts; 0-2 Black Coaches; 0-1 Terrorgheist or Varghulf per 1,000 pts; 0-1 Blood Knights per 1,000 pts; 0-1 Hexwraiths per Cairn Wraith or Tomb Banshee taken"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "vargheists"
+          ],
+          "notes": "0-1 unit of Vargheists per 1,000 pts"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_count",
+          "limit_value": 2,
+          "unit_ids": [
+            "black_coach"
+          ],
+          "notes": "0-2 Black Coaches"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "terrorgheist",
+            "varghulf"
+          ],
+          "notes": "0-1 Terrorgheist or Varghulf per 1,000 pts"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "blood_knights"
+          ],
+          "notes": "0-1 unit of Blood Knights per 1,000 pts"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "hexwraiths"
+          ],
+          "character_unit_ids": [
+            "cairn_wraith",
+            "tomb_banshee"
+          ],
+          "notes": "0-1 unit of Hexwraiths per Cairn Wraith or Tomb Banshee taken"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "vampire_count",
+      "name": "Vampire Count",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 160,
+      "magic": {
+        "wizard_level": 0,
+        "lores": [
+          "dark_magic",
+          "illusion",
+          "necromancy"
+        ]
+      },
+      "stats": {
+        "M": 6,
+        "WS": 7,
+        "BS": 5,
+        "S": 5,
+        "T": 5,
+        "W": 3,
+        "I": 6,
+        "A": 4,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "dark_vitality",
+        "flammable",
+        "indomitable_2",
+        "lore_of_undeath",
+        "necromantic_undead",
+        "regeneration_5"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lance (if appropriately mounted)",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Armour upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "armour",
+          "choices": [
+            {
+              "description": "Light armour",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Heavy armour",
+              "cost": 6,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Mount upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Nightmare",
+              "cost": 16,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Coven Throne (see p.16)",
+              "cost": 210,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Abyssal Terror (see p.22)",
+              "cost": 120,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Zombie Dragon (see p.20)",
+              "cost": 215,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Wizard upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Level 1 Wizard",
+              "cost": 30,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Level 2 Wizard",
+              "cost": 60,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        },
+        {
+          "description": "Take Vampiric Powers",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "source_page": 3
+    },
+    {
+      "id": "vampire_thrall",
+      "name": "Vampire Thrall",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 75,
+      "magic": {
+        "wizard_level": 0,
+        "lores": [
+          "dark_magic",
+          "illusion",
+          "necromancy"
+        ]
+      },
+      "stats": {
+        "M": 6,
+        "WS": 6,
+        "BS": 4,
+        "S": 5,
+        "T": 4,
+        "W": 2,
+        "I": 5,
+        "A": 3,
+        "Ld": 7
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "banner_of_the_count",
+        "dark_vitality",
+        "flammable",
+        "indomitable_1",
+        "lore_of_undeath",
+        "necromantic_undead",
+        "regeneration_5"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lance (if appropriately mounted)",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Armour upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "armour",
+          "choices": [
+            {
+              "description": "Light armour",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Heavy armour",
+              "cost": 6,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Mount (Nightmare)",
+          "cost": 16,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Nightmare",
+              "cost": 16,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Coven Throne (see p.16)",
+              "cost": 210,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Level 1 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        },
+        {
+          "description": "Take Vampiric Powers",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "source_page": 3
+    },
+    {
+      "id": "master_necromancer",
+      "name": "Master Necromancer",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 130,
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "dark_magic",
+          "illusion",
+          "necromancy"
+        ]
+      },
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 4,
+        "W": 3,
+        "I": 3,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "dark_vitality",
+        "indomitable_1",
+        "invocation_of_nehek",
+        "lore_of_undeath",
+        "necromantic_undead",
+        "regeneration_5"
+      ],
+      "options": [
+        {
+          "description": "Mount upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Nightmare",
+              "cost": 16,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Mortis Engine (see p.17)",
+              "cost": 195,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Abyssal Terror (see p.22)",
+              "cost": 120,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Zombie Dragon (see p.20)",
+              "cost": 215,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Level 4 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "source_page": 5
+    },
+    {
+      "id": "necromantic_acolyte",
+      "name": "Necromantic Acolyte",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 60,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "dark_magic",
+          "illusion",
+          "necromancy"
+        ]
+      },
+      "stats": {
+        "M": 4,
+        "WS": 3,
+        "BS": 3,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 3,
+        "A": 1,
+        "Ld": 7
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "dark_vitality",
+        "indomitable_1",
+        "invocation_of_nehek",
+        "lore_of_undeath",
+        "necromantic_undead",
+        "regeneration_5"
+      ],
+      "options": [
+        {
+          "description": "Mount upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Nightmare",
+              "cost": 16,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Mortis Engine (see p.17)",
+              "cost": 195,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "source_page": 5
+    },
+    {
+      "id": "strigoi_ghoul_king",
+      "name": "Strigoi Ghoul King",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 145,
+      "magic": {
+        "wizard_level": 0,
+        "lores": [
+          "battle_magic",
+          "dark_magic",
+          "necromancy"
+        ]
+      },
+      "stats": {
+        "M": 6,
+        "WS": 6,
+        "BS": 3,
+        "S": 5,
+        "T": 5,
+        "W": 3,
+        "I": 7,
+        "A": 5,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "dark_vitality",
+        "flammable",
+        "hatred_all_enemies",
+        "indomitable_1",
+        "lore_of_undeath",
+        "necromantic_undead",
+        "poisoned_attacks",
+        "regeneration_5",
+        "the_hunger"
+      ],
+      "options": [
+        {
+          "description": "Mount (Terrorgheist — see p.21)",
+          "cost": 185,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Wizard upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Level 1 Wizard",
+              "cost": 30,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Level 2 Wizard",
+              "cost": 60,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 75,
+          "category": "special"
+        },
+        {
+          "description": "Take Vampiric Powers",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 75,
+          "category": "special"
+        }
+      ],
+      "source_page": 6
+    },
+    {
+      "id": "cairn_wraith",
+      "name": "Cairn Wraith",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 50,
+      "stats": {
+        "M": 6,
+        "WS": 4,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 3,
+        "I": 2,
+        "A": 2,
+        "Ld": 6
+      },
+      "equipment": [
+        "Spectral scythe"
+      ],
+      "special_rules": [
+        "ethereal",
+        "indomitable_1",
+        "necromantic_undead",
+        "regeneration_6",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spectral scythe",
+          "range": "Combat",
+          "S": "S",
+          "AP": "N/A",
+          "special_rules": [
+            "magical_attacks",
+            "multiple_wounds_d3"
+          ],
+          "notes": "No armour save is permitted against wounds caused by this weapon (Ward and Regeneration saves can be attempted as normal)."
+        }
+      ],
+      "source_page": 6
+    },
+    {
+      "id": "wight_king",
+      "name": "Wight King",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 85,
+      "stats": {
+        "M": 4,
+        "WS": 5,
+        "BS": 0,
+        "S": 5,
+        "T": 5,
+        "W": 3,
+        "I": 4,
+        "A": 3,
+        "Ld": 9
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "indomitable_1",
+        "killing_blow",
+        "necromantic_undead",
+        "regeneration_5"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lance (if appropriately mounted)",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Mount (Skeletal Steed)",
+          "cost": 14,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "source_page": 7
+    },
+    {
+      "id": "wight_lord",
+      "name": "Wight Lord",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 40,
+      "stats": {
+        "M": 4,
+        "WS": 4,
+        "BS": 0,
+        "S": 5,
+        "T": 4,
+        "W": 2,
+        "I": 4,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon",
+        "Heavy armour"
+      ],
+      "special_rules": [
+        "killing_blow",
+        "necromantic_undead",
+        "regeneration_6",
+        "wight_banner"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lance (if appropriately mounted)",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Mount (Skeletal Steed)",
+          "cost": 14,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "source_page": 7
+    },
+    {
+      "id": "tomb_banshee",
+      "name": "Tomb Banshee",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 90,
+      "stats": {
+        "M": 6,
+        "WS": 3,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 3,
+        "A": 1,
+        "Ld": 6
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "ethereal",
+        "indomitable_1",
+        "magical_attacks",
+        "necromantic_undead",
+        "regeneration_6",
+        "terror",
+        "wailing_dirge"
+      ],
+      "source_page": 7
+    },
+    {
+      "id": "skeletal_steed_vc",
+      "name": "Skeletal Steed",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "1",
+      "points": 14,
+      "stats": {
+        "M": 7,
+        "WS": 2,
+        "BS": "-",
+        "S": 3,
+        "T": "-",
+        "W": "-",
+        "I": 2,
+        "A": 1,
+        "Ld": "-"
+      },
+      "equipment": [
+        "Skeletal hooves (counts as a hand weapon)",
+        "Barding"
+      ],
+      "special_rules": [
+        "first_charge",
+        "necromantic_undead",
+        "swiftstride"
+      ],
+      "source_page": 8
+    },
+    {
+      "id": "nightmare_vc",
+      "name": "Nightmare",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "1",
+      "points": 16,
+      "stats": {
+        "M": 7,
+        "WS": 3,
+        "BS": "-",
+        "S": 4,
+        "T": "-",
+        "W": "-",
+        "I": 2,
+        "A": 1,
+        "Ld": "-"
+      },
+      "equipment": [
+        "Iron-shod hooves (counts as a hand weapon)",
+        "Barding"
+      ],
+      "special_rules": [
+        "counter_charge",
+        "first_charge",
+        "necromantic_undead",
+        "swiftstride"
+      ],
+      "source_page": 8
+    },
+    {
+      "id": "coven_throne",
+      "name": "Coven Throne",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Heavy chariot",
+      "base_size": "50 x 100 mm",
+      "unit_size": "1",
+      "points": 210,
+      "profiles": [
+        {
+          "name": "Coven Throne",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": 5,
+            "T": 5,
+            "W": 5,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Pallid Handmaidens (×2)",
+          "profile": {
+            "M": "-",
+            "WS": 5,
+            "BS": 3,
+            "S": "-",
+            "T": "-",
+            "W": "-",
+            "I": 5,
+            "A": 2,
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Spirit Horde",
+          "is_mount": true,
+          "profile": {
+            "M": 6,
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 1,
+            "A": "D6",
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Hand weapons"
+        ],
+        "mount": [
+          "Hand weapons",
+          "Lances"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "dark_vitality",
+        "first_charge",
+        "fly_8",
+        "ghoulish_glamour",
+        "impact_hits_d6_plus_1",
+        "large_target",
+        "necromantic_undead",
+        "random_attacks",
+        "regeneration_6",
+        "scrying_pool"
+      ],
+      "notes": [
+        "Armour Value 4+. Character Mount only — points added to rider.",
+        "Random Attacks applies to Spirit Horde only."
+      ],
+      "source_page": 16
+    },
+    {
+      "id": "mortis_engine",
+      "name": "Mortis Engine",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Heavy chariot",
+      "base_size": "50 x 100 mm",
+      "unit_size": "1",
+      "points": 195,
+      "profiles": [
+        {
+          "name": "Mortis Engine",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": 5,
+            "T": 5,
+            "W": 5,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Banshees (×3)",
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": 1,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Spirit Horde",
+          "is_mount": true,
+          "profile": {
+            "M": 6,
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 1,
+            "A": "D6",
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Hand weapons"
+        ],
+        "mount": [
+          "Hand weapons",
+          "Lances"
+        ]
+      },
+      "special_rules": [
+        "accursed_reliquary",
+        "blasphemous_tome",
+        "close_order",
+        "dark_vitality",
+        "first_charge",
+        "fly_8",
+        "impact_hits_d6_plus_1",
+        "large_target",
+        "necromantic_undead",
+        "random_attacks",
+        "regeneration_6",
+        "wailing_dirge"
+      ],
+      "notes": [
+        "Armour Value 4+. Character Mount only — points added to rider.",
+        "Random Attacks applies to Spirit Horde only."
+      ],
+      "source_page": 17
+    },
+    {
+      "id": "abyssal_terror",
+      "name": "Abyssal Terror",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Monstrous creature",
+      "base_size": "50 x 100 mm",
+      "unit_size": "1",
+      "points": 120,
+      "profiles": [
+        {
+          "name": "Abyssal Terror",
+          "profile": {
+            "M": 6,
+            "WS": 4,
+            "BS": "-",
+            "S": 5,
+            "T": "(+1)",
+            "W": "(+4)",
+            "I": 2,
+            "A": 3,
+            "Ld": "-"
+          },
+          "mount_grants": "+1 Toughness and +4 Wounds to rider"
+        }
+      ],
+      "equipment": [
+        "Wicked claws",
+        "Poisonous tail",
+        "Scaly skin (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "fly_9",
+        "large_target",
+        "necromantic_undead",
+        "stomp_attacks_d3",
+        "swiftstride",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        },
+        {
+          "name": "Poisonous tail",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "poisoned_attacks",
+            "strike_first"
+          ],
+          "notes": "This model may make one of its attacks each turn with this weapon."
+        }
+      ],
+      "notes": [
+        "Character Mount only — points added to rider."
+      ],
+      "source_page": 22
+    },
+    {
+      "id": "zombie_dragon_vc",
+      "name": "Zombie Dragon",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Behemoth",
+      "base_size": "100 x 150 mm",
+      "unit_size": "1",
+      "points": 215,
+      "profiles": [
+        {
+          "name": "Zombie Dragon",
+          "profile": {
+            "M": 6,
+            "WS": 4,
+            "BS": "-",
+            "S": 6,
+            "T": "(+1)",
+            "W": "(+5)",
+            "I": 2,
+            "A": 5,
+            "Ld": "-"
+          },
+          "mount_grants": "+1 Toughness and +5 Wounds to rider"
+        }
+      ],
+      "equipment": [
+        "Wicked claws",
+        "Pestilential breath",
+        "Draconic scales (counts as full plate armour)"
+      ],
+      "special_rules": [
+        "carrion_feeders",
+        "close_order",
+        "fly_9",
+        "large_target",
+        "necromantic_undead",
+        "stomp_attacks_d6",
+        "swiftstride",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        },
+        {
+          "name": "Pestilential breath",
+          "range": "N/A",
+          "S": "2",
+          "AP": "-3",
+          "special_rules": [
+            "breath_weapon"
+          ]
+        }
+      ],
+      "notes": [
+        "Character Mount only — points added to rider."
+      ],
+      "source_page": 20
+    },
+    {
+      "id": "skeleton_warriors",
+      "name": "Skeleton Warriors",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 5,
+      "profiles": [
+        {
+          "name": "Skeleton Warrior",
+          "profile": {
+            "M": 4,
+            "WS": 2,
+            "BS": 2,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Skeleton Champion",
+          "is_champion": true,
+          "champion_cost": 5,
+          "profile": {
+            "M": 4,
+            "WS": 2,
+            "BS": 2,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 5
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Light armour",
+        "Shields"
+      ],
+      "special_rules": [
+        "close_order",
+        "horde",
+        "necromantic_undead",
+        "regeneration_6"
+      ],
+      "options": [
+        {
+          "description": "Thrusting spears",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "weapon"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Skeleton Champion",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "source_page": 10
+    },
+    {
+      "id": "zombies",
+      "name": "Zombies",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "20-40",
+      "points": 3,
+      "stats": {
+        "M": 4,
+        "WS": 2,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 1,
+        "I": 1,
+        "A": 1,
+        "Ld": 2
+      },
+      "equipment": [
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "close_order",
+        "horde",
+        "necromantic_undead",
+        "regeneration_6",
+        "the_newly_dead"
+      ],
+      "command": [
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "source_page": 10
+    },
+    {
+      "id": "crypt_ghouls",
+      "name": "Crypt Ghouls",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 9,
+      "profiles": [
+        {
+          "name": "Crypt Ghoul",
+          "profile": {
+            "M": 5,
+            "WS": 3,
+            "BS": 3,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Crypt Ghast",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 5,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 3,
+            "Ld": 5
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "move_through_cover",
+        "necromantic_undead",
+        "open_order",
+        "poisoned_attacks",
+        "regeneration_6",
+        "reserve_move",
+        "skirmishers"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Crypt Ghast",
+          "cost_per_unit": 6
+        }
+      ],
+      "source_page": 11
+    },
+    {
+      "id": "bat_swarms",
+      "name": "Bat Swarms",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Swarms",
+      "base_size": "40 x 40 mm",
+      "unit_size": "3+",
+      "points": 39,
+      "stats": {
+        "M": 1,
+        "WS": 3,
+        "BS": 0,
+        "S": 2,
+        "T": 2,
+        "W": 5,
+        "I": 4,
+        "A": 5,
+        "Ld": 3
+      },
+      "equipment": [
+        "Claws and fangs (counts as a hand weapon)"
+      ],
+      "special_rules": [
+        "fly_7",
+        "necromantic_undead",
+        "regeneration_6",
+        "skirmishers"
+      ],
+      "source_page": 11
+    },
+    {
+      "id": "dire_wolves",
+      "name": "Dire Wolves",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "core",
+      "troop_type": "War beasts",
+      "base_size": "25 x 50 mm",
+      "unit_size": "5-20",
+      "points": 8,
+      "profiles": [
+        {
+          "name": "Dire Wolf",
+          "profile": {
+            "M": 9,
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 3
+          }
+        },
+        {
+          "name": "Doom Wolf",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 9,
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 3
+          }
+        }
+      ],
+      "equipment": [
+        "Claws and fangs (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "necromantic_undead",
+        "open_order",
+        "regeneration_6",
+        "reserve_move",
+        "slavering_charge",
+        "swiftstride",
+        "vanguard"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Doom Wolf",
+          "cost_per_unit": 6
+        }
+      ],
+      "source_page": 14
+    },
+    {
+      "id": "grave_guard",
+      "name": "Grave Guard",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Grave Guard",
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Seneschal",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 4,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 7
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Heavy armour",
+        "Shields"
+      ],
+      "special_rules": [
+        "cleaving_blow",
+        "close_order",
+        "indomitable_1",
+        "necromantic_undead",
+        "regeneration_6"
+      ],
+      "options": [
+        {
+          "description": "Replace shields with great weapons",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Drilled (0-1 per 1,000 pts)",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "special",
+          "max_per_1000_pts": 1
+        },
+        {
+          "description": "Implacable Defence (0-1 per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special",
+          "max_per_1000_pts": 1
+        },
+        {
+          "description": "Seneschal: Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Seneschal",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "source_page": 9
+    },
+    {
+      "id": "crypt_horrors",
+      "name": "Crypt Horrors",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Monstrous infantry",
+      "base_size": "40 x 40 mm",
+      "unit_size": "3+",
+      "points": 46,
+      "profiles": [
+        {
+          "name": "Crypt Horror",
+          "profile": {
+            "M": 6,
+            "WS": 3,
+            "BS": 0,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 2,
+            "A": 3,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Crypt Haunter",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": {
+            "M": 6,
+            "WS": 3,
+            "BS": 0,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "I": 2,
+            "A": 4,
+            "Ld": 5
+          }
+        }
+      ],
+      "equipment": [
+        "Filth-encrusted claws"
+      ],
+      "special_rules": [
+        "indomitable_1",
+        "move_through_cover",
+        "necromantic_undead",
+        "open_order",
+        "regeneration_6",
+        "stomp_attacks_1"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Crypt Haunter",
+          "cost_per_unit": 7
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Filth-encrusted claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "poisoned_attacks"
+          ]
+        }
+      ],
+      "source_page": 11
+    },
+    {
+      "id": "fell_bats",
+      "name": "Fell Bats",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Monstrous infantry",
+      "base_size": "40 x 40 mm",
+      "unit_size": "3+",
+      "points": 15,
+      "stats": {
+        "M": 1,
+        "WS": 3,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 3,
+        "A": 2,
+        "Ld": 3
+      },
+      "equipment": [
+        "Claws and fangs (counts as a hand weapon)"
+      ],
+      "special_rules": [
+        "fly_10",
+        "necromantic_undead",
+        "regeneration_6",
+        "skirmishers",
+        "swiftstride"
+      ],
+      "source_page": 12
+    },
+    {
+      "id": "spirit_hosts",
+      "name": "Spirit Hosts",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Swarms",
+      "base_size": "40 x 40 mm",
+      "unit_size": "3-6",
+      "points": 49,
+      "stats": {
+        "M": 6,
+        "WS": 3,
+        "BS": 0,
+        "S": 3,
+        "T": 3,
+        "W": 4,
+        "I": 1,
+        "A": 4,
+        "Ld": 4
+      },
+      "equipment": [
+        "Hand weapons"
+      ],
+      "special_rules": [
+        "bound_spirits",
+        "ethereal",
+        "magical_attacks",
+        "necromantic_undead",
+        "open_order",
+        "regeneration_6",
+        "reserve_move"
+      ],
+      "source_page": 12
+    },
+    {
+      "id": "corpse_cart",
+      "name": "Corpse Cart",
+      "source": "legends",
+      "category": "war_machine",
+      "list_category": "special",
+      "troop_type": "Heavy chariot",
+      "base_size": "50 x 100 mm",
+      "unit_size": "1",
+      "points": 115,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "necromancy"
+        ]
+      },
+      "profiles": [
+        {
+          "name": "Corpse Cart",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": 4,
+            "T": 4,
+            "W": 4,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Corpsemaster",
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": 3,
+            "Ld": 1
+          }
+        },
+        {
+          "name": "The Restless Dead",
+          "is_mount": true,
+          "profile": {
+            "M": 4,
+            "WS": 1,
+            "BS": 0,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 1,
+            "A": "2D6",
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Hand weapon"
+        ],
+        "mount": [
+          "Hand weapons"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "dark_vitality",
+        "first_charge",
+        "impact_hits_d3_plus_1",
+        "indomitable_1",
+        "lore_of_undeath",
+        "necromantic_undead",
+        "random_attacks",
+        "regeneration_6"
+      ],
+      "options": [
+        {
+          "description": "Corpsemaster weapon",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Whip",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cavalry spear",
+              "cost": 3,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Corpse Cart upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Balefire Brazier",
+              "cost": 10,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Warped Tintinnabulation",
+              "cost": 15,
+              "scope": "per_unit"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Armour Value 4+. Random Attacks applies to The Restless Dead only.",
+        "Corpse Cart must take one of: Balefire Brazier or Warped Tintinnabulation."
+      ],
+      "source_page": 18
+    },
+    {
+      "id": "vargheists",
+      "name": "Vargheists",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "rare",
+      "troop_type": "Monstrous infantry",
+      "base_size": "40 x 40 mm",
+      "unit_size": "3+",
+      "points": 61,
+      "profiles": [
+        {
+          "name": "Vargheist",
+          "profile": {
+            "M": 6,
+            "WS": 4,
+            "BS": 0,
+            "S": 5,
+            "T": 4,
+            "W": 3,
+            "I": 4,
+            "A": 3,
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Vargoyle",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": {
+            "M": 6,
+            "WS": 4,
+            "BS": 0,
+            "S": 5,
+            "T": 4,
+            "W": 3,
+            "I": 4,
+            "A": 4,
+            "Ld": 7
+          }
+        }
+      ],
+      "equipment": [
+        "Wicked claws"
+      ],
+      "special_rules": [
+        "armour_bane_2",
+        "dark_vitality",
+        "flammable",
+        "fly_9",
+        "frenzy",
+        "indomitable_1",
+        "necromantic_undead",
+        "regeneration_6",
+        "skirmishers"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Vargoyle",
+          "cost_per_unit": 7
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        }
+      ],
+      "source_page": 12
+    },
+    {
+      "id": "blood_knights",
+      "name": "Blood Knights",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "rare",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 39,
+      "profiles": [
+        {
+          "name": "Blood Knight",
+          "profile": {
+            "M": "-",
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 4,
+            "A": 2,
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Kastellan",
+          "is_champion": true,
+          "champion_cost": 7,
+          "profile": {
+            "M": "-",
+            "WS": 5,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 4,
+            "A": 3,
+            "Ld": 7
+          }
+        },
+        {
+          "name": "Nightmare",
+          "is_mount": true,
+          "profile": {
+            "M": 7,
+            "WS": 3,
+            "BS": "-",
+            "S": 4,
+            "T": "-",
+            "W": "-",
+            "I": 2,
+            "A": 1,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": {
+        "rider": [
+          "Hand weapons",
+          "Lances",
+          "Heavy armour",
+          "Shields"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapons)",
+          "Barding"
+        ]
+      },
+      "special_rules": [
+        "accursed_weapons",
+        "close_order",
+        "counter_charge",
+        "dark_vitality",
+        "first_charge",
+        "flammable",
+        "indomitable_1",
+        "martial_pride",
+        "necromantic_undead",
+        "regeneration_6",
+        "swiftstride"
+      ],
+      "options": [
+        {
+          "description": "Replace heavy armour with full plate armour",
+          "cost": 5,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "Drilled",
+          "cost": 3,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Kastellan: Vampiric Powers",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        },
+        {
+          "description": "Kastellan: Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Kastellan",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "source_page": 13
+    },
+    {
+      "id": "black_knights_vc",
+      "name": "Black Knights",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "special",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 24,
+      "profiles": [
+        {
+          "name": "Black Knight",
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 0,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 1,
+            "Ld": 6
+          }
+        },
+        {
+          "name": "Hell Knight",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 0,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 3,
+            "A": 2,
+            "Ld": 6
+          }
+        },
+        {
+          "name": "Skeletal Steed",
+          "is_mount": true,
+          "profile": {
+            "M": 7,
+            "WS": 2,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 2,
+            "A": 1,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": {
+        "rider": [
+          "Hand weapons",
+          "Heavy armour",
+          "Shields"
+        ],
+        "mount": [
+          "Skeletal hooves (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "cleaving_blow",
+        "close_order",
+        "first_charge",
+        "necromantic_undead",
+        "regeneration_6",
+        "swiftstride"
+      ],
+      "options": [
+        {
+          "description": "Lances",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Barding",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "Hell Knight: Magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Hell Knight",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "notes": [
+        "Cleaving Blow applies to Black Knights and Hell Knight only."
+      ],
+      "source_page": 14
+    },
+    {
+      "id": "hexwraiths",
+      "name": "Hexwraiths",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "rare",
+      "troop_type": "Light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5-10",
+      "points": 31,
+      "profiles": [
+        {
+          "name": "Hexwraith",
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Hellwraith",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Spectral Steed",
+          "is_mount": true,
+          "profile": {
+            "M": 8,
+            "WS": 2,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 2,
+            "A": 1,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": {
+        "rider": [
+          "Hand weapons",
+          "Great weapons"
+        ],
+        "mount": [
+          "Skeletal hooves (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "ethereal",
+        "flaming_attacks",
+        "fly_8",
+        "magical_attacks",
+        "necromantic_undead",
+        "open_order",
+        "regeneration_6",
+        "spectral_reapers",
+        "swiftstride",
+        "terror"
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Hellwraith",
+          "cost_per_unit": 6
+        }
+      ],
+      "source_page": 15
+    },
+    {
+      "id": "black_coach",
+      "name": "Black Coach",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "rare",
+      "troop_type": "Heavy Chariot",
+      "base_size": "50 x 100 mm",
+      "unit_size": "1",
+      "points": 205,
+      "profiles": [
+        {
+          "name": "Black Coach",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": 5,
+            "T": 6,
+            "W": 4,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Wraith",
+          "profile": {
+            "M": "-",
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": 2,
+            "Ld": 5
+          }
+        },
+        {
+          "name": "Nightmares",
+          "is_mount": true,
+          "profile": {
+            "M": 8,
+            "WS": 3,
+            "BS": "-",
+            "S": 4,
+            "T": "-",
+            "W": "-",
+            "I": 2,
+            "A": 1,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Spectral scythe"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "first_charge",
+        "impact_hits_d6_plus_2",
+        "indomitable_1",
+        "magical_attacks",
+        "necromantic_undead",
+        "regeneration_6",
+        "spectral_coach",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Spectral scythe",
+          "range": "Combat",
+          "S": "S",
+          "AP": "N/A",
+          "special_rules": [
+            "magical_attacks"
+          ],
+          "notes": "No armour save is permitted against wounds caused by this weapon (Ward and Regeneration saves can be attempted as normal)."
+        }
+      ],
+      "notes": [
+        "Armour Value 3+."
+      ],
+      "source_page": 19
+    },
+    {
+      "id": "terrorgheist",
+      "name": "Terrorgheist",
+      "source": "legends",
+      "category": "monster",
+      "list_category": "rare",
+      "troop_type": "Behemoth",
+      "base_size": "100 x 150 mm",
+      "unit_size": "1",
+      "points": 205,
+      "stats": {
+        "M": 6,
+        "WS": 3,
+        "BS": 0,
+        "S": 5,
+        "T": 6,
+        "W": 6,
+        "I": 3,
+        "A": 4,
+        "Ld": 4
+      },
+      "equipment": [
+        "Filth-encrusted talons",
+        "Rancid maw",
+        "Calloused hide (counts as light armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "fly_9",
+        "indomitable_1",
+        "infested",
+        "large_target",
+        "necromantic_undead",
+        "regeneration_5",
+        "stomp_attacks_d6",
+        "swiftstride",
+        "terror",
+        "wailing_dirge"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Filth-encrusted talons",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "poisoned_attacks"
+          ]
+        },
+        {
+          "name": "Rancid maw",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "multiple_wounds_2"
+          ],
+          "notes": "This model must make one of its attacks each turn with this weapon."
+        }
+      ],
+      "source_page": 21
+    },
+    {
+      "id": "varghulf",
+      "name": "Varghulf",
+      "source": "legends",
+      "category": "monster",
+      "list_category": "rare",
+      "troop_type": "Monstrous creature",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1",
+      "points": 140,
+      "stats": {
+        "M": 8,
+        "WS": 5,
+        "BS": 0,
+        "S": 5,
+        "T": 5,
+        "W": 4,
+        "I": 4,
+        "A": 4,
+        "Ld": 4
+      },
+      "equipment": [
+        "Wicked claws",
+        "Calloused hide (counts as light armour)"
+      ],
+      "special_rules": [
+        "bestial_fury",
+        "close_order",
+        "counter_charge",
+        "dark_vitality",
+        "flammable",
+        "frenzy",
+        "indomitable_1",
+        "necromantic_undead",
+        "regeneration_5",
+        "swiftstride",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        }
+      ],
+      "source_page": 22
+    }
+  ],
+  "vampiric_powers": [
+    {
+      "id": "curse_of_the_revenant",
+      "name": "Curse of the Revenant",
+      "points": 50,
+      "restrictions": "Each power may only be chosen once per army.",
+      "description": "This Vampire has a +1 modifier to its Wounds characteristic."
+    },
+    {
+      "id": "beguile",
+      "name": "Beguile",
+      "points": 40,
+      "restrictions": "Each power may only be chosen once per army.",
+      "description": "Enemy units must make a Leadership test before making any rolls To Hit against this Vampire during the Combat phase. If this test is failed, only rolls of a natural 6 will hit."
+    },
+    {
+      "id": "flying_horror",
+      "name": "Flying Horror",
+      "points": 35,
+      "restrictions": "Models whose troop type is 'infantry' only. Each power may only be chosen once per army.",
+      "description": "This Vampire gains the Fly (10) rule, but cannot join a unit."
+    },
+    {
+      "id": "dark_acolyte_power",
+      "name": "Dark Acolyte",
+      "points": 30,
+      "restrictions": "Each power may only be chosen once per army.",
+      "description": "This Vampire gains the Invocation of Nehek special rule. For the purposes of using this special rule, this model counts as a Level 1 Wizard."
+    },
+    {
+      "id": "master_of_the_black_arts",
+      "name": "Master of the Black Arts",
+      "points": 30,
+      "restrictions": "A Vampire Count that is a Level 2 Wizard, or a Vampire Thrall that is a Level 1 Wizard only. Each power may only be chosen once per army.",
+      "description": "This Vampire increases their Level of Wizardry by 1."
+    },
+    {
+      "id": "supernatural_horror",
+      "name": "Supernatural Horror",
+      "points": 20,
+      "restrictions": "Each power may only be chosen once per army.",
+      "description": "This Vampire gains the Terror special rule."
+    },
+    {
+      "id": "lord_of_the_night",
+      "name": "Lord of the Night",
+      "points": 15,
+      "restrictions": "Each power may only be chosen once per army.",
+      "description": "During the Command sub-phase of their turn, this Vampire may attempt to resurrect fallen creatures of the night by making a Leadership test (using their own Leadership). If this test is passed, a single friendly unit of Fell Bats, Bat Swarms or Dire Wolves that is within 12″ of this model recovers D6 lost Wounds."
+    }
+  ],
+  "magic_items": [
+    {
+      "id": "vc_frostblade",
+      "name": "Frostblade",
+      "category": "magic_weapon",
+      "points": 60,
+      "source": "legends",
+      "description": "A blade of blue ice-steel bound with deadly spells.",
+      "rules_text": "Any enemy model that suffers one or more unsaved wounds from the Frostblade must immediately make a Toughness test. If this test is failed, they gain the Strike Last special rule and must reduce their Initiative characteristic to 1 for the remainder of the game.",
+      "weapon_profile": {
+        "name": "Frostblade",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-",
+        "special_rules": [
+          "killing_blow",
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "vc_sword_of_kings",
+      "name": "Sword of Kings",
+      "category": "magic_weapon",
+      "points": 55,
+      "source": "legends",
+      "description": "An accursed blade of ancient and ageless design that thirsts constantly for the souls of its wielder's enemies.",
+      "rules_text": "The wielder of the Sword of Kings strikes a Killing Blow if they roll a natural 5 or 6 when making a roll To Wound, rather than the usual 6.",
+      "weapon_profile": {
+        "name": "Sword of Kings",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "killing_blow",
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "vc_blood_drinker",
+      "name": "Blood Drinker",
+      "category": "magic_weapon",
+      "points": 45,
+      "source": "legends",
+      "description": "This long, slender blade greedily drinks the blood of its victims, their life force revitalising its master.",
+      "rules_text": "If the wielder of Blood Drinker causes one or more unsaved wounds during the Combat phase, they recover a single lost Wound.",
+      "weapon_profile": {
+        "name": "Blood Drinker",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-1",
+        "special_rules": [
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "vc_dreadlance",
+      "name": "Dreadlance",
+      "category": "magic_weapon",
+      "points": 40,
+      "source": "legends",
+      "description": "Once wielded by an infamous Vampire knight, this lance is uncannily accurate, said to find its target even in the dark of night.",
+      "rules_text": "Models whose troop type is 'cavalry' or 'monster' only. The Dreadlance can only be used during a turn in which the wielder charged. In subsequent turns the model must use its hand weapon instead. The wielder of the Dreadlance may re-roll any failed rolls To Hit made whilst using it.",
+      "restrictions": "Models whose troop type is 'cavalry' or 'monster' only.",
+      "weapon_profile": {
+        "name": "Dreadlance",
+        "range": "Combat",
+        "S": "S+2",
+        "AP": "-2",
+        "special_rules": [
+          "armour_bane_1",
+          "magical_attacks"
+        ]
+      }
+    },
+    {
+      "id": "vc_flayed_hauberk",
+      "name": "The Flayed Hauberk",
+      "category": "magic_armour",
+      "points": 35,
+      "source": "legends",
+      "description": "Stitched from the flesh of countless victims, the wearer of the Flayed Hauberk is enshrouded and protected by the souls of the damned.",
+      "rules_text": "The Flayed Hauberk is a suit of heavy armour which may be worn by a Wizard without penalty. In addition, its wearer has a 6+ Ward save against any wounds suffered.",
+      "armour_profile": {
+        "armour_value": "5+ (heavy armour)",
+        "special_rules": [],
+        "notes": "May be worn by a Wizard without penalty. Wearer has a 6+ Ward save."
+      }
+    },
+    {
+      "id": "vc_accursed_armour",
+      "name": "The Accursed Armour",
+      "category": "magic_armour",
+      "points": 30,
+      "source": "legends",
+      "description": "Some strange flaw renders the wearer of this armour resilient beyond measure, yet robs them of dexterity.",
+      "rules_text": "Models whose troop type is 'infantry' or 'cavalry' only. The Accursed Armour is a suit of full plate armour. In addition, its wearer has a +1 modifier to their Toughness characteristic, but suffers a -1 modifier to their Weapon Skill and Initiative characteristics (to a minimum of 1).",
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only."
+    },
+    {
+      "id": "vc_von_carstein_ring",
+      "name": "Von Carstein Ring",
+      "category": "talisman",
+      "points": 40,
+      "source": "legends",
+      "description": "An ancient heirloom of the lords of Sylvania, this ring is known to make a Vampire carrying it almost impossible to kill.",
+      "rules_text": "Vampires only. Single use. When the wearer of the Von Carstein Ring loses their last Wound, roll a D6. On a roll of 2+, the Wound is not lost.",
+      "restrictions": "Vampires only.",
+      "single_use": true
+    },
+    {
+      "id": "vc_crown_of_the_damned",
+      "name": "Crown of the Damned",
+      "category": "talisman",
+      "points": 35,
+      "source": "legends",
+      "description": "The wearer of the Crown of the Damned draws revitalising energies from the spirits imprisoned within it, but at times their eternal wailing can become overpowering.",
+      "rules_text": "The Crown of the Damned gives its wearer a 4+ Ward save against any wounds suffered. However, due to the wailing of the spirits trapped within the crown, its wearer is also subject to the Stupidity special rule."
+    },
+    {
+      "id": "vc_helm_of_commandment",
+      "name": "Helm of Commandment",
+      "category": "enchanted_item",
+      "points": 40,
+      "source": "legends",
+      "description": "This ancient and corroded helmet can be used to infuse Undead servants with the wearer's sentience, making them formidable fighters.",
+      "rules_text": "Necromancers and Wights only. During the Command sub-phase of their turn, this character may attempt to enhance the sentience of those around them by making a Leadership test (using their own Leadership). If this test is passed, until your next Start of Turn sub-phase this character and any unit they have joined gains a +D3 modifier to their Weapon Skill characteristic (to a maximum of 10).",
+      "restrictions": "Necromancers and Wights only."
+    },
+    {
+      "id": "vc_hand_of_dust",
+      "name": "Hand of Dust",
+      "category": "enchanted_item",
+      "points": 35,
+      "source": "legends",
+      "description": "The severed hand of the Great Necromancer himself — the mere proximity of this withered appendage can drain all life and vitality from mortals, leaving them as desiccated husks.",
+      "rules_text": "Necromancers only. This model can cast the following Bound spell, with a Power Level of 2. Roll a D6 each time the Hand of Dust is used. On a roll of 1, it crumbles to dust and cannot be used again. Type: Assailment. Casting Value: 9+. Range: Combat. Effect: The target enemy unit suffers 2D6 Strength 5 hits, each with an AP of -1.",
+      "restrictions": "Necromancers only."
+    },
+    {
+      "id": "vc_cloak_of_mist_shadows",
+      "name": "Cloak of Mist & Shadows",
+      "category": "enchanted_item",
+      "points": 30,
+      "source": "legends",
+      "description": "This cloak frees the wearer from the bonds of their physical form, allowing them to move through solid matter like a ghost.",
+      "rules_text": "Necromancers whose troop type is 'infantry' only. The wearer of the Cloak of Mist & Shadows gains the Ethereal special rule.",
+      "restrictions": "Necromancers whose troop type is 'infantry' only."
+    },
+    {
+      "id": "vc_skull_staff",
+      "name": "Skull Staff",
+      "category": "arcane_item",
+      "points": 50,
+      "source": "legends",
+      "description": "The Skull Staff constantly whispers to its bearer, revealing the secrets of their foes and predicting the ebb and flow of the Winds of Magic.",
+      "rules_text": "The bearer of the Skull Staff increases their Dispel range by 3″ and, when attempting a Wizardly dispel, may apply a +1 modifier to their Dispel roll. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+    },
+    {
+      "id": "vc_sceptre_de_noirot",
+      "name": "Sceptre of De Noirot",
+      "category": "arcane_item",
+      "points": 35,
+      "source": "legends",
+      "description": "The Necromancer de Noirot suffered a terrible demise when he invoked the power of the sceptre and raised more of the Undead than he could control.",
+      "rules_text": "Necromancers only. The bearer of the Sceptre of De Noirot may attempt to resurrect the fallen by using the Invocation of Nehek special rule twice during their Command sub-phase (rather than the usual once). Roll a D6 each time the sceptre is used. On a roll of 1, the bearer loses a single Wound.",
+      "restrictions": "Necromancers only."
+    },
+    {
+      "id": "vc_spell_familiar",
+      "name": "Spell Familiar*",
+      "category": "arcane_item",
+      "points": 15,
+      "source": "legends",
+      "description": "A spell familiar memorises a spell on its master's behalf, constantly rehearsing for its big moment until it is called upon to share its arcane knowledge.",
+      "rules_text": "0-1 per Wizard. The owner of a Spell Familiar knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry. Note that this does not increase the Wizard's Level.",
+      "restrictions": "0-1 per Wizard."
+    },
+    {
+      "id": "vc_banner_of_the_barrows",
+      "name": "Banner of the Barrows",
+      "category": "magic_standard",
+      "points": 65,
+      "source": "legends",
+      "description": "Woven from the wind and the cold, the chill of this banner touches the hearts of those who stand before it.",
+      "rules_text": "Wight Lord Battle Standard Bearer only. During the Combat phase, when a unit carrying the Banner of the Barrows makes a roll To Hit, a roll of 3+ is always a success, regardless of the target's Weapon Skill.",
+      "restrictions": "Wight Lord Battle Standard Bearer only."
+    },
+    {
+      "id": "vc_drakenhof_banner",
+      "name": "Drakenhof Banner",
+      "category": "magic_standard",
+      "points": 50,
+      "source": "legends",
+      "description": "The infamous Count Vlad von Carstein had thrall Necromancers enchant his household standard to sustain his bodyguard.",
+      "rules_text": "If a unit carrying the Drakenhof Banner has the Regeneration (X+) special rule, it improves the armour value of its Regeneration save by 1."
+    },
+    {
+      "id": "vc_screaming_banner",
+      "name": "The Screaming Banner",
+      "category": "magic_standard",
+      "points": 45,
+      "source": "legends",
+      "description": "Even the bravest warriors tremble in the presence of a haunted banner that wails a constant dirge.",
+      "rules_text": "When an enemy unit makes a Leadership test due to Fear caused by a unit carrying the Screaming Banner, it must roll an extra D6 and discard the lowest result."
+    },
+    {
+      "id": "vc_standard_of_hellish_vigour",
+      "name": "Standard of Hellish Vigour",
+      "category": "magic_standard",
+      "points": 40,
+      "source": "legends",
+      "description": "The restless essence of the Vampire whose flesh was flayed to craft this banner invigorates the Undead nearby.",
+      "rules_text": "A unit carrying the Standard of Hellish Vigour gains the Reserve Move special rule."
+    }
+  ],
+  "lore_of_undeath": [
+    {
+      "id": "vanhals_danse_macabre",
+      "name": "Vanhal's Danse Macabre",
+      "type": "Enchantment",
+      "casting_value": "8+/12+",
+      "range": "12\"",
+      "effect": "If this spell is cast with a casting result of 8 or more, the target friendly unit gains a +D3 modifier to one of the following characteristics (to a maximum of 10). If this spell is cast with a casting result of 12 or more, the target friendly unit gains a +D3 modifier to two of the following characteristics (to a maximum of 10). This spell lasts until your next Start of Turn sub-phase. Movement; Weapon Skill; Initiative.",
+      "is_signature": false
+    },
+    {
+      "id": "hellish_vigour",
+      "name": "Hellish Vigour",
+      "type": "Enchantment",
+      "casting_value": "7+/10+",
+      "range": "Self",
+      "effect": "If this spell is cast with a casting result of 7 or more, a single friendly unit that has the Necromantic Undead special rule and is within the caster's Command range gains the Reserve Move special rule. If this spell is cast with a casting result of 10 or more, every friendly unit that has the Necromantic Undead special rule and is within the caster's Command range gains the Reserve Move special rule. This spell lasts until the end of this turn.",
+      "is_signature": false
+    },
+    {
+      "id": "raise_dead",
+      "name": "Raise Dead",
+      "type": "Enchantment",
+      "casting_value": "10+",
+      "range": "12\"",
+      "effect": "Place a unit of 2D3 Risen Zombies on the battlefield anywhere completely within 12″ of this model, but not within 1″ of any enemy models. This unit cannot declare a charge during the turn in which it was raised. Risen Zombies: M4 WS2 BS0 S3 T3 W1 I1 A1 Ld2. Regular infantry. 25×25mm. Hand weapons. Special Rules: Necromantic Undead, Regeneration (6+), Skirmishers, the Newly Dead. Note: Risen Zombies are not worth any Victory Points.",
+      "is_signature": false
+    }
+  ],
+  "publication": "legends"
+}

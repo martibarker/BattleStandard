@@ -10,6 +10,8 @@ import orcsRaw from './orc-and-goblin-tribes.json';
 import warriorsRaw from './warriors-of-chaos.json';
 import beastmenRaw from './beastmen-brayherds.json';
 import tombKingsRaw from './tomb-kings-of-khemri.json';
+import vampireCountsRaw from './vampire-counts.json';
+import darkElvesRaw from './dark-elves.json';
 import globalMagicItemsRaw from '../magic-items.json';
 
 /**
@@ -151,6 +153,9 @@ export const FACTIONS: Faction[] = [
   normalizeFaction(warriorsRaw),
   normalizeFaction(beastmenRaw),
   normalizeFaction(tombKingsRaw),
+  // Legends
+  normalizeFaction(vampireCountsRaw),
+  normalizeFaction(darkElvesRaw),
 ];
 
 export function getFaction(id: string): Faction | undefined {

@@ -1,0 +1,3087 @@
+{
+  "id": "dark-elves",
+  "name": "Dark Elves",
+  "sources": [
+    "Dark Elves Legacy Army List"
+  ],
+  "army_compositions": [
+    {
+      "id": "grand_army_de",
+      "name": "Dark Elves — Grand Army",
+      "source": "legends",
+      "rules": [
+        {
+          "category": "characters",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "0-1 Dreadlord or Supreme Sorceress per 1,000 pts; Dark Elf Masters, Sorceresses, High Beastmasters, Death Hags, Khainite Assassins as desired; 0-1 Cauldron of Blood per 1,000 pts (Death Hag mount)"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "dark_elf_dreadlord",
+            "dark_elf_supreme_sorceress"
+          ],
+          "notes": "0-1 Dark Elf Dreadlord or Supreme Sorceress per 1,000 points"
+        },
+        {
+          "category": "characters",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "cauldron_of_blood"
+          ],
+          "notes": "0-1 Cauldron of Blood per 1,000 points (taken as a mount for a Death Hag)"
+        },
+        {
+          "category": "core",
+          "limit_type": "min_percent",
+          "limit_value": 25,
+          "notes": "Dark Elf Warriors, Repeater Crossbowmen, Black Ark Corsairs and Dark Riders; if army includes 1+ Death Hags, 0-1 unit of Witch Elves may be taken as Core"
+        },
+        {
+          "category": "core",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "witch_elves"
+          ],
+          "general_unit_ids": [
+            "death_hag"
+          ],
+          "notes": "If your army includes one or more Death Hags, 0-1 unit of Witch Elves may be taken as a Core choice"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_percent",
+          "limit_value": 50,
+          "notes": "Har Ganeth Executioners, Witch Elves, Dark Elf Shades, Harpies; 0-1 Black Guard per Noble; 0-1 Cold One Knights per 1,000 pts; 0-2 Scourgerunner/Cold One Chariots per 1,000 pts; if General is High Beastmaster, 0-1 War Hydra or Kharibdyss as Special"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_character",
+          "limit_value": 1,
+          "unit_ids": [
+            "black_guard_of_naggarond"
+          ],
+          "character_unit_ids": [
+            "dark_elf_dreadlord",
+            "dark_elf_master"
+          ],
+          "notes": "0-1 unit of Black Guard of Naggarond per Dark Elf Noble (Master or Dreadlord) taken"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "cold_one_knights_de"
+          ],
+          "notes": "0-1 unit of Cold One Knights per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "scourgerunner_chariots",
+            "cold_one_chariots_de"
+          ],
+          "notes": "0-2 Scourgerunner Chariots or Cold One Chariots (combined) per 1,000 points"
+        },
+        {
+          "category": "special",
+          "limit_type": "conditional",
+          "limit_value": 1,
+          "unit_ids": [
+            "war_hydra",
+            "kharibdyss"
+          ],
+          "general_unit_ids": [
+            "high_beastmaster"
+          ],
+          "notes": "If your General is a High Beastmaster, 0-1 War Hydra or Kharibdyss may be taken as a Special choice"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_percent",
+          "limit_value": 25,
+          "notes": "Sisters of Slaughter, Bloodwrack Shrines, War Hydras, Kharibdyss, Bloodwrack Medusas; 0-1 Doomfire Warlocks per 1,000 pts; 0-2 Reaper Bolt Throwers per 1,000 pts"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "doomfire_warlocks"
+          ],
+          "notes": "0-1 unit of Doomfire Warlocks per 1,000 points"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 2,
+          "unit_ids": [
+            "reaper_bolt_thrower"
+          ],
+          "notes": "0-2 Reaper Bolt Throwers per 1,000 points"
+        },
+        {
+          "category": "mercenaries",
+          "limit_type": "max_percent",
+          "limit_value": 20
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "dark_elf_dreadlord",
+      "name": "Dark Elf Dreadlord",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 130,
+      "stats": {
+        "M": 5,
+        "WS": 7,
+        "BS": 7,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 6,
+        "A": 4,
+        "Ld": 10
+      },
+      "equipment": [
+        "Hand weapon",
+        "light armour"
+      ],
+      "special_rules": [
+        "eternal_hatred",
+        "hatred_high_elves",
+        "murderous",
+        "strike_first"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Halberd",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lance (if appropriately mounted)",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Ranged weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Repeater crossbow",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Repeater handbow",
+              "cost": 5,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Brace of repeater handbows",
+              "cost": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Armour upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "armour",
+          "choices": [
+            {
+              "description": "Heavy armour",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Full plate armour",
+              "cost": 6,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Dark Steed (+14 pts)",
+              "cost": 14,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cold One (+18 pts)",
+              "cost": 18,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cold One Chariot (see p.16)",
+              "cost": 125,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Black Dragon (see p.18)",
+              "cost": 280,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Manticore (see p.19)",
+              "cost": 130,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Sea Dragon Cloak",
+          "cost": 4,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "*Eternal Hatred and Strike First do not apply to this model's mount (should it have one)."
+      ],
+      "source_page": 3
+    },
+    {
+      "id": "dark_elf_master",
+      "name": "Dark Elf Master",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 70,
+      "stats": {
+        "M": 5,
+        "WS": 6,
+        "BS": 6,
+        "S": 4,
+        "T": 3,
+        "W": 2,
+        "I": 5,
+        "A": 3,
+        "Ld": 9
+      },
+      "equipment": [
+        "Hand weapon",
+        "light armour"
+      ],
+      "special_rules": [
+        "eternal_hatred",
+        "hatred_high_elves",
+        "murderous",
+        "strike_first"
+      ],
+      "options": [
+        {
+          "description": "Weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapon",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Great weapon",
+              "cost": 4,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Halberd",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Lance (if appropriately mounted)",
+              "cost": 4,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Ranged weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Repeater crossbow",
+              "cost": 6,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Repeater handbow",
+              "cost": 5,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Brace of repeater handbows",
+              "cost": 10,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Armour upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "armour",
+          "choices": [
+            {
+              "description": "Heavy armour",
+              "cost": 3,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Full plate armour",
+              "cost": 6,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Dark Steed (+14 pts)",
+              "cost": 14,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cold One (+18 pts)",
+              "cost": 18,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cold One Chariot (see p.16)",
+              "cost": 125,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Battle Standard Bearer",
+          "cost": 25,
+          "scope": "per_unit",
+          "category": "special",
+          "notes": "One Dark Elf Master per army only. May purchase a single magic standard with no points limit."
+        },
+        {
+          "description": "Sea Dragon Cloak",
+          "cost": 4,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "*Eternal Hatred and Strike First do not apply to this model's mount (should it have one)."
+      ],
+      "source_page": 3
+    },
+    {
+      "id": "dark_elf_supreme_sorceress",
+      "name": "Dark Elf Supreme Sorceress",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 150,
+      "magic": {
+        "wizard_level": 3,
+        "lores": [
+          "battle_magic",
+          "daemonology",
+          "dark_magic",
+          "elementalism",
+          "illusion"
+        ]
+      },
+      "stats": {
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 3,
+        "I": 5,
+        "A": 2,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "eternal_hatred",
+        "hatred_high_elves",
+        "hekartis_blessing",
+        "lore_of_naggaroth",
+        "murderous"
+      ],
+      "options": [
+        {
+          "description": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Dark Steed (+14 pts)",
+              "cost": 14,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cold One (+18 pts)",
+              "cost": 18,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Dark Pegasus (+35 pts)",
+              "cost": 35,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Black Dragon (see p.18)",
+              "cost": 280,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Upgrade to Level 4 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        }
+      ],
+      "source_page": 4
+    },
+    {
+      "id": "dark_elf_sorceress",
+      "name": "Dark Elf Sorceress",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 75,
+      "magic": {
+        "wizard_level": 1,
+        "lores": [
+          "battle_magic",
+          "daemonology",
+          "dark_magic",
+          "elementalism",
+          "illusion"
+        ]
+      },
+      "stats": {
+        "M": 5,
+        "WS": 4,
+        "BS": 4,
+        "S": 3,
+        "T": 3,
+        "W": 2,
+        "I": 4,
+        "A": 1,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "eternal_hatred",
+        "hatred_high_elves",
+        "hekartis_blessing",
+        "lore_of_naggaroth",
+        "murderous"
+      ],
+      "options": [
+        {
+          "description": "Mount",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Dark Steed (+14 pts)",
+              "cost": 14,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Cold One (+18 pts)",
+              "cost": 18,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Dark Pegasus (+35 pts)",
+              "cost": 35,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Upgrade to Level 2 Wizard",
+          "cost": 30,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "source_page": 4
+    },
+    {
+      "id": "high_beastmaster",
+      "name": "High Beastmaster",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "(as mount)",
+      "unit_size": "1",
+      "points": 75,
+      "stats": {
+        "M": "-",
+        "WS": 7,
+        "BS": 7,
+        "S": 4,
+        "T": 3,
+        "W": 3,
+        "I": 5,
+        "A": 3,
+        "Ld": 9
+      },
+      "equipment": [
+        "Hand weapon",
+        "whip",
+        "light armour"
+      ],
+      "special_rules": [
+        "eternal_hatred",
+        "goad_beast",
+        "hatred_high_elves",
+        "murderous",
+        "strike_first"
+      ],
+      "options": [
+        {
+          "description": "Cavalry spear",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Repeater crossbow",
+          "cost": 6,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Shield",
+          "cost": 2,
+          "scope": "per_unit",
+          "category": "armour"
+        },
+        {
+          "description": "Replace light armour with heavy armour",
+          "cost": 3,
+          "scope": "per_unit",
+          "category": "armour",
+          "replaces": "light armour"
+        },
+        {
+          "description": "Mount (required)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Scourgerunner Chariot (see p.16)",
+              "cost": 85,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Manticore (see p.19)",
+              "cost": 130,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Sea Dragon Cloak",
+          "cost": 4,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 75,
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "Must be mounted on a Scourgerunner Chariot or Manticore.",
+        "*Goad Beast, Hatred (High Elves), and Strike First do not apply to this model's mount."
+      ],
+      "source_page": 5
+    },
+    {
+      "id": "death_hag",
+      "name": "Death Hag",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 70,
+      "stats": {
+        "M": 5,
+        "WS": 6,
+        "BS": 6,
+        "S": 4,
+        "T": 3,
+        "W": 2,
+        "I": 7,
+        "A": 3,
+        "Ld": 8
+      },
+      "equipment": [
+        "Two hand weapons"
+      ],
+      "special_rules": [
+        "eternal_hatred",
+        "frenzy",
+        "hatred_all_enemies",
+        "loner",
+        "murderous",
+        "poisoned_attacks",
+        "strike_first"
+      ],
+      "options": [
+        {
+          "description": "Gift of Khaine",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Cry of War",
+              "cost": 15,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Rune of Khaine",
+              "cost": 10,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Witchbrew",
+              "cost": 20,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Mount on Cauldron of Blood (see p.15)",
+          "cost": 150,
+          "scope": "per_unit",
+          "category": "special"
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 75,
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "Gifts of Khaine — Cry of War: enemy units within Command range suffer -1 Ld whilst this character is not fleeing. Rune of Khaine: has Extra Attacks (+D3). Witchbrew: this character, mount and joined unit cannot lose the Frenzy rule."
+      ],
+      "source_page": 6
+    },
+    {
+      "id": "khainite_assassin",
+      "name": "Khainite Assassin",
+      "source": "legends",
+      "category": "character",
+      "list_category": "characters",
+      "troop_type": "Regular infantry (character)",
+      "base_size": "25 x 25 mm",
+      "unit_size": "1",
+      "points": 80,
+      "stats": {
+        "M": 5,
+        "WS": 8,
+        "BS": 7,
+        "S": 4,
+        "T": 3,
+        "W": 2,
+        "I": 7,
+        "A": 3,
+        "Ld": 8
+      },
+      "equipment": [
+        "Hand weapon",
+        "throwing weapons"
+      ],
+      "special_rules": [
+        "eternal_hatred",
+        "hatred_all_enemies",
+        "hidden",
+        "immune_to_psychology",
+        "murderous",
+        "strike_first"
+      ],
+      "options": [
+        {
+          "description": "Additional hand weapon",
+          "cost": 3,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Repeater handbow",
+          "cost": 5,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "Forbidden poison",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "special",
+          "choices": [
+            {
+              "description": "Black Lotus",
+              "cost": 5,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Dark Venom",
+              "cost": 15,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Manbane",
+              "cost": 15,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "Cannot be the army General.",
+        "Forbidden Poisons — Black Lotus: enemy characters suffer -1 Ld for remainder of game per unsaved wound. Dark Venom: has Killing Blow. Manbane: rolls To Wound of 4+ always succeed regardless of Toughness."
+      ],
+      "source_page": 7
+    },
+    {
+      "id": "dark_steed_de",
+      "name": "Dark Steed",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "1",
+      "points": 14,
+      "profiles": [
+        {
+          "name": "Dark Steed",
+          "profile": {
+            "M": 9,
+            "WS": 3,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 1,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [
+        "Hooves (counts as hand weapon)"
+      ],
+      "special_rules": [
+        "fast_cavalry",
+        "swiftstride"
+      ],
+      "source_page": 8
+    },
+    {
+      "id": "cold_one_de",
+      "name": "Cold One",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "1",
+      "points": 18,
+      "profiles": [
+        {
+          "name": "Cold One",
+          "profile": {
+            "M": 7,
+            "WS": 3,
+            "BS": "-",
+            "S": 4,
+            "T": "-",
+            "W": 2,
+            "I": 2,
+            "A": "-",
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [
+        "Claws and teeth (counts as hand weapon)"
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "armoured_hide_1",
+        "fear",
+        "first_charge",
+        "stupidity",
+        "swiftstride"
+      ],
+      "notes": [
+        "A character mounted on a Cold One has +1 Toughness."
+      ],
+      "source_page": 8
+    },
+    {
+      "id": "dark_pegasus",
+      "name": "Dark Pegasus",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Monstrous cavalry",
+      "base_size": "40 x 60 mm",
+      "unit_size": "1",
+      "points": 35,
+      "profiles": [
+        {
+          "name": "Dark Pegasus",
+          "profile": {
+            "M": 8,
+            "WS": 3,
+            "BS": "-",
+            "S": 4,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 3,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [
+        "Hooves (counts as hand weapon)"
+      ],
+      "special_rules": [
+        "armour_bane_1",
+        "counter_charge",
+        "first_charge",
+        "fly_10",
+        "swiftstride"
+      ],
+      "notes": [
+        "A character mounted on a Dark Pegasus has +1 Wound. Available to Sorceresses only."
+      ],
+      "source_page": 8
+    },
+    {
+      "id": "black_dragon_de",
+      "name": "Black Dragon",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Behemoth",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 280,
+      "profiles": [
+        {
+          "name": "Black Dragon",
+          "profile": {
+            "M": 6,
+            "WS": 6,
+            "BS": "-",
+            "S": 7,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 6,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [
+        "Wicked claws",
+        "serrated maw",
+        "noxious breath",
+        "draconic scales (counts as full plate armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "fly_10",
+        "hatred_high_elves",
+        "large_target",
+        "stomp_attacks_d6",
+        "swiftstride",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        },
+        {
+          "name": "Serrated maw",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "Armour Bane (2)",
+            "Multiple Wounds (2)"
+          ],
+          "notes": "In combat, this model must make one of its attacks each turn with this weapon."
+        },
+        {
+          "name": "Noxious breath",
+          "range": "N/A",
+          "S": "4",
+          "AP": "N/A",
+          "special_rules": [
+            "Breath Weapon"
+          ],
+          "notes": "Until your next Start of Turn sub-phase, every model in a unit that suffers one or more unsaved wounds from this weapon suffers a -1 modifier to their Weapon Skill (to a minimum of 1). No armour save is permitted against wounds caused by this weapon (Ward and Regeneration saves can be attempted as normal)."
+        }
+      ],
+      "notes": [
+        "A character mounted on a Black Dragon has +3 Toughness and +6 Wounds.",
+        "Character mount only. Dreadlord or Supreme Sorceress only."
+      ],
+      "source_page": 18
+    },
+    {
+      "id": "manticore_de",
+      "name": "Manticore",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Monstrous creature",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 130,
+      "profiles": [
+        {
+          "name": "Manticore",
+          "profile": {
+            "M": 6,
+            "WS": 5,
+            "BS": "-",
+            "S": 5,
+            "T": "-",
+            "W": "-",
+            "I": 5,
+            "A": 4,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [
+        "Wicked claws",
+        "scaly skin (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "close_order",
+        "fly_9",
+        "large_target",
+        "stomp_attacks_d3",
+        "swiftstride",
+        "terror",
+        "wilful_beast"
+      ],
+      "options": [
+        {
+          "description": "Venomous tail",
+          "cost": 15,
+          "scope": "per_unit",
+          "category": "special"
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        },
+        {
+          "name": "Venomous tail",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "Poisoned Attacks",
+            "Strike First"
+          ],
+          "notes": "Optional upgrade (+15 pts). In combat, this model must make one of its attacks each turn with this weapon."
+        }
+      ],
+      "notes": [
+        "A character mounted on a Manticore has +1 Toughness and +4 Wounds.",
+        "Character mount only. Dreadlord or High Beastmaster only.",
+        "Wilful Beast: each Start of Turn sub-phase, make a Leadership test (unmodified). If failed, rider loses control — mount has Frenzy until next Start of Turn sub-phase."
+      ],
+      "source_page": 19
+    },
+    {
+      "id": "cauldron_of_blood",
+      "name": "Cauldron of Blood",
+      "source": "legends",
+      "category": "mount",
+      "troop_type": "Heavy chariot",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 150,
+      "armour_value": "4+",
+      "profiles": [
+        {
+          "name": "Cauldron of Blood",
+          "profile": {
+            "M": 2,
+            "WS": "-",
+            "BS": "-",
+            "S": 5,
+            "T": 5,
+            "W": 5,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Witch Elf Crew (x2)",
+          "profile": {
+            "M": "-",
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 5,
+            "A": 1,
+            "Ld": 9
+          },
+          "is_mount": false
+        }
+      ],
+      "equipment": {
+        "crew": [
+          "Two hand weapons"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "dragged_along",
+        "elven_reflexes",
+        "frenzy",
+        "hatred_high_elves",
+        "impact_hits_d6_plus_1",
+        "large_target",
+        "magic_resistance_1",
+        "murderous",
+        "poisoned_attacks",
+        "terror"
+      ],
+      "notes": [
+        "Blessings of Khaine (Bound spell, Power Level 2): Casting Value 9+. Range: Self. Until next Start of Turn, every friendly Death Hag, unit of Witch Elves or Sisters of Slaughter within Command range gains one of: Fury of Khaine (Furious Charge), Strength of Khaine (Cleaving Blow), or Bloodshield of Khaine (5+ Ward save against any wounds).",
+        "Character mount only. Death Hag only. Points added to Death Hag's total."
+      ],
+      "source_page": 15
+    },
+    {
+      "id": "dark_elf_warriors",
+      "name": "Dark Elf Warriors",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 8,
+      "profiles": [
+        {
+          "name": "Dark Elf Warrior",
+          "profile": {
+            "M": 5,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 4,
+            "A": 1,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "light armour",
+        "shields"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "hatred_high_elves",
+        "martial_prowess"
+      ],
+      "options": [
+        {
+          "description": "Take thrusting spears",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Veteran rule (0-1 unit per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Lordling",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "source_page": 9
+    },
+    {
+      "id": "repeater_crossbowmen",
+      "name": "Repeater Crossbowmen",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Repeater Crossbowman",
+          "profile": {
+            "M": 5,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 4,
+            "A": 1,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "repeater crossbows",
+        "light armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "hatred_high_elves",
+        "martial_prowess"
+      ],
+      "options": [
+        {
+          "description": "Take shields",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "Veteran rule (0-1 unit per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Lordling",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 5
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 5
+        }
+      ],
+      "source_page": 9
+    },
+    {
+      "id": "black_ark_corsairs",
+      "name": "Black Ark Corsairs",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "core",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Corsair",
+          "profile": {
+            "M": 5,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 4,
+            "A": 1,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "light armour"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "hatred_high_elves",
+        "move_through_cover",
+        "open_order",
+        "sea_dragon_cloak"
+      ],
+      "options": [
+        {
+          "description": "Unit weapon choice (required)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapons (free)",
+              "cost": 0,
+              "scope": "per_unit"
+            },
+            {
+              "description": "Repeater handbows (free)",
+              "cost": 0,
+              "scope": "per_unit"
+            }
+          ]
+        },
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Reaver",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "source_page": 10
+    },
+    {
+      "id": "dark_riders",
+      "name": "Dark Riders",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "core",
+      "troop_type": "Light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 16,
+      "profiles": [
+        {
+          "name": "Dark Rider",
+          "profile": {
+            "M": 9,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 4,
+            "A": 1,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Dark Steed",
+          "profile": {
+            "M": 9,
+            "WS": 3,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 1,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "rider": [
+          "Hand weapons",
+          "cavalry spears",
+          "light armour"
+        ],
+        "mount": [
+          "Hooves (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "elven_reflexes",
+        "fast_cavalry",
+        "hatred_high_elves",
+        "open_order",
+        "skirmishers",
+        "swiftstride"
+      ],
+      "options": [
+        {
+          "description": "Repeater crossbows",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "Fire & Flee rule (0-1 unit per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Scouts rule (0-1 unit per 1,000 pts)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Herald",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "source_page": 13
+    },
+    {
+      "id": "black_guard_of_naggarond",
+      "name": "Black Guard of Naggarond",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 15,
+      "profiles": [
+        {
+          "name": "Black Guard",
+          "profile": {
+            "M": 5,
+            "WS": 5,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 5,
+            "A": 1,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "dread halberds",
+        "full plate armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "eternal_hatred",
+        "hatred_high_elves",
+        "immune_to_psychology",
+        "martial_prowess",
+        "stubborn"
+      ],
+      "options": [
+        {
+          "description": "Drilled rule",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 100,
+          "category": "special"
+        },
+        {
+          "description": "Tower Master may purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Tower Master",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Dread halberd",
+          "range": "Combat",
+          "S": "S+1",
+          "AP": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Fight in Extra Rank",
+            "Requires Two Hands"
+          ],
+          "notes": "A model wielding a dread halberd cannot make a supporting attack during a turn in which it charged."
+        }
+      ],
+      "notes": [
+        "0-1 unit per Dark Elf Noble (Dreadlord or Master) taken."
+      ],
+      "source_page": 10
+    },
+    {
+      "id": "har_ganeth_executioners",
+      "name": "Har Ganeth Executioners",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 15,
+      "profiles": [
+        {
+          "name": "Executioner",
+          "profile": {
+            "M": 5,
+            "WS": 5,
+            "BS": 4,
+            "S": 4,
+            "T": 3,
+            "W": 1,
+            "I": 5,
+            "A": 1,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "Har Ganeth greatswords",
+        "heavy armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "hatred_high_elves",
+        "murderous",
+        "veteran"
+      ],
+      "options": [
+        {
+          "description": "Drilled rule",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        },
+        {
+          "description": "Draich Master may purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Draich Master",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Har Ganeth greatsword",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-1",
+          "special_rules": [
+            "Cleaving Blow",
+            "Requires Two Hands"
+          ]
+        }
+      ],
+      "source_page": 11
+    },
+    {
+      "id": "dark_elf_shades",
+      "name": "Dark Elf Shades",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 15,
+      "profiles": [
+        {
+          "name": "Shade",
+          "profile": {
+            "M": 5,
+            "WS": 5,
+            "BS": 5,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 5,
+            "A": 1,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "repeater crossbows"
+      ],
+      "special_rules": [
+        "elven_reflexes",
+        "evasive",
+        "hatred_high_elves",
+        "move_through_cover",
+        "scouts",
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "description": "Unit weapon upgrade",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon",
+          "choices": [
+            {
+              "description": "Additional hand weapons",
+              "cost": 1,
+              "scope": "per_model"
+            },
+            {
+              "description": "Great weapons",
+              "cost": 2,
+              "scope": "per_model"
+            }
+          ]
+        },
+        {
+          "description": "Light armour",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "armour"
+        },
+        {
+          "description": "Ambushers rule (0-1 in army)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Chariot Runners rule (0-1 in army)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Veteran rule (0-1 in army)",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Bloodshade may purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Bloodshade",
+          "cost_per_unit": 6
+        }
+      ],
+      "source_page": 11
+    },
+    {
+      "id": "witch_elves",
+      "name": "Witch Elves",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Witch Elf",
+          "profile": {
+            "M": 5,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 5,
+            "A": 1,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [
+        "Two hand weapons"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "frenzy",
+        "hatred_high_elves",
+        "horde",
+        "loner",
+        "murderous",
+        "poisoned_attacks"
+      ],
+      "options": [
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Hag",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "notes": [
+        "If your army includes one or more Death Hags, 0-1 unit of Witch Elves may be taken as a Core choice."
+      ],
+      "source_page": 12
+    },
+    {
+      "id": "harpies",
+      "name": "Harpies",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "special",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5+",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Harpy",
+          "profile": {
+            "M": 5,
+            "WS": 3,
+            "BS": 0,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 5,
+            "A": 2,
+            "Ld": 6
+          }
+        }
+      ],
+      "equipment": [
+        "Claws (counts as hand weapons)"
+      ],
+      "special_rules": [
+        "fly_10",
+        "move_through_cover",
+        "scouts",
+        "skirmishers",
+        "swiftstride"
+      ],
+      "source_page": 12
+    },
+    {
+      "id": "cold_one_knights_de",
+      "name": "Cold One Knights",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "special",
+      "troop_type": "Heavy cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 31,
+      "profiles": [
+        {
+          "name": "Cold One Knight",
+          "profile": {
+            "M": 7,
+            "WS": 5,
+            "BS": 4,
+            "S": 4,
+            "T": 4,
+            "W": 1,
+            "I": 5,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Cold One",
+          "profile": {
+            "M": 7,
+            "WS": 3,
+            "BS": "-",
+            "S": 4,
+            "T": "-",
+            "W": "-",
+            "I": 2,
+            "A": 2,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "rider": [
+          "Hand weapons",
+          "lances",
+          "heavy armour",
+          "shields"
+        ],
+        "mount": [
+          "Claws and teeth (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "armour_bane_1",
+        "armoured_hide_1",
+        "close_order",
+        "elven_reflexes",
+        "fear",
+        "first_charge",
+        "hatred_high_elves",
+        "stupidity",
+        "swiftstride"
+      ],
+      "options": [
+        {
+          "description": "Replace heavy armour with full plate armour",
+          "cost": 4,
+          "scope": "per_model",
+          "category": "armour",
+          "replaces": "heavy armour"
+        },
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        },
+        {
+          "description": "Dread Knight may purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Dread Knight",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "notes": [
+        "0-1 unit per 1,000 points."
+      ],
+      "source_page": 13
+    },
+    {
+      "id": "scourgerunner_chariots",
+      "name": "Scourgerunner Chariots",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "special",
+      "troop_type": "Light chariot",
+      "base_size": "50 x 100 mm",
+      "unit_size": "1-3",
+      "points": 85,
+      "armour_value": "5+",
+      "profiles": [
+        {
+          "name": "Scourgerunner Chariot",
+          "profile": {
+            "M": 9,
+            "WS": "-",
+            "BS": "-",
+            "S": 4,
+            "T": 4,
+            "W": 4,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Beastmaster Crew (x2)",
+          "profile": {
+            "M": "-",
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": 4,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Dark Steed (x2)",
+          "profile": {
+            "M": 9,
+            "WS": 3,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 1,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "crew": [
+          "Hand weapons",
+          "cavalry spears",
+          "repeater crossbows"
+        ],
+        "mount": [
+          "Hooves (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "elven_reflexes",
+        "hatred_high_elves",
+        "impact_hits_d6",
+        "open_order",
+        "sea_dragon_cloak",
+        "swiftstride"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Ravager harpoon",
+          "range": "24\"",
+          "S": "6",
+          "AP": "-3",
+          "special_rules": [
+            "Cumbersome",
+            "Multiple Wounds (D3)",
+            "Ponderous"
+          ],
+          "notes": "During the Shooting phase, one of the Beastmaster Crew may fire this weapon instead of their repeater crossbow."
+        }
+      ],
+      "notes": [
+        "May also be taken as a character mount for the High Beastmaster (points added to rider's total).",
+        "0-2 Scourgerunner Chariots or Cold One Chariots (combined) per 1,000 points."
+      ],
+      "source_page": 16
+    },
+    {
+      "id": "cold_one_chariots_de",
+      "name": "Cold One Chariots",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "special",
+      "troop_type": "Heavy chariot",
+      "base_size": "50 x 100 mm",
+      "unit_size": "1",
+      "points": 125,
+      "armour_value": "4+",
+      "profiles": [
+        {
+          "name": "Cold One Chariot",
+          "profile": {
+            "M": 7,
+            "WS": "-",
+            "BS": "-",
+            "S": 5,
+            "T": 5,
+            "W": 4,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Knight Charioteer (x2)",
+          "profile": {
+            "M": "-",
+            "WS": 5,
+            "BS": 4,
+            "S": 4,
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": 5,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Cold One (x2)",
+          "profile": {
+            "M": 7,
+            "WS": 3,
+            "BS": "-",
+            "S": 4,
+            "T": "-",
+            "W": "-",
+            "I": 2,
+            "A": 2,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "crew": [
+          "Hand weapons",
+          "cavalry spears",
+          "repeater crossbows"
+        ],
+        "mount": [
+          "Claws and teeth (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "armour_bane_1",
+        "close_order",
+        "elven_reflexes",
+        "fear",
+        "first_charge",
+        "hatred_high_elves",
+        "impact_hits_d6_plus_1",
+        "stupidity"
+      ],
+      "notes": [
+        "May also be taken as a character mount for a Dreadlord or Master (points added to rider's total).",
+        "0-2 Scourgerunner Chariots or Cold One Chariots (combined) per 1,000 points."
+      ],
+      "source_page": 16
+    },
+    {
+      "id": "sisters_of_slaughter",
+      "name": "Sisters of Slaughter",
+      "source": "legends",
+      "category": "infantry",
+      "list_category": "rare",
+      "troop_type": "Regular infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "10+",
+      "points": 17,
+      "profiles": [
+        {
+          "name": "Sister of Slaughter",
+          "profile": {
+            "M": 5,
+            "WS": 5,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "I": 6,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons",
+        "lash & buckler"
+      ],
+      "special_rules": [
+        "dance_of_death",
+        "elven_reflexes",
+        "hatred_high_elves",
+        "impetuous",
+        "loner",
+        "murderous",
+        "open_order"
+      ],
+      "options": [
+        {
+          "description": "Purchase a magic standard",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 50,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Hag",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 7
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 7
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Lash & buckler",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Fight in Extra Rank",
+            "Requires Two Hands"
+          ],
+          "notes": "A model equipped with a lash & buckler improves its armour value by 1."
+        }
+      ],
+      "notes": [
+        "Dance of Death: if this unit makes a successful charge, the charge target suffers -1 to its Maximum Rank Bonus until the end of the Combat phase of that turn."
+      ],
+      "source_page": 12
+    },
+    {
+      "id": "doomfire_warlocks",
+      "name": "Doomfire Warlocks",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "rare",
+      "troop_type": "Light cavalry",
+      "base_size": "30 x 60 mm",
+      "unit_size": "5+",
+      "points": 22,
+      "profiles": [
+        {
+          "name": "Doomfire Warlock",
+          "profile": {
+            "M": 9,
+            "WS": 4,
+            "BS": 4,
+            "S": 4,
+            "T": 3,
+            "W": 1,
+            "I": 5,
+            "A": 1,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Dark Steed",
+          "profile": {
+            "M": 9,
+            "WS": 3,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 1,
+            "Ld": "-"
+          },
+          "is_mount": true
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "rider": [
+          "Hand weapons"
+        ],
+        "mount": [
+          "Hooves (counts as hand weapons)"
+        ]
+      },
+      "special_rules": [
+        "cursed_coven",
+        "dark_runes",
+        "elven_reflexes",
+        "fast_cavalry",
+        "hatred_high_elves",
+        "open_order",
+        "poisoned_attacks",
+        "swiftstride"
+      ],
+      "options": [
+        {
+          "description": "Master (champion) may purchase magic items",
+          "cost": 0,
+          "scope": "per_unit",
+          "max_points": 25,
+          "category": "special"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Master",
+          "cost_per_unit": 6
+        }
+      ],
+      "notes": [
+        "0-1 unit per 1,000 points.",
+        "Poisoned Attacks applies to Warlocks and Master only, not mounts.",
+        "Cursed Coven: unit knows one spell from Dark Magic or Daemonology and may cast it as a Bound spell (Power Level 2 with US 10+ and Master; PL 1 with Master and US 9 or less; PL 0 otherwise).",
+        "Dark Runes: 5+ Ward save against wounds caused by non-magical enemy attacks."
+      ],
+      "source_page": 14
+    },
+    {
+      "id": "bloodwrack_shrine",
+      "name": "Bloodwrack Shrine",
+      "source": "legends",
+      "category": "cavalry",
+      "list_category": "rare",
+      "troop_type": "Heavy chariot",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 175,
+      "armour_value": "4+",
+      "profiles": [
+        {
+          "name": "Bloodwrack Shrine",
+          "profile": {
+            "M": 2,
+            "WS": "-",
+            "BS": "-",
+            "S": 5,
+            "T": 5,
+            "W": 5,
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Shrinekeeper (x2)",
+          "profile": {
+            "M": "-",
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": "-",
+            "A": 5,
+            "Ld": 8
+          }
+        },
+        {
+          "name": "Bloodwrack Medusa",
+          "profile": {
+            "M": "-",
+            "WS": 5,
+            "BS": 5,
+            "S": 4,
+            "T": "-",
+            "W": "-",
+            "I": 5,
+            "A": 3,
+            "Ld": "-"
+          }
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "crew": [
+          "Cavalry spears",
+          "cavalry spear and petrifying gaze (Medusa)"
+        ],
+        "mount": []
+      },
+      "special_rules": [
+        "close_order",
+        "dragged_along",
+        "elven_reflexes",
+        "frenzy",
+        "hatred_high_elves",
+        "impact_hits_d6_plus_1",
+        "large_target",
+        "magic_resistance_1",
+        "murderous",
+        "poisoned_attacks",
+        "stony_stare",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Petrifying gaze",
+          "range": "18\"",
+          "S": "2",
+          "AP": "N/A",
+          "special_rules": [
+            "Magical Attacks",
+            "Multiple Wounds (D3)"
+          ],
+          "notes": "When making a roll To Wound for an attack made with this weapon, substitute the target's Toughness with its Initiative. No armour save is permitted against wounds caused by this weapon (Ward and Regeneration saves can be attempted as normal)."
+        }
+      ],
+      "notes": [
+        "Stony Stare: at the start of each Combat phase, enemy models in base contact must make an Initiative test. If failed, they suffer D3 Strength 2 hits, no armour save permitted."
+      ],
+      "source_page": 17
+    },
+    {
+      "id": "war_hydra",
+      "name": "War Hydra",
+      "source": "legends",
+      "category": "monster",
+      "list_category": "rare",
+      "troop_type": "Behemoth",
+      "base_size": "60 x 100 mm (Hydra), 25 x 25 mm (Handlers)",
+      "unit_size": "1",
+      "points": 200,
+      "armour_value": "5+",
+      "profiles": [
+        {
+          "name": "War Hydra",
+          "profile": {
+            "M": 6,
+            "WS": 4,
+            "BS": 0,
+            "S": 5,
+            "T": 5,
+            "W": 5,
+            "I": 3,
+            "A": 2,
+            "Ld": 6
+          }
+        },
+        {
+          "name": "Beastmaster Handlers (x2)",
+          "profile": {
+            "M": 6,
+            "WS": 4,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 1,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "crew": [
+          "Hand weapons",
+          "whips"
+        ],
+        "mount": [
+          "Wicked claws",
+          "serrated maws",
+          "fiery breath"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "extra_attacks_remaining_wounds",
+        "immune_to_psychology",
+        "large_target",
+        "monster_handlers",
+        "regeneration_5",
+        "stomp_attacks_d3",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Wicked claws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": []
+        },
+        {
+          "name": "Serrated maws",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Wounds (2)"
+          ],
+          "notes": "In combat, this model must make each attack granted by the Extra Attacks (+remaining Wounds) special rule with this weapon."
+        },
+        {
+          "name": "Fiery breath",
+          "range": "N/A",
+          "S": "*",
+          "AP": "-1",
+          "special_rules": [
+            "Breath Weapon",
+            "Flaming Attacks"
+          ],
+          "notes": "The Strength characteristic of this weapon is equal to this model's remaining Wounds."
+        }
+      ],
+      "notes": [
+        "If General is a High Beastmaster, may be taken as a Special choice (0-1)."
+      ],
+      "source_page": 20
+    },
+    {
+      "id": "kharibdyss",
+      "name": "Kharibdyss",
+      "source": "legends",
+      "category": "monster",
+      "list_category": "rare",
+      "troop_type": "Behemoth",
+      "base_size": "60 x 100 mm (Kharibdyss), 25 x 25 mm (Handlers)",
+      "unit_size": "1",
+      "points": 195,
+      "armour_value": "5+",
+      "profiles": [
+        {
+          "name": "Kharibdyss",
+          "profile": {
+            "M": 6,
+            "WS": 5,
+            "BS": 0,
+            "S": 7,
+            "T": 5,
+            "W": 5,
+            "I": 3,
+            "A": 5,
+            "Ld": 6
+          }
+        },
+        {
+          "name": "Beastmaster Handlers (x2)",
+          "profile": {
+            "M": 6,
+            "WS": 4,
+            "BS": "-",
+            "S": 3,
+            "T": "-",
+            "W": "-",
+            "I": 4,
+            "A": 1,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "crew": [
+          "Hand weapons",
+          "whips"
+        ],
+        "mount": [
+          "Cavernous maw",
+          "writhing tentacles"
+        ]
+      },
+      "special_rules": [
+        "abyssal_howl",
+        "close_order",
+        "immune_to_psychology",
+        "large_target",
+        "monster_handlers",
+        "stomp_attacks_d3_plus_1",
+        "terror"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Cavernous maw",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Killing Blow"
+          ],
+          "notes": "In combat, this model must make one of its attacks each turn with this weapon."
+        },
+        {
+          "name": "Writhing tentacles",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-2",
+          "special_rules": [
+            "Poisoned Attacks"
+          ]
+        }
+      ],
+      "notes": [
+        "If General is a High Beastmaster, may be taken as a Special choice (0-1).",
+        "Abyssal Howl: whilst within 6\" of this model, enemy units suffer -1 to their Leadership (minimum 2, not cumulative)."
+      ],
+      "source_page": 21
+    },
+    {
+      "id": "bloodwrack_medusa",
+      "name": "Bloodwrack Medusa",
+      "source": "legends",
+      "category": "monster",
+      "list_category": "rare",
+      "troop_type": "Monstrous creature",
+      "base_size": "40 x 40 mm",
+      "unit_size": "1",
+      "points": 85,
+      "profiles": [
+        {
+          "name": "Bloodwrack Medusa",
+          "profile": {
+            "M": 7,
+            "WS": 5,
+            "BS": 5,
+            "S": 4,
+            "T": 4,
+            "W": 4,
+            "I": 5,
+            "A": 3,
+            "Ld": 7
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon",
+        "petrifying gaze",
+        "light armour"
+      ],
+      "special_rules": [
+        "close_order",
+        "elven_reflexes",
+        "fear",
+        "frenzy",
+        "hatred_high_elves",
+        "magic_resistance_1",
+        "murderous",
+        "poisoned_attacks",
+        "stony_stare"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Petrifying gaze",
+          "range": "18\"",
+          "S": "2",
+          "AP": "N/A",
+          "special_rules": [
+            "Magical Attacks",
+            "Multiple Wounds (D3)"
+          ],
+          "notes": "When making a roll To Wound for an attack made with this weapon, substitute the target's Toughness with its Initiative. No armour save is permitted against wounds caused by this weapon (Ward and Regeneration saves can be attempted as normal)."
+        }
+      ],
+      "notes": [
+        "Stony Stare: at the start of each Combat phase, enemy models in base contact must make an Initiative test. If failed, they suffer D3 Strength 2 hits, no armour save permitted."
+      ],
+      "source_page": 20
+    },
+    {
+      "id": "reaper_bolt_thrower",
+      "name": "Reaper Bolt Thrower",
+      "source": "legends",
+      "category": "war_machine",
+      "list_category": "rare",
+      "troop_type": "War machine",
+      "base_size": "50 x 50 mm (machine), 25 x 25 mm (crew)",
+      "unit_size": "1",
+      "points": 80,
+      "profiles": [
+        {
+          "name": "Reaper Bolt Thrower",
+          "profile": {
+            "M": "-",
+            "WS": "-",
+            "BS": "-",
+            "S": 6,
+            "T": 2,
+            "W": "-",
+            "I": "-",
+            "A": "-",
+            "Ld": "-"
+          }
+        },
+        {
+          "name": "Dark Elf Crew",
+          "profile": {
+            "M": 5,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 3,
+            "W": 2,
+            "I": 4,
+            "A": 2,
+            "Ld": 8
+          }
+        }
+      ],
+      "equipment": [],
+      "equipment_by_model": {
+        "crew": [
+          "Repeater bolt thrower",
+          "hand weapons",
+          "light armour"
+        ],
+        "mount": []
+      },
+      "special_rules": [
+        "elven_reflexes",
+        "hatred_high_elves",
+        "skirmishers"
+      ],
+      "notes": [
+        "0-2 per 1,000 points."
+      ],
+      "source_page": 21
+    }
+  ],
+  "magic_items": [
+    {
+      "id": "executioners_axe",
+      "name": "Executioner's Axe",
+      "category": "magic_weapon",
+      "points": 70,
+      "source": "legends",
+      "description": "A single blow from this huge, black-bladed weapon can cut any opponent in half.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false,
+      "weapon_profile": {
+        "name": "Executioner's Axe",
+        "range": "Combat",
+        "S": "S",
+        "AP": "-2",
+        "special_rules": [
+          "Killing Blow",
+          "Magical Attacks",
+          "Strike Last"
+        ],
+        "notes": "When making a roll To Wound for a hit caused with the Executioner's Axe, a roll of 2+ is always a success, regardless of the target's Toughness."
+      }
+    },
+    {
+      "id": "sword_of_ruin_de",
+      "name": "Sword of Ruin",
+      "category": "magic_weapon",
+      "points": 65,
+      "source": "legends",
+      "description": "The wickedly sharp edge of the Sword of Ruin can cleave through armour as if it were air.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false,
+      "weapon_profile": {
+        "name": "Sword of Ruin",
+        "range": "Combat",
+        "S": "S",
+        "AP": "*",
+        "special_rules": [
+          "Magical Attacks"
+        ],
+        "notes": "No armour, Ward or Regeneration saves are permitted against wounds caused by the Sword of Ruin."
+      }
+    },
+    {
+      "id": "lifetaker_de",
+      "name": "Lifetaker",
+      "category": "magic_weapon",
+      "points": 35,
+      "source": "legends",
+      "description": "Finely fashioned from blackest steel, Lifetaker fires bolts dipped in the venom of a Black Dragon.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false,
+      "weapon_profile": {
+        "name": "Lifetaker",
+        "range": "24\"",
+        "S": "3",
+        "AP": "-1",
+        "special_rules": [
+          "Armour Bane (1)",
+          "Magical Attacks",
+          "Multiple Shots (D3+1)",
+          "Poisoned Attacks"
+        ]
+      }
+    },
+    {
+      "id": "whip_of_agony",
+      "name": "Whip of Agony",
+      "category": "magic_weapon",
+      "points": 30,
+      "source": "legends",
+      "description": "An heirloom of the feared Beastlords of clan Rakarth, the Whip of Agony inflicts enduring torment upon its victims.",
+      "restrictions": "High Beastmasters only.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false,
+      "weapon_profile": {
+        "name": "Whip of Agony",
+        "range": "Combat",
+        "S": "S+1",
+        "AP": "-1",
+        "special_rules": [
+          "Magical Attacks",
+          "Strike First"
+        ],
+        "notes": "Any enemy model that suffers one or more unsaved wounds from the Whip of Agony suffers a -1 modifier to its Toughness characteristic (to a minimum of 1) for the remainder of the game."
+      }
+    },
+    {
+      "id": "shield_of_ghrond",
+      "name": "Shield of Ghrond",
+      "category": "magic_armour",
+      "points": 40,
+      "source": "legends",
+      "description": "The Daemon-faced Shield of Ghrond consumes the strength of the enemy's attacks.",
+      "rules_text": "This item is a shield. In addition, all attacks directed against its bearer suffer a -1 modifier to their Strength characteristic (to a minimum of 1).",
+      "single_use": false,
+      "is_shield": true,
+      "extremely_common": false
+    },
+    {
+      "id": "blood_armour",
+      "name": "Blood Armour",
+      "category": "magic_armour",
+      "points": 30,
+      "source": "legends",
+      "description": "When anointed with the blood of the foe, this armour becomes ever more endurable.",
+      "rules_text": "The Blood Armour is a suit of armour that gives its wearer an armour value of 5+. For each unsaved wound the wearer inflicts, this armour value is improved by 1, to a maximum of 2+.",
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "pendant_of_khaeleth",
+      "name": "Pendant of Khaeleth",
+      "category": "talisman",
+      "points": 40,
+      "source": "legends",
+      "description": "The protection offered by this amulet grows to match the power of an enemy's attack.",
+      "rules_text": "The Pendant of Khaeleth gives its bearer a 5+ Ward save against any wounds suffered that were caused by an attack with a Strength of 4 or lower, and a 4+ Ward save against any wounds suffered that were caused by an attack with a Strength of 5 or higher.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "pearl_of_infinite_bleakness",
+      "name": "Pearl of Infinite Bleakness",
+      "category": "talisman",
+      "points": 15,
+      "source": "legends",
+      "description": "Swirled with red and black veins, this magical pearl emits a soul-numbing aura.",
+      "rules_text": "The bearer of the Pearl of Infinite Bleakness and any unit they have joined gains the Immune to Psychology special rule.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false,
+      "grants_rules": [
+        "immune_to_psychology"
+      ]
+    },
+    {
+      "id": "black_dragon_egg",
+      "name": "Black Dragon Egg",
+      "category": "enchanted_item",
+      "points": 35,
+      "source": "legends",
+      "description": "When a Black Dragon egg is eaten, the properties of the Dragon are temporarily passed on.",
+      "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Black Dragon Egg can consume it. Until the end of that turn, the model has a Toughness characteristic of 6 (which cannot be improved further) and gains noxious breath (see Black Dragon, p.18).",
+      "single_use": true,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "hydras_tooth",
+      "name": "Hydra's Tooth",
+      "category": "enchanted_item",
+      "points": 30,
+      "source": "legends",
+      "description": "Fangs are taken from the maw of a slain Hydra and crafted into deadly throwing weapons.",
+      "rules_text": "This weapon can target a specific model within the target unit, such as a champion or a character.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false,
+      "weapon_profile": {
+        "name": "Hydra's Tooth",
+        "range": "9\"",
+        "S": "S",
+        "AP": "-3",
+        "special_rules": [
+          "Magical Attacks",
+          "Move & Shoot",
+          "Quick Shot"
+        ]
+      }
+    },
+    {
+      "id": "the_guiding_eye",
+      "name": "The Guiding Eye",
+      "category": "enchanted_item",
+      "points": 25,
+      "source": "legends",
+      "description": "Set in black iron, this oval ruby grants mystical sight to the wearer.",
+      "rules_text": "Single use. The bearer of the Guiding Eye and any unit they have joined may re-roll any failed rolls To Hit made during the Shooting phase.",
+      "single_use": true,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "black_staff_de",
+      "name": "Black Staff",
+      "category": "arcane_item",
+      "points": 55,
+      "source": "legends",
+      "description": "A Black Staff is the talisman of the High Mistresses of the Convent of Sorceresses.",
+      "rules_text": "The bearer of the Black Staff may use it when attempting to cast a spell. If they do so, roll an extra D6 when making the Casting roll and discard the lowest result. However, if a double 1 is rolled on any two of the dice rolled, the spell is miscast.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "focus_familiar_de",
+      "name": "Focus Familiar",
+      "category": "arcane_item",
+      "points": 10,
+      "source": "legends",
+      "description": "The Wizard channels their spells through the eyes of an arcane homunculus.",
+      "rules_text": "Single use. Place a marker completely within 12\" of the owner. The range and all effects of the spell are measured from this marker, rather than from the owner. If the spell requires a line of sight, this is determined from the marker (which has a 360° vision arc).",
+      "single_use": true,
+      "is_shield": false,
+      "extremely_common": true
+    },
+    {
+      "id": "tome_of_furion",
+      "name": "Tome of Furion",
+      "category": "arcane_item",
+      "points": 15,
+      "source": "legends",
+      "description": "Furion of Clar Karond inscribed his knowledge onto sheets of flayed skin.",
+      "rules_text": "The bearer of the Tome of Furion knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "banner_of_nagarythe",
+      "name": "Banner of Nagarythe",
+      "category": "magic_standard",
+      "points": 65,
+      "source": "legends",
+      "description": "The personal banner of the Dread-King proclaims his reign over the Elven Kingdoms.",
+      "rules_text": "A unit carrying the Banner of Nagarythe gains the Stubborn special rule. In addition, when calculating its combat result, the unit may claim an additional bonus of +1 combat result point.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false,
+      "grants_rules": [
+        "stubborn"
+      ]
+    },
+    {
+      "id": "standard_of_slaughter",
+      "name": "Standard of Slaughter",
+      "category": "magic_standard",
+      "points": 40,
+      "source": "legends",
+      "description": "Anointed with the blood of an Ulthuan Elf, this banner exudes a sense of bitter determination.",
+      "rules_text": "When calculating its combat result during a turn in which it charged, a unit carrying the Standard of Slaughter may claim an additional bonus of +D3 combat result points.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "banner_of_har_ganeth",
+      "name": "Banner of Har Ganeth",
+      "category": "magic_standard",
+      "points": 25,
+      "source": "legends",
+      "description": "Under the influence of this ancient banner, warriors strike with deadly precision.",
+      "rules_text": "A unit carrying the Banner of Har Ganeth improves the Armour Piercing characteristic of its combat weapons by 1.",
+      "single_use": false,
+      "is_shield": false,
+      "extremely_common": false
+    },
+    {
+      "id": "cold_blooded_banner",
+      "name": "Cold-Blooded Banner",
+      "category": "magic_standard",
+      "points": 20,
+      "source": "legends",
+      "description": "Those that march beneath this Cold One blood-soaked banner display a steely discipline.",
+      "rules_text": "Single use. A unit carrying the Cold-Blooded Banner may use it when making any test against its Leadership characteristic, including a Break test. When it does, it may roll an extra D6 and discard the highest result.",
+      "single_use": true,
+      "is_shield": false,
+      "extremely_common": false
+    }
+  ],
+  "lore_of_naggaroth": [
+    {
+      "id": "cursing_word",
+      "name": "Cursing Word",
+      "type": "Hex",
+      "casting_value": "9+",
+      "range": "12\"",
+      "effect": "Remains in play. The target enemy unit suffers a -1 modifier to either its Weapon Skill or its Ballistic Skill characteristic (chosen by the casting Wizard's controlling player, to a minimum of 1). If this spell is cast, the effects of any other Hex previously cast on the target unit immediately expire.",
+      "is_signature": false,
+      "remains_in_play": true
+    },
+    {
+      "id": "black_horror",
+      "name": "Black Horror",
+      "type": "Magical Vortex",
+      "casting_value": "9+",
+      "range": "18\"",
+      "effect": "Remains in play. Place a large (5\") blast template so that its central hole is within 18\" of the caster. Whilst in play, the template is treated as dangerous terrain. The template moves 2D6\" in a random direction during every Start of Turn sub-phase. Any enemy unit the moving template touches or moves over must immediately make D6 Strength tests. For each test that is failed, the unit loses a single Wound.",
+      "is_signature": false,
+      "remains_in_play": true
+    }
+  ],
+  "publication": "legends"
+}

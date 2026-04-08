@@ -28,11 +28,14 @@ const LORE_KEYS = new Set([
   'lore_of_beasts', 'lore_of_primal_magic',
   'lore_of_nehekhara',
   'lore_of_the_lady',
+  'lore_of_undeath',
+  'lore_of_naggaroth',
 ]);
 
 const UPGRADE_KEYS = new Set([
   'knightly_virtues', 'chivalrous_vows', 'elven_honours',
   'gifts_of_chaos', 'chaos_mutations', 'runic_items', 'forest_sprites',
+  'vampiric_powers',
 ]);
 
 const UPGRADE_KEY_MAP: Record<string, string> = {
@@ -43,6 +46,7 @@ const UPGRADE_KEY_MAP: Record<string, string> = {
   chaos_mutation: 'chaos_mutations',
   runic_item: 'runic_items',
   forest_sprite: 'forest_sprites',
+  vampiric_power: 'vampiric_powers',
 };
 
 // ---------------------------------------------------------------------------
@@ -150,6 +154,8 @@ function unitRowToObj(row: Row): Record<string, unknown> {
   if (row.stats_crew != null) obj.stats_crew = parseJ(row.stats_crew as string, null);
   if (row.mount != null) obj.mount = parseJ(row.mount as string, null);
   if (row.availability != null) obj.availability = parseJ(row.availability as string, null);
+  if (row.source_page != null) obj.source_page = row.source_page;
+  if (row.errata != null) obj.errata = parseJ(row.errata as string, null);
   return obj;
 }
 
@@ -203,6 +209,8 @@ function itemRowToObj(row: Row): Record<string, unknown> {
   if (row.grants_rules != null) obj.grants_rules = parseJ(row.grants_rules as string, null);
   if (row.weapon_profile != null) obj.weapon_profile = parseJ(row.weapon_profile as string, null);
   if (row.armour_profile != null) obj.armour_profile = parseJ(row.armour_profile as string, null);
+  if (row.source_page != null) obj.source_page = row.source_page;
+  if (row.errata != null) obj.errata = parseJ(row.errata as string, null);
   return obj;
 }
 
