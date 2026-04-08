@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import jsQR from 'jsqr';
 import type { ArmyList } from '../../types/army';
+import { decodeArmyQR } from '../../utils/armyQR';
 
 interface Props {
   onScanned: (army: ArmyList) => void;
@@ -13,6 +14,7 @@ export default function QRScannerModal({ onScanned, onClose }: Props) {
   const streamRef = useRef<MediaStream | null>(null);
   const rafRef = useRef<number | null>(null);
   const activeRef = useRef(true);
+  const decodingRef = useRef(false);
 
   const [error, setError] = useState<string | null>(null);
   const [detected, setDetected] = useState(false);
@@ -45,19 +47,19 @@ export default function QRScannerModal({ onScanned, onClose }: Props) {
           const code = jsQR(imageData.data, imageData.width, imageData.height, {
             inversionAttempts: 'dontInvert',
           });
-          if (code?.data) {
-            try {
-              const parsed = JSON.parse(code.data) as ArmyList;
-              // Validate it looks like an army list
-              if (parsed.id && parsed.name && parsed.factionId && Array.isArray(parsed.entries)) {
+          if (code?.data && !decodingRef.current) {
+            decodingRef.current = true;
+            decodeArmyQR(code.data).then((army) => {
+              if (army) {
                 setDetected(true);
                 stopCamera();
-                onScanned(parsed);
-                return;
+                onScanned(army);
+              } else {
+                decodingRef.current = false;
               }
-            } catch {
-              // Not valid army JSON — keep scanning
-            }
+            }).catch(() => {
+              decodingRef.current = false;
+            });
           }
         }
       }

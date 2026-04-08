@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import QRCode from 'qrcode';
 import type { ArmyList } from '../../types/army';
+import { encodeArmyQR } from '../../utils/armyQR';
 
 interface Props {
   army: ArmyList;
@@ -12,13 +13,15 @@ export default function QRCodeModal({ army, onClose }: Props) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const payload = JSON.stringify(army);
-    QRCode.toDataURL(payload, {
-      errorCorrectionLevel: 'L',
-      width: 280,
-      margin: 2,
-      color: { dark: '#000000', light: '#ffffff' },
-    })
+    encodeArmyQR(army)
+      .then((payload) =>
+        QRCode.toDataURL(payload, {
+          errorCorrectionLevel: 'L',
+          width: 280,
+          margin: 2,
+          color: { dark: '#000000', light: '#ffffff' },
+        }),
+      )
       .then(setDataUrl)
       .catch(() =>
         setError(
