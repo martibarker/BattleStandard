@@ -81,6 +81,15 @@
           "limit_type": "max_percent",
           "limit_value": 25,
           "notes": "Any Warriors of Chaos Army of Infamy composition list; or one of: Orc & Goblin Tribes (Uneasy), Beastmen Brayherds, Tomb Kings of Khemri (Suspicious)"
+        },
+        {
+          "category": "rare",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "gigantic_spawn_of_chaos"
+          ],
+          "notes": "0-1 Gigantic Spawn of Chaos per 1,000 points (see Arcane Journal)"
         }
       ]
     },
@@ -1132,6 +1141,7 @@
       "name": "Marauder Tribe Chieftain",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
       "troop_type": "Regular infantry (character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
@@ -1284,6 +1294,9 @@
           ]
         }
       ],
+      "availability": [
+        "wolves_of_the_sea"
+      ],
       "source_page": 38
     },
     {
@@ -1291,6 +1304,7 @@
       "name": "Frydaal the Chainmaker",
       "source": "arcane_journal",
       "category": "character",
+      "list_category": "characters",
       "troop_type": "Heavy infantry (named character)",
       "base_size": "30 x 30 mm",
       "unit_size": "1",
@@ -1352,6 +1366,7 @@
       "name": "Galrauch, the Great Drake",
       "source": "arcane_journal",
       "category": "monster",
+      "list_category": "rare",
       "troop_type": "Behemoth (named character)",
       "base_size": "60 x 100 mm",
       "unit_size": "1",
@@ -2400,6 +2415,9 @@
       "notes_rules": [
         "Relentless Warriors: A model with this special rule has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack."
       ],
+      "availability": [
+        "wolves_of_the_sea"
+      ],
       "source_page": 39
     },
     {
@@ -2447,6 +2465,9 @@
       "notes": [
         "Special choice in the Wolves of the Sea Army of Infamy only.",
         "Warped Form: When this unit's combat is chosen during Step 1.1 of any Choose & Fight combat sub-phase, choose one: Enlarged Claws (AP improved by 1, gains Armour Bane 2), Barbed Protrusions (gains Extra Attacks +1), Toughened Flesh (Toughness +1 and armour value improved by 2). Each Transfiguration lasts until your next Start of Turn sub-phase."
+      ],
+      "availability": [
+        "wolves_of_the_sea"
       ],
       "source_page": 40,
       "errata": [
@@ -3096,6 +3117,9 @@
         "A": "1",
         "Ld": "-"
       },
+      "availability": [
+        "wolves_of_the_sea"
+      ],
       "source_page": 41
     },
     {
@@ -3347,6 +3371,9 @@
           "A": "2",
           "Ld": "9"
         }
+      ],
+      "availability": [
+        "heralds_of_darkness"
       ]
     },
     {
@@ -3822,6 +3849,10 @@
         "Warpfire Aura: Other models (both friend and foe) are not permitted a Ward save whilst within 3\" of this model.",
         "Warpfire Blast: Range 6\"-24\", S 4 (8), AP -1 (-3); Bombardment, Cumbersome, Flaming Attacks, Multiple Wounds (D3+1). Shoots like a stone thrower using the Bombardment rule and a 3\" blast template. If a Misfire is rolled, this model loses a single Wound instead. The Multiple Wounds (D3+1) special rule applies only to a single model whose base lies underneath the central hole.",
         "Wicked claws: Combat, S, AP -2."
+      ],
+      "availability": [
+        "grand_army",
+        "heralds_of_darkness"
       ],
       "source_page": 44,
       "errata": [
