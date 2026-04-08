@@ -467,7 +467,8 @@
       ],
       "notes": [
         "A single Paladin in the army may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
-      ]
+      ],
+      "source_page": 86
     },
     {
       "id": "baron",
@@ -592,7 +593,8 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "source_page": 86
     },
     {
       "id": "paladin",
@@ -720,7 +722,8 @@
       ],
       "notes": [
         "A single Paladin may be upgraded to Battle Standard Bearer at no extra cost; BSB may purchase a magic standard with no points limit"
-      ]
+      ],
+      "source_page": 86
     },
     {
       "id": "prophetess",
@@ -790,7 +793,8 @@
           "max_points": 100,
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 87
     },
     {
       "id": "damsel",
@@ -857,7 +861,8 @@
           "max_points": 50,
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 87
     },
     {
       "id": "sergeant_at_arms",
@@ -962,7 +967,8 @@
             "fight_in_extra_rank"
           ]
         }
-      ]
+      ],
+      "source_page": 88
     },
     {
       "id": "bretonnian_warhorse",
@@ -1001,7 +1007,8 @@
       ],
       "notes": [
         "Available to Duke, Baron, Paladin, Prophetess (+16 pts) and Damsel (+16 pts)"
-      ]
+      ],
+      "source_page": 89
     },
     {
       "id": "warhorse",
@@ -1077,7 +1084,8 @@
       ],
       "notes": [
         "Available to Duke, Baron and Paladin"
-      ]
+      ],
+      "source_page": 90
     },
     {
       "id": "royal_pegasus",
@@ -1087,7 +1095,7 @@
       "troop_type": "Monstrous cavalry",
       "base_size": "50 x 50 mm",
       "unit_size": "1",
-      "points": 60,
+      "points": 70,
       "profiles": [
         {
           "name": "Royal Pegasus",
@@ -1120,6 +1128,14 @@
       "notes": [
         "Armour Bane (1) applies to Royal Pegasus only, not the rider",
         "Available to Duke, Baron, Paladin, and Prophetess only (+60 pts)"
+      ],
+      "source_page": 90,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 60→70 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -1163,7 +1179,8 @@
       "notes": [
         "Armour Bane (2) applies to Unicorn only, not the rider",
         "Available to Prophetess and Damsel"
-      ]
+      ],
+      "source_page": 90
     },
     {
       "id": "hippogryph",
@@ -1236,7 +1253,8 @@
       "notes": [
         "Available to Duke and Baron only",
         "A character mount only — its points are added to those of its rider"
-      ]
+      ],
+      "source_page": 100
     },
     {
       "id": "knights_of_the_realm_on_foot",
@@ -1345,7 +1363,8 @@
           ]
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 91
     },
     {
       "id": "squires",
@@ -1432,7 +1451,8 @@
           "role": "musician",
           "cost_per_unit": 5
         }
-      ]
+      ],
+      "source_page": 91
     },
     {
       "id": "men_at_arms",
@@ -1560,7 +1580,8 @@
       ],
       "notes": [
         "A Grail Monk is a command group model that follows the rules for a champion — a unit containing both a Yeoman and a Grail Monk has two champions"
-      ]
+      ],
+      "source_page": 92
     },
     {
       "id": "peasant_bowmen",
@@ -1670,7 +1691,8 @@
             "volley_fire"
           ]
         }
-      ]
+      ],
+      "source_page": 93
     },
     {
       "id": "battle_pilgrims",
@@ -1685,7 +1707,7 @@
       "troop_type": "Heavy infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5-30",
-      "points": 8,
+      "points": 6,
       "profiles": [
         {
           "name": "Battle Pilgrim",
@@ -1741,6 +1763,14 @@
         "Grail Reliquae additionally has: Blessings of the Lady, Grail Reliquae (special rule), Retinue of the Saints",
         "Base size of Grail Reliquae: 50 x 75 mm",
         "Your army may include one Grail Reliquae per character or unit with the Grail Vow"
+      ],
+      "source_page": 91,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 8→6 per model (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -1918,7 +1948,8 @@
           ]
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 95
     },
     {
       "id": "mounted_knights_of_the_realm",
@@ -2030,7 +2061,8 @@
           ]
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 95
     },
     {
       "id": "questing_knights",
@@ -2044,7 +2076,7 @@
       },
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
-      "unit_size": "5+",
+      "unit_size": "3+",
       "points": 26,
       "profiles": [
         {
@@ -2150,7 +2182,15 @@
           ]
         }
       ],
-      "magic_standard": 100
+      "magic_standard": 100,
+      "source_page": 96,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Unit size corrected 5+→3+ (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "grail_knights",
@@ -2270,7 +2310,8 @@
           ]
         }
       ],
-      "magic_standard": 100
+      "magic_standard": 100,
+      "source_page": 97
     },
     {
       "id": "pegasus_knights",
@@ -2285,7 +2326,7 @@
       "troop_type": "Monstrous cavalry",
       "base_size": "40 x 60 mm",
       "unit_size": "3+",
-      "points": 55,
+      "points": 59,
       "profiles": [
         {
           "name": "Pegasus Knight",
@@ -2344,7 +2385,6 @@
         "first_charge",
         "fly_10",
         "furious_charge",
-        "lance_formation",
         "skirmishers",
         "swiftstride",
         "knights_vow"
@@ -2378,7 +2418,20 @@
       "notes": [
         "Furious Charge applies to Pegasus Knights and First Knight models only"
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 98,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 55→59 per model (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        },
+        {
+          "type": "rule",
+          "note": "Removed Lance Formation (Pegasus Knights use Dispersed Formation, not Lance Formation) (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "mounted_yeomen",
@@ -2511,7 +2564,8 @@
             "volley_fire"
           ]
         }
-      ]
+      ],
+      "source_page": 99
     },
     {
       "id": "field_trebuchet",
@@ -2581,7 +2635,8 @@
           ],
           "notes": "Shoots like a stone thrower using the Bombardment special rule with a 3\" blast template. Multiple Wounds (D3+1) applies only to a single model whose base lies beneath the central hole of the blast template."
         }
-      ]
+      ],
+      "source_page": 101
     },
     {
       "id": "green_knight",
@@ -2672,7 +2727,8 @@
         "May be included in any Kingdom of Bretonnia army using any army composition list",
         "Must be fielded as presented — no additional options",
         "Not placed during deployment; uses Aura of the Fay and Guardian of the Sacred Sites rules to enter play"
-      ]
+      ],
+      "source_page": 36
     },
     {
       "id": "sir_cecil_gastonne",
@@ -3034,7 +3090,8 @@
       "magic_standard": 25,
       "availability": [
         "bretonnian_exiles"
-      ]
+      ],
+      "source_page": 43
     },
     {
       "id": "border_princes_brigands",
@@ -3208,7 +3265,8 @@
       ],
       "availability": [
         "bretonnian_exiles"
-      ]
+      ],
+      "source_page": 44
     },
     {
       "id": "border_princes_bombard",
@@ -3279,7 +3337,8 @@
       ],
       "availability": [
         "bretonnian_exiles"
-      ]
+      ],
+      "source_page": 45
     }
   ],
   "knightly_virtues": [
@@ -3436,11 +3495,19 @@
         "S": "S+1",
         "AP": "-",
         "special_rules": [
-          "extra_attacks",
+          "Extra Attacks (+1)",
           "impetuous",
           "magical_attacks"
-        ]
-      }
+        ],
+        "notes": "The wielder of the Berserker Blade is Impetuous."
+      },
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "foebreaker",
@@ -3618,7 +3685,8 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 104
     },
     {
       "id": "headsmans-axe",
@@ -3671,7 +3739,8 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 104
     },
     {
       "id": "meteor-hammer",
@@ -3765,7 +3834,8 @@
           "magical_attacks",
           "monster_slayer"
         ]
-      }
+      },
+      "source_page": 104
     },
     {
       "id": "cackling-blade",
@@ -3801,7 +3871,8 @@
           "magical_attacks"
         ],
         "notes": "Two profiles: Single-handed (S+1, AP-1, Magical Attacks, Strike First) or Double-handed (S+2, AP-2, Magical Attacks, Multiple Wounds (2), Requires Two Hands, Strike Last). Choose at start of each round of combat."
-      }
+      },
+      "source_page": 104
     },
     {
       "id": "ogre-blade",
@@ -3818,7 +3889,14 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "charmed-shield",
@@ -3902,7 +3980,8 @@
       "points": 40,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "May be worn with other armour. Improves the wearer's armour value by 1 (to a maximum of 2+). In addition, the wearer may re-roll any roll of a natural 1 made when making an Armour Save roll."
+      "rules_text": "May be worn with other armour. Improves the wearer's armour value by 1 (to a maximum of 2+). In addition, the wearer may re-roll any roll of a natural 1 made when making an Armour Save roll.",
+      "source_page": 104
     },
     {
       "id": "bedazzling-helm",
@@ -3910,7 +3989,14 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "gilded_cuirass",
@@ -3918,7 +4004,8 @@
       "category": "magic_armour",
       "points": 60,
       "source": "forces_of_fantasy",
-      "description": "Inscribed with the words of the Grail Vow. A suit of heavy armour. In addition, its wearer has the Regeneration (5+) special rule."
+      "description": "Inscribed with the words of the Grail Vow. A suit of heavy armour. In addition, its wearer has the Regeneration (5+) special rule.",
+      "source_page": 104
     },
     {
       "id": "armour-of-destiny",
@@ -3952,7 +4039,8 @@
       "points": 25,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The bearer is immune to the Poisoned Attacks special rule. If the bearer is wounded by an attack with this special rule, the attacker must roll To Wound as normal."
+      "rules_text": "The bearer is immune to the Poisoned Attacks special rule. If the bearer is wounded by an attack with this special rule, the attacker must roll To Wound as normal.",
+      "source_page": 104
     },
     {
       "id": "paymasters-coin",
@@ -3971,7 +4059,8 @@
       "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "The bearer is immune to the Multiple Wounds (X) special rule. If the bearer is wounded by an attack with this special rule, they suffer a single wound.",
-      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only"
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only",
+      "source_page": 104
     },
     {
       "id": "ironhide-talisman",
@@ -4015,7 +4104,8 @@
       "source": "forces_of_fantasy",
       "description": "Challenges issued by the bearer of a Gauntlet of the Duel cannot be refused.",
       "rules_text": "During a challenge, this model may re-roll any failed rolls To Hit.",
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 104
     },
     {
       "id": "potion-of-foolhardiness",
@@ -4061,7 +4151,8 @@
       "category": "enchanted_item",
       "points": 25,
       "source": "forces_of_fantasy",
-      "description": "If the wearer of the Antlers of the Great Hunt is mounted on a Barded Warhorse or a Warhorse, they and any unit they join gains the Move through Cover special rule."
+      "description": "If the wearer of the Antlers of the Great Hunt is mounted on a Barded Warhorse or a Warhorse, they and any unit they join gains the Move through Cover special rule.",
+      "source_page": 104
     },
     {
       "id": "potion-of-strength",
@@ -4098,7 +4189,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "arch-lightning-rod",
@@ -4115,7 +4213,8 @@
       "points": 40,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "During the Command sub-phase of their turn, if not engaged in combat, this character may make a Leadership test (using their own unmodified Leadership). If passed, until your next Start of Turn sub-phase, enemy units cannot use the Fly (X) special rule."
+      "rules_text": "During the Command sub-phase of their turn, if not engaged in combat, this character may make a Leadership test (using their own unmodified Leadership). If passed, until your next Start of Turn sub-phase, enemy units cannot use the Fly (X) special rule.",
+      "source_page": 104
     },
     {
       "id": "flying-carpet",
@@ -4175,7 +4274,8 @@
       "points": 25,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The bearer of the Prayer Icon of Quenelles increases their Dispel range by 3\". Additionally, when attempting to dispel a Hex spell, the bearer gains a +1 modifier to their Dispel roll."
+      "rules_text": "The bearer of the Prayer Icon of Quenelles increases their Dispel range by 3\". Additionally, when attempting to dispel a Hex spell, the bearer gains a +1 modifier to their Dispel roll.",
+      "source_page": 104
     },
     {
       "id": "lore-familiar",
@@ -4192,7 +4292,8 @@
       "source": "forces_of_fantasy",
       "description": "Before making a Casting roll, the bearer may apply a +2 modifier to that Casting roll.",
       "rules_text": "Note that this modifier does not negate a roll of a natural double 1.",
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 104
     },
     {
       "id": "scroll-of-disruption",
@@ -4218,7 +4319,8 @@
       "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "Single use. When making a Wizardly dispel, the bearer may use the Silver Mirror. Roll an extra D6 and discard the lowest result. If a 1 is rolled on any two of the dice, the bearer is outclassed, the dispel attempt fails, and the casting Wizard suffers a Strength 4 hit with AP -2.",
-      "single_use": true
+      "single_use": true,
+      "source_page": 104
     },
     {
       "id": "staff-of-quietude",
@@ -4257,7 +4359,8 @@
       "category": "magic_standard",
       "points": 20,
       "source": "forces_of_fantasy",
-      "description": "Enemy units cannot declare a Stand & Shoot charge reaction against a unit carrying the Banner of Châlons."
+      "description": "Enemy units cannot declare a Stand & Shoot charge reaction against a unit carrying the Banner of Châlons.",
+      "source_page": 104
     },
     {
       "id": "monster-hunters-tapestry",
@@ -4299,7 +4402,8 @@
       "category": "magic_standard",
       "points": 30,
       "source": "forces_of_fantasy",
-      "description": "All models in a unit carrying the Errantry Banner have a +1 modifier to their Strength characteristic during a turn in which they charge. However, the unit also gains the Impetuous special rule."
+      "description": "All models in a unit carrying the Errantry Banner have a +1 modifier to their Strength characteristic during a turn in which they charge. However, the unit also gains the Impetuous special rule.",
+      "source_page": 104
     },
     {
       "id": "rampaging-banner",
@@ -4316,7 +4420,8 @@
       "points": 40,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "Any enemy standard captured by a unit carrying the Conqueror's Tapestry is worth 100 Victory Points as a trophy of war."
+      "rules_text": "Any enemy standard captured by a unit carrying the Conqueror's Tapestry is worth 100 Victory Points as a trophy of war.",
+      "source_page": 104
     },
     {
       "id": "razor-standard",
@@ -4360,7 +4465,8 @@
       "points": 60,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Valorous Standard rolls 3D6 when making a Break test and discards the highest result."
+      "rules_text": "A unit carrying the Valorous Standard rolls 3D6 when making a Break test and discards the highest result.",
+      "source_page": 104
     },
     {
       "id": "seal_of_parravon",

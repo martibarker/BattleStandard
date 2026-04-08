@@ -383,7 +383,8 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "source_page": 56
     },
     {
       "id": "exalted_champion",
@@ -554,7 +555,8 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "source_page": 56
     },
     {
       "id": "aspiring_champion",
@@ -725,7 +727,8 @@
             "armour_bane_1"
           ]
         }
-      ]
+      ],
+      "source_page": 56
     },
     {
       "id": "daemon_prince",
@@ -861,7 +864,8 @@
           "description": "Magic items",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 56
     },
     {
       "id": "sorcerer_lord",
@@ -962,7 +966,8 @@
           "description": "Magic items",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 58
     },
     {
       "id": "exalted_sorcerer",
@@ -1063,7 +1068,8 @@
           "description": "Magic items",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 58
     },
     {
       "id": "chaos_warhound_handler",
@@ -1118,7 +1124,8 @@
       ],
       "notes": [
         "A Chaos Warhound Handler is a special upgrade character taken as +15 points per unit of Chaos Warhounds. Must be positioned with its unit of Chaos Warhounds during deployment. Cannot leave its unit. Friendly units of Chaos Warhounds within Command range may use this model's Leadership instead of their own."
-      ]
+      ],
+      "source_page": 70
     },
     {
       "id": "marauder_tribe_chieftain",
@@ -1276,7 +1283,8 @@
             "fight_in_extra_rank"
           ]
         }
-      ]
+      ],
+      "source_page": 38
     },
     {
       "id": "frydaal_the_chainmaker",
@@ -1336,7 +1344,8 @@
         "Commander & Captain: Unless she is fleeing, friendly units of Chaos Marauders, Marauder Horsemen, Marauder Tribe Huscarls and Marauder Tribe Berserkers gain a +1 modifier to their Leadership characteristic whilst within Frydaal's Command range (to a maximum of 10).",
         "Peerless Raider: 0-1 unit of Chaos Marauders or Marauder Horsemen in the same muster list as Frydaal may have the Ambushers special rule for free. If Frydaal is your General, you may apply a +1 or -1 modifier to the result when rolling to determine if she or any unit of Chaos Marauders, Marauder Horsemen, Marauder Tribe Huscarls or Marauder Tribe Berserkers with the Ambushers special rule that is currently held in reserve arrives this turn as reinforcements or is delayed.",
         "Storm's Wrath (weapon): Combat, S+2, AP -1; Extra Attacks (D3), Magical Attacks, Requires Two Hands. Strength modifier applies only during the first round of combat."
-      ]
+      ],
+      "source_page": 35
     },
     {
       "id": "galrauch_the_great_drake",
@@ -1444,10 +1453,19 @@
       ],
       "special_rules": [
         "first_charge",
-        "swiftstride"
+        "swiftstride",
+        "counter_charge"
       ],
       "notes": [
         "Character mount for Chaos Lords, Exalted Champions, Aspiring Champions, Sorcerer Lords and Exalted Sorcerers. Points added to rider's cost."
+      ],
+      "source_page": 59,
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Added Counter Charge special rule (RH FAQ v1.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_ravening_hordes-jrpaxmw1gz-5cb3elwsoq.pdf"
+        }
       ]
     },
     {
@@ -1483,7 +1501,8 @@
       ],
       "notes": [
         "Character mount for Chaos Lords, Exalted Champions, Sorcerer Lords and Exalted Sorcerers. Points added to rider's cost. A character mounted on a Daemonic Mount has +1 Wound."
-      ]
+      ],
+      "source_page": 59
     },
     {
       "id": "chaos_warriors",
@@ -1628,7 +1647,8 @@
             "requires_two_hands"
           ]
         }
-      ]
+      ],
+      "source_page": 60
     },
     {
       "id": "chosen_chaos_warriors",
@@ -1790,7 +1810,8 @@
       ],
       "notes": [
         "0-1 unit per army in the Grand Army composition list."
-      ]
+      ],
+      "source_page": 61
     },
     {
       "id": "chaos_marauders",
@@ -1939,7 +1960,8 @@
             "requires_two_hands"
           ]
         }
-      ]
+      ],
+      "source_page": 38
     },
     {
       "id": "forsaken",
@@ -2013,7 +2035,8 @@
       "notes": [
         "Rampant Mutation: At the start of each combat, roll D6: 1-2 Venomous Fangs (unit gains Poisoned Attacks); 3-4 Razor Talons (unit attacks have AP -2); 5-6 Decapitating Claws (unit gains Killing Blow).",
         "The entire unit must be one of the following: Forsaken by Khorne (Hatred all enemies), Forsaken by Nurgle (Fear), Forsaken by Slaanesh (Swiftstride), Forsaken by Tzeentch (Magic Resistance -3)."
-      ]
+      ],
+      "source_page": 63
     },
     {
       "id": "chaos_ogres",
@@ -2128,7 +2151,8 @@
       ],
       "notes": [
         "Ogre Charge: The Armour Piercing characteristic of any Impact Hits caused by a model with this special rule is improved by the current Rank Bonus of its unit."
-      ]
+      ],
+      "source_page": 64
     },
     {
       "id": "chaos_trolls",
@@ -2199,7 +2223,8 @@
       ],
       "notes": [
         "Troll vomit: Combat, S 3, AP -2. A Chaos Troll that is in base contact with an enemy model may make one additional attack each turn with this weapon. This attack must be made last, after all other attacks have been made (including Stomp Attacks), but it hits automatically."
-      ]
+      ],
+      "source_page": 65
     },
     {
       "id": "chaos_spawn",
@@ -2273,7 +2298,8 @@
         "Spawn of Nurgle (+2 pts/model): gains Poisoned Attacks.",
         "Spawn of Slaanesh (+3 pts/model): gains Strike First.",
         "Spawn of Tzeentch (+1 pt/model): gains Flaming Attacks and Magical Attacks."
-      ]
+      ],
+      "source_page": 66
     },
     {
       "id": "marauder_tribe_berserkers",
@@ -2373,7 +2399,8 @@
       ],
       "notes_rules": [
         "Relentless Warriors: A model with this special rule has a 6+ Ward save against any wounds suffered that were caused by a non-magical enemy attack."
-      ]
+      ],
+      "source_page": 39
     },
     {
       "id": "skin_wolves",
@@ -2382,7 +2409,7 @@
       "category": "infantry",
       "list_category": "special",
       "troop_type": "Monstrous infantry",
-      "base_size": "40 x 40 mm",
+      "base_size": "50 x 50 mm",
       "unit_size": "2+",
       "points": 45,
       "stats": {
@@ -2407,7 +2434,8 @@
         "regeneration_5",
         "skirmishers",
         "swiftstride",
-        "warped_form"
+        "warped_form",
+        "fear"
       ],
       "command": [
         {
@@ -2419,6 +2447,14 @@
       "notes": [
         "Special choice in the Wolves of the Sea Army of Infamy only.",
         "Warped Form: When this unit's combat is chosen during Step 1.1 of any Choose & Fight combat sub-phase, choose one: Enlarged Claws (AP improved by 1, gains Armour Bane 2), Barbed Protrusions (gains Extra Attacks +1), Toughened Flesh (Toughness +1 and armour value improved by 2). Each Transfiguration lasts until your next Start of Turn sub-phase."
+      ],
+      "source_page": 40,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Base size corrected 40×40mm→50×50mm; added Fear special rule (RH FAQ v1.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_ravening_hordes-jrpaxmw1gz-5cb3elwsoq.pdf"
+        }
       ]
     },
     {
@@ -2549,7 +2585,8 @@
         "I": "3",
         "A": "1",
         "Ld": "-"
-      }
+      },
+      "source_page": 67
     },
     {
       "id": "chosen_chaos_knights",
@@ -2697,7 +2734,8 @@
         "I": "3",
         "A": "1",
         "Ld": "-"
-      }
+      },
+      "source_page": 68
     },
     {
       "id": "marauder_horsemen",
@@ -2865,7 +2903,8 @@
         "I": "3",
         "A": "1",
         "Ld": "-"
-      }
+      },
+      "source_page": 39
     },
     {
       "id": "marauder_tribe_huscarls",
@@ -3056,7 +3095,8 @@
         "I": "3",
         "A": "1",
         "Ld": "-"
-      }
+      },
+      "source_page": 41
     },
     {
       "id": "chaos_warhounds",
@@ -3116,7 +3156,8 @@
       ],
       "notes": [
         "Troop type is War beasts (categorised under Cavalry for army list purposes)."
-      ]
+      ],
+      "source_page": 102
     },
     {
       "id": "chaos_chariot",
@@ -3209,7 +3250,8 @@
           "A": "1",
           "Ld": "8"
         }
-      ]
+      ],
+      "source_page": 67
     },
     {
       "id": "chosen_chaos_chariot",
@@ -3400,7 +3442,8 @@
           "A": "1",
           "Ld": "8"
         }
-      ]
+      ],
+      "source_page": 67
     },
     {
       "id": "manticore",
@@ -3483,7 +3526,8 @@
         "Dark Fire of Chaos: Range N/A, S 4, AP -1; Breath Weapon, Flaming Attacks, Magical Attacks.",
         "Fumes of Contagion: Range N/A, S 2, AP N/A; Breath Weapon, Magical Attacks. No armour save permitted (Ward and Regeneration saves as normal).",
         "Wicked claws: Combat, S, AP -2."
-      ]
+      ],
+      "source_page": 74
     },
     {
       "id": "chimera",
@@ -3548,7 +3592,8 @@
       "notes": [
         "Flaming breath: Range N/A, S 4, AP -; Breath Weapon, Flaming Attacks.",
         "Fiend tail (optional): Combat, S, AP -1; Extra Attacks (D3). In combat, a Chimera with a fiend tail may make an additional D3 attacks each turn with this weapon."
-      ]
+      ],
+      "source_page": 75
     },
     {
       "id": "hellcannon",
@@ -3611,6 +3656,14 @@
           "I": "2",
           "A": "1",
           "Ld": "9"
+        }
+      ],
+      "source_page": 76,
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Base size clarified: 100×150mm (Hellcannon), 25×25mm (Chaos Dwarf Handlers) (RH FAQ v1.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_ravening_hordes-jrpaxmw1gz-5cb3elwsoq.pdf"
         }
       ]
     },
@@ -3689,7 +3742,8 @@
         "0-1 per 1,000 points as a Rare choice in Warriors of Chaos Grand Army and Beastmen Brayherds Grand Army lists, and in the Wolves of the Sea and Heralds of Darkness Armies of Infamy.",
         "Cursed by the Gods: Gigantic Spawn of Khorne have Impact Hits (D3) and Killing Blow. Gigantic Spawn of Nurgle have Poisoned Attacks and Regeneration (5+). Gigantic Spawn of Slaanesh have Counter Charge and Strikes First. Gigantic Spawn of Tzeentch have Flaming Attacks, Magical Attacks and Magic Resistance (-2).",
         "Slashing talons: Combat, S, AP -1. Gnashing maws: Combat, S, AP -2; Strikes Last. In combat, this model may choose to make one of its attacks each turn with gnashing maws. For each Wound an enemy unit loses as a result of an attack made with gnashing maws, this model immediately recovers a single lost Wound."
-      ]
+      ],
+      "source_page": 43
     },
     {
       "id": "warpfire_dragon",
@@ -3738,7 +3792,8 @@
         "stomp_attacks_d6",
         "swiftstride",
         "terror",
-        "warpfire_aura"
+        "warpfire_aura",
+        "close_order"
       ],
       "options": [
         {
@@ -3767,6 +3822,14 @@
         "Warpfire Aura: Other models (both friend and foe) are not permitted a Ward save whilst within 3\" of this model.",
         "Warpfire Blast: Range 6\"-24\", S 4 (8), AP -1 (-3); Bombardment, Cumbersome, Flaming Attacks, Multiple Wounds (D3+1). Shoots like a stone thrower using the Bombardment rule and a 3\" blast template. If a Misfire is rolled, this model loses a single Wound instead. The Multiple Wounds (D3+1) special rule applies only to a single model whose base lies underneath the central hole.",
         "Wicked claws: Combat, S, AP -2."
+      ],
+      "source_page": 44,
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Added Close Order special rule (RH FAQ v1.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_ravening_hordes-jrpaxmw1gz-5cb3elwsoq.pdf"
+        }
       ]
     }
   ],
@@ -3879,7 +3942,14 @@
       "name": "Berserker Blade",
       "category": "magic_weapon",
       "points": 20,
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "sword-of-might",
@@ -3982,7 +4052,14 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "charmed-shield",
@@ -4065,7 +4142,14 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "armour-of-destiny",
@@ -4208,7 +4292,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "arch-lightning-rod",
@@ -4409,7 +4500,8 @@
       "description": "",
       "rules_text": "Single use. The bearer of a Favour of the Gods may re-roll the D6 when rolling on the Gaze of the Gods table.",
       "single_use": true,
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 78
     },
     {
       "id": "spell_familiar",
@@ -4420,7 +4512,8 @@
       "description": "The owner of a Spell Familiar knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry.",
       "rules_text": "Note that this does not increase the Wizard's Level.",
       "restrictions": "0-1 per Wizard.",
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 78
     },
     {
       "id": "brazen_collar",
@@ -4430,7 +4523,8 @@
       "source": "ravening_hordes",
       "description": "",
       "rules_text": "The wearer of a Brazen Collar has Magic Resistance (-2).",
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 78
     },
     {
       "id": "helm_of_many_eyes",
@@ -4439,7 +4533,8 @@
       "points": 20,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "Gives its wearer (but not their mount) the Strike First special rule. However, due to the confusing images the helm conjures up, its wearer is also subject to the Stupidity special rule."
+      "rules_text": "Gives its wearer (but not their mount) the Strike First special rule. However, due to the confusing images the helm conjures up, its wearer is also subject to the Stupidity special rule.",
+      "source_page": 78
     },
     {
       "id": "icon_of_darkness",
@@ -4466,7 +4561,8 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 78
     },
     {
       "id": "banner_of_the_baying_hound",
@@ -4536,7 +4632,8 @@
       "source": "ravening_hordes",
       "description": "",
       "rules_text": "The bearer of the Pendant of Damnation gains a +1 modifier to their Attacks characteristic for every Wound they lose.",
-      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only."
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "source_page": 78
     },
     {
       "id": "banner_of_rage",
@@ -4545,7 +4642,8 @@
       "points": 35,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "A unit carrying the Banner of Rage gains the Frenzy special rule. However, unlike other Frenzied units, this unit cannot lose this special rule."
+      "rules_text": "A unit carrying the Banner of Rage gains the Frenzy special rule. However, unlike other Frenzied units, this unit cannot lose this special rule.",
+      "source_page": 78
     },
     {
       "id": "daemon_forged_barding",
@@ -4601,7 +4699,8 @@
       "points": 40,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "A unit carrying the Blasted Standard may re-roll any rolls of a natural 1 when making an Armour Save roll against wounds suffered during the Shooting phase."
+      "rules_text": "A unit carrying the Blasted Standard may re-roll any rolls of a natural 1 when making an Armour Save roll against wounds suffered during the Shooting phase.",
+      "source_page": 78
     },
     {
       "id": "crimson_armour_of_dargan",
@@ -4611,7 +4710,8 @@
       "source": "ravening_hordes",
       "description": "Heavy armour. In addition, the wearer is immune to the Multiple Wounds (X) special rule. If the wearer suffers an unsaved wound from an attack with this special rule, they lose a single Wound.",
       "rules_text": "The Crimson Armour of Dargan is a suit of heavy armour. The wearer is immune to the Multiple Wounds (X) special rule. If the wearer suffers an unsaved wound from an attack with this special rule, they lose a single Wound.",
-      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only."
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "source_page": 78
     },
     {
       "id": "crown_of_everlasting_conquest",
@@ -4620,7 +4720,8 @@
       "points": 40,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "The wearer of the Crown of Everlasting Conquest gains the Regenerate (5+) special rule."
+      "rules_text": "The wearer of the Crown of Everlasting Conquest gains the Regenerate (5+) special rule.",
+      "source_page": 78
     },
     {
       "id": "filth_mace",
@@ -4638,7 +4739,8 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 78
     },
     {
       "id": "mighty_serpents_scalemail",
@@ -4685,7 +4787,8 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 78
     },
     {
       "id": "talisman_of_the_carrion_crow",
@@ -4731,7 +4834,8 @@
       "points": 50,
       "source": "ravening_hordes",
       "description": "Unless the owner of the Infernal Puppet is fleeing or engaged in combat, they may use it whenever an enemy Wizard that is within 24\" of them makes a Casting roll. If they do so, the enemy Wizard must roll an extra D6 and discard the highest result.",
-      "rules_text": "The owner may activate this item whenever an enemy Wizard within 15\" makes a casting roll, provided the owner is neither fleeing nor engaged in combat. When activated, the enemy Wizard must roll an additional D6 and discard the highest result from their casting roll."
+      "rules_text": "The owner may activate this item whenever an enemy Wizard within 15\" makes a casting roll, provided the owner is neither fleeing nor engaged in combat. When activated, the enemy Wizard must roll an additional D6 and discard the highest result from their casting roll.",
+      "source_page": 78
     },
     {
       "id": "obsidian_dread_glaive",
@@ -4772,7 +4876,8 @@
       "points": 60,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "The bearer of the Skull of Katam and any other Wizard within 3\" (friend or foe) may apply a +1 modifier to any Casting roll they make. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+      "rules_text": "The bearer of the Skull of Katam and any other Wizard within 3\" (friend or foe) may apply a +1 modifier to any Casting roll they make. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1.",
+      "source_page": 78
     },
     {
       "id": "doom_totem",
@@ -4781,7 +4886,8 @@
       "points": 65,
       "source": "ravening_hordes",
       "description": "All enemy units that can draw a line of sight to the model carrying the Doom Totem suffer a -1 modifier to their Leadership characteristic.",
-      "rules_text": "All enemy units that can draw a line of sight to the model carrying the Doom Totem suffer a -1 modifier to their Leadership characteristic."
+      "rules_text": "All enemy units that can draw a line of sight to the model carrying the Doom Totem suffer a -1 modifier to their Leadership characteristic.",
+      "source_page": 78
     },
     {
       "id": "armour_of_the_damned",
@@ -4790,7 +4896,8 @@
       "points": 70,
       "source": "ravening_hordes",
       "description": "Full plate armour. In addition, during the Combat phase, enemy models must re-roll successful rolls To Hit made against the wearer.",
-      "rules_text": "The Armour of the Damned is a suit of full plate armour. In addition, during the Combat phase, enemy models must reroll successful rolls To Hit made against the wearer."
+      "rules_text": "The Armour of the Damned is a suit of full plate armour. In addition, during the Combat phase, enemy models must reroll successful rolls To Hit made against the wearer.",
+      "source_page": 78
     },
     {
       "id": "banner_of_the_gods",
@@ -4799,7 +4906,8 @@
       "points": 75,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "A unit carrying the Banner of the Gods ignores all negative modifiers to its Leadership characteristic."
+      "rules_text": "A unit carrying the Banner of the Gods ignores all negative modifiers to its Leadership characteristic.",
+      "source_page": 78
     },
     {
       "id": "daemonsword",
@@ -4819,7 +4927,8 @@
           "magical_attacks",
           "strike_first"
         ]
-      }
+      },
+      "source_page": 78
     }
   ],
   "lore_of_chaos": [

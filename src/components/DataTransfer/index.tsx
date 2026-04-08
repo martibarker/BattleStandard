@@ -10,6 +10,9 @@ import {
   whatsAppShareUrl,
   type ShareFormat,
 } from '../../utils/dataTransfer';
+import QRCodeModal from '../QRCodeModal';
+import QRScannerModal from '../QRScannerModal';
+import type { ArmyList } from '../../types/army';
 
 type Status = { type: 'ok' | 'err'; msg: string } | null;
 
@@ -160,12 +163,64 @@ function TransferSection({ compact }: { compact: boolean }) {
   );
 }
 
+// ── QR Import section ────────────────────────────────────────────────────────
+
+function QRImportSection() {
+  const importArmies = useArmyStore((s) => s.importArmies);
+  const [scanning, setScanning] = useState(false);
+  const { status, flash } = useFlash();
+
+  return (
+    <div>
+      <p style={label}>Import via QR</p>
+      <p style={sectionHeading}>Add Army via QR Code</p>
+      <p style={subText}>Scan another Battle Standard user's army QR code to instantly add their list to your collection.</p>
+
+      <button
+        onClick={() => setScanning(true)}
+        style={{
+          fontFamily: "'Cinzel', Georgia, serif",
+          fontSize: '9.5px',
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase',
+          border: '1px solid var(--f-primary)',
+          borderRadius: '3px',
+          cursor: 'pointer',
+          padding: '7px 14px',
+          backgroundColor: 'transparent',
+          color: 'var(--f-primary)',
+          whiteSpace: 'nowrap',
+          transition: 'opacity 0.15s',
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
+        onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+      >
+        Scan QR Code
+      </button>
+
+      <StatusLine status={status} />
+
+      {scanning && (
+        <QRScannerModal
+          onScanned={(army: ArmyList) => {
+            setScanning(false);
+            importArmies([army]);
+            flash('ok', `Added "${army.name}" to your armies`);
+          }}
+          onClose={() => setScanning(false)}
+        />
+      )}
+    </div>
+  );
+}
+
 // ── Share section (human-readable text for social / BCP) ─────────────────────
 
 function ShareSection() {
   const armies = useArmyStore((s) => s.armies);
   const [selectedArmyId, setSelectedArmyId] = useState<string>('');
   const [format, setFormat] = useState<ShareFormat>('social');
+  const [qrArmy, setQrArmy] = useState<ArmyList | null>(null);
   const { status, flash } = useFlash();
 
   // Resolve effective ID — handles async store hydration where armies may load
@@ -316,9 +371,20 @@ function ShareSection() {
             >
               WhatsApp
             </button>
+            <button
+              disabled={!canShare}
+              onClick={() => selectedArmy && setQrArmy(selectedArmy)}
+              style={btnStyle('var(--f-gold)')}
+              onMouseEnter={(e) => canShare && (e.currentTarget.style.opacity = '0.7')}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = canShare ? '1' : '0.45')}
+              title="Generate a QR code others can scan"
+            >
+              QR Code
+            </button>
           </div>
 
           <StatusLine status={status} />
+          {qrArmy && <QRCodeModal army={qrArmy} onClose={() => setQrArmy(null)} />}
         </>
       )}
     </div>
@@ -341,6 +407,9 @@ export default function DataTransfer({ compact = false }: DataTransferProps) {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div style={card}>
+        <QRImportSection />
+      </div>
       <div style={card}>
         <ShareSection />
       </div>

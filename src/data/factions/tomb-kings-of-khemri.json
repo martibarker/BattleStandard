@@ -406,7 +406,8 @@
       "notes": [
         "My Will Be Done: During the Command sub-phase, this character may attempt to exert their will by making a Leadership test. If passed, choose one of: 'Forward to Glory!' (+D3 Movement), 'My Worthy Champions!' (+1 Weapon Skill), 'Strike like the Cobra!' (+D3 Initiative). Until your next Start of Turn sub-phase this character, their mount, and any unit they have joined gains that modifier (to a maximum of 10). This special rule is not cumulative.",
         "A Tomb King may be the army's Hierophant. A Tomb King taken as General for the Nehekharan Royal Host may purchase the Language of the Priests upgrade for +35 points to gain the Arise! special rule and become a Level 1 Wizard (Lore of Necromancy)."
-      ]
+      ],
+      "source_page": 126
     },
     {
       "id": "tomb_prince",
@@ -542,7 +543,8 @@
             "fight_in_extra_rank"
           ]
         }
-      ]
+      ],
+      "source_page": 126
     },
     {
       "id": "high_priest",
@@ -613,7 +615,8 @@
         "Arise!: During the Command sub-phase, if not engaged in combat, this character may attempt to resurrect the fallen by making a Leadership test. If passed, a single friendly unit that has the Nehekharan Undead special rule and is within 12\" of this character recovers a number of lost Wounds based on the unit's troop type and this character's Level of Wizardry: regular/heavy infantry/swarms recover Level of Wizardry +D3; light/heavy cavalry/war beasts recover Level of Wizardry +1; monstrous infantry/cavalry/light chariot recover Level of Wizardry; heavy chariot/monstrous creature/behemoth/war machine recover 1 Wound.",
         "From Beneath the Sands: During the Command sub-phase, if not in combat, this character may choose a single friendly unit that has both the Nehekharan Undead and Ambushers special rules and is in reserve, and attempt to summon it by making a Leadership test. If passed, the unit is placed on the battlefield completely within 12\" of this character, but not within 6\" of any enemy models. If failed, the summons is delayed until next turn. Ambushers arrive automatically at the start of round five.",
         "Lore of Nehekhara: A Wizard with this rule may discard one of their randomly generated spells and select either the signature spell of their chosen Lore of Magic, or one of the Lore of Nehekhara spells."
-      ]
+      ],
+      "source_page": 128
     },
     {
       "id": "mortuary_priest",
@@ -679,7 +682,8 @@
           "description": "Magic items",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 128
     },
     {
       "id": "royal_herald",
@@ -826,7 +830,8 @@
       "notes": [
         "Banner of the King: A Royal Herald upgraded to Battle Standard Bearer replaces the 'Hold Your Ground' rule with: Friendly units within the Battle Standard Bearer's Command range may re-roll any failed Leadership test. In addition, friendly units within the Command range reduce the number of Wounds lost due to the Unstable special rule by D3. Not cumulative with Indomitable (X); use the highest value.",
         "Sworn Protector: Should a Monarch of Nehekhara model suffer a hit whilst within 3\" of this model, you may choose to transfer that hit and all of its effects onto this model."
-      ]
+      ],
+      "source_page": 127
     },
     {
       "id": "necrotect",
@@ -885,7 +890,8 @@
       ],
       "notes": [
         "Eternal Taskmaster: During the Command sub-phase, this character may attempt to drive a unit they have joined to greater efforts by making a Leadership test (using their own Leadership). If passed, until your next Start of Turn sub-phase this character and any unit they have joined gains the Extra Attacks (+1) and Hatred (all enemies) special rules."
-      ]
+      ],
+      "source_page": 130
     },
     {
       "id": "skeletal_steed_mount",
@@ -1286,7 +1292,8 @@
       "notes": [
         "Immortal Overseer: During the Command sub-phase, this character may attempt to drive a single friendly unit within their Command range to greater efforts by making a Leadership test. If passed, until your next Start of Turn sub-phase that unit gains a +D3 modifier to its Initiative characteristic (to a maximum of 10).",
         "Stone Shaper: During the Command sub-phase, if not engaged in combat, this character may nominate a single friendly Necrolith Colossus, Necrosphinx, unit of Ushabti or unit of Venerable Ushabti that is within their Command range. Until the end of this turn, the nominated unit improves the armour value of its Regeneration save by 1."
-      ]
+      ],
+      "source_page": 42
     },
     {
       "id": "tomb_guard",
@@ -1410,7 +1417,8 @@
             "requires_two_hands"
           ]
         }
-      ]
+      ],
+      "source_page": 132
     },
     {
       "id": "skeleton_warriors",
@@ -1440,9 +1448,8 @@
       "special_rules": [
         "close_order",
         "horde",
-        "nehekharan_undead",
-        "regeneration_6+",
-        "regimental_unit"
+        "necromantic_undead",
+        "regeneration_6"
       ],
       "options": [
         {
@@ -1535,7 +1542,8 @@
             "fight_in_extra_rank"
           ]
         }
-      ]
+      ],
+      "source_page": 132
     },
     {
       "id": "skeleton_archers",
@@ -1609,7 +1617,8 @@
           "role": "musician",
           "cost_per_unit": 5
         }
-      ]
+      ],
+      "source_page": 134
     },
     {
       "id": "skeleton_skirmishers",
@@ -1669,7 +1678,8 @@
           "description": "0-1 unit in your army may have the Ambushers special rule",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 134
     },
     {
       "id": "ushabti",
@@ -1726,7 +1736,8 @@
           "name": "Ancient",
           "cost_per_unit": 7
         }
-      ]
+      ],
+      "source_page": 135
     },
     {
       "id": "tomb_swarms",
@@ -1777,7 +1788,8 @@
             "poisoned_attacks"
           ]
         }
-      ]
+      ],
+      "source_page": 136
     },
     {
       "id": "carrion",
@@ -1809,7 +1821,8 @@
         "regeneration_6+",
         "skirmishers",
         "swiftstride"
-      ]
+      ],
+      "source_page": 136
     },
     {
       "id": "skeleton_horsemen",
@@ -1938,7 +1951,8 @@
       ],
       "notes": [
         "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
-      ]
+      ],
+      "source_page": 137
     },
     {
       "id": "skeleton_horse_archers",
@@ -2024,7 +2038,8 @@
       ],
       "notes": [
         "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
-      ]
+      ],
+      "source_page": 138
     },
     {
       "id": "necropolis_knights",
@@ -2145,7 +2160,8 @@
         "Cleaving Blow and Khopesh apply to Necropolis Knights and Captain only.",
         "Poisoned Attacks applies to the Necroserpent only.",
         "Necroserpent stats: M7, WS3, BS-, S5, T-, W-, I3, A3, Ld-"
-      ]
+      ],
+      "source_page": 139
     },
     {
       "id": "sepulchral_stalkers",
@@ -2202,7 +2218,8 @@
             "requires_two_hands"
           ]
         }
-      ]
+      ],
+      "source_page": 140
     },
     {
       "id": "skeleton_chariots",
@@ -2305,7 +2322,8 @@
         "Armour Value: 5+.",
         "A Master Charioteer, standard bearer or musician each replace a single Skeleton Crewman, and each must be placed aboard a different Chariot.",
         "Skeleton Crew: M-, WS3, BS2, S3, T-, W-, I2, A1, Ld7. Master Charioteer: M-, WS3, BS2, S3, T-, W-, I2, A2, Ld7."
-      ]
+      ],
+      "source_page": 141
     },
     {
       "id": "khemrian_warsphinx",
@@ -2382,7 +2400,8 @@
         "Cleaving Blow and Khopesh apply to Tomb Guard Crew only.",
         "This model may also be included in your army as a character's mount (Tomb Kings only). If so, its points are added to that of its rider. Because it has the Howdah special rule, a Khemrian Warsphinx is considered to be a chariot mount rather than a ridden monster.",
         "0-2 Khemrian Warsphinx (not counting character mounts) per 1,000 points."
-      ]
+      ],
+      "source_page": 143
     },
     {
       "id": "tomb_scorpion",
@@ -2452,7 +2471,8 @@
       ],
       "notes": [
         "0-3 Tomb Scorpions per 1,000 points in the Grand Army."
-      ]
+      ],
+      "source_page": 144
     },
     {
       "id": "necrolith_colossus",
@@ -2504,7 +2524,8 @@
       ],
       "notes": [
         "Unstoppable Assault: During the Combat phase of any turn in which this model charged, every attack it makes that causes an unsaved wound allows it to immediately make one additional attack. These additional attacks also benefit from this special rule. Note that unsaved wounds caused by Stomp Attacks (D3) do not benefit from this special rule."
-      ]
+      ],
+      "source_page": 145
     },
     {
       "id": "necrosphinx",
@@ -2554,7 +2575,8 @@
       ],
       "notes": [
         "Soul Reaper: After deployment but before the first turn begins, nominate a single enemy character. This model may re-roll any rolls To Hit of a natural 1 made against the nominated character."
-      ]
+      ],
+      "source_page": 146
     },
     {
       "id": "screaming_skull_catapult",
@@ -2618,7 +2640,8 @@
         "Skulls of the Foe: Until your next Start of Turn sub-phase, any enemy unit that was within 2D6\" of the central hole of the blast template after scattering suffers a -1 modifier to its Leadership characteristic (to a minimum of 2).",
         "Uses the stone thrower rules: 3\" blast template and Stone Thrower Misfire table. Multiple Wounds (D3+1) applies only to a single model whose base lies underneath the central hole.",
         "Skeleton Crew: M4, WS2, BS2, S3, T3, W3, I2, A3, Ld5."
-      ]
+      ],
+      "source_page": 147
     },
     {
       "id": "casket_of_souls",
@@ -2675,7 +2698,8 @@
         "Unbound Spirits: If the crew of a Casket of Souls is reduced to zero Wounds, immediately roll a D6 for every unit (friend or foe) within 12\". On a 4+, the unit suffers D6 Strength 3 hits with no armour or Regeneration saves permitted (Ward saves can be attempted). The Casket of Souls is then removed from play.",
         "Vortex of Souls: A Casket of Souls can cast the following Bound spells with a Power Level of 3: Light of Death (Magic Missile, Casting Value 7+, Range 36\": target makes Leadership test; if passed suffers D3 Strength 3 hits at AP -1, if failed suffers D6+3 Strength 6 hits with Multiple Wounds (2), no armour or Regeneration saves permitted, Ward saves can be attempted) and Light of Protection (Enchantment, Casting Value 8+, Range Self, Remains in Play: this model and friendly units within 18\" gain a 6+ Ward save; enemy units suffer -1 To Hit against this model and friendly units within 18\"; expires if Light of Death is cast).",
         "Casket Guardians: M4, WS3, BS3, S3, T3, W4, I3, A4, Ld8."
-      ]
+      ],
+      "source_page": 148
     },
     {
       "id": "skeleton_infantry_cohorts",
@@ -2838,7 +2862,8 @@
       "notes": [
         "Mortuary Cult Army of Infamy and Nehekharan Royal Host Army of Infamy only.",
         "Venerable Ancient: M4, WS5, BS3, S5, T4, W3, I2, A4, Ld8."
-      ]
+      ],
+      "source_page": 43
     },
     {
       "id": "skeleton_cavalry_cohort",
@@ -2949,7 +2974,8 @@
         "A Skeleton Cavalry Cohort must contain at least five Royal Host Horsemen and five Royal Host Horse Archers. Royal Host Horsemen always occupy the front ranks of the unit.",
         "Royal Host Horse Archer: M-, WS2, BS3, S3, T3, W1, I2, A1, Ld5. Master of Horse: M-, WS2, BS2, S3, T3, W1, I3, A2, Ld5.",
         "Skeletal Steed: M8, WS2, BS-, S3, T-, W-, I2, A1, Ld-"
-      ]
+      ],
+      "source_page": 44
     },
     {
       "id": "necroserpents",
@@ -2989,7 +3015,8 @@
       ],
       "notes": [
         "Mortuary Cult Army of Infamy only (as independent unit; also used as mounts for Necropolis Knights)."
-      ]
+      ],
+      "source_page": 44
     },
     {
       "id": "tomb_guard_chariots",
@@ -3095,7 +3122,8 @@
         "Cleaving Blow and Khopesh apply to Tomb Guard Crew only.",
         "A Tomb Captain, standard bearer or musician each replace a single Tomb Guard Crewman, and each must be placed aboard a different Chariot.",
         "Tomb Guard Crew stats: M-, WS3, BS3, S4, T-, W-, I2, A1, Ld7. Tomb Captain: M-, WS3, BS3, S4, T-, W-, I2, A2, Ld7."
-      ]
+      ],
+      "source_page": 45
     }
   ],
   "magic_items": [
@@ -3142,7 +3170,14 @@
       "name": "Berserker Blade",
       "category": "magic_weapon",
       "points": 20,
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "sword-of-might",
@@ -3245,7 +3280,14 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "charmed-shield",
@@ -3328,7 +3370,14 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "armour-of-destiny",
@@ -3471,7 +3520,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "arch-lightning-rod",
@@ -3677,7 +3733,8 @@
       "points": 20,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "The wearer of the Death Mask of Kharnutt gains the Terror special rule."
+      "rules_text": "The wearer of the Death Mask of Kharnutt gains the Terror special rule.",
+      "source_page": 150
     },
     {
       "id": "mirage_banner",
@@ -3685,21 +3742,24 @@
       "points": 20,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "Any enemy model that targets a unit carrying the Mirage Banner during the Shooting phase suffers an additional -1 To Hit modifier."
+      "rules_text": "Any enemy model that targets a unit carrying the Mirage Banner during the Shooting phase suffers an additional -1 To Hit modifier.",
+      "source_page": 150
     },
     {
       "id": "scarab_brooch",
       "name": "Scarab Brooch",
       "points": 20,
       "source": "ravening_hordes",
-      "description": "When using the From Beneath the Sands special rule, a summoned unit can be placed on the battlefield anywhere completely within 18\" of a Liche Priest wearing the Scarab Brooch, rather than the usual 12\"."
+      "description": "When using the From Beneath the Sands special rule, a summoned unit can be placed on the battlefield anywhere completely within 18\" of a Liche Priest wearing the Scarab Brooch, rather than the usual 12\".",
+      "source_page": 150
     },
     {
       "id": "serpent_staff",
       "name": "Serpent Staff",
       "points": 20,
       "source": "ravening_hordes",
-      "description": "Combat, S+2, AP -2; Magical Attacks, Poisoned Attacks, Requires Two Hands. Liche Priests only."
+      "description": "Combat, S+2, AP -2; Magical Attacks, Poisoned Attacks, Requires Two Hands. Liche Priests only.",
+      "source_page": 150
     },
     {
       "id": "tablets_of_tahoth",
@@ -3717,7 +3777,8 @@
       "source": "ravening_hordes",
       "description": "",
       "rules_text": "Single use. When the wearer of the Collar of Shapesh loses their last Wound, roll a D6. On a roll of 4+, the Wound is not lost. Instead, a single friendly model within the wearer's Command range is removed from play as a casualty.",
-      "single_use": true
+      "single_use": true,
+      "source_page": 150
     },
     {
       "id": "hieratic_jar",
@@ -3726,7 +3787,8 @@
       "source": "ravening_hordes",
       "description": "Extremely Common.",
       "rules_text": "Single use. During the Command sub-phase, if not engaged in combat, the bearer of a Hieratic Jar can release the power held within it. The bearer may attempt to resurrect the fallen by using the Arise! special rule twice during this Command sub-phase (rather than the usual once).",
-      "single_use": true
+      "single_use": true,
+      "source_page": 150
     },
     {
       "id": "relic_of_the_desert_sun",
@@ -3742,7 +3804,8 @@
       "points": 25,
       "source": "ravening_hordes",
       "description": "Shield. In addition, any enemy model that directs their attacks against the bearer during the Combat phase suffers a -1 modifier to their Weapon Skill characteristic.",
-      "is_shield": true
+      "is_shield": true,
+      "source_page": 150
     },
     {
       "id": "amulet_of_the_serpent",
@@ -3766,7 +3829,8 @@
       "points": 30,
       "source": "ravening_hordes",
       "description": "Extremely Common. Monarch of Nehekhara only.",
-      "rules_text": "During the Command sub-phase, if not engaged in combat, the wearer may attempt to resurrect the fallen (Arise!) by making a Leadership test. If passed, a single friendly unit of Skeleton Warriors, Skeleton Archers, Skeleton Horsemen or Skeleton Horse Archers that is within this model's Command range recovers D3+1 Wounds."
+      "rules_text": "During the Command sub-phase, if not engaged in combat, the wearer may attempt to resurrect the fallen (Arise!) by making a Leadership test. If passed, a single friendly unit of Skeleton Warriors, Skeleton Archers, Skeleton Horsemen or Skeleton Horse Archers that is within this model's Command range recovers D3+1 Wounds.",
+      "source_page": 150
     },
     {
       "id": "enkhils_kanopi",
@@ -3790,7 +3854,8 @@
       "name": "Flail of Skulls",
       "points": 35,
       "source": "ravening_hordes",
-      "description": "Combat, S+3, AP -1; Magical Attacks, Multiple Wounds (2), Requires Two Hands. The Flail of Skulls' Strength modifier applies only during the first round of combat."
+      "description": "Combat, S+3, AP -1; Magical Attacks, Multiple Wounds (2), Requires Two Hands. The Flail of Skulls' Strength modifier applies only during the first round of combat.",
+      "source_page": 150
     },
     {
       "id": "icon_of_rulership",
@@ -3798,7 +3863,8 @@
       "points": 35,
       "source": "ravening_hordes",
       "description": "Extremely Common.",
-      "rules_text": "Models whose troop type is 'chariot' only. This model doubles its Unit Strength, from 3 to 6. In addition, any Impact Hits caused by this model have an Armour Piercing characteristic of -2 and the Magical Attacks special rule."
+      "rules_text": "Models whose troop type is 'chariot' only. This model doubles its Unit Strength, from 3 to 6. In addition, any Impact Hits caused by this model have an Armour Piercing characteristic of -2 and the Magical Attacks special rule.",
+      "source_page": 150
     },
     {
       "id": "phakths_blades_of_justice",
@@ -3828,7 +3894,8 @@
       "name": "Icon of Rakaph",
       "points": 40,
       "source": "ravening_hordes",
-      "description": "Unless making a charge move, a unit carrying the Icon of Rakaph may perform a single free reform at any point during its movement."
+      "description": "Unless making a charge move, a unit carrying the Icon of Rakaph may perform a single free reform at any point during its movement.",
+      "source_page": 150
     },
     {
       "id": "orb_of_ptra",
@@ -3874,7 +3941,8 @@
       "name": "Armour of the Ages",
       "points": 50,
       "source": "ravening_hordes",
-      "description": "Suit of light armour. In addition, enemy models must re-roll successful rolls To Wound made against the wearer."
+      "description": "Suit of light armour. In addition, enemy models must re-roll successful rolls To Wound made against the wearer.",
+      "source_page": 150
     },
     {
       "id": "cloak_of_the_dunes",
@@ -3882,14 +3950,16 @@
       "points": 50,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "Models whose troop type is 'infantry' only. The wearer gains the Fly (9) special rule. In addition, any enemy unit the wearer moves over during the Remaining Moves sub-phase suffers D6 Strength 2 hits, each with an AP of -1."
+      "rules_text": "Models whose troop type is 'infantry' only. The wearer gains the Fly (9) special rule. In addition, any enemy unit the wearer moves over during the Remaining Moves sub-phase suffers D6 Strength 2 hits, each with an AP of -1.",
+      "source_page": 150
     },
     {
       "id": "crook_and_flail_of_radiance",
       "name": "Crook & Flail of Radiance",
       "points": 50,
       "source": "ravening_hordes",
-      "description": "Combat, S, AP -1; Extra Attacks (+D3), Magical Attacks, Requires Two Hands, Strike First. Monarchs of Nehekhara only."
+      "description": "Combat, S, AP -1; Extra Attacks (+D3), Magical Attacks, Requires Two Hands, Strike First. Monarchs of Nehekhara only.",
+      "source_page": 150
     },
     {
       "id": "icon_of_the_sacred_eye",
@@ -3897,7 +3967,8 @@
       "points": 50,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "A unit carrying the Icon of the Sacred Eye has a +1 modifier to its Weapon Skill characteristic (to a maximum of 10)."
+      "rules_text": "A unit carrying the Icon of the Sacred Eye has a +1 modifier to its Weapon Skill characteristic (to a maximum of 10).",
+      "source_page": 150
     },
     {
       "id": "royal_standard_of_settra",
@@ -3926,14 +3997,16 @@
       "name": "Destroyer of Eternities",
       "points": 75,
       "source": "ravening_hordes",
-      "description": "Combat, S+2, AP -2; Killing Blow, Magical Attacks, Requires Two Hands, Strike Last. Rather than attacking normally, the wielder may make a special 'Scything' attack. If they do, the enemy unit they are directing their attacks against suffers D6 automatic hits, each resolved using the Destroyer of Eternities' profile."
+      "description": "Combat, S+2, AP -2; Killing Blow, Magical Attacks, Requires Two Hands, Strike Last. Rather than attacking normally, the wielder may make a special 'Scything' attack. If they do, the enemy unit they are directing their attacks against suffers D6 automatic hits, each resolved using the Destroyer of Eternities' profile.",
+      "source_page": 150
     },
     {
       "id": "standard_of_the_cursing_word",
       "name": "Standard of the Cursing Word",
       "points": 80,
       "source": "ravening_hordes",
-      "description": "Battle Standard Bearer only. At the end of any phase in which one or more models in a unit joined by the bearer lost its last Wound to an enemy attack, the unit that made the attack must make a Leadership test. If failed, the enemy unit suffers D3 Strength 2 hits, each with an AP of -, for each model that lost its last Wound."
+      "description": "Battle Standard Bearer only. At the end of any phase in which one or more models in a unit joined by the bearer lost its last Wound to an enemy attack, the unit that made the attack must make a Leadership test. If failed, the enemy unit suffers D3 Strength 2 hits, each with an AP of -, for each model that lost its last Wound.",
+      "source_page": 150
     }
   ],
   "lore_of_nehekhara": [

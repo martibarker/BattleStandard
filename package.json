@@ -17,6 +17,8 @@
     "db:validate": "tsx --tsconfig tsconfig.db.json db/scripts/validate.ts"
   },
   "dependencies": {
+    "@sentry/react": "^10.47.0",
+    "@sentry/vite-plugin": "^5.1.1",
     "@tailwindcss/vite": "^4.2.2",
     "drizzle-orm": "^0.45.2",
     "jsqr": "^1.4.0",

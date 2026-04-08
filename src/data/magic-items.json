@@ -13,14 +13,21 @@
         "weapon_type": "Sword",
         "range": "Combat",
         "special_rules": [
-          "extra_attacks",
+          "Extra Attacks (+1)",
           "impetuous",
           "magical_attacks"
         ],
         "notes": "The wielder of the Berserker Blade is Impetuous.",
         "S": "S+1",
         "AP": "-"
-      }
+      },
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "biting-blade",
@@ -219,7 +226,14 @@
         ],
         "S": "S+1",
         "AP": "-"
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "spelleater-axe",
@@ -380,7 +394,7 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": "",
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
       "armour_profile": {
         "type": "helm",
         "armour_value": "+1",
@@ -388,7 +402,14 @@
           "to_hit_penalty_1"
         ],
         "notes": "Infantry/Cavalry only. Improves wearer's armour by 1 (max 2+). Enemy models attacking the wearer suffer -1 modifier to To Hit rolls."
-      }
+      },
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "charmed-shield",
@@ -663,7 +684,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "wizarding-hat",

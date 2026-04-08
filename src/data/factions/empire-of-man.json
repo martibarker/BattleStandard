@@ -515,7 +515,7 @@
         "W": "3",
         "I": "5",
         "A": "3",
-        "Ld": "9"
+        "Ld": "10"
       },
       "equipment": [
         "Hand weapon",
@@ -689,6 +689,14 @@
       ],
       "notes": [
         "This character and any unit they have joined automatically passes any Panic tests they are required to make (Hold the Line)."
+      ],
+      "source_page": 48,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Ld corrected 9→10 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -709,7 +717,7 @@
         "W": "2",
         "I": "4",
         "A": "2",
-        "Ld": "8"
+        "Ld": "9"
       },
       "equipment": [
         "Hand weapon",
@@ -887,6 +895,14 @@
             "quick_shot"
           ]
         }
+      ],
+      "source_page": 48,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Ld corrected 8→9 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -948,7 +964,8 @@
           "description": "Magic items",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 49
     },
     {
       "id": "master_mage",
@@ -1009,7 +1026,8 @@
           "description": "Magic items",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 49
     },
     {
       "id": "grand_master",
@@ -1138,7 +1156,8 @@
       ],
       "notes": [
         "Must be mounted. If this model joins a unit of Empire Knights, Inner Circle Knights or Demigryph Knights, that unit gains the Immune to Psychology special rule (Master of Battle)."
-      ]
+      ],
+      "source_page": 50
     },
     {
       "id": "chapter_master",
@@ -1274,7 +1293,8 @@
       ],
       "notes": [
         "Must be mounted. If this model joins a unit of Empire Knights, Inner Circle Knights or Demigryph Knights, that unit gains the Immune to Psychology special rule (Master of Battle)."
-      ]
+      ],
+      "source_page": 50
     },
     {
       "id": "witch_hunter",
@@ -1434,7 +1454,8 @@
         "The Revenant: Witch Hunter and joined unit gains Hatred (Undead models) and Flaming Attacks.",
         "The Mutant: Witch Hunter and joined unit gains Hatred (Warriors of Chaos & Beasts of Chaos) and Magic Resistance (-1).",
         "The Daemon: Witch Hunter and joined unit gains Hatred (Daemonic models) and Magical Attacks."
-      ]
+      ],
+      "source_page": 51
     },
     {
       "id": "lector_of_sigmar",
@@ -1454,7 +1475,7 @@
         "W": "3",
         "I": "5",
         "A": "3",
-        "Ld": "8"
+        "Ld": "9"
       },
       "equipment": [
         "Hand weapon",
@@ -1523,6 +1544,14 @@
             "strike_last"
           ]
         }
+      ],
+      "source_page": 52,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Ld corrected 8→9 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -1543,7 +1572,7 @@
         "W": "2",
         "I": "4",
         "A": "2",
-        "Ld": "7"
+        "Ld": "8"
       },
       "equipment": [
         "Hand weapon",
@@ -1612,6 +1641,14 @@
             "strike_last"
           ]
         }
+      ],
+      "source_page": 52,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Ld corrected 7→8 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -1632,7 +1669,7 @@
         "W": "3",
         "I": "5",
         "A": "3",
-        "Ld": "8"
+        "Ld": "9"
       },
       "equipment": [
         "Hand weapon",
@@ -1701,6 +1738,14 @@
             "strike_last"
           ]
         }
+      ],
+      "source_page": 53,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Ld corrected 8→9 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -1721,7 +1766,7 @@
         "W": "2",
         "I": "4",
         "A": "2",
-        "Ld": "7"
+        "Ld": "8"
       },
       "equipment": [
         "Hand weapon",
@@ -1789,6 +1834,14 @@
             "requires_two_hands",
             "strike_last"
           ]
+        }
+      ],
+      "source_page": 53,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Ld corrected 7→8 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
         }
       ]
     },
@@ -1922,7 +1975,8 @@
       "notes": [
         "Clouds of Soot and Smoke: This model is considered to be behind full cover whilst it is within 3\" of a friendly unit whose troop type is 'war machine'.",
         "Master of Ballistics: Once per turn a friendly Empire war machine within Command range may use this model's Ballistic Skill, or re-roll a single Artillery dice."
-      ]
+      ],
+      "source_page": 54
     },
     {
       "id": "harbinger_of_doom",
@@ -2011,7 +2065,8 @@
         "Any Empire of Man army that includes one or more units of Flagellants may include 0-1 Harbinger of Doom as a Character choice.",
         "Zealot: A character with this special rule can only join a unit with the Fanatical Zeal special rule.",
         "Prayer of the Damned: During Command sub-phase, character may chant the Prayer of the Damned on a Leadership test. If passed, until next Start of Turn sub-phase, the character and any unit they have joined gains a 6+ Ward save and a 5+ Ward save against wounds caused in combat by an enemy with Fear or Terror."
-      ]
+      ],
+      "source_page": 38
     },
     {
       "id": "harald_gemunsen",
@@ -2104,7 +2159,7 @@
         "W": "3",
         "I": "4",
         "A": "4",
-        "Ld": "9"
+        "Ld": "10"
       },
       "equipment": [
         "Hand weapon",
@@ -2136,6 +2191,13 @@
         "Griffon Helm: 5+ Ward save against any wound. Immune to Killing Blow (if struck by a Killing Blow, permitted armour and Regeneration save; if unsaved, loses a single Wound).",
         "Mercenary Commander: If Hans is the army's General, friendly units with the Mercenaries special rule may benefit from his Inspiring Presence and may be joined by him. Friendly Mercenary units are not subject to the 'Misbehaving Mercenaries' rules.",
         "Strategic Mastery: In scenarios where players roll off to determine who takes the first turn, you may apply a +1 or -1 modifier to the result."
+      ],
+      "errata": [
+        {
+          "type": "stat",
+          "note": "Ld corrected 9→10 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -2169,7 +2231,8 @@
       ],
       "notes": [
         "Available to: General of the Empire, Captain of the Empire, Grand Master, Chapter Master, Lector of Sigmar, Priest of Sigmar, High Priest of Ulric, Priest of Ulric"
-      ]
+      ],
+      "source_page": 55
     },
     {
       "id": "empire_warhorse",
@@ -2200,7 +2263,8 @@
       ],
       "notes": [
         "Available to: General of the Empire, Captain of the Empire, Wizard Lord, Master Mage, Witch Hunter, Lector of Sigmar, Priest of Sigmar, High Priest of Ulric, Priest of Ulric"
-      ]
+      ],
+      "source_page": 55
     },
     {
       "id": "pegasus",
@@ -2234,7 +2298,8 @@
       "notes": [
         "A character mounted on a Pegasus has +1 Wound.",
         "Available to: General of the Empire, Captain of the Empire, Grand Master, Chapter Master, Wizard Lord, Master Mage, Witch Hunter"
-      ]
+      ],
+      "source_page": 56
     },
     {
       "id": "demigryph_mount",
@@ -2270,7 +2335,8 @@
         "A character mounted on a Demigryph has +1 Wound.",
         "Wicked claws: Combat S -2.",
         "Available to: Grand Master, Chapter Master"
-      ]
+      ],
+      "source_page": 56
     },
     {
       "id": "griffon",
@@ -2359,7 +2425,8 @@
         "A character mounted on an Imperial Griffon has +1 Toughness and +4 Wounds.",
         "Imperial Griffon may only be taken as a character mount. Its points are added to that of its rider.",
         "Available to: Generals of the Empire only (Imperial Griffon); Wizard Lords only (Imperial Griffon)"
-      ]
+      ],
+      "source_page": 70
     },
     {
       "id": "war_altar_of_sigmar",
@@ -2402,7 +2469,8 @@
         "Holy Fervour: Friendly units within 6\" automatically pass any Fear tests and may re-roll any failed Panic tests.",
         "Symbol of Might: The Command range of a Lector of Sigmar mounted on the War Altar is increased from 8\" to 12\".",
         "Witch Bane: All Wizards within this model's Command range (friend or foe) suffer a -2 modifier to their Casting rolls."
-      ]
+      ],
+      "source_page": 67
     },
     {
       "id": "state_troops",
@@ -2435,7 +2503,8 @@
       "special_rules": [
         "close_order",
         "detachment",
-        "regimental_unit"
+        "regimental_unit",
+        "horde"
       ],
       "options": [
         {
@@ -2504,6 +2573,14 @@
       ],
       "notes": [
         "State Troops may be 5+ if a detachment."
+      ],
+      "source_page": 57,
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Added Horde special rule (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -2620,7 +2697,8 @@
         "Veteran State Troops may be 5+ if a detachment.",
         "A Veteran Sergeant may purchase magic items up to a total of 25 points."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 57
     },
     {
       "id": "state_missile_troops",
@@ -2785,7 +2863,8 @@
       "notes": [
         "State Missile Troops may be 5+ if a detachment."
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 58
     },
     {
       "id": "free_company_militia",
@@ -2848,7 +2927,8 @@
       ],
       "notes": [
         "Free Company Militia may be 5+ if a detachment."
-      ]
+      ],
+      "source_page": 59
     },
     {
       "id": "empire_archers",
@@ -2916,7 +2996,8 @@
             "BS": "4"
           }
         }
-      ]
+      ],
+      "source_page": 59
     },
     {
       "id": "empire_greatswords",
@@ -3014,7 +3095,8 @@
       "notes": [
         "A Count's Champion may purchase magic items up to a total of 50 points."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 60
     },
     {
       "id": "flagellants",
@@ -3031,7 +3113,7 @@
         "WS": "3",
         "BS": "2",
         "S": "3",
-        "T": "3",
+        "T": "4",
         "W": "1",
         "I": "3",
         "A": "1",
@@ -3080,6 +3162,14 @@
       "notes": [
         "Fanatical Zeal: A unit with this special rule can only be joined by a Lector of Sigmar or a Priest of Sigmar. A Lector or Priest of Sigmar that joins a unit of Flagellants is considered to have the Unbreakable special rule for as long as they remain with the unit.",
         "Feel No Pain: 6+ Ward save against wounds from non-magical attacks; 5+ Ward save against non-magical attacks with Strength 5 or higher."
+      ],
+      "source_page": 61,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "T corrected 3→4 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -3160,7 +3250,8 @@
         "Blessings of Ulric: 6+ Ward save against wounds from attacks with the Flaming Attacks special rule.",
         "Guardians of the Temple: When engaged in combat, a model with this special rule may re-roll any rolls To Hit of a natural 1."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 39
     },
     {
       "id": "imperial_ogres",
@@ -3280,7 +3371,8 @@
       "notes": [
         "Mercenaries. 0-1 unit may be taken in Grand Army of the Empire or Dwarfen Mountain Holds. Subject to 'Misbehaving Mercenaries' rules.",
         "Ogre Charge: The Armour Piercing characteristic of any Impact Hits caused by a model with this special rule is improved by the current Rank Bonus of its unit."
-      ]
+      ],
+      "source_page": 40
     },
     {
       "id": "pistoliers",
@@ -3440,7 +3532,8 @@
             "quick_shot"
           ]
         }
-      ]
+      ],
+      "source_page": 62
     },
     {
       "id": "outriders",
@@ -3602,7 +3695,8 @@
             "ponderous"
           ]
         }
-      ]
+      ],
+      "source_page": 63
     },
     {
       "id": "empire_knights",
@@ -3748,7 +3842,8 @@
       "notes": [
         "A Preceptor may purchase magic items up to a total of 25 points."
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 64
     },
     {
       "id": "inner_circle_knights",
@@ -3886,7 +3981,8 @@
         "Inner Circle: When engaged in combat, a model with this special rule (but not its mount) may re-roll any rolls To Hit of a natural 1.",
         "An Inner Circle Preceptor may purchase magic items up to a total of 50 points."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 65
     },
     {
       "id": "inner_circle_knights_ko_core",
@@ -4196,7 +4292,8 @@
         "Any army made using the Empire of Man Grand Army composition list may include 0-1 unit of Road Wardens as a Special choice per 1,000 points.",
         "In a City-state of Nuln army, Road Wardens are a Rare choice.",
         "Missile weapons wielded by Outriders in a City-state of Nuln army are not subject to the Ponderous special rule (Veteran Outriders)."
-      ]
+      ],
+      "source_page": 41
     },
     {
       "id": "demigryph_knights",
@@ -4323,7 +4420,8 @@
         "Demigryph: Wicked claws Combat S -2.",
         "A Demigryph Preceptor may purchase magic items up to a total of 50 points."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 66
     },
     {
       "id": "griffon_unit",
@@ -4361,7 +4459,8 @@
       ],
       "notes": [
         "Character mount only. Points added to rider's total."
-      ]
+      ],
+      "source_page": 70
     },
     {
       "id": "war_altar_unit",
@@ -4398,7 +4497,8 @@
       ],
       "notes": [
         "A War Altar may only be included in your army as a character's mount for a Lector of Sigmar. Its points are added to that of its rider."
-      ]
+      ],
+      "source_page": 67
     },
     {
       "id": "empire_war_wagon",
@@ -4455,7 +4555,8 @@
         "Crushing Weight: Stomp Attacks have AP -1. Treats low linear obstacles as dangerous rather than impassable terrain.",
         "Stable Firing Platform: Crew may shoot in all directions even if the War Wagon marched this turn.",
         "May also be taken as a character mount for an Empire Engineer (+140 points)."
-      ]
+      ],
+      "source_page": 42
     },
     {
       "id": "empire_steam_tank",
@@ -4576,7 +4677,8 @@
         "Temperamental: If a natural 1 is rolled on either die when making a Steam Power or Charge roll, choose: Bang (ignores pressure, finds its own release) or Phweee (Tank halts, cannot move again this turn). If natural 1 on both dice, Tank loses a Wound and halts.",
         "Steam Cannon: 24\" S8 AP 2. Armour Bane (2), Cannon Fire, Cumbersome, Multiple Wounds (D3). Uses Black Powder Misfire table. On Misfire loses a Wound instead of rolling.",
         "Steam Gun: N/A S2 AP N/A. Breath Weapon. No armour save permitted."
-      ]
+      ],
+      "source_page": 68
     },
     {
       "id": "great_cannon",
@@ -4630,7 +4732,8 @@
       "notes": [
         "0-3 per 1,000 points (Grand Army); 0-3 per 1,000 points (City-state of Nuln special); may also gain Vanguard for +5 points (Gun Limbers, City-state of Nuln).",
         "Gun Crew: M4 WS3 BS3 S3 T3 W3 I3 A3 Ld7."
-      ]
+      ],
+      "source_page": 71
     },
     {
       "id": "mortar",
@@ -4688,7 +4791,8 @@
       "notes": [
         "0-3 per 1,000 points (Grand Army); 0-3 per 1,000 points (City-state of Nuln special); may also gain Vanguard for +5 points (Gun Limbers, City-state of Nuln).",
         "Gun Crew: M4 WS3 BS3 S3 T3 W3 I3 A3 Ld7."
-      ]
+      ],
+      "source_page": 71
     },
     {
       "id": "helblaster_volley_gun",
@@ -4740,7 +4844,8 @@
         "Helblaster: Roll 3 Artillery dice before shooting; total shots equal sum of all three. Misfire on one die: -1 To Hit. Misfire on two dice: no shots, roll Misfire table. Misfire on all three: 30 shots but +1 -1 To Hit modifier and weapon destroyed after.",
         "Gun Crew: M4 WS3 BS3 S3 T3 W3 I3 A3 Ld7.",
         "Weapon: 24\" S5 AP -1. Armour Bane (2), Cumbersome, Helblaster, Move or Shoot. Uses Black Powder Misfire table."
-      ]
+      ],
+      "source_page": 72
     },
     {
       "id": "helstorm_rocket_battery",
@@ -4790,12 +4895,13 @@
         "0-1 per 1,000 points (Grand Army rare); 0-2 per 1,000 points as part of Nuln rare allotment; may gain Vanguard for +10 points (Gun Limbers, City-state of Nuln).",
         "Helstorm: 12-48\" S3 AP -1. Cumbersome, Helstorm, Move or Shoot. Places D3 blast templates, each scatters. Uses Black Powder Misfire table.",
         "Gun Crew: M4 WS3 BS3 S3 T3 W3 I3 A3 Ld7."
-      ]
+      ],
+      "source_page": 73
     },
     {
       "id": "nuln_state_troops",
       "name": "Nuln State Troops",
-      "source": "arcane_journal",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
@@ -4878,12 +4984,13 @@
       ],
       "availability": [
         "city_state_of_nuln"
-      ]
+      ],
+      "source_page": 57
     },
     {
       "id": "nuln_state_missile_troops",
       "name": "Nuln State Missile Troops",
-      "source": "arcane_journal",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
@@ -4999,12 +5106,13 @@
       "magic_standard": 25,
       "availability": [
         "city_state_of_nuln"
-      ]
+      ],
+      "source_page": 58
     },
     {
       "id": "nuln_swordsmen",
       "name": "Nuln Swordsmen",
-      "source": "arcane_journal",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
@@ -5055,12 +5163,13 @@
       ],
       "availability": [
         "city_state_of_nuln"
-      ]
+      ],
+      "source_page": 57
     },
     {
       "id": "nuln_veteran_state_troops",
       "name": "Nuln Veteran State Troops",
-      "source": "arcane_journal",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "core",
       "list_category_overrides": {
@@ -5160,7 +5269,8 @@
       "magic_standard": 50,
       "availability": [
         "city_state_of_nuln"
-      ]
+      ],
+      "source_page": 57
     }
   ],
   "magic_items": [
@@ -5227,11 +5337,19 @@
         "S": "S+1",
         "AP": "-",
         "special_rules": [
-          "extra_attacks",
+          "Extra Attacks (+1)",
           "impetuous",
           "magical_attacks"
-        ]
-      }
+        ],
+        "notes": "The wielder of the Berserker Blade is Impetuous."
+      },
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "sword-of-might",
@@ -5266,7 +5384,8 @@
           "magical_attacks",
           "multiple_wounds_2"
         ]
-      }
+      },
+      "source_page": 74
     },
     {
       "id": "sword-of-swiftness",
@@ -5505,7 +5624,8 @@
           "multiple_wounds_2"
         ],
         "notes": "Wielder may re-roll any failed rolls To Wound"
-      }
+      },
+      "source_page": 74
     },
     {
       "id": "duellists-blades",
@@ -5578,7 +5698,8 @@
           "multiple_wounds_d6"
         ],
         "notes": "Two profiles: Single-handed (S, AP-, Multiple Wounds D6) or Double-handed (S10, AP-5, Multiple Wounds D6, Requires Two Hands, one attack only). Choose at start of each round of combat."
-      }
+      },
+      "source_page": 74
     },
     {
       "id": "ogre-blade",
@@ -5595,7 +5716,14 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "runefang",
@@ -5614,7 +5742,8 @@
           "magical_attacks"
         ],
         "notes": "When making a roll To Wound with this weapon, a roll of 2+ is always a success, regardless of the target's Toughness"
-      }
+      },
+      "source_page": 74
     },
     {
       "id": "charmed-shield",
@@ -5692,7 +5821,8 @@
       "points": 35,
       "source": "forces_of_fantasy",
       "description": "Light armour.",
-      "rules_text": "May be worn by an Imperial Wizard even if they do not normally have the option to be equipped with armour, a shield or barding, without penalty. Wearer has a 5+ Ward save against any wounds suffered."
+      "rules_text": "May be worn by an Imperial Wizard even if they do not normally have the option to be equipped with armour, a shield or barding, without penalty. Wearer has a 5+ Ward save against any wounds suffered.",
+      "source_page": 74
     },
     {
       "id": "glittering-scales",
@@ -5725,7 +5855,8 @@
       "category": "magic_armour",
       "points": 45,
       "source": "forces_of_fantasy",
-      "description": "Heavy armour. Wearer has a 6+ Ward save against any wounds suffered and is immune to the Killing Blow special rule. If the wearer is struck a Killing Blow, they are permitted armour and Regeneration saves as normal. If the wound is unsaved, they lose a single Wound."
+      "description": "Heavy armour. Wearer has a 6+ Ward save against any wounds suffered and is immune to the Killing Blow special rule. If the wearer is struck a Killing Blow, they are permitted armour and Regeneration saves as normal. If the wound is unsaved, they lose a single Wound.",
+      "source_page": 74
     },
     {
       "id": "bedazzling-helm",
@@ -5733,7 +5864,14 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "armour-of-destiny",
@@ -5784,7 +5922,8 @@
       "points": 25,
       "source": "forces_of_fantasy",
       "description": "Extremely Common (*).",
-      "rules_text": "The bearer is immune to the Killing Blow special rule. If the bearer is struck a Killing Blow, they are permitted armour and Regeneration saves as normal. If the wound is unsaved, they lose a single Wound."
+      "rules_text": "The bearer is immune to the Killing Blow special rule. If the bearer is struck a Killing Blow, they are permitted armour and Regeneration saves as normal. If the wound is unsaved, they lose a single Wound.",
+      "source_page": 74
     },
     {
       "id": "paymasters-coin",
@@ -5817,7 +5956,8 @@
       "category": "talisman",
       "points": 30,
       "source": "forces_of_fantasy",
-      "description": "5+ Ward save against any wounds suffered, and a 3+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule."
+      "description": "5+ Ward save against any wounds suffered, and a 3+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule.",
+      "source_page": 74
     },
     {
       "id": "dawnstone",
@@ -5863,7 +6003,8 @@
       "points": 10,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The bearer of the Shroud of Iron (and any unit they have joined) has a 6+ Ward save against any wounds suffered that were caused by a non-magical template."
+      "rules_text": "The bearer of the Shroud of Iron (and any unit they have joined) has a 6+ Ward save against any wounds suffered that were caused by a non-magical template.",
+      "source_page": 74
     },
     {
       "id": "the_silver_horn",
@@ -5872,7 +6013,8 @@
       "points": 15,
       "source": "forces_of_fantasy",
       "description": "Characters with the Swiftstride special rule only.",
-      "rules_text": "The bearer of the Silver Horn (and any unit they have joined) may re-roll the D6 when using the Swiftstride special rule."
+      "rules_text": "The bearer of the Silver Horn (and any unit they have joined) may re-roll the D6 when using the Swiftstride special rule.",
+      "source_page": 74
     },
     {
       "id": "becalming-orb",
@@ -5948,7 +6090,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "squintsoffen_marvellous_magnifier",
@@ -5983,7 +6132,8 @@
       "category": "enchanted_item",
       "points": 40,
       "source": "forces_of_fantasy",
-      "description": "When determining your combat result, each unsaved wound caused by an attack made by the bearer of the Laurels of Victory is worth 2 combat result points, rather than the usual 1."
+      "description": "When determining your combat result, each unsaved wound caused by an attack made by the bearer of the Laurels of Victory is worth 2 combat result points, rather than the usual 1.",
+      "source_page": 74
     },
     {
       "id": "wizarding-hat",
@@ -6043,7 +6193,8 @@
       "points": 20,
       "source": "forces_of_fantasy",
       "description": "Extremely Common (*).",
-      "rules_text": "The bearer of the Wizard's Staff gains a +1 modifier to their Casting roll when attempting to cast an Assailment spell or a Magic Missile."
+      "rules_text": "The bearer of the Wizard's Staff gains a +1 modifier to their Casting roll when attempting to cast an Assailment spell or a Magic Missile.",
+      "source_page": 74
     },
     {
       "id": "lore-familiar",
@@ -6091,7 +6242,8 @@
       "points": 35,
       "source": "forces_of_fantasy",
       "description": "Extremely Common (*). 0-1 per Wizard. The owner of a Wizard's Familiar may apply a +1 modifier to any of their Dispel rolls.",
-      "rules_text": "Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1."
+      "rules_text": "Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1.",
+      "source_page": 74
     },
     {
       "id": "twin_tailed_wand",
@@ -6133,7 +6285,8 @@
       "points": 85,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The bearer increases their Dispel range by 3\" and, unless they roll any natural double, may apply a +1 modifier to any of their Casting or Dispel rolls. However, if the bearer rolls any natural double when making a Casting or Dispel roll, the +1 modifier cannot be applied to that roll."
+      "rules_text": "The bearer increases their Dispel range by 3\" and, unless they roll any natural double, may apply a +1 modifier to any of their Casting or Dispel rolls. However, if the bearer rolls any natural double when making a Casting or Dispel roll, the +1 modifier cannot be applied to that roll.",
+      "source_page": 74
     },
     {
       "id": "banner_of_duty",
@@ -6142,7 +6295,8 @@
       "points": 10,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Banner of Duty may re-roll any failed Rally test."
+      "rules_text": "A unit carrying the Banner of Duty may re-roll any failed Rally test.",
+      "source_page": 74
     },
     {
       "id": "gleaming_pennant",
@@ -6152,7 +6306,8 @@
       "source": "forces_of_fantasy",
       "description": "",
       "rules_text": "Single use. A unit carrying the Gleaming Pennant may re-roll a single failed Leadership test. Note that a Break test is not a Leadership test.",
-      "single_use": true
+      "single_use": true,
+      "source_page": 74
     },
     {
       "id": "banner_of_the_free_state_of_nuln",
@@ -6256,7 +6411,8 @@
       "category": "magic_standard",
       "points": 50,
       "source": "forces_of_fantasy",
-      "description": "When determining your combat result, a unit carrying the Griffon Standard can claim a Rank Bonus of +2 for each extra rank behind the first, rather than the usual +1."
+      "description": "When determining your combat result, a unit carrying the Griffon Standard can claim a Rank Bonus of +2 for each extra rank behind the first, rather than the usual +1.",
+      "source_page": 74
     },
     {
       "id": "totem-of-wrath",
@@ -6273,7 +6429,8 @@
       "category": "magic_standard",
       "points": 60,
       "source": "forces_of_fantasy",
-      "description": "All friendly units within the Command range of the model carrying the Imperial Banner roll 3D6 when making a Fear, Panic or Terror test and discard the highest result."
+      "description": "All friendly units within the Command range of the model carrying the Imperial Banner roll 3D6 when making a Fear, Panic or Terror test and discard the highest result.",
+      "source_page": 74
     },
     {
       "id": "banner_of_the_knights_panther",

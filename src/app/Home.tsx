@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import bannerImg from '../assets/banner.png';
 import DataTransfer from '../components/DataTransfer';
@@ -11,9 +11,12 @@ const FEATURES = [
     title: 'Army Builder',
     subtitle: 'Forge your force',
     description:
-      'Construct, validate, and refine army lists for Warhammer: The Old World. ' +
-      'Browse every unit, option, and magic items for your faction. ' +
-      'Live points tracking and composition rules keep your list battle-legal at a glance.',
+      'Build and validate army lists for every Warhammer: The Old World faction — ' +
+      'from Empire and High Elves to Tomb Kings and Warriors of Chaos. ' +
+      'Live composition checks enforce Lords, Heroes, Core, Special, and Rare percentage limits as you build. ' +
+      'Browse the full unit roster with all equipment options and magic items. ' +
+      'Share your list to Discord, WhatsApp, or Best Coast Pairings in one tap — ' +
+      'or generate a QR code for opponents to scan on the day.',
     cta: 'Open Army Builder',
     accent: 'var(--f-cat-characters)',
   },
@@ -24,13 +27,34 @@ const FEATURES = [
     title: "General's Adjutant",
     subtitle: 'Command the battlefield',
     description:
-      'Track turns, phases, and game state during your battles. ' +
-      'Record spell casts and special rule triggers so nothing is forgotten ' +
-      'in the heat of combat. A loyal aide-de-camp for every engagement.',
+      'A full game companion from deployment to final turn. ' +
+      'Roll your matched-play scenario from all six options, with accurate deployment diagrams and zone measurements. ' +
+      'Pick secondary objectives for both players and track their progress through the game. ' +
+      'Manage army setup — wizards, bound spells, and vanguard moves — before the first turn. ' +
+      'Scan your opponent\'s Battle Standard QR code to pull their list directly into the game. ' +
+      'Then track turns, phases, spell casts, and game events so nothing slips through the cracks.',
     cta: 'Open Adjutant',
     accent: 'var(--f-cat-core)',
   },
 ];
+
+const legalHeading: React.CSSProperties = {
+  fontFamily: "'Cinzel', Georgia, serif",
+  fontSize: '8px',
+  letterSpacing: '0.4em',
+  textTransform: 'uppercase',
+  color: 'var(--f-text-4)',
+  margin: '0 0 10px',
+};
+
+const legalText: React.CSSProperties = {
+  fontFamily: "'Source Serif 4', Georgia, serif",
+  fontStyle: 'italic',
+  fontSize: '11px',
+  color: 'var(--f-text-4)',
+  lineHeight: 1.75,
+  margin: '0 0 10px',
+};
 
 /** Triggers a fade-up animation once the element enters the viewport */
 function useRevealOnScroll() {
@@ -300,30 +324,70 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Attribution footer */}
+        {/* Attribution & legal footer */}
         <div
           ref={footerRef}
-          style={{ opacity: 0, textAlign: 'center', paddingTop: '16px', borderTop: '1px solid var(--f-border)', maxWidth: '600px', margin: '0 auto' }}
+          style={{ opacity: 0, maxWidth: '680px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '0' }}
         >
-          <p style={{
-            fontFamily: "'Source Serif 4', Georgia, serif",
-            fontStyle: 'italic',
-            fontSize: '11px',
-            color: 'var(--f-text-4)',
-            lineHeight: 1.7,
-            margin: 0,
-          }}>
-            Rules index data courtesy of the{' '}
-            <a href="https://tow.whfb.app" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--f-gold)', textDecoration: 'none' }}>
-              Warhammer Fantasy Online Rules Index Project
-            </a>
-            .<br />
-            Icons from{' '}
-            <a href="https://game-icons.net" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--f-gold)', textDecoration: 'none' }}>
-              game-icons.net
-            </a>{' '}
-            (CC BY 3.0). Unofficial. Not endorsed by Games Workshop Limited.
-          </p>
+          <div style={{ borderTop: '1px solid var(--f-border)', paddingTop: '24px', marginBottom: '20px' }}>
+            <p style={legalHeading}>About Battle Standard</p>
+            <p style={legalText}>
+              Battle Standard is a free, unofficial fan project created by hobbyists to help players
+              learn Warhammer: The Old World, build legal army lists, and get the most out of
+              Games Workshop&rsquo;s matched play rules. Our goal is to lower the barrier to entry
+              for new players, support the competitive community, and help grow The Old World player base.
+            </p>
+            <p style={legalText}>
+              This project has no commercial relationship with Games Workshop. All intellectual property
+              rights in Warhammer: The Old World — including all rules, settings, characters, and
+              associated content — belong entirely to Games Workshop Limited. We make no claim to any
+              of it. If Games Workshop ever asks us to take this down, we will.
+            </p>
+            <p style={legalText}>
+              No rules text, artwork, or imagery from Games Workshop publications is reproduced.
+              Unit statistics are presented as factual game data to assist list-building.
+              For the full rules, refer to your copies of Warhammer: The Old World, Forces of Fantasy,
+              Ravening Hordes, and the associated Arcane Journals — all available from{' '}
+              <a href="https://www.warhammer.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--f-gold)', textDecoration: 'none' }}>
+                warhammer.com
+              </a>
+              .
+            </p>
+            <p style={legalText}>
+              Rules references link to the{' '}
+              <a href="https://tow.whfb.app" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--f-gold)', textDecoration: 'none' }}>
+                Warhammer Fantasy Online Rules Index Project
+              </a>
+              {' '}(tow.whfb.app). Battle Standard is not affiliated with that project.
+              Icons from{' '}
+              <a href="https://game-icons.net" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--f-gold)', textDecoration: 'none' }}>
+                game-icons.net
+              </a>{' '}
+              (CC BY 3.0).
+            </p>
+          </div>
+
+          <div style={{ borderTop: '1px solid var(--f-border)', paddingTop: '20px', marginBottom: '20px' }}>
+            <p style={legalHeading}>Credit</p>
+            <p style={legalText}>
+              This project is completely unofficial and is in no way endorsed by Games Workshop Limited.
+              Based on the work of: Bryan Ansell, Alessio Cavatore, Robin Cruddace, Graham Davey,
+              Richard Halliwell, Andy Hoare, Jervis Johnson, Phil Kelly, Andrew Kenrick, Tuomas Pirinen,
+              Rick Priestley, Nigel Stillman, Gavin Thorpe, Anthony Reynolds, Jake Thornton,
+              Jeremy Vetock, Matthew Ward &amp; Mathias Eliasson.
+            </p>
+          </div>
+
+          <div style={{ borderTop: '1px solid var(--f-border)', paddingTop: '20px', paddingBottom: '48px' }}>
+            <p style={legalHeading}>Trademarks</p>
+            <p style={legalText}>
+              GW, Games Workshop, Citadel, Warhammer, Warhammer: The Old World, and all associated
+              logos, illustrations, images, names, races, characters, and the distinctive likenesses
+              thereof, are either &reg;, TM and/or &copy; Copyright Games Workshop Limited
+              2000&ndash;2026, variably registered around the world. Used without permission.
+              No challenge to their status intended. All Rights Reserved to their respective owners.
+            </p>
+          </div>
         </div>
 
       </div>

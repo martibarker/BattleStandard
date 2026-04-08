@@ -25,6 +25,8 @@ export interface ScenarioData {
   optionalSecondaries: string[];
   /** Key for the deployment zone diagram renderer */
   diagramType: 'standard' | 'king_of_hill' | 'diagonal' | 'close_quarters' | 'chance_encounter' | 'encirclement';
+  /** Source book and page reference */
+  source: { book: 'Matched Play Guide'; page: number };
 }
 
 export const SCENARIOS: ScenarioData[] = [
@@ -51,6 +53,7 @@ export const SCENARIOS: ScenarioData[] = [
       'strategic_locations_2', 'strategic_locations_3', 'strategic_locations_4',
     ],
     diagramType: 'standard',
+    source: { book: 'Matched Play Guide' as const, page: 20 },
   },
   {
     id: 'king_of_the_hill',
@@ -90,6 +93,7 @@ export const SCENARIOS: ScenarioData[] = [
     mandatorySecondaries: [],
     optionalSecondaries: ['baggage_trains', 'special_feature'],
     diagramType: 'king_of_hill',
+    source: { book: 'Matched Play Guide' as const, page: 21 },
   },
   {
     id: 'drawn_battlelines',
@@ -119,6 +123,7 @@ export const SCENARIOS: ScenarioData[] = [
     mandatorySecondaries: ['strategic_locations_3'],
     optionalSecondaries: ['domination', 'baggage_trains'],
     diagramType: 'diagonal',
+    source: { book: 'Matched Play Guide' as const, page: 22 },
   },
   {
     id: 'close_quarters',
@@ -149,6 +154,7 @@ export const SCENARIOS: ScenarioData[] = [
     mandatorySecondaries: ['strategic_locations_2'],
     optionalSecondaries: ['domination'],
     diagramType: 'close_quarters',
+    source: { book: 'Matched Play Guide' as const, page: 23 },
   },
   {
     id: 'a_chance_encounter',
@@ -170,6 +176,7 @@ export const SCENARIOS: ScenarioData[] = [
     mandatorySecondaries: ['special_feature'],
     optionalSecondaries: ['domination', 'baggage_trains'],
     diagramType: 'chance_encounter',
+    source: { book: 'Matched Play Guide' as const, page: 24 },
   },
   {
     id: 'encirclement',
@@ -190,6 +197,7 @@ export const SCENARIOS: ScenarioData[] = [
     mandatorySecondaries: ['strategic_locations_4'],
     optionalSecondaries: ['baggage_trains', 'special_feature'],
     diagramType: 'encirclement',
+    source: { book: 'Matched Play Guide' as const, page: 25 },
   },
 ];
 

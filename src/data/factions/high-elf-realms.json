@@ -497,7 +497,8 @@
       ],
       "notes": [
         "The Strike First special rule does not apply to this model's mount (should it have one)"
-      ]
+      ],
+      "source_page": 156
     },
     {
       "id": "noble",
@@ -674,7 +675,8 @@
       ],
       "notes": [
         "A single Noble may be upgraded to be the Battle Standard Bearer for +25 points. A Battle Standard Bearer may purchase a single Magic Standard with no points limit."
-      ]
+      ],
+      "source_page": 156
     },
     {
       "id": "archmage",
@@ -743,7 +745,8 @@
           "max_points": 100,
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 157
     },
     {
       "id": "mage",
@@ -809,7 +812,8 @@
           "max_points": 50,
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 157
     },
     {
       "id": "dragon_mage",
@@ -878,7 +882,8 @@
       "notes": [
         "Includes Sun Dragon mount. Dragon Mage: hand weapon and light armour. Sun Dragon: wicked claws (Combat, S, AP -2) and dragon fire (N/A, 4, AP -1; Breath Weapon, Flaming Attacks). Sun Dragon stats: M 6, WS 5, BS -, S 5, T -, W -, I 4, A 4, Ld -",
         "May only be taken as part of a character selection that includes one Dragon Mage per 1,000 points"
-      ]
+      ],
+      "source_page": 158
     },
     {
       "id": "handmaiden_of_the_everqueen",
@@ -951,7 +956,8 @@
       "notes": [
         "Handmaiden's spear: Combat, S, AP -1. During a turn in which it was charged, a model wielding a Handmaiden's spear gains a +1 modifier to its Initiative against the charging unit(s).",
         "If your General is a Handmaiden of the Everqueen, 0-1 unit of Sisters of Avelorn may be taken as a Core choice"
-      ]
+      ],
+      "source_page": 159
     },
     {
       "id": "chracian_chieftain",
@@ -1018,7 +1024,8 @@
       ],
       "availability": [
         "chracian_warhost"
-      ]
+      ],
+      "source_page": 38
     },
     {
       "id": "sea_guard_garrison_commander",
@@ -1128,7 +1135,8 @@
       ],
       "availability": [
         "sea_guard_garrison"
-      ]
+      ],
+      "source_page": 39
     },
     {
       "id": "storm_weaver",
@@ -1199,7 +1207,8 @@
       "availability": [
         "chracian_warhost",
         "sea_guard_garrison"
-      ]
+      ],
+      "source_page": 40
     },
     {
       "id": "korhil_lionmane",
@@ -1341,7 +1350,8 @@
       ],
       "notes": [
         "Available to: Prince, Noble, Archmage, Mage"
-      ]
+      ],
+      "source_page": 126
     },
     {
       "id": "barded_elven_steed",
@@ -1375,12 +1385,13 @@
       ],
       "notes": [
         "Available to: Prince, Noble, Archmage, Mage"
-      ]
+      ],
+      "source_page": 160
     },
     {
       "id": "unicorn",
       "name": "Unicorn",
-      "source": "arcane_journal",
+      "source": "forces_of_fantasy",
       "category": "mount",
       "troop_type": "Monstrous cavalry",
       "base_size": "40x60mm",
@@ -1415,7 +1426,8 @@
       ],
       "availability": [
         "sea_guard_garrison"
-      ]
+      ],
+      "source_page": 90
     },
     {
       "id": "chieftains_chariot",
@@ -1447,7 +1459,8 @@
       ],
       "availability": [
         "chracian_warhost"
-      ]
+      ],
+      "source_page": 38
     },
     {
       "id": "elven_spearmen",
@@ -1541,7 +1554,8 @@
           ]
         }
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 161
     },
     {
       "id": "elven_archers",
@@ -1615,7 +1629,8 @@
           "cost_per_unit": 5
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 161
     },
     {
       "id": "lothern_sea_guard",
@@ -1710,7 +1725,8 @@
           ]
         }
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 162
     },
     {
       "id": "ships_company",
@@ -1813,7 +1829,8 @@
       ],
       "availability": [
         "sea_guard_garrison"
-      ]
+      ],
+      "source_page": 41
     },
     {
       "id": "white_lions_of_chrace",
@@ -1852,7 +1869,8 @@
         "move_through_cover",
         "open_order",
         "stubborn",
-        "valour_of_ages"
+        "valour_of_ages",
+        "furious_charge"
       ],
       "options": [
         {
@@ -1904,12 +1922,20 @@
           ]
         }
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 163,
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Added Furious Charge special rule (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "white_lions_cw_core",
       "name": "White Lions of Chrace",
-      "source": "arcane_journal",
+      "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "special",
       "list_category_overrides": {
@@ -1943,7 +1969,8 @@
         "move_through_cover",
         "open_order",
         "stubborn",
-        "valour_of_ages"
+        "valour_of_ages",
+        "furious_charge"
       ],
       "options": [
         {
@@ -2001,6 +2028,14 @@
       "magic_standard": 50,
       "availability": [
         "chracian_warhost"
+      ],
+      "source_page": 163,
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Added Furious Charge special rule (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -2103,7 +2138,8 @@
       ],
       "availability": [
         "chracian_warhost"
-      ]
+      ],
+      "source_page": 43
     },
     {
       "id": "lion_guard",
@@ -2190,7 +2226,8 @@
       "magic_standard": 50,
       "availability": [
         "chracian_warhost"
-      ]
+      ],
+      "source_page": 42
     },
     {
       "id": "swordmasters_of_hoeth",
@@ -2278,7 +2315,8 @@
           ]
         }
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 164
     },
     {
       "id": "phoenix_guard",
@@ -2365,7 +2403,8 @@
           ]
         }
       ],
-      "magic_standard": 100
+      "magic_standard": 100,
+      "source_page": 165
     },
     {
       "id": "shadow_warriors",
@@ -2444,7 +2483,8 @@
           }
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 166
     },
     {
       "id": "sisters_of_avelorn",
@@ -2532,7 +2572,8 @@
       "notes": [
         "If the General is a Handmaiden of the Everqueen, 0-1 unit of Sisters of Avelorn may be taken as a Core choice"
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 167
     },
     {
       "id": "ellyrian_reavers",
@@ -2647,7 +2688,8 @@
           ]
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 168
     },
     {
       "id": "silver_helms",
@@ -2732,7 +2774,8 @@
           ]
         }
       ],
-      "magic_standard": 25
+      "magic_standard": 25,
+      "source_page": 169
     },
     {
       "id": "dragon_princes_of_caledor",
@@ -2818,7 +2861,8 @@
           ]
         }
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 168
     },
     {
       "id": "war_lions",
@@ -2863,7 +2907,8 @@
       "availability": [
         "grand_army",
         "chracian_warhost"
-      ]
+      ],
+      "source_page": 44
     },
     {
       "id": "tiranoc_chariots",
@@ -2900,7 +2945,8 @@
         "Tiranoc Charioteers (x2): M -, WS 4, BS 4, S 3, T -, W -, I 4, A 1, Ld 8; Hand weapons, cavalry spears and longbows",
         "Elven Steeds (x2): M 9, WS 3, BS -, S 3, T -, W -, I 4, A 1, Ld -; Hooves (counts as hand weapon)",
         "A Tiranoc Chariot may be included in your army as a character's mount. If so, its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 168
     },
     {
       "id": "lion_chariot_of_chrace",
@@ -2943,7 +2989,8 @@
         "War Lions (x2): M 8, WS 5, BS -, S 4, T -, W -, I 4, A 2, Ld -; Claws and fangs (counts as hand weapon)",
         "A Lion Chariot of Chrace may be included in your army as a character's mount. If so, its points are added to that of its rider",
         "If your General has the Chracian Hunter Elven Honour, 0-1 Lion Chariot of Chrace may be taken as a Special choice"
-      ]
+      ],
+      "source_page": 171
     },
     {
       "id": "lothern_skycutter",
@@ -2994,7 +3041,8 @@
         "Eagle-eye bolt thrower (optional): R 24\", S 5, AP -3; Cumbersome, Multiple Wounds (D3)",
         "A Lothern Skycutter may be included in your army as a character's mount. If so, its points are added to that of its rider",
         "If your General has the Sea Guard Elven Honour, 0-1 Lothern Skycutter may be taken as a Special choice"
-      ]
+      ],
+      "source_page": 172
     },
     {
       "id": "griffon",
@@ -3034,7 +3082,8 @@
         "Wicked claws: Combat, S, AP -2",
         "Serrated maw: Combat, S, AP -; Armour Bane (2), Multiple Wounds (2). In combat, this model must make one of its attacks each turn with this weapon",
         "A Griffon may only be included in your army as a character's mount. Its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 173
     },
     {
       "id": "sun_dragon",
@@ -3075,7 +3124,8 @@
         "Wicked claws: Combat, S, AP -2",
         "Dragon fire: N/A, 4, AP -1; Breath Weapon, Flaming Attacks",
         "A Sun Dragon may only be included as a character's mount (Princes only). Its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 174
     },
     {
       "id": "moon_dragon",
@@ -3115,7 +3165,8 @@
         "Wicked claws: Combat, S, AP -2",
         "Dragon fire: N/A, 4, AP -1; Breath Weapon, Flaming Attacks",
         "A Moon Dragon may only be included as a character's mount (Princes only). Its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 174
     },
     {
       "id": "star_dragon",
@@ -3155,7 +3206,8 @@
         "Wicked claws: Combat, S, AP -2",
         "Dragon fire: N/A, 4, AP -1; Breath Weapon, Flaming Attacks",
         "A Star Dragon may only be included as a character's mount (Princes and Archmages only). Its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 174
     },
     {
       "id": "flamespyre_phoenix",
@@ -3201,7 +3253,8 @@
         "Wicked claws: Combat, S, AP -2",
         "As a character mount: S 5, T (x+2), W (x+3); Flamespyre Phoenix has +2 Toughness and +3 Wounds",
         "May be included as a character's mount (with the Anointed of Asuryan Elven Honour). Its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 175
     },
     {
       "id": "frostheart_phoenix",
@@ -3245,7 +3298,8 @@
         "Blizzard Aura: whilst in base contact with this model, enemy models become subject to the Strike Last special rule",
         "As a character mount: S 6, T (x+3), W (x+3); Frostheart Phoenix has +3 Toughness and +3 Wounds",
         "May be included as a character's mount (with the Anointed of Asuryan Elven Honour). Its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 176
     },
     {
       "id": "great_eagle",
@@ -3288,7 +3342,8 @@
         "Serrated maw: Combat, S, AP -; Armour Bane (2), Multiple Wounds (2). In combat, this model must make one of its attacks each turn with this weapon",
         "As a character mount: T (+1), W (+1). A character mounted on a Great Eagle has +1 Toughness and +1 Wound",
         "A Great Eagle may only be included as a character's mount. Its points are added to that of its rider"
-      ]
+      ],
+      "source_page": 139
     },
     {
       "id": "merwyrm",
@@ -3340,7 +3395,8 @@
       "availability": [
         "sea_guard_garrison",
         "grand_army"
-      ]
+      ],
+      "source_page": 45
     },
     {
       "id": "eagle_claw_bolt_thrower",
@@ -3379,7 +3435,8 @@
       ],
       "notes": [
         "Sea Guard Crew: M 5, WS 4, BS 4, S 3, T 3, W 2, I 4, A 2, Ld 8"
-      ]
+      ],
+      "source_page": 178
     }
   ],
   "elven_honours": [
@@ -3460,7 +3517,14 @@
       "name": "Berserker Blade",
       "category": "magic_weapon",
       "points": 20,
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "foe_bane",
@@ -3468,7 +3532,8 @@
       "category": "magic_weapon",
       "points": 20,
       "source": "forces_of_fantasy",
-      "description": "Combat, S, AP -; Magical Attacks. When the wielder of Foe Bane makes a roll To Wound, a roll of 4+ is always a success, regardless of the target's Toughness."
+      "description": "Combat, S, AP -; Magical Attacks. When the wielder of Foe Bane makes a roll To Wound, a roll of 4+ is always a success, regardless of the target's Toughness.",
+      "source_page": 181
     },
     {
       "id": "sword-of-might",
@@ -3530,7 +3595,8 @@
       "points": 40,
       "source": "forces_of_fantasy",
       "description": "30\", S+1, AP -; Magical Attacks.",
-      "rules_text": "Counts as a Bow of Avelorn. The wielder may make a number of shooting attacks equal to their Attacks characteristic, rather than the usual one. This model does not suffer any modifiers for firing multiple shots."
+      "rules_text": "Counts as a Bow of Avelorn. The wielder may make a number of shooting attacks equal to their Attacks characteristic, rather than the usual one. This model does not suffer any modifiers for firing multiple shots.",
+      "source_page": 181
     },
     {
       "id": "headsmans-axe",
@@ -3577,7 +3643,8 @@
       "category": "magic_weapon",
       "points": 50,
       "source": "forces_of_fantasy",
-      "description": "Combat, S, AP -; Armour Bane (2), Extra Attacks (+D3), Magical Attacks."
+      "description": "Combat, S, AP -; Armour Bane (2), Extra Attacks (+D3), Magical Attacks.",
+      "source_page": 181
     },
     {
       "id": "duellists-blades",
@@ -3607,7 +3674,8 @@
       "points": 70,
       "source": "forces_of_fantasy",
       "description": "Combat, S+3, AP -2; Magical Attacks, Monster Slayer, Requires Two Hands, Strike Last.",
-      "rules_text": "Models whose troop type is 'infantry' or 'chariot' only."
+      "rules_text": "Models whose troop type is 'infantry' or 'chariot' only.",
+      "source_page": 181
     },
     {
       "id": "ogre-blade",
@@ -3624,7 +3692,14 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "woodsmans_axe",
@@ -3650,7 +3725,8 @@
       "points": 10,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "May be worn with other armour. The wearer of the Dragon Helm improves their armour value by 1 (to a maximum of 2+). In addition, its wearer has a 6+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule."
+      "rules_text": "May be worn with other armour. The wearer of the Dragon Helm improves their armour value by 1 (to a maximum of 2+). In addition, its wearer has a 6+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule.",
+      "source_page": 181
     },
     {
       "id": "enchanted-shield",
@@ -3721,7 +3797,8 @@
       "points": 35,
       "source": "forces_of_fantasy",
       "description": "A suit of full plate armour.",
-      "rules_text": "The wearer has a 5+ Ward save against any wounds suffered."
+      "rules_text": "The wearer has a 5+ Ward save against any wounds suffered.",
+      "source_page": 181
     },
     {
       "id": "glittering-scales",
@@ -3754,7 +3831,14 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "armour-of-destiny",
@@ -3790,7 +3874,8 @@
       "description": "",
       "rules_text": "Single use. An Opal Amulet gives its bearer a 2+ Ward save against a single wound.",
       "single_use": true,
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 181
     },
     {
       "id": "paymasters-coin",
@@ -3808,7 +3893,8 @@
       "points": 25,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The bearer of the Loremaster's Cloak and any unit they have joined has a 4+ Ward save against any wounds suffered that were caused by a Magic Missile."
+      "rules_text": "The bearer of the Loremaster's Cloak and any unit they have joined has a 4+ Ward save against any wounds suffered that were caused by a Magic Missile.",
+      "source_page": 181
     },
     {
       "id": "ironhide-talisman",
@@ -3919,7 +4005,8 @@
       "points": 20,
       "source": "forces_of_fantasy",
       "description": "The Seed of Rebirth gives its bearer the Regeneration (5+) special rule.",
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 181
     },
     {
       "id": "potion-of-strength",
@@ -3958,7 +4045,8 @@
       "points": 30,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The wearer of the Cloak of Beards causes Terror. However, so unnerving is the cloak that other models cannot use the wearer's Leadership."
+      "rules_text": "The wearer of the Cloak of Beards causes Terror. However, so unnerving is the cloak that other models cannot use the wearer's Leadership.",
+      "source_page": 181
     },
     {
       "id": "healing-potion",
@@ -3975,7 +4063,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "arch-lightning-rod",
@@ -4017,7 +4112,8 @@
       "category": "enchanted_item",
       "points": 75,
       "source": "forces_of_fantasy",
-      "description": "Whilst within the Command range of the bearer, all Wizards (friend or foe) suffer a -1 modifier to their Casting and Dispel rolls. In addition, during the Command sub-phase of their turn, if they are not engaged in combat, this character may attempt to use the Null Stone by making a Leadership test (using their own unmodified Leadership). If this test is passed, until your next Start of Turn sub-phase, this character cannot be targeted by any spells and is immune to the effects of any spells."
+      "description": "Whilst within the Command range of the bearer, all Wizards (friend or foe) suffer a -1 modifier to their Casting and Dispel rolls. In addition, during the Command sub-phase of their turn, if they are not engaged in combat, this character may attempt to use the Null Stone by making a Leadership test (using their own unmodified Leadership). If this test is passed, until your next Start of Turn sub-phase, this character cannot be targeted by any spells and is immune to the effects of any spells.",
+      "source_page": 181
     },
     {
       "id": "earthing-rod",
@@ -4042,7 +4138,8 @@
       "points": 15,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "The bearer of the Silvery Wand knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry. Note that this does not increase the Wizard's Level."
+      "rules_text": "The bearer of the Silvery Wand knows one more spell (chosen in the usual way) than is normal for their Level of Wizardry. Note that this does not increase the Wizard's Level.",
+      "source_page": 181
     },
     {
       "id": "staff_of_solidity",
@@ -4079,7 +4176,8 @@
       "points": 30,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "Once per turn, upon successfully casting a spell, the bearer of the Annulian Crystal may choose to forget that spell and immediately generate another (not including signature spells) in the usual manner. Note that it is possible the Wizard might generate the spell they just forgot, or one forgotten in a previous turn."
+      "rules_text": "Once per turn, upon successfully casting a spell, the bearer of the Annulian Crystal may choose to forget that spell and immediately generate another (not including signature spells) in the usual manner. Note that it is possible the Wizard might generate the spell they just forgot, or one forgotten in a previous turn.",
+      "source_page": 181
     },
     {
       "id": "lore-familiar",
@@ -4120,7 +4218,8 @@
       "description": "",
       "rules_text": "Single use. A Wizard may use this item instead of making a dispel attempt. If they do so, the spell is automatically dispelled with no Dispel roll required. Note that a perfect invocation cannot be dispelled.",
       "single_use": true,
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 181
     },
     {
       "id": "the_tricksters_pendant",
@@ -4182,7 +4281,8 @@
       "points": 20,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Banner of Ellyrion gains the Move through Cover special rule."
+      "rules_text": "A unit carrying the Banner of Ellyrion gains the Move through Cover special rule.",
+      "source_page": 181
     },
     {
       "id": "banner_of_balance",
@@ -4199,7 +4299,8 @@
       "points": 25,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Lion Standard automatically passes any Fear or Terror tests it is required to make."
+      "rules_text": "A unit carrying the Lion Standard automatically passes any Fear or Terror tests it is required to make.",
+      "source_page": 181
     },
     {
       "id": "monster-hunters-tapestry",
@@ -4292,7 +4393,8 @@
       "category": "magic_standard",
       "points": 60,
       "source": "forces_of_fantasy",
-      "description": "When calculating its combat result, a unit carrying the Battle Banner may claim an additional bonus of +D3 combat result points."
+      "description": "When calculating its combat result, a unit carrying the Battle Banner may claim an additional bonus of +D3 combat result points.",
+      "source_page": 181
     },
     {
       "id": "banner_of_arcane_protection",
@@ -4301,7 +4403,8 @@
       "points": 70,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Banner of Arcane Protection gains the Magic Resistance (-3) special rule. In addition, friendly units within 6\" of the model carrying this standard gain the Magic Resistance (-1) special rule."
+      "rules_text": "A unit carrying the Banner of Arcane Protection gains the Magic Resistance (-3) special rule. In addition, friendly units within 6\" of the model carrying this standard gain the Magic Resistance (-1) special rule.",
+      "source_page": 181
     },
     {
       "id": "banner_of_resilience",

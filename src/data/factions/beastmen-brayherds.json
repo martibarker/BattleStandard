@@ -383,7 +383,8 @@
       ],
       "notes": [
         "Brayhorn: General only. From round 2 onwards, if your General is on the battlefield during the Command sub-phase, they may attempt to sound the Brayhorn by making a Leadership test. If passed, immediately re-roll for each unit of Ambushers held in reserve that did not arrive during the Start of Turn sub-phase of this turn."
-      ]
+      ],
+      "source_page": 92
     },
     {
       "id": "wargor",
@@ -507,7 +508,8 @@
       ],
       "notes": [
         "Brayhorn: General only. From round 2 onwards, if your General is on the battlefield during the Command sub-phase, they may attempt to sound the Brayhorn by making a Leadership test. If passed, immediately re-roll for each unit of Ambushers held in reserve that did not arrive during the Start of Turn sub-phase of this turn."
-      ]
+      ],
+      "source_page": 92
     },
     {
       "id": "great_bray_shaman",
@@ -619,7 +621,8 @@
       ],
       "notes": [
         "Braystaff: When this model's combat is chosen during Step 1.1 of any Choose & Fight Combat sub-phase, it must choose to use its Braystaff offensively or defensively. Used offensively, a Braystaff counts as a great weapon. Used defensively, a Braystaff counts as a hand weapon and gives its wielder an Armour Value of 5+."
-      ]
+      ],
+      "source_page": 93
     },
     {
       "id": "bray_shaman",
@@ -731,7 +734,8 @@
       ],
       "notes": [
         "Braystaff: When this model's combat is chosen during Step 1.1 of any Choose & Fight Combat sub-phase, it must choose to use its Braystaff offensively or defensively. Used offensively, a Braystaff counts as a great weapon. Used defensively, a Braystaff counts as a hand weapon and gives its wielder an Armour Value of 5+."
-      ]
+      ],
+      "source_page": 93
     },
     {
       "id": "doombull",
@@ -837,7 +841,8 @@
       ],
       "notes": [
         "Slaughterer's Call: Whilst this model is Frenzied, any unit it has joined will also become Frenzied."
-      ]
+      ],
+      "source_page": 94
     },
     {
       "id": "gorebull",
@@ -943,7 +948,8 @@
       ],
       "notes": [
         "Slaughterer's Call: Whilst this model is Frenzied, any unit it has joined will also become Frenzied."
-      ]
+      ],
+      "source_page": 94
     },
     {
       "id": "warhoof",
@@ -1092,7 +1098,8 @@
             "quick_shot"
           ]
         }
-      ]
+      ],
+      "source_page": 92
     },
     {
       "id": "bestigor_herd",
@@ -1207,7 +1214,8 @@
       ],
       "notes": [
         "May be taken as a Core choice if the General is a Beastlord or Wargor (Grand Army composition only)."
-      ]
+      ],
+      "source_page": 96
     },
     {
       "id": "gor_herd",
@@ -1331,7 +1339,8 @@
       ],
       "notes": [
         "Bestial Charge: During a turn in which it made a charge move of 3\" or more, a model with this special rule gains a +1 modifier to its Strength characteristic."
-      ]
+      ],
+      "source_page": 97
     },
     {
       "id": "ungor_herd",
@@ -1443,7 +1452,8 @@
             "fight_in_extra_rank"
           ]
         }
-      ]
+      ],
+      "source_page": 98
     },
     {
       "id": "harpies",
@@ -1475,7 +1485,8 @@
         "scouts",
         "skirmishers",
         "swiftstride"
-      ]
+      ],
+      "source_page": 98
     },
     {
       "id": "minotaur_herd",
@@ -1608,7 +1619,8 @@
       ],
       "notes": [
         "May be taken as a Core choice if the General is a Doombull or Gorebull (Grand Army composition only)."
-      ]
+      ],
+      "source_page": 99
     },
     {
       "id": "centigor_herd",
@@ -1774,7 +1786,8 @@
             "quick_shot"
           ]
         }
-      ]
+      ],
+      "source_page": 100
     },
     {
       "id": "dragon_ogres",
@@ -1899,7 +1912,8 @@
       ],
       "notes": [
         "The Quickening Storm: This model has a 5+ Ward save against wounds from Magic Missiles or Magical Vortex spells. If this model, or the unit it belongs to, suffers one or more hits from Storm Call, it becomes 'Quickened' (+1 Initiative and Attacks until next Start of Turn sub-phase)."
-      ]
+      ],
+      "source_page": 101
     },
     {
       "id": "chaos_warhounds",
@@ -1950,7 +1964,8 @@
           "scope": "per_unit",
           "category": "special"
         }
-      ]
+      ],
+      "source_page": 102
     },
     {
       "id": "razorgor_herd",
@@ -1987,7 +2002,8 @@
         "primal_fury",
         "razor_tusks",
         "swiftstride"
-      ]
+      ],
+      "source_page": 102
     },
     {
       "id": "tuskgor_chariot",
@@ -2050,7 +2066,8 @@
       ],
       "notes": [
         "Character Mount: A Tuskgor Chariot may be included in your army as a character's mount. If so, its points are added to that of its rider."
-      ]
+      ],
+      "source_page": 103
     },
     {
       "id": "razorgor_chariot",
@@ -2115,7 +2132,8 @@
       ],
       "notes": [
         "Character Mount: A Razorgor Chariot may be included in your army as a character's mount. If so, its points are added to that of its rider."
-      ]
+      ],
+      "source_page": 103
     },
     {
       "id": "dragon_ogre_shaggoth",
@@ -2207,7 +2225,8 @@
       ],
       "notes": [
         "Storm Call: Bound spell, Power Level 1. Type: Magic Missile. Casting Value: 7+. Range: Self. Effect: All units within 6\" of this model (friend or foe), including units engaged in combat and this model, suffer D3 Strength 4 hits, each with an AP of -1."
-      ]
+      ],
+      "source_page": 104
     },
     {
       "id": "jabberslythe",
@@ -2251,7 +2270,8 @@
         "Slythey tongue: Range 12\", S=5, AP=-1, Special Rules: Move & Shoot, Quick Shot.",
         "Maddening Aura: During the Command sub-phase of its turn, any enemy unit within 8\" of this model (including fleeing or engaged units) must make a Leadership test. If failed, the unit suffers D3 Strength 3 hits, no armour or Regeneration saves permitted (Ward saves allowed).",
         "Spurting Bile Blood: For each Wound this model loses during the Combat phase, the attacking enemy unit suffers a Strength 4 hit, with an AP of -1."
-      ]
+      ],
+      "source_page": 105
     },
     {
       "id": "cockatrice",
@@ -2306,7 +2326,8 @@
       "notes": [
         "Petrifying gaze: Range 18\", S=2, AP=N/A, Special Rules: Magical Attacks, Multiple Wounds (D3). When making a roll To Wound for an attack made with this weapon, substitute the target's Toughness with its Initiative. No armour save is permitted against wounds caused by this weapon (Ward and Regeneration saves can be attempted as normal).",
         "Stony Stare: At the start of each Combat phase, enemy models in base contact with this model must make an Initiative test. If this test is failed, they suffer D3 Strength 2 hits, with no armour save permitted (Ward and Regeneration saves can be attempted as normal)."
-      ]
+      ],
+      "source_page": 106
     },
     {
       "id": "cygor",
@@ -2349,7 +2370,8 @@
         "Hurl attack: Range 12-36\", S=4(8), AP=-1(-3), Special Rules: Bombardment, Cumbersome, Multiple Wounds (D3+1). This weapon shoots like a stone thrower, using the 'Bombardment' special rule and a 3\" blast template. If a 'Misfire' is rolled on the Artillery dice, this model loses a single Wound (instead of rolling on a Misfire table). The Multiple Wounds (D3+1) special rule applies only to a single model whose base lies underneath the central hole of the blast template.",
         "Ghostsight: During the Combat phase, a Cygor may re-roll any failed Rolls To Hit made against enemy Wizards, enemy models or units equipped with any magic items, or enemy models or units with a Ward or Regeneration save.",
         "Soul-eater: Any enemy Wizard that wishes to cast a spell whilst within 12\" of one or more Cygors must first make a Leadership test. If failed, the Wizard has lost their nerve and, should they fail to cast the spell, the spell has been miscast."
-      ]
+      ],
+      "source_page": 107
     },
     {
       "id": "chaos_giant",
@@ -2403,7 +2425,8 @@
       ],
       "notes": [
         "Giant's club: Stats and special rules vary depending on what the Giant does with it, as described in the Giant Attacks special rule."
-      ]
+      ],
+      "source_page": 108
     },
     {
       "id": "ghorgon",
@@ -2446,7 +2469,8 @@
       "notes": [
         "Cleaver-limbs: Range Combat, S=S, AP=-2, Special Rules: Killing Blow, Monster Slayer.",
         "Swallow Whole: During the Command sub-phase of its turn, a Ghorgon that is engaged in combat with one or more units of 'regular infantry' or 'heavy infantry' may choose to make a 'Swallow Whole' attack against a nominated unit. The unit must make an Initiative test. If failed, a single model is removed as a casualty. Each time an enemy model is removed from play in this way, the Ghorgon recovers a single lost Wound."
-      ]
+      ],
+      "source_page": 110
     },
     {
       "id": "herdstone",
@@ -2485,7 +2509,8 @@
         "Dark Sorcery: If controlled by a Beastmen Brayherds unit, friendly Beastmen Brayherds Wizards within 12\" gain a +1 modifier to their Casting rolls, and enemy Wizards within 12\" suffer a -1 modifier to their Casting rolls.",
         "Fearsome Edifice: Whilst within 12\" of a Herdstone controlled by a Beastmen Brayherds unit, enemy units suffer a -1 modifier to their Leadership when making a Leadership test due to Fear, Panic or Terror.",
         "Victory Points: Controlling player is awarded a bonus of 200 Victory Points."
-      ]
+      ],
+      "source_page": 43
     },
     {
       "id": "warped_gors",
@@ -2575,7 +2600,8 @@
       "notes": [
         "Blessings Of Chaos: When this unit's combat is chosen during Step 1.1 of any Choose & Fight Combat sub-phase, roll on the Blessings Of Chaos Table: 1-2 Stinging Barbs (Poisoned Attacks until end of Combat phase); 3-4 Scything Talons (AP -2 on all attacks until end of Combat phase); 5-6 Chitinous Hide (+1 Toughness until end of Combat phase).",
         "Wild Herd composition only."
-      ]
+      ],
+      "source_page": 38
     },
     {
       "id": "primal_warherd",
@@ -2732,7 +2758,8 @@
         "Must contain at least ten Gors and ten Ungors. Gors always occupy the front ranks, with Ungors making up the rear ranks. Gor: 7 points per model. Ungor: 6 points per model.",
         "Mixed Unit: Before rolling To Wound, hits caused by enemy shooting should be divided as evenly as possible between Gors and Ungors. In combat, enemy models must direct their attacks against models in the fighting rank of this unit.",
         "Wild Herd composition only."
-      ]
+      ],
+      "source_page": 40
     },
     {
       "id": "primal_warhounds",
@@ -2791,7 +2818,8 @@
         "Wild Herd composition only.",
         "Ungor Ravager: M 7, WS 3, BS 3, S 3, T 3, W 1, I 3, A 1, Ld 7. Regular infantry. 25 x 25 mm base. Equipment: Hand weapons, throwing spears and shields. Special Rules: Close Order, Horde, Leader of the Pack, Move through Cover, Primal Fury, Swiftstride, Warband.",
         "Leader of the Pack: Models with this rule are positioned at the rear rank(s) of the Primal Warhounds unit. Primal Warhounds always occupy the front rank(s)."
-      ]
+      ],
+      "source_page": 39
     },
     {
       "id": "preyton",
@@ -2847,7 +2875,8 @@
         "Crown of Antlers: Impact Hits caused by a model with this special rule have the Armour Bane (1) special rule and an Armour Piercing characteristic of -1.",
         "Endless Malice: If this model wins a round of combat and chooses to restrain and reform (and passes its Leadership test to do so), enemy units within 6\" of it must make a Panic test as if a nearby friend had been destroyed.",
         "Grand Army: 0-1 Preyton per 1,000 points as a Special choice. Wild Herd: 0-1 Cockatrice or Preyton per 1,000 points as a Special choice."
-      ]
+      ],
+      "source_page": 41
     },
     {
       "id": "kralmaw_the_prophet_of_ruin",
@@ -2917,7 +2946,8 @@
         "Future Sight: Kralmaw has a 4+ Ward save against any wounds suffered.",
         "Leering Spirit: When Kralmaw is deployed, place a Leering Spirit marker anywhere on the battlefield not within 8\" of an enemy unit. The marker cannot be charged, targeted or attacked in any way. If Kralmaw is removed from play as a casualty, the marker is also removed. During the Shooting phase of each of Kralmaw's turns, the Leering Spirit marker may cast the Devolve spell from the Lore of Beasts as a Bound Spell with a Power Level of 3.",
         "Grisly Totem: Counts as a Braystaff. In addition, all enemy units within 6\" of Kralmaw suffer a -1 modifier to their Leadership characteristic (to a minimum of 2)."
-      ]
+      ],
+      "source_page": 35
     },
     {
       "id": "ghorros_warhoof",
@@ -3088,7 +3118,14 @@
       "name": "Berserker Blade",
       "category": "magic_weapon",
       "points": 20,
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "sword-of-might",
@@ -3191,7 +3228,14 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "charmed-shield",
@@ -3274,7 +3318,14 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "armour-of-destiny",
@@ -3417,7 +3468,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "arch-lightning-rod",
@@ -3631,7 +3689,8 @@
       "source": "ravening_hordes",
       "description": "Before making a Casting roll, the bearer of the Jagged Dagger may make a sacrifice. One model belonging to the bearer's unit is immediately removed from play as a casualty.",
       "rules_text": "The bearer may then modify their Casting roll by adding the Wounds characteristic of the sacrificed model to the result. Note that this is a modifier to the result of a roll — it does not negate a roll of a natural double 1.",
-      "restrictions": "Wizard that has joined a unit only"
+      "restrictions": "Wizard that has joined a unit only",
+      "source_page": 112
     },
     {
       "id": "skin_of_man",
@@ -3640,7 +3699,8 @@
       "source": "ravening_hordes",
       "description": "",
       "rules_text": "The wearer of the Skin of Man gains the Scouts and Vanguard special rules.",
-      "restrictions": "Beastmen Chieftains and Beastmen Shamans whose troop type is 'infantry' only"
+      "restrictions": "Beastmen Chieftains and Beastmen Shamans whose troop type is 'infantry' only",
+      "source_page": 112
     },
     {
       "id": "the_soiled_tapestry",
@@ -3664,7 +3724,8 @@
       "points": 25,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "A unit carrying the Banner of Outrage may re-roll its Leadership test when testing for Primal Fury."
+      "rules_text": "A unit carrying the Banner of Outrage may re-roll its Leadership test when testing for Primal Fury.",
+      "source_page": 112
     },
     {
       "id": "dark_heart",
@@ -3674,7 +3735,8 @@
       "description": "",
       "rules_text": "Single use. During the Command sub-phase of their turn, the bearer of a Dark Heart can consume it. The model immediately recovers one lost Wound.",
       "single_use": true,
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 112
     },
     {
       "id": "scimitar_of_skultar",
@@ -3696,7 +3758,8 @@
       "name": "The Blackened Plate",
       "points": 25,
       "source": "ravening_hordes",
-      "description": "A suit of full plate armour. In addition, its wearer has a 3+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule."
+      "description": "A suit of full plate armour. In addition, its wearer has a 3+ Ward save against any wounds suffered that were caused by an attack that has the Flaming Attacks special rule.",
+      "source_page": 112
     },
     {
       "id": "cornucopia_of_corpulence",
@@ -3718,7 +3781,8 @@
       "name": "Hagtree Fetish",
       "points": 30,
       "source": "ravening_hordes",
-      "description": "Whenever the bearer of the Hagtree Fetish successfully casts a Magic Missile, they may re-roll any failed rolls To Wound."
+      "description": "Whenever the bearer of the Hagtree Fetish successfully casts a Magic Missile, they may re-roll any failed rolls To Wound.",
+      "source_page": 112
     },
     {
       "id": "heavy_chaos_armour",
@@ -3734,14 +3798,16 @@
       "name": "Horn of the First Beast",
       "points": 30,
       "source": "ravening_hordes",
-      "description": "Unless the bearer of the Horn of the First Beast is fleeing, any friendly unit that is within 18\" of this model may use its Leadership characteristic when testing for Primal Fury."
+      "description": "Unless the bearer of the Horn of the First Beast is fleeing, any friendly unit that is within 18\" of this model may use its Leadership characteristic when testing for Primal Fury.",
+      "source_page": 112
     },
     {
       "id": "rune_of_the_true_beast",
       "name": "Rune of the True Beast",
       "points": 30,
       "source": "ravening_hordes",
-      "description": "Enemy models whose troop type is 'monster' suffer a -1 modifier to their Weapon Skill characteristic whilst within 6\" of the bearer of the Rune of the True Beast."
+      "description": "Enemy models whose troop type is 'monster' suffer a -1 modifier to their Weapon Skill characteristic whilst within 6\" of the bearer of the Rune of the True Beast.",
+      "source_page": 112
     },
     {
       "id": "the_brass_cleaver",
@@ -3756,7 +3822,8 @@
       "points": 30,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "A unit carrying the Vitriolic Totem gains the Poisoned Attacks special rule."
+      "rules_text": "A unit carrying the Vitriolic Totem gains the Poisoned Attacks special rule.",
+      "source_page": 112
     },
     {
       "id": "blood_of_the_shadowgave",
@@ -3781,7 +3848,8 @@
       "name": "Hunter's Spear",
       "points": 35,
       "source": "ravening_hordes",
-      "description": "Range: 24\". S: 6. AP: -3. Special Rules: Cumbersome, Magical Attacks, Multiple Wounds (2), Through & Through. Shoots like a bolt thrower, using the 'Through & Through' special rule."
+      "description": "Range: 24\". S: 6. AP: -3. Special Rules: Cumbersome, Magical Attacks, Multiple Wounds (2), Through & Through. Shoots like a bolt thrower, using the 'Through & Through' special rule.",
+      "source_page": 112
     },
     {
       "id": "full_plate_chaos_armour",
@@ -3797,7 +3865,8 @@
       "name": "Manbane Standard",
       "points": 40,
       "source": "ravening_hordes",
-      "description": "All enemy units within 6\" of the model carrying the Manbane Standard suffer a -1 modifier to their Leadership characteristic (to a minimum of 2)."
+      "description": "All enemy units within 6\" of the model carrying the Manbane Standard suffer a -1 modifier to their Leadership characteristic (to a minimum of 2).",
+      "source_page": 112
     },
     {
       "id": "mangelder",
@@ -3805,7 +3874,8 @@
       "points": 40,
       "source": "ravening_hordes",
       "description": "Range: Combat. S: S+1. AP: -1. Special Rules: Magical Attacks, Terror.",
-      "rules_text": "The wielder of the Mangelder causes Terror. Any enemy unit that suffers one or more unsaved wounds from the Mangelder suffers a -1 modifier to its Leadership characteristic (to a minimum of 2) until the end of the turn."
+      "rules_text": "The wielder of the Mangelder causes Terror. Any enemy unit that suffers one or more unsaved wounds from the Mangelder suffers a -1 modifier to its Leadership characteristic (to a minimum of 2) until the end of the turn.",
+      "source_page": 112
     },
     {
       "id": "pelt_of_the_dark_young",
@@ -3813,7 +3883,8 @@
       "points": 40,
       "source": "ravening_hordes",
       "description": "",
-      "rules_text": "May be worn with other armour. The wearer of the Pelt of the Dark Young improves their armour value by 1 (to a maximum of 2+). In addition, its wearer (and any unit they have joined) has Magic Resistance (-2)."
+      "rules_text": "May be worn with other armour. The wearer of the Pelt of the Dark Young improves their armour value by 1 (to a maximum of 2+). In addition, its wearer (and any unit they have joined) has Magic Resistance (-2).",
+      "source_page": 112
     },
     {
       "id": "the_axes_of_khorgor",
@@ -3836,7 +3907,8 @@
       "name": "The Plague Chalice",
       "points": 40,
       "source": "ravening_hordes",
-      "description": "If the bearer of the Plague Chalice rolls any natural double when making a Casting roll (not including rolls of a natural double 1), the spell is cast as a perfect invocation, regardless of its casting value or of any other modifiers. However, each time the bearer casts a perfect invocation, they suffer a Strength 4 hit with no armour save permitted (Ward and Regeneration saves can be attempted as normal)."
+      "description": "If the bearer of the Plague Chalice rolls any natural double when making a Casting roll (not including rolls of a natural double 1), the spell is cast as a perfect invocation, regardless of its casting value or of any other modifiers. However, each time the bearer casts a perfect invocation, they suffer a Strength 4 hit with no armour save permitted (Ward and Regeneration saves can be attempted as normal).",
+      "source_page": 112
     },
     {
       "id": "banner_of_the_warped_moon",
@@ -3853,14 +3925,16 @@
       "source": "ravening_hordes",
       "description": "",
       "rules_text": "Single use. During the Command sub-phase of their turn, if they are not engaged in combat, this character may use the Stone of Spite. Until your next Start of Turn sub-phase, all Wizards (friend or foe) suffer a -2 modifier to their Casting rolls.",
-      "single_use": true
+      "single_use": true,
+      "source_page": 112
     },
     {
       "id": "axe_of_men",
       "name": "Axe of Men",
       "points": 50,
       "source": "ravening_hordes",
-      "description": "Range: Combat. S: S. AP: -1. Special Rules: Killing Blow, Magical Attacks. Should the wielder of the Axe of Men kill an enemy character (including champions) in a challenge, they gain the Terror special rule for the remainder of the game."
+      "description": "Range: Combat. S: S. AP: -1. Special Rules: Killing Blow, Magical Attacks. Should the wielder of the Axe of Men kill an enemy character (including champions) in a challenge, they gain the Terror special rule for the remainder of the game.",
+      "source_page": 112
     },
     {
       "id": "chalice_of_dark_rain",
@@ -3883,14 +3957,16 @@
       "name": "Totem of Rust",
       "points": 50,
       "source": "ravening_hordes",
-      "description": "Every model (friend or foe) within 6\" of the model carrying the Totem of Rust suffers a -1 modifier to their Armour Save rolls."
+      "description": "Every model (friend or foe) within 6\" of the model carrying the Totem of Rust suffers a -1 modifier to their Armour Save rolls.",
+      "source_page": 112
     },
     {
       "id": "primeval_club",
       "name": "Primeval Club",
       "points": 60,
       "source": "ravening_hordes",
-      "description": "Range: Combat. S: * (equal to current Leadership of wielder). AP: -3. Special Rules: Hatred (Empire), Magical Attacks, Poisoned Attacks."
+      "description": "Range: Combat. S: * (equal to current Leadership of wielder). AP: -3. Special Rules: Hatred (Empire), Magical Attacks, Poisoned Attacks.",
+      "source_page": 112
     },
     {
       "id": "the_black_maul",

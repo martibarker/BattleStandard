@@ -452,7 +452,8 @@
       ],
       "notes": [
         "The Arrow of Kurnous special rule does not apply to this model's mount (should it have one)."
-      ]
+      ],
+      "source_page": 120
     },
     {
       "id": "glade-captain",
@@ -589,7 +590,8 @@
       ],
       "notes": [
         "The Arrow of Kurnous special rule does not apply to this model's mount (should it have one)."
-      ]
+      ],
+      "source_page": 120
     },
     {
       "id": "spellweaver",
@@ -664,7 +666,8 @@
       ],
       "notes": [
         "A Spellweaver is a Level 3 Wizard. Every Wood Elf Mage knows spells from one of the listed Lores of Magic."
-      ]
+      ],
+      "source_page": 121
     },
     {
       "id": "spellsinger",
@@ -739,7 +742,8 @@
       ],
       "notes": [
         "A Spellsinger is a Level 1 Wizard. Every Wood Elf Mage knows spells from one of the listed Lores of Magic."
-      ]
+      ],
+      "source_page": 121
     },
     {
       "id": "shadowdancer",
@@ -824,7 +828,8 @@
         "A Shadowdancer that joins a unit of Wardancers is considered to have the Dances of Loec special rule for as long as they remain with the unit.",
         "Spear of Loec: R Combat, S S+1, AP -1, Special Rules: Armour Bane (2), Killing Blow.",
         "Trickster's Blades: R Combat, S S, AP -, Special Rules: Extra Attacks (+D3), Requires Two Hands."
-      ]
+      ],
+      "source_page": 122
     },
     {
       "id": "waystalker",
@@ -939,7 +944,8 @@
             "volley_fire"
           ]
         }
-      ]
+      ],
+      "source_page": 123
     },
     {
       "id": "treeman-ancient",
@@ -1013,7 +1019,8 @@
         "Oaken fists: R Combat, S S, AP -2.",
         "Strangleroots: R 12\", S S, AP -1, Special Rules: Multiple Shots (D6+1).",
         "A Treeman Ancient is a Level 2 Wizard."
-      ]
+      ],
+      "source_page": 120
     },
     {
       "id": "branchwraith",
@@ -1091,7 +1098,8 @@
       ],
       "notes": [
         "Sapwood flesh counts as light armour."
-      ]
+      ],
+      "source_page": 125
     },
     {
       "id": "warden-of-talsyn",
@@ -1178,7 +1186,8 @@
         "When fighting with a hand weapon and shield, or Asrai spear and shield, this unit improves its armour value by 1.",
         "Spear of Talsyn: R Combat, S S, AP -1, Special Rules: Armour Bane (1), Magical Attacks.",
         "A Warden of Talsyn is a Glade Lord. He may be included in any Wood Elf Realms army made using any army composition list."
-      ]
+      ],
+      "source_page": 38
     },
     {
       "id": "orion-king-in-the-woods",
@@ -1240,7 +1249,8 @@
         "Spear of Kurnous (Ranged): R 18\", S S+1, AP -2, Special Rules: Magical Attacks, Multiple Wounds (D3). Shoots like a bolt thrower using the 'Through & Through' rule.",
         "Spear of Kurnous (Combat): R Combat, S S+1, AP -2, Special Rules: Magical Attacks, Multiple Wounds (D3).",
         "Orion may be included in any Wood Elf Realms army made using any army composition list. He must be fielded as presented."
-      ]
+      ],
+      "source_page": 34
     },
     {
       "id": "araloth-lord-of-talsyn",
@@ -1250,7 +1260,7 @@
       "troop_type": "regular infantry (named character)",
       "base_size": "25 x 25 mm",
       "unit_size": "1",
-      "points": 170,
+      "points": 150,
       "is_named_character": true,
       "stats": {
         "M": "5",
@@ -1295,6 +1305,14 @@
         "Favour of the Goddess: Araloth has a 5+ Ward save against any wounds suffered.",
         "Skaryn the Eye Thief: During the Command sub-phase, Araloth may attempt to dispatch Skaryn (roll D6; on 1-2 nothing happens, on 3+ Skaryn strikes). Nominate a single enemy model within 18\" — suffers a single Strength 4 hit with AP -1. If an unsaved wound is caused, the target's WS and Initiative are reduced by D3 for the remainder of the game.",
         "Spear of Talsyn: R Combat, S S, AP -1, Special Rules: Armour Bane (1), Magical Attacks."
+      ],
+      "source_page": 37,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 170→150 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -1327,7 +1345,8 @@
       "notes": [
         "Hooves counts as a hand weapon.",
         "Available to: Glade Lord, Glade Captain, Spellweaver, Spellsinger."
-      ]
+      ],
+      "source_page": 126
     },
     {
       "id": "great-stag",
@@ -1367,7 +1386,8 @@
         "Crown of Antlers: Impact Hits caused by a model with this special rule have the Armour Bane (1) special rule and an Armour Piercing characteristic of -1.",
         "Mighty antlers: R Combat, S S, AP -1, Special Rules: Armour Bane (1).",
         "Available to: Glade Lord, Glade Captain."
-      ]
+      ],
+      "source_page": 126
     },
     {
       "id": "unicorn",
@@ -1406,7 +1426,8 @@
         "A character mounted on a Unicorn has +1 Wound.",
         "Beguiling Aura: Enemy models must make a Leadership test before making any rolls To Hit against this model during the Combat phase. If this test is failed, only rolls of a natural 6 will hit.",
         "Available to: Spellweaver, Spellsinger."
-      ]
+      ],
+      "source_page": 90
     },
     {
       "id": "warhawk-mount",
@@ -1486,7 +1507,8 @@
         "Soporific breath: R N/A, S 2, AP N/A, Special Rules: Breath Weapon. No armour save is permitted against wounds caused by soporific breath (Ward and Regeneration saves can be attempted as normal).",
         "A Forest Dragon may only be included in your army as a character's mount. Its points are added to that of its rider.",
         "Available to: Glade Lord only."
-      ]
+      ],
+      "source_page": 138
     },
     {
       "id": "great-eagle-mount",
@@ -1525,7 +1547,8 @@
         "Serrated maw: R Combat, S S, AP -, Special Rules: Armour Bane (2), Multiple Wounds (2). In combat, this model must make one of its attacks each turn with this weapon.",
         "A Great Eagle may be included in your army as a character's mount. Its points are added to that of its rider.",
         "Available to: Glade Lord, Glade Captain, Spellweaver, Spellsinger."
-      ]
+      ],
+      "source_page": 139
     },
     {
       "id": "glade-guard",
@@ -1536,7 +1559,7 @@
       "troop_type": "regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5+",
-      "points": 11,
+      "points": 10,
       "stats": {
         "M": "5",
         "WS": "4",
@@ -1640,7 +1663,15 @@
           ]
         }
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 128,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 11→10 per model (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "deepwood-scouts",
@@ -1754,7 +1785,8 @@
       "notes": [
         "0-1 unit of Deepwood Scouts may be taken as a Core choice per 1,000 points in the Grand Army list."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 128
     },
     {
       "id": "eternal-guard",
@@ -1765,7 +1797,7 @@
       "troop_type": "regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5+",
-      "points": 13,
+      "points": 12,
       "stats": {
         "M": "5",
         "WS": "5",
@@ -1845,7 +1877,15 @@
         "Martial Prowess: A unit with this special rule can make supporting attacks to its flank or rear, as well as to its front.",
         "Asrai spear: R Combat, S S, AP -1, Special Rule: Fight in Extra Rank. A model wielding an Asrai spear cannot make a supporting attack during a turn in which it charged. During a turn in which it was charged in its front arc, a model wielding an Asrai spear gains a +1 modifier to its Initiative against the charging unit(s)."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 129,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 13→12 per model (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "wildwood-rangers",
@@ -1927,7 +1967,8 @@
         "Rangers' glaive: R Combat, S S+2, AP -2, Special Rules: Requires Two Hands.",
         "Guardians of the Wildwood: Whilst it is in base contact with an enemy model that causes Fear or Terror, a model with this special rule gains a +1 modifier to its Attacks characteristic (to a maximum of 10) and the Multiple Wounds (2) special rule."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 130
     },
     {
       "id": "wardancers",
@@ -2014,7 +2055,8 @@
         "Dances of Loec: When this unit's combat is chosen during Step 1.1 of any Choose & Fight Combat sub-phase, choose one of the following Dances of Loec for it to perform. Every model within the unit performs the same Dance: Whirling Death (improve AP by 2), Storm of Blades (gain Extra Attacks +1), The Shadows Coil (gain 4+ ward save against any wounds suffered), Woven Mist (enemy directing attacks against this unit suffers -1 modifier to rolls To Hit).",
         "Note that a Shadowdancer that joins this unit is considered to have this special rule as well."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 131
     },
     {
       "id": "waywatchers",
@@ -2134,7 +2176,8 @@
       ],
       "notes": [
         "0-1 unit of Waywatchers per Waystalker taken."
-      ]
+      ],
+      "source_page": 132
     },
     {
       "id": "dryads",
@@ -2147,7 +2190,7 @@
       "unit_size": "5+",
       "points": 13,
       "stats": {
-        "M": "5",
+        "M": "6",
         "WS": "4",
         "BS": "4",
         "S": "3",
@@ -2171,7 +2214,8 @@
         "regeneration_6plus",
         "skirmishers",
         "stubborn",
-        "tree_spirit"
+        "tree_spirit",
+        "armour_bane_1"
       ],
       "options": [
         {
@@ -2190,6 +2234,19 @@
       ],
       "notes": [
         "Sapwood flesh counts as light armour."
+      ],
+      "source_page": 133,
+      "errata": [
+        {
+          "type": "stat",
+          "note": "M corrected 5→6 (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        },
+        {
+          "type": "rule",
+          "note": "Added Armour Bane (1) special rule (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
       ]
     },
     {
@@ -2248,7 +2305,8 @@
       ],
       "notes": [
         "Hardwood flesh counts as heavy armour."
-      ]
+      ],
+      "source_page": 133
     },
     {
       "id": "guardians-of-talsyn",
@@ -2335,7 +2393,8 @@
       "magic_standard": 50,
       "availability": [
         "host_of_talsyn"
-      ]
+      ],
+      "source_page": 39
     },
     {
       "id": "wood-elf-beast-pack",
@@ -2409,7 +2468,8 @@
         "Cleaving Blow: If a model with this special rule rolls a natural 6 when making a roll To Wound for an attack made in combat, it has struck a 'Cleaving Blow'. Enemy models whose troop type is 'regular infantry', 'heavy infantry', 'light cavalry', 'heavy cavalry' or 'war beasts' are not permitted an armour or Regeneration save against a Cleaving Blow.",
         "Razor Tusks: During a turn in which it charged, the Armour Piercing characteristic of a boar's tusks (hand weapon) is improved by 1.",
         "Any army made using the Wood Elf Realms Grand Army composition list may include any number of Wood Elf Beast Packs as Rare choices."
-      ]
+      ],
+      "source_page": 41
     },
     {
       "id": "glade-riders",
@@ -2420,7 +2480,7 @@
       "troop_type": "light cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
-      "points": 18,
+      "points": 17,
       "stats": {
         "M": "-",
         "WS": "4",
@@ -2537,7 +2597,15 @@
       "notes": [
         "Elven Steeds included in unit profile: M9, WS3, BS-, S3, T-, W-, I4, A1, Ld-. Hooves counts as a hand weapon."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 134,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 18→17 per model (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "sisters-of-the-thorn",
@@ -2548,7 +2616,7 @@
       "troop_type": "light cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
-      "points": 24,
+      "points": 22,
       "stats": {
         "M": "-",
         "WS": "4",
@@ -2604,7 +2672,15 @@
         "Deepwood Coven: A unit of Sisters of the Thorn knows a single spell (chosen by their controlling player before armies are deployed) from either the Battle Magic or Elementalism Lore of Magic. The unit may cast this spell as a Bound spell. If the unit includes a Handmaiden of the Thorn, it may cast this Bound spell with a Power Level of 1. If it includes both a Handmaiden and a standard bearer, it may cast this Bound spell with a Power Level of 2. Otherwise the unit may cast this Bound spell with a Power Level of 0.",
         "Blackbriar javelin: R 12\", S S, AP -1, Special Rules: Move & Shoot, Quick Shot."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 135,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 24→22 per model (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "wild-riders",
@@ -2618,7 +2694,7 @@
       "troop_type": "light cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "5+",
-      "points": 27,
+      "points": 26,
       "stats": {
         "M": "-",
         "WS": "5",
@@ -2692,7 +2768,15 @@
         "Hunting spear: R Combat, S S+1, AP -2, Special Rules: Armour Bane (1). A hunting spear can only be used during a turn in which the wielder charged; in subsequent turns (or if the wielder did not charge) the model must use its hand weapon instead.",
         "Furious Charge special rule on the Steeds of Kurnous & Wild Hunter Only label applies to the steeds."
       ],
-      "magic_standard": 50
+      "magic_standard": 50,
+      "source_page": 136,
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected 27→26 per model (FoF FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
+        }
+      ]
     },
     {
       "id": "warhawk-riders",
@@ -2797,7 +2881,8 @@
       ],
       "notes": [
         "Warhawks: M2, WS3, BS-, S4, T-, W-, I4, A2, Ld-. Wicked claws: R Combat, S S, AP -2."
-      ]
+      ],
+      "source_page": 137
     },
     {
       "id": "treeman",
@@ -2856,7 +2941,8 @@
         "Oaken fists: R Combat, S S, AP -2.",
         "Strangleroots: R 12\", S S, AP -1, Special Rules: Multiple Shots (D6+1).",
         "Arboreal armour counts as full plate armour."
-      ]
+      ],
+      "source_page": 140
     },
     {
       "id": "great-eagles",
@@ -2895,7 +2981,8 @@
         "Serrated maw: R Combat, S S, AP -, Special Rules: Armour Bane (2), Multiple Wounds (2). In combat, this model must make one of its attacks each turn with this weapon.",
         "0-3 Great Eagles per 1,000 points.",
         "A Great Eagle may also be taken as a character mount."
-      ]
+      ],
+      "source_page": 138
     }
   ],
   "forest_sprites": [
@@ -3055,7 +3142,14 @@
       "name": "Berserker Blade",
       "category": "magic_weapon",
       "points": 20,
-      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous."
+      "description": "Quenched in the blood of untold fallen enemies, the Berserker Blade eternally hungers for battle.\nRangeStrengthArmour PiercingSpecial RulesCombatS+1-Extra Attacks (+1)ImpetuousMagical AttacksNotes: The wielder of the Berserker Blade is Impetuous.\nNotes: The wielder of the Berserker Blade is Impetuous.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Weapon profile corrected: Extra Attacks (+1); notes added (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "sword-of-might",
@@ -3158,7 +3252,14 @@
         "special_rules": [
           "magical_attacks"
         ]
-      }
+      },
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected to 75 (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "charmed-shield",
@@ -3241,7 +3342,14 @@
       "category": "magic_armour",
       "points": 60,
       "description": "A gleaming helm that confuses and confounds enemies, causing their blows to fall wide of their mark.",
-      "restrictions": ""
+      "restrictions": "Models whose troop type is 'infantry' or 'cavalry' only.",
+      "errata": [
+        {
+          "type": "rule",
+          "note": "Restriction added: infantry/cavalry only (Rulebook FAQ v1.5.2)",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "armour-of-destiny",
@@ -3384,7 +3492,14 @@
       "category": "enchanted_item",
       "points": 35,
       "description": "Uttering a simple command, the wearer of the ring can hurl a flaming ball of ruin at their foes.",
-      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1."
+      "rules_text": "The wielder of the Ruby Ring of Ruin can cast the Fireball spell from the Lore of Battle Magic as a Bound spell, with a Power Level of 1.",
+      "errata": [
+        {
+          "type": "points",
+          "note": "Points corrected (Rulebook FAQ v1.5.2); rule text updated",
+          "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_rulebook-cypy1xqrht-t4jzdire13.pdf"
+        }
+      ]
     },
     {
       "id": "arch-lightning-rod",
@@ -3593,7 +3708,8 @@
           "magical_attacks",
           "quick_shot"
         ]
-      }
+      },
+      "source_page": 142
     },
     {
       "id": "banner-of-midsummers-eve",
@@ -3601,7 +3717,8 @@
       "points": 15,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Banner of Midsummer's Eve gains the Ignores Cover special rule."
+      "rules_text": "A unit carrying the Banner of Midsummer's Eve gains the Ignores Cover special rule.",
+      "source_page": 142
     },
     {
       "id": "blight-tipped-arrows",
@@ -3634,7 +3751,8 @@
       "name": "Banner of the Eternal Queen",
       "points": 20,
       "source": "forces_of_fantasy",
-      "description": "When calculating its combat result, a unit carrying the Banner of the Eternal Queen may claim an additional bonus of +1 combat result point if it is within 6\" of a woodland terrain feature."
+      "description": "When calculating its combat result, a unit carrying the Banner of the Eternal Queen may claim an additional bonus of +1 combat result point if it is within 6\" of a woodland terrain feature.",
+      "source_page": 142
     },
     {
       "id": "wailing-arrow",
@@ -3644,7 +3762,8 @@
       "description": "",
       "rules_text": "Single use. Models with Asrai Longbow only. A Wailing Arrow can be fired as normal from the bearer's Asrai longbow. Any unit that suffers an unsaved wound from this shot must make a Panic test as if it had taken heavy casualties.",
       "single_use": true,
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 142
     },
     {
       "id": "banner-of-the-hunter-king",
@@ -3652,7 +3771,8 @@
       "points": 25,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Banner of the Hunter King gains the Vanguard special rule."
+      "rules_text": "A unit carrying the Banner of the Hunter King gains the Vanguard special rule.",
+      "source_page": 142
     },
     {
       "id": "banner-of-the-wild-hunt",
@@ -3729,7 +3849,8 @@
       "points": 30,
       "source": "forces_of_fantasy",
       "description": "Enemy models must make a Leadership test before making any rolls To Hit against the wearer of the Glamourweave during the Combat phase.",
-      "rules_text": "If this test is failed, only rolls of a natural 6 will hit."
+      "rules_text": "If this test is failed, only rolls of a natural 6 will hit.",
+      "source_page": 142
     },
     {
       "id": "moonstone-of-the-hidden-ways",
@@ -3746,7 +3867,8 @@
       "points": 30,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "Once per turn, if they are within 3\" of a woodland terrain feature, the bearer of the Wand of Wych Elm may re-roll a failed Casting roll."
+      "rules_text": "Once per turn, if they are within 3\" of a woodland terrain feature, the bearer of the Wand of Wych Elm may re-roll a failed Casting roll.",
+      "source_page": 142
     },
     {
       "id": "crown-of-antlers",
@@ -3764,7 +3886,8 @@
       "description": "",
       "rules_text": "Single use. Models with Asrai Longbow only. A Hail of Doom Arrow can be fired as normal from the bearer's Asrai longbow. If the roll To Hit is successful, place a small (3\") blast template so that its central hole is directly over the centre of the target unit. Any model whose base lies underneath the template risks being hit and suffering a single Strength 4 hit with an AP of -1 and the Magical Attacks special rule.",
       "single_use": true,
-      "extremely_common": true
+      "extremely_common": true,
+      "source_page": 142
     },
     {
       "id": "hunt-masters-pride",
@@ -3790,7 +3913,8 @@
       "points": 35,
       "source": "forces_of_fantasy",
       "description": "The Strength characteristic of the bearer of Merciw's Locus cannot be modified by any weapon.",
-      "rules_text": "However, the Strength characteristic of any model that directs its attacks against the bearer during the Combat phase cannot be modified by any weapon either."
+      "rules_text": "However, the Strength characteristic of any model that directs its attacks against the bearer during the Combat phase cannot be modified by any weapon either.",
+      "source_page": 142
     },
     {
       "id": "orb-of-midsummer",
@@ -3806,7 +3930,8 @@
       "points": 35,
       "source": "forces_of_fantasy",
       "description": "Railarian's Mantle is a suit of light armour.",
-      "rules_text": "In addition, whilst its wearer is within 6\" of a woodland terrain feature, they have a 4+ Ward save against any wounds suffered."
+      "rules_text": "In addition, whilst its wearer is within 6\" of a woodland terrain feature, they have a 4+ Ward save against any wounds suffered.",
+      "source_page": 142
     },
     {
       "id": "banner-of-the-wildwood",
@@ -3814,7 +3939,8 @@
       "points": 40,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "A unit carrying the Banner of the Wildwood gains the Fear special rule. If the unit already has the Fear special rule, it instead gains the Terror special rule."
+      "rules_text": "A unit carrying the Banner of the Wildwood gains the Fear special rule. If the unit already has the Fear special rule, it instead gains the Terror special rule.",
+      "source_page": 142
     },
     {
       "id": "bow-of-loren",
@@ -3832,7 +3958,8 @@
           "armour_bane_1",
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 142
     },
     {
       "id": "daiths-reaper",
@@ -3865,7 +3992,8 @@
       "points": 40,
       "source": "forces_of_fantasy",
       "description": "Whilst within 3\" of a woodland terrain feature, the bearer of the Oaken Stave increases their Dispel range by 3\".",
-      "rules_text": "Additionally, whilst within 3\" of a woodland terrain feature, the bearer may roll an extra D6 when making the Dispel roll and discard the lowest result."
+      "rules_text": "Additionally, whilst within 3\" of a woodland terrain feature, the bearer may roll an extra D6 when making the Dispel roll and discard the lowest result.",
+      "source_page": 142
     },
     {
       "id": "blades-of-loec",
@@ -3883,7 +4011,8 @@
           "extra_attacks_d3",
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 142
     },
     {
       "id": "deepwood-sphere",
@@ -3891,7 +4020,8 @@
       "points": 45,
       "source": "forces_of_fantasy",
       "description": "Unless the bearer of the Deepwood Sphere is fleeing or engaged in combat, they may use it when an enemy Wizard that is within 6\" of a woodland terrain feature successfully casts a spell.",
-      "rules_text": "If they do so, no dispel attempt can be made and the spell is cast as normal. Once the spell has been resolved, the enemy Wizard immediately suffers D3 Strength 4 hits, each with an AP of -1."
+      "rules_text": "If they do so, no dispel attempt can be made and the spell is cast as normal. Once the spell has been resolved, the enemy Wizard immediately suffers D3 Strength 4 hits, each with an AP of -1.",
+      "source_page": 142
     },
     {
       "id": "helm-of-the-hunt",
@@ -3899,14 +4029,16 @@
       "points": 50,
       "source": "forces_of_fantasy",
       "description": "",
-      "rules_text": "May be worn with other armour. The wearer of the Helm of the Hunt improves their armour value by 1 (to a maximum of 2+). In addition, the wearer has a +1 modifier to both their Weapon Skill and Attacks characteristics during a turn in which they charge."
+      "rules_text": "May be worn with other armour. The wearer of the Helm of the Hunt improves their armour value by 1 (to a maximum of 2+). In addition, the wearer has a +1 modifier to both their Weapon Skill and Attacks characteristics during a turn in which they charge.",
+      "source_page": 142
     },
     {
       "id": "wraithstone",
       "name": "Wraithstone",
       "points": 50,
       "source": "forces_of_fantasy",
-      "description": "Unless the bearer of the Wraithstone is fleeing, enemy units suffer a -1 modifier to their Leadership characteristic (to a minimum of 2) whilst within 6\" of the bearer."
+      "description": "Unless the bearer of the Wraithstone is fleeing, enemy units suffer a -1 modifier to their Leadership characteristic (to a minimum of 2) whilst within 6\" of the bearer.",
+      "source_page": 142
     },
     {
       "id": "vauls-wrath",
@@ -3943,7 +4075,8 @@
           "killing_blow",
           "magical_attacks"
         ]
-      }
+      },
+      "source_page": 142
     },
     {
       "id": "tapestry-of-talsyn",
