@@ -3759,7 +3759,7 @@
         "expeditionary_force": "mercenaries"
       },
       "troop_type": "War machine",
-      "base_size": "50 x 50 mm (war machine), 25 x 25 mm (crew)",
+      "base_size": "50 x 75 mm (war machine), 25 x 25 mm (crew)",
       "unit_size": "1",
       "points": 120,
       "is_named_character": false,
@@ -3786,9 +3786,9 @@
             "BS": 3,
             "S": 3,
             "T": 4,
-            "W": 1,
+            "W": 2,
             "I": 2,
-            "A": 1,
+            "A": 2,
             "Ld": 10
           }
         }
