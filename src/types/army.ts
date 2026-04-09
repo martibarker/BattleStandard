@@ -30,6 +30,11 @@ export interface ArmyEntry {
    */
   selectedMagicItemIds: string[];
   /**
+   * ID of the magic standard carried by a Battle Standard Bearer character.
+   * Tracked separately as it has no points cap and does not count against the personal magic items allowance.
+   */
+  selectedBsbStandardId?: string | null;
+  /**
    * Quantities for options that use per_n_models scaling (e.g. Fanatics).
    * Key is the option description; value is the number purchased.
    */

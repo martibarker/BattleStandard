@@ -641,7 +641,7 @@
           "name": "Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-1",
           "special_rules": [
             "armour_bane_1",
             "requires_two_hands"
@@ -683,6 +683,7 @@
           "AP": "-1",
           "special_rules": [
             "armour_bane_1",
+            "multiple_shots_2",
             "quick_shot"
           ]
         }
@@ -850,7 +851,7 @@
           "name": "Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-1",
           "special_rules": [
             "armour_bane_1",
             "requires_two_hands"
@@ -892,6 +893,7 @@
           "AP": "-1",
           "special_rules": [
             "armour_bane_1",
+            "multiple_shots_2",
             "quick_shot"
           ]
         }
@@ -1444,6 +1446,7 @@
           "AP": "-1",
           "special_rules": [
             "armour_bane_1",
+            "multiple_shots_2",
             "quick_shot"
           ]
         }
@@ -1970,6 +1973,29 @@
             "armour_bane_1",
             "quick_shot"
           ]
+        },
+        {
+          "name": "Hochland Long Rifle",
+          "range": "36\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "cumbersome",
+            "ponderous"
+          ],
+          "notes": "Can target a specific model within a unit."
+        },
+        {
+          "name": "Grenade Launching Blunderbuss",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-2",
+          "special_rules": [
+            "cumbersome",
+            "ponderous"
+          ],
+          "notes": "D3+1 hits on a successful To Hit roll."
         }
       ],
       "notes": [
@@ -2409,8 +2435,7 @@
         "large_target",
         "stomp_attacks_d3_plus_1",
         "swiftstride",
-        "terror",
-        "two_heads"
+        "terror"
       ],
       "options": [
         {
@@ -2555,7 +2580,7 @@
           "name": "Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-1",
           "special_rules": [
             "armour_bane_1",
             "requires_two_hands"
@@ -2643,7 +2668,8 @@
           "cost": 1,
           "scope": "per_model",
           "description": "Drilled special rule",
-          "category": "special"
+          "category": "special",
+          "grants_rules": ["drilled"]
         },
         {
           "cost": 0,
@@ -2677,7 +2703,7 @@
           "name": "Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-1",
           "special_rules": [
             "armour_bane_1",
             "requires_two_hands"
@@ -2777,7 +2803,8 @@
               "cost": 1,
               "scope": "per_model",
               "description": "Have the Drilled special rule",
-              "category": "special"
+              "category": "special",
+              "grants_rules": ["drilled"]
             },
             {
               "cost": 0,
@@ -2836,6 +2863,7 @@
           "AP": "-1",
           "special_rules": [
             "armour_bane_1",
+            "multiple_shots_2",
             "quick_shot"
           ]
         },
@@ -2858,6 +2886,18 @@
             "armour_bane_1",
             "ponderous"
           ]
+        },
+        {
+          "name": "Hochland Long Rifle",
+          "range": "36\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "cumbersome",
+            "ponderous"
+          ],
+          "notes": "Can target a specific model within a unit."
         }
       ],
       "notes": [
@@ -3016,7 +3056,7 @@
         "M": "4",
         "WS": "4",
         "BS": "3",
-        "S": "3",
+        "S": "4",
         "T": "3",
         "W": "1",
         "I": "3",
@@ -3041,7 +3081,8 @@
               "cost": 2,
               "scope": "per_model",
               "description": "Have the Drilled special rule",
-              "category": "special"
+              "category": "special",
+              "grants_rules": ["drilled"]
             },
             {
               "cost": 1,
@@ -3202,7 +3243,6 @@
         "blessings_of_ulric",
         "close_order",
         "drilled",
-        "guardians_of_the_temple",
         "stubborn",
         "veteran"
       ],
@@ -3258,7 +3298,7 @@
       "name": "Imperial Ogres",
       "source": "arcane_journal",
       "category": "infantry",
-      "list_category": "special",
+      "list_category": "mercenaries",
       "troop_type": "Monstrous infantry",
       "base_size": "40x40mm",
       "unit_size": "3+",
@@ -3489,6 +3529,7 @@
           "AP": "-1",
           "special_rules": [
             "armour_bane_1",
+            "multiple_shots_2",
             "quick_shot"
           ]
         },
@@ -3531,6 +3572,17 @@
             "armour_bane_1",
             "quick_shot"
           ]
+        },
+        {
+          "name": "Grenade Launching Blunderbuss",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-2",
+          "special_rules": [
+            "cumbersome",
+            "ponderous"
+          ],
+          "notes": "D3+1 hits on a successful To Hit roll."
         }
       ],
       "source_page": 62
@@ -3671,6 +3723,7 @@
           "AP": "-1",
           "special_rules": [
             "armour_bane_1",
+            "multiple_shots_2",
             "quick_shot"
           ]
         },
@@ -3693,7 +3746,19 @@
             "armour_bane_1",
             "cumbersome",
             "ponderous"
-          ]
+          ],
+          "notes": "Can target a specific model within a unit."
+        },
+        {
+          "name": "Grenade Launching Blunderbuss",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-2",
+          "special_rules": [
+            "cumbersome",
+            "ponderous"
+          ],
+          "notes": "D3+1 hits on a successful To Hit roll."
         }
       ],
       "source_page": 63
@@ -3787,7 +3852,8 @@
               "cost": 1,
               "scope": "per_model",
               "description": "Have the Drilled special rule",
-              "category": "special"
+              "category": "special",
+              "grants_rules": ["drilled"]
             },
             {
               "cost": 2,
@@ -4274,6 +4340,7 @@
           "AP": "-1",
           "special_rules": [
             "armour_bane_1",
+            "multiple_shots_2",
             "quick_shot"
           ]
         },
@@ -4329,11 +4396,11 @@
             "M": "7",
             "WS": "4",
             "BS": "-",
-            "S": "4",
+            "S": "5",
             "T": "-",
             "W": "-",
             "I": "4",
-            "A": "2",
+            "A": "3",
             "Ld": "-"
           },
           "is_mount": true
@@ -4342,7 +4409,8 @@
       "equipment": [
         "Hand weapons",
         "Heavy armour",
-        "Shields"
+        "Shields",
+        "Barding"
       ],
       "special_rules": [
         "close_order",
@@ -4400,7 +4468,7 @@
           "name": "Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-1",
           "special_rules": [
             "armour_bane_1",
             "requires_two_hands"
@@ -4428,7 +4496,6 @@
       "name": "Griffon",
       "source": "forces_of_fantasy",
       "category": "monster",
-      "list_category": "rare",
       "troop_type": "Monstrous creature",
       "base_size": "50x50mm",
       "unit_size": "1",
@@ -4539,13 +4606,66 @@
       ],
       "weapon_profiles": [
         {
-          "name": "Halberd",
+          "name": "Blunderbuss",
+          "range": "12\"",
+          "S": "3",
+          "AP": "-1",
+          "special_rules": [
+            "Multiple Shots (D3)",
+            "Volley Fire"
+          ],
+          "notes": "No negative modifiers for firing at long range, for using Multiple Shots (D3), or whilst making a Stand & Shoot charge reaction."
+        },
+        {
+          "name": "Long Rifle",
+          "range": "36\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Cumbersome"
+          ],
+          "notes": "Can target a specific model within its target unit."
+        },
+        {
+          "name": "Repeating Rifle",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Multiple Shots (3)"
+          ]
+        },
+        {
+          "name": "Ball & Chain",
+          "range": "Combat",
+          "S": "S+3",
+          "AP": "-2",
+          "special_rules": [
+            "Armour Bane (1)",
+            "Requires Two Hands",
+            "Strikes Last"
+          ]
+        },
+        {
+          "name": "Hooked Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-2",
           "special_rules": [
-            "armour_bane_1",
-            "requires_two_hands"
+            "Armour Bane (2)",
+            "Requires Two Hands"
+          ]
+        },
+        {
+          "name": "Man-Catcher",
+          "range": "Combat",
+          "S": "S",
+          "AP": "-1",
+          "special_rules": [
+            "Killing Blow",
+            "Requires Two Hands"
           ]
         }
       ],
@@ -4722,10 +4842,11 @@
         {
           "name": "Great Cannon",
           "range": "48\"",
-          "strength": "8",
-          "ap": "-2",
+          "S": "8",
+          "AP": "-2",
           "special_rules": [
-            "Armour Bane (2)"
+            "Armour Bane (2)",
+            "Cannon Fire"
           ]
         }
       ],
@@ -4777,8 +4898,8 @@
         {
           "name": "Mortar",
           "range": "12-48\"",
-          "strength": "2(6)",
-          "ap": "-2(-3)",
+          "S": "2(6)",
+          "AP": "-2(-3)",
           "special_rules": [
             "Armour Bane (1)",
             "Bombardment",
@@ -4963,7 +5084,7 @@
           "name": "Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-1",
           "special_rules": [
             "armour_bane_1",
             "requires_two_hands"
@@ -5057,7 +5178,8 @@
               "cost": 1,
               "scope": "per_model",
               "description": "Have the Drilled special rule",
-              "category": "special"
+              "category": "special",
+              "grants_rules": ["drilled"]
             },
             {
               "cost": 0,
@@ -5212,7 +5334,8 @@
           "cost": 1,
           "scope": "per_model",
           "description": "Drilled special rule",
-          "category": "special"
+          "category": "special",
+          "grants_rules": ["drilled"]
         },
         {
           "cost": 0,
@@ -5246,7 +5369,7 @@
           "name": "Halberd",
           "range": "Combat",
           "S": "S+1",
-          "AP": "-1(-2)",
+          "AP": "-1",
           "special_rules": [
             "armour_bane_1",
             "requires_two_hands"

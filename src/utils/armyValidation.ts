@@ -103,6 +103,12 @@ export function calcOptionsCost(unit: Unit, entry: ArmyEntry, faction: Faction):
     if (item) cost += item.points;
   }
 
+  // BSB unlimited magic standard (tracked separately, no points cap)
+  if (entry.selectedBsbStandardId) {
+    const item = faction.magic_items.find((i) => i.id === entry.selectedBsbStandardId);
+    if (item) cost += item.points;
+  }
+
   // Runic items (Dwarfs only)
   const ri = entry.runicItems;
   if (ri && faction.runic_items) {

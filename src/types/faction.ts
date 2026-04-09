@@ -68,6 +68,8 @@ export interface OptionChoice {
   scope: OptionScope;
   notes?: string;
   category?: OptionCategory;
+  /** Special rule IDs this choice grants when selected */
+  grants_rules?: string[];
 }
 
 export interface Option {
@@ -100,6 +102,8 @@ export interface CommandUpgrade {
   /** Display name of the champion, e.g. 'First Knight', 'Gallant' */
   name?: string;
   cost_per_unit: number;
+  /** Stat overrides for the champion relative to the base unit profile */
+  champion_stats?: Partial<Profile>;
 }
 
 export type UnitCategory =

@@ -814,10 +814,21 @@ export default function ArmyEditor() {
                           return ol === nl || ol.endsWith(nl);
                         })
                       ) ?? null;
-                  const baseEquip = flattenEquipment(unit.equipment);
+                  let baseEquip = flattenEquipment(unit.equipment);
+                  // Apply "Replace X with Y" armour options
+                  for (const opt of entry.selectedOptions) {
+                    const m = opt.match(/^Replace (.+?) with (.+)$/i);
+                    if (m) {
+                      const from = m[1].toLowerCase();
+                      const to = m[2];
+                      baseEquip = baseEquip.map((e) => e.toLowerCase() === from ? to : e);
+                    }
+                  }
+                  const internalMountHasBarding = unit.profiles.some((pe) => pe.is_mount && /bard/i.test(pe.name));
                   const extraEquip = [
                     ...entry.selectedOptions.filter((o) => /\bshield\b/i.test(o) && !baseEquip.some((e) => /\bshield\b/i.test(e))),
                     ...flattenEquipment(mountUnit?.equipment),
+                    ...(internalMountHasBarding && !baseEquip.some((e) => /\bbarding\b/i.test(e)) ? ['Barding'] : []),
                   ];
                   const entrySave = calcArmourSave([...baseEquip, ...extraEquip], unit.special_rules ?? []);
 
@@ -893,6 +904,8 @@ export default function ArmyEditor() {
                             }}
                             style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: '13px', fontWeight: 700, color: 'var(--f-text)', width: '48px', textAlign: 'center', background: 'var(--f-elevated)', border: '1px solid var(--f-border)', borderRadius: '3px', padding: '2px 4px' }}
                           />
+                          <button onClick={() => handleQtyChange(entry, unit, -5)} disabled={entry.quantity <= min}
+                            style={{ height: '24px', padding: '0 6px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text)', fontWeight: 700, fontSize: '11px', cursor: 'pointer', borderRadius: '3px', opacity: entry.quantity <= min ? 0.3 : 1 }}>-5</button>
                           <button onClick={() => handleQtyChange(entry, unit, 1)} disabled={max !== null && entry.quantity >= max}
                             style={{ width: '24px', height: '24px', border: '1px solid var(--f-border)', backgroundColor: 'var(--f-elevated)', color: 'var(--f-text)', fontWeight: 700, cursor: 'pointer', borderRadius: '3px', opacity: (max !== null && entry.quantity >= max) ? 0.3 : 1 }}>+</button>
                           <button onClick={() => handleQtyChange(entry, unit, 5)} disabled={max !== null && entry.quantity >= max}
@@ -901,7 +914,13 @@ export default function ArmyEditor() {
                         </div>
                       )}
 
-                      <StatBar unit={unit} save={entrySave} mount={mountUnit} />
+                      {(() => {
+                        const champCmd = unit.command?.find((c) => c.role === 'champion');
+                        const champProfile = entry.includeChampion && champCmd?.champion_stats && unit.profiles[0]
+                          ? { ...unit.profiles[0].profile, ...champCmd.champion_stats }
+                          : null;
+                        return <StatBar unit={unit} save={entrySave} mount={mountUnit} championProfile={champProfile} championName={champCmd?.name ?? 'Champion'} />;
+                      })()}
 
                       {/* Lore selector — shown for wizards with more than one lore option */}
                       {unit.magic && unit.magic.lores.length > 1 && (() => {
@@ -950,9 +969,13 @@ export default function ArmyEditor() {
 
                       <SpecialRulesList ruleIds={[
                         ...(unit.special_rules ?? []),
-                        ...(unit.options ?? []).flatMap((o) =>
-                          entry.selectedOptions.includes(o.description) ? (o.grants_rules ?? []) : []
-                        ),
+                        ...(unit.options ?? []).flatMap((o) => {
+                          const topLevel = entry.selectedOptions.includes(o.description) ? (o.grants_rules ?? []) : [];
+                          const fromChoices = (o.choices ?? []).flatMap((c) =>
+                            entry.selectedOptions.includes(c.description) ? (c.grants_rules ?? []) : []
+                          );
+                          return [...topLevel, ...fromChoices];
+                        }),
                         ...(entry.selectedMagicItemIds ?? []).flatMap((itemId) => {
                           const item = faction.magic_items.find((i) => i.id === itemId) as (typeof faction.magic_items[0] & { grants_rules?: string[] }) | undefined;
                           return item?.grants_rules ?? [];
@@ -1074,7 +1097,7 @@ export default function ArmyEditor() {
   );
 }
 
-function StatBar({ unit, save, mount }: { unit: Unit; save?: string; mount?: Unit | null }) {
+function StatBar({ unit, save, mount, championProfile, championName }: { unit: Unit; save?: string; mount?: Unit | null; championProfile?: Profile | null; championName?: string }) {
   const main = unit.profiles[0];
   if (!main) return null;
 
@@ -1091,7 +1114,7 @@ function StatBar({ unit, save, mount }: { unit: Unit; save?: string; mount?: Uni
       : null;
 
   const extraEntry = mountEntry ?? crewEntry ?? charMountEntry;
-  const multiRow = extraEntry !== null;
+  const multiRow = extraEntry !== null || !!championProfile;
 
   const cols = ['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld', 'Sv'] as const;
   const displaySave = save ?? calcArmourSave(unit.equipment, unit.special_rules ?? []);
@@ -1174,6 +1197,7 @@ function StatBar({ unit, save, mount }: { unit: Unit; save?: string; mount?: Uni
       </thead>
       <tbody>
         {renderRow(mainStats, displaySave, main.name)}
+        {championProfile && renderRow(championProfile, displaySave, championName ?? 'Champion')}
         {extraEntry && renderRow(extraEntry.profile, '-', extraLabel)}
       </tbody>
     </table>
@@ -1424,7 +1448,10 @@ function EntryOptionsPanel({
       const dependents = options.filter((o) => o.condition === desc).map((o) => o.description);
       if (dependents.length > 0) next = next.filter((d) => !dependents.includes(d));
     }
-    updateEntry(armyId, entry.id, { selectedOptions: next });
+    const patch: Partial<Omit<import('../types/army').ArmyEntry, 'id'>> = { selectedOptions: next };
+    // Clear BSB standard when BSB upgrade is removed
+    if (!checked && desc === 'Upgrade to Battle Standard Bearer') patch.selectedBsbStandardId = null;
+    updateEntry(armyId, entry.id, patch);
   }
 
   function selectChoice(choices: OptionChoice[], choiceDesc: string | null) {
@@ -1468,6 +1495,7 @@ function EntryOptionsPanel({
 
   // Magic standard for units with standard bearer
   const hasMagicStandardSlot = !!unit.magic_standard && entry.includeStandard;
+  const hasBsbStandardSlot = entry.selectedOptions.includes('Upgrade to Battle Standard Bearer');
   const selectedStandardItem = hasMagicStandardSlot
     ? faction.magic_items.find((i) => i.category === 'magic_standard' && selectedItems.includes(i.id))
     : null;
@@ -1931,6 +1959,84 @@ function EntryOptionsPanel({
                 </div>
               );
             })}
+          </div>
+        </>
+      )}
+
+      {/* BSB Magic Standard (unlimited cost, separate from personal allowance) */}
+      {hasBsbStandardSlot && (
+        <>
+          {divider}
+          <div className="flex flex-col gap-1.5">
+            <button
+              className="flex items-center justify-between w-full text-left"
+              onClick={() => setExpandedMagicCategories({ ...expandedMagicCategories, bsb_standard: !expandedMagicCategories.bsb_standard })}
+            >
+              <p className="text-xs font-semibold" style={{ color: 'var(--f-text-3)' }}>
+                Battle Standard — Magic Standard {expandedMagicCategories.bsb_standard ? '▾' : '▸'}
+                {!expandedMagicCategories.bsb_standard && entry.selectedBsbStandardId && (() => {
+                  const std = faction.magic_items.find((i) => i.id === entry.selectedBsbStandardId);
+                  return std ? <span className="font-normal ml-1" style={{ color: 'var(--f-text)' }}>— {std.name}</span> : null;
+                })()}
+              </p>
+              <p className="text-xs" style={{ color: 'var(--f-text-3)' }}>
+                {entry.selectedBsbStandardId
+                  ? `${faction.magic_items.find((i) => i.id === entry.selectedBsbStandardId)?.points ?? 0} pts`
+                  : 'No limit'}
+              </p>
+            </button>
+            {expandedMagicCategories.bsb_standard && (
+              <>
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <span
+                    className="shrink-0 w-4 h-4 rounded-full border flex items-center justify-center"
+                    style={{
+                      borderColor: !entry.selectedBsbStandardId ? 'var(--f-primary)' : 'var(--f-border)',
+                      backgroundColor: !entry.selectedBsbStandardId ? 'var(--f-primary)' : 'transparent',
+                    }}
+                  >
+                    {!entry.selectedBsbStandardId && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                  </span>
+                  <input type="radio" name={`bsb-std-${entry.id}`} checked={!entry.selectedBsbStandardId} onChange={() => updateEntry(armyId, entry.id, { selectedBsbStandardId: null })} className="sr-only" />
+                  <span className="text-xs" style={{ color: !entry.selectedBsbStandardId ? 'var(--f-text)' : 'var(--f-text-3)' }}>No magic standard</span>
+                </label>
+                {faction.magic_items
+                  .filter((i) => i.category === 'magic_standard')
+                  .map((item) => {
+                    const isSelected = entry.selectedBsbStandardId === item.id;
+                    return (
+                      <label key={item.id} className="flex items-start gap-2 pt-1.5 border-t cursor-pointer" style={{ borderColor: 'var(--f-border)' }}>
+                        <span
+                          className="shrink-0 w-4 h-4 mt-0.5 rounded-full border flex items-center justify-center"
+                          style={{
+                            borderColor: isSelected ? 'var(--f-gold)' : 'var(--f-border)',
+                            backgroundColor: isSelected ? 'var(--f-gold)' : 'transparent',
+                          }}
+                        >
+                          {isSelected && <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#0f1117' }} />}
+                        </span>
+                        <input
+                          type="radio"
+                          name={`bsb-std-${entry.id}`}
+                          checked={isSelected}
+                          onChange={() => updateEntry(armyId, entry.id, { selectedBsbStandardId: item.id })}
+                          className="sr-only"
+                        />
+                        <span className="flex flex-col min-w-0 gap-0.5">
+                          <span className="text-xs font-medium leading-snug" style={{ color: isSelected ? 'var(--f-text)' : 'var(--f-text-3)' }}>
+                            {item.name} — {item.points} pts
+                          </span>
+                          {(item as typeof item & { rules_text?: string }).rules_text && (
+                            <span className="text-xs leading-snug" style={{ color: 'var(--f-text-3)' }}>
+                              {(item as typeof item & { rules_text?: string }).rules_text}
+                            </span>
+                          )}
+                        </span>
+                      </label>
+                    );
+                  })}
+              </>
+            )}
           </div>
         </>
       )}
