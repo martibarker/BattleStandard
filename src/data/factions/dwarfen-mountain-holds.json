@@ -39,7 +39,7 @@
           "limit_type": "max_per_1000_pts",
           "limit_value": 1,
           "unit_ids": [
-            "rangers"
+            "rangers_core"
           ],
           "notes": "0-1 unit of Rangers may be taken as a Core choice"
         },
@@ -197,7 +197,7 @@
           "limit_type": "max_per_1000_pts",
           "limit_value": 1,
           "unit_ids": [
-            "scout_gyrocopters"
+            "scout_gyrocopters_core"
           ],
           "notes": "0-1 unit of Scout Gyrocopters as Core per 1,000 points"
         },
@@ -248,6 +248,15 @@
             "doomseekers"
           ],
           "notes": "0-2 Doomseekers per 1,000 points"
+        },
+        {
+          "category": "core",
+          "limit_type": "max_per_1000_pts",
+          "limit_value": 1,
+          "unit_ids": [
+            "rangers_core"
+          ],
+          "notes": "0-1 unit of Rangers as a Core choice per 1,000 points"
         }
       ]
     }
@@ -1616,9 +1625,6 @@
       "source": "forces_of_fantasy",
       "category": "infantry",
       "list_category": "rare",
-      "list_category_overrides": {
-        "grand_army": "core"
-      },
       "troop_type": "Heavy infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5-20",
@@ -1770,6 +1776,163 @@
           "note": "Unit size corrected 5+→5-20 (FoF FAQ v1.5.2)",
           "faq_url": "https://assets.warhammer-community.com/eng_28-01_warhammer_the_old_world_faq_and_errata_forces_of_fantasy-i2x9zdjv39-wlwtl54hxm.pdf"
         }
+      ]
+    },
+    {
+      "id": "rangers_core",
+      "name": "Rangers",
+      "source": "forces_of_fantasy",
+      "category": "infantry",
+      "list_category": "core",
+      "list_category_overrides": {
+        "royal_clan": null
+      },
+      "troop_type": "Heavy infantry",
+      "base_size": "25 x 25 mm",
+      "unit_size": "5-20",
+      "points": 11,
+      "profiles": [
+        {
+          "name": "Ranger",
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 1,
+            "Ld": 9
+          }
+        },
+        {
+          "name": "Ol' Deadeye",
+          "is_champion": true,
+          "champion_cost": 6,
+          "profile": {
+            "M": 3,
+            "WS": 4,
+            "BS": 4,
+            "S": 3,
+            "T": 4,
+            "W": 1,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapons, crossbows and heavy armour"
+      ],
+      "special_rules": [
+        "dwarf_crafted",
+        "hatred_orcs_and_goblins",
+        "magic_resistance_1",
+        "move_through_cover",
+        "open_order",
+        "resolute",
+        "scouts",
+        "skirmishers"
+      ],
+      "options": [
+        {
+          "description": "Great weapons",
+          "cost": 2,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Shields",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "special"
+        },
+        {
+          "description": "Take throwing axes",
+          "cost": 1,
+          "scope": "per_model",
+          "category": "weapon"
+        },
+        {
+          "description": "Replace crossbows with throwing axes",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon"
+        },
+        {
+          "description": "An Ol' Deadeye may replace their crossbow with: Pistol (Free) or Brace of pistols (+5 points)",
+          "cost": 0,
+          "scope": "per_unit",
+          "category": "weapon"
+        }
+      ],
+      "command": [
+        {
+          "role": "champion",
+          "name": "Ol' Deadeye",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "standard_bearer",
+          "cost_per_unit": 6
+        },
+        {
+          "role": "musician",
+          "cost_per_unit": 6
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Crossbow",
+          "range": "30\"",
+          "S": "4",
+          "AP": "—",
+          "special_rules": [
+            "armour_bane_2",
+            "ponderous"
+          ]
+        },
+        {
+          "name": "Great Weapon",
+          "range": "Combat",
+          "S": "S+2",
+          "AP": "-2",
+          "special_rules": [
+            "armour_bane_1",
+            "requires_two_hands",
+            "strike_last"
+          ]
+        },
+        {
+          "name": "Brace of Pistols",
+          "range": "12\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "quick_shot"
+          ]
+        },
+        {
+          "name": "Pistol",
+          "range": "12\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "quick_shot"
+          ]
+        }
+      ],
+      "notes": [
+        "0-1 unit of Rangers may be taken as a Core choice per 1,000 points",
+        "Standard runes may be purchased up to a total of 25 points"
+      ],
+      "availability": [
+        "grand_army",
+        "expeditionary_force"
       ]
     },
     {
@@ -3663,6 +3826,70 @@
         "expeditionary_force"
       ],
       "source_page": 46
+    },
+    {
+      "id": "scout_gyrocopters_core",
+      "name": "Scout Gyrocopters",
+      "source": "arcane_journal",
+      "category": "cavalry",
+      "list_category": "core",
+      "troop_type": "Monstrous cavalry",
+      "base_size": "50 x 50 mm",
+      "unit_size": "1-2",
+      "points": 60,
+      "profiles": [
+        {
+          "name": "Scout Gyrocopter",
+          "profile": {
+            "M": 1,
+            "WS": 4,
+            "BS": 4,
+            "S": 4,
+            "T": 4,
+            "W": 3,
+            "I": 2,
+            "A": 2,
+            "Ld": 9
+          }
+        }
+      ],
+      "equipment": [
+        "Hand weapon, clattergun and lightly armoured fuselage (counts as heavy armour)"
+      ],
+      "special_rules": [
+        "extended_formation",
+        "fire_and_flee",
+        "fly_10",
+        "hatred_orcs_and_goblins",
+        "hit_and_run",
+        "impact_hits_d3",
+        "magic_resistance_1",
+        "skirmishers",
+        "swiftstride",
+        "vanguard"
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Clattergun",
+          "range": "24\"",
+          "S": "4",
+          "AP": "-1",
+          "special_rules": [
+            "armour_bane_1",
+            "dwarf_crafted",
+            "move_and_shoot",
+            "multiple_shots_d6",
+            "quick_shot"
+          ]
+        }
+      ],
+      "notes": [
+        "Extended Formation: whilst in Skirmish formation, every model in a unit of Scout Gyrocopters must be within 3\" of another model in the same unit (rather than the usual 1\")",
+        "Hit & Run: should it win a round of combat, a unit with this special rule may choose to Fall Back in Good Order rather than making a follow up or pursuit move"
+      ],
+      "availability": [
+        "expeditionary_force"
+      ]
     },
     {
       "id": "dwarf_carts",

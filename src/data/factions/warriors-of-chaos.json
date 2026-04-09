@@ -218,6 +218,15 @@
           "limit_type": "max_percent",
           "limit_value": 25,
           "notes": "Centigor Chieftains and Centigor Herds (see Ravening Hordes). Mercenary units are subject to the Misbehaving Mercenaries rules."
+        },
+        {
+          "category": "core",
+          "limit_type": "max_count",
+          "limit_value": 1,
+          "unit_ids": [
+            "chaos_chariot_core"
+          ],
+          "notes": "0-1 Chaos Chariot as a Core choice"
         }
       ]
     }
@@ -1525,6 +1534,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "wolves_of_the_sea": "special",
+        "heralds_of_darkness": null
+      },
       "troop_type": "Heavy infantry",
       "base_size": "30 x 30 mm",
       "unit_size": "5+",
@@ -1671,6 +1684,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "wolves_of_the_sea": null,
+        "heralds_of_darkness": null
+      },
       "troop_type": "Heavy infantry",
       "base_size": "30 x 30 mm",
       "unit_size": "5+",
@@ -1834,6 +1851,9 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "heralds_of_darkness": null
+      },
       "troop_type": "Regular infantry",
       "base_size": "25 x 25 mm",
       "unit_size": "5+",
@@ -1984,6 +2004,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "core",
+      "list_category_overrides": {
+        "wolves_of_the_sea": null,
+        "heralds_of_darkness": null
+      },
       "troop_type": "Heavy infantry",
       "base_size": "30 x 30 mm",
       "unit_size": "5+",
@@ -2059,6 +2083,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "wolves_of_the_sea": "rare",
+        "heralds_of_darkness": null
+      },
       "troop_type": "Monstrous infantry",
       "base_size": "40 x 40 mm",
       "unit_size": "3-15",
@@ -2175,6 +2203,10 @@
       "source": "ravening_hordes",
       "category": "infantry",
       "list_category": "special",
+      "list_category_overrides": {
+        "wolves_of_the_sea": "rare",
+        "heralds_of_darkness": null
+      },
       "troop_type": "Monstrous infantry",
       "base_size": "40 x 40 mm",
       "unit_size": "1-9",
@@ -2615,6 +2647,9 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "special",
+      "list_category_overrides": {
+        "wolves_of_the_sea": null
+      },
       "troop_type": "Heavy cavalry",
       "base_size": "30 x 60 mm",
       "unit_size": "4+",
@@ -3278,6 +3313,71 @@
       "source_page": 67
     },
     {
+      "id": "chaos_chariot_core",
+      "name": "Chaos Chariots",
+      "source": "ravening_hordes",
+      "category": "cavalry",
+      "list_category": "core",
+      "troop_type": "Heavy chariot",
+      "base_size": "60 x 100 mm",
+      "unit_size": "1",
+      "points": 110,
+      "equipment": {
+        "crew": [
+          "Hand weapons",
+          "Halberds"
+        ],
+        "mount": [
+          "Iron-shod hooves (counts as hand weapon)"
+        ]
+      },
+      "special_rules": [
+        "close_order",
+        "ensorcelled_weapons",
+        "first_charge",
+        "impact_hits_d6_plus_1",
+        "mark_of_chaos_undivided"
+      ],
+      "options": [
+        {
+          "description": "May replace the Mark of Chaos Undivided with one of the following",
+          "choices": [
+            {
+              "points": 10,
+              "scope": "per_unit",
+              "description": "Mark of Khorne",
+              "category": "special"
+            },
+            {
+              "points": 10,
+              "scope": "per_unit",
+              "description": "Mark of Nurgle",
+              "category": "special"
+            },
+            {
+              "points": 10,
+              "scope": "per_unit",
+              "description": "Mark of Slaanesh",
+              "category": "special"
+            },
+            {
+              "points": 10,
+              "scope": "per_unit",
+              "description": "Mark of Tzeentch",
+              "category": "special"
+            }
+          ],
+          "category": "special"
+        }
+      ],
+      "notes": [
+        "0-1 unit may be taken as a Core choice in the Heralds of Darkness composition"
+      ],
+      "availability": [
+        "heralds_of_darkness"
+      ]
+    },
+    {
       "id": "chosen_chaos_chariot",
       "name": "Chosen Chaos Chariots",
       "source": "arcane_journal",
@@ -3382,6 +3482,9 @@
       "source": "ravening_hordes",
       "category": "cavalry",
       "list_category": "rare",
+      "list_category_overrides": {
+        "wolves_of_the_sea": null
+      },
       "troop_type": "Heavy chariot",
       "base_size": "60 x 100 mm",
       "unit_size": "1",
@@ -3562,6 +3665,9 @@
       "source": "ravening_hordes",
       "category": "monster",
       "list_category": "special",
+      "list_category_overrides": {
+        "wolves_of_the_sea": null
+      },
       "troop_type": "Monstrous creature",
       "base_size": "60 x 100 mm",
       "unit_size": "1",
@@ -3628,6 +3734,10 @@
       "source": "ravening_hordes",
       "category": "war_machine",
       "list_category": "rare",
+      "list_category_overrides": {
+        "wolves_of_the_sea": null,
+        "heralds_of_darkness": null
+      },
       "troop_type": "Behemoth",
       "base_size": "100 x 150 mm",
       "unit_size": "1",
